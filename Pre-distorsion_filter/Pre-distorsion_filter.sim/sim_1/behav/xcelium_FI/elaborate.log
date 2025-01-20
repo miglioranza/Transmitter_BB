@@ -1,0 +1,48 @@
+xmelab(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xmelab(64)	20.09-s007: Started on Nov 08, 2024 at 12:08:38 CET
+xmelab
+    -64bit
+    -relax
+    -access +rwc
+    -namemap_mixgen
+    -messages
+    -logfile elaborate.log
+    -libname xil_defaultlib
+    -libname secureip
+    -fault_dbg
+    -fault_top Parallel_FIR_filter_TB
+    -fault_overwrite
+    -fault_file ./fault_list
+    xil_defaultlib.Parallel_FIR_filter_TB
+
+xmelab: *N,SPUNSP: -sparsearray is not supported with Fault Simulation. Disabling the default -sparsearray=100000 option.
+xmelab: *W,ARCMRA: Elaborating the XIL_DEFAULTLIB.PARALLEL_FIR_FILTER_TB:BEHAVIORAL, MRA (most recently analyzed) architecture.
+	Elaborating the design hierarchy:
+xmelab: *W,CUDEFB: default binding occurred for component instance (:Parallel_FIR_filter_TB(Behavioral):uut) with design unit (XIL_DEFAULTLIB.PARALLEL_FIR_FILTER:BEHAVIORAL).
+	Building instance specific data structures.
+	Design hierarchy summary:
+		           Instances  Unique
+		Components:        3       2
+		Default bindings:  1       -
+		Processes:         3       3
+		Signals:           9       9
+	Writing initial simulation snapshot: XIL_DEFAULTLIB.PARALLEL_FIR_FILTER_TB:BEHAVIORAL
+
+
+####   Fault Instrumentation Information  ####
+
+   Total number of faults instrumented: 2967
+   Number of fault nodes excluded: 0
+   Number of fault nodes ignored: 0
+   Number of faultable nodes: 2967
+   Number of Untestable faults: 0
+       Number of SA0 faults: 0 [Prime: 0]
+       Number of SA1 faults: 0 [Prime: 0]
+       Number of SET faults: 2967 [Prime: 2967]
+       Number of SEU faults: 0 [Prime: 0]
+
+#### End of Fault Instrumentation Information ####
+
+
+xmelab: *N,FTUMPT: [FLT] Fault database model file is generated at /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.sim/sim_1/behav/xcelium_FI/fault_db/db_scope/xfs_498a967c.ucm.
+TOOL:	xmelab(64)	20.09-s007: Exiting on Nov 08, 2024 at 12:08:39 CET  (total: 00:00:01)

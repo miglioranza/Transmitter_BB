@@ -1,0 +1,18 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xmvhdl(64)	20.09-s007: Started on Nov 08, 2024 at 12:08:32 CET
+xmvhdl
+    -V93
+    -64bit
+    -messages
+    -relax
+    -logfile .tmp_log
+    -update
+    -work xil_defaultlib
+    ./../../../../Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd
+    ./../../../../Pre-distorsion_filter.srcs/sim_1/new/Parallel_FIR_filter_TB.vhd
+
+./../../../../Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:
+	errors: 0, warnings: 0
+./../../../../Pre-distorsion_filter.srcs/sim_1/new/Parallel_FIR_filter_TB.vhd:
+	errors: 0, warnings: 0
+TOOL:	xmvhdl(64)	20.09-s007: Exiting on Nov 08, 2024 at 12:08:33 CET  (total: 00:00:01)

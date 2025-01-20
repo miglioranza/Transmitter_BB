@@ -1,0 +1,59 @@
+xmsim(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+xmsim: *N,FLTSF: [FLT] Fault Id : 72, Fault Seed: 0, Selected fault points: :UUT:SHIFT_REG(31)(15).
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> set pack_assert_off {numeric_std std_logic_arith}
+numeric_std std_logic_arith
+xcelium> 
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> catch {probe -create -shm -all -variables -depth 1 -waveform} msg
+0
+xcelium> 
+xcelium> run 1000ns
+xmsim: *N,FLTINJ: [FLT] Injecting SET fault on :UUT:SHIFT_REG(31)(15) at time 85 NS : old value = '0', new value = '1'.
+xmsim: *N,FLTREL: [FLT] Released SET fault on :UUT:SHIFT_REG(31)(15) at time 95 NS.
+ASSERT/FAILURE (time 140 NS) from process :stim_process (architecture xil_defaultlib.Parallel_FIR_filter_TB:Behavioral)
+End of simulation
+Assertion at 140 NS + 0
+xcelium> 
+xcelium> ifr -fault_work fault_db -logfile fault_report 
+xfr(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+The fault report is written to file 'fault_db/xfr_merge.out'
+
+
+Fault Injection Summary:
+    Multiplicity: 1
+    Total number of faults: 2967/2967 (total/prime)
+    Number of fault runs: 1
+    Number of faults injected: 1
+        SA0(0), SA1(0), SEU(0), SET(1)
+    Expected finish time: 140ns
+        ON_TIME(1), DELAYED(0), PREMATURE(0), TIMEOUT(0), STOPPED(0), UNKNOWN(0)
+
+
+SET Fault Table
+			 Total #	 Prime #
+Detected		      0		      0
+Potentially_detected	      0		      0
+Undetected		      1		      1
+Unobserved_detected	      0		      0
+Unobserved_undetected	      0		      0
+Dangerous_detected	      0		      0
+Dangerous_undetected	      0		      0
+Total			      1		      1
+
+
+SET Fault Summary Table
+Untestable		      0		      0
+Injected_faults		      1		      1
+Not_injected		   2966		   2966
+Total			   2967		   2967
+
+xcelium> ...Regained control from SimVision
+-------------------------------------
+
+xcelium> 
+xmsim: *W,CMUSEX: Control-D in interactive input - one more to exit.
+xcelium> exit

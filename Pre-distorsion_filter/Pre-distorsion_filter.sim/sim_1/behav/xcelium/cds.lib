@@ -1,0 +1,2 @@
+INCLUDE /home/miglioranza/cds.lib
+DEFINE xil_defaultlib xcelium_lib/xil_defaultlib

@@ -1,0 +1,390 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Fri Nov  1 11:09:07 2024
+# Process ID: 2221397
+# Current directory: /home/miglioranza/FEC/FEC.runs/synth_3
+# Command line: vivado -log Encoder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Encoder.tcl
+# Log file: /home/miglioranza/FEC/FEC.runs/synth_3/Encoder.vds
+# Journal file: /home/miglioranza/FEC/FEC.runs/synth_3/vivado.jou
+# Running On: uxsrv005, OS: Linux, CPU Frequency: 3457.889 MHz, CPU Physical cores: 8, Host memory: 101335 MB
+#-----------------------------------------------------------
+source Encoder.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2904.266 ; gain = 2.016 ; free physical = 4393 ; free virtual = 113427
+Command: synth_design -top Encoder -part xczu28dr-ffvg1517-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu28dr'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu28dr'
+INFO: [Device 21-403] Loading part xczu28dr-ffvg1517-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2222028
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3472.758 ; gain = 228.688 ; free physical = 3436 ; free virtual = 112126
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Encoder' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:55]
+INFO: [Synth 8-3491] module 'FSM_Input_control' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/FSM_Input_control.vhd:35' bound to instance 'FSM_Input_control_inst' of component 'FSM_Input_control' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:121]
+INFO: [Synth 8-638] synthesizing module 'FSM_Input_control' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/FSM_Input_control.vhd:56]
+WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/FSM_Input_control.vhd:73]
+WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/FSM_Input_control.vhd:127]
+WARNING: [Synth 8-6014] Unused sequential element sel_code_rate_reg was removed.  [/home/miglioranza/FEC/FEC.srcs/sources_1/new/FSM_Input_control.vhd:76]
+WARNING: [Synth 8-6014] Unused sequential element block_counter_reg was removed.  [/home/miglioranza/FEC/FEC.srcs/sources_1/new/FSM_Input_control.vhd:135]
+INFO: [Synth 8-256] done synthesizing module 'FSM_Input_control' (1#1) [/home/miglioranza/FEC/FEC.srcs/sources_1/new/FSM_Input_control.vhd:56]
+INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:34' bound to instance 'LDPC_encoder_1x16_inst0' of component 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:53]
+INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/home/miglioranza/FEC/FEC.runs/synth_3/.Xil/Vivado-2221397-uxsrv005/realtime/sd_fec_0_stub.v:6' bound to instance 'ldpc_encoder' of component 'sd_fec_0' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:100]
+INFO: [Synth 8-6157] synthesizing module 'sd_fec_0' [/home/miglioranza/FEC/FEC.runs/synth_3/.Xil/Vivado-2221397-uxsrv005/realtime/sd_fec_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sd_fec_0' (2#1) [/home/miglioranza/FEC/FEC.runs/synth_3/.Xil/Vivado-2221397-uxsrv005/realtime/sd_fec_0_stub.v:6]
+WARNING: [Synth 8-3848] Net dout_ready in module/entity LDPC_core does not have driver. [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'LDPC_core' (3#1) [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:53]
+INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:34' bound to instance 'LDPC_encoder_1x16_inst1' of component 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:161]
+INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:34' bound to instance 'LDPC_encoder_1x16_inst2' of component 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:179]
+INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:34' bound to instance 'LDPC_encoder_1x16_inst3' of component 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'Encoder' (4#1) [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:55]
+WARNING: [Synth 8-7129] Port dout_ready in module LDPC_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fsm_din_ready in module FSM_Input_control is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3515.695 ; gain = 271.625 ; free physical = 2546 ; free virtual = 111182
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3533.508 ; gain = 289.438 ; free physical = 2540 ; free virtual = 111177
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3533.508 ; gain = 289.438 ; free physical = 2540 ; free virtual = 111177
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3533.508 ; gain = 0.000 ; free physical = 3426 ; free virtual = 112063
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/miglioranza/FEC/FEC.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'LDPC_encoder_1x16_inst0/ldpc_encoder'
+Finished Parsing XDC File [/home/miglioranza/FEC/FEC.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'LDPC_encoder_1x16_inst0/ldpc_encoder'
+Parsing XDC File [/home/miglioranza/FEC/FEC.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'LDPC_encoder_1x16_inst1/ldpc_encoder'
+Finished Parsing XDC File [/home/miglioranza/FEC/FEC.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'LDPC_encoder_1x16_inst1/ldpc_encoder'
+Parsing XDC File [/home/miglioranza/FEC/FEC.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'LDPC_encoder_1x16_inst2/ldpc_encoder'
+Finished Parsing XDC File [/home/miglioranza/FEC/FEC.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'LDPC_encoder_1x16_inst2/ldpc_encoder'
+Parsing XDC File [/home/miglioranza/FEC/FEC.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'LDPC_encoder_1x16_inst3/ldpc_encoder'
+Finished Parsing XDC File [/home/miglioranza/FEC/FEC.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'LDPC_encoder_1x16_inst3/ldpc_encoder'
+Parsing XDC File [/home/miglioranza/FEC/FEC.runs/synth_3/dont_touch.xdc]
+Finished Parsing XDC File [/home/miglioranza/FEC/FEC.runs/synth_3/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3732.133 ; gain = 0.000 ; free physical = 3386 ; free virtual = 112023
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3732.133 ; gain = 0.000 ; free physical = 3386 ; free virtual = 112023
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 3732.133 ; gain = 488.062 ; free physical = 3459 ; free virtual = 112099
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu28dr-ffvg1517-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 3732.133 ; gain = 488.062 ; free physical = 3459 ; free virtual = 112099
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for LDPC_encoder_1x16_inst0/ldpc_encoder. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for LDPC_encoder_1x16_inst1/ldpc_encoder. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for LDPC_encoder_1x16_inst2/ldpc_encoder. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for LDPC_encoder_1x16_inst3/ldpc_encoder. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3732.133 ; gain = 488.062 ; free physical = 3459 ; free virtual = 112099
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'enc_state_reg' in module 'FSM_Input_control'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              idle_state |                              000 |                              100
+          starting_state |                              001 |                              000
+        encoding_process |                              010 |                              001
+         padding_process |                              011 |                              010
+           new_code_rate |                              100 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'enc_state_reg' using encoding 'sequential' in module 'FSM_Input_control'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 3732.133 ; gain = 488.062 ; free physical = 3455 ; free virtual = 112095
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 6     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 3     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   5 Input   32 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   5 Input    8 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   5 Input    6 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 4     
+	   5 Input    3 Bit        Muxes := 3     
+	   2 Input    3 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 6     
+	   5 Input    1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 4272 (col length:192)
+BRAMs: 2160 (col length: RAMB18 192 RAMB36 96)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 3732.133 ; gain = 488.062 ; free physical = 3443 ; free virtual = 112086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 3961.051 ; gain = 716.980 ; free physical = 3253 ; free virtual = 111608
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 3961.051 ; gain = 716.980 ; free physical = 3253 ; free virtual = 111608
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 3990.098 ; gain = 746.027 ; free physical = 3251 ; free virtual = 111606
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 3990.098 ; gain = 746.027 ; free physical = 3251 ; free virtual = 111606
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 3990.098 ; gain = 746.027 ; free physical = 3251 ; free virtual = 111606
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[31] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[31]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[31] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[31]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[31] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[31]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[31] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[31]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[30] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[30]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[30] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[30]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[30] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[30]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[30] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[30]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[29] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[29]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[29] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[29]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[29] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[29]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[29] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[29]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[28] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[28]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[28] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[28]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[28] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[28]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[28] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[28]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[27] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[27]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[27] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[27]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[27] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[27]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[27] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[27]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[26] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[26]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[26] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[26]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[26] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[26]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[26] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[26]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[25] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[25]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[25] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[25]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[25] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[25]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[25] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[25]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[24] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[24]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[24] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[24]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[24] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[24]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[24] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[24]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[23] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[23]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[23] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[23]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[23] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[23]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[23] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[23]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[22] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[22]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[22] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[22]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[22] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[22]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[22] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[22]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[21] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[21]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[21] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[21]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[21] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[21]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[21] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[21]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[20] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[20]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[20] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[20]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[20] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[20]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[20] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[20]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[19] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[19]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[19] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[19]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[19] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[19]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[19] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[19]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[18] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[18]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[18] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[18]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[18] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[18]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[18] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[18]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[17] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[17]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[17] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[17]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[17] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[17]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[17] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[17]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[16] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[16]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[16] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[16]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[16] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[16]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[16] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[16]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[15] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[15]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[15] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[15]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[15] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[15]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[15] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[15]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[14] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[14]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[14] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[14]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[14] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[14]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[14] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[14]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[13] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[13]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[13] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[13]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[13] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[13]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[13] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[13]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[12] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[12]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[12] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[12]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[12] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[12]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[12] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[12]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[11] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[11]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[11] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[11]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[11] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[11]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[11] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[11]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[10] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[10]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[10] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[10]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[10] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[10]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[10] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[10]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[9] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[9]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[9] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[9]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[9] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[9]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[9] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[9]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[8] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[8]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[8] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[8]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[8] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[8]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[8] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[8]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[7] with 1st driver pin 'LDPC_encoder_1x16_inst2/dout_reg[7]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[7] with 2nd driver pin 'LDPC_encoder_1x16_inst0/dout_reg[7]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[7] with 3rd driver pin 'LDPC_encoder_1x16_inst1/dout_reg[7]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_OBUF[7] with 4th driver pin 'LDPC_encoder_1x16_inst3/dout_reg[7]/Q' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:140]
+INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|       34|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 3990.098 ; gain = 746.027 ; free physical = 3251 ; free virtual = 111606
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 3990.098 ; gain = 746.027 ; free physical = 3251 ; free virtual = 111606
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 3990.098 ; gain = 746.027 ; free physical = 3251 ; free virtual = 111606
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 3990.098 ; gain = 746.027 ; free physical = 3251 ; free virtual = 111606
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |sd_fec_0      |         4|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |sd_fec   |     1|
+|2     |sd_fec_0 |     3|
+|5     |BUFG     |     1|
+|6     |CARRY8   |     4|
+|7     |LUT1     |     1|
+|8     |LUT2     |    17|
+|9     |LUT3     |    10|
+|10    |LUT4     |    18|
+|11    |LUT5     |    21|
+|12    |LUT6     |    32|
+|13    |FDCE     |    16|
+|14    |FDPE     |     4|
+|15    |FDRE     |   205|
+|16    |IBUF     |    71|
+|17    |OBUF     |    35|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 3990.098 ; gain = 746.027 ; free physical = 3251 ; free virtual = 111606
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 136 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 3990.098 ; gain = 547.402 ; free physical = 3290 ; free virtual = 111645
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 3990.105 ; gain = 746.027 ; free physical = 3290 ; free virtual = 111645
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4001.066 ; gain = 0.000 ; free physical = 3386 ; free virtual = 111741
+INFO: [Netlist 29-17] Analyzing 76 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4084.805 ; gain = 0.000 ; free physical = 3304 ; free virtual = 111659
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 72 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 71 instances
+
+Synth Design complete, checksum: b79a381
+INFO: [Common 17-83] Releasing license: Synthesis
+32 Infos, 8 Warnings, 100 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 4084.805 ; gain = 1154.391 ; free physical = 3443 ; free virtual = 111799
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint '/home/miglioranza/FEC/FEC.runs/synth_3/Encoder.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Encoder_utilization_synth.rpt -pb Encoder_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Nov  1 11:11:16 2024...

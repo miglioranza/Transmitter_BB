@@ -1,0 +1,9 @@
+0.6
+2019.1
+May 24 2019
+14:51:52
+/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sim_1/new/Parallel_FIR_filter_TB.vhd,1718613867,vhdl,,,,parallel_fir_filter_tb,,,,,,,,
+/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sim_1/new/fir_filter_tb.vhd,1718020503,vhdl,,,,fir_filter_tb,,,,,,,,
+/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd,1718613807,vhdl,,,,parallel_fir_filter,,,,,,,,
+/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Serial_FIR_filter.vhd,1718098269,vhdl,,,,serial_fir_filter,,,,,,,,
+/home/miglioranza/fir_filter.vhd,1718024071,vhdl,,,,fir_filter,,,,,,,,

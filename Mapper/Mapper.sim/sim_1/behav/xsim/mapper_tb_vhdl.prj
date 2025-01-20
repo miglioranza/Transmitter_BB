@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../Mapper_new/mapper.vhd" \
+"../../../../../Mapper_new/mapper_tb.vhd" \
+
+# Do not sort compile order
+nosort

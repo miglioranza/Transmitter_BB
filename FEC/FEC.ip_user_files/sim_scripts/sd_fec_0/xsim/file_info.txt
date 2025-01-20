@@ -1,0 +1,2 @@
+sd_fec_0.sv,systemverilog,xil_defaultlib,../../../../FEC.gen/sources_1/ip/sd_fec_0/sim/sd_fec_0.sv,incdir="$ref_dir/../../../ipstatic/hdl"incdir="../../../ipstatic/hdl"
+glbl.v,Verilog,xil_defaultlib,glbl.v

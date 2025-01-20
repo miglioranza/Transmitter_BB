@@ -1,0 +1,1 @@
+vopt -64 +acc=npr -l elaborate.log -L xil_defaultlib -L xilinx_vip -L xpm -L ecc_v2_0_13 -L fec_5g_common_v1_1_1 -L sd_fec_v1_1_8 -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.sd_fec_0 xil_defaultlib.glbl -o sd_fec_0_opt

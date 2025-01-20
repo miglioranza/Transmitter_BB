@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue Sep 10 11:34:09 2024
+# Process ID: 3653203
+# Current directory: /home/miglioranza/FEC/FEC.runs/synth_1
+# Command line: vivado -log Encoder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Encoder.tcl
+# Log file: /home/miglioranza/FEC/FEC.runs/synth_1/Encoder.vds
+# Journal file: /home/miglioranza/FEC/FEC.runs/synth_1/vivado.jou
+# Running On: uxsrv005, OS: Linux, CPU Frequency: 3457.889 MHz, CPU Physical cores: 8, Host memory: 101335 MB
+#-----------------------------------------------------------
+source Encoder.tcl -notrace

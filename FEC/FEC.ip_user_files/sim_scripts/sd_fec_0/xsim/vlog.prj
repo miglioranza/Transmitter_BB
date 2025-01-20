@@ -1,0 +1,6 @@
+sv xil_defaultlib --include "../../../ipstatic/hdl" \
+"../../../../FEC.gen/sources_1/ip/sd_fec_0/sim/sd_fec_0.sv" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

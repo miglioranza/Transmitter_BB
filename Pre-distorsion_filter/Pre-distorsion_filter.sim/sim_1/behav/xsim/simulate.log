@@ -1,0 +1,5 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+Failure: End of simulation
+Time: 140 ns  Iteration: 0  Process: /Parallel_FIR_filter_TB/stim_process  File: /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sim_1/new/Parallel_FIR_filter_TB.vhd
+$finish called at time : 140 ns : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sim_1/new/Parallel_FIR_filter_TB.vhd" Line 128

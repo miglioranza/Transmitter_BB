@@ -1,0 +1,4 @@
+Time resolution is 1 ps
+Failure: End of simulation
+Time: 205 ns  Iteration: 0  Process: /Scrambler_32bits_TB/stim_proc  File: /home/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs/sim_1/new/Scrambler_32bits_TB.vhd
+$finish called at time : 205 ns : File "/home/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs/sim_1/new/Scrambler_32bits_TB.vhd" Line 118

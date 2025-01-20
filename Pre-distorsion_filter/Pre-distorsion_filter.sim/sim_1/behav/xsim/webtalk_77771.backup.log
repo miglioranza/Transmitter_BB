@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Jun 13 11:19:14 2024
+# Process ID: 77771
+# Current directory: /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.sim/sim_1/behav/xsim/xsim.dir/Parallel_FIR_filter_TB_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.sim/sim_1/behav/xsim/xsim.dir/Parallel_FIR_filter_TB_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Jun 13 11:19:14 2024...

@@ -1,0 +1,19 @@
+xmsim(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> set pack_assert_off {numeric_std std_logic_arith}
+numeric_std std_logic_arith
+xcelium> 
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> catch {probe -create -shm -all -variables -depth 1 -waveform} msg
+0
+xcelium> 
+xcelium> run 1000ns
+ASSERT/FAILURE (time 140 NS) from process :stim_process (architecture xil_defaultlib.Parallel_FIR_filter_TB:Behavioral)
+End of simulation
+Assertion at 140 NS + 0
+xcelium> 
+xcelium> ^C
+xcelium> exit

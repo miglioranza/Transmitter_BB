@@ -1,0 +1,33 @@
+xfr(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+The fault report is written to file 'fault_db/xfr_merge.out'
+
+
+Fault Injection Summary:
+    Multiplicity: 1
+    Total number of faults: 2967/2967 (total/prime)
+    Number of fault runs: 1
+    Number of faults injected: 1
+        SA0(0), SA1(0), SEU(0), SET(1)
+    Expected finish time: 140ns
+        ON_TIME(1), DELAYED(0), PREMATURE(0), TIMEOUT(0), STOPPED(0), UNKNOWN(0)
+
+
+SET Fault Table
+			 Total #	 Prime #
+Detected		      0		      0
+Potentially_detected	      0		      0
+Undetected		      1		      1
+Unobserved_detected	      0		      0
+Unobserved_undetected	      0		      0
+Dangerous_detected	      0		      0
+Dangerous_undetected	      0		      0
+Total			      1		      1
+
+
+SET Fault Summary Table
+Untestable		      0		      0
+Injected_faults		      1		      1
+Not_injected		   2966		   2966
+Total			   2967		   2967
+
+

@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Scrambler_32bits.srcs/sources_1/new/Scrambler_32bits.vhd" \
+"../../../../Scrambler_32bits.srcs/sim_1/new/Scrambler_32bits_TB.vhd" \
+
+# Do not sort compile order
+nosort

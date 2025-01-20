@@ -1,0 +1,1 @@
+fs_strobe {UUT:SEED(2)} -stop_on none 

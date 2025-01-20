@@ -1,0 +1,1 @@
+-wto "4bb835d4c9174b4ca825b7079037e5bb" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "Parallel_FIR_filter_TB_behav" "xil_defaultlib.Parallel_FIR_filter_TB" -log "elaborate.log" 

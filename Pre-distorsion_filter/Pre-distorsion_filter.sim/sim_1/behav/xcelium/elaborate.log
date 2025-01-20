@@ -1,0 +1,25 @@
+xmelab(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xmelab(64)	20.09-s007: Started on Nov 08, 2024 at 11:56:35 CET
+xmelab
+    -64bit
+    -relax
+    -access +rwc
+    -namemap_mixgen
+    -messages
+    -logfile elaborate.log
+    -libname xil_defaultlib
+    -libname secureip
+    xil_defaultlib.Parallel_FIR_filter_TB
+
+xmelab: *W,ARCMRA: Elaborating the XIL_DEFAULTLIB.PARALLEL_FIR_FILTER_TB:BEHAVIORAL, MRA (most recently analyzed) architecture.
+	Elaborating the design hierarchy:
+xmelab: *W,CUDEFB: default binding occurred for component instance (:Parallel_FIR_filter_TB(Behavioral):uut) with design unit (XIL_DEFAULTLIB.PARALLEL_FIR_FILTER:BEHAVIORAL).
+	Building instance specific data structures.
+	Design hierarchy summary:
+		           Instances  Unique
+		Components:        3       2
+		Default bindings:  1       -
+		Processes:         3       3
+		Signals:           9       9
+	Writing initial simulation snapshot: XIL_DEFAULTLIB.PARALLEL_FIR_FILTER_TB:BEHAVIORAL
+TOOL:	xmelab(64)	20.09-s007: Exiting on Nov 08, 2024 at 11:56:35 CET  (total: 00:00:00)

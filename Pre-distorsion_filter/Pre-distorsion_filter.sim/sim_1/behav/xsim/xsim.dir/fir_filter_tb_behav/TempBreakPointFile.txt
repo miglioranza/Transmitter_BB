@@ -1,0 +1,4 @@
+Breakpoint File Version 1.0
+57 true /home/miglioranza/fir_filter.vhd
+70 true /home/miglioranza/fir_filter.vhd
+61 true /home/miglioranza/fir_filter.vhd

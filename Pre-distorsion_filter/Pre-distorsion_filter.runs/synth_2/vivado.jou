@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Jun 13 14:41:15 2024
+# Process ID: 10802
+# Current directory: /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.runs/synth_2
+# Command line: vivado -log Parallel_FIR_filter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Parallel_FIR_filter.tcl
+# Log file: /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.runs/synth_2/Parallel_FIR_filter.vds
+# Journal file: /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.runs/synth_2/vivado.jou
+#-----------------------------------------------------------
+source Parallel_FIR_filter.tcl -notrace

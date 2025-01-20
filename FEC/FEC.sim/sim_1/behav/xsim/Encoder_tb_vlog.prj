@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../FEC.ip_user_files/ipstatic/hdl" --include "/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/xilinx_vip/include" \
+"../../../../FEC.gen/sources_1/ip/sd_fec_0/sim/sd_fec_0.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

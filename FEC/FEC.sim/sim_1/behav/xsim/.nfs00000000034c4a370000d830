@@ -1,0 +1,148 @@
+Time resolution is 1 ps
+Note: Starting simulation 
+Time: 0 ps  Iteration: 0  Process: /Encoder_tb/test_process  File: /home/miglioranza/FEC/FEC.srcs/sim_1/new/Encoder_tb.vhd
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. Encoder_tb.dut.LDPC_encoder_1x16_inst0.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.CDC_I .CTRL_IF_SYNC_I.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /Encoder_tb/dut/LDPC_encoder_1x16_inst0/ldpc_encoder/inst/STD_5G_G.STD_5G_I/SDFEC_5G_IP.CDC_I/CTRL_IF_SYNC_I/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_45  Scope: Encoder_tb.dut.LDPC_encoder_1x16_inst0.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.CDC_I .CTRL_IF_SYNC_I.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. Encoder_tb.dut.LDPC_encoder_1x16_inst0.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.CDC_I .STATUS_IF_SYNC_I.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /Encoder_tb/dut/LDPC_encoder_1x16_inst0/ldpc_encoder/inst/STD_5G_G.STD_5G_I/SDFEC_5G_IP.CDC_I/STATUS_IF_SYNC_I/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_168  Scope: Encoder_tb.dut.LDPC_encoder_1x16_inst0.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.CDC_I .STATUS_IF_SYNC_I.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. Encoder_tb.dut.LDPC_encoder_1x16_inst0.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I .AXI_WDATA_IF_I.xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /Encoder_tb/dut/LDPC_encoder_1x16_inst0/ldpc_encoder/inst/STD_5G_G.STD_5G_I/SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I/AXI_WDATA_IF_I/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_336  Scope: Encoder_tb.dut.LDPC_encoder_1x16_inst0.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I .AXI_WDATA_IF_I.xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. Encoder_tb.dut.LDPC_encoder_1x16_inst0.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I .AXI_WADDR_IF_I.xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /Encoder_tb/dut/LDPC_encoder_1x16_inst0/ldpc_encoder/inst/STD_5G_G.STD_5G_I/SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I/AXI_WADDR_IF_I/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_394  Scope: Encoder_tb.dut.LDPC_encoder_1x16_inst0.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I .AXI_WADDR_IF_I.xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. Encoder_tb.dut.LDPC_encoder_1x16_inst1.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.CDC_I .CTRL_IF_SYNC_I.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /Encoder_tb/dut/LDPC_encoder_1x16_inst1/ldpc_encoder/inst/STD_5G_G.STD_5G_I/SDFEC_5G_IP.CDC_I/CTRL_IF_SYNC_I/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_45  Scope: Encoder_tb.dut.LDPC_encoder_1x16_inst1.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.CDC_I .CTRL_IF_SYNC_I.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. Encoder_tb.dut.LDPC_encoder_1x16_inst1.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.CDC_I .STATUS_IF_SYNC_I.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /Encoder_tb/dut/LDPC_encoder_1x16_inst1/ldpc_encoder/inst/STD_5G_G.STD_5G_I/SDFEC_5G_IP.CDC_I/STATUS_IF_SYNC_I/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_168  Scope: Encoder_tb.dut.LDPC_encoder_1x16_inst1.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.CDC_I .STATUS_IF_SYNC_I.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. Encoder_tb.dut.LDPC_encoder_1x16_inst1.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I .AXI_WDATA_IF_I.xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /Encoder_tb/dut/LDPC_encoder_1x16_inst1/ldpc_encoder/inst/STD_5G_G.STD_5G_I/SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I/AXI_WDATA_IF_I/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_336  Scope: Encoder_tb.dut.LDPC_encoder_1x16_inst1.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I .AXI_WDATA_IF_I.xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. Encoder_tb.dut.LDPC_encoder_1x16_inst1.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I .AXI_WADDR_IF_I.xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /Encoder_tb/dut/LDPC_encoder_1x16_inst1/ldpc_encoder/inst/STD_5G_G.STD_5G_I/SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I/AXI_WADDR_IF_I/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_394  Scope: Encoder_tb.dut.LDPC_encoder_1x16_inst1.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I .AXI_WADDR_IF_I.xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. Encoder_tb.dut.LDPC_encoder_1x16_inst2.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.CDC_I .CTRL_IF_SYNC_I.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /Encoder_tb/dut/LDPC_encoder_1x16_inst2/ldpc_encoder/inst/STD_5G_G.STD_5G_I/SDFEC_5G_IP.CDC_I/CTRL_IF_SYNC_I/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_45  Scope: Encoder_tb.dut.LDPC_encoder_1x16_inst2.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.CDC_I .CTRL_IF_SYNC_I.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. Encoder_tb.dut.LDPC_encoder_1x16_inst2.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.CDC_I .STATUS_IF_SYNC_I.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /Encoder_tb/dut/LDPC_encoder_1x16_inst2/ldpc_encoder/inst/STD_5G_G.STD_5G_I/SDFEC_5G_IP.CDC_I/STATUS_IF_SYNC_I/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_168  Scope: Encoder_tb.dut.LDPC_encoder_1x16_inst2.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.CDC_I .STATUS_IF_SYNC_I.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. Encoder_tb.dut.LDPC_encoder_1x16_inst2.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I .AXI_WDATA_IF_I.xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /Encoder_tb/dut/LDPC_encoder_1x16_inst2/ldpc_encoder/inst/STD_5G_G.STD_5G_I/SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I/AXI_WDATA_IF_I/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_336  Scope: Encoder_tb.dut.LDPC_encoder_1x16_inst2.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I .AXI_WDATA_IF_I.xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. Encoder_tb.dut.LDPC_encoder_1x16_inst2.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I .AXI_WADDR_IF_I.xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /Encoder_tb/dut/LDPC_encoder_1x16_inst2/ldpc_encoder/inst/STD_5G_G.STD_5G_I/SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I/AXI_WADDR_IF_I/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_394  Scope: Encoder_tb.dut.LDPC_encoder_1x16_inst2.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I .AXI_WADDR_IF_I.xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. Encoder_tb.dut.LDPC_encoder_1x16_inst3.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.CDC_I .CTRL_IF_SYNC_I.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /Encoder_tb/dut/LDPC_encoder_1x16_inst3/ldpc_encoder/inst/STD_5G_G.STD_5G_I/SDFEC_5G_IP.CDC_I/CTRL_IF_SYNC_I/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_45  Scope: Encoder_tb.dut.LDPC_encoder_1x16_inst3.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.CDC_I .CTRL_IF_SYNC_I.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. Encoder_tb.dut.LDPC_encoder_1x16_inst3.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.CDC_I .STATUS_IF_SYNC_I.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /Encoder_tb/dut/LDPC_encoder_1x16_inst3/ldpc_encoder/inst/STD_5G_G.STD_5G_I/SDFEC_5G_IP.CDC_I/STATUS_IF_SYNC_I/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_168  Scope: Encoder_tb.dut.LDPC_encoder_1x16_inst3.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.CDC_I .STATUS_IF_SYNC_I.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. Encoder_tb.dut.LDPC_encoder_1x16_inst3.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I .AXI_WDATA_IF_I.xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /Encoder_tb/dut/LDPC_encoder_1x16_inst3/ldpc_encoder/inst/STD_5G_G.STD_5G_I/SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I/AXI_WDATA_IF_I/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_336  Scope: Encoder_tb.dut.LDPC_encoder_1x16_inst3.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I .AXI_WDATA_IF_I.xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. Encoder_tb.dut.LDPC_encoder_1x16_inst3.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I .AXI_WADDR_IF_I.xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /Encoder_tb/dut/LDPC_encoder_1x16_inst3/ldpc_encoder/inst/STD_5G_G.STD_5G_I/SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I/AXI_WADDR_IF_I/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_394  Scope: Encoder_tb.dut.LDPC_encoder_1x16_inst3.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I .AXI_WADDR_IF_I.xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. Encoder_tb.LDPC_core_sim.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.CDC_I .CTRL_IF_SYNC_I.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /Encoder_tb/LDPC_core_sim/ldpc_encoder/inst/STD_5G_G.STD_5G_I/SDFEC_5G_IP.CDC_I/CTRL_IF_SYNC_I/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_45  Scope: Encoder_tb.LDPC_core_sim.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.CDC_I .CTRL_IF_SYNC_I.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. Encoder_tb.LDPC_core_sim.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.CDC_I .STATUS_IF_SYNC_I.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /Encoder_tb/LDPC_core_sim/ldpc_encoder/inst/STD_5G_G.STD_5G_I/SDFEC_5G_IP.CDC_I/STATUS_IF_SYNC_I/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_168  Scope: Encoder_tb.LDPC_core_sim.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.CDC_I .STATUS_IF_SYNC_I.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. Encoder_tb.LDPC_core_sim.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I .AXI_WDATA_IF_I.xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /Encoder_tb/LDPC_core_sim/ldpc_encoder/inst/STD_5G_G.STD_5G_I/SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I/AXI_WDATA_IF_I/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_336  Scope: Encoder_tb.LDPC_core_sim.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I .AXI_WDATA_IF_I.xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. Encoder_tb.LDPC_core_sim.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I .AXI_WADDR_IF_I.xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /Encoder_tb/LDPC_core_sim/ldpc_encoder/inst/STD_5G_G.STD_5G_I/SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I/AXI_WADDR_IF_I/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_394  Scope: Encoder_tb.LDPC_core_sim.ldpc_encoder.inst.\STD_5G_G.STD_5G_I .\SDFEC_5G_IP.SD_FEC_5G_CODE_GEN_I .AXI_WADDR_IF_I.xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+********************** HSIAO_H_MATRIX ******************************
+1111011101101001101001000 
+1011010101010100100100000 
+0010110010010010000111011 
+1110001001000110111011011 
+1000100101110111000111000 
+0011110000111111000000111 
+********************** HSIAO_H_MATRIX ******************************
+1101001101001000 
+1010100100100000 
+0010010000101010 
+1000011001011001 
+0111000111000100 
+0000111100010000 
+********************** HSIAO_H_MATRIX ******************************
+1011101101001101001000 
+1010101010100100100000 
+0110010010010000011101 
+0001001000111011011001 
+0100110111000111000111 
+0000111111000000111100 
+********************** HSIAO_H_MATRIX ******************************
+1111011101101001101001000 
+1011010101010100100100000 
+0010110010010010000111011 
+1110001001000110111011011 
+1000100101110111000111000 
+0011110000111111000000111 
+********************** HSIAO_H_MATRIX ******************************
+1101001101001000 
+1010100100100000 
+0010010000101010 
+1000011001011001 
+0111000111000100 
+0000111100010000 
+********************** HSIAO_H_MATRIX ******************************
+1011101101001101001000 
+1010101010100100100000 
+0110010010010000011101 
+0001001000111011011001 
+0100110111000111000111 
+0000111111000000111100 
+********************** HSIAO_H_MATRIX ******************************
+1111011101101001101001000 
+1011010101010100100100000 
+0010110010010010000111011 
+1110001001000110111011011 
+1000100101110111000111000 
+0011110000111111000000111 
+********************** HSIAO_H_MATRIX ******************************
+1101001101001000 
+1010100100100000 
+0010010000101010 
+1000011001011001 
+0111000111000100 
+0000111100010000 
+********************** HSIAO_H_MATRIX ******************************
+1011101101001101001000 
+1010101010100100100000 
+0110010010010000011101 
+0001001000111011011001 
+0100110111000111000111 
+0000111111000000111100 
+********************** HSIAO_H_MATRIX ******************************
+1111011101101001101001000 
+1011010101010100100100000 
+0010110010010010000111011 
+1110001001000110111011011 
+1000100101110111000111000 
+0011110000111111000000111 
+********************** HSIAO_H_MATRIX ******************************
+1101001101001000 
+1010100100100000 
+0010010000101010 
+1000011001011001 
+0111000111000100 
+0000111100010000 
+********************** HSIAO_H_MATRIX ******************************
+1011101101001101001000 
+1010101010100100100000 
+0110010010010000011101 
+0001001000111011011001 
+0100110111000111000111 
+0000111111000000111100 
+********************** HSIAO_H_MATRIX ******************************
+1111011101101001101001000 
+1011010101010100100100000 
+0010110010010010000111011 
+1110001001000110111011011 
+1000100101110111000111000 
+0011110000111111000000111 
+********************** HSIAO_H_MATRIX ******************************
+1101001101001000 
+1010100100100000 
+0010010000101010 
+1000011001011001 
+0111000111000100 
+0000111100010000 
+********************** HSIAO_H_MATRIX ******************************
+1011101101001101001000 
+1010101010100100100000 
+0110010010010000011101 
+0001001000111011011001 
+0100110111000111000111 
+0000111111000000111100 

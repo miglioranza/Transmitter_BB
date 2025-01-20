@@ -1,0 +1,13 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+./../../../../Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:
+	errors: 0, warnings: 0
+./../../../../Pre-distorsion_filter.srcs/sim_1/new/Parallel_FIR_filter_TB.vhd:
+	errors: 0, warnings: 0
+XIL_DEFAULTLIB.PARALLEL_FIR_FILTER (entity):
+	streams: 13, words: 1617
+XIL_DEFAULTLIB.PARALLEL_FIR_FILTER:BEHAVIORAL (architecture):
+	streams: 1, words: 2564
+XIL_DEFAULTLIB.PARALLEL_FIR_FILTER_TB (entity):
+	streams: 1, words: 63
+XIL_DEFAULTLIB.PARALLEL_FIR_FILTER_TB:BEHAVIORAL (architecture):
+	streams: 1, words: 1840

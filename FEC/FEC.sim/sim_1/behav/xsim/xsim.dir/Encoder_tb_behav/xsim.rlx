@@ -1,0 +1,12 @@
+
+{ 
+    crc :  1985814943358670891  , 
+    ccp_crc :  0  , 
+    cmdline : " --incr --debug typical --relax --mt 8 -L xil_defaultlib -L ecc_v2_0_13 -L fec_5g_common_v1_1_1 -L sd_fec_v1_1_8 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Encoder_tb_behav xil_defaultlib.Encoder_tb xil_defaultlib.glbl" , 
+    buildDate : "Oct 19 2021" , 
+    buildTime : "02:56:52" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/Encoder_tb_behav/xsimk\"   \"xsim.dir/Encoder_tb_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/Encoder_tb_behav/obj/xsim_1.lnx64.o\" \"xsim.dir/Encoder_tb_behav/obj/xsim_2.lnx64.o\" \"xsim.dir/Encoder_tb_behav/obj/xsim_3.lnx64.o\" \"xsim.dir/Encoder_tb_behav/obj/xsim_4.lnx64.o\" \"xsim.dir/Encoder_tb_behav/obj/xsim_5.lnx64.o\" \"xsim.dir/Encoder_tb_behav/obj/xsim_6.lnx64.o\" \"xsim.dir/Encoder_tb_behav/obj/xsim_7.lnx64.o\" \"xsim.dir/Encoder_tb_behav/obj/xsim_8.lnx64.o\" \"xsim.dir/Encoder_tb_behav/obj/xsim_9.lnx64.o\" \"xsim.dir/Encoder_tb_behav/obj/xsim_10.lnx64.o\" \"xsim.dir/Encoder_tb_behav/obj/xsim_11.lnx64.o\" \"xsim.dir/Encoder_tb_behav/obj/xsim_12.lnx64.o\" \"xsim.dir/Encoder_tb_behav/obj/xsim_13.lnx64.o\" \"xsim.dir/Encoder_tb_behav/obj/xsim_14.lnx64.o\" \"xsim.dir/Encoder_tb_behav/obj/xsim_15.lnx64.o\" \"xsim.dir/Encoder_tb_behav/obj/xsim_16.lnx64.o\" \"xsim.dir/Encoder_tb_behav/obj/xsim_17.lnx64.o\" \"xsim.dir/Encoder_tb_behav/obj/xsim_18.lnx64.o\" \"xsim.dir/Encoder_tb_behav/obj/xsim_19.lnx64.o\" \"xsim.dir/Encoder_tb_behav/obj/xsim_20.lnx64.o\" \"xsim.dir/Encoder_tb_behav/obj/xsim_21.lnx64.o\" -L\"/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/lib/lnx64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 
