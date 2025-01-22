@@ -50,7 +50,7 @@ port (
  data_in_valid          : in std_logic ;
  din_ready_ifsm2enc     : in std_logic ;  
  data_in_last           : in std_logic ; 
- sel_FEC_code_rate      : in integer   ;
+ sel_FEC_code_rate      : in std_logic_vector( 1 downto 0)   ;
  data_out_ready         : out std_logic_vector(3 downto 0) := (others => '0');   --Encoder ready to receive data in input                   
  data_out               : out std_logic_vector(31 downto 0) ;
  data_out_valid         : out std_logic ;
@@ -69,14 +69,14 @@ signal reset                : std_logic := '0';
 
 --Encoder signals 
 signal data_in              : std_logic_vector(31 downto 0) := (others =>'0');
-signal random_value         : std_logic_vector(31 downto 0) := (others =>'0');
+signal selected_cr          : integer   := 0 ;
 signal data_in_valid        : std_logic := '0';
 signal data_in_ready        : std_logic := '0';
 signal data_in_last         : std_logic := '0';
 signal data_out             : std_logic_vector(31 downto 0) := (others =>'0');
 signal data_out_valid       : std_logic := '0';
 signal data_out_ready       : std_logic_vector(3 downto 0) := (others =>'0');
-signal sel_FEC_code_rate    : integer   := 0;
+signal sel_FEC_code_rate    : std_logic_vector(1 downto 0) := (others =>'0');
 signal data_in_ready_core   : std_logic := '0';
 signal out_last             : std_logic := '0'; 
 signal finish_encoding      : std_logic := '0' ;
@@ -92,6 +92,9 @@ ldpc_core_clk <= not ldpc_core_clk after clk_core_period/2 ;
 --Reset generation
 --reset_n         <= '0', '1' after 50 ns  ; 
 reset           <= '1', '0' after 5 ns ; 
+
+
+
 dut : Encoder 
 
 Port map (
@@ -111,29 +114,35 @@ Port map (
 
 select_code_rate : process 
 begin 
-sel_FEC_code_rate <= 2 ; 
+
+sel_FEC_code_rate <= "10" ; 
+selected_cr <= 2 ;
 wait until temp = 100 ;
-sel_FEC_code_rate <= 3 ; 
+sel_FEC_code_rate <= "11" ;
+selected_cr <= 3 ;
 wait until temp = 200 ;
-sel_FEC_code_rate <= 1 ;
+sel_FEC_code_rate <= "01" ;
+selected_cr <= 1;
 wait until temp = 300 ;
-sel_FEC_code_rate <= 0 ;
+sel_FEC_code_rate <= "00" ;
+selected_cr <= 0 ;
 wait until out_last = '1'and data_out_valid = '0' ;
 wait ;
 end process ;
 
 stimuli_generation : process
 begin 
+
 wait until reset = '0';
 data_in_ready <= '1';
 while temp < 400 loop 
-if data_out_ready(sel_FEC_code_rate )  = '1' then
+if data_out_ready(selected_cr)  = '1' then
 data_in_valid      <= '1';
 data_in  <= std_logic_vector(to_unsigned((temp + 1 ) ,data_in'length )) ;
 temp <= temp  + 1 ;  
 wait for clk_period *2     ;
 else 
---data_in_valid      <= '0';
+----data_in_valid      <= '0';
 wait until clk'event and clk = '1'; -- Wait for the next clock cycle
 end if ;
 end loop ;

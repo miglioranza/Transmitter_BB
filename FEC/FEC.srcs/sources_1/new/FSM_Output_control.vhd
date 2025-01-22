@@ -37,7 +37,7 @@ entity FSM_Output_control is
 Port (
 clk                   : in STD_LOGIC; 
 reset                 : in STD_LOGIC;
-sel_FEC_code_rate     : in integer   ;
+sel_FEC_code_rate     : in integer    ;
 o_fsm_din             : in STD_LOGIC_VECTOR (31 downto 0) := (others => '0') ;
 o_fsm_din_valid       : in STD_LOGIC_VECTOR (3 downto 0);
 o_fsm_ready_fifo      : in std_logic := '0';
