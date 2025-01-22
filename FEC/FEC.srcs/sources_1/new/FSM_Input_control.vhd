@@ -91,7 +91,8 @@ elsif rising_edge (clk) then
                 fsm_bg_core             <= "001";		-- (base graph)
                 fsm_z_set_core          <= "000";		-- Base graph cyclic shift set
                 fsm_z_j_core 	        <= "100";		--
-                fsm_mb_core		        <= "00" & x"7"; --number of pirity bits defined as: Z * mb; Z == 128; CR = 22/(22+mb) (mb - descirbed as number of parity bits)              
+                fsm_mb_core		        <= "00" & x"7"; --number of pirity bits defined as: Z * mb; Z == 128; CR = 22/(22+mb) (mb - descirbed as number of parity bits)   
+                --Because of information bits puncturing, the code rate should be calculated as CR = 22 / ( 22 - 2 + mb)         
                
 			    
                 when 1 => 
@@ -117,7 +118,7 @@ elsif rising_edge (clk) then
 			    fsm_mb_core		        <= "00" & x"7" ;
 			    
                 when others =>
-                LDPC_data_length        <= (others => '0') ;    -- (1088,640) R=0,588 throughput = 1.605 -->  640bit/32 = 20
+                LDPC_data_length        <= (others => '0') ;  
                 fsm_bg_core   	        <= (others => '0');		
 		      	fsm_z_set_core          <= (others => '0');		
 			    fsm_z_j_core	        <= (others => '0');		
@@ -183,8 +184,7 @@ enc_state  <= enc_next_state ;
         end if ;   
 
       elsif current_code_rate /= sel_FEC_code_rate then
---             fsm_dout                              <= fsm_din ;
---             fsm_reset_core(sel_FEC_code_rate  )   <= '1';
+
              fsm_dout_ready(current_code_rate)     <= '0';   
              enc_next_state                        <= new_code_rate;            
          else     

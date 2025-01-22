@@ -41,7 +41,7 @@ entity Encoder is
  data_in_valid          : in std_logic ;  
  din_ready_ifsm2enc     : in std_logic ;  
  data_in_last           : in std_logic ; 
- sel_FEC_code_rate      : in integer   ;
+ sel_FEC_code_rate      : in std_logic_vector( 1 downto 0)   ;
  data_out_ready         : out std_logic_vector(3 downto 0) := (others => '0');  --LDPC encoder ready to receive data in input, the signal is fed from the fsm input control to the otuput of the encoder subsystem                   
  data_out               : out std_logic_vector(31 downto 0) ;
  data_out_valid         : out std_logic ;
@@ -170,22 +170,23 @@ begin
         
         case sel_FEC_code_rate is   
         
-        when 0 => 
-    
+        when "00" => 
+       selected_code_rate <= 0 ;
        data_out_cores <= data_out_core0 ; 
    
-        when 1 => 
-
+        when "01" => 
+        selected_code_rate <= 1 ;
         data_out_cores <= data_out_core1 ; 
    
-        when 2 =>
-
+        when "10" =>
+        selected_code_rate <= 2 ;
        data_out_cores <= data_out_core2 ;
        
-        when 3 =>
- 
+        when "11" =>
+       selected_code_rate <= 3 ;
        data_out_cores <= data_out_core3 ;          
         when others =>
+                selected_code_rate <= selected_code_rate ;
                 data_in_core0  <= (others => '0')  ;
                 data_in_core1  <= (others => '0')  ;
                 data_in_core2  <= (others => '0')  ;
@@ -200,7 +201,7 @@ end process ;
    Port map (
        clk                   => clk,
        reset                 => reset,
-       sel_FEC_code_rate     => sel_FEC_code_rate ,
+       sel_FEC_code_rate     => selected_code_rate ,
        fsm_din               => data_in ,
        fsm_din_valid         => data_in_valid,
        fsm_din_ready         => dout_ready_cores,
@@ -224,7 +225,7 @@ end process ;
    port map(
        clk                  => clk,
        reset                => reset,
-       sel_FEC_code_rate    => sel_FEC_code_rate,
+       sel_FEC_code_rate    => selected_code_rate,
        o_fsm_din            => data_out_cores,
        o_fsm_din_valid      => ofsm_din_valid ,
        o_fsm_ready_fifo     => '0'  ,
