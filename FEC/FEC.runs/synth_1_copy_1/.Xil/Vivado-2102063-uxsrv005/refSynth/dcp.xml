@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Checkpoint Version="17" Minor="0">
+	<BUILD_NUMBER Name="3367213"/>
+	<FULL_BUILD Name="SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021"/>
+	<PRODUCT Name="Vivado v2021.2 (64-bit)"/>
+	<Part Name="xczu28dr-ffvg1517-2-e"/>
+	<BoardPart Name="xilinx.com:zcu111:part0:1.4"/>
+	<Top Name="Encoder"/>
+	<DisableAutoIOBuffers Name="0"/>
+	<OutOfContext Name="0"/>
+	<RunGenerated Name="1"/>
+	<HDPlatform Name="0"/>
+	<XPMLIBRARY Name="XPM_CDC"/>
+	<XPMLIBRARY Name="XPM_FIFO"/>
+	<XPMLIBRARY Name="XPM_MEMORY"/>
+	<File Type="VERILOG_STUB" Name="Encoder_stub.v" ModTime="1737636041"/>
+	<File Type="VHDL_STUB" Name="Encoder_stub.vhdl" ModTime="1737636041"/>
+	<File Type="SHAPE" Name="Encoder.shape" ModTime="1737636041"/>
+	<File Type="EDIF" Name="Encoder.edf" ModTime="1737636041"/>
+	<File Type="XN" Name="Encoder.xn" ModTime="1737636041"/>
+	<File Type="INCR" Name="Encoder.incr" ModTime="1737636041"/>
+	<File Type="RDA" Name="Encoder.rda" ModTime="1737636041"/>
+	<File Type="JSON_RDA" Name="Encoder_rda.json" ModTime="1737636041"/>
+	<File Type="WDF" Name="Encoder.wdf" ModTime="1737636041"/>
+	<File Type="SYNTH" Name="Encoder.synth" ModTime="1737636041"/>
+</Checkpoint>
+

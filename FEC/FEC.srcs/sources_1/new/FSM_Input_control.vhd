@@ -36,29 +36,30 @@ entity FSM_Input_control is
 Port (     
        clk                   : in STD_LOGIC; 
        reset                 : in STD_LOGIC;
-       sel_FEC_code_rate     : in integer   ;
+       sel_FEC_code_rate     : in std_logic_vector(1 downto 0) := (others => '0')   ;
        fsm_din               : in STD_LOGIC_VECTOR (31 downto 0);
        fsm_din_valid         : in STD_LOGIC; 
-       fsm_din_ready         : in std_logic_vector(3 downto 0) := (others => '0');
+--       fsm_din_ready         : in std_logic_vector(3 downto 0) := (others => '0');
+       fsm_din_ready         : in std_logic :=  '0';
        fsm_din_last          : in STD_LOGIC;
        fsm_control_ready     : in std_logic_vector(3 downto 0) := (others => '0');
        fsm_core_finish       : in STD_LOGIC := '0' ; 
        fsm_control_valid     : out std_logic ;
        fsm_dout              : out std_logic_vector(31 downto 0):= (others => '0');  
-       fsm_dout_valid        : out std_logic_vector(3 downto 0) := (others => '0');
---       fsm_dout_ready        : out std_logic := '0';
+       fsm_dout_valid        : out std_logic := '0';
        fsm_dout_ready        : out std_logic_vector(3 downto 0) := (others => '0');
-       fsm_dout_last         : out std_logic_vector(3 downto 0) := (others => '0');
-       fsm_reset_core        : out std_logic_vector(3 downto 0) := (others => '0');
-       fsm_bg_core 	         : out std_logic_vector(2 DOWNTO 0);
-       fsm_z_set_core	     : out std_logic_vector(2 DOWNTO 0); 
-       fsm_z_j_core		     : out std_logic_vector(2 DOWNTO 0);
-       fsm_mb_core           : out std_logic_vector(5 DOWNTO 0)
+--       fsm_dout_last         : out std_logic_vector(3 downto 0) := (others => '0');
+       fsm_current_cr        : out std_logic_vector(1 DOWNTO 0);
+       fsm_dout_last         : out std_logic := '0';
+       fsm_reset_core        : out std_logic_vector(3 downto 0) := (others => '0')   
+--       fsm_bg_core 	         : out std_logic_vector(2 DOWNTO 0);
+--       fsm_z_set_core	     : out std_logic_vector(2 DOWNTO 0); 
+--       fsm_z_j_core		     : out std_logic_vector(2 DOWNTO 0);
+--       fsm_mb_core           : out std_logic_vector(5 DOWNTO 0)
        );     
 end FSM_Input_control;
 
 architecture rtl of FSM_Input_control is
-
 
 type encoder_fsm_input is (starting_state, encoding_process , padding_process, new_code_rate ,idle_state);
 signal enc_state, enc_next_state     : encoder_fsm_input := starting_state   ;
@@ -82,50 +83,49 @@ change_code_rate        <= '0';
 
 elsif rising_edge (clk) then 
 
-    if     (fsm_din_ready(sel_FEC_code_rate) = '1') then    
 
              case sel_FEC_code_rate is         --Depending on the selected code rate the fsm enable the corresponding core 
                
-                when 0 => 
-                LDPC_data_length        <= x"0a";      -- (544,320) R=0,588 throughput = 0.931  --> 320/32 = 10
-                fsm_bg_core             <= "001";		-- (base graph)
-                fsm_z_set_core          <= "000";		-- Base graph cyclic shift set
-                fsm_z_j_core 	        <= "100";		--
-                fsm_mb_core		        <= "00" & x"7"; --number of pirity bits defined as: Z * mb; Z == 128; CR = 22/(22+mb) (mb - descirbed as number of parity bits)   
+                when "00" => 
+--                LDPC_data_length        <= x"0a";      -- (544,320) R=0,588 throughput = 0.931  --> 320/32 = 10
+--                fsm_bg_core             <= "001";		-- (base graph)
+--                fsm_z_set_core          <= "000";		-- Base graph cyclic shift set
+--                fsm_z_j_core 	        <= "100";		--
+--                fsm_mb_core		        <= "00" & x"7"; --number of pirity bits defined as: Z * mb; Z == 128; CR = 22/(22+mb) (mb - descirbed as number of parity bits)   
+                sel_code_rate           <= 0 ;
+                
                 --Because of information bits puncturing, the code rate should be calculated as CR = 22 / ( 22 - 2 + mb)         
                
 			    
-                when 1 => 
-                LDPC_data_length        <= x"28";      -- (2176,1280) R=0,588 throughput = 2.03 --> 1280bit/32 = 40
-                fsm_bg_core   		    <= "001";		
-			    fsm_z_set_core 	        <= "000";		
-			    fsm_z_j_core	        <= "110";		
-			    fsm_mb_core	            <= "00" & x"7";
+                when "01" => 
+--                LDPC_data_length        <= x"28";      -- (2176,1280) R=0,588 throughput = 2.03 --> 1280bit/32 = 40
+--                fsm_bg_core   		    <= "001";		
+--			    fsm_z_set_core 	        <= "000";		
+--			    fsm_z_j_core	        <= "110";		
+--			    fsm_mb_core	            <= "00" & x"7";
+                sel_code_rate           <= 1 ;
                 
-                when 2 => 
-                LDPC_data_length        <= x"16";      -- (864,704) R=0,815 throughput = 1.99   --> 704bit/32 = 22         
-                fsm_bg_core             <= "000";		-- (base graph)
-			    fsm_z_set_core          <= "000";		-- Base graph cyclic shift set
-			    fsm_z_j_core 	        <= "100";		--
-			    fsm_mb_core 		    <= "00" & x"5";
-                
+                when "10" => 
+--                LDPC_data_length        <= x"16";      -- (864,704) R=0,815 throughput = 1.99   --> 704bit/32 = 22         
+--                fsm_bg_core             <= "000";		-- (base graph)
+--			    fsm_z_set_core          <= "000";		-- Base graph cyclic shift set
+--			    fsm_z_j_core 	        <= "100";		--
+--			    fsm_mb_core 		    <= "00" & x"5";
+                sel_code_rate           <= 2 ;
 --   
-                when 3 =>
-                LDPC_data_length        <= x"14" ;    -- (1088,640) R=0,588 throughput = 1.605 -->  640bit/32 = 20
-                fsm_bg_core   	        <= "001";		
-		      	fsm_z_set_core          <= "000";		
-			    fsm_z_j_core	        <= "101";		
-			    fsm_mb_core		        <= "00" & x"7" ;
-			    
+                when "11" =>
+--                LDPC_data_length        <= x"14" ;    -- (1088,640) R=0,588 throughput = 1.605 -->  640bit/32 = 20
+--                fsm_bg_core   	        <= "001";		
+--		      	fsm_z_set_core          <= "000";		
+--			    fsm_z_j_core	        <= "101";		
+--			    fsm_mb_core		        <= "00" & x"7" ;
+			    sel_code_rate           <= 3 ;
+
                 when others =>
-                LDPC_data_length        <= (others => '0') ;  
-                fsm_bg_core   	        <= (others => '0');		
-		      	fsm_z_set_core          <= (others => '0');		
-			    fsm_z_j_core	        <= (others => '0');		
-			    fsm_mb_core		        <= (others => '0') ;
+                    null ;
+                    
             end case ;
             
-       end if ;
     end if ;
 end process ;     
  
@@ -139,29 +139,31 @@ if reset  = '1' then
 codeword_counter     <= (others => '0');
 block_counter        <= (others => '0'); 
 fsm_dout_ready       <= (others => '0'); 
-fsm_dout_valid       <= (others => '0') ;
---fsm_dout_last        <= '0';
-fsm_dout_last        <= (others => '0');
+fsm_dout_valid       <=  '0' ;
+fsm_dout_last        <= '0';
+fsm_control_valid    <= '0';
+--fsm_dout_last        <= (others => '0');
 enc_next_state       <= starting_state  ;
 
 elsif rising_edge (clk) then 
 enc_state  <= enc_next_state ; 
-
+  
     case enc_state is 
        
 
     when encoding_process =>
-    if current_code_rate = sel_FEC_code_rate and fsm_din_ready(current_code_rate ) = '1'then   --It checks if a new code rate is required depending on the channel conditions 
+    if current_code_rate = sel_code_rate and fsm_din_ready = '1'then   --It checks if a new code rate is required depending on the channel conditions 
 
-        fsm_dout_valid(current_code_rate)          <= '1';     
+        fsm_dout_valid         <= '1';     
       
         if fsm_din_valid = '1' then           
+                  fsm_control_valid              <= '1';
 
-                if fsm_control_ready(current_code_rate ) = '1'then
-                    fsm_control_valid              <= '1';
-                else
-                    fsm_control_valid              <= '0';
-                end if ;
+--                if fsm_control_ready(current_code_rate ) = '1'then
+--                    fsm_control_valid              <= '1';
+--                else
+--                    fsm_control_valid              <= '0';
+--                end if ;
             
             if codeword_counter = current_data_length  and fsm_din_last = '0'   then  --This condition just counts how many block are needed for the data trasmission 
                 block_counter    <= block_counter + x"01" ;
@@ -169,9 +171,9 @@ enc_state  <= enc_next_state ;
                 
             elsif codeword_counter = current_data_length  and fsm_din_last = '1'   then  --This condition just counts how many block are needed for the data trasmission 
                 enc_next_state                     <= idle_state  ;
-                fsm_dout_valid(current_code_rate)  <= '0';   --Tx has finished to transmit the symbols
-                fsm_control_valid                  <= '0';
-                fsm_dout_last(current_code_rate)   <= '1';
+                fsm_dout_valid                     <= '0';   --Tx has finished to transmit the symbols
+--                fsm_control_valid                  <= '0';
+                fsm_dout_last                      <= '1';
                 
 ---This condition checks if padding is necessary
             elsif codeword_counter /=  current_data_length and fsm_din_last = '1' then 
@@ -179,45 +181,45 @@ enc_state  <= enc_next_state ;
            elsif codeword_counter /=  current_data_length and fsm_din_last = '0' then 
                  codeword_counter                       <= codeword_counter + x"01" ;
            end if ; 
---          else 
---            fsm_dout_valid(current_code_rate)      <= '0';                                                                                 
+          else 
+            fsm_control_valid              <= '0';
+            fsm_dout_valid     <= '0';                                                                                 
         end if ;   
 
-      elsif current_code_rate /= sel_FEC_code_rate then
-
+      elsif current_code_rate /= sel_code_rate then
+             fsm_dout_valid     <= '0';               --This value has to be assigned to 0 otherwise the output value is sampled from the FIFO for many clock cycles                                                                      
              fsm_dout_ready(current_code_rate)     <= '0';   
              enc_next_state                        <= new_code_rate;            
          else     
             enc_next_state  <= idle_state ;     --
-            fsm_dout_ready(current_code_rate)      <= '0';   
+            fsm_dout_ready(current_code_rate)           <= '0';   
 --            fsm_dout_valid(current_code_rate)      <= '0';  
                 if fsm_din_last = '1'then 
-                    fsm_dout_last(current_code_rate)    <= '1';
-                    fsm_dout_valid(current_code_rate)   <= '0';  
+                    fsm_dout_last                       <= '1';
+                    fsm_dout_valid                      <= '0';  
                 else     
-                    fsm_dout_last(current_code_rate) <= '0'; 
+                    fsm_dout_last                       <= '0'; 
                 end if ;
           
      end if ;  
                    fsm_dout                              <= fsm_din ;    
-                    
-                      
+                                      
      when padding_process => 
      
             
             if codeword_counter = current_data_length  then  --If the previous state is the encoding process then execute padding and finish encoding process and go to the idle state           
-               fsm_dout_valid(current_code_rate)   <= '0';
-               fsm_control_valid                   <= '0';
-               fsm_dout_last(current_code_rate)    <= '1' ; 
+--               fsm_dout_valid                      <= '0';
+--               fsm_control_valid                   <= '0'; --To be verified 
+               fsm_dout_last                       <= '1' ; 
 --               fsm_dout                            <= fsm_din ;
 --               block_counter                       <= (others => '0');   --When the transmission is completed reset the counters 
 --               codeword_counter                    <= (others => '0');  
                enc_next_state                      <= idle_state  ; 
             
             elsif  codeword_counter /= current_data_length then
-                  if fsm_din_ready(current_code_rate ) = '1' then
+                  if fsm_din_ready = '1' then
                     fsm_dout                           <= x"5A5A5A5A" ; --Padding process 
-    --              fsm_dout_valid(current_code_rate)                 <= '1' ;
+                    fsm_dout_valid                     <= '1' ;
                     codeword_counter                   <= codeword_counter + x"01" ;              
                   else      
                     enc_next_state                     <= padding_process ;     
@@ -233,9 +235,9 @@ enc_state  <= enc_next_state ;
              else     
                  codeword_counter                     <= (others => '0');
                  block_counter                        <= (others => '0');
-                 fsm_dout_valid(current_code_rate)    <= '0';
-                 fsm_control_valid                    <= '0';
-                 fsm_dout_last(current_code_rate)     <= '1' ; 
+                 fsm_dout_valid                       <= '0';
+                 fsm_control_valid                    <= '0'; 
+                 fsm_dout_last                        <= '1' ; 
                  enc_next_state                       <= idle_state  ;
             end if ; 
       when idle_state => 
@@ -245,34 +247,37 @@ enc_state  <= enc_next_state ;
 --                        fsm_reset_core(sel_FEC_code_rate )       <= '1';      --To be fixed ,the selected code rate = 0  in the beginning is wrongly set equal to 1 
 --                        enc_next_state                           <= idle_state  ;
 --            if   fsm_din_ready(sel_FEC_code_rate ) = '1' and new_code_rate_state  = '0' and fsm_din_last = '0' then
-            if   fsm_din_ready(sel_FEC_code_rate ) = '1' and current_code_rate = sel_FEC_code_rate and fsm_din_last = '0' then
+            if   fsm_din_ready = '1' and current_code_rate = sel_code_rate  and fsm_din_last = '0' then
                          fsm_dout_ready(current_code_rate)           <= '1';                  
 --                         current_code_rate       <= sel_FEC_code_rate ;
                          enc_next_state          <= encoding_process  ;
                           
 --            elsif fsm_din_ready(sel_FEC_code_rate ) = '1' and new_code_rate_state  = '1' then
-            elsif fsm_din_ready(sel_FEC_code_rate ) = '1' and current_code_rate /= sel_FEC_code_rate  then
-
+            elsif fsm_din_ready= '1' and current_code_rate /= sel_code_rate   then
+              fsm_dout_last                       <= '0' ; 
 --                         block_counter                       <= (others => '0'); 
 --                         codeword_counter                    <= (others => '0');    
                  if fsm_core_finish = '1' then
     --                       fsm_dout_ready          <= '1'; 
                            new_code_rate_state                 <= '0' ;         
-                           fsm_reset_core(current_code_rate  ) <= '0';
-                           fsm_dout_last(current_code_rate)    <= '0' ;
+                           fsm_reset_core(current_code_rate)   <= '0';
+--                          fsm_reset_core(sel_code_rate  )      <= '1'; 
+                           fsm_dout_last                       <= '0' ;
                            block_counter                       <= (others => '0');   --When the transmission is completed reset the counters 
                            codeword_counter                    <= (others => '0');   
-                           current_code_rate                   <= sel_FEC_code_rate ;
+                           current_code_rate                   <= sel_code_rate  ;
+                           fsm_current_cr                      <= sel_FEC_code_rate  ;  --output value for updating the fifo about which current rate iss selected , if a new code rate arrives in input the output value is updated only when the current core has finished 
                            current_data_length                 <= LDPC_data_length ;
 --                           enc_next_state                      <= encoding_process  ; 
        
              else      
---                           fsm_dout_valid(current_code_rate)      <= '0';  
+                           
+                           fsm_dout_valid                        <= '0';  
                            fsm_dout_ready(current_code_rate)     <= '0';    
                            enc_next_state          <= idle_state  ;
                  end if ;      
-                   elsif  fsm_din_ready(sel_FEC_code_rate ) = '0' and current_code_rate /= sel_FEC_code_rate then
-                   fsm_reset_core(sel_FEC_code_rate )       <= '1'; 
+                   elsif  fsm_din_ready = '0' and current_code_rate /= sel_code_rate  then
+                   fsm_reset_core(sel_code_rate )       <= '1'; 
              else   
 --                   fsm_dout                           <= fsm_din ;
                       
@@ -280,13 +285,15 @@ enc_state  <= enc_next_state ;
              end if ;    
       when starting_state  =>
       
-          if sel_FEC_code_rate /= current_code_rate  then 
+          if sel_code_rate  /= current_code_rate  then 
                  enc_next_state         <= starting_state ;
                  current_data_length    <= LDPC_data_length ; 
-                 current_code_rate <= sel_FEC_code_rate ;
+                 current_code_rate      <= sel_code_rate  ;
+                 fsm_current_cr         <= sel_FEC_code_rate    ;                     
+
                else 
                  fsm_reset_core(current_code_rate )       <= '1';      --To be fixed ,the selected code rate = 0  in the beginning is wrongly set equal to 1 
-                     if fsm_din_ready(current_code_rate ) = '1' then
+                     if fsm_din_ready = '1' then
                          fsm_dout_ready(current_code_rate)           <= '1';                   
                          enc_next_state         <= encoding_process ;
                          current_data_length    <= LDPC_data_length ; 

@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2024 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2025 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -61,7 +61,7 @@ sd_fec_0 your_instance_name (
   .s_axis_ctrl_aclk(s_axis_ctrl_aclk),          // input wire s_axis_ctrl_aclk
   .s_axis_ctrl_tready(s_axis_ctrl_tready),      // output wire s_axis_ctrl_tready
   .s_axis_ctrl_tvalid(s_axis_ctrl_tvalid),      // input wire s_axis_ctrl_tvalid
-  .s_axis_ctrl_tdata(s_axis_ctrl_tdata),        // input wire [39 : 0] s_axis_ctrl_tdata
+  .s_axis_ctrl_tdata(s_axis_ctrl_tdata),        // input wire [31 : 0] s_axis_ctrl_tdata
   .s_axis_din_aclk(s_axis_din_aclk),            // input wire s_axis_din_aclk
   .s_axis_din_tready(s_axis_din_tready),        // output wire s_axis_din_tready
   .s_axis_din_tvalid(s_axis_din_tvalid),        // input wire s_axis_din_tvalid
@@ -70,7 +70,7 @@ sd_fec_0 your_instance_name (
   .m_axis_status_aclk(m_axis_status_aclk),      // input wire m_axis_status_aclk
   .m_axis_status_tready(m_axis_status_tready),  // input wire m_axis_status_tready
   .m_axis_status_tvalid(m_axis_status_tvalid),  // output wire m_axis_status_tvalid
-  .m_axis_status_tdata(m_axis_status_tdata),    // output wire [39 : 0] m_axis_status_tdata
+  .m_axis_status_tdata(m_axis_status_tdata),    // output wire [31 : 0] m_axis_status_tdata
   .m_axis_dout_aclk(m_axis_dout_aclk),          // input wire m_axis_dout_aclk
   .m_axis_dout_tready(m_axis_dout_tready),      // input wire m_axis_dout_tready
   .m_axis_dout_tvalid(m_axis_dout_tvalid),      // output wire m_axis_dout_tvalid

@@ -1,0 +1,95 @@
+Data_For_RDAFlowver5.0
+	top level·,
+Encoderﬂ
+LinkDesign_Blackboxes0
+$LDPC_encoder_1x16_inst3/ldpc_encodersd_fec_00
+$LDPC_encoder_1x16_inst0/ldpc_encodersd_fec_00
+$LDPC_encoder_1x16_inst2/ldpc_encodersd_fec_00
+$LDPC_encoder_1x16_inst1/ldpc_encodersd_fec_0ª#
+synthFileNames\
+10V/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhdY
+11S/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/BRAM_TDP_MACRO.vhd]
+12W/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/COUNTER_LOAD_MACRO.vhd[
+13U/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/COUNTER_TC_MACRO.vhd[
+14U/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/EQ_COMPARE_MACRO.vhdX
+20R/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/verilog/src/unimacro/ADDSUB_MACRO.v_
+15Y/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhdZ
+21T/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/verilog/src/unimacro/BRAM_SDP_MACRO.vZ
+16T/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/FIFO_SYNC_MACRO.vhd]
+22W/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.vU
+17O/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/MACC_MACRO.vhdU
+18O/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/MULT_MACRO.vhdZ
+23T/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/verilog/src/unimacro/BRAM_TDP_MACRO.vY
+19S/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/verilog/src/unimacro/ADDMACC_MACRO.v^
+24X/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/verilog/src/unimacro/COUNTER_LOAD_MACRO.v\
+25V/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/verilog/src/unimacro/COUNTER_TC_MACRO.vV
+30P/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/verilog/src/unimacro/MULT_MACRO.v
+NumFileNames52\
+26V/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/verilog/src/unimacro/EQ_COMPARE_MACRO.v\
+31V/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unisims/retarget/MULT18X18.vhdV
+1Q/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/scripts/rt/data/unisim_VCOMP_diablo.vhd`
+27Z/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/verilog/src/unimacro/FIFO_DUALCLOCK_MACRO.v]
+32W/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unisims/retarget/MULT18X18S.vhdN
+2I/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/scripts/rt/data/unisim_VPKG.vhd[
+28U/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/verilog/src/unimacro/FIFO_SYNC_MACRO.vR
+33L/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.svS
+3N/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/scripts/rt/data/unisim_comp_diablo.vV
+29P/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/verilog/src/unimacro/MACC_MACRO.vT
+34N/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.svO
+4J/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/scripts/rt/data/internal_cells.vX
+35R/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv>
+408/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhdE
+5@/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/scripts/rt/data/BUFT.vi
+36c/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-4042318-uxsrv005/realtime/sd_fec_0_stub.vI
+41C/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_VCOMP.vhdX
+6S/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/unimacro_VCOMP.vhdH
+37B/home/miglioranza/FEC/FEC.srcs/sources_1/new/FSM_Input_control.vhdW
+42Q/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/vhdl_packages/1993/src/std_1164.vhdW
+7R/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/ADDMACC_MACRO.vhdI
+38C/home/miglioranza/FEC/FEC.srcs/sources_1/new/FSM_Output_control.vhdW
+43Q/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/vhdl_packages/1993/src/standard.vhdV
+8Q/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/ADDSUB_MACRO.vhd@
+39:/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhdZ
+44T/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/vhdl_packages/1993/src/numeric_std.vhdW
+50Q/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/vhdl_packages/1993/src/syn_arit.vhdX
+9S/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/BRAM_SDP_MACRO.vhdU
+45O/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/vhdl_packages/1993/src/textio.vhdW
+51Q/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/vhdl_packages/1993/src/syn_unsi.vhdW
+46Q/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/vhdl_packages/1993/src/timing_p.vhdW
+47Q/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/vhdl_packages/1993/src/timing_b.vhdW
+48Q/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/vhdl_packages/1993/src/prmtvs_p.vhdW
+49Q/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/vhdl_packages/1993/src/prmtvs_b.vhdZ
+
+synthStatsL
+fwd_retimable_ffs7
+1FSM_Input_control_inst/current_data_length_reg[*]15Q
+ElaboratedNamesForRQS8
+DSP_RAM-
+733185# {FSM_Input_control_inst/plusOp_i} ÷
+blackBoxInfo0
+$LDPC_encoder_1x16_inst2/ldpc_encodersd_fec_00
+$LDPC_encoder_1x16_inst1/ldpc_encodersd_fec_00
+$LDPC_encoder_1x16_inst3/ldpc_encodersd_fec_00
+$LDPC_encoder_1x16_inst0/ldpc_encodersd_fec_0≠
+synth_design
+	directiveareaoptimized_high
+isIncremental0
+Runtime0
+Threads used4o
+argsg-control_set_opt 1 -verilog_define default::[not_specified] -top  Encoder -part  xczu28dr-ffvg1517-2-e 
+resynthPerc0.00
+Cputime0
+blackBoxPercinfù
+synth_design_metrics
+caseNotFullNoDefault-1
+	smallSrls-1
+srlsWithResetLogic-1
+shallowRAMWithAttribute-1
+hierMFO0
+bigRAMs-1
+NetsWithMixedFanouts-1
+DSPsWithKeep0$
+mismatchedAddSubOperatorWidths-1
+lowMaxFanout-1
+NumUnregisteredPorts0
+RQS_Results

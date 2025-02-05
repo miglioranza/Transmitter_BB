@@ -1,9 +1,10 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
+"../../../../FEC.srcs/sources_1/new/Data_input_FIFO.vhd" \
 "../../../../FEC.srcs/sources_1/new/Encoder.vhd" \
-"../../../../FEC.srcs/sources_1/new/FSM_Input_control.vhd" \
 "../../../../FEC.srcs/sources_1/new/FSM_Output_control.vhd" \
 "../../../../FEC.srcs/sources_1/new/LDPC_core.vhd" \
+"../../../../FEC.srcs/sources_1/new/Wifi_Input_FSM.vhd" \
 "../../../../FEC.srcs/sim_1/new/Encoder_tb.vhd" \
 
 # Do not sort compile order

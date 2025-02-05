@@ -45,7 +45,7 @@ entity Data_input_FIFO is
    data_out_last         : out std_logic_vector(3 downto 0) :=(others => '0');
    data_out_ready        : out std_logic := '0';
    data_out_valid        : out std_logic_vector(3 downto 0) :=(others => '0');
-   fifo_full             : out std_logic:= '0'
+   axis_data_count  :out std_logic_vector(12 downto 0) 
       );
 end Data_input_FIFO;
 
@@ -62,7 +62,7 @@ m_axis_tdata     :out std_logic_vector(31 downto 0):=(others => '0') ;
 m_axis_tlast     :out std_logic := '0' ;
 m_axis_tready    :in std_logic := '0';
 m_axis_tvalid    :out std_logic := '0';
-axis_data_count :out std_logic_vector(12 downto 0) ;
+axis_data_count  :out std_logic_vector(12 downto 0) ;
 wr_rst_busy      :out std_logic := '0'; 
 rd_rst_busy      :out std_logic := '0'
     ); 
@@ -72,8 +72,9 @@ signal current_code_rate        : integer   :=  0  ;
 signal data_ready_core2fifo     : std_logic := '0' ;
 signal data_last_fifo2core      : std_logic := '0' ;
 signal data_valid_fifo2core     : std_logic := '0' ;
-signal axis_data_counts         : std_logic_vector(12 downto 0) ;
-
+--signal axis_data_counts         : std_logic_vector(12 downto 0) ;
+signal core_ready               : std_logic := '0' ;
+signal fifo_ready               : std_logic := '0' ;
 begin
 
 axis_fifo : fifo_generator_0 
@@ -88,7 +89,7 @@ m_axis_tdata        => data_out ,
 m_axis_tlast        => data_last_fifo2core , 
 m_axis_tready       => data_ready_core2fifo ,
 m_axis_tvalid       => data_valid_fifo2core , 
-axis_data_count    => axis_data_counts ,
+axis_data_count     => axis_data_count ,
 wr_rst_busy         => open ,
 rd_rst_busy         => open 
 ); 
@@ -117,13 +118,23 @@ begin
  if tdata_ready(current_code_rate) = '1' then 
  --signal that notice to the fifo that the core is ready to receive the data 
     data_ready_core2fifo <= '1'; --Signal that notice the input fsm  that is ready to receive the data in input 
-    
+--   if fifo_ready = '1'then 
+--    data_out_ready <= '1' ;
+--    else 
+--     data_out_ready <= '0' ;
+--     end if ;
  else 
     data_ready_core2fifo <= '0';
+--    data_out_ready <= '0' ;
+
   end if ;
    
     data_out_last (current_code_rate) <= data_last_fifo2core ;
-    data_out_valid(current_code_rate) <=  data_valid_fifo2core ; 
-    
+    data_out_valid(current_code_rate) <=  data_valid_fifo2core  ; 
+ 
 end process ;
+
+
+
+
 end RTL;
