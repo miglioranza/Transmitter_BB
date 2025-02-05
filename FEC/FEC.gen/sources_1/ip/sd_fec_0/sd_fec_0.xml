@@ -738,7 +738,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_CTRL.TDATA_NUM_BYTES">5</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_CTRL.TDATA_NUM_BYTES">4</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1544,7 +1544,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_STATUS.TDATA_NUM_BYTES">5</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_STATUS.TDATA_NUM_BYTES">4</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -2149,11 +2149,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Nov 12 09:19:16 UTC 2024</spirit:value>
+            <spirit:value>Tue Jan 28 10:42:12 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f0d938b9</spirit:value>
+            <spirit:value>9:86ee1779</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductLicenses</spirit:name>
@@ -2178,11 +2178,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Nov 12 09:19:18 UTC 2024</spirit:value>
+            <spirit:value>Tue Jan 28 10:42:15 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f0d938b9</spirit:value>
+            <spirit:value>9:86ee1779</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductLicenses</spirit:name>
@@ -2200,11 +2200,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Nov 12 09:19:18 UTC 2024</spirit:value>
+            <spirit:value>Tue Jan 28 10:42:15 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f0d938b9</spirit:value>
+            <spirit:value>9:86ee1779</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductLicenses</spirit:name>
@@ -2224,11 +2224,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Nov 12 09:19:18 UTC 2024</spirit:value>
+            <spirit:value>Tue Jan 28 10:42:15 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f0d938b9</spirit:value>
+            <spirit:value>9:86ee1779</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductLicenses</spirit:name>
@@ -2253,11 +2253,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Nov 12 09:19:19 UTC 2024</spirit:value>
+            <spirit:value>Tue Jan 28 10:42:16 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:726362fc</spirit:value>
+            <spirit:value>9:77a7efca</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductLicenses</spirit:name>
@@ -2277,11 +2277,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Nov 12 09:19:19 UTC 2024</spirit:value>
+            <spirit:value>Tue Jan 28 10:42:16 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:726362fc</spirit:value>
+            <spirit:value>9:77a7efca</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductLicenses</spirit:name>
@@ -2303,11 +2303,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Nov 12 09:19:21 UTC 2024</spirit:value>
+            <spirit:value>Tue Jan 28 10:42:19 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f0d938b9</spirit:value>
+            <spirit:value>9:86ee1779</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductLicenses</spirit:name>
@@ -2325,11 +2325,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Nov 12 09:19:21 UTC 2024</spirit:value>
+            <spirit:value>Tue Jan 28 10:42:19 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f0d938b9</spirit:value>
+            <spirit:value>9:86ee1779</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductLicenses</spirit:name>
@@ -2347,11 +2347,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Nov 12 09:19:21 UTC 2024</spirit:value>
+            <spirit:value>Tue Jan 28 10:42:19 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f0d938b9</spirit:value>
+            <spirit:value>9:86ee1779</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductLicenses</spirit:name>
@@ -2369,11 +2369,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Nov 12 09:19:22 UTC 2024</spirit:value>
+            <spirit:value>Tue Jan 28 10:44:55 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f0d938b9</spirit:value>
+            <spirit:value>9:86ee1779</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductLicenses</spirit:name>
@@ -2922,7 +2922,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_CTRL_TDATA_WIDTH&apos;)) - 1)">39</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_CTRL_TDATA_WIDTH&apos;)) - 1)">31</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3047,7 +3047,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_CTRL_TDATA_WIDTH&apos;)) - 1)">39</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_CTRL_TDATA_WIDTH&apos;)) - 1)">31</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3292,7 +3292,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>C_STANDARD</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_STANDARD">5G</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_STANDARD">WIFI</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>C_MODE</spirit:name>
@@ -3300,7 +3300,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="signed">
         <spirit:name>C_PHYSICAL_UTILIZATION</spirit:name>
-        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_PHYSICAL_UTILIZATION">100</spirit:value>
+        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_PHYSICAL_UTILIZATION">98.0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="signed">
         <spirit:name>C_THROUGHPUT_UTILIZATION</spirit:name>
@@ -3308,15 +3308,15 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_CTRL_TDATA_WIDTH</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CTRL_TDATA_WIDTH">40</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CTRL_TDATA_WIDTH">32</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>ENCODE</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ENCODE">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ENCODE">0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>ONLY_5G</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ONLY_5G">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ONLY_5G">0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>CORE_AXI_WR_PROTECT</spirit:name>
@@ -3356,35 +3356,35 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>SC_TABLE_FILENAME</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SC_TABLE_FILENAME">NO_INIT</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SC_TABLE_FILENAME">sd_fec_0_sc_table.mif</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>LA_TABLE_FILENAME</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.LA_TABLE_FILENAME">encode_la_table.mif</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.LA_TABLE_FILENAME">sd_fec_0_la_table.mif</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>QC_TABLE_FILENAME</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.QC_TABLE_FILENAME">encode_qc_table0.mif</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.QC_TABLE_FILENAME">sd_fec_0_qc_table.mif</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>QC_TABLE_FILENAME_T</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.QC_TABLE_FILENAME_T">encode_qc_table0_t.mif</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.QC_TABLE_FILENAME_T">NO_INIT</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>NM_NMQC_FILENAME</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.NM_NMQC_FILENAME">encode_nm_nmqc.mif</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.NM_NMQC_FILENAME">NO_INIT</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>CODE_REG_FILENAME</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CODE_REG_FILENAME">NO_INIT</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CODE_REG_FILENAME">sd_fec_0_code_table.mif</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>MERGED_FILENAME</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MERGED_FILENAME">NO_INIT</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MERGED_FILENAME">sd_fec_0_merged_table.mif</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>MERGED_CODE_REG_SIZE</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MERGED_CODE_REG_SIZE">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MERGED_CODE_REG_SIZE">48</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>MERGED_SC_TABLE_SIZE</spirit:name>
@@ -3392,11 +3392,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>MERGED_LA_TABLE_SIZE</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MERGED_LA_TABLE_SIZE">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MERGED_LA_TABLE_SIZE">180</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>MERGED_QC_TABLE_SIZE</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MERGED_QC_TABLE_SIZE">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MERGED_QC_TABLE_SIZE">1853</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -3408,7 +3408,8 @@
       <spirit:enumeration>Multi-bit_only</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_25c9e2fe</spirit:name>
+      <spirit:name>choice_list_232bf49e</spirit:name>
+      <spirit:enumeration>Runtime-Configured</spirit:enumeration>
       <spirit:enumeration>Initialized_retain_I/F</spirit:enumeration>
       <spirit:enumeration>Initialized</spirit:enumeration>
     </spirit:choice>
@@ -3523,28 +3524,24 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>mif/encode_la_table.mif</spirit:name>
+        <spirit:name>mif/sd_fec_0_code_table.mif</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>mif/encode_qc_table0.mif</spirit:name>
+        <spirit:name>mif/sd_fec_0_sc_table.mif</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>mif/encode_qc_table0_t.mif</spirit:name>
+        <spirit:name>mif/sd_fec_0_la_table.mif</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>mif/encode_nm_nmqc.mif</spirit:name>
+        <spirit:name>mif/sd_fec_0_qc_table.mif</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>mif/sd_fec_0_merged_table.mif</spirit:name>
+        <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>sd_fec_0_trans.log</spirit:name>
@@ -3616,28 +3613,24 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>mif/encode_la_table.mif</spirit:name>
+        <spirit:name>mif/sd_fec_0_code_table.mif</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>mif/encode_qc_table0.mif</spirit:name>
+        <spirit:name>mif/sd_fec_0_sc_table.mif</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>mif/encode_qc_table0_t.mif</spirit:name>
+        <spirit:name>mif/sd_fec_0_la_table.mif</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>mif/encode_nm_nmqc.mif</spirit:name>
+        <spirit:name>mif/sd_fec_0_qc_table.mif</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>mif/sd_fec_0_merged_table.mif</spirit:name>
+        <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>sd_fec_0_trans.log</spirit:name>
@@ -3667,6 +3660,54 @@
       <spirit:file>
         <spirit:name>cmodel/sd_fec_v1_1_bitacc_cmodel_nt64.zip</spirit:name>
         <spirit:userFileType>zip</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>cmodel/wifi802_11_cr1_2_648_encode.yml</spirit:name>
+        <spirit:fileType>unknown</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>cmodel/wifi802_11_cr1_2_1296_encode.yml</spirit:name>
+        <spirit:fileType>unknown</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>cmodel/wifi802_11_cr1_2_1944_encode.yml</spirit:name>
+        <spirit:fileType>unknown</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>cmodel/wifi802_11_cr2_3_648_encode.yml</spirit:name>
+        <spirit:fileType>unknown</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>cmodel/wifi802_11_cr2_3_1296_encode.yml</spirit:name>
+        <spirit:fileType>unknown</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>cmodel/wifi802_11_cr2_3_1944_encode.yml</spirit:name>
+        <spirit:fileType>unknown</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>cmodel/wifi802_11_cr3_4_648_encode.yml</spirit:name>
+        <spirit:fileType>unknown</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>cmodel/wifi802_11_cr3_4_1296_encode.yml</spirit:name>
+        <spirit:fileType>unknown</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>cmodel/wifi802_11_cr3_4_1944_encode.yml</spirit:name>
+        <spirit:fileType>unknown</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>cmodel/wifi802_11_cr5_6_648_encode.yml</spirit:name>
+        <spirit:fileType>unknown</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>cmodel/wifi802_11_cr5_6_1296_encode.yml</spirit:name>
+        <spirit:fileType>unknown</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>cmodel/wifi802_11_cr5_6_1944_encode.yml</spirit:name>
+        <spirit:fileType>unknown</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -3738,7 +3779,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Standard</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Standard" spirit:choiceRef="choice_list_ce95e4a6" spirit:order="3">5G</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Standard" spirit:choiceRef="choice_list_ce95e4a6" spirit:order="3">Wifi_802.11</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Turbo_Decode</spirit:name>
@@ -3877,7 +3918,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Parameter_Interface</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Parameter_Interface" spirit:choiceRef="choice_list_25c9e2fe" spirit:order="16">Initialized</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Parameter_Interface" spirit:choiceRef="choice_list_232bf49e" spirit:order="16">Initialized</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Enable_IFs</spirit:name>
@@ -3940,7 +3981,7 @@
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.AXI_WR_Protect">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.AXI_WR_Protect">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -3951,7 +3992,7 @@
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.Code_WR_Protect">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.Code_WR_Protect">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -4018,7 +4059,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Physical_Utilization</spirit:name>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.Physical_Utilization" spirit:order="32" spirit:minimum="0" spirit:maximum="100">100</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.Physical_Utilization" spirit:order="32" spirit:minimum="0" spirit:maximum="100">98.0</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -4062,7 +4103,7 @@
     <spirit:parameter>
       <spirit:name>LE_PERCENT_LOAD</spirit:name>
       <spirit:displayName>LDPC Encoder Percentage Loading</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.LE_PERCENT_LOAD" spirit:order="37" spirit:minimum="0" spirit:maximum="100" spirit:rangeType="long">100</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.LE_PERCENT_LOAD" spirit:order="37" spirit:minimum="0" spirit:maximum="100" spirit:rangeType="long">98</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -4117,7 +4158,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>DRV_STANDARD</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DRV_STANDARD" spirit:order="42">1</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DRV_STANDARD" spirit:order="42">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>DRV_INITIALIZATION_PARAMS</spirit:name>
@@ -4129,11 +4170,117 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>DRV_LDPC_PARAMS</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DRV_LDPC_PARAMS" spirit:order="45">undefined</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DRV_LDPC_PARAMS" spirit:order="45">wifi802_11_cr1_2_648_encode {dec_OK 0 enc_OK 1 n 648 k 324 p 27 nlayers 24 nqc 304 nmqc 76 nm 7 norm_type 1 no_packing 0 special_qc 0 no_final_parity 0 max_schedule 0 sc_table {52428 52428 52428 52428 52428 52428} la_table {2 2 3 2 2 2 3 2 2 2 3 2 3075 3330 3074 3074 3074 3074 3074 3074 3074 3074 3074 3074} qc_table {131072 65536 65536 65536 131076 65536 65536 65536 131080 131077 425998 131083 5632 65536 65536 65536 4356 65536 65536 131079 3080 131073 131078 425999 1536 65536 65536 65536 2564 65
+536 65536 65536 6152 65536 131074 65536 426000 65536 131082 65536 512 65536 65536 65536 5124 131081 65536 65536 6408 426001 65536 131075 5888 65536 65536 65536 772 65536 2314 65536 8 65536 426002 2827 6144 65536 65536 65536 4356 65536 5890 259 2568 65536 774 426003 6400 65536 65536 65536 2052 65536 65536 65536 1800 65536 65536 65536 426004 4617 65536 65536 3328 65536 65536 65536 4 6145 65536 65536 1544 426005 2054 65536 1792 65536 65536 65536 5636 5121 65536 65536 5896 2565 426006 4099 2816 6553
+6 65536 65536 4868 65536 65536 4363 3336 65536 778 426007 6400 65536 65536 65536 5892 65536 65536 65536 2312 65536 65536 65536 426008 4613 2050 3591 768 65536 65536 65536 4100 1289 65536 65536 6408 426009 65536 519 262160 65536 65536 65536 262164 262161 262158 262159 262168 262165 262162 262163 425996 262169 262166 262167 65536 65536 65536 65536 65536 65536 65536 65536 262412 425997 262158 65536 65536 65536 65536 65536 65536 65536 65536 65536 65536 262157 294926 262159 65536 65536 65536 65536 65
+536 65536 65536 65536 262160 65536 262158 294927 65536 65536 65536 65536 65536 65536 65536 65536 294928 262161 65536 262159 65536 65536 65536 65536 65536 65536 65536 65536 262160 294929 262162 65536 65536 65536 65536 65536 65536 65536 65536 65536 65536 262161 294930 262163 65536 65536 65536 65536 262156 65536 65536 65536 262164 65536 262162 294931 65536 65536 65536 65536 65536 65536 65536 65536 294932 262165 65536 262163 65536 65536 65536 65536 65536 65536 65536 65536 262164 294933 262166 65536 
+65536 65536 65536 65536 65536 65536 65536 65536 65536 262165 294934 262167 65536 65536 65536 65536 65536 65536 65536 65536 262168 65536 262166 294935}} wifi802_11_cr1_2_1296_encode {dec_OK 0 enc_OK 1 n 1296 k 648 p 54 nlayers 24 nqc 176 nmqc 88 nm 13 norm_type 1 no_packing 0 special_qc 0 no_final_parity 0 max_schedule 0 sc_table {52428 52428 52428 52428 52428 52428} la_table {4 3 3 2 3 3 2 4 3 4 2 3 2566 4354 3330 3330 3330 3330 3330 3330 3330 3330 3330 3330} qc_table {141312 65536 136708 65536 
+143622 65536 142088 65536 425998 136967 12800 65536 12292 131329 3336 140037 138762 425999 9984 65536 1028 65536 518 12801 426000 143627 8448 140803 9476 1031 264 426001 11520 65536 4 65536 5128 5637 426002 141833 13056 65536 8964 65536 11272 12291 4618 426003 12032 65536 13064 2817 426004 4357 1280 65536 137474 65536 1540 65536 11526 10249 3336 426005 8448 65536 6148 65536 5896 8707 426006 11787 256 65536 6914 65536 260 65536 9736 65536 11274 426007 5892 4609 8 2055 426008 8969 12544 65536 4354
+ 65536 7684 4875 8712 426009 262158 65536 262160 262159 262162 262161 262164 262163 262166 262165 262168 262167 425996 262169 65536 65536 262412 65536 262158 425997 65536 65536 65536 262157 294926 262159 65536 65536 262158 65536 262160 294927 65536 65536 65536 262159 294928 262161 65536 65536 262160 65536 262162 294929 65536 65536 65536 262161 294930 262163 262156 65536 262162 65536 262164 294931 65536 65536 65536 262163 294932 262165 65536 65536 262164 65536 262166 294933 65536 65536 65536 2621
+65 294934 262167 65536 65536 262166 65536 262168 294935}} wifi802_11_cr1_2_1944_encode {dec_OK 0 enc_OK 1 n 1944 k 972 p 81 nlayers 24 nqc 120 nmqc 120 nm 26 norm_type 1 no_packing 0 special_qc 0 no_final_parity 0 max_schedule 0 sc_table {52428 52428 52428 52428 52428 52428} la_table {5 5 5 5 5 5 5 5 5 5 5 6 1804 6146 3586 3586 3586 3586 3586 3331 3842 3586 3586 3586} qc_table {145664 143876 133894 143880 151306 393230 768 138242 4 14088 132873 393231 7680 6148 140549 14344 3593 393232 15872 144
+641 13572 131847 8968 393233 10240 136195 16900 5639 7176 393234 0 2052 10758 12808 133131 393235 17664 20225 20226 14342 13320 393236 16640 9732 14597 18440 6922 393237 16384 3588 13317 7688 8203 393238 11521 17923 4 19720 2313 393239 512 14337 14595 8964 3082 393240 6144 15618 15364 6919 13064 4107 393241 262158 262159 262160 262161 262162 262163 262164 262165 262166 262167 262168 262169 393228 262412 262158 393229 262157 262159 262158 262158 262160 262159 262159 262161 262160 262160 262162 26
+2161 262161 262163 262162 262156 262162 262164 262163 262163 262165 262164 262164 262166 262165 262165 262167 262166 262166 262168 262167}} wifi802_11_cr2_3_648_encode {dec_OK 0 enc_OK 1 n 648 k 432 p 27 nlayers 16 nqc 216 nmqc 56 nm 7 norm_type 1 no_packing 0 special_qc 0 no_final_parity 0 max_schedule 0 sc_table {52428 52428 52428 52428} la_table {2 2 3 3 3 3 3 3 3330 3074 3074 3074 3074 3074 3074 3074} qc_table {137472 65536 134658 65536 136196 137729 131590 133131 132104 135181 426002 135695
+ 65536 65536 3842 133891 2560 2305 135690 131335 133132 131077 133646 426003 4096 65536 65536 65536 5380 65536 65536 65536 264 513 5122 6659 426004 137737 1542 1803 65536 3329 65536 65536 65536 773 65536 3 65536 3341 1282 1799 2560 426005 6666 4111 5888 65536 6146 65536 3076 65536 4870 65536 4360 65536 5390 65536 5132 3585 426006 65536 65536 5633 65536 5123 65536 6405 65536 4359 65536 2057 65536 3595 1536 4621 2306 426007 3584 65536 65536 65536 5124 65536 5378 65536 4616 65536 6150 2819 426008 5
+889 4874 5647 65536 2817 65536 65536 65536 5381 65536 65536 4352 777 2818 5123 4620 426009 6670 6663 262164 65536 65536 65536 262168 262165 262162 262163 426000 262169 262166 262167 65536 65536 65536 65536 65536 65536 65536 65536 262416 426001 262162 65536 65536 65536 65536 65536 65536 65536 65536 65536 65536 262161 294930 262163 65536 65536 65536 65536 65536 65536 65536 65536 262164 65536 262162 294931 65536 65536 65536 65536 65536 65536 65536 65536 294932 262165 65536 262163 65536 65536 65536 
+65536 262160 65536 65536 65536 262164 294933 262166 65536 65536 65536 65536 65536 65536 65536 65536 65536 65536 262165 294934 262167 65536 65536 65536 65536 65536 65536 65536 65536 262168 65536 262166 294935}} wifi802_11_cr2_3_1296_encode {dec_OK 0 enc_OK 1 n 1296 k 864 p 54 nlayers 16 nqc 144 nmqc 72 nm 13 norm_type 1 no_packing 0 special_qc 0 no_final_parity 0 max_schedule 0 sc_table {52428 52428 52428 52428} la_table {4 6 6 4 4 5 4 5 3588 3842 3330 3330 3330 3330 3330 3330} qc_table {141056 1
+39009 136706 142083 132102 141317 133896 143883 426002 132623 6400 65536 10498 65536 132612 65536 3590 65536 8712 13313 137228 515 140558 426003 11008 65536 7426 65536 5380 65536 7174 65536 1804 7937 4366 3 426004 131593 5120 8449 12290 3333 1028 137735 136714 142861 10766 426005 11520 65536 4610 1793 3076 13059 1292 6405 426006 12809 65536 10241 65536 4099 8960 4615 8194 13067 1284 8205 11018 426007 2304 6145 3330 5635 7172 9479 6410 13325 426008 3343 65536 5633 65536 5379 8192 7177 1026 9739 4
+100 2063 6920 426009 262162 65536 262164 262163 262166 262165 262168 262167 426000 262169 65536 65536 262416 65536 262162 426001 65536 65536 65536 262161 294930 262163 65536 65536 262162 65536 262164 294931 65536 65536 65536 262163 294932 262165 262160 65536 262164 65536 262166 294933 65536 65536 65536 262165 294934 262167 65536 65536 262166 65536 262168 294935}} wifi802_11_cr2_3_1944_encode {dec_OK 0 enc_OK 1 n 1944 k 1296 p 81 nlayers 16 nqc 110 nmqc 112 nm 26 norm_type 1 no_packing 0 special_
+qc 0 no_final_parity 0 max_schedule 0 sc_table {52428 52428 52428 52428} la_table {9 9 9 9 8 9 9 9 3592 5122 3586 3586 3586 3331 3842 3586} qc_table {146688 150273 132098 147203 145412 133131 131597 135438 137487 393234 14336 18945 19714 5123 147463 137224 132105 148234 132876 393235 7168 5377 17410 2563 1796 134661 147718 5898 19214 393236 12288 9729 11010 19971 19460 1289 9226 3852 18445 393237 10240 513 13570 6403 13317 15878 5128 11275 393238 17664 5889 16386 2563 5636 5382 17420 5901 7438 3
+93239 3072 1 17410 5123 14084 15621 10247 13323 11279 393240 14848 2049 8706 16387 19972 2823 19976 6153 14863 393241 262162 262163 262164 262165 262166 262167 262168 262169 393232 262416 262162 393233 262161 262163 262162 262162 262164 262163 262163 262165 262164 262160 262164 262166 262165 262165 262167 262166 262166 262168 262167}} wifi802_11_cr3_4_648_encode {dec_OK 0 enc_OK 1 n 648 k 486 p 27 nlayers 12 nqc 192 nmqc 48 nm 7 norm_type 1 no_packing 0 special_qc 0 no_final_parity 0 max_schedul
+e 0 sc_table {52428 52428 52428} la_table {5 4 4 3 3 5 3842 3074 3074 3074 3074 3074} qc_table {135168 65536 65536 65536 133380 65536 65536 65536 132104 65536 136706 65536 137740 135425 134662 65536 136464 131845 132874 65536 426004 131593 131598 137219 65536 3073 65536 65536 65536 6661 3074 65536 6400 3849 1542 65536 772 135185 5642 771 3852 426005 1038 136455 6400 65536 6658 65536 5636 65536 2310 65536 8 65536 1034 65536 1036 4609 2062 4099 2832 5893 426006 136975 2304 65536 65536 259 4356 655
+36 65536 1799 776 1793 2 136971 5392 135181 778 426007 6144 1281 65536 1795 260 3849 65536 3847 6152 3341 65536 2059 426008 2833 6658 3343 65536 513 65536 65536 65536 261 65536 65536 65536 5385 65536 3587 65536 6157 65536 4871 512 529 4866 523 6148 426009 3846 783 65536 65536 65536 65536 262164 262165 262166 65536 262168 262169 426002 262167 65536 65536 65536 65536 65536 65536 65536 65536 262164 65536 262418 426003 65536 65536 65536 65536 65536 65536 65536 65536 294932 262165 65536 262163 65536 
+65536 65536 65536 65536 65536 65536 65536 262164 294933 262166 65536 65536 65536 65536 65536 65536 65536 262162 65536 65536 262165 294934 262167 65536 65536 65536 65536 65536 65536 65536 65536 262168 65536 262166 294935}} wifi802_11_cr3_4_1296_encode {dec_OK 0 enc_OK 1 n 1296 k 972 p 54 nlayers 12 nqc 146 nmqc 76 nm 13 norm_type 1 no_packing 0 special_qc 0 no_final_parity 0 max_schedule 0 sc_table {52428 52428 52428} la_table {8 8 8 8 8 8 4355 3586 3330 3330 3330 3330} qc_table {65536 141313 655
+36 141571 65536 138501 65536 140295 141056 134665 144130 132619 131844 139533 133126 133903 426004 132113 12288 65536 12034 65536 12292 65536 13062 65536 140808 65536 138250 5377 139788 2307 143886 8965 143888 426005 65536 9985 65536 10755 65536 9989 65536 4359 7680 1545 7170 4619 12804 5133 1286 3855 426006 10257 7424 65536 258 65536 9220 65536 12038 65536 12552 65536 12042 1 780 11011 8974 7685 8720 426007 65536 8193 65536 5891 65536 11269 65536 1799 256 12297 2818 1035 2564 2317 3078 4367 426
+008 4113 3328 65536 3842 65536 5892 65536 12038 65536 11016 65536 7434 1793 13324 12035 526 4101 13584 426009 262164 65536 262166 262165 262168 262167 426002 262169 65536 65536 262418 65536 262164 426003 65536 65536 65536 262163 294932 262165 65536 65536 262164 65536 262166 294933 65536 65536 262162 262165 294934 262167 65536 65536 262166 65536 262168 294935}} wifi802_11_cr3_4_1944_encode {dec_OK 0 enc_OK 1 n 1944 k 1458 p 81 nlayers 12 nqc 101 nmqc 104 nm 26 norm_type 1 no_packing 0 special_qc 
+0 no_final_parity 0 max_schedule 0 sc_table {52428 52428 52428} la_table {12 12 12 12 12 12 4870 4610 3586 3586 3331 3842} qc_table {143360 138497 138242 141059 133380 146693 147209 142602 151563 140559 139280 136721 393236 1024 12545 10754 12291 2820 7685 12553 4362 10507 140556 134925 13839 393237 8960 19457 19970 13059 9476 8965 136454 135432 16393 15117 132878 8209 393238 2304 16641 11266 2307 13828 14341 18694 139783 10760 8972 11792 10001 393239 768 15873 1794 20483 17412 6661 20487 14088 
+9226 6668 2318 18448 393240 6656 19201 8450 5379 17668 15109 774 9735 8971 15885 9230 6671 393241 262164 262165 262166 262167 262168 262169 393234 262418 262164 393235 262163 262165 262164 262164 262166 262165 262162 262165 262167 262166 262166 262168 262167}} wifi802_11_cr5_6_648_encode {dec_OK 0 enc_OK 1 n 648 k 540 p 27 nlayers 8 nqc 140 nmqc 36 nm 7 norm_type 1 no_packing 0 special_qc 0 no_final_parity 0 max_schedule 0 sc_table {52428 52428} la_table {5 5 4 5 3842 3074 3074 3074} qc_table {6
+5536 65536 133122 65536 135424 134401 135686 136451 133380 131845 132106 134151 133640 131081 132366 134923 135948 131597 134418 133647 137744 135953 426006 134419 65536 65536 65536 3587 768 3073 2818 4615 2820 6405 1286 6667 8 2313 522 1807 6668 2573 6158 531 3600 5137 1042 426007 5632 4097 1026 771 2564 5381 3078 1287 5384 3593 4874 1291 2832 2061 1294 4623 426008 1297 1298 3859 65536 1793 65536 65536 1792 4101 3586 3587 1028 2569 4102 6151 6152 1549 266 1803 3852 4625 2574 6671 2064 426009 53
+94 3603 65536 65536 65536 65536 262168 65536 65536 65536 426004 262169 262166 262167 65536 65536 65536 65536 65536 65536 65536 65536 262420 426005 262166 65536 65536 65536 65536 65536 65536 65536 65536 65536 65536 262165 294934 262167 65536 65536 65536 65536 262164 65536 65536 65536 262168 65536 262166 294935}} wifi802_11_cr5_6_1296_encode {dec_OK 0 enc_OK 1 n 1296 k 1080 p 54 nlayers 8 nqc 108 nmqc 56 nm 13 norm_type 1 no_packing 0 special_qc 0 no_final_parity 0 max_schedule 0 sc_table {52428 5
+2428} la_table {10 9 9 10 5122 3330 3330 3330} qc_table {143360 65536 140546 65536 131588 138497 132614 144387 144648 135173 139786 134663 135692 139017 144654 132363 142608 141837 142866 139023 426006 144403 4352 1025 7682 1795 11012 2821 6150 1543 3592 5385 1546 9995 4364 10253 12046 1807 3856 141585 4882 426007 1792 513 13058 7939 11780 5893 4102 2823 13576 10249 2570 1803 11788 13581 8462 8975 8978 6417 426008 9747 65536 12289 65536 259 4864 1797 10498 12039 2564 7433 9222 13323 1288 2573 13
+322 1551 7948 529 6670 13075 784 426009 262166 65536 262168 262167 426004 262169 65536 65536 262420 65536 262166 426005 65536 65536 65536 262165 294934 262167 262164 65536 262166 65536 262168 294935}} wifi802_11_cr5_6_1944_encode {dec_OK 0 enc_OK 1 n 1944 k 1620 p 81 nlayers 8 nqc 89 nmqc 92 nm 26 norm_type 1 no_packing 0 special_qc 0 no_final_parity 0 max_schedule 0 sc_table {52428 52428} la_table {18 18 17 17 6916 4098 3586 3331} qc_table {134400 143361 151554 147971 132100 150021 132870 13875
+9 150536 144393 140554 146443 143629 149774 139023 150032 149777 136978 393238 17664 16129 18946 14339 16388 19717 14598 16647 1544 4105 13066 147468 17422 2319 12304 15889 13842 138003 393239 13056 3841 2 20483 6148 6405 10758 13831 11272 18185 18186 2315 17164 8973 14863 7441 13587 393240 4096 7425 9218 10499 11268 14341 15110 9479 12808 6153 16651 1036 16653 13326 1040 18706 13331 393241 262166 262167 262168 262169 393236 262420 262166 393237 262165 262167 262166 262164 262166 262168 262167}}</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>HDL_INITIALIZATION</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.HDL_INITIALIZATION" spirit:order="46">{20 1 FEC_CODE} {12 0 AXIS_WIDTH} {16 63 {AXIS_ENABLE: Enable all channels }}</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.HDL_INITIALIZATION" spirit:order="46">{8192 21234312 {K, N}} {8196 14363 {NM, NO_PACKING, PSIZE}} {8200 1087512 {MAX_SCHEDULE, NO_FINAL_PARITY_CHECK, NORM_TYPE, NMQC, NLAYERS}} {8204 0 {QC_OFF, LA_OFF, SC_OFF}} {65536 52428 SC_TABLE} {65540 52428 {}} {65544 52428 {}} {65548 52428 {}} {65552 52428 {}} {65556 52428 {}} {98304 2 LA_TABLE} {98308 2 {}} {98312 3 {}} {98316 2 {}} {98320 2 {}} {98324 2 {}} {98328 3 {}} {98332 2 {}} {98336 2 {}} {98340 2 {}} {98344 3 {}} {98348 2 {}} {98352 3075 {}} {98356 3330 {}} {98360 3074 {}} {98364 30
+74 {}} {98368 3074 {}} {98372 3074 {}} {98376 3074 {}} {98380 3074 {}} {98384 3074 {}} {98388 3074 {}} {98392 3074 {}} {98396 3074 {}} {131072 131072 QC_TABLE} {131076 65536 {}} {131080 65536 {}} {131084 65536 {}} {131088 131076 {}} {131092 65536 {}} {131096 65536 {}} {131100 65536 {}} {131104 131080 {}} {131108 131077 {}} {131112 425998 {}} {131116 131083 {}} {131120 5632 {}} {131124 65536 {}} {131128 65536 {}} {131132 65536 {}} {131136 4356 {}} {131140 65536 {}} {131144 65536 {}} {131148 13107
+9 {}} {131152 3080 {}} {131156 131073 {}} {131160 131078 {}} {131164 425999 {}} {131168 1536 {}} {131172 65536 {}} {131176 65536 {}} {131180 65536 {}} {131184 2564 {}} {131188 65536 {}} {131192 65536 {}} {131196 65536 {}} {131200 6152 {}} {131204 65536 {}} {131208 131074 {}} {131212 65536 {}} {131216 426000 {}} {131220 65536 {}} {131224 131082 {}} {131228 65536 {}} {131232 512 {}} {131236 65536 {}} {131240 65536 {}} {131244 65536 {}} {131248 5124 {}} {131252 131081 {}} {131256 65536 {}} {131260 
+65536 {}} {131264 6408 {}} {131268 426001 {}} {131272 65536 {}} {131276 131075 {}} {131280 5888 {}} {131284 65536 {}} {131288 65536 {}} {131292 65536 {}} {131296 772 {}} {131300 65536 {}} {131304 2314 {}} {131308 65536 {}} {131312 8 {}} {131316 65536 {}} {131320 426002 {}} {131324 2827 {}} {131328 6144 {}} {131332 65536 {}} {131336 65536 {}} {131340 65536 {}} {131344 4356 {}} {131348 65536 {}} {131352 5890 {}} {131356 259 {}} {131360 2568 {}} {131364 65536 {}} {131368 774 {}} {131372 426003 {}} 
+{131376 6400 {}} {131380 65536 {}} {131384 65536 {}} {131388 65536 {}} {131392 2052 {}} {131396 65536 {}} {131400 65536 {}} {131404 65536 {}} {131408 1800 {}} {131412 65536 {}} {131416 65536 {}} {131420 65536 {}} {131424 426004 {}} {131428 4617 {}} {131432 65536 {}} {131436 65536 {}} {131440 3328 {}} {131444 65536 {}} {131448 65536 {}} {131452 65536 {}} {131456 4 {}} {131460 6145 {}} {131464 65536 {}} {131468 65536 {}} {131472 1544 {}} {131476 426005 {}} {131480 2054 {}} {131484 65536 {}} {13148
+8 1792 {}} {131492 65536 {}} {131496 65536 {}} {131500 65536 {}} {131504 5636 {}} {131508 5121 {}} {131512 65536 {}} {131516 65536 {}} {131520 5896 {}} {131524 2565 {}} {131528 426006 {}} {131532 4099 {}} {131536 2816 {}} {131540 65536 {}} {131544 65536 {}} {131548 65536 {}} {131552 4868 {}} {131556 65536 {}} {131560 65536 {}} {131564 4363 {}} {131568 3336 {}} {131572 65536 {}} {131576 778 {}} {131580 426007 {}} {131584 6400 {}} {131588 65536 {}} {131592 65536 {}} {131596 65536 {}} {131600 5892 
+{}} {131604 65536 {}} {131608 65536 {}} {131612 65536 {}} {131616 2312 {}} {131620 65536 {}} {131624 65536 {}} {131628 65536 {}} {131632 426008 {}} {131636 4613 {}} {131640 2050 {}} {131644 3591 {}} {131648 768 {}} {131652 65536 {}} {131656 65536 {}} {131660 65536 {}} {131664 4100 {}} {131668 1289 {}} {131672 65536 {}} {131676 65536 {}} {131680 6408 {}} {131684 426009 {}} {131688 65536 {}} {131692 519 {}} {131696 262160 {}} {131700 65536 {}} {131704 65536 {}} {131708 65536 {}} {131712 262164 {}}
+ {131716 262161 {}} {131720 262158 {}} {131724 262159 {}} {131728 262168 {}} {131732 262165 {}} {131736 262162 {}} {131740 262163 {}} {131744 425996 {}} {131748 262169 {}} {131752 262166 {}} {131756 262167 {}} {131760 65536 {}} {131764 65536 {}} {131768 65536 {}} {131772 65536 {}} {131776 65536 {}} {131780 65536 {}} {131784 65536 {}} {131788 65536 {}} {131792 262412 {}} {131796 425997 {}} {131800 262158 {}} {131804 65536 {}} {131808 65536 {}} {131812 65536 {}} {131816 65536 {}} {131820 65536 {}}
+ {131824 65536 {}} {131828 65536 {}} {131832 65536 {}} {131836 65536 {}} {131840 65536 {}} {131844 262157 {}} {131848 294926 {}} {131852 262159 {}} {131856 65536 {}} {131860 65536 {}} {131864 65536 {}} {131868 65536 {}} {131872 65536 {}} {131876 65536 {}} {131880 65536 {}} {131884 65536 {}} {131888 262160 {}} {131892 65536 {}} {131896 262158 {}} {131900 294927 {}} {131904 65536 {}} {131908 65536 {}} {131912 65536 {}} {131916 65536 {}} {131920 65536 {}} {131924 65536 {}} {131928 65536 {}} {131932
+ 65536 {}} {131936 294928 {}} {131940 262161 {}} {131944 65536 {}} {131948 262159 {}} {131952 65536 {}} {131956 65536 {}} {131960 65536 {}} {131964 65536 {}} {131968 65536 {}} {131972 65536 {}} {131976 65536 {}} {131980 65536 {}} {131984 262160 {}} {131988 294929 {}} {131992 262162 {}} {131996 65536 {}} {132000 65536 {}} {132004 65536 {}} {132008 65536 {}} {132012 65536 {}} {132016 65536 {}} {132020 65536 {}} {132024 65536 {}} {132028 65536 {}} {132032 65536 {}} {132036 262161 {}} {132040 294930
+ {}} {132044 262163 {}} {132048 65536 {}} {132052 65536 {}} {132056 65536 {}} {132060 65536 {}} {132064 262156 {}} {132068 65536 {}} {132072 65536 {}} {132076 65536 {}} {132080 262164 {}} {132084 65536 {}} {132088 262162 {}} {132092 294931 {}} {132096 65536 {}} {132100 65536 {}} {132104 65536 {}} {132108 65536 {}} {132112 65536 {}} {132116 65536 {}} {132120 65536 {}} {132124 65536 {}} {132128 294932 {}} {132132 262165 {}} {132136 65536 {}} {132140 262163 {}} {132144 65536 {}} {132148 65536 {}} {
+132152 65536 {}} {132156 65536 {}} {132160 65536 {}} {132164 65536 {}} {132168 65536 {}} {132172 65536 {}} {132176 262164 {}} {132180 294933 {}} {132184 262166 {}} {132188 65536 {}} {132192 65536 {}} {132196 65536 {}} {132200 65536 {}} {132204 65536 {}} {132208 65536 {}} {132212 65536 {}} {132216 65536 {}} {132220 65536 {}} {132224 65536 {}} {132228 262165 {}} {132232 294934 {}} {132236 262167 {}} {132240 65536 {}} {132244 65536 {}} {132248 65536 {}} {132252 65536 {}} {132256 65536 {}} {132260 6
+5536 {}} {132264 65536 {}} {132268 65536 {}} {132272 262168 {}} {132276 65536 {}} {132280 262166 {}} {132284 294935 {}} {8208 42468624 {K, N}} {8212 26678 {NM, NO_PACKING, PSIZE}} {8216 1093656 {MAX_SCHEDULE, NO_FINAL_PARITY_CHECK, NORM_TYPE, NMQC, NLAYERS}} {8220 4982278 {QC_OFF, LA_OFF, SC_OFF}} {65560 52428 SC_TABLE} {65564 52428 {}} {65568 52428 {}} {65572 52428 {}} {65576 52428 {}} {65580 52428 {}} {98400 4 LA_TABLE} {98404 3 {}} {98408 3 {}} {98412 2 {}} {98416 3 {}} {98420 3 {}} {98424 2 
+{}} {98428 4 {}} {98432 3 {}} {98436 4 {}} {98440 2 {}} {98444 3 {}} {98448 2566 {}} {98452 4354 {}} {98456 3330 {}} {98460 3330 {}} {98464 3330 {}} {98468 3330 {}} {98472 3330 {}} {98476 3330 {}} {98480 3330 {}} {98484 3330 {}} {98488 3330 {}} {98492 3330 {}} {132288 141312 QC_TABLE} {132292 65536 {}} {132296 136708 {}} {132300 65536 {}} {132304 143622 {}} {132308 65536 {}} {132312 142088 {}} {132316 65536 {}} {132320 425998 {}} {132324 136967 {}} {132328 12800 {}} {132332 65536 {}} {132336 122
+92 {}} {132340 131329 {}} {132344 3336 {}} {132348 140037 {}} {132352 138762 {}} {132356 425999 {}} {132360 9984 {}} {132364 65536 {}} {132368 1028 {}} {132372 65536 {}} {132376 518 {}} {132380 12801 {}} {132384 426000 {}} {132388 143627 {}} {132392 8448 {}} {132396 140803 {}} {132400 9476 {}} {132404 1031 {}} {132408 264 {}} {132412 426001 {}} {132416 11520 {}} {132420 65536 {}} {132424 4 {}} {132428 65536 {}} {132432 5128 {}} {132436 5637 {}} {132440 426002 {}} {132444 141833 {}} {132448 13056
+ {}} {132452 65536 {}} {132456 8964 {}} {132460 65536 {}} {132464 11272 {}} {132468 12291 {}} {132472 4618 {}} {132476 426003 {}} {132480 12032 {}} {132484 65536 {}} {132488 13064 {}} {132492 2817 {}} {132496 426004 {}} {132500 4357 {}} {132504 1280 {}} {132508 65536 {}} {132512 137474 {}} {132516 65536 {}} {132520 1540 {}} {132524 65536 {}} {132528 11526 {}} {132532 10249 {}} {132536 3336 {}} {132540 426005 {}} {132544 8448 {}} {132548 65536 {}} {132552 6148 {}} {132556 65536 {}} {132560 5896 {
+}} {132564 8707 {}} {132568 426006 {}} {132572 11787 {}} {132576 256 {}} {132580 65536 {}} {132584 6914 {}} {132588 65536 {}} {132592 260 {}} {132596 65536 {}} {132600 9736 {}} {132604 65536 {}} {132608 11274 {}} {132612 426007 {}} {132616 5892 {}} {132620 4609 {}} {132624 8 {}} {132628 2055 {}} {132632 426008 {}} {132636 8969 {}} {132640 12544 {}} {132644 65536 {}} {132648 4354 {}} {132652 65536 {}} {132656 7684 {}} {132660 4875 {}} {132664 8712 {}} {132668 426009 {}} {132672 262158 {}} {132676
+ 65536 {}} {132680 262160 {}} {132684 262159 {}} {132688 262162 {}} {132692 262161 {}} {132696 262164 {}} {132700 262163 {}} {132704 262166 {}} {132708 262165 {}} {132712 262168 {}} {132716 262167 {}} {132720 425996 {}} {132724 262169 {}} {132728 65536 {}} {132732 65536 {}} {132736 262412 {}} {132740 65536 {}} {132744 262158 {}} {132748 425997 {}} {132752 65536 {}} {132756 65536 {}} {132760 65536 {}} {132764 262157 {}} {132768 294926 {}} {132772 262159 {}} {132776 65536 {}} {132780 65536 {}} {13
+2784 262158 {}} {132788 65536 {}} {132792 262160 {}} {132796 294927 {}} {132800 65536 {}} {132804 65536 {}} {132808 65536 {}} {132812 262159 {}} {132816 294928 {}} {132820 262161 {}} {132824 65536 {}} {132828 65536 {}} {132832 262160 {}} {132836 65536 {}} {132840 262162 {}} {132844 294929 {}} {132848 65536 {}} {132852 65536 {}} {132856 65536 {}} {132860 262161 {}} {132864 294930 {}} {132868 262163 {}} {132872 262156 {}} {132876 65536 {}} {132880 262162 {}} {132884 65536 {}} {132888 262164 {}} {1
+32892 294931 {}} {132896 65536 {}} {132900 65536 {}} {132904 65536 {}} {132908 262163 {}} {132912 294932 {}} {132916 262165 {}} {132920 65536 {}} {132924 65536 {}} {132928 262164 {}} {132932 65536 {}} {132936 262166 {}} {132940 294933 {}} {132944 65536 {}} {132948 65536 {}} {132952 65536 {}} {132956 262165 {}} {132960 294934 {}} {132964 262167 {}} {132968 65536 {}} {132972 65536 {}} {132976 262166 {}} {132980 65536 {}} {132984 262168 {}} {132988 294935 {}} {8224 63702936 {K, N}} {8228 53329 {NM,
+ NO_PACKING, PSIZE}} {8232 1110040 {MAX_SCHEDULE, NO_FINAL_PARITY_CHECK, NORM_TYPE, NMQC, NLAYERS}} {8236 7867404 {QC_OFF, LA_OFF, SC_OFF}} {65584 52428 SC_TABLE} {65588 52428 {}} {65592 52428 {}} {65596 52428 {}} {65600 52428 {}} {65604 52428 {}} {98496 5 LA_TABLE} {98500 5 {}} {98504 5 {}} {98508 5 {}} {98512 5 {}} {98516 5 {}} {98520 5 {}} {98524 5 {}} {98528 5 {}} {98532 5 {}} {98536 5 {}} {98540 6 {}} {98544 1804 {}} {98548 6146 {}} {98552 3586 {}} {98556 3586 {}} {98560 3586 {}} {98564 358
+6 {}} {98568 3586 {}} {98572 3331 {}} {98576 3842 {}} {98580 3586 {}} {98584 3586 {}} {98588 3586 {}} {132992 145664 QC_TABLE} {132996 143876 {}} {133000 133894 {}} {133004 143880 {}} {133008 151306 {}} {133012 393230 {}} {133016 768 {}} {133020 138242 {}} {133024 4 {}} {133028 14088 {}} {133032 132873 {}} {133036 393231 {}} {133040 7680 {}} {133044 6148 {}} {133048 140549 {}} {133052 14344 {}} {133056 3593 {}} {133060 393232 {}} {133064 15872 {}} {133068 144641 {}} {133072 13572 {}} {133076 131
+847 {}} {133080 8968 {}} {133084 393233 {}} {133088 10240 {}} {133092 136195 {}} {133096 16900 {}} {133100 5639 {}} {133104 7176 {}} {133108 393234 {}} {133112 0 {}} {133116 2052 {}} {133120 10758 {}} {133124 12808 {}} {133128 133131 {}} {133132 393235 {}} {133136 17664 {}} {133140 20225 {}} {133144 20226 {}} {133148 14342 {}} {133152 13320 {}} {133156 393236 {}} {133160 16640 {}} {133164 9732 {}} {133168 14597 {}} {133172 18440 {}} {133176 6922 {}} {133180 393237 {}} {133184 16384 {}} {133188 3
+588 {}} {133192 13317 {}} {133196 7688 {}} {133200 8203 {}} {133204 393238 {}} {133208 11521 {}} {133212 17923 {}} {133216 4 {}} {133220 19720 {}} {133224 2313 {}} {133228 393239 {}} {133232 512 {}} {133236 14337 {}} {133240 14595 {}} {133244 8964 {}} {133248 3082 {}} {133252 393240 {}} {133256 6144 {}} {133260 15618 {}} {133264 15364 {}} {133268 6919 {}} {133272 13064 {}} {133276 4107 {}} {133280 393241 {}} {133284 262158 {}} {133288 262159 {}} {133292 262160 {}} {133296 262161 {}} {133300 2621
+62 {}} {133304 262163 {}} {133308 262164 {}} {133312 262165 {}} {133316 262166 {}} {133320 262167 {}} {133324 262168 {}} {133328 262169 {}} {133332 393228 {}} {133336 262412 {}} {133340 262158 {}} {133344 393229 {}} {133348 262157 {}} {133352 262159 {}} {133356 262158 {}} {133360 262158 {}} {133364 262160 {}} {133368 262159 {}} {133372 262159 {}} {133376 262161 {}} {133380 262160 {}} {133384 262160 {}} {133388 262162 {}} {133392 262161 {}} {133396 262161 {}} {133400 262163 {}} {133404 262162 {}}
+ {133408 262156 {}} {133412 262162 {}} {133416 262164 {}} {133420 262163 {}} {133424 262163 {}} {133428 262165 {}} {133432 262164 {}} {133436 262164 {}} {133440 262166 {}} {133444 262165 {}} {133448 262165 {}} {133452 262167 {}} {133456 262166 {}} {133460 262166 {}} {133464 262168 {}} {133468 262167 {}} {8240 28312200 {K, N}} {8244 14363 {NM, NO_PACKING, PSIZE}} {8248 1077264 {MAX_SCHEDULE, NO_FINAL_PARITY_CHECK, NORM_TYPE, NMQC, NLAYERS}} {8252 9835026 {QC_OFF, LA_OFF, SC_OFF}} {65608 52428 SC_
+TABLE} {65612 52428 {}} {65616 52428 {}} {65620 52428 {}} {98592 2 LA_TABLE} {98596 2 {}} {98600 3 {}} {98604 3 {}} {98608 3 {}} {98612 3 {}} {98616 3 {}} {98620 3 {}} {98624 3330 {}} {98628 3074 {}} {98632 3074 {}} {98636 3074 {}} {98640 3074 {}} {98644 3074 {}} {98648 3074 {}} {98652 3074 {}} {133472 137472 QC_TABLE} {133476 65536 {}} {133480 134658 {}} {133484 65536 {}} {133488 136196 {}} {133492 137729 {}} {133496 131590 {}} {133500 133131 {}} {133504 132104 {}} {133508 135181 {}} {133512 42
+6002 {}} {133516 135695 {}} {133520 65536 {}} {133524 65536 {}} {133528 3842 {}} {133532 133891 {}} {133536 2560 {}} {133540 2305 {}} {133544 135690 {}} {133548 131335 {}} {133552 133132 {}} {133556 131077 {}} {133560 133646 {}} {133564 426003 {}} {133568 4096 {}} {133572 65536 {}} {133576 65536 {}} {133580 65536 {}} {133584 5380 {}} {133588 65536 {}} {133592 65536 {}} {133596 65536 {}} {133600 264 {}} {133604 513 {}} {133608 5122 {}} {133612 6659 {}} {133616 426004 {}} {133620 137737 {}} {13362
+4 1542 {}} {133628 1803 {}} {133632 65536 {}} {133636 3329 {}} {133640 65536 {}} {133644 65536 {}} {133648 65536 {}} {133652 773 {}} {133656 65536 {}} {133660 3 {}} {133664 65536 {}} {133668 3341 {}} {133672 1282 {}} {133676 1799 {}} {133680 2560 {}} {133684 426005 {}} {133688 6666 {}} {133692 4111 {}} {133696 5888 {}} {133700 65536 {}} {133704 6146 {}} {133708 65536 {}} {133712 3076 {}} {133716 65536 {}} {133720 4870 {}} {133724 65536 {}} {133728 4360 {}} {133732 65536 {}} {133736 5390 {}} {133
+740 65536 {}} {133744 5132 {}} {133748 3585 {}} {133752 426006 {}} {133756 65536 {}} {133760 65536 {}} {133764 5633 {}} {133768 65536 {}} {133772 5123 {}} {133776 65536 {}} {133780 6405 {}} {133784 65536 {}} {133788 4359 {}} {133792 65536 {}} {133796 2057 {}} {133800 65536 {}} {133804 3595 {}} {133808 1536 {}} {133812 4621 {}} {133816 2306 {}} {133820 426007 {}} {133824 3584 {}} {133828 65536 {}} {133832 65536 {}} {133836 65536 {}} {133840 5124 {}} {133844 65536 {}} {133848 5378 {}} {133852 6553
+6 {}} {133856 4616 {}} {133860 65536 {}} {133864 6150 {}} {133868 2819 {}} {133872 426008 {}} {133876 5889 {}} {133880 4874 {}} {133884 5647 {}} {133888 65536 {}} {133892 2817 {}} {133896 65536 {}} {133900 65536 {}} {133904 65536 {}} {133908 5381 {}} {133912 65536 {}} {133916 65536 {}} {133920 4352 {}} {133924 777 {}} {133928 2818 {}} {133932 5123 {}} {133936 4620 {}} {133940 426009 {}} {133944 6670 {}} {133948 6663 {}} {133952 262164 {}} {133956 65536 {}} {133960 65536 {}} {133964 65536 {}} {13
+3968 262168 {}} {133972 262165 {}} {133976 262162 {}} {133980 262163 {}} {133984 426000 {}} {133988 262169 {}} {133992 262166 {}} {133996 262167 {}} {134000 65536 {}} {134004 65536 {}} {134008 65536 {}} {134012 65536 {}} {134016 65536 {}} {134020 65536 {}} {134024 65536 {}} {134028 65536 {}} {134032 262416 {}} {134036 426001 {}} {134040 262162 {}} {134044 65536 {}} {134048 65536 {}} {134052 65536 {}} {134056 65536 {}} {134060 65536 {}} {134064 65536 {}} {134068 65536 {}} {134072 65536 {}} {13407
+6 65536 {}} {134080 65536 {}} {134084 262161 {}} {134088 294930 {}} {134092 262163 {}} {134096 65536 {}} {134100 65536 {}} {134104 65536 {}} {134108 65536 {}} {134112 65536 {}} {134116 65536 {}} {134120 65536 {}} {134124 65536 {}} {134128 262164 {}} {134132 65536 {}} {134136 262162 {}} {134140 294931 {}} {134144 65536 {}} {134148 65536 {}} {134152 65536 {}} {134156 65536 {}} {134160 65536 {}} {134164 65536 {}} {134168 65536 {}} {134172 65536 {}} {134176 294932 {}} {134180 262165 {}} {134184 6553
+6 {}} {134188 262163 {}} {134192 65536 {}} {134196 65536 {}} {134200 65536 {}} {134204 65536 {}} {134208 262160 {}} {134212 65536 {}} {134216 65536 {}} {134220 65536 {}} {134224 262164 {}} {134228 294933 {}} {134232 262166 {}} {134236 65536 {}} {134240 65536 {}} {134244 65536 {}} {134248 65536 {}} {134252 65536 {}} {134256 65536 {}} {134260 65536 {}} {134264 65536 {}} {134268 65536 {}} {134272 65536 {}} {134276 262165 {}} {134280 294934 {}} {134284 262167 {}} {134288 65536 {}} {134292 65536 {}} 
+{134296 65536 {}} {134300 65536 {}} {134304 65536 {}} {134308 65536 {}} {134312 65536 {}} {134316 65536 {}} {134320 262168 {}} {134324 65536 {}} {134328 262166 {}} {134332 294935 {}} {8256 56624400 {K, N}} {8260 26678 {NM, NO_PACKING, PSIZE}} {8264 1085456 {MAX_SCHEDULE, NO_FINAL_PARITY_CHECK, NORM_TYPE, NMQC, NLAYERS}} {8268 13374998 {QC_OFF, LA_OFF, SC_OFF}} {65624 52428 SC_TABLE} {65628 52428 {}} {65632 52428 {}} {65636 52428 {}} {98656 4 LA_TABLE} {98660 6 {}} {98664 6 {}} {98668 4 {}} {9867
+2 4 {}} {98676 5 {}} {98680 4 {}} {98684 5 {}} {98688 3588 {}} {98692 3842 {}} {98696 3330 {}} {98700 3330 {}} {98704 3330 {}} {98708 3330 {}} {98712 3330 {}} {98716 3330 {}} {134336 141056 QC_TABLE} {134340 139009 {}} {134344 136706 {}} {134348 142083 {}} {134352 132102 {}} {134356 141317 {}} {134360 133896 {}} {134364 143883 {}} {134368 426002 {}} {134372 132623 {}} {134376 6400 {}} {134380 65536 {}} {134384 10498 {}} {134388 65536 {}} {134392 132612 {}} {134396 65536 {}} {134400 3590 {}} {134
+404 65536 {}} {134408 8712 {}} {134412 13313 {}} {134416 137228 {}} {134420 515 {}} {134424 140558 {}} {134428 426003 {}} {134432 11008 {}} {134436 65536 {}} {134440 7426 {}} {134444 65536 {}} {134448 5380 {}} {134452 65536 {}} {134456 7174 {}} {134460 65536 {}} {134464 1804 {}} {134468 7937 {}} {134472 4366 {}} {134476 3 {}} {134480 426004 {}} {134484 131593 {}} {134488 5120 {}} {134492 8449 {}} {134496 12290 {}} {134500 3333 {}} {134504 1028 {}} {134508 137735 {}} {134512 136714 {}} {134516 14
+2861 {}} {134520 10766 {}} {134524 426005 {}} {134528 11520 {}} {134532 65536 {}} {134536 4610 {}} {134540 1793 {}} {134544 3076 {}} {134548 13059 {}} {134552 1292 {}} {134556 6405 {}} {134560 426006 {}} {134564 12809 {}} {134568 65536 {}} {134572 10241 {}} {134576 65536 {}} {134580 4099 {}} {134584 8960 {}} {134588 4615 {}} {134592 8194 {}} {134596 13067 {}} {134600 1284 {}} {134604 8205 {}} {134608 11018 {}} {134612 426007 {}} {134616 2304 {}} {134620 6145 {}} {134624 3330 {}} {134628 5635 {}}
+ {134632 7172 {}} {134636 9479 {}} {134640 6410 {}} {134644 13325 {}} {134648 426008 {}} {134652 3343 {}} {134656 65536 {}} {134660 5633 {}} {134664 65536 {}} {134668 5379 {}} {134672 8192 {}} {134676 7177 {}} {134680 1026 {}} {134684 9739 {}} {134688 4100 {}} {134692 2063 {}} {134696 6920 {}} {134700 426009 {}} {134704 262162 {}} {134708 65536 {}} {134712 262164 {}} {134716 262163 {}} {134720 262166 {}} {134724 262165 {}} {134728 262168 {}} {134732 262167 {}} {134736 426000 {}} {134740 262169 {
+}} {134744 65536 {}} {134748 65536 {}} {134752 262416 {}} {134756 65536 {}} {134760 262162 {}} {134764 426001 {}} {134768 65536 {}} {134772 65536 {}} {134776 65536 {}} {134780 262161 {}} {134784 294930 {}} {134788 262163 {}} {134792 65536 {}} {134796 65536 {}} {134800 262162 {}} {134804 65536 {}} {134808 262164 {}} {134812 294931 {}} {134816 65536 {}} {134820 65536 {}} {134824 65536 {}} {134828 262163 {}} {134832 294932 {}} {134836 262165 {}} {134840 262160 {}} {134844 65536 {}} {134848 262164 {
+}} {134852 65536 {}} {134856 262166 {}} {134860 294933 {}} {134864 65536 {}} {134868 65536 {}} {134872 65536 {}} {134876 262165 {}} {134880 294934 {}} {134884 262167 {}} {134888 65536 {}} {134892 65536 {}} {134896 262166 {}} {134900 65536 {}} {134904 262168 {}} {134908 294935 {}} {8272 84936600 {K, N}} {8276 53329 {NM, NO_PACKING, PSIZE}} {8280 1105936 {MAX_SCHEDULE, NO_FINAL_PARITY_CHECK, NORM_TYPE, NMQC, NLAYERS}} {8284 15735322 {QC_OFF, LA_OFF, SC_OFF}} {65640 52428 SC_TABLE} {65644 52428 {}}
+ {65648 52428 {}} {65652 52428 {}} {98720 9 LA_TABLE} {98724 9 {}} {98728 9 {}} {98732 9 {}} {98736 8 {}} {98740 9 {}} {98744 9 {}} {98748 9 {}} {98752 3592 {}} {98756 5122 {}} {98760 3586 {}} {98764 3586 {}} {98768 3586 {}} {98772 3331 {}} {98776 3842 {}} {98780 3586 {}} {134912 146688 QC_TABLE} {134916 150273 {}} {134920 132098 {}} {134924 147203 {}} {134928 145412 {}} {134932 133131 {}} {134936 131597 {}} {134940 135438 {}} {134944 137487 {}} {134948 393234 {}} {134952 14336 {}} {134956 18945
+ {}} {134960 19714 {}} {134964 5123 {}} {134968 147463 {}} {134972 137224 {}} {134976 132105 {}} {134980 148234 {}} {134984 132876 {}} {134988 393235 {}} {134992 7168 {}} {134996 5377 {}} {135000 17410 {}} {135004 2563 {}} {135008 1796 {}} {135012 134661 {}} {135016 147718 {}} {135020 5898 {}} {135024 19214 {}} {135028 393236 {}} {135032 12288 {}} {135036 9729 {}} {135040 11010 {}} {135044 19971 {}} {135048 19460 {}} {135052 1289 {}} {135056 9226 {}} {135060 3852 {}} {135064 18445 {}} {135068 39
+3237 {}} {135072 10240 {}} {135076 513 {}} {135080 13570 {}} {135084 6403 {}} {135088 13317 {}} {135092 15878 {}} {135096 5128 {}} {135100 11275 {}} {135104 393238 {}} {135108 17664 {}} {135112 5889 {}} {135116 16386 {}} {135120 2563 {}} {135124 5636 {}} {135128 5382 {}} {135132 17420 {}} {135136 5901 {}} {135140 7438 {}} {135144 393239 {}} {135148 3072 {}} {135152 1 {}} {135156 17410 {}} {135160 5123 {}} {135164 14084 {}} {135168 15621 {}} {135172 10247 {}} {135176 13323 {}} {135180 11279 {}} {
+135184 393240 {}} {135188 14848 {}} {135192 2049 {}} {135196 8706 {}} {135200 16387 {}} {135204 19972 {}} {135208 2823 {}} {135212 19976 {}} {135216 6153 {}} {135220 14863 {}} {135224 393241 {}} {135228 262162 {}} {135232 262163 {}} {135236 262164 {}} {135240 262165 {}} {135244 262166 {}} {135248 262167 {}} {135252 262168 {}} {135256 262169 {}} {135260 393232 {}} {135264 262416 {}} {135268 262162 {}} {135272 393233 {}} {135276 262161 {}} {135280 262163 {}} {135284 262162 {}} {135288 262162 {}} {
+135292 262164 {}} {135296 262163 {}} {135300 262163 {}} {135304 262165 {}} {135308 262164 {}} {135312 262160 {}} {135316 262164 {}} {135320 262166 {}} {135324 262165 {}} {135328 262165 {}} {135332 262167 {}} {135336 262166 {}} {135340 262166 {}} {135344 262168 {}} {135348 262167 {}} {8288 31851144 {K, N}} {8292 14363 {NM, NO_PACKING, PSIZE}} {8296 1073164 {MAX_SCHEDULE, NO_FINAL_PARITY_CHECK, NORM_TYPE, NMQC, NLAYERS}} {8300 17571358 {QC_OFF, LA_OFF, SC_OFF}} {65656 52428 SC_TABLE} {65660 52428 
+{}} {65664 52428 {}} {98784 5 LA_TABLE} {98788 4 {}} {98792 4 {}} {98796 3 {}} {98800 3 {}} {98804 5 {}} {98808 3842 {}} {98812 3074 {}} {98816 3074 {}} {98820 3074 {}} {98824 3074 {}} {98828 3074 {}} {135360 135168 QC_TABLE} {135364 65536 {}} {135368 65536 {}} {135372 65536 {}} {135376 133380 {}} {135380 65536 {}} {135384 65536 {}} {135388 65536 {}} {135392 132104 {}} {135396 65536 {}} {135400 136706 {}} {135404 65536 {}} {135408 137740 {}} {135412 135425 {}} {135416 134662 {}} {135420 65536 {}
+} {135424 136464 {}} {135428 131845 {}} {135432 132874 {}} {135436 65536 {}} {135440 426004 {}} {135444 131593 {}} {135448 131598 {}} {135452 137219 {}} {135456 65536 {}} {135460 3073 {}} {135464 65536 {}} {135468 65536 {}} {135472 65536 {}} {135476 6661 {}} {135480 3074 {}} {135484 65536 {}} {135488 6400 {}} {135492 3849 {}} {135496 1542 {}} {135500 65536 {}} {135504 772 {}} {135508 135185 {}} {135512 5642 {}} {135516 771 {}} {135520 3852 {}} {135524 426005 {}} {135528 1038 {}} {135532 136455 {
+}} {135536 6400 {}} {135540 65536 {}} {135544 6658 {}} {135548 65536 {}} {135552 5636 {}} {135556 65536 {}} {135560 2310 {}} {135564 65536 {}} {135568 8 {}} {135572 65536 {}} {135576 1034 {}} {135580 65536 {}} {135584 1036 {}} {135588 4609 {}} {135592 2062 {}} {135596 4099 {}} {135600 2832 {}} {135604 5893 {}} {135608 426006 {}} {135612 136975 {}} {135616 2304 {}} {135620 65536 {}} {135624 65536 {}} {135628 259 {}} {135632 4356 {}} {135636 65536 {}} {135640 65536 {}} {135644 1799 {}} {135648 776
+ {}} {135652 1793 {}} {135656 2 {}} {135660 136971 {}} {135664 5392 {}} {135668 135181 {}} {135672 778 {}} {135676 426007 {}} {135680 6144 {}} {135684 1281 {}} {135688 65536 {}} {135692 1795 {}} {135696 260 {}} {135700 3849 {}} {135704 65536 {}} {135708 3847 {}} {135712 6152 {}} {135716 3341 {}} {135720 65536 {}} {135724 2059 {}} {135728 426008 {}} {135732 2833 {}} {135736 6658 {}} {135740 3343 {}} {135744 65536 {}} {135748 513 {}} {135752 65536 {}} {135756 65536 {}} {135760 65536 {}} {135764 26
+1 {}} {135768 65536 {}} {135772 65536 {}} {135776 65536 {}} {135780 5385 {}} {135784 65536 {}} {135788 3587 {}} {135792 65536 {}} {135796 6157 {}} {135800 65536 {}} {135804 4871 {}} {135808 512 {}} {135812 529 {}} {135816 4866 {}} {135820 523 {}} {135824 6148 {}} {135828 426009 {}} {135832 3846 {}} {135836 783 {}} {135840 65536 {}} {135844 65536 {}} {135848 65536 {}} {135852 65536 {}} {135856 262164 {}} {135860 262165 {}} {135864 262166 {}} {135868 65536 {}} {135872 262168 {}} {135876 262169 {}}
+ {135880 426002 {}} {135884 262167 {}} {135888 65536 {}} {135892 65536 {}} {135896 65536 {}} {135900 65536 {}} {135904 65536 {}} {135908 65536 {}} {135912 65536 {}} {135916 65536 {}} {135920 262164 {}} {135924 65536 {}} {135928 262418 {}} {135932 426003 {}} {135936 65536 {}} {135940 65536 {}} {135944 65536 {}} {135948 65536 {}} {135952 65536 {}} {135956 65536 {}} {135960 65536 {}} {135964 65536 {}} {135968 294932 {}} {135972 262165 {}} {135976 65536 {}} {135980 262163 {}} {135984 65536 {}} {1359
+88 65536 {}} {135992 65536 {}} {135996 65536 {}} {136000 65536 {}} {136004 65536 {}} {136008 65536 {}} {136012 65536 {}} {136016 262164 {}} {136020 294933 {}} {136024 262166 {}} {136028 65536 {}} {136032 65536 {}} {136036 65536 {}} {136040 65536 {}} {136044 65536 {}} {136048 65536 {}} {136052 65536 {}} {136056 262162 {}} {136060 65536 {}} {136064 65536 {}} {136068 262165 {}} {136072 294934 {}} {136076 262167 {}} {136080 65536 {}} {136084 65536 {}} {136088 65536 {}} {136092 65536 {}} {136096 6553
+6 {}} {136100 65536 {}} {136104 65536 {}} {136108 65536 {}} {136112 262168 {}} {136116 65536 {}} {136120 262166 {}} {136124 294935 {}} {8304 63702288 {K, N}} {8308 26678 {NM, NO_PACKING, PSIZE}} {8312 1087500 {MAX_SCHEDULE, NO_FINAL_PARITY_CHECK, NORM_TYPE, NMQC, NLAYERS}} {8316 20717857 {QC_OFF, LA_OFF, SC_OFF}} {65668 52428 SC_TABLE} {65672 52428 {}} {65676 52428 {}} {98832 8 LA_TABLE} {98836 8 {}} {98840 8 {}} {98844 8 {}} {98848 8 {}} {98852 8 {}} {98856 4355 {}} {98860 3586 {}} {98864 3330 
+{}} {98868 3330 {}} {98872 3330 {}} {98876 3330 {}} {136128 65536 QC_TABLE} {136132 141313 {}} {136136 65536 {}} {136140 141571 {}} {136144 65536 {}} {136148 138501 {}} {136152 65536 {}} {136156 140295 {}} {136160 141056 {}} {136164 134665 {}} {136168 144130 {}} {136172 132619 {}} {136176 131844 {}} {136180 139533 {}} {136184 133126 {}} {136188 133903 {}} {136192 426004 {}} {136196 132113 {}} {136200 12288 {}} {136204 65536 {}} {136208 12034 {}} {136212 65536 {}} {136216 12292 {}} {136220 65536 
+{}} {136224 13062 {}} {136228 65536 {}} {136232 140808 {}} {136236 65536 {}} {136240 138250 {}} {136244 5377 {}} {136248 139788 {}} {136252 2307 {}} {136256 143886 {}} {136260 8965 {}} {136264 143888 {}} {136268 426005 {}} {136272 65536 {}} {136276 9985 {}} {136280 65536 {}} {136284 10755 {}} {136288 65536 {}} {136292 9989 {}} {136296 65536 {}} {136300 4359 {}} {136304 7680 {}} {136308 1545 {}} {136312 7170 {}} {136316 4619 {}} {136320 12804 {}} {136324 5133 {}} {136328 1286 {}} {136332 3855 {}}
+ {136336 426006 {}} {136340 10257 {}} {136344 7424 {}} {136348 65536 {}} {136352 258 {}} {136356 65536 {}} {136360 9220 {}} {136364 65536 {}} {136368 12038 {}} {136372 65536 {}} {136376 12552 {}} {136380 65536 {}} {136384 12042 {}} {136388 1 {}} {136392 780 {}} {136396 11011 {}} {136400 8974 {}} {136404 7685 {}} {136408 8720 {}} {136412 426007 {}} {136416 65536 {}} {136420 8193 {}} {136424 65536 {}} {136428 5891 {}} {136432 65536 {}} {136436 11269 {}} {136440 65536 {}} {136444 1799 {}} {136448 2
+56 {}} {136452 12297 {}} {136456 2818 {}} {136460 1035 {}} {136464 2564 {}} {136468 2317 {}} {136472 3078 {}} {136476 4367 {}} {136480 426008 {}} {136484 4113 {}} {136488 3328 {}} {136492 65536 {}} {136496 3842 {}} {136500 65536 {}} {136504 5892 {}} {136508 65536 {}} {136512 12038 {}} {136516 65536 {}} {136520 11016 {}} {136524 65536 {}} {136528 7434 {}} {136532 1793 {}} {136536 13324 {}} {136540 12035 {}} {136544 526 {}} {136548 4101 {}} {136552 13584 {}} {136556 426009 {}} {136560 262164 {}} {
+136564 65536 {}} {136568 262166 {}} {136572 262165 {}} {136576 262168 {}} {136580 262167 {}} {136584 426002 {}} {136588 262169 {}} {136592 65536 {}} {136596 65536 {}} {136600 262418 {}} {136604 65536 {}} {136608 262164 {}} {136612 426003 {}} {136616 65536 {}} {136620 65536 {}} {136624 65536 {}} {136628 262163 {}} {136632 294932 {}} {136636 262165 {}} {136640 65536 {}} {136644 65536 {}} {136648 262164 {}} {136652 65536 {}} {136656 262166 {}} {136660 294933 {}} {136664 65536 {}} {136668 65536 {}} 
+{136672 262162 {}} {136676 262165 {}} {136680 294934 {}} {136684 262167 {}} {136688 65536 {}} {136692 65536 {}} {136696 262166 {}} {136700 65536 {}} {136704 262168 {}} {136708 294935 {}} {8320 95553432 {K, N}} {8324 53329 {NM, NO_PACKING, PSIZE}} {8328 1101836 {MAX_SCHEDULE, NO_FINAL_PARITY_CHECK, NORM_TYPE, NMQC, NLAYERS}} {8332 23143460 {QC_OFF, LA_OFF, SC_OFF}} {65680 52428 SC_TABLE} {65684 52428 {}} {65688 52428 {}} {98880 12 LA_TABLE} {98884 12 {}} {98888 12 {}} {98892 12 {}} {98896 12 {}} 
+{98900 12 {}} {98904 4870 {}} {98908 4610 {}} {98912 3586 {}} {98916 3586 {}} {98920 3331 {}} {98924 3842 {}} {136720 143360 QC_TABLE} {136724 138497 {}} {136728 138242 {}} {136732 141059 {}} {136736 133380 {}} {136740 146693 {}} {136744 147209 {}} {136748 142602 {}} {136752 151563 {}} {136756 140559 {}} {136760 139280 {}} {136764 136721 {}} {136768 393236 {}} {136772 1024 {}} {136776 12545 {}} {136780 10754 {}} {136784 12291 {}} {136788 2820 {}} {136792 7685 {}} {136796 12553 {}} {136800 4362 {
+}} {136804 10507 {}} {136808 140556 {}} {136812 134925 {}} {136816 13839 {}} {136820 393237 {}} {136824 8960 {}} {136828 19457 {}} {136832 19970 {}} {136836 13059 {}} {136840 9476 {}} {136844 8965 {}} {136848 136454 {}} {136852 135432 {}} {136856 16393 {}} {136860 15117 {}} {136864 132878 {}} {136868 8209 {}} {136872 393238 {}} {136876 2304 {}} {136880 16641 {}} {136884 11266 {}} {136888 2307 {}} {136892 13828 {}} {136896 14341 {}} {136900 18694 {}} {136904 139783 {}} {136908 10760 {}} {136912 8
+972 {}} {136916 11792 {}} {136920 10001 {}} {136924 393239 {}} {136928 768 {}} {136932 15873 {}} {136936 1794 {}} {136940 20483 {}} {136944 17412 {}} {136948 6661 {}} {136952 20487 {}} {136956 14088 {}} {136960 9226 {}} {136964 6668 {}} {136968 2318 {}} {136972 18448 {}} {136976 393240 {}} {136980 6656 {}} {136984 19201 {}} {136988 8450 {}} {136992 5379 {}} {136996 17668 {}} {137000 15109 {}} {137004 774 {}} {137008 9735 {}} {137012 8971 {}} {137016 15885 {}} {137020 9230 {}} {137024 6671 {}} {1
+37028 393241 {}} {137032 262164 {}} {137036 262165 {}} {137040 262166 {}} {137044 262167 {}} {137048 262168 {}} {137052 262169 {}} {137056 393234 {}} {137060 262418 {}} {137064 262164 {}} {137068 393235 {}} {137072 262163 {}} {137076 262165 {}} {137080 262164 {}} {137084 262164 {}} {137088 262166 {}} {137092 262165 {}} {137096 262162 {}} {137100 262165 {}} {137104 262167 {}} {137108 262166 {}} {137112 262166 {}} {137116 262168 {}} {137120 262167 {}} {8336 35390088 {K, N}} {8340 14363 {NM, NO_PAC
+KING, PSIZE}} {8344 1067016 {MAX_SCHEDULE, NO_FINAL_PARITY_CHECK, NORM_TYPE, NMQC, NLAYERS}} {8348 24848167 {QC_OFF, LA_OFF, SC_OFF}} {65692 52428 SC_TABLE} {65696 52428 {}} {98928 5 LA_TABLE} {98932 5 {}} {98936 4 {}} {98940 5 {}} {98944 3842 {}} {98948 3074 {}} {98952 3074 {}} {98956 3074 {}} {137136 65536 QC_TABLE} {137140 65536 {}} {137144 133122 {}} {137148 65536 {}} {137152 135424 {}} {137156 134401 {}} {137160 135686 {}} {137164 136451 {}} {137168 133380 {}} {137172 131845 {}} {137176 132
+106 {}} {137180 134151 {}} {137184 133640 {}} {137188 131081 {}} {137192 132366 {}} {137196 134923 {}} {137200 135948 {}} {137204 131597 {}} {137208 134418 {}} {137212 133647 {}} {137216 137744 {}} {137220 135953 {}} {137224 426006 {}} {137228 134419 {}} {137232 65536 {}} {137236 65536 {}} {137240 65536 {}} {137244 3587 {}} {137248 768 {}} {137252 3073 {}} {137256 2818 {}} {137260 4615 {}} {137264 2820 {}} {137268 6405 {}} {137272 1286 {}} {137276 6667 {}} {137280 8 {}} {137284 2313 {}} {137288 
+522 {}} {137292 1807 {}} {137296 6668 {}} {137300 2573 {}} {137304 6158 {}} {137308 531 {}} {137312 3600 {}} {137316 5137 {}} {137320 1042 {}} {137324 426007 {}} {137328 5632 {}} {137332 4097 {}} {137336 1026 {}} {137340 771 {}} {137344 2564 {}} {137348 5381 {}} {137352 3078 {}} {137356 1287 {}} {137360 5384 {}} {137364 3593 {}} {137368 4874 {}} {137372 1291 {}} {137376 2832 {}} {137380 2061 {}} {137384 1294 {}} {137388 4623 {}} {137392 426008 {}} {137396 1297 {}} {137400 1298 {}} {137404 3859 {
+}} {137408 65536 {}} {137412 1793 {}} {137416 65536 {}} {137420 65536 {}} {137424 1792 {}} {137428 4101 {}} {137432 3586 {}} {137436 3587 {}} {137440 1028 {}} {137444 2569 {}} {137448 4102 {}} {137452 6151 {}} {137456 6152 {}} {137460 1549 {}} {137464 266 {}} {137468 1803 {}} {137472 3852 {}} {137476 4625 {}} {137480 2574 {}} {137484 6671 {}} {137488 2064 {}} {137492 426009 {}} {137496 5394 {}} {137500 3603 {}} {137504 65536 {}} {137508 65536 {}} {137512 65536 {}} {137516 65536 {}} {137520 26216
+8 {}} {137524 65536 {}} {137528 65536 {}} {137532 65536 {}} {137536 426004 {}} {137540 262169 {}} {137544 262166 {}} {137548 262167 {}} {137552 65536 {}} {137556 65536 {}} {137560 65536 {}} {137564 65536 {}} {137568 65536 {}} {137572 65536 {}} {137576 65536 {}} {137580 65536 {}} {137584 262420 {}} {137588 426005 {}} {137592 262166 {}} {137596 65536 {}} {137600 65536 {}} {137604 65536 {}} {137608 65536 {}} {137612 65536 {}} {137616 65536 {}} {137620 65536 {}} {137624 65536 {}} {137628 65536 {}} {
+137632 65536 {}} {137636 262165 {}} {137640 294934 {}} {137644 262167 {}} {137648 65536 {}} {137652 65536 {}} {137656 65536 {}} {137660 65536 {}} {137664 262164 {}} {137668 65536 {}} {137672 65536 {}} {137676 65536 {}} {137680 262168 {}} {137684 65536 {}} {137688 262166 {}} {137692 294935 {}} {8352 70780176 {K, N}} {8356 26678 {NM, NO_PACKING, PSIZE}} {8360 1077256 {MAX_SCHEDULE, NO_FINAL_PARITY_CHECK, NORM_TYPE, NMQC, NLAYERS}} {8364 27142441 {QC_OFF, LA_OFF, SC_OFF}} {65700 52428 SC_TABLE} {65
+704 52428 {}} {98960 10 LA_TABLE} {98964 9 {}} {98968 9 {}} {98972 10 {}} {98976 5122 {}} {98980 3330 {}} {98984 3330 {}} {98988 3330 {}} {137696 143360 QC_TABLE} {137700 65536 {}} {137704 140546 {}} {137708 65536 {}} {137712 131588 {}} {137716 138497 {}} {137720 132614 {}} {137724 144387 {}} {137728 144648 {}} {137732 135173 {}} {137736 139786 {}} {137740 134663 {}} {137744 135692 {}} {137748 139017 {}} {137752 144654 {}} {137756 132363 {}} {137760 142608 {}} {137764 141837 {}} {137768 142866 {
+}} {137772 139023 {}} {137776 426006 {}} {137780 144403 {}} {137784 4352 {}} {137788 1025 {}} {137792 7682 {}} {137796 1795 {}} {137800 11012 {}} {137804 2821 {}} {137808 6150 {}} {137812 1543 {}} {137816 3592 {}} {137820 5385 {}} {137824 1546 {}} {137828 9995 {}} {137832 4364 {}} {137836 10253 {}} {137840 12046 {}} {137844 1807 {}} {137848 3856 {}} {137852 141585 {}} {137856 4882 {}} {137860 426007 {}} {137864 1792 {}} {137868 513 {}} {137872 13058 {}} {137876 7939 {}} {137880 11780 {}} {137884
+ 5893 {}} {137888 4102 {}} {137892 2823 {}} {137896 13576 {}} {137900 10249 {}} {137904 2570 {}} {137908 1803 {}} {137912 11788 {}} {137916 13581 {}} {137920 8462 {}} {137924 8975 {}} {137928 8978 {}} {137932 6417 {}} {137936 426008 {}} {137940 9747 {}} {137944 65536 {}} {137948 12289 {}} {137952 65536 {}} {137956 259 {}} {137960 4864 {}} {137964 1797 {}} {137968 10498 {}} {137972 12039 {}} {137976 2564 {}} {137980 7433 {}} {137984 9222 {}} {137988 13323 {}} {137992 1288 {}} {137996 2573 {}} {13
+8000 13322 {}} {138004 1551 {}} {138008 7948 {}} {138012 529 {}} {138016 6670 {}} {138020 13075 {}} {138024 784 {}} {138028 426009 {}} {138032 262166 {}} {138036 65536 {}} {138040 262168 {}} {138044 262167 {}} {138048 426004 {}} {138052 262169 {}} {138056 65536 {}} {138060 65536 {}} {138064 262420 {}} {138068 65536 {}} {138072 262166 {}} {138076 426005 {}} {138080 65536 {}} {138084 65536 {}} {138088 65536 {}} {138092 262165 {}} {138096 294934 {}} {138100 262167 {}} {138104 262164 {}} {138108 655
+36 {}} {138112 262166 {}} {138116 65536 {}} {138120 262168 {}} {138124 294935 {}} {8368 106170264 {K, N}} {8372 53329 {NM, NO_PACKING, PSIZE}} {8376 1095688 {MAX_SCHEDULE, NO_FINAL_PARITY_CHECK, NORM_TYPE, NMQC, NLAYERS}} {8380 28912427 {QC_OFF, LA_OFF, SC_OFF}} {65708 52428 SC_TABLE} {65712 52428 {}} {98992 18 LA_TABLE} {98996 18 {}} {99000 17 {}} {99004 17 {}} {99008 6916 {}} {99012 4098 {}} {99016 3586 {}} {99020 3331 {}} {138128 134400 QC_TABLE} {138132 143361 {}} {138136 151554 {}} {138140 
+147971 {}} {138144 132100 {}} {138148 150021 {}} {138152 132870 {}} {138156 138759 {}} {138160 150536 {}} {138164 144393 {}} {138168 140554 {}} {138172 146443 {}} {138176 143629 {}} {138180 149774 {}} {138184 139023 {}} {138188 150032 {}} {138192 149777 {}} {138196 136978 {}} {138200 393238 {}} {138204 17664 {}} {138208 16129 {}} {138212 18946 {}} {138216 14339 {}} {138220 16388 {}} {138224 19717 {}} {138228 14598 {}} {138232 16647 {}} {138236 1544 {}} {138240 4105 {}} {138244 13066 {}} {138248 
+147468 {}} {138252 17422 {}} {138256 2319 {}} {138260 12304 {}} {138264 15889 {}} {138268 13842 {}} {138272 138003 {}} {138276 393239 {}} {138280 13056 {}} {138284 3841 {}} {138288 2 {}} {138292 20483 {}} {138296 6148 {}} {138300 6405 {}} {138304 10758 {}} {138308 13831 {}} {138312 11272 {}} {138316 18185 {}} {138320 18186 {}} {138324 2315 {}} {138328 17164 {}} {138332 8973 {}} {138336 14863 {}} {138340 7441 {}} {138344 13587 {}} {138348 393240 {}} {138352 4096 {}} {138356 7425 {}} {138360 9218 
+{}} {138364 10499 {}} {138368 11268 {}} {138372 14341 {}} {138376 15110 {}} {138380 9479 {}} {138384 12808 {}} {138388 6153 {}} {138392 16651 {}} {138396 1036 {}} {138400 16653 {}} {138404 13326 {}} {138408 1040 {}} {138412 18706 {}} {138416 13331 {}} {138420 393241 {}} {138424 262166 {}} {138428 262167 {}} {138432 262168 {}} {138436 262169 {}} {138440 393236 {}} {138444 262420 {}} {138448 262166 {}} {138452 393237 {}} {138456 262165 {}} {138460 262167 {}} {138464 262166 {}} {138468 262164 {}} {
+138472 262166 {}} {138476 262168 {}} {138480 262167 {}} {20 1 FEC_CODE} {12 0 AXIS_WIDTH} {16 63 {AXIS_ENABLE: Enable all channels }}</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
@@ -4216,6 +4363,7 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.DIN_Words" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.DOUT_Words" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.DRV_INITIALIZATION_PARAMS" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.DRV_LDPC_PARAMS" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.DRV_STANDARD" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.DRV_TURBO_PARAMS" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Enable_IFs" xilinx:valueSource="user"/>

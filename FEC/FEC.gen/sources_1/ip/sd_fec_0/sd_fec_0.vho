@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2024 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2025 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -60,7 +60,7 @@ COMPONENT sd_fec_0
     s_axis_ctrl_aclk : IN STD_LOGIC;
     s_axis_ctrl_tready : OUT STD_LOGIC;
     s_axis_ctrl_tvalid : IN STD_LOGIC;
-    s_axis_ctrl_tdata : IN STD_LOGIC_VECTOR(39 DOWNTO 0);
+    s_axis_ctrl_tdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     s_axis_din_aclk : IN STD_LOGIC;
     s_axis_din_tready : OUT STD_LOGIC;
     s_axis_din_tvalid : IN STD_LOGIC;
@@ -69,7 +69,7 @@ COMPONENT sd_fec_0
     m_axis_status_aclk : IN STD_LOGIC;
     m_axis_status_tready : IN STD_LOGIC;
     m_axis_status_tvalid : OUT STD_LOGIC;
-    m_axis_status_tdata : OUT STD_LOGIC_VECTOR(39 DOWNTO 0);
+    m_axis_status_tdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     m_axis_dout_aclk : IN STD_LOGIC;
     m_axis_dout_tready : IN STD_LOGIC;
     m_axis_dout_tvalid : OUT STD_LOGIC;

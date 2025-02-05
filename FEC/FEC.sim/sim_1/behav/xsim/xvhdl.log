@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/FEC/FEC.srcs/sim_1/new/Encoder_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Encoder_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/FEC/FEC.srcs/sources_1/new/Wifi_Input_FSM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Wifi_Input_FSM'

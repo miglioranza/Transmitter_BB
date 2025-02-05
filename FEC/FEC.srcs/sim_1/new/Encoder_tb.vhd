@@ -46,14 +46,16 @@ port (
  ldpc_core_clk          : in std_logic ;
  clk                    : in std_logic ;
  reset                  : in std_logic ;
+ aresetn                : in std_logic ;    
  data_in                : in std_logic_vector(31 downto 0) ; 
  data_in_valid          : in std_logic ;
  din_ready_ifsm2enc     : in std_logic ;  
  data_in_last           : in std_logic ; 
  sel_FEC_code_rate      : in std_logic_vector( 1 downto 0)   ;
- data_out_ready         : out std_logic_vector(3 downto 0) := (others => '0');   --Encoder ready to receive data in input                   
+ data_out_ready         : out std_logic :=  '0';   --Encoder ready to receive data in input                   
  data_out               : out std_logic_vector(31 downto 0) ;
  data_out_valid         : out std_logic ;
+ core_finish            : out std_logic ;
  data_out_last          : out std_logic 
 
 );
@@ -61,12 +63,12 @@ end component ;
 
 
 --Clock periods
-constant clk_period         : time      := 10 ns ;      --System frequency     --> 100 MHz 
+constant clk_period         : time      := 5 ns ;      --System frequency     --> 200 MHz 
 constant clk_core_period    : time      := 1.6666 ns ;  --LDPC cores frequency --> 300 MHz
 signal ldpc_core_clk        : std_logic := '0';
 signal clk                  : std_logic := '0';
 signal reset                : std_logic := '0';
-
+signal aresetn              : std_logic := '0' ;
 --Encoder signals 
 signal data_in              : std_logic_vector(31 downto 0) := (others =>'0');
 signal selected_cr          : integer   := 0 ;
@@ -75,7 +77,7 @@ signal data_in_ready        : std_logic := '0';
 signal data_in_last         : std_logic := '0';
 signal data_out             : std_logic_vector(31 downto 0) := (others =>'0');
 signal data_out_valid       : std_logic := '0';
-signal data_out_ready       : std_logic_vector(3 downto 0) := (others =>'0');
+signal data_out_ready       : std_logic := '0';
 signal sel_FEC_code_rate    : std_logic_vector(1 downto 0) := (others =>'0');
 signal data_in_ready_core   : std_logic := '0';
 signal out_last             : std_logic := '0'; 
@@ -92,6 +94,7 @@ ldpc_core_clk <= not ldpc_core_clk after clk_core_period/2 ;
 --Reset generation
 --reset_n         <= '0', '1' after 50 ns  ; 
 reset           <= '1', '0' after 5 ns ; 
+aresetn         <= '0', '1' after 50 ns ; 
 
 
 
@@ -101,6 +104,7 @@ Port map (
     ldpc_core_clk       => ldpc_core_clk ,
     clk                 => clk,
     reset               => reset,
+    aresetn             => aresetn ,
     data_in             => data_in,
     data_in_valid       => data_in_valid ,
     din_ready_ifsm2enc  => data_in_ready_core , 
@@ -109,23 +113,23 @@ Port map (
     data_out            => data_out ,
     data_out_valid      => data_out_valid,
     data_out_last       => out_last ,
+    core_finish         => finish_encoding ,
     sel_FEC_code_rate   => sel_FEC_code_rate 
 );
 
 select_code_rate : process 
 begin 
-
-sel_FEC_code_rate <= "10" ; 
-selected_cr <= 2 ;
-wait until temp = 100 ;
-sel_FEC_code_rate <= "11" ;
-selected_cr <= 3 ;
-wait until temp = 200 ;
-sel_FEC_code_rate <= "01" ;
-selected_cr <= 1;
-wait until temp = 300 ;
 sel_FEC_code_rate <= "00" ;
 selected_cr <= 0 ;
+wait until temp = 400 ;
+sel_FEC_code_rate <= "10" ;
+selected_cr <= 2 ;
+wait until temp = 500 ;
+sel_FEC_code_rate <= "11" ; 
+selected_cr <= 3 ;
+wait until temp = 300 ;
+sel_FEC_code_rate <= "01" ;
+selected_cr <= 1;
 wait until out_last = '1'and data_out_valid = '0' ;
 wait ;
 end process ;
@@ -135,26 +139,25 @@ begin
 
 wait until reset = '0';
 data_in_ready <= '1';
-while temp < 400 loop 
-if data_out_ready(selected_cr)  = '1' then
+while temp < 500 loop 
+if data_out_ready  = '1' then
 data_in_valid      <= '1';
 data_in  <= std_logic_vector(to_unsigned((temp + 1 ) ,data_in'length )) ;
 temp <= temp  + 1 ;  
-wait for clk_period *2     ;
+wait for clk_period      ;
 else 
-----data_in_valid      <= '0';
+--data_in_valid      <= '0';
 wait until clk'event and clk = '1'; -- Wait for the next clock cycle
 end if ;
 end loop ;
-if temp = 400 then 
+if temp = 500 then 
 --    data_in_valid <= '0';
     data_in_last       <= '1' ;
   
 end if ;
-wait until out_last = '1'and data_out_valid = '0' ;
+wait until out_last = '1'and data_out_valid = '0' and finish_encoding = '1' ;
             data_in_valid <= '0';
             report "End of simulation" ;
-            wait for clk_period ;
             finish ;  
 end process ;
 

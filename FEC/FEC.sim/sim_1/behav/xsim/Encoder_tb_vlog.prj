@@ -2,6 +2,9 @@
 sv xil_defaultlib  --include "../../../../FEC.ip_user_files/ipstatic/hdl" --include "/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/xilinx_vip/include" \
 "../../../../FEC.gen/sources_1/ip/sd_fec_0/sim/sd_fec_0.sv" \
 
+verilog xil_defaultlib  --include "../../../../FEC.ip_user_files/ipstatic/hdl" --include "/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/xilinx_vip/include" \
+"../../../../FEC.gen/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v" \
+
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
 

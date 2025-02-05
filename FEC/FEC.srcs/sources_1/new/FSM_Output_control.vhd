@@ -37,11 +37,12 @@ entity FSM_Output_control is
 Port (
 clk                   : in STD_LOGIC; 
 reset                 : in STD_LOGIC;
-sel_FEC_code_rate     : in integer    ;
+sel_FEC_code_rate     : in std_logic_vector(1 downto 0) := (others => '0')   ;
 o_fsm_din             : in STD_LOGIC_VECTOR (31 downto 0) := (others => '0') ;
 o_fsm_din_valid       : in STD_LOGIC_VECTOR (3 downto 0);
 o_fsm_ready_fifo      : in std_logic := '0';
 o_fsm_din_last        : in STD_LOGIC_VECTOR (3 downto 0);
+o_fsm_block_count     : in STD_LOGIC_VECTOR (7 downto 0);
 o_fsm_dout            : out std_logic_vector(31 downto 0 ) := (others => '0') ;
 o_fsm_dout_valid      : out std_logic ;
 o_fsm_ready_core      : out std_logic ;
@@ -59,7 +60,7 @@ signal temp              : std_logic := '0';
 signal last              : std_logic := '0';
 signal test              : std_logic_vector(31 downto 0) := (others => '0');  
 signal counter           : std_logic_vector(16 downto 0) := (others => '0');
-signal counter1          : std_logic_vector(16 downto 0) := (others => '0');
+signal block_counter     : std_logic_vector(7 downto 0) := (others => '0');
 
 begin
 
@@ -95,34 +96,47 @@ Output_fsm_control : process( clk, reset)
 begin
 
 if reset = '1' then 
-o_fsm_ready_core    <= '0';
-o_fsm_dout_valid    <= '0';
-o_fsm_dout_last     <= '0';
-data_in_last        <= '0';
-ofsm_core_finish <= '0';          
-o_fsm_dout           <= (others => '0') ;  
+    o_fsm_ready_core    <= '0';
+    o_fsm_dout_valid    <= '0';
+    o_fsm_dout_last     <= '0';
+    data_in_last        <= '0';
+    ofsm_core_finish <= '0';          
+    o_fsm_dout           <= (others => '0') ;  
 elsif rising_edge (clk) then
   o_fsm_ready_core    <= '1';
 
-if temp = '1'   and (o_fsm_din_last(current_code_rate ) = '0' or o_fsm_din_last(current_code_rate ) = '1')  then 
-   
-    o_fsm_dout           <= o_fsm_din ;  
-    o_fsm_dout_valid     <= '1';
-    o_fsm_dout_last      <= '0';
-    ofsm_core_finish     <= '0';
-    counter              <= counter  +  x"01" ;   
-elsif  temp = '0'  and o_fsm_din_last(current_code_rate ) = '1' then  
---    o_fsm_dout           <= o_fsm_din ;  
-    o_fsm_dout_valid     <= '0';
-    o_fsm_dout_last      <= '1';
-    ofsm_core_finish     <= '1';
-    counter <= (others => '0') ;
+    if temp = '1'   and (o_fsm_din_last(current_code_rate ) = '0' or o_fsm_din_last(current_code_rate ) = '1')  then 
+       
+        o_fsm_dout           <= o_fsm_din ;  
+        o_fsm_dout_valid     <= '1';
+        o_fsm_dout_last      <= '0';
+    --    ofsm_core_finish     <= '0';
+        counter              <= counter  +  x"01" ;   
+    elsif  temp = '0'  and o_fsm_din_last(current_code_rate ) = '1' then  
+    --    o_fsm_dout           <= o_fsm_din ;  
+        o_fsm_dout_valid     <= '0';
+        o_fsm_dout_last      <= '1';
+    --    ofsm_core_finish     <= '1';
+        counter <= (others => '0') ;
+        else 
+        o_fsm_dout_valid     <= '0';
+        o_fsm_dout_last      <= '0';
+    --    ofsm_core_finish     <= '0';   
+    end if ;
+    
+    if o_fsm_din_valid(current_code_rate) = '1' and o_fsm_din_last(current_code_rate ) = '1' then 
+        block_counter <= block_counter + '1' ;
+    elsif  o_fsm_din_valid(current_code_rate) = '0' and o_fsm_din_last(current_code_rate ) = '1' then  
+     if block_counter = (o_fsm_block_count + 1 )then 
+          block_counter <= (others => '0') ;
+          ofsm_core_finish     <= '1';  
+     else   
+          ofsm_core_finish     <= '0';  
+        
+      end if ;  
     else 
-    o_fsm_dout_valid     <= '0';
-    o_fsm_dout_last      <= '0';
-    ofsm_core_finish     <= '0';   
-end if ;
-
-  end if ;
+      block_counter <= block_counter ;
+      end if ;
+end if ;   
 end process ; 
 end rtl;
