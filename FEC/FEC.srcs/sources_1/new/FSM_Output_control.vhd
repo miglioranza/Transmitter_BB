@@ -46,8 +46,8 @@ o_fsm_block_count     : in STD_LOGIC_VECTOR (7 downto 0);
 o_fsm_dout            : out std_logic_vector(31 downto 0 ) := (others => '0') ;
 o_fsm_dout_valid      : out std_logic ;
 o_fsm_ready_core      : out std_logic ;
-o_fsm_dout_last       : out std_logic := '0' ;
-ofsm_core_finish      : out std_logic := '0' 
+o_fsm_dout_last       : out std_logic := '0' 
+--ofsm_core_finish      : out std_logic := '0' 
  );
 end FSM_Output_control;
 
@@ -64,6 +64,7 @@ signal block_counter     : std_logic_vector(7 downto 0) := (others => '0');
 
 begin
 
+
 selected_core : process (clk ,reset ) 
 begin 
 if reset = '1' then 
@@ -73,7 +74,7 @@ elsif rising_edge (clk) then
     temp <= (o_fsm_din_valid(0) or o_fsm_din_valid(1) or o_fsm_din_valid(2) or o_fsm_din_valid(3)) ;
     
     if temp = '1' then 
-            o_fsm_dout_valid    <= '1';
+    
         if o_fsm_din_valid(0) = '1'then 
             current_code_rate  <= 0 ;
         elsif o_fsm_din_valid(1) = '1' then 
@@ -85,9 +86,7 @@ elsif rising_edge (clk) then
         else 
             current_code_rate <= current_code_rate  ;
         end if ;
-     else 
-        o_fsm_dout_valid    <= '0';
-        --current_code_rate <= 0 ;
+     else         --current_code_rate <= 0 ;
         end if ;
 end if ;
 end process ;
@@ -100,14 +99,15 @@ if reset = '1' then
     o_fsm_dout_valid    <= '0';
     o_fsm_dout_last     <= '0';
     data_in_last        <= '0';
-    ofsm_core_finish <= '0';          
+--    ofsm_core_finish <= '0';          
     o_fsm_dout           <= (others => '0') ;  
 elsif rising_edge (clk) then
   o_fsm_ready_core    <= '1';
-
+  o_fsm_dout          <= o_fsm_din ;  
+  
     if temp = '1'   and (o_fsm_din_last(current_code_rate ) = '0' or o_fsm_din_last(current_code_rate ) = '1')  then 
        
-        o_fsm_dout           <= o_fsm_din ;  
+--        o_fsm_dout           <= o_fsm_din ;  
         o_fsm_dout_valid     <= '1';
         o_fsm_dout_last      <= '0';
     --    ofsm_core_finish     <= '0';
@@ -123,20 +123,7 @@ elsif rising_edge (clk) then
         o_fsm_dout_last      <= '0';
     --    ofsm_core_finish     <= '0';   
     end if ;
-    
-    if o_fsm_din_valid(current_code_rate) = '1' and o_fsm_din_last(current_code_rate ) = '1' then 
-        block_counter <= block_counter + '1' ;
-    elsif  o_fsm_din_valid(current_code_rate) = '0' and o_fsm_din_last(current_code_rate ) = '1' then  
-     if block_counter = (o_fsm_block_count + 1 )then 
-          block_counter <= (others => '0') ;
-          ofsm_core_finish     <= '1';  
-     else   
-          ofsm_core_finish     <= '0';  
-        
-      end if ;  
-    else 
-      block_counter <= block_counter ;
-      end if ;
+
 end if ;   
 end process ; 
 end rtl;

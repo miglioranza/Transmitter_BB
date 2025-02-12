@@ -9,7 +9,7 @@
     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
 source Encoder.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3066.770 ; gain = 2.016 ; free physical = 41740 ; free virtual = 110702
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3066.766 ; gain = 2.016 ; free physical = 43167 ; free virtual = 112646
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/FEC/FEC.srcs'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip'.
@@ -28,56 +28,46 @@ WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis b
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 2102364
+INFO: [Synth 8-7075] Helper process launched with PID 2490340
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3478.262 ; gain = 229.688 ; free physical = 40415 ; free virtual = 109376
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3478.258 ; gain = 229.688 ; free physical = 41848 ; free virtual = 111328
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Encoder' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:55]
-WARNING: [Synth 8-614] signal 'ofsm_din_valid' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:224]
-WARNING: [Synth 8-614] signal 'data_out_core0' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:224]
-WARNING: [Synth 8-614] signal 'data_out_core1' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:224]
-WARNING: [Synth 8-614] signal 'data_out_core2' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:224]
-WARNING: [Synth 8-614] signal 'data_out_core3' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:224]
-WARNING: [Synth 8-614] signal 'data_out_cores' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:224]
-INFO: [Synth 8-3491] module 'Wifi_Input_FSM' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/Wifi_Input_FSM.vhd:35' bound to instance 'FSM_Input' of component 'Wifi_Input_FSM' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:266]
+INFO: [Synth 8-3491] module 'Wifi_Input_FSM' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/Wifi_Input_FSM.vhd:35' bound to instance 'FSM_Input' of component 'Wifi_Input_FSM' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:270]
 INFO: [Synth 8-638] synthesizing module 'Wifi_Input_FSM' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Wifi_Input_FSM.vhd:61]
 INFO: [Synth 8-226] default block is never used [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Wifi_Input_FSM.vhd:83]
-WARNING: [Synth 8-6014] Unused sequential element block_counter_reg was removed.  [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Wifi_Input_FSM.vhd:111]
+WARNING: [Synth 8-6014] Unused sequential element block_counter_reg was removed.  [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Wifi_Input_FSM.vhd:149]
 INFO: [Synth 8-256] done synthesizing module 'Wifi_Input_FSM' (1#1) [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Wifi_Input_FSM.vhd:61]
-INFO: [Synth 8-3491] module 'Data_input_FIFO' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/Data_input_FIFO.vhd:35' bound to instance 'input_fifo' of component 'Data_input_FIFO' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:290]
+INFO: [Synth 8-3491] module 'Data_input_FIFO' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/Data_input_FIFO.vhd:35' bound to instance 'input_fifo' of component 'Data_input_FIFO' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:294]
 INFO: [Synth 8-638] synthesizing module 'Data_input_FIFO' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Data_input_FIFO.vhd:52]
-INFO: [Synth 8-3491] module 'fifo_generator_0' declared at '/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-2102063-uxsrv005/realtime/fifo_generator_0_stub.v:6' bound to instance 'axis_fifo' of component 'fifo_generator_0' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Data_input_FIFO.vhd:80]
-INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-2102063-uxsrv005/realtime/fifo_generator_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (2#1) [/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-2102063-uxsrv005/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-3491] module 'fifo_generator_0' declared at '/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-2490260-uxsrv005/realtime/fifo_generator_0_stub.v:6' bound to instance 'axis_fifo' of component 'fifo_generator_0' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Data_input_FIFO.vhd:80]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-2490260-uxsrv005/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (2#1) [/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-2490260-uxsrv005/realtime/fifo_generator_0_stub.v:6]
 INFO: [Synth 8-226] default block is never used [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Data_input_FIFO.vhd:100]
-WARNING: [Synth 8-614] signal 'sel_code_rate' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Data_input_FIFO.vhd:97]
-WARNING: [Synth 8-614] signal 'tdata_ready' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Data_input_FIFO.vhd:116]
-WARNING: [Synth 8-614] signal 'current_code_rate' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Data_input_FIFO.vhd:116]
-WARNING: [Synth 8-614] signal 'data_last_fifo2core' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Data_input_FIFO.vhd:116]
-WARNING: [Synth 8-614] signal 'data_valid_fifo2core' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Data_input_FIFO.vhd:116]
 INFO: [Synth 8-256] done synthesizing module 'Data_input_FIFO' (3#1) [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Data_input_FIFO.vhd:52]
-INFO: [Synth 8-3491] module 'FSM_Output_control' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/FSM_Output_control.vhd:36' bound to instance 'FSM_Output_control_inst' of component 'FSM_Output_control' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:307]
+INFO: [Synth 8-3491] module 'FSM_Output_control' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/FSM_Output_control.vhd:36' bound to instance 'FSM_Output_control_inst' of component 'FSM_Output_control' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:311]
 INFO: [Synth 8-638] synthesizing module 'FSM_Output_control' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/FSM_Output_control.vhd:54]
 WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [/home/miglioranza/FEC/FEC.srcs/sources_1/new/FSM_Output_control.vhd:114]
 INFO: [Synth 8-256] done synthesizing module 'FSM_Output_control' (4#1) [/home/miglioranza/FEC/FEC.srcs/sources_1/new/FSM_Output_control.vhd:54]
-INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst0' of component 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:325]
-INFO: [Synth 8-638] synthesizing module 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:59]
-INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-2102063-uxsrv005/realtime/sd_fec_0_stub.v:6' bound to instance 'ldpc_encoder' of component 'sd_fec_0' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:117]
-INFO: [Synth 8-6157] synthesizing module 'sd_fec_0' [/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-2102063-uxsrv005/realtime/sd_fec_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'sd_fec_0' (5#1) [/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-2102063-uxsrv005/realtime/sd_fec_0_stub.v:6]
-WARNING: [Synth 8-614] signal 'din_valid' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:166]
-WARNING: [Synth 8-614] signal 'din_last' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:166]
-WARNING: [Synth 8-614] signal 'axis_data_count' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:166]
-WARNING: [Synth 8-614] signal 'din' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:166]
-WARNING: [Synth 8-614] signal 'last_value' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:166]
-WARNING: [Synth 8-614] signal 'din_valid' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:174]
-WARNING: [Synth 8-614] signal 'data_out_valid' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:174]
-WARNING: [Synth 8-614] signal 'data_out_last_core' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:174]
-WARNING: [Synth 8-614] signal 'data_out_core' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:174]
-INFO: [Synth 8-256] done synthesizing module 'LDPC_core' (6#1) [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:59]
-INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst1' of component 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:348]
-INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst2' of component 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:371]
-INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst3' of component 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:394]
+INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst0' of component 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:329]
+INFO: [Synth 8-638] synthesizing module 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:60]
+INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-2490260-uxsrv005/realtime/sd_fec_0_stub.v:6' bound to instance 'ldpc_encoder' of component 'sd_fec_0' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:118]
+INFO: [Synth 8-6157] synthesizing module 'sd_fec_0' [/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-2490260-uxsrv005/realtime/sd_fec_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sd_fec_0' (5#1) [/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-2490260-uxsrv005/realtime/sd_fec_0_stub.v:6]
+WARNING: [Synth 8-614] signal 'din_valid' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:167]
+WARNING: [Synth 8-614] signal 'din_last' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:167]
+WARNING: [Synth 8-614] signal 'data_out_valid' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:167]
+WARNING: [Synth 8-614] signal 'data_out_last_core' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:167]
+WARNING: [Synth 8-614] signal 'data_out_core' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:167]
+WARNING: [Synth 8-614] signal 'last_value' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:167]
+WARNING: [Synth 8-614] signal 'din_valid' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:186]
+WARNING: [Synth 8-614] signal 'data_out_last_core' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:186]
+WARNING: [Synth 8-614] signal 'data_out_core' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:186]
+WARNING: [Synth 8-614] signal 'data_out_valid' is read in the process but is not in the sensitivity list [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:186]
+INFO: [Synth 8-256] done synthesizing module 'LDPC_core' (6#1) [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:60]
+INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst1' of component 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:353]
+INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst2' of component 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:377]
+INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst3' of component 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:401]
 INFO: [Synth 8-256] done synthesizing module 'Encoder' (7#1) [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:55]
 WARNING: [Synth 8-7129] Port axis_data_count[12] in module LDPC_core is either unconnected or has no load
 WARNING: [Synth 8-7129] Port axis_data_count[11] in module LDPC_core is either unconnected or has no load
@@ -95,20 +85,28 @@ WARNING: [Synth 8-7129] Port axis_data_count[0] in module LDPC_core is either un
 WARNING: [Synth 8-7129] Port sel_FEC_code_rate[1] in module FSM_Output_control is either unconnected or has no load
 WARNING: [Synth 8-7129] Port sel_FEC_code_rate[0] in module FSM_Output_control is either unconnected or has no load
 WARNING: [Synth 8-7129] Port o_fsm_ready_fifo in module FSM_Output_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_fsm_block_count[7] in module FSM_Output_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_fsm_block_count[6] in module FSM_Output_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_fsm_block_count[5] in module FSM_Output_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_fsm_block_count[4] in module FSM_Output_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_fsm_block_count[3] in module FSM_Output_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_fsm_block_count[2] in module FSM_Output_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_fsm_block_count[1] in module FSM_Output_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_fsm_block_count[0] in module FSM_Output_control is either unconnected or has no load
 WARNING: [Synth 8-7129] Port din_ready_ifsm2enc in module Encoder is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3523.168 ; gain = 274.594 ; free physical = 39458 ; free virtual = 108419
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3522.164 ; gain = 273.594 ; free physical = 40884 ; free virtual = 110363
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3540.980 ; gain = 292.406 ; free physical = 39451 ; free virtual = 108412
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3539.977 ; gain = 291.406 ; free physical = 40877 ; free virtual = 110357
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3540.980 ; gain = 292.406 ; free physical = 39451 ; free virtual = 108412
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3539.977 ; gain = 291.406 ; free physical = 40877 ; free virtual = 110357
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3540.980 ; gain = 0.000 ; free physical = 39913 ; free virtual = 108875
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3539.977 ; gain = 0.000 ; free physical = 40869 ; free virtual = 110349
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -125,15 +123,15 @@ Parsing XDC File [/home/miglioranza/FEC/FEC.gen/sources_1/ip/fifo_generator_0/fi
 Finished Parsing XDC File [/home/miglioranza/FEC/FEC.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'input_fifo/axis_fifo'
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3710.824 ; gain = 0.000 ; free physical = 40281 ; free virtual = 109242
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3706.820 ; gain = 0.000 ; free physical = 41713 ; free virtual = 111193
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3710.824 ; gain = 0.000 ; free physical = 40281 ; free virtual = 109242
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3706.820 ; gain = 0.000 ; free physical = 41713 ; free virtual = 111193
 WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3710.824 ; gain = 462.250 ; free physical = 40375 ; free virtual = 109336
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3706.820 ; gain = 458.250 ; free physical = 41800 ; free virtual = 111281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -141,7 +139,7 @@ Start Loading Part and Timing Information
 Loading part: xczu28dr-ffvg1517-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3710.824 ; gain = 462.250 ; free physical = 40375 ; free virtual = 109336
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3706.820 ; gain = 458.250 ; free physical = 41800 ; free virtual = 111281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -152,5 +150,181 @@ Applied set_property KEEP_HIERARCHY = SOFT for LDPC_encoder_1x16_inst2/ldpc_enco
 Applied set_property KEEP_HIERARCHY = SOFT for LDPC_encoder_1x16_inst3/ldpc_encoder. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for input_fifo/axis_fifo. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3710.824 ; gain = 462.250 ; free physical = 40375 ; free virtual = 109336
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3706.820 ; gain = 458.250 ; free physical = 41800 ; free virtual = 111281
 ---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 3706.820 ; gain = 458.250 ; free physical = 41796 ; free virtual = 111276
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 5     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   6 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 7     
+	   6 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   4 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   6 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 4     
+	   4 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 3     
+	   3 Input    3 Bit        Muxes := 1     
+	   6 Input    1 Bit        Muxes := 9     
+	   2 Input    1 Bit        Muxes := 14    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 4272 (col length:192)
+BRAMs: 2160 (col length: RAMB18 192 RAMB36 96)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port din_ready_ifsm2enc in module Encoder is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 3706.820 ; gain = 458.250 ; free physical = 41773 ; free virtual = 111257
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 3971.566 ; gain = 722.996 ; free physical = 41293 ; free virtual = 110778
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 3971.566 ; gain = 722.996 ; free physical = 41293 ; free virtual = 110777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 4000.613 ; gain = 752.043 ; free physical = 41289 ; free virtual = 110774
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 4000.613 ; gain = 752.043 ; free physical = 41290 ; free virtual = 110774
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 4000.613 ; gain = 752.043 ; free physical = 41290 ; free virtual = 110774
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 4000.613 ; gain = 752.043 ; free physical = 41290 ; free virtual = 110774
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 4000.613 ; gain = 752.043 ; free physical = 41290 ; free virtual = 110774
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 4000.613 ; gain = 752.043 ; free physical = 41290 ; free virtual = 110774
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 4000.613 ; gain = 752.043 ; free physical = 41290 ; free virtual = 110774
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------+----------+
+|      |BlackBox name    |Instances |
++------+-----------------+----------+
+|1     |sd_fec_0         |         4|
+|2     |fifo_generator_0 |         1|
++------+-----------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |fifo_generator |     1|
+|2     |sd_fec         |     1|
+|3     |sd_fec_0       |     3|
+|6     |BUFG           |     1|
+|7     |CARRY8         |    28|
+|8     |LUT1           |    21|
+|9     |LUT2           |    23|
+|10    |LUT3           |   162|
+|11    |LUT4           |    57|
+|12    |LUT5           |    58|
+|13    |LUT6           |    57|
+|14    |FDCE           |    88|
+|15    |FDRE           |    45|
+|16    |FDSE           |    16|
+|17    |IBUF           |    40|
+|18    |OBUF           |    39|
++------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 4000.613 ; gain = 752.043 ; free physical = 41290 ; free virtual = 110774
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 4000.613 ; gain = 585.199 ; free physical = 41330 ; free virtual = 110815
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 4000.621 ; gain = 752.043 ; free physical = 41330 ; free virtual = 110815
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4011.582 ; gain = 0.000 ; free physical = 41427 ; free virtual = 110912
+INFO: [Netlist 29-17] Analyzing 69 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4094.352 ; gain = 0.000 ; free physical = 41346 ; free virtual = 110830
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 41 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 40 instances
+
+Synth Design complete, checksum: a4fe1b2d
+INFO: [Common 17-83] Releasing license: Synthesis
+47 Infos, 42 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 4094.352 ; gain = 1001.438 ; free physical = 41487 ; free virtual = 110972
+INFO: [Common 17-1381] The checkpoint '/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/Encoder.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Encoder_utilization_synth.rpt -pb Encoder_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Feb  6 10:58:13 2025...

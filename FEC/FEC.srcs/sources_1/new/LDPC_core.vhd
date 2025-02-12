@@ -48,6 +48,7 @@ entity LDPC_core is
            dout                  : out STD_LOGIC_VECTOR (31 downto 0);
            dout_valid            : out STD_LOGIC; 
            dout_last             : out STD_LOGIC := '0';	
+           finish_encoding       : out STD_LOGIC := '0';	
            ctrl_ready_out        : out std_logic  		         
 --	       bg   	             : STD_LOGIC_VECTOR(2 DOWNTO 0);--:= "001";-- (base graph)
 --		   z_set	             : STD_LOGIC_VECTOR(2 DOWNTO 0);--:= "000";-- Base graph cyclic shift set
@@ -88,6 +89,8 @@ signal LDPC_core_control        : std_logic_vector(31 downto 0) := (others => '0
 signal s_axis_ctrl_tready_core	: STD_LOGIC := '0';
 signal data_in_core             : std_logic_vector(127 downto 0) := (others => '0') ;
 signal data_in_ready_core       : std_logic := '0';
+signal data_in_valid            : std_logic := '0'; 
+signal data_in_last             : std_logic := '0'; 
 signal data_out_valid           : std_logic := '0';
 signal data_out_core            : std_logic_vector(127 downto 0) := (others => '0') ;
 signal data_out_ready_core      : std_logic := '0'; 
@@ -98,6 +101,8 @@ signal last_value               : std_logic_vector(31 downto 0) := (others => '0
 --signal dout_block_counter       : std_logic_vector(7 downto 0) := (others => '0') ;    
 --signal dout_status_valid        : std_logic := '0';
 signal last                     : std_logic := '0';
+type buffer_data is array (0 to 3) of std_logic_vector(127 downto 0) ;
+signal data_input : buffer_data :=(others =>(others => '0')) ;
 begin
 
 
@@ -109,7 +114,7 @@ LDPC_core_control_settings: process(ctrl_input )
 --	LDPC_core_control(5 downto 3)	   <= z_set;
 --	LDPC_core_control(2 downto 0)	   <= z_j;
 --	LDPC_core_control(37 downto 32)	   <= mb;
-	LDPC_core_control(14 downto 13)	   <= "11";
+	LDPC_core_control(14 downto 13)	   <= "01";
 	LDPC_core_control(3 downto 0)	   <= ctrl_input ;
 
  end process;   
@@ -128,9 +133,9 @@ LDPC_core_control_settings: process(ctrl_input )
 	
 	--axi stream data in iface
     s_axis_din_aclk         => clk, --ok
-    s_axis_din_tready       => din_ready_core2fsm, --Encoder sends ready signal to receive the data
-    s_axis_din_tvalid       => din_valid,
-    s_axis_din_tlast        => din_last ,
+    s_axis_din_tready       => data_in_ready_core, --Encoder sends ready signal to receive the data
+    s_axis_din_tvalid       => data_in_valid,
+    s_axis_din_tlast        => data_in_last ,
     s_axis_din_tdata        => data_in_core, --in
 	--end of axi stream data in iface
 	
@@ -147,51 +152,80 @@ LDPC_core_control_settings: process(ctrl_input )
 
   );
 
-data_in_core <= x"000000000000000000000000" & din ;
---process(clk ) 
---begin 
---if rising_edge (clk)  then 
-    
---    if dout_status_valid = '1' then 
---        if dout_block_counter =  block_counter   then  
---               dout_block_counter <= (others => '0') ;
---        else  
---               dout_block_counter <= dout_block_counter + '1' ;
---        end if ;     
-    
---    end if ; 
---end if ;         
---end process ;
+--data_in_core <= x"000000000000000000000000" & din ;
 
-check_finish : process (clk)
-begin 
-    if din_valid = '0'and din_last =  '1' and axis_data_count = "0" then 
-     last_value <= din;
-    else 
-     last_value <= last_value ;
-    end if ;
-end process ;
 process(clk) 
+variable index : integer := 0 ;
+variable index2 : integer := 0 ;
+
 begin
-if din_valid = '1' then
-ctrl_valid <=  '1'    ;
-else 
-ctrl_valid <= '0';
-end if ;
-
-if data_out_valid = '1' and (data_out_last_core = '0' or data_out_last_core = '1') then    --Control Unit ready to receive          
-     dout        <= data_out_core(31 downto 0) ; 
-     dout_valid  <= '1' ; 
+    
+       
+    if din_valid = '1' then
+        ctrl_valid <=  '1' ;
+--        if data_in_ready_core = '1'then 
+--          data_in_valid <= '1' ;
+--         else 
+--          data_in_valid <= '0';
+--        end if ;   
+    else 
+--        data_in_valid <= '0';
+        ctrl_valid <= '0';
+    end if ;
+     
+     
+     
+ 
+ if  data_in_ready_core = '0' and din_valid  = '1' then 
+   
+   din_ready_core2fsm <= '0';
+     
+     if  index <= 3 then 
+        data_input(index) <= x"000000000000000000000000" & din ;
+        index := index + 1 ;                  
+     else 
+          data_input(index-1) <=  data_input(index-1) ;
+     end if ; 
+ elsif  data_in_ready_core = '1' and din_valid  = '1'   then      
+      data_in_core <= x"000000000000000000000000" & din ;
+      data_in_valid <= '1' ;
+       index    := 0 ;
+       index2   := 0 ;            
+ elsif  data_in_ready_core = '1' and din_valid  = '0' then 
+      if din_last = '0' and axis_data_count /= "0" then
+        if index > 0 and index2  < index    then 
+             data_in_core <= data_input(index2) ;       
+             index2 := index2 +  1 ;  
+             data_in_valid <= '1' ;
+               
+        else 
+            din_ready_core2fsm  <= data_in_ready_core ; 
+        end if ;
+     else 
+              data_in_valid <= '0' ;    
+      end if ;   
+ else 
+       din_ready_core2fsm  <= '0' ; 
+       data_in_valid <= '0' ; 
+--           data_in_core <= (others => '0') ;
+ end if ;     
+ if data_out_last_core = '1' then 
      dout_last   <= data_out_last_core  ;
-elsif data_out_valid = '0' and data_out_last_core = '1' then 
-    dout        <= (others => '0');  
-    dout_valid  <= '0' ;  
-    dout_last   <= '1';  
+  else 
+     dout_last <= '0' ;
+ end if;
 
-else    
-    dout        <= (others => '0') ;
-    dout_valid  <= '0' ;  
-    dout_last   <= '0'; 
+
+if  din_last  = '1' and din_valid = '1'and axis_data_count = "0" then 
+        data_in_last <= '1' ;
+elsif din_last  = '1' and din_valid = '0'then 
+       data_in_last <= '1' ;
+elsif din_last  = '0' and din_valid = '1'then    
+       data_in_last <= '0' ;    
+else        
+       data_in_last <= '0' ;    
 end if ;
+     dout        <= data_out_core(31 downto 0) ; 
+     dout_valid  <= data_out_valid ; 
 end process ;
 end rtl;

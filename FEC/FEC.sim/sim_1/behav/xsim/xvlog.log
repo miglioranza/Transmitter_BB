@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/miglioranza/FEC/FEC.gen/sources_1/ip/sd_fec_0/sim/sd_fec_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sd_fec_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/miglioranza/FEC/FEC.gen/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/miglioranza/FEC/FEC.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

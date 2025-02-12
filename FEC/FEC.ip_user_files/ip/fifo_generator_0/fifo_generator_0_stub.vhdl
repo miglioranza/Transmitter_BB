@@ -1,10 +1,10 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Wed Feb  5 14:23:41 2025
+-- Date        : Wed Feb  5 14:23:39 2025
 -- Host        : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
--- Command     : write_vhdl -force -mode synth_stub
---               /home/miglioranza/FEC/FEC.gen/sources_1/ip/fifo_generator_0/fifo_generator_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top fifo_generator_0 -prefix
+--               fifo_generator_0_ fifo_generator_0_stub.vhdl
 -- Design      : fifo_generator_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xczu28dr-ffvg1517-2-e
