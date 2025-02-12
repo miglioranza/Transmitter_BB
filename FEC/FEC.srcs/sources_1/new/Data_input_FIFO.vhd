@@ -72,9 +72,11 @@ signal current_code_rate        : integer   :=  0  ;
 signal data_ready_core2fifo     : std_logic := '0' ;
 signal data_last_fifo2core      : std_logic := '0' ;
 signal data_valid_fifo2core     : std_logic := '0' ;
---signal axis_data_counts         : std_logic_vector(12 downto 0) ;
+signal data_out_fifo2core       : std_logic_vector(31 downto 0) := (others => '0') ;
+--signal axis_data_counts       : std_logic_vector(12 downto 0) ;
 signal core_ready               : std_logic := '0' ;
 signal fifo_ready               : std_logic := '0' ;
+signal counter                  : std_logic_vector(31 downto 0) :=  (others => '0')  ;
 begin
 
 axis_fifo : fifo_generator_0 
@@ -85,7 +87,7 @@ s_axis_tready       => data_out_ready,
 s_axis_tvalid       => tdata_valid ,
 s_aresetn           => reset ,
 s_aclk              => clk ,
-m_axis_tdata        => data_out ,
+m_axis_tdata        => data_out_fifo2core ,
 m_axis_tlast        => data_last_fifo2core , 
 m_axis_tready       => data_ready_core2fifo ,
 m_axis_tvalid       => data_valid_fifo2core , 
@@ -94,7 +96,7 @@ wr_rst_busy         => open ,
 rd_rst_busy         => open 
 ); 
 
-code_rate_selection : process (clk) 
+code_rate_selection : process (clk, sel_code_rate) 
 begin
 
 case sel_code_rate  is
@@ -108,30 +110,29 @@ current_code_rate <= 2 ;
 when "11" => 
 current_code_rate <= 3 ;
 when others => 
-null ;
+current_code_rate <= 0 ;
 end case ;
 
 end process ;
 
 process(clk)   --To fix the fifo problem with output values , possible solution : send the 1st data to fifo and wait until m_axis_ready = 1 then start sending the data 
 begin 
+
+    data_out_last (current_code_rate) <= data_last_fifo2core ;
+    data_out                          <= data_out_fifo2core                 ;
  if tdata_ready(current_code_rate) = '1' then 
  --signal that notice to the fifo that the core is ready to receive the data 
+   if current_code_rate = 3 and data_valid_fifo2core = '1' then 
+    
+     counter <= counter + 1 ;
+    end if ;   
     data_ready_core2fifo <= '1'; --Signal that notice the input fsm  that is ready to receive the data in input 
---   if fifo_ready = '1'then 
---    data_out_ready <= '1' ;
---    else 
---     data_out_ready <= '0' ;
---     end if ;
+    data_out_valid(current_code_rate) <=  data_valid_fifo2core  ; 
  else 
     data_ready_core2fifo <= '0';
+    data_out_valid <= (others => '0');
 --    data_out_ready <= '0' ;
-
-  end if ;
-   
-    data_out_last (current_code_rate) <= data_last_fifo2core ;
-    data_out_valid(current_code_rate) <=  data_valid_fifo2core  ; 
- 
+end if ;  
 end process ;
 
 

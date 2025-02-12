@@ -5,7 +5,7 @@ Using 8 slave threads.
 WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-4969] module 'sd_fec_0' is instantiated multiple times from VHDL or from both Verilog and VHDL, elaboration result may be incorrect [/home/miglioranza/FEC/FEC.gen/sources_1/ip/sd_fec_0/sim/sd_fec_0.sv:55]
+WARNING: [VRFC 10-4969] module 'fifo_generator_0' is instantiated multiple times from VHDL or from both Verilog and VHDL, elaboration result may be incorrect [/home/miglioranza/FEC/FEC.gen/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v:55]
 Completed static elaboration
 Starting simulation data flow analysis
 WARNING: [XSIM 43-4398] File "/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/data/secureip/fe/fe_002.svp" Line 127127 : Function calls inside wait/event expression are sensitive to arguments only."init_alpha()" is called without any argument which may not unblock the wait/event expression.
@@ -578,7 +578,7 @@ Compiling module fifo_generator_v13_2_6.fifo_generator_v13_2_6_CONV_VER(...
 Compiling module fifo_generator_v13_2_6.fifo_generator_vlog_beh(C_COMMON...
 Compiling module xil_defaultlib.fifo_generator_0
 Compiling architecture rtl of entity xil_defaultlib.Data_input_FIFO [data_input_fifo_default]
-Compiling architecture rtl of entity xil_defaultlib.FSM_Output_control [fsm_output_control_default]
+Compiling architecture rtl of entity xil_defaultlib.Output_fifo [output_fifo_default]
 Compiling module xpm.xpm_cdc_sync_rst(DEST_SYNC_FF=2)
 Compiling module xpm.xpm_fifo_rst_default
 Compiling module xpm.xpm_fifo_reg_bit

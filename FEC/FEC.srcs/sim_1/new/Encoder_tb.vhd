@@ -55,7 +55,7 @@ port (
  data_out_ready         : out std_logic :=  '0';   --Encoder ready to receive data in input                   
  data_out               : out std_logic_vector(31 downto 0) ;
  data_out_valid         : out std_logic ;
- core_finish            : out std_logic ;
+ core_finish            : out std_logic := '0' ; 
  data_out_last          : out std_logic 
 
 );
@@ -83,6 +83,7 @@ signal data_in_ready_core   : std_logic := '0';
 signal out_last             : std_logic := '0'; 
 signal finish_encoding      : std_logic := '0' ;
 signal temp                 : integer   := 0 ;
+signal enable               : std_logic := '0' ;
 begin
 
 --Clock generation 
@@ -121,15 +122,48 @@ select_code_rate : process
 begin 
 sel_FEC_code_rate <= "00" ;
 selected_cr <= 0 ;
-wait until temp = 400 ;
+enable <= '1' ;
+wait until temp = 200 ;
+enable <= '0';
+wait for clk_period ;
+enable <= '1';
 sel_FEC_code_rate <= "10" ;
 selected_cr <= 2 ;
-wait until temp = 500 ;
+wait until temp = 300 ;
+enable <= '0';
+wait for clk_period ;
+enable <= '1';
 sel_FEC_code_rate <= "11" ; 
 selected_cr <= 3 ;
-wait until temp = 300 ;
+
+wait until temp = 400 ;
+enable <= '0';
+wait for clk_period ;
+enable <= '1';
 sel_FEC_code_rate <= "01" ;
 selected_cr <= 1;
+
+wait until temp = 500 ;
+enable <= '0';
+wait for clk_period ;
+enable <= '1';
+sel_FEC_code_rate <= "10" ;
+selected_cr <= 2 ;
+
+wait until temp = 650 ;
+enable <= '0';
+wait for clk_period ;
+enable <= '1';
+sel_FEC_code_rate <= "11" ; 
+selected_cr <= 3 ;
+
+wait until temp = 750 ;
+enable <= '0';
+wait for clk_period ;
+enable <= '1';
+sel_FEC_code_rate <= "01" ;
+selected_cr <= 1;
+
 wait until out_last = '1'and data_out_valid = '0' ;
 wait ;
 end process ;
@@ -138,25 +172,27 @@ stimuli_generation : process
 begin 
 
 wait until reset = '0';
-data_in_ready <= '1';
-while temp < 500 loop 
-if data_out_ready  = '1' then
+data_in_ready_core <= '1';
+while temp < 850 loop 
+if data_out_ready  = '1' and enable = '1' then
 data_in_valid      <= '1';
 data_in  <= std_logic_vector(to_unsigned((temp + 1 ) ,data_in'length )) ;
 temp <= temp  + 1 ;  
-wait for clk_period      ;
+wait for clk_period ;
 else 
 --data_in_valid      <= '0';
 wait until clk'event and clk = '1'; -- Wait for the next clock cycle
 end if ;
 end loop ;
-if temp = 500 then 
+if temp = 850 then 
 --    data_in_valid <= '0';
     data_in_last       <= '1' ;
   
 end if ;
-wait until out_last = '1'and data_out_valid = '0' and finish_encoding = '1' ;
+wait until finish_encoding  = '1' ;
+wait until out_last = '1'and data_out_valid = '0'  ;
             data_in_valid <= '0';
+            wait for clk_period ;
             report "End of simulation" ;
             finish ;  
 end process ;
