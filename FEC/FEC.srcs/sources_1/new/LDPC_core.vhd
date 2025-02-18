@@ -43,7 +43,7 @@ entity LDPC_core is
            din_ready_fsm2core    : in STD_LOGIC;  -- Output Control Unit ready to receive the encoded data from the Encoder 
            din_last              : in std_logic := '0';
            ctrl_input            : in std_logic_vector(3 downto 0) := (others => '0') ;
-           axis_data_count       : in std_logic_vector(12 downto 0) ;
+--           axis_data_count       : in std_logic_vector(12 downto 0) ;
            din_ready_core2fsm    : out STD_LOGIC; --LDPC core ready to receive the data input
            dout                  : out STD_LOGIC_VECTOR (31 downto 0);
            dout_valid            : out STD_LOGIC; 
@@ -133,9 +133,9 @@ LDPC_core_control_settings: process(ctrl_input )
 	
 	--axi stream data in iface
     s_axis_din_aclk         => clk, --ok
-    s_axis_din_tready       => data_in_ready_core, --Encoder sends ready signal to receive the data
-    s_axis_din_tvalid       => data_in_valid,
-    s_axis_din_tlast        => data_in_last ,
+    s_axis_din_tready       => din_ready_core2fsm, --Encoder sends ready signal to receive the data
+    s_axis_din_tvalid       => din_valid   ,
+    s_axis_din_tlast        => din_last ,
     s_axis_din_tdata        => data_in_core, --in
 	--end of axi stream data in iface
 	
@@ -152,7 +152,7 @@ LDPC_core_control_settings: process(ctrl_input )
 
   );
 
---data_in_core <= x"000000000000000000000000" & din ;
+data_in_core <= x"000000000000000000000000" & din ;
 
 process(clk) 
 variable index : integer := 0 ;
@@ -160,55 +160,64 @@ variable index2 : integer := 0 ;
 
 begin
     
-       
+if rising_edge (clk) then       
     if din_valid = '1' then
-        ctrl_valid <=  '1' ;
---        if data_in_ready_core = '1'then 
---          data_in_valid <= '1' ;
---         else 
---          data_in_valid <= '0';
---        end if ;   
+        ctrl_valid <=  '1' ;  
     else 
---        data_in_valid <= '0';
         ctrl_valid <= '0';
     end if ;
+    
+--data_in_core<= x"000000000000000000000000" & din ;     
      
-     
-     
- 
- if  data_in_ready_core = '0' and din_valid  = '1' then 
+--if  din_valid  = '1' then 
+--    data_in_valid <= '1' ;
+--else 
+--    data_in_valid <= '0' ;
+        
+--end if ; 
+
+-- if  data_in_ready_core = '0' and din_valid  = '1' then 
    
-   din_ready_core2fsm <= '0';
+--   din_ready_core2fsm <= '0';
      
-     if  index <= 3 then 
-        data_input(index) <= x"000000000000000000000000" & din ;
-        index := index + 1 ;                  
-     else 
-          data_input(index-1) <=  data_input(index-1) ;
-     end if ; 
- elsif  data_in_ready_core = '1' and din_valid  = '1'   then      
-      data_in_core <= x"000000000000000000000000" & din ;
-      data_in_valid <= '1' ;
-       index    := 0 ;
-       index2   := 0 ;            
- elsif  data_in_ready_core = '1' and din_valid  = '0' then 
-      if din_last = '0' and axis_data_count /= "0" then
-        if index > 0 and index2  < index    then 
-             data_in_core <= data_input(index2) ;       
-             index2 := index2 +  1 ;  
-             data_in_valid <= '1' ;
+--     if  index <= 3 then 
+--        data_input(index) <= x"000000000000000000000000" & din ;
+--        index := index + 1 ;                  
+--     else 
+--          data_input(index-1) <=  data_input(index-1) ;
+--     end if ; 
+-- elsif  data_in_ready_core = '1' and din_valid  = '1' and  index = 0   then    
+     
+--      data_in_core <= x"000000000000000000000000" & din ;
+--      data_in_valid <= '1' ;
+    
+--       index2   := 0 ;            
+-- elsif  data_in_ready_core = '1' and din_valid  = '0'  then 
+--      if din_last = '0'  then
+--        if index > 0 and index2  < index    then 
+--             data_in_core <= data_input(index2) ;       
+--             index2 := index2 +  1 ;  
+--             data_in_valid <= '1' ;
                
-        else 
-            din_ready_core2fsm  <= data_in_ready_core ; 
-        end if ;
-     else 
-              data_in_valid <= '0' ;    
-      end if ;   
- else 
-       din_ready_core2fsm  <= '0' ; 
-       data_in_valid <= '0' ; 
---           data_in_core <= (others => '0') ;
- end if ;     
+--        elsif index > 0 and index2 = index   then
+--             index    := 0 ;
+--             din_ready_core2fsm <= '1';
+--             data_in_core <= x"000000000000000000000000" & din ;
+--        else   
+--             din_ready_core2fsm <= '1';
+--             data_in_valid <= '0' ;
+--        end if ;
+--     else 
+--              data_in_valid <= '0' ;  
+--              din_ready_core2fsm <= '0';  
+--      end if ;   
+-- else 
+--       din_ready_core2fsm  <= '0' ; 
+--       data_in_valid <= '0' ; 
+------           data_in_core <= (others => '0') ;
+-- end if ;  
+ 
+    
  if data_out_last_core = '1' then 
      dout_last   <= data_out_last_core  ;
   else 
@@ -216,16 +225,17 @@ begin
  end if;
 
 
-if  din_last  = '1' and din_valid = '1'and axis_data_count = "0" then 
-        data_in_last <= '1' ;
-elsif din_last  = '1' and din_valid = '0'then 
-       data_in_last <= '1' ;
-elsif din_last  = '0' and din_valid = '1'then    
-       data_in_last <= '0' ;    
-else        
-       data_in_last <= '0' ;    
-end if ;
+--if  din_last  = '1' and din_valid = '1 then 
+--        data_in_last <= '1' ;
+--elsif din_last  = '1' and din_valid = '0'then 
+--       data_in_last <= '1' ;
+--elsif din_last  = '0' and din_valid = '1'then    
+--       data_in_last <= '0' ;    
+--else        
+--       data_in_last <= '0' ;    
+--end if ;
      dout        <= data_out_core(31 downto 0) ; 
      dout_valid  <= data_out_valid ; 
+     end if ;
 end process ;
 end rtl;
