@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Feb  6 10:58:13 2025
+| Date         : Tue Feb 18 16:25:41 2025
 | Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 | Command      : report_utilization -file Encoder_utilization_synth.rpt -pb Encoder_utilization_synth.pb
 | Design       : Encoder
@@ -29,20 +29,22 @@ Table of Contents
 1. CLB Logic
 ------------
 
-+-------------------------+------+-------+------------+-----------+-------+
-|        Site Type        | Used | Fixed | Prohibited | Available | Util% |
-+-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               |  345 |     0 |          0 |    425280 |  0.08 |
-|   LUT as Logic          |  345 |     0 |          0 |    425280 |  0.08 |
-|   LUT as Memory         |    0 |     0 |          0 |    213600 |  0.00 |
-| CLB Registers           |  149 |     0 |          0 |    850560 |  0.02 |
-|   Register as Flip Flop |  149 |     0 |          0 |    850560 |  0.02 |
-|   Register as Latch     |    0 |     0 |          0 |    850560 |  0.00 |
-| CARRY8                  |   28 |     0 |          0 |     53160 |  0.05 |
-| F7 Muxes                |    0 |     0 |          0 |    212640 |  0.00 |
-| F8 Muxes                |    0 |     0 |          0 |    106320 |  0.00 |
-| F9 Muxes                |    0 |     0 |          0 |     53160 |  0.00 |
-+-------------------------+------+-------+------------+-----------+-------+
++----------------------------+------+-------+------------+-----------+-------+
+|          Site Type         | Used | Fixed | Prohibited | Available | Util% |
++----------------------------+------+-------+------------+-----------+-------+
+| CLB LUTs*                  |  544 |     0 |          0 |    425280 |  0.13 |
+|   LUT as Logic             |  464 |     0 |          0 |    425280 |  0.11 |
+|   LUT as Memory            |   80 |     0 |          0 |    213600 |  0.04 |
+|     LUT as Distributed RAM |   80 |     0 |            |           |       |
+|     LUT as Shift Register  |    0 |     0 |            |           |       |
+| CLB Registers              |  330 |     0 |          0 |    850560 |  0.04 |
+|   Register as Flip Flop    |  330 |     0 |          0 |    850560 |  0.04 |
+|   Register as Latch        |    0 |     0 |          0 |    850560 |  0.00 |
+| CARRY8                     |   28 |     0 |          0 |     53160 |  0.05 |
+| F7 Muxes                   |    0 |     0 |          0 |    212640 |  0.00 |
+| F8 Muxes                   |    0 |     0 |          0 |    106320 |  0.00 |
+| F9 Muxes                   |    0 |     0 |          0 |     53160 |  0.00 |
++----------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
 
@@ -59,9 +61,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 88    |          Yes |           - |        Reset |
+| 55    |          Yes |           - |        Reset |
 | 16    |          Yes |         Set |            - |
-| 45    |          Yes |       Reset |            - |
+| 259   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -95,7 +97,7 @@ Table of Contents
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| Bonded IOB |   79 |     0 |          0 |       347 | 22.77 |
+| Bonded IOB |   77 |     0 |          0 |       347 | 22.19 |
 | HS_ADC     |    0 |     0 |          4 |         4 |  0.00 |
 | HS_DAC     |    0 |     0 |          4 |         4 |  0.00 |
 +------------+------+-------+------------+-----------+-------+
@@ -162,18 +164,20 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT3     |  162 |                 CLB |
-| FDCE     |   88 |            Register |
-| LUT5     |   58 |                 CLB |
-| LUT6     |   57 |                 CLB |
-| LUT4     |   57 |                 CLB |
-| FDRE     |   45 |            Register |
-| INBUF    |   40 |                 I/O |
-| IBUFCTRL |   40 |              Others |
-| OBUF     |   39 |                 I/O |
+| FDRE     |  259 |            Register |
+| LUT6     |  165 |                 CLB |
+| RAMD32   |  136 |                 CLB |
+| LUT2     |  128 |                 CLB |
+| LUT1     |   86 |                 CLB |
+| LUT3     |   84 |                 CLB |
+| LUT5     |   59 |                 CLB |
+| FDCE     |   55 |            Register |
+| INBUF    |   41 |                 I/O |
+| IBUFCTRL |   41 |              Others |
+| OBUF     |   36 |                 I/O |
 | CARRY8   |   28 |                 CLB |
-| LUT2     |   23 |                 CLB |
-| LUT1     |   21 |                 CLB |
+| RAMS32   |   24 |                 CLB |
+| LUT4     |   23 |                 CLB |
 | FDSE     |   16 |            Register |
 | BUFGCE   |    1 |               Clock |
 +----------+------+---------------------+

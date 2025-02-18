@@ -75,7 +75,7 @@ signal data_in_ready            : std_logic := '0' ;
 signal data_in_valid            : std_logic := '0' ;
 signal tdata_out_ready          : std_logic := '0' ;
 signal axis_data_counts         : std_logic_vector(12 downto 0) ;
-
+signal encoding_completed       : std_logic := '0' ;
 begin
 
 code_rate_selection : process (clk, sel_code_rate) 
@@ -122,11 +122,18 @@ if rising_edge (clk) then
     data_in_last  <= tdata_last(current_code_rate) ;
     data_in_valid <= tdata_valid(current_code_rate);
      
-    if tdata_valid(current_code_rate) = '0'and tdata_last(current_code_rate) = '1' and axis_data_counts = "0" then
-         finish_encoding <= '1' ;
+    if tdata_valid(current_code_rate) = '1' and tdata_in = x"5A5A5A5A" then
+         encoding_completed <= '1' ;
     else 
-         finish_encoding <= '0' ;
-   end if ;
+         encoding_completed  <= encoding_completed ;
+    end if ;
+    
+    if encoding_completed = '1' and tdata_valid(current_code_rate) = '0' and tdata_last(current_code_rate) = '1' then
+       finish_encoding <= '1' ;
+       encoding_completed <= '0' ;
+    else 
+       finish_encoding <= '0' ;  
+    end if ;    
 end if ;   
 
 end process ;

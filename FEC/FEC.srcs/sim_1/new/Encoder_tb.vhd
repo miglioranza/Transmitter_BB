@@ -178,9 +178,9 @@ if data_out_ready  = '1' and enable = '1' then
 data_in_valid      <= '1';
 data_in  <= std_logic_vector(to_unsigned((temp + 1 ) ,data_in'length )) ;
 temp <= temp  + 1 ;  
-wait for clk_period ;
+wait for clk_period  ;
 else 
---data_in_valid      <= '0';
+data_in_valid      <= '0';
 wait until clk'event and clk = '1'; -- Wait for the next clock cycle
 end if ;
 end loop ;

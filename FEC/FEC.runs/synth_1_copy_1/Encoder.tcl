@@ -302,9 +302,8 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  /home/miglioranza/FEC/FEC.srcs/sources_1/new/Data_input_FIFO.vhd
-  /home/miglioranza/FEC/FEC.srcs/sources_1/new/FSM_Output_control.vhd
   /home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd
+  /home/miglioranza/FEC/FEC.srcs/sources_1/new/Output_fifo.vhd
   /home/miglioranza/FEC/FEC.srcs/sources_1/new/Wifi_Input_FSM.vhd
   /home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd
 }
