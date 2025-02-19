@@ -158,27 +158,13 @@ end component ;
 
 
 signal din_ready_core           : std_logic_vector(3 downto 0) := (others => '0');
-signal din_ready_to_fsm         : std_logic := '0';  
 signal selected_code_rate       : std_logic_vector(1 downto 0) := (others => '0');
 signal fsm_reset_core           : std_logic_vector(3 downto 0) := (others => '0');
-signal ifsm_ready               : std_logic := '0';  
-signal dout_valid_core          : std_logic_vector(3 downto 0) := (others => '0');
-signal dout_valid_fsm2fifo      : std_logic  := '0';
 
 signal dout_last_fsm2core       : std_logic_vector(3 downto 0) := (others => '0');
 signal dout_core                : std_logic_vector(31 downto 0):= (others =>  '0') ; 
-signal dout_valid_to_cu         : std_logic := '0';   
-signal dout_last_to_cu          : std_logic := '0'; 
 signal dout_ready_cores         : std_logic_vector(3 downto 0) := (others => '0');
-signal data_last_ofsm           : std_logic := '0';
-signal dout_last_ofsm2enc       : std_logic := '0';
-
-signal control_valid_core       : std_logic_vector(3 downto 0) := (others => '0');
 signal control_ready_core       : std_logic_vector(3 downto 0) := (others => '0');
-
-
-signal data_in_core             : std_logic_vector(3 downto 0) := (others => '0');
-signal dout_valid_to_ofsm       : std_logic_vector(3 downto 0) := (others => '0');
 
 signal data_out_core0           : std_logic_vector(31 downto 0):= (others =>  '0') ; 
 signal data_out_core1           : std_logic_vector(31 downto 0):= (others =>  '0') ; 
@@ -188,43 +174,40 @@ signal data_out_core3           : std_logic_vector(31 downto 0):= (others =>  '0
 signal dout_last_core           : std_logic_vector(3 downto 0) := (others => '0');
 signal data_out_cores           : std_logic_vector(31 downto 0):= (others =>  '0') ; 
 
-signal ofsm_din_valid           : std_logic_vector(3 downto 0) := (others => '0');
-signal ofsm_din_last            : std_logic_vector(3 downto 0) := (others => '0');
-signal dout_ready_fsm2input     : std_logic := '0';
+signal core2fifo_din_valid      : std_logic_vector(3 downto 0) := (others => '0');
 signal finish_encoding          : std_logic :=  '0';
-
-signal block_counter             : std_logic_vector (7 downto 0) := (others => '0') ;
+signal current_CR               : std_logic_vector(1 downto 0) := (others => '0') ;  
+signal dout_valid_fsm2core      : std_logic_vector(3 downto 0) := (others => '0') ;   
+signal out_valid_data            : std_logic := '0' ;
 
 --fifo signals 
-signal data_in_ready_core2fsm   : std_logic_vector(3 downto 0) := (others => '0') ;
-signal tdata_valid_fifo2cores   : std_logic_vector(3 downto 0) := (others => '0') ;
-signal tdata_last_fifo2cores    : std_logic_vector(3 downto 0) := (others => '0') ;
+--signal data_in_ready_core2fsm   : std_logic_vector(3 downto 0) := (others => '0') ;
+--signal tdata_valid_fifo2cores   : std_logic_vector(3 downto 0) := (others => '0') ;
+--signal tdata_last_fifo2cores    : std_logic_vector(3 downto 0) := (others => '0') ;
 signal axis_data_count          : std_logic_vector(12 downto 0):= (others => '0') ; 
-signal data_out_fifo2core       : std_logic_vector(31 downto 0):= (others =>  '0'); 
-signal current_CR               : std_logic_vector(1 downto 0) := (others => '0') ;   
-signal tdata_last_ifsm2fifo     : std_logic := '0' ;
-signal dout_valid_fsm2core      : std_logic_vector(3 downto 0) := (others => '0') ;   
+--signal data_out_fifo2core       : std_logic_vector(31 downto 0):= (others =>  '0'); 
+--signal tdata_last_ifsm2fifo     : std_logic := '0' ;
 
-signal out_valid_data            : std_logic := '0' ;
+
 
 begin
 
-process(clk , reset, ofsm_din_valid )
+process(clk , reset, core2fifo_din_valid )
 begin
 if reset = '1' then
   data_out_cores  <= (others => '0') ;
 elsif rising_edge (clk) then 
   
-if ofsm_din_valid(0) = '1' then 
+if core2fifo_din_valid(0) = '1' then 
      data_out_cores <= data_out_core0 ; 
-elsif ofsm_din_valid(1) = '1' then 
+elsif core2fifo_din_valid(1) = '1' then 
      data_out_cores <= data_out_core1 ; 
-elsif ofsm_din_valid(2) = '1' then 
+elsif core2fifo_din_valid(2) = '1' then 
     data_out_cores <= data_out_core2 ;
-elsif ofsm_din_valid(3) = '1' then 
+elsif core2fifo_din_valid(3) = '1' then 
     data_out_cores <= data_out_core3 ;
 else 
-    data_out_cores <= data_out_cores  ;
+    data_out_cores <= (others => '0')  ;
 end if ;
 end if ;
 end process ;
@@ -273,7 +256,7 @@ end process ;
 --       reset                => reset,
 --       sel_FEC_code_rate    => sel_FEC_code_rate,
 --       o_fsm_din            => data_out_cores,
---       o_fsm_din_valid      => ofsm_din_valid ,
+--       o_fsm_din_valid      => core2fifo_din_valid ,
 --       o_fsm_ready_fifo     => '0'  ,
 --       o_fsm_din_last       => dout_last_core ,
 --       o_fsm_dout           => data_out ,
@@ -291,7 +274,7 @@ reset           => aresetn ,
 sel_code_rate   => current_CR ,
 tdata_in        => data_out_cores ,
 tdata_last      => dout_last_core ,
-tdata_valid     => ofsm_din_valid ,
+tdata_valid     => core2fifo_din_valid ,
 tdata_ready     => din_ready_ifsm2enc,
 data_out        => data_out ,
 data_out_last   => data_out_last ,
@@ -313,7 +296,7 @@ finish_encoding => finish_encoding
        din_last             => dout_last_fsm2core(0),       
        dout                 => data_out_core0,            --output 
        din_ready_core2fsm   => dout_ready_cores(0) ,   
-       dout_valid           => ofsm_din_valid(0) ,  
+       dout_valid           => core2fifo_din_valid(0) ,  
        dout_last            => dout_last_core(0)	        --output
 --       bg   	            => bg_core ,    
 --       z_set	            => z_set_core,
@@ -334,7 +317,7 @@ finish_encoding => finish_encoding
        din_last             => dout_last_fsm2core(1),       
        dout                 => data_out_core1,            --output 
        din_ready_core2fsm   => dout_ready_cores(1) ,   
-       dout_valid           => ofsm_din_valid(1) , 
+       dout_valid           => core2fifo_din_valid(1) , 
        dout_last            => dout_last_core(1)	        --output		   
 --       bg   	            => bg_core ,    
 --       z_set	            => z_set_core,
@@ -355,7 +338,7 @@ finish_encoding => finish_encoding
        din_last             => dout_last_fsm2core(2),       
        dout                 => data_out_core2,            --output 
        din_ready_core2fsm   => dout_ready_cores(2) ,   
-       dout_valid           => ofsm_din_valid(2) , 
+       dout_valid           => core2fifo_din_valid(2) , 
        dout_last            => dout_last_core(2)	        --output
 --       bg   	            => bg_core ,    
 --       z_set	            => z_set_core,
@@ -376,7 +359,7 @@ finish_encoding => finish_encoding
        din_last             => dout_last_fsm2core(3),       
        dout                 => data_out_core3,            --output 
        din_ready_core2fsm   => dout_ready_cores(3) ,   
-       dout_valid           => ofsm_din_valid(3) , 
+       dout_valid           => core2fifo_din_valid(3) , 
        dout_last            => dout_last_core(3)	        --output		   
 --       bg   	            => bg_core ,    
 --       z_set	            => z_set_core,

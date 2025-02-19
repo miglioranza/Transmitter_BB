@@ -9,7 +9,7 @@
     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
 source Encoder.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3066.770 ; gain = 2.016 ; free physical = 33029 ; free virtual = 111787
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3066.766 ; gain = 2.016 ; free physical = 28523 ; free virtual = 108860
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/FEC/FEC.srcs'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip'.
@@ -28,51 +28,47 @@ WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis b
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 3753665
+INFO: [Synth 8-7075] Helper process launched with PID 4161655
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3480.230 ; gain = 231.656 ; free physical = 31997 ; free virtual = 110476
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3478.258 ; gain = 229.688 ; free physical = 27169 ; free virtual = 107513
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Encoder' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:55]
-INFO: [Synth 8-3491] module 'Wifi_Input_FSM' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/Wifi_Input_FSM.vhd:35' bound to instance 'FSM_Input' of component 'Wifi_Input_FSM' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:267]
-INFO: [Synth 8-638] synthesizing module 'Wifi_Input_FSM' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Wifi_Input_FSM.vhd:61]
-INFO: [Synth 8-226] default block is never used [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Wifi_Input_FSM.vhd:88]
-INFO: [Synth 8-226] default block is never used [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Wifi_Input_FSM.vhd:131]
-WARNING: [Synth 8-6014] Unused sequential element block_counter_reg was removed.  [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Wifi_Input_FSM.vhd:160]
-INFO: [Synth 8-256] done synthesizing module 'Wifi_Input_FSM' (1#1) [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Wifi_Input_FSM.vhd:61]
-INFO: [Synth 8-3491] module 'Output_fifo' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/Output_fifo.vhd:35' bound to instance 'out_fifo' of component 'Output_fifo' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:325]
+INFO: [Synth 8-3491] module 'Wifi_Input_FSM' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/Wifi_Input_FSM.vhd:35' bound to instance 'FSM_Input' of component 'Wifi_Input_FSM' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:216]
+INFO: [Synth 8-638] synthesizing module 'Wifi_Input_FSM' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Wifi_Input_FSM.vhd:56]
+INFO: [Synth 8-226] default block is never used [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Wifi_Input_FSM.vhd:81]
+INFO: [Synth 8-226] default block is never used [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Wifi_Input_FSM.vhd:121]
+WARNING: [Synth 8-6014] Unused sequential element block_counter_reg was removed.  [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Wifi_Input_FSM.vhd:171]
+INFO: [Synth 8-256] done synthesizing module 'Wifi_Input_FSM' (1#1) [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Wifi_Input_FSM.vhd:56]
+INFO: [Synth 8-3491] module 'Output_fifo' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/Output_fifo.vhd:35' bound to instance 'out_fifo' of component 'Output_fifo' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:270]
 INFO: [Synth 8-638] synthesizing module 'Output_fifo' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Output_fifo.vhd:53]
 INFO: [Synth 8-226] default block is never used [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Output_fifo.vhd:84]
-INFO: [Synth 8-3491] module 'fifo_generator_0' declared at '/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-3753169-uxsrv005/realtime/fifo_generator_0_stub.v:6' bound to instance 'axis_fifo' of component 'fifo_generator_0' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Output_fifo.vhd:100]
-INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-3753169-uxsrv005/realtime/fifo_generator_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (2#1) [/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-3753169-uxsrv005/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-3491] module 'fifo_generator_0' declared at '/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-4161317-uxsrv005/realtime/fifo_generator_0_stub.v:6' bound to instance 'axis_fifo' of component 'fifo_generator_0' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Output_fifo.vhd:100]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-4161317-uxsrv005/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (2#1) [/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-4161317-uxsrv005/realtime/fifo_generator_0_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'Output_fifo' (3#1) [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Output_fifo.vhd:53]
-WARNING: [Synth 8-5640] Port 'finish_encoding' is missing in component declaration [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:128]
-INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst0' of component 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:341]
-INFO: [Synth 8-638] synthesizing module 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:60]
-INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-3753169-uxsrv005/realtime/sd_fec_0_stub.v:6' bound to instance 'ldpc_encoder' of component 'sd_fec_0' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:122]
-INFO: [Synth 8-6157] synthesizing module 'sd_fec_0' [/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-3753169-uxsrv005/realtime/sd_fec_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'sd_fec_0' (4#1) [/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-3753169-uxsrv005/realtime/sd_fec_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'LDPC_core' (5#1) [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:60]
-WARNING: [Synth 8-5640] Port 'finish_encoding' is missing in component declaration [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:128]
-INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst1' of component 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:364]
-WARNING: [Synth 8-5640] Port 'finish_encoding' is missing in component declaration [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:128]
-INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst2' of component 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:387]
-WARNING: [Synth 8-5640] Port 'finish_encoding' is missing in component declaration [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:128]
-INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst3' of component 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:410]
+INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst0' of component 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:286]
+INFO: [Synth 8-638] synthesizing module 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:57]
+INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-4161317-uxsrv005/realtime/sd_fec_0_stub.v:6' bound to instance 'ldpc_encoder' of component 'sd_fec_0' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:109]
+INFO: [Synth 8-6157] synthesizing module 'sd_fec_0' [/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-4161317-uxsrv005/realtime/sd_fec_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sd_fec_0' (4#1) [/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/.Xil/Vivado-4161317-uxsrv005/realtime/sd_fec_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'LDPC_core' (5#1) [/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:57]
+INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst1' of component 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:307]
+INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst2' of component 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:328]
+INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/FEC/FEC.srcs/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst3' of component 'LDPC_core' [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:349]
 INFO: [Synth 8-256] done synthesizing module 'Encoder' (6#1) [/home/miglioranza/FEC/FEC.srcs/sources_1/new/Encoder.vhd:55]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3525.168 ; gain = 276.594 ; free physical = 31026 ; free virtual = 109509
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3525.164 ; gain = 276.594 ; free physical = 26202 ; free virtual = 106547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3542.980 ; gain = 294.406 ; free physical = 31912 ; free virtual = 110397
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3542.977 ; gain = 294.406 ; free physical = 26195 ; free virtual = 106540
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3542.980 ; gain = 294.406 ; free physical = 31912 ; free virtual = 110397
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3542.977 ; gain = 294.406 ; free physical = 26195 ; free virtual = 106540
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3542.980 ; gain = 0.000 ; free physical = 31883 ; free virtual = 110368
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3542.977 ; gain = 0.000 ; free physical = 26318 ; free virtual = 106663
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -89,15 +85,15 @@ Parsing XDC File [/home/miglioranza/FEC/FEC.gen/sources_1/ip/fifo_generator_0/fi
 Finished Parsing XDC File [/home/miglioranza/FEC/FEC.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'out_fifo/axis_fifo'
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3714.824 ; gain = 0.000 ; free physical = 31954 ; free virtual = 110345
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3716.789 ; gain = 0.000 ; free physical = 27164 ; free virtual = 107509
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3714.824 ; gain = 0.000 ; free physical = 31954 ; free virtual = 110345
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3716.789 ; gain = 0.000 ; free physical = 27164 ; free virtual = 107509
 WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3714.824 ; gain = 466.250 ; free physical = 32135 ; free virtual = 110433
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3716.789 ; gain = 468.219 ; free physical = 27257 ; free virtual = 107605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -105,7 +101,7 @@ Start Loading Part and Timing Information
 Loading part: xczu28dr-ffvg1517-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3714.824 ; gain = 466.250 ; free physical = 32136 ; free virtual = 110434
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3716.789 ; gain = 468.219 ; free physical = 27257 ; free virtual = 107605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -116,11 +112,11 @@ Applied set_property KEEP_HIERARCHY = SOFT for LDPC_encoder_1x16_inst2/ldpc_enco
 Applied set_property KEEP_HIERARCHY = SOFT for LDPC_encoder_1x16_inst3/ldpc_encoder. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for out_fifo/axis_fifo. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3714.824 ; gain = 466.250 ; free physical = 32135 ; free virtual = 110434
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3716.789 ; gain = 468.219 ; free physical = 27257 ; free virtual = 107605
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6904] The RAM "Wifi_Input_FSM:/data_input_reg" of size (depth=4 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 3714.824 ; gain = 466.250 ; free physical = 32237 ; free virtual = 110436
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 3716.789 ; gain = 468.219 ; free physical = 27252 ; free virtual = 107601
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -130,28 +126,28 @@ Detailed RTL Component Info :
 	   2 Input   32 Bit       Adders := 5     
 	   2 Input    8 Bit       Adders := 3     
 +---Registers : 
-	               32 Bit    Registers := 8     
+	               32 Bit    Registers := 9     
 	                8 Bit    Registers := 2     
 	                6 Bit    Registers := 2     
 	                4 Bit    Registers := 4     
-	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 3     
 	                1 Bit    Registers := 17    
 +---RAMs : 
 	              128 Bit	(4 X 32 bit)          RAMs := 1     
 +---Muxes : 
 	   4 Input   32 Bit        Muxes := 2     
-	   2 Input   32 Bit        Muxes := 17    
+	   2 Input   32 Bit        Muxes := 13    
 	   4 Input    8 Bit        Muxes := 2     
 	   2 Input    8 Bit        Muxes := 4     
 	   4 Input    6 Bit        Muxes := 1     
 	   4 Input    4 Bit        Muxes := 6     
-	   2 Input    4 Bit        Muxes := 30    
+	   5 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 19    
 	   4 Input    2 Bit        Muxes := 1     
 	   5 Input    2 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 3     
 	   4 Input    1 Bit        Muxes := 12    
-	   2 Input    1 Bit        Muxes := 31    
+	   2 Input    1 Bit        Muxes := 30    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -168,10 +164,10 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-INFO: [Synth 8-6904] The RAM "Encoder/FSM_Input/data_input_reg" of size (depth=4 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "FSM_Input/data_input_reg" of size (depth=4 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
 INFO: [Synth 8-6904] The RAM "Encoder/FSM_Input/data_input_reg" of size (depth=4 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 3714.824 ; gain = 466.250 ; free physical = 32211 ; free virtual = 110417
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 3716.789 ; gain = 468.219 ; free physical = 27221 ; free virtual = 107574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -192,13 +188,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 3970.508 ; gain = 721.934 ; free physical = 31723 ; free virtual = 109933
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 3969.559 ; gain = 720.988 ; free physical = 26696 ; free virtual = 107052
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 3971.508 ; gain = 722.934 ; free physical = 31722 ; free virtual = 109932
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 3970.559 ; gain = 721.988 ; free physical = 26696 ; free virtual = 107052
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -218,7 +214,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 3999.555 ; gain = 750.980 ; free physical = 31716 ; free virtual = 109926
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 3999.605 ; gain = 751.035 ; free physical = 26691 ; free virtual = 107047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -236,37 +232,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 4002.523 ; gain = 753.949 ; free physical = 31716 ; free virtual = 109926
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 4002.574 ; gain = 754.004 ; free physical = 26687 ; free virtual = 107046
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 4002.523 ; gain = 753.949 ; free physical = 31716 ; free virtual = 109926
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 4002.574 ; gain = 754.004 ; free physical = 26687 ; free virtual = 107046
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 4002.523 ; gain = 753.949 ; free physical = 31716 ; free virtual = 109926
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 4002.574 ; gain = 754.004 ; free physical = 26687 ; free virtual = 107046
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 4002.523 ; gain = 753.949 ; free physical = 31716 ; free virtual = 109926
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 4002.574 ; gain = 754.004 ; free physical = 26687 ; free virtual = 107046
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 4002.523 ; gain = 753.949 ; free physical = 31716 ; free virtual = 109926
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 4002.574 ; gain = 754.004 ; free physical = 26687 ; free virtual = 107046
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 4002.523 ; gain = 753.949 ; free physical = 31716 ; free virtual = 109926
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 4002.574 ; gain = 754.004 ; free physical = 26687 ; free virtual = 107046
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -290,32 +286,33 @@ Report Cell Usage:
 |6     |BUFG           |     1|
 |7     |CARRY8         |    28|
 |8     |LUT1           |    86|
-|9     |LUT2           |   128|
-|10    |LUT3           |    84|
-|11    |LUT4           |    23|
-|12    |LUT5           |    59|
-|13    |LUT6           |   165|
-|14    |RAM32M         |     4|
-|15    |RAM32M16       |     8|
-|16    |FDCE           |    55|
-|17    |FDRE           |   259|
-|18    |FDSE           |    16|
-|19    |IBUF           |    41|
-|20    |OBUF           |    36|
+|9     |LUT2           |   123|
+|10    |LUT3           |    54|
+|11    |LUT4           |    22|
+|12    |LUT5           |    90|
+|13    |LUT6           |   158|
+|14    |MUXF7          |     1|
+|15    |RAM32M         |     4|
+|16    |RAM32M16       |     8|
+|17    |FDCE           |    57|
+|18    |FDRE           |   257|
+|19    |FDSE           |    16|
+|20    |IBUF           |    41|
+|21    |OBUF           |    36|
 +------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 4002.523 ; gain = 753.949 ; free physical = 31716 ; free virtual = 109926
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 4002.574 ; gain = 754.004 ; free physical = 26687 ; free virtual = 107046
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 4002.523 ; gain = 582.105 ; free physical = 31751 ; free virtual = 109961
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 4002.531 ; gain = 753.949 ; free physical = 31752 ; free virtual = 109961
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 4002.574 ; gain = 580.191 ; free physical = 26723 ; free virtual = 107082
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 4002.582 ; gain = 754.004 ; free physical = 26723 ; free virtual = 107082
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4016.461 ; gain = 0.000 ; free physical = 31849 ; free virtual = 110059
-INFO: [Netlist 29-17] Analyzing 82 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4014.543 ; gain = 0.000 ; free physical = 26820 ; free virtual = 107179
+INFO: [Netlist 29-17] Analyzing 83 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4094.230 ; gain = 0.000 ; free physical = 31769 ; free virtual = 109978
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4095.281 ; gain = 0.000 ; free physical = 26740 ; free virtual = 107100
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 54 instances were transformed.
   BUFG => BUFGCE: 1 instance 
@@ -323,11 +320,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
   RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 8 instances
 
-Synth Design complete, checksum: ca4312e9
+Synth Design complete, checksum: c61f6fc8
 INFO: [Common 17-83] Releasing license: Synthesis
-48 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+48 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 4094.230 ; gain = 1001.312 ; free physical = 31909 ; free virtual = 110119
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 4095.281 ; gain = 1002.367 ; free physical = 26882 ; free virtual = 107242
 INFO: [Common 17-1381] The checkpoint '/home/miglioranza/FEC/FEC.runs/synth_1_copy_1/Encoder.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Encoder_utilization_synth.rpt -pb Encoder_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Feb 18 16:25:41 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 19 16:38:38 2025...

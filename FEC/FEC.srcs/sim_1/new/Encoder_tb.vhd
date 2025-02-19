@@ -194,52 +194,9 @@ wait until out_last = '1'and data_out_valid = '0'  ;
             data_in_valid <= '0';
             wait for clk_period ;
             report "End of simulation" ;
-            finish ;  
+              finish ;  
 end process ;
 
 
-
-
---Stimuli_process : process (clk ,reset ) 
-----    variable tmp : integer := 10 ;
-----    variable current_code_rate : integer := 0 ;
---begin 
---report "Simulation start" ;
---    if reset = '1' then 
-----        data_in_valid      <= '0';
---        data_in_last       <= '0' ;
---    elsif rising_edge (clk) then  
---            data_in_ready <= '1';
-----    if data_out_ready(sel_FEC_code_rate )  = '1' then
-----        data_in_valid      <= '1';
-----        data_in <= std_logic_vector(to_unsigned((temp + 1 ) ,data_in'length )) ; 
-----        temp <= temp  + 1 ;
---       if temp < 100 then 
---         sel_FEC_code_rate <= 0 ; 
-----         current_code_rate := 0 ; 
---       elsif temp >= 100  and temp < 200  then
---         sel_FEC_code_rate <= 1 ; 
-----         current_code_rate := 1 ; 
-         
---       elsif  temp >= 200 and temp < 300 then 
---               sel_FEC_code_rate  <= 3 ;
-----               current_code_rate  := 3 ;
---       elsif temp >= 400 then
---                data_in_last       <= '1' ;
-----                data_in_valid      <= '0';
---                    if out_last = '1'and data_out_valid = '0'then
-----                        data_in_valid      <= '0';        
---                        report "End of simulation" ;
---                        finish ;
---                    end if ;        
-----       end if ;
-       
-----      tmp := tmp + 1 ;
-----              elsif data_out_ready(current_code_rate)  = '0' then
-----                data_in_valid      <= '0';
---       end if ;
---   end if ;          
---end process ;  
- 
 
 end Behavioral;

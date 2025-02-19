@@ -61,13 +61,11 @@ signal enc_state, enc_next_state     : encoder_fsm_input := starting_state   ;
 type buffer_data is array (0 to 3) of std_logic_vector(31 downto 0) ;
 signal data_input : buffer_data :=(others =>(others => '0')) ;
 
-signal change_code_rate         : std_logic := '0';
 signal current_code_rate        : integer := -1  ;
 signal current_data_length      : std_logic_vector(7 downto 0) := (others => '0');  
 signal LDPC_data_length         : std_logic_vector(7 downto 0) := (others => '0'); 
 signal codeword_counter         : std_logic_vector(7 downto 0) := (others => '0');
 signal block_counter            : std_logic_vector(7 downto 0) := (others => '0');
-signal tmp                      : std_logic_vector(31 downto 0) := (others => '0');
 signal sel_code_rate            : integer := 0;
 signal padding_counter          : std_logic_vector(7 downto 0) := (others => '0');
 begin
@@ -76,7 +74,7 @@ selected_code_rate : process (clk ,reset )
 begin 
 if reset = '1'then 
 
-change_code_rate        <= '0';
+sel_code_rate <= 0 ;
 
 elsif rising_edge (clk) then 
 
@@ -87,7 +85,7 @@ elsif rising_edge (clk) then
      LDPC_data_length        <= x"0a";
     when "01" =>           --Code index 4 -> code rate = 2/3 and block length N = 1296 
      sel_code_rate           <= 1 ;
-     LDPC_data_length        <= x"1b" ;
+     LDPC_data_length        <= x"1a" ;
     when "10" =>           --Code index 8 -> code rate = 3/4 and block length N = 1944 
      sel_code_rate           <= 2 ; 
      LDPC_data_length        <= x"2d" ;
@@ -111,13 +109,10 @@ begin
 if reset  = '1' then    
 
 codeword_counter     <= (others => '0');
---fsm_dout_ready       <= (others => '0'); 
 fsm_dout_ready       <=  '0';
 fsm_dout_valid       <= (others => '0');
 fsm_dout_last        <= (others => '0');
---fsm_control_valid    <=  '0';
---fsm_dout_last        <= (others => '0');
-  fsm_reset_core       <= (others => '0'); 
+fsm_reset_core       <= (others => '0'); 
 enc_next_state       <= starting_state  ;
 
 elsif rising_edge (clk) then 
@@ -144,15 +139,9 @@ case enc_state is
          
     when encoding_process => 
        if current_code_rate = sel_code_rate and fsm_din_ready(current_code_rate) = '1' and index = 0 then     
-                
---                fsm_dout_ready <= '1'; 
---              if codeword_counter =  current_data_length-3    then 
---                  fsm_dout_ready <= '0' ;   
---             else      
---                  fsm_dout_ready <= '1' ;
---             end if   ; 
+
             index2 := 0 ; 
-            if fsm_din_valid = '1' and codeword_counter /=  current_data_length-2  then 
+            if fsm_din_valid = '1' and codeword_counter /=  current_data_length  then 
 --              fsm_control_valid(current_code_rate) <= '1';
               fsm_dout                           <= fsm_din ;    
               fsm_dout_valid(current_code_rate)  <=  '1';              
@@ -165,28 +154,28 @@ case enc_state is
                    end if ;
    
            else 
---            fsm_control_valid(current_code_rate)  <= '0';
-           if    codeword_counter = current_data_length-2   and fsm_din_last = '0' and bit_padd < 2  then               
+           
+           if    codeword_counter = current_data_length  and fsm_din_last = '0' and bit_padd < 2  then               
 --                    fsm_dout_ready <= '1' ;  
 --                    block_counter    <= block_counter + x"01" ;
 --                    codeword_counter <= x"01" ;
+                  fsm_dout_valid(current_code_rate)  <=  '0';
                   fsm_dout_ready <= '0' ;
-                  data_input( bit_padd) <= fsm_din ; 
---                  fsm_dout <= x"5A5A5A5A" ;
-                  fsm_dout <= (others => '0') ;       
+                  data_input( bit_padd) <= fsm_din ;     
                   bit_padd := bit_padd + 1 ;
                   bit_padd2 := 0 ; 
-           elsif  codeword_counter = current_data_length-2  and bit_padd = 2 then    
+           elsif  codeword_counter = current_data_length  and bit_padd = 2  then    
 --                   fsm_dout_ready <= '1' ;
+                   fsm_dout_valid(current_code_rate)  <=  '1';
                    codeword_counter <=  (others => '0') ;
                    block_counter <= block_counter + x"01"  ;      
 --                   bit_padd := 0 ; 
-           elsif   codeword_counter = current_data_length-2  and fsm_din_last = '1' and bit_padd < 2    then 
+           elsif   codeword_counter = current_data_length  and fsm_din_last = '1' and bit_padd < 2    then 
 --                   codeword_counter                  <= codeword_counter + x"01" ;  
                    fsm_dout_ready <= '0' ;  
                    fsm_dout_valid(current_code_rate)  <=  '0';
                    enc_next_state                     <= padding_process ;  
-           elsif   codeword_counter /= current_data_length-2   and fsm_din_last = '0' and bit_padd > 0  then 
+           elsif   codeword_counter /= current_data_length   and fsm_din_last = '0' and bit_padd > 0  then 
                    fsm_dout <= data_input(bit_padd2) ;
                    bit_padd := bit_padd - 1 ;
                    bit_padd2 := bit_padd2 + 1 ;
@@ -196,12 +185,13 @@ case enc_state is
                    fsm_dout_ready <= '1' ;  
                    fsm_dout_valid(current_code_rate)  <=  '0';   
                     
-            end if ;                                                                                   
+            end if ;       
+                                                                                                        
          end if ;    
      
        elsif  current_code_rate = sel_code_rate and fsm_din_ready(current_code_rate) = '1' and index > 0 then
          
-               if codeword_counter /= current_data_length-2  and bit_padd = 0 then      
+               if codeword_counter /= current_data_length  and bit_padd = 0 then      
                   fsm_dout <= data_input(index2) ;
                   fsm_dout_valid(current_code_rate)  <=  '1';
                   codeword_counter                       <= codeword_counter + x"01" ;              
@@ -216,29 +206,26 @@ case enc_state is
                              fsm_dout_ready <= '0' ;
                          end if ;    
                   
-               elsif codeword_counter = current_data_length-2  and bit_padd < 2 then     
+               elsif codeword_counter = current_data_length  and bit_padd < 2 then     
                         
                         fsm_dout_valid(current_code_rate)  <=  '1';
---                        fsm_dout <= x"5A5A5A5A" ;
                         fsm_dout <= (others => '0') ;
                         bit_padd := bit_padd + 1 ;
                       
-               elsif  codeword_counter = current_data_length-2  and bit_padd = 2     then 
+               elsif  codeword_counter = current_data_length  and bit_padd = 2     then 
                        codeword_counter <= (others => '0') ;
                        block_counter <= block_counter + x"01"  ;      
-                       bit_padd := 0 ;        
+                       bit_padd := 0 ;     
+                       fsm_dout_valid(current_code_rate)  <=  '0';   
+                       
                else 
                      fsm_dout_ready <= '1' ;       
                      fsm_dout_valid(current_code_rate)  <=  '0';  
               end if ;    
-    
+      
          
        elsif current_code_rate /= sel_code_rate and fsm_din_ready(current_code_rate) = '1'then -- if a new code rate is selected then go to new code rate state for checking if padding is necessary and for updating the current code rate signal 
          fsm_dout_ready                        <= '0';      
---         fsm_dout                              <= fsm_din ;    --Sends out  the latest input data before padding ,otherwise there would be a miss data in output 
---         fsm_dout_valid(current_code_rate)   <= '1';   
---         fsm_reset_core(sel_code_rate )   <= '1'; --Test for seeing if resetting the core delete the padding in the beginning of the output message 
---            fsm_dout                           <= fsm_din ;
          
           --This if-statement is  needed for saving the input data in a buffer whenever there is a change in the code rate or for synchronization reason with the s_axis_ready signal from the current core 
             if fsm_din_valid = '1'and index < 4 then 
@@ -271,7 +258,7 @@ case enc_state is
 
 end if ;
 when padding_process => 
-   if codeword_counter = current_data_length  and padding_counter /= current_data_length and fsm_din_ready(current_code_rate) = '1' then 
+   if codeword_counter = current_data_length  and padding_counter /= current_data_length + 3 and fsm_din_ready(current_code_rate) = '1' then 
        fsm_dout_valid(current_code_rate)   <= '1';   
        fsm_dout          <= x"5A5A5A5A" ; --Padding process  
        padding_counter   <= padding_counter + 1 ;
@@ -280,7 +267,7 @@ when padding_process =>
 --        padding_counter                    <= current_data_length ;
         fsm_dout                           <= x"5A5A5A5A" ; --Padding process 
         codeword_counter                   <= codeword_counter + x"01" ; 
-   elsif  codeword_counter = current_data_length and  padding_counter = current_data_length and fsm_din_ready(current_code_rate) = '1' then 
+   elsif  codeword_counter = current_data_length and  padding_counter = current_data_length + 3 and fsm_din_ready(current_code_rate) = '1' then 
           fsm_dout_last(current_code_rate)  <= '1';
           fsm_dout_valid(current_code_rate) <= '0';
          fsm_dout_valid(current_code_rate)   <= '0';     
