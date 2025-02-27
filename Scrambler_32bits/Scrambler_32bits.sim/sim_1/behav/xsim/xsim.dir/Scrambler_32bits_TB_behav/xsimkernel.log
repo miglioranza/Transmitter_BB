@@ -1,7 +1,7 @@
-Running: xsim.dir/Scrambler_32bits_TB_behav/xsimk -simmode gui -wdb Scrambler_32bits_TB_behav.wdb -simrunnum 0 -socket 61683
+Running: xsim.dir/Scrambler_32bits_TB_behav/xsimk -simmode gui -wdb Scrambler_32bits_TB_behav.wdb -simrunnum 0 -socket 42391
 Design successfully loaded
-Design Loading Memory Usage: 43616 KB (Peak: 43616 KB)
-Design Loading CPU Usage: 40 ms
+Design Loading Memory Usage: 43628 KB (Peak: 43748 KB)
+Design Loading CPU Usage: 30 ms
 Simulation completed
-Simulation Memory Usage: 127400 KB (Peak: 184932 KB)
+Simulation Memory Usage: 127412 KB (Peak: 184944 KB)
 Simulation CPU Usage: 40 ms

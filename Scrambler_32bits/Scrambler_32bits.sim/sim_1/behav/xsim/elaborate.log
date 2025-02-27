@@ -12,6 +12,7 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
+Compiling package std.env
 Compiling architecture behavioral of entity xil_defaultlib.Scrambler_32bits [scrambler_32bits_default]
 Compiling architecture tb of entity xil_defaultlib.scrambler_32bits_tb
 Built simulation snapshot Scrambler_32bits_TB_behav

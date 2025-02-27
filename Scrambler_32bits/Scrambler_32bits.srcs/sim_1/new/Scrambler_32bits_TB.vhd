@@ -21,19 +21,27 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use std.env.finish;
 
 entity Scrambler_32bits_TB is
 end Scrambler_32bits_TB;
 
 architecture tb of Scrambler_32bits_TB is
-    signal clk      : std_logic := '0';
-    signal rst      : std_logic := '0';
-    signal data_in  : std_logic_vector(31 downto 0) := (others => '0');
-    signal data_out : std_logic_vector(31 downto 0);
-    signal seed     : std_logic_vector(31 downto 0) := (others => '0');
+    --clock and reset signals 
+    signal clk             : std_logic := '0';     
+    signal rst             : std_logic := '0';
+    -- Data input 
+    signal data_in         : std_logic_vector(31 downto 0) := (others => '0');
+    signal seed            : std_logic_vector(30 downto 0) := (others => '0');
+    signal data_in_valid   : std_logic := '0' ;
     signal control_enable  : std_logic := '0';
-    signal data_valid  : std_logic;
-    signal data_ready  : std_logic;
+    signal data_in_ready   : std_logic := '0';
+    signal data_in_last    : std_logic := '0';
+    --Data output 
+    signal data_out        : std_logic_vector(31 downto 0);
+    signal data_out_ready  : std_logic;
+    signal data_out_valid   : std_logic := '0' ;
+    signal data_out_last    : std_logic := '0';
 
     -- Clock period
     constant clk_period : time := 5 ns;
@@ -46,14 +54,18 @@ architecture tb of Scrambler_32bits_TB is
             poly     : std_logic_vector(31 downto 0) := "10010000000000000000000000000001"
         );
         port (
-            clk       : in  std_logic;
-            rst       : in  std_logic;
-            data_in   : in  std_logic_vector(31 downto 0);
-            data_out  : out std_logic_vector(31 downto 0);
-            seed      : in  std_logic_vector(31 downto 0);
-            data_valid   : out std_logic;
-            control_enable   : in std_logic;
-            data_ready   : out std_logic 
+            clk             : in  std_logic;
+            rst             : in  std_logic;
+            data_in         : in  std_logic_vector(32 downto 1);
+            data_in_valid   : in  std_logic;
+            data_in_ready   : in  std_logic;
+            data_in_last    : in  std_logic;
+            seed            : in  std_logic_vector(30 downto 0);
+            control_enable  : in std_logic;
+            data_out        : out std_logic_vector(32 downto 1);
+            data_out_valid  : out std_logic;
+            data_out_last   : out std_logic;
+            data_out_ready  : out std_logic 
         );
     end component;
 
@@ -61,14 +73,19 @@ begin
     -- Instantiate the Unit Under Test (UUT)
     uut: Scrambler_32bits
         port map (
-            clk       => clk,
-            rst       => rst,
-            data_in   => data_in,
-            data_out  => data_out,
-            seed      => seed,
-            control_enable   => control_enable,
-            data_valid   => data_valid,
-            data_ready   => data_ready 
+            clk                 => clk,
+            rst                 => rst,
+            data_in             => data_in,
+            data_in_valid       => data_in_valid,
+            data_in_last        => data_in_last ,
+            data_in_ready       => data_in_ready,
+            seed                => seed,  
+            control_enable      => control_enable,                 
+            data_out            => data_out,        
+            data_out_valid      => data_out_valid,
+            data_out_ready      => data_out_ready,
+            data_out_last       => data_out_last
+
         );
 
     -- Clock generation
@@ -88,34 +105,45 @@ begin
         wait for 20 ns;
         rst <= '0';
         wait for 20 ns;
-        
+        data_in_last <= '0' ;
+        data_in_ready <= '1';
+        wait until data_out_ready = '1' ; 
         -- Apply test vectors
-        seed <= x"C50C43B0";
-        data_in <= x"12345678";
+        seed <= "1001001000101001000100101111101";
         control_enable <= '1' ;
-        wait for clk_period ;
+        wait for clk_period;
         control_enable <= '0' ;
+        
+        data_in <= x"12345678" ;    
+        data_in_valid <= '1';
+        wait for clk_period;
+        data_in_valid <= '0';
                 
         wait for clk_period * 10;
 
-        seed <= x"3208EC47";
-        data_in <= x"922912F2";
-        control_enable <= '1' ;     
-        wait for clk_period ;
+        seed <= "1100110010011100111001001001001";
+        control_enable <= '1' ;
+        wait for clk_period;
         control_enable <= '0' ;
+        
+        data_in <= x"922912F2";
+        data_in_valid <= '1';
+        wait for clk_period;
+        data_in_valid <= '0';
         
         wait for clk_period * 10;
 
-        seed <= x"933912F2";
+--        seed <= x"933912F2";
         data_in <= x"3208EC47";
-        control_enable <= '1' ;     
-        wait for clk_period ;
-        control_enable <= '0' ;
-
+        data_in_valid <= '1';
+        wait for clk_period;
+        data_in_last <= '1' ;
+        data_in_valid <= '0';
         wait for clk_period * 5;
-
+         
         -- Stop simulation
-         assert false report "End of simulation" severity FAILURE  ;
+         report "End of simulation"  ;
+         finish;
     end process stim_proc;
 end tb;
 
