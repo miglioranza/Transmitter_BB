@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Mapper/Mapper.sim/sim_1/synth/func/xsim/mapper_tb_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mapper'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Mapper_new/mapper_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mapper_tb'
