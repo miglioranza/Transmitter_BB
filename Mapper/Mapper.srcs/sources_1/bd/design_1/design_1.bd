@@ -1,0 +1,130 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xD4838868FD146DE3",
+      "device": "xczu28dr-ffvg1517-2-e",
+      "gen_directory": "../../../../Mapper.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2021.2"
+    },
+    "design_tree": {
+      "Bit_splitter_0": "",
+      "Mapper_0": ""
+    },
+    "interface_ports": {
+      "S_AXIS_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "HAS_TKEEP": {
+            "value": "0"
+          },
+          "HAS_TLAST": {
+            "value": "0"
+          },
+          "HAS_TREADY": {
+            "value": "1"
+          },
+          "HAS_TSTRB": {
+            "value": "0"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "4"
+          },
+          "TDEST_WIDTH": {
+            "value": "0"
+          },
+          "TID_WIDTH": {
+            "value": "0"
+          },
+          "TUSER_WIDTH": {
+            "value": "0"
+          }
+        }
+      }
+    },
+    "ports": {
+      "clk_0": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "reset_0": {
+        "type": "rst",
+        "direction": "I"
+      },
+      "mod_type_0": {
+        "direction": "I",
+        "left": "2",
+        "right": "0"
+      }
+    },
+    "components": {
+      "Bit_splitter_0": {
+        "vlnv": "user.org:user:Bit_splitter:1.0",
+        "xci_name": "design_1_Bit_splitter_0_0",
+        "xci_path": "ip/design_1_Bit_splitter_0_0/design_1_Bit_splitter_0_0.xci",
+        "inst_hier_path": "Bit_splitter_0"
+      },
+      "Mapper_0": {
+        "vlnv": "user.org:user:mapper:1.0",
+        "xci_name": "design_1_mapper_0_0",
+        "xci_path": "ip/design_1_mapper_0_0/design_1_mapper_0_0.xci",
+        "inst_hier_path": "Mapper_0"
+      }
+    },
+    "interface_nets": {
+      "S_AXIS_0_1": {
+        "interface_ports": [
+          "S_AXIS_0",
+          "Bit_splitter_0/S_AXIS"
+        ]
+      }
+    },
+    "nets": {
+      "Bit_splitter_0_data_out": {
+        "ports": [
+          "Bit_splitter_0/data_out",
+          "Mapper_0/data_in"
+        ]
+      },
+      "Bit_splitter_0_data_out_valid": {
+        "ports": [
+          "Bit_splitter_0/data_out_valid",
+          "Mapper_0/data_in_valid"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "Bit_splitter_0/data_in_ready"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk_0",
+          "Bit_splitter_0/clk",
+          "Mapper_0/clk"
+        ]
+      },
+      "mod_type_0_1": {
+        "ports": [
+          "mod_type_0",
+          "Bit_splitter_0/mod_type",
+          "Mapper_0/mod_type"
+        ]
+      },
+      "reset_0_1": {
+        "ports": [
+          "reset_0",
+          "Bit_splitter_0/reset",
+          "Mapper_0/nreset"
+        ]
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
-"mapper_tb_func_synth.vhd" \
-"../../../../../../Mapper_new/mapper_tb.vhd" \
+"../../../../../mapper.vhd" \
+"../../../../../mapper_tb.vhd" \
 
 # Do not sort compile order
 nosort

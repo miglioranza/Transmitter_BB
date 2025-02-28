@@ -2,3 +2,6 @@ Running: xsim.dir/mapper_tb_func_synth/xsimk -simmode gui -wdb mapper_tb_func_sy
 Design successfully loaded
 Design Loading Memory Usage: 44476 KB (Peak: 44484 KB)
 Design Loading CPU Usage: 70 ms
+Simulation completed
+Simulation Memory Usage: 127968 KB (Peak: 185792 KB)
+Simulation CPU Usage: 90 ms
