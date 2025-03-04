@@ -1,7 +1,7 @@
 //
 // Vivado(TM)
 // rundef.js: a Vivado-generated Runs Script for WSH 5.1/5.6
-// Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //
 
 echo "This script was generated under a different operating system."
@@ -12,9 +12,9 @@ var WshShell = new ActiveXObject( "WScript.Shell" );
 var ProcEnv = WshShell.Environment( "Process" );
 var PathVal = ProcEnv("PATH");
 if ( PathVal.length == 0 ) {
-  PathVal = "/ihp/ihpusr/xilinx/vivado20191/SDK/2019.1/bin:/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/ids_lite/ISE/bin/lin64;/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/bin;";
+  PathVal = "/ihpusr/xilinx/vivado2021.2/Vitis/2021.2/bin:/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/ids_lite/ISE/bin/lin64;/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/bin;";
 } else {
-  PathVal = "/ihp/ihpusr/xilinx/vivado20191/SDK/2019.1/bin:/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/ids_lite/ISE/bin/lin64;/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/bin;" + PathVal;
+  PathVal = "/ihpusr/xilinx/vivado2021.2/Vitis/2021.2/bin:/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/ids_lite/ISE/bin/lin64;/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/bin;" + PathVal;
 }
 
 ProcEnv("PATH") = PathVal;

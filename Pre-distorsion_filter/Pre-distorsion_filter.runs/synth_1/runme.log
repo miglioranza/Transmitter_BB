@@ -3,40 +3,60 @@
     with args -log Parallel_FIR_filter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Parallel_FIR_filter.tcl
 
 
-****** Vivado v2019.1 (64-bit)
-  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
-  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
 source Parallel_FIR_filter.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3066.770 ; gain = 2.016 ; free physical = 19356 ; free virtual = 110358
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/data/ip'.
-update_ip_catalog: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1541.133 ; gain = 0.000 ; free physical = 1165 ; free virtual = 100332
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip'.
 Command: synth_design -top Parallel_FIR_filter -part xczu28dr-ffvg1517-2-e
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xczu28dr'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu28dr'
-INFO: [Common 17-1540] The version limit for your license is '2024.01' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
-INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 39378 
-load diablo GTM unisim library
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2497016
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1705.996 ; gain = 148.723 ; free physical = 992 ; free virtual = 100148
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3096.977 ; gain = 0.000 ; free physical = 19005 ; free virtual = 110007
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Parallel_FIR_filter' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:48]
-	Parameter FILTER_TAPS bound to: 60 - type: integer 
-	Parameter INPUT_WIDTH bound to: 16 - type: integer 
-	Parameter COEFF_WIDTH bound to: 16 - type: integer 
-WARNING: [Synth 8-614] signal 'acc_reg' is read in the process but is not in the sensitivity list [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:71]
-WARNING: [Synth 8-6014] Unused sequential element sum_reg_reg was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:92]
-INFO: [Synth 8-256] done synthesizing module 'Parallel_FIR_filter' (1#1) [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:48]
-WARNING: [Synth 8-3917] design Parallel_FIR_filter has port data_o_valid driven by constant 1
+INFO: [Synth 8-638] synthesizing module 'Parallel_FIR_filter' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:57]
+WARNING: [Synth 8-6014] Unused sequential element I_shift_reg_reg[5] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element I_shift_reg_reg[6] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element I_shift_reg_reg[7] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element I_shift_reg_reg[8] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element I_shift_reg_reg[9] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element I_shift_reg_reg[10] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element I_shift_reg_reg[11] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element I_shift_reg_reg[12] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element I_shift_reg_reg[13] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element I_shift_reg_reg[14] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element I_shift_reg_reg[15] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element Q_shift_reg_reg[5] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
+WARNING: [Synth 8-6014] Unused sequential element Q_shift_reg_reg[6] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
+WARNING: [Synth 8-6014] Unused sequential element Q_shift_reg_reg[7] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
+WARNING: [Synth 8-6014] Unused sequential element Q_shift_reg_reg[8] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
+WARNING: [Synth 8-6014] Unused sequential element Q_shift_reg_reg[9] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
+WARNING: [Synth 8-6014] Unused sequential element Q_shift_reg_reg[10] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
+WARNING: [Synth 8-6014] Unused sequential element Q_shift_reg_reg[11] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
+WARNING: [Synth 8-6014] Unused sequential element Q_shift_reg_reg[12] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
+WARNING: [Synth 8-6014] Unused sequential element Q_shift_reg_reg[13] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
+WARNING: [Synth 8-6014] Unused sequential element Q_shift_reg_reg[14] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
+WARNING: [Synth 8-6014] Unused sequential element Q_shift_reg_reg[15] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
+WARNING: [Synth 8-6014] Unused sequential element I_sum_reg_reg was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:124]
+WARNING: [Synth 8-6014] Unused sequential element Q_sum_reg_reg was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:125]
+WARNING: [Synth 8-6014] Unused sequential element index_reg was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:135]
+WARNING: [Synth 8-6014] Unused sequential element partial_I_reg was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:140]
+WARNING: [Synth 8-6014] Unused sequential element partial_Q_reg was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:141]
+INFO: [Synth 8-256] done synthesizing module 'Parallel_FIR_filter' (1#1) [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:57]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1759.758 ; gain = 202.484 ; free physical = 1007 ; free virtual = 100163
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3096.977 ; gain = 0.000 ; free physical = 17983 ; free virtual = 108988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1768.656 ; gain = 211.383 ; free physical = 996 ; free virtual = 100154
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3096.977 ; gain = 0.000 ; free physical = 17977 ; free virtual = 108983
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -44,49 +64,23 @@ Start Loading Part and Timing Information
 Loading part: xczu28dr-ffvg1517-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1787.570 ; gain = 230.297 ; free physical = 995 ; free virtual = 100154
----------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3106.980 ; gain = 10.004 ; free physical = 17977 ; free virtual = 108982
 INFO: [Device 21-403] Loading part xczu28dr-ffvg1517-2-e
-WARNING: [Synth 8-3936] Found unconnected internal register 'acc_reg_reg' and it is trimmed from '32' to '16' bits. [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:105]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1787.578 ; gain = 230.305 ; free physical = 953 ; free virtual = 100116
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3106.980 ; gain = 10.004 ; free physical = 17908 ; free virtual = 108914
+---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
-+---Adders : 
-	  60 Input     16 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 60    
-	               16 Bit    Registers := 121   
-+---Muxes : 
-	   2 Input     16 Bit        Muxes := 59    
+	               32 Bit    Registers := 2     
+	               12 Bit    Registers := 10    
+	                1 Bit    Registers := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start RTL Hierarchical Component Statistics 
----------------------------------------------------------------------------------
-Hierarchical RTL Component report 
-Module Parallel_FIR_filter 
-Detailed RTL Component Info : 
-+---Adders : 
-	  60 Input     16 Bit       Adders := 1     
-+---Registers : 
-	               32 Bit    Registers := 60    
-	               16 Bit    Registers := 121   
-+---Muxes : 
-	   2 Input     16 Bit        Muxes := 59    
----------------------------------------------------------------------------------
-Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Part Resource Summary
@@ -101,516 +95,183 @@ No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[0][15:0]' into 'shift_reg_reg[0][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[1][15:0]' into 'shift_reg_reg[1][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[2][15:0]' into 'shift_reg_reg[2][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[3][15:0]' into 'shift_reg_reg[3][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[4][15:0]' into 'shift_reg_reg[4][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[5][15:0]' into 'shift_reg_reg[5][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[6][15:0]' into 'shift_reg_reg[6][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[7][15:0]' into 'shift_reg_reg[7][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[8][15:0]' into 'shift_reg_reg[8][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[9][15:0]' into 'shift_reg_reg[9][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[10][15:0]' into 'shift_reg_reg[10][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[11][15:0]' into 'shift_reg_reg[11][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[12][15:0]' into 'shift_reg_reg[12][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[13][15:0]' into 'shift_reg_reg[13][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[14][15:0]' into 'shift_reg_reg[14][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[15][15:0]' into 'shift_reg_reg[15][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[16][15:0]' into 'shift_reg_reg[16][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[17][15:0]' into 'shift_reg_reg[17][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[18][15:0]' into 'shift_reg_reg[18][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[19][15:0]' into 'shift_reg_reg[19][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[20][15:0]' into 'shift_reg_reg[20][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[21][15:0]' into 'shift_reg_reg[21][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[22][15:0]' into 'shift_reg_reg[22][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[23][15:0]' into 'shift_reg_reg[23][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[24][15:0]' into 'shift_reg_reg[24][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[25][15:0]' into 'shift_reg_reg[25][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[26][15:0]' into 'shift_reg_reg[26][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[27][15:0]' into 'shift_reg_reg[27][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[28][15:0]' into 'shift_reg_reg[28][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[29][15:0]' into 'shift_reg_reg[29][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[30][15:0]' into 'shift_reg_reg[30][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[31][15:0]' into 'shift_reg_reg[31][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[32][15:0]' into 'shift_reg_reg[32][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[33][15:0]' into 'shift_reg_reg[33][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[34][15:0]' into 'shift_reg_reg[34][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[35][15:0]' into 'shift_reg_reg[35][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[36][15:0]' into 'shift_reg_reg[36][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[37][15:0]' into 'shift_reg_reg[37][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[38][15:0]' into 'shift_reg_reg[38][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[39][15:0]' into 'shift_reg_reg[39][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[40][15:0]' into 'shift_reg_reg[40][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[41][15:0]' into 'shift_reg_reg[41][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[42][15:0]' into 'shift_reg_reg[42][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[43][15:0]' into 'shift_reg_reg[43][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[44][15:0]' into 'shift_reg_reg[44][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[45][15:0]' into 'shift_reg_reg[45][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[46][15:0]' into 'shift_reg_reg[46][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[47][15:0]' into 'shift_reg_reg[47][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[48][15:0]' into 'shift_reg_reg[48][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[49][15:0]' into 'shift_reg_reg[49][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[50][15:0]' into 'shift_reg_reg[50][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[51][15:0]' into 'shift_reg_reg[51][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[52][15:0]' into 'shift_reg_reg[52][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[53][15:0]' into 'shift_reg_reg[53][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[54][15:0]' into 'shift_reg_reg[54][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[55][15:0]' into 'shift_reg_reg[55][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[56][15:0]' into 'shift_reg_reg[56][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[57][15:0]' into 'shift_reg_reg[57][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[58][15:0]' into 'shift_reg_reg[58][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[0][15:0]' into 'shift_reg_reg[0][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[1][15:0]' into 'shift_reg_reg[1][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[2][15:0]' into 'shift_reg_reg[2][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[3][15:0]' into 'shift_reg_reg[3][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[4][15:0]' into 'shift_reg_reg[4][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[5][15:0]' into 'shift_reg_reg[5][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[6][15:0]' into 'shift_reg_reg[6][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[7][15:0]' into 'shift_reg_reg[7][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[8][15:0]' into 'shift_reg_reg[8][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[9][15:0]' into 'shift_reg_reg[9][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[10][15:0]' into 'shift_reg_reg[10][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[11][15:0]' into 'shift_reg_reg[11][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[12][15:0]' into 'shift_reg_reg[12][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[13][15:0]' into 'shift_reg_reg[13][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[14][15:0]' into 'shift_reg_reg[14][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[15][15:0]' into 'shift_reg_reg[15][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[16][15:0]' into 'shift_reg_reg[16][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[17][15:0]' into 'shift_reg_reg[17][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[18][15:0]' into 'shift_reg_reg[18][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[19][15:0]' into 'shift_reg_reg[19][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[20][15:0]' into 'shift_reg_reg[20][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[21][15:0]' into 'shift_reg_reg[21][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[22][15:0]' into 'shift_reg_reg[22][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[23][15:0]' into 'shift_reg_reg[23][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[24][15:0]' into 'shift_reg_reg[24][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[25][15:0]' into 'shift_reg_reg[25][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[26][15:0]' into 'shift_reg_reg[26][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[27][15:0]' into 'shift_reg_reg[27][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[28][15:0]' into 'shift_reg_reg[28][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[29][15:0]' into 'shift_reg_reg[29][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[30][15:0]' into 'shift_reg_reg[30][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[31][15:0]' into 'shift_reg_reg[31][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[32][15:0]' into 'shift_reg_reg[32][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[33][15:0]' into 'shift_reg_reg[33][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[34][15:0]' into 'shift_reg_reg[34][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[35][15:0]' into 'shift_reg_reg[35][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[36][15:0]' into 'shift_reg_reg[36][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[37][15:0]' into 'shift_reg_reg[37][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[38][15:0]' into 'shift_reg_reg[38][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[39][15:0]' into 'shift_reg_reg[39][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Synth 8-4471] merging register 'shift_reg_reg[40][15:0]' into 'shift_reg_reg[40][15:0]' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:84]
-INFO: [Common 17-14] Message 'Synth 8-4471' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-DSP Report: Generating DSP mul_reg_reg[0]0, operation Mode is: A2*(B:0xffff).
-DSP Report: register shift_reg_reg[0] is absorbed into DSP mul_reg_reg[0]0.
-DSP Report: operator mul_reg_reg[0]0 is absorbed into DSP mul_reg_reg[0]0.
-DSP Report: Generating DSP mul_reg_reg[1]0, operation Mode is: A''*(B:0xffb3).
-DSP Report: register shift_reg_reg[0] is absorbed into DSP mul_reg_reg[1]0.
-DSP Report: register shift_reg_reg[1] is absorbed into DSP mul_reg_reg[1]0.
-DSP Report: operator mul_reg_reg[1]0 is absorbed into DSP mul_reg_reg[1]0.
-DSP Report: Generating DSP mul_reg_reg[2]0, operation Mode is: A''*(B:0xd6).
-DSP Report: register shift_reg_reg[1] is absorbed into DSP mul_reg_reg[2]0.
-DSP Report: register shift_reg_reg[2] is absorbed into DSP mul_reg_reg[2]0.
-DSP Report: operator mul_reg_reg[2]0 is absorbed into DSP mul_reg_reg[2]0.
-DSP Report: Generating DSP mul_reg_reg[3]0, operation Mode is: A''*(B:0x63).
-DSP Report: register shift_reg_reg[2] is absorbed into DSP mul_reg_reg[3]0.
-DSP Report: register shift_reg_reg[3] is absorbed into DSP mul_reg_reg[3]0.
-DSP Report: operator mul_reg_reg[3]0 is absorbed into DSP mul_reg_reg[3]0.
-DSP Report: Generating DSP mul_reg_reg[4]0, operation Mode is: A''*(B:0xfdb1).
-DSP Report: register shift_reg_reg[3] is absorbed into DSP mul_reg_reg[4]0.
-DSP Report: register shift_reg_reg[4] is absorbed into DSP mul_reg_reg[4]0.
-DSP Report: operator mul_reg_reg[4]0 is absorbed into DSP mul_reg_reg[4]0.
-DSP Report: Generating DSP mul_reg_reg[5]0, operation Mode is: A''*(B:0x1d9).
-DSP Report: register shift_reg_reg[4] is absorbed into DSP mul_reg_reg[5]0.
-DSP Report: register shift_reg_reg[5] is absorbed into DSP mul_reg_reg[5]0.
-DSP Report: operator mul_reg_reg[5]0 is absorbed into DSP mul_reg_reg[5]0.
-DSP Report: Generating DSP mul_reg_reg[6]0, operation Mode is: A''*(B:0x25f).
-DSP Report: register shift_reg_reg[5] is absorbed into DSP mul_reg_reg[6]0.
-DSP Report: register shift_reg_reg[6] is absorbed into DSP mul_reg_reg[6]0.
-DSP Report: operator mul_reg_reg[6]0 is absorbed into DSP mul_reg_reg[6]0.
-DSP Report: Generating DSP mul_reg_reg[7]0, operation Mode is: A''*(B:0xfab4).
-DSP Report: register shift_reg_reg[6] is absorbed into DSP mul_reg_reg[7]0.
-DSP Report: register shift_reg_reg[7] is absorbed into DSP mul_reg_reg[7]0.
-DSP Report: operator mul_reg_reg[7]0 is absorbed into DSP mul_reg_reg[7]0.
-DSP Report: Generating DSP mul_reg_reg[8]0, operation Mode is: A''*(B:0x141).
-DSP Report: register shift_reg_reg[7] is absorbed into DSP mul_reg_reg[8]0.
-DSP Report: register shift_reg_reg[8] is absorbed into DSP mul_reg_reg[8]0.
-DSP Report: operator mul_reg_reg[8]0 is absorbed into DSP mul_reg_reg[8]0.
-DSP Report: Generating DSP mul_reg_reg[9]0, operation Mode is: A''*(B:0x63b).
-DSP Report: register shift_reg_reg[8] is absorbed into DSP mul_reg_reg[9]0.
-DSP Report: register shift_reg_reg[9] is absorbed into DSP mul_reg_reg[9]0.
-DSP Report: operator mul_reg_reg[9]0 is absorbed into DSP mul_reg_reg[9]0.
-DSP Report: Generating DSP mul_reg_reg[10]0, operation Mode is: A''*(B:0xf92d).
-DSP Report: register shift_reg_reg[9] is absorbed into DSP mul_reg_reg[10]0.
-DSP Report: register shift_reg_reg[10] is absorbed into DSP mul_reg_reg[10]0.
-DSP Report: operator mul_reg_reg[10]0 is absorbed into DSP mul_reg_reg[10]0.
-DSP Report: Generating DSP mul_reg_reg[11]0, operation Mode is: A''*(B:0xfe5a).
-DSP Report: register shift_reg_reg[10] is absorbed into DSP mul_reg_reg[11]0.
-DSP Report: register shift_reg_reg[11] is absorbed into DSP mul_reg_reg[11]0.
-DSP Report: operator mul_reg_reg[11]0 is absorbed into DSP mul_reg_reg[11]0.
-DSP Report: Generating DSP mul_reg_reg[12]0, operation Mode is: A''*(B:0x825).
-DSP Report: register shift_reg_reg[11] is absorbed into DSP mul_reg_reg[12]0.
-DSP Report: register shift_reg_reg[12] is absorbed into DSP mul_reg_reg[12]0.
-DSP Report: operator mul_reg_reg[12]0 is absorbed into DSP mul_reg_reg[12]0.
-DSP Report: Generating DSP mul_reg_reg[13]0, operation Mode is: A''*(B:0xfbe0).
-DSP Report: register shift_reg_reg[12] is absorbed into DSP mul_reg_reg[13]0.
-DSP Report: register shift_reg_reg[13] is absorbed into DSP mul_reg_reg[13]0.
-DSP Report: operator mul_reg_reg[13]0 is absorbed into DSP mul_reg_reg[13]0.
-DSP Report: Generating DSP mul_reg_reg[14]0, operation Mode is: A''*(B:0xfccd).
-DSP Report: register shift_reg_reg[13] is absorbed into DSP mul_reg_reg[14]0.
-DSP Report: register shift_reg_reg[14] is absorbed into DSP mul_reg_reg[14]0.
-DSP Report: operator mul_reg_reg[14]0 is absorbed into DSP mul_reg_reg[14]0.
-DSP Report: Generating DSP mul_reg_reg[15]0, operation Mode is: A''*(B:0x31e).
-DSP Report: register shift_reg_reg[14] is absorbed into DSP mul_reg_reg[15]0.
-DSP Report: register shift_reg_reg[15] is absorbed into DSP mul_reg_reg[15]0.
-DSP Report: operator mul_reg_reg[15]0 is absorbed into DSP mul_reg_reg[15]0.
-DSP Report: Generating DSP mul_reg_reg[16]0, operation Mode is: A''*(B:0x11).
-DSP Report: register shift_reg_reg[15] is absorbed into DSP mul_reg_reg[16]0.
-DSP Report: register shift_reg_reg[16] is absorbed into DSP mul_reg_reg[16]0.
-DSP Report: operator mul_reg_reg[16]0 is absorbed into DSP mul_reg_reg[16]0.
-DSP Report: Generating DSP mul_reg_reg[17]0, operation Mode is: A''*(B:0x410).
-DSP Report: register shift_reg_reg[16] is absorbed into DSP mul_reg_reg[17]0.
-DSP Report: register shift_reg_reg[17] is absorbed into DSP mul_reg_reg[17]0.
-DSP Report: operator mul_reg_reg[17]0 is absorbed into DSP mul_reg_reg[17]0.
-DSP Report: Generating DSP mul_reg_reg[18]0, operation Mode is: A''*(B:0xf766).
-DSP Report: register shift_reg_reg[17] is absorbed into DSP mul_reg_reg[18]0.
-DSP Report: register shift_reg_reg[18] is absorbed into DSP mul_reg_reg[18]0.
-DSP Report: operator mul_reg_reg[18]0 is absorbed into DSP mul_reg_reg[18]0.
-DSP Report: Generating DSP mul_reg_reg[19]0, operation Mode is: A''*(B:0xfcc2).
-DSP Report: register shift_reg_reg[18] is absorbed into DSP mul_reg_reg[19]0.
-DSP Report: register shift_reg_reg[19] is absorbed into DSP mul_reg_reg[19]0.
-DSP Report: operator mul_reg_reg[19]0 is absorbed into DSP mul_reg_reg[19]0.
-DSP Report: Generating DSP mul_reg_reg[20]0, operation Mode is: A''*(B:0x1730).
-DSP Report: register shift_reg_reg[19] is absorbed into DSP mul_reg_reg[20]0.
-DSP Report: register shift_reg_reg[20] is absorbed into DSP mul_reg_reg[20]0.
-DSP Report: operator mul_reg_reg[20]0 is absorbed into DSP mul_reg_reg[20]0.
-DSP Report: Generating DSP mul_reg_reg[21]0, operation Mode is: A''*(B:0xeeb3).
-DSP Report: register shift_reg_reg[20] is absorbed into DSP mul_reg_reg[21]0.
-DSP Report: register shift_reg_reg[21] is absorbed into DSP mul_reg_reg[21]0.
-DSP Report: operator mul_reg_reg[21]0 is absorbed into DSP mul_reg_reg[21]0.
-DSP Report: Generating DSP mul_reg_reg[22]0, operation Mode is: A''*(B:0xea68).
-DSP Report: register shift_reg_reg[21] is absorbed into DSP mul_reg_reg[22]0.
-DSP Report: register shift_reg_reg[22] is absorbed into DSP mul_reg_reg[22]0.
-DSP Report: operator mul_reg_reg[22]0 is absorbed into DSP mul_reg_reg[22]0.
-DSP Report: Generating DSP mul_reg_reg[23]0, operation Mode is: A''*(B:0x2dac).
-DSP Report: register shift_reg_reg[22] is absorbed into DSP mul_reg_reg[23]0.
-DSP Report: register shift_reg_reg[23] is absorbed into DSP mul_reg_reg[23]0.
-DSP Report: operator mul_reg_reg[23]0 is absorbed into DSP mul_reg_reg[23]0.
-DSP Report: Generating DSP mul_reg_reg[24]0, operation Mode is: A''*(B:0xf57a).
-DSP Report: register shift_reg_reg[23] is absorbed into DSP mul_reg_reg[24]0.
-DSP Report: register shift_reg_reg[24] is absorbed into DSP mul_reg_reg[24]0.
-DSP Report: operator mul_reg_reg[24]0 is absorbed into DSP mul_reg_reg[24]0.
-DSP Report: Generating DSP mul_reg_reg[25]0, operation Mode is: A''*(B:0xcd9b).
-DSP Report: register shift_reg_reg[24] is absorbed into DSP mul_reg_reg[25]0.
-DSP Report: register shift_reg_reg[25] is absorbed into DSP mul_reg_reg[25]0.
-DSP Report: operator mul_reg_reg[25]0 is absorbed into DSP mul_reg_reg[25]0.
-DSP Report: Generating DSP mul_reg_reg[26]0, operation Mode is: A''*(B:0x3731).
-DSP Report: register shift_reg_reg[25] is absorbed into DSP mul_reg_reg[26]0.
-DSP Report: register shift_reg_reg[26] is absorbed into DSP mul_reg_reg[26]0.
-DSP Report: operator mul_reg_reg[26]0 is absorbed into DSP mul_reg_reg[26]0.
-DSP Report: Generating DSP mul_reg_reg[27]0, operation Mode is: A''*(B:0xdd7).
-DSP Report: register shift_reg_reg[26] is absorbed into DSP mul_reg_reg[27]0.
-DSP Report: register shift_reg_reg[27] is absorbed into DSP mul_reg_reg[27]0.
-DSP Report: operator mul_reg_reg[27]0 is absorbed into DSP mul_reg_reg[27]0.
-DSP Report: Generating DSP mul_reg_reg[28]0, operation Mode is: A''*(B:0xb74e).
-DSP Report: register shift_reg_reg[27] is absorbed into DSP mul_reg_reg[28]0.
-DSP Report: register shift_reg_reg[28] is absorbed into DSP mul_reg_reg[28]0.
-DSP Report: operator mul_reg_reg[28]0 is absorbed into DSP mul_reg_reg[28]0.
-DSP Report: Generating DSP mul_reg_reg[29]0, operation Mode is: A''*(B:0x2a15).
-DSP Report: register shift_reg_reg[28] is absorbed into DSP mul_reg_reg[29]0.
-DSP Report: register shift_reg_reg[29] is absorbed into DSP mul_reg_reg[29]0.
-DSP Report: operator mul_reg_reg[29]0 is absorbed into DSP mul_reg_reg[29]0.
-DSP Report: Generating DSP mul_reg_reg[30]0, operation Mode is: A''*(B:0x2a15).
-DSP Report: register shift_reg_reg[29] is absorbed into DSP mul_reg_reg[30]0.
-DSP Report: register shift_reg_reg[30] is absorbed into DSP mul_reg_reg[30]0.
-DSP Report: operator mul_reg_reg[30]0 is absorbed into DSP mul_reg_reg[30]0.
-DSP Report: Generating DSP mul_reg_reg[31]0, operation Mode is: A''*(B:0xb74e).
-DSP Report: register shift_reg_reg[30] is absorbed into DSP mul_reg_reg[31]0.
-DSP Report: register shift_reg_reg[31] is absorbed into DSP mul_reg_reg[31]0.
-DSP Report: operator mul_reg_reg[31]0 is absorbed into DSP mul_reg_reg[31]0.
-DSP Report: Generating DSP mul_reg_reg[32]0, operation Mode is: A''*(B:0xdd7).
-DSP Report: register shift_reg_reg[31] is absorbed into DSP mul_reg_reg[32]0.
-DSP Report: register shift_reg_reg[32] is absorbed into DSP mul_reg_reg[32]0.
-DSP Report: operator mul_reg_reg[32]0 is absorbed into DSP mul_reg_reg[32]0.
-DSP Report: Generating DSP mul_reg_reg[33]0, operation Mode is: A''*(B:0x3731).
-DSP Report: register shift_reg_reg[32] is absorbed into DSP mul_reg_reg[33]0.
-DSP Report: register shift_reg_reg[33] is absorbed into DSP mul_reg_reg[33]0.
-DSP Report: operator mul_reg_reg[33]0 is absorbed into DSP mul_reg_reg[33]0.
-DSP Report: Generating DSP mul_reg_reg[34]0, operation Mode is: A''*(B:0xcd9b).
-DSP Report: register shift_reg_reg[33] is absorbed into DSP mul_reg_reg[34]0.
-DSP Report: register shift_reg_reg[34] is absorbed into DSP mul_reg_reg[34]0.
-DSP Report: operator mul_reg_reg[34]0 is absorbed into DSP mul_reg_reg[34]0.
-DSP Report: Generating DSP mul_reg_reg[35]0, operation Mode is: A''*(B:0xf57a).
-DSP Report: register shift_reg_reg[34] is absorbed into DSP mul_reg_reg[35]0.
-DSP Report: register shift_reg_reg[35] is absorbed into DSP mul_reg_reg[35]0.
-DSP Report: operator mul_reg_reg[35]0 is absorbed into DSP mul_reg_reg[35]0.
-DSP Report: Generating DSP mul_reg_reg[36]0, operation Mode is: A''*(B:0x2dac).
-DSP Report: register shift_reg_reg[35] is absorbed into DSP mul_reg_reg[36]0.
-DSP Report: register shift_reg_reg[36] is absorbed into DSP mul_reg_reg[36]0.
-DSP Report: operator mul_reg_reg[36]0 is absorbed into DSP mul_reg_reg[36]0.
-DSP Report: Generating DSP mul_reg_reg[37]0, operation Mode is: A''*(B:0xea68).
-DSP Report: register shift_reg_reg[36] is absorbed into DSP mul_reg_reg[37]0.
-DSP Report: register shift_reg_reg[37] is absorbed into DSP mul_reg_reg[37]0.
-DSP Report: operator mul_reg_reg[37]0 is absorbed into DSP mul_reg_reg[37]0.
-DSP Report: Generating DSP mul_reg_reg[38]0, operation Mode is: A''*(B:0xeeb3).
-DSP Report: register shift_reg_reg[37] is absorbed into DSP mul_reg_reg[38]0.
-DSP Report: register shift_reg_reg[38] is absorbed into DSP mul_reg_reg[38]0.
-DSP Report: operator mul_reg_reg[38]0 is absorbed into DSP mul_reg_reg[38]0.
-DSP Report: Generating DSP mul_reg_reg[39]0, operation Mode is: A''*(B:0x1730).
-DSP Report: register shift_reg_reg[38] is absorbed into DSP mul_reg_reg[39]0.
-DSP Report: register shift_reg_reg[39] is absorbed into DSP mul_reg_reg[39]0.
-DSP Report: operator mul_reg_reg[39]0 is absorbed into DSP mul_reg_reg[39]0.
-DSP Report: Generating DSP mul_reg_reg[40]0, operation Mode is: A''*(B:0xfcc2).
-DSP Report: register shift_reg_reg[39] is absorbed into DSP mul_reg_reg[40]0.
-DSP Report: register shift_reg_reg[40] is absorbed into DSP mul_reg_reg[40]0.
-DSP Report: operator mul_reg_reg[40]0 is absorbed into DSP mul_reg_reg[40]0.
-DSP Report: Generating DSP mul_reg_reg[41]0, operation Mode is: A''*(B:0xf766).
-DSP Report: register shift_reg_reg[40] is absorbed into DSP mul_reg_reg[41]0.
-DSP Report: register shift_reg_reg[41] is absorbed into DSP mul_reg_reg[41]0.
-DSP Report: operator mul_reg_reg[41]0 is absorbed into DSP mul_reg_reg[41]0.
-DSP Report: Generating DSP mul_reg_reg[42]0, operation Mode is: A''*(B:0x410).
-DSP Report: register shift_reg_reg[41] is absorbed into DSP mul_reg_reg[42]0.
-DSP Report: register shift_reg_reg[42] is absorbed into DSP mul_reg_reg[42]0.
-DSP Report: operator mul_reg_reg[42]0 is absorbed into DSP mul_reg_reg[42]0.
-DSP Report: Generating DSP mul_reg_reg[43]0, operation Mode is: A''*(B:0x11).
-DSP Report: register shift_reg_reg[42] is absorbed into DSP mul_reg_reg[43]0.
-DSP Report: register shift_reg_reg[43] is absorbed into DSP mul_reg_reg[43]0.
-DSP Report: operator mul_reg_reg[43]0 is absorbed into DSP mul_reg_reg[43]0.
-DSP Report: Generating DSP mul_reg_reg[44]0, operation Mode is: A''*(B:0x31e).
-DSP Report: register shift_reg_reg[43] is absorbed into DSP mul_reg_reg[44]0.
-DSP Report: register shift_reg_reg[44] is absorbed into DSP mul_reg_reg[44]0.
-DSP Report: operator mul_reg_reg[44]0 is absorbed into DSP mul_reg_reg[44]0.
-DSP Report: Generating DSP mul_reg_reg[45]0, operation Mode is: A''*(B:0xfccd).
-DSP Report: register shift_reg_reg[44] is absorbed into DSP mul_reg_reg[45]0.
-DSP Report: register shift_reg_reg[45] is absorbed into DSP mul_reg_reg[45]0.
-DSP Report: operator mul_reg_reg[45]0 is absorbed into DSP mul_reg_reg[45]0.
-DSP Report: Generating DSP mul_reg_reg[46]0, operation Mode is: A''*(B:0xfbe0).
-DSP Report: register shift_reg_reg[45] is absorbed into DSP mul_reg_reg[46]0.
-DSP Report: register shift_reg_reg[46] is absorbed into DSP mul_reg_reg[46]0.
-DSP Report: operator mul_reg_reg[46]0 is absorbed into DSP mul_reg_reg[46]0.
-DSP Report: Generating DSP mul_reg_reg[47]0, operation Mode is: A''*(B:0x825).
-DSP Report: register shift_reg_reg[46] is absorbed into DSP mul_reg_reg[47]0.
-DSP Report: register shift_reg_reg[47] is absorbed into DSP mul_reg_reg[47]0.
-DSP Report: operator mul_reg_reg[47]0 is absorbed into DSP mul_reg_reg[47]0.
-DSP Report: Generating DSP mul_reg_reg[48]0, operation Mode is: A''*(B:0xfe5a).
-DSP Report: register shift_reg_reg[47] is absorbed into DSP mul_reg_reg[48]0.
-DSP Report: register shift_reg_reg[48] is absorbed into DSP mul_reg_reg[48]0.
-DSP Report: operator mul_reg_reg[48]0 is absorbed into DSP mul_reg_reg[48]0.
-DSP Report: Generating DSP mul_reg_reg[49]0, operation Mode is: A''*(B:0xf92d).
-DSP Report: register shift_reg_reg[48] is absorbed into DSP mul_reg_reg[49]0.
-DSP Report: register shift_reg_reg[49] is absorbed into DSP mul_reg_reg[49]0.
-DSP Report: operator mul_reg_reg[49]0 is absorbed into DSP mul_reg_reg[49]0.
-DSP Report: Generating DSP mul_reg_reg[50]0, operation Mode is: A''*(B:0x63b).
-DSP Report: register shift_reg_reg[49] is absorbed into DSP mul_reg_reg[50]0.
-DSP Report: register shift_reg_reg[50] is absorbed into DSP mul_reg_reg[50]0.
-DSP Report: operator mul_reg_reg[50]0 is absorbed into DSP mul_reg_reg[50]0.
-DSP Report: Generating DSP mul_reg_reg[51]0, operation Mode is: A''*(B:0x141).
-DSP Report: register shift_reg_reg[50] is absorbed into DSP mul_reg_reg[51]0.
-DSP Report: register shift_reg_reg[51] is absorbed into DSP mul_reg_reg[51]0.
-DSP Report: operator mul_reg_reg[51]0 is absorbed into DSP mul_reg_reg[51]0.
-DSP Report: Generating DSP mul_reg_reg[52]0, operation Mode is: A''*(B:0xfab4).
-DSP Report: register shift_reg_reg[51] is absorbed into DSP mul_reg_reg[52]0.
-DSP Report: register shift_reg_reg[52] is absorbed into DSP mul_reg_reg[52]0.
-DSP Report: operator mul_reg_reg[52]0 is absorbed into DSP mul_reg_reg[52]0.
-DSP Report: Generating DSP mul_reg_reg[53]0, operation Mode is: A''*(B:0x25f).
-DSP Report: register shift_reg_reg[52] is absorbed into DSP mul_reg_reg[53]0.
-DSP Report: register shift_reg_reg[53] is absorbed into DSP mul_reg_reg[53]0.
-DSP Report: operator mul_reg_reg[53]0 is absorbed into DSP mul_reg_reg[53]0.
-DSP Report: Generating DSP mul_reg_reg[54]0, operation Mode is: A''*(B:0x1d9).
-DSP Report: register shift_reg_reg[53] is absorbed into DSP mul_reg_reg[54]0.
-DSP Report: register shift_reg_reg[54] is absorbed into DSP mul_reg_reg[54]0.
-DSP Report: operator mul_reg_reg[54]0 is absorbed into DSP mul_reg_reg[54]0.
-DSP Report: Generating DSP mul_reg_reg[55]0, operation Mode is: A''*(B:0xfdb1).
-DSP Report: register shift_reg_reg[54] is absorbed into DSP mul_reg_reg[55]0.
-DSP Report: register shift_reg_reg[55] is absorbed into DSP mul_reg_reg[55]0.
-DSP Report: operator mul_reg_reg[55]0 is absorbed into DSP mul_reg_reg[55]0.
-DSP Report: Generating DSP mul_reg_reg[56]0, operation Mode is: A''*(B:0x63).
-DSP Report: register shift_reg_reg[55] is absorbed into DSP mul_reg_reg[56]0.
-DSP Report: register shift_reg_reg[56] is absorbed into DSP mul_reg_reg[56]0.
-DSP Report: operator mul_reg_reg[56]0 is absorbed into DSP mul_reg_reg[56]0.
-DSP Report: Generating DSP mul_reg_reg[57]0, operation Mode is: A''*(B:0xd6).
-DSP Report: register shift_reg_reg[56] is absorbed into DSP mul_reg_reg[57]0.
-DSP Report: register shift_reg_reg[57] is absorbed into DSP mul_reg_reg[57]0.
-DSP Report: operator mul_reg_reg[57]0 is absorbed into DSP mul_reg_reg[57]0.
-DSP Report: Generating DSP mul_reg_reg[58]0, operation Mode is: A''*(B:0xffb3).
-DSP Report: register shift_reg_reg[57] is absorbed into DSP mul_reg_reg[58]0.
-DSP Report: register shift_reg_reg[58] is absorbed into DSP mul_reg_reg[58]0.
-DSP Report: operator mul_reg_reg[58]0 is absorbed into DSP mul_reg_reg[58]0.
-DSP Report: Generating DSP mul_reg_reg[59]0, operation Mode is: A''*(B:0xffff).
-DSP Report: register shift_reg_reg[58] is absorbed into DSP mul_reg_reg[59]0.
-DSP Report: register shift_reg_reg[59] is absorbed into DSP mul_reg_reg[59]0.
-DSP Report: operator mul_reg_reg[59]0 is absorbed into DSP mul_reg_reg[59]0.
-WARNING: [Synth 8-3917] design Parallel_FIR_filter has port data_o_valid driven by constant 1
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP Q_output15, operation Mode is: A*B.
+DSP Report: operator Q_output15 is absorbed into DSP Q_output15.
+DSP Report: Generating DSP Q_output12, operation Mode is: A*B.
+DSP Report: operator Q_output12 is absorbed into DSP Q_output12.
+DSP Report: Generating DSP Q_output11, operation Mode is: A*B.
+DSP Report: operator Q_output11 is absorbed into DSP Q_output11.
+DSP Report: Generating DSP Q_output6, operation Mode is: A*B.
+DSP Report: operator Q_output6 is absorbed into DSP Q_output6.
+DSP Report: Generating DSP Q_output3, operation Mode is: A*B.
+DSP Report: operator Q_output3 is absorbed into DSP Q_output3.
+DSP Report: Generating DSP Q_output2, operation Mode is: A*B.
+DSP Report: operator Q_output2 is absorbed into DSP Q_output2.
+DSP Report: Generating DSP Q_output1, operation Mode is: (A:0x5555)*B.
+DSP Report: operator Q_output1 is absorbed into DSP Q_output1.
+DSP Report: Generating DSP Q_output0, operation Mode is: PCIN+(A:0x6aaa)*B.
+DSP Report: operator Q_output0 is absorbed into DSP Q_output0.
+DSP Report: operator Q_output14 is absorbed into DSP Q_output0.
+DSP Report: Generating DSP Q_output0, operation Mode is: PCIN+A*(B:0x2666).
+DSP Report: operator Q_output0 is absorbed into DSP Q_output0.
+DSP Report: operator Q_output2 is absorbed into DSP Q_output0.
+DSP Report: Generating DSP Q_output5, operation Mode is: A*B.
+DSP Report: operator Q_output5 is absorbed into DSP Q_output5.
+DSP Report: Generating DSP Q_output0, operation Mode is: C+A*(B:0x1999).
+DSP Report: operator Q_output0 is absorbed into DSP Q_output0.
+DSP Report: operator Q_output4 is absorbed into DSP Q_output0.
+DSP Report: Generating DSP Q_output0, operation Mode is: PCIN+A*(B:0x1333).
+DSP Report: operator Q_output0 is absorbed into DSP Q_output0.
+DSP Report: operator Q_output5 is absorbed into DSP Q_output0.
+DSP Report: Generating DSP Q_output0, operation Mode is: PCIN+(A:0xccd)*B.
+DSP Report: operator Q_output0 is absorbed into DSP Q_output0.
+DSP Report: operator Q_output6 is absorbed into DSP Q_output0.
+DSP Report: Generating DSP Q_output9, operation Mode is: A*B.
+DSP Report: operator Q_output9 is absorbed into DSP Q_output9.
+DSP Report: Generating DSP Q_output8, operation Mode is: A*B.
+DSP Report: operator Q_output8 is absorbed into DSP Q_output8.
+DSP Report: Generating DSP Q_output0, operation Mode is: C+(A:0xccd)*B.
+DSP Report: operator Q_output0 is absorbed into DSP Q_output0.
+DSP Report: operator Q_output9 is absorbed into DSP Q_output0.
+DSP Report: Generating DSP Q_output0, operation Mode is: PCIN+A*(B:0x1333).
+DSP Report: operator Q_output0 is absorbed into DSP Q_output0.
+DSP Report: operator Q_output10 is absorbed into DSP Q_output0.
+DSP Report: Generating DSP Q_output0, operation Mode is: PCIN+A*(B:0x1999).
+DSP Report: operator Q_output0 is absorbed into DSP Q_output0.
+DSP Report: operator Q_output11 is absorbed into DSP Q_output0.
+DSP Report: Generating DSP Q_output14, operation Mode is: A*B.
+DSP Report: operator Q_output14 is absorbed into DSP Q_output14.
+DSP Report: Generating DSP Q_output0, operation Mode is: C+A*(B:0x2666).
+DSP Report: operator Q_output0 is absorbed into DSP Q_output0.
+DSP Report: operator Q_output13 is absorbed into DSP Q_output0.
+DSP Report: Generating DSP Q_output0, operation Mode is: PCIN+(A:0x5555)*B.
+DSP Report: operator Q_output0 is absorbed into DSP Q_output0.
+DSP Report: operator Q_output14 is absorbed into DSP Q_output0.
+DSP Report: Generating DSP I_output15, operation Mode is: A*B.
+DSP Report: operator I_output15 is absorbed into DSP I_output15.
+DSP Report: Generating DSP I_output12, operation Mode is: A*B.
+DSP Report: operator I_output12 is absorbed into DSP I_output12.
+DSP Report: Generating DSP I_output11, operation Mode is: A*B.
+DSP Report: operator I_output11 is absorbed into DSP I_output11.
+DSP Report: Generating DSP I_output6, operation Mode is: A*B.
+DSP Report: operator I_output6 is absorbed into DSP I_output6.
+DSP Report: Generating DSP I_output3, operation Mode is: A*B.
+DSP Report: operator I_output3 is absorbed into DSP I_output3.
+DSP Report: Generating DSP I_output2, operation Mode is: A*B.
+DSP Report: operator I_output2 is absorbed into DSP I_output2.
+DSP Report: Generating DSP I_output1, operation Mode is: (A:0x5555)*B.
+DSP Report: operator I_output1 is absorbed into DSP I_output1.
+DSP Report: Generating DSP I_output0, operation Mode is: PCIN+(A:0x6aaa)*B.
+DSP Report: operator I_output0 is absorbed into DSP I_output0.
+DSP Report: operator I_output14 is absorbed into DSP I_output0.
+DSP Report: Generating DSP I_output0, operation Mode is: PCIN+A*(B:0x2666).
+DSP Report: operator I_output0 is absorbed into DSP I_output0.
+DSP Report: operator I_output2 is absorbed into DSP I_output0.
+DSP Report: Generating DSP I_output5, operation Mode is: A*B.
+DSP Report: operator I_output5 is absorbed into DSP I_output5.
+DSP Report: Generating DSP I_output0, operation Mode is: C+A*(B:0x1999).
+DSP Report: operator I_output0 is absorbed into DSP I_output0.
+DSP Report: operator I_output4 is absorbed into DSP I_output0.
+DSP Report: Generating DSP I_output0, operation Mode is: PCIN+A*(B:0x1333).
+DSP Report: operator I_output0 is absorbed into DSP I_output0.
+DSP Report: operator I_output5 is absorbed into DSP I_output0.
+DSP Report: Generating DSP I_output0, operation Mode is: PCIN+(A:0xccd)*B.
+DSP Report: operator I_output0 is absorbed into DSP I_output0.
+DSP Report: operator I_output6 is absorbed into DSP I_output0.
+DSP Report: Generating DSP I_output9, operation Mode is: A*B.
+DSP Report: operator I_output9 is absorbed into DSP I_output9.
+DSP Report: Generating DSP I_output8, operation Mode is: A*B.
+DSP Report: operator I_output8 is absorbed into DSP I_output8.
+DSP Report: Generating DSP I_output0, operation Mode is: C+(A:0xccd)*B.
+DSP Report: operator I_output0 is absorbed into DSP I_output0.
+DSP Report: operator I_output9 is absorbed into DSP I_output0.
+DSP Report: Generating DSP I_output0, operation Mode is: PCIN+A*(B:0x1333).
+DSP Report: operator I_output0 is absorbed into DSP I_output0.
+DSP Report: operator I_output10 is absorbed into DSP I_output0.
+DSP Report: Generating DSP I_output0, operation Mode is: PCIN+A*(B:0x1999).
+DSP Report: operator I_output0 is absorbed into DSP I_output0.
+DSP Report: operator I_output11 is absorbed into DSP I_output0.
+DSP Report: Generating DSP I_output14, operation Mode is: A*B.
+DSP Report: operator I_output14 is absorbed into DSP I_output14.
+DSP Report: Generating DSP I_output0, operation Mode is: C+A*(B:0x2666).
+DSP Report: operator I_output0 is absorbed into DSP I_output0.
+DSP Report: operator I_output13 is absorbed into DSP I_output0.
+DSP Report: Generating DSP I_output0, operation Mode is: PCIN+(A:0x5555)*B.
+DSP Report: operator I_output0 is absorbed into DSP I_output0.
+DSP Report: operator I_output14 is absorbed into DSP I_output0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:49 . Memory (MB): peak = 2568.324 ; gain = 1011.051 ; free physical = 426 ; free virtual = 99348
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 3442.582 ; gain = 345.605 ; free physical = 17921 ; free virtual = 108934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
-DSP: Preliminary Mapping  Report (see note below)
-+--------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name         | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+--------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Parallel_FIR_filter | A2*(B:0xffff)  | 16     | 16     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xffb3) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xd6)   | 16     | 8      | -      | -      | 24     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x63)   | 16     | 7      | -      | -      | 23     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xfdb1) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x1d9)  | 16     | 9      | -      | -      | 25     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x25f)  | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xfab4) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x141)  | 16     | 9      | -      | -      | 25     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x63b)  | 16     | 11     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xf92d) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xfe5a) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x825)  | 16     | 12     | -      | -      | 28     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xfbe0) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xfccd) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x31e)  | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x11)   | 16     | 5      | -      | -      | 21     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x410)  | 16     | 11     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xf766) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xfcc2) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x1730) | 16     | 13     | -      | -      | 29     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xeeb3) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xea68) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x2dac) | 16     | 14     | -      | -      | 30     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xf57a) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xcd9b) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x3731) | 16     | 14     | -      | -      | 30     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xdd7)  | 16     | 12     | -      | -      | 28     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xb74e) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x2a15) | 16     | 14     | -      | -      | 30     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x2a15) | 16     | 14     | -      | -      | 30     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xb74e) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xdd7)  | 16     | 12     | -      | -      | 28     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x3731) | 16     | 14     | -      | -      | 30     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xcd9b) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xf57a) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x2dac) | 16     | 14     | -      | -      | 30     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xea68) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xeeb3) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x1730) | 16     | 13     | -      | -      | 29     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xfcc2) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xf766) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x410)  | 16     | 11     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x11)   | 16     | 5      | -      | -      | 21     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x31e)  | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xfccd) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xfbe0) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x825)  | 16     | 12     | -      | -      | 28     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xfe5a) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xf92d) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x63b)  | 16     | 11     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x141)  | 16     | 9      | -      | -      | 25     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xfab4) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x25f)  | 16     | 10     | -      | -      | 26     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x1d9)  | 16     | 9      | -      | -      | 25     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xfdb1) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0x63)   | 16     | 7      | -      | -      | 23     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xd6)   | 16     | 8      | -      | -      | 24     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xffb3) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A''*(B:0xffff) | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-+--------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++--------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name         | DSP Mapping       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Parallel_FIR_filter | A*B               | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | A*B               | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | A*B               | 24     | 12     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | A*B               | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | A*B               | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | A*B               | 24     | 12     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | (A:0x5555)*B      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+(A:0x6aaa)*B | 16     | 12     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+A*(B:0x2666) | 16     | 15     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | A*B               | 24     | 12     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | C+A*(B:0x1999)    | 16     | 14     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+A*(B:0x1333) | 16     | 14     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+(A:0xccd)*B  | 13     | 12     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | A*B               | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | A*B               | 24     | 12     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | C+(A:0xccd)*B     | 12     | 13     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+A*(B:0x1333) | 16     | 14     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+A*(B:0x1999) | 16     | 14     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | A*B               | 24     | 12     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | C+A*(B:0x2666)    | 16     | 15     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+(A:0x5555)*B | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | A*B               | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | A*B               | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | A*B               | 24     | 12     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | A*B               | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | A*B               | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | A*B               | 24     | 12     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | (A:0x5555)*B      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+(A:0x6aaa)*B | 16     | 12     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+A*(B:0x2666) | 16     | 15     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | A*B               | 24     | 12     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | C+A*(B:0x1999)    | 16     | 14     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+A*(B:0x1333) | 16     | 14     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+(A:0xccd)*B  | 13     | 12     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | A*B               | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | A*B               | 24     | 12     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | C+(A:0xccd)*B     | 12     | 13     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+A*(B:0x1333) | 16     | 14     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+A*(B:0x1999) | 16     | 14     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | A*B               | 24     | 12     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | C+A*(B:0x2666)    | 16     | 15     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+(A:0x5555)*B | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++--------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:49 . Memory (MB): peak = 2568.328 ; gain = 1011.055 ; free physical = 428 ; free virtual = 99349
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 3442.582 ; gain = 345.605 ; free physical = 17920 ; free virtual = 108933
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:79]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:51 . Memory (MB): peak = 2568.328 ; gain = 1011.055 ; free physical = 428 ; free virtual = 99350
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 3450.590 ; gain = 353.613 ; free physical = 17920 ; free virtual = 108933
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -627,50 +288,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:52 . Memory (MB): peak = 2568.328 ; gain = 1011.055 ; free physical = 430 ; free virtual = 99352
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3450.590 ; gain = 353.613 ; free physical = 17919 ; free virtual = 108932
 ---------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:52 . Memory (MB): peak = 2568.328 ; gain = 1011.055 ; free physical = 430 ; free virtual = 99352
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3450.590 ; gain = 353.613 ; free physical = 17919 ; free virtual = 108932
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:52 . Memory (MB): peak = 2568.328 ; gain = 1011.055 ; free physical = 430 ; free virtual = 99352
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3450.590 ; gain = 353.613 ; free physical = 17919 ; free virtual = 108932
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:52 . Memory (MB): peak = 2568.328 ; gain = 1011.055 ; free physical = 430 ; free virtual = 99352
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3450.590 ; gain = 353.613 ; free physical = 17919 ; free virtual = 108932
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:52 . Memory (MB): peak = 2568.328 ; gain = 1011.055 ; free physical = 430 ; free virtual = 99352
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3450.590 ; gain = 353.613 ; free physical = 17919 ; free virtual = 108932
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:52 . Memory (MB): peak = 2568.328 ; gain = 1011.055 ; free physical = 430 ; free virtual = 99352
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3450.590 ; gain = 353.613 ; free physical = 17919 ; free virtual = 108932
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -683,55 +331,59 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+--------+------+
-|      |Cell    |Count |
-+------+--------+------+
-|1     |BUFG    |     1|
-|2     |CARRY8  |    58|
-|3     |DSP48E2 |    60|
-|4     |LUT2    |    61|
-|5     |LUT3    |  1114|
-|6     |LUT4    |   416|
-|7     |LUT5    |   333|
-|8     |LUT6    |   322|
-|9     |FDCE    |    60|
-|10    |FDRE    |   976|
-|11    |IBUF    |    19|
-|12    |OBUF    |    17|
-+------+--------+------+
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |BUFG            |     1|
+|2     |CARRY8          |    24|
+|3     |DSP48E2         |    40|
+|4     |DSP_ALU         |     2|
+|5     |DSP_A_B_DATA    |     2|
+|6     |DSP_C_DATA      |     2|
+|7     |DSP_MULTIPLIER  |     2|
+|8     |DSP_M_DATA      |     2|
+|9     |DSP_OUTPUT      |     2|
+|10    |DSP_PREADD      |     2|
+|11    |DSP_PREADD_DATA |     2|
+|12    |LUT1            |     8|
+|13    |LUT2            |   213|
+|14    |FDCE            |   122|
+|15    |IBUF            |    28|
+|16    |OBUF            |    66|
++------+----------------+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |  3437|
-+------+---------+-------+------+
++------+---------------+-----------------------+------+
+|      |Instance       |Module                 |Cells |
++------+---------------+-----------------------+------+
+|1     |top            |                       |   518|
+|2     |  Q_output0__8 |Q_output0__8_funnel    |     8|
+|3     |  I_output0__8 |Q_output0__8_funnel__1 |     8|
++------+---------------+-----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:52 . Memory (MB): peak = 2568.328 ; gain = 1011.055 ; free physical = 430 ; free virtual = 99352
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3450.590 ; gain = 353.613 ; free physical = 17919 ; free virtual = 108932
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:52 . Memory (MB): peak = 2568.328 ; gain = 1011.055 ; free physical = 433 ; free virtual = 99355
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:52 . Memory (MB): peak = 2568.332 ; gain = 1011.055 ; free physical = 446 ; free virtual = 99368
+Synthesis finished with 0 errors, 0 critical warnings and 28 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3450.590 ; gain = 353.613 ; free physical = 17922 ; free virtual = 108935
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3450.598 ; gain = 353.613 ; free physical = 17922 ; free virtual = 108935
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 138 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3462.559 ; gain = 0.000 ; free physical = 18017 ; free virtual = 109030
+INFO: [Netlist 29-17] Analyzing 95 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-WARNING: [Netlist 29-101] Netlist 'Parallel_FIR_filter' is not ideal for floorplanning, since the cellview 'Parallel_FIR_filter' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2671.074 ; gain = 0.000 ; free physical = 373 ; free virtual = 99272
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3622.477 ; gain = 0.000 ; free physical = 17898 ; free virtual = 108911
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 80 instances were transformed.
-  BUFG => BUFGCE: 1 instances
-  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 60 instances
-  IBUF => IBUF (IBUFCTRL, INBUF): 19 instances
+  A total of 71 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 42 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 28 instances
 
+Synth Design complete, checksum: 27b8dfe5
 INFO: [Common 17-83] Releasing license: Synthesis
-177 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+18 Infos, 28 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:01:03 . Memory (MB): peak = 2671.074 ; gain = 1129.941 ; free physical = 474 ; free virtual = 99374
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2671.074 ; gain = 0.000 ; free physical = 474 ; free virtual = 99374
-WARNING: [Constraints 18-5210] No constraints selected for write.
-Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 3622.477 ; gain = 555.707 ; free physical = 17951 ; free virtual = 108964
 INFO: [Common 17-1381] The checkpoint '/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.runs/synth_1/Parallel_FIR_filter.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Parallel_FIR_filter_utilization_synth.rpt -pb Parallel_FIR_filter_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Jun 17 11:07:10 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar  4 12:18:52 2025...

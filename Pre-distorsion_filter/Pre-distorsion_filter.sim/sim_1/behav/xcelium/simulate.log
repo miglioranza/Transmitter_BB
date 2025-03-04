@@ -11,9 +11,13 @@ xcelium> catch {probe -create -shm -all -variables -depth 1 -waveform} msg
 0
 xcelium> 
 xcelium> run 1000ns
-ASSERT/FAILURE (time 140 NS) from process :stim_process (architecture xil_defaultlib.Parallel_FIR_filter_TB:Behavioral)
-End of simulation
-Assertion at 140 NS + 0
+xmsim: *E,TRASMM: array shape mismatch - no matching element.
+          File: /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd, line = 92, pos = 25
+         Scope: :uut:power
+          Time: 45 NS + 1
+
 xcelium> 
+xcelium> run
+xmsim: *E,RNNOMO: Cannot continue simulation due to a previous error.
 xcelium> ^C
 xcelium> exit

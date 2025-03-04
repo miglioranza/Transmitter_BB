@@ -1,0 +1,4 @@
+Running: xsim.dir/Parallel_FIR_filter_TB_func_synth/xsimk -simmode gui -wdb Parallel_FIR_filter_TB_func_synth.wdb -simrunnum 0 -socket 41141
+Design successfully loaded
+Design Loading Memory Usage: 55792 KB (Peak: 55792 KB)
+Design Loading CPU Usage: 100 ms

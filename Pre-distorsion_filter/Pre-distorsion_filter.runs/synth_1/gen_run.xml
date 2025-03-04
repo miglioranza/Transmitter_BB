@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu28dr-ffvg1517-2-e" LaunchTime="1726585868">
+<GenRun Id="synth_1" LaunchPart="xczu28dr-ffvg1517-2-e" LaunchTime="1741087083">
+  <File Type="VDS-TIMING-PB" Name="Parallel_FIR_filter_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Parallel_FIR_filter_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="Parallel_FIR_filter.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="Parallel_FIR_filter_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="Parallel_FIR_filter_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="Parallel_FIR_filter_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="Parallel_FIR_filter.vds"/>
   <File Type="REPORTS-TCL" Name="Parallel_FIR_filter_reports.tcl"/>
   <File Type="PA-TCL" Name="Parallel_FIR_filter.tcl"/>
-  <File Type="RDS-DCP" Name="Parallel_FIR_filter.dcp"/>
-  <File Type="RDS-RDS" Name="Parallel_FIR_filter.vds"/>
-  <File Type="RDS-UTIL" Name="Parallel_FIR_filter_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="Parallel_FIR_filter_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/Parallel_FIR_filter.vhd">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../fir_filter.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
