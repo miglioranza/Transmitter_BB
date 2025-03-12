@@ -117,19 +117,19 @@ begin
         
         data_in <= x"12345678" ;      
         data_in_valid <= '1';    
-        wait for clk_period;
+--        wait until data_out_ready = '1';
 --        data_in_valid <= '0';
                 
---        wait for clk_period * 10;
-
+        wait for clk_period ;
+       
 --        seed <= "1100110010011100111001001001001";
 --        control_enable <= '1' ;
 --        wait for clk_period;
 --        control_enable <= '0' ;
-        
+        wait until data_out_ready = '1';
         data_in <= x"922912F2";
-        data_in_valid <= '1';
-        wait for clk_period;
+--        data_in_valid <= '1';
+        wait until data_out_ready = '1';
 --        data_in_valid <= '0';
         
 --        wait for clk_period * 10;
@@ -137,68 +137,70 @@ begin
 --        seed <= x"933912F2";
         data_in <= x"3208EC47";
 --        data_in_valid <= '1';
-        wait for clk_period;
+        wait until data_out_ready = '1';
                
         data_in <= x"922912F0";
-        wait  for clk_period;
+        wait until data_out_ready = '1';
 
         data_in <= x"1337ABCD";
-        wait for clk_period;
+        wait until data_out_ready = '1';
 
         data_in <= x"FADE1234";
-        wait for clk_period;
+        wait until data_out_ready = '1';
 
         data_in <= x"5678EF90";
-        wait for clk_period;
+        wait until data_out_ready = '1';
 
         data_in <= x"ABCD9876";
-        wait for clk_period;
+        wait until data_out_ready = '1';
 
         data_in <= x"01234567";
-        wait for clk_period;
+        wait until data_out_ready = '1';
 
         data_in <= x"89ABCDEF";
-        wait for clk_period;
+        wait until data_out_ready = '1';
 
         data_in <= x"DEADBEEF";
-        wait for clk_period;
+        wait until data_out_ready = '1';
 
         data_in <= x"CAFE1234";
-        wait for clk_period;
+        wait until data_out_ready = '1';
 
         data_in <= x"BABE5678";
-        wait for clk_period;
+        wait until data_out_ready = '1';
 
         data_in <= x"FACE9012";
-        wait for clk_period;
+        wait until data_out_ready = '1';
 
         data_in <= x"3456DEFA";
-        wait for clk_period;
+        wait until data_out_ready = '1';
 
         data_in <= x"7890ABCD";
-        wait for clk_period;
+        wait until data_out_ready = '1';
 
         data_in <= x"EF123456";
-        wait for clk_period;
+        wait until data_out_ready = '1';
 
         data_in <= x"9876FEDC";
-        wait for clk_period;
+        wait until data_out_ready = '1';
 
         data_in <= x"5432BA98";
-        wait for clk_period;
+        wait until data_out_ready = '1';
 
         data_in <= x"1ABCDEF0";
-        wait for clk_period;
+        wait until data_out_ready = '1';
 
         data_in <= x"654321AB";
-        wait for clk_period;
+        wait until data_out_ready = '1';
 
         data_in <= x"0FEDCBA9";
-        wait for clk_period;
+        wait until data_out_ready = '1';
 
         data_in <= x"BCDE7890";
-        wait for clk_period;
+        wait until data_out_ready = '1';
         data_in_last <= '1' ;
+        data_in_valid <= '0';    
+
         wait for clk_period * 5;
          
         -- Stop simulation
