@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar  4 12:18:52 2025
+| Date         : Wed Mar 12 09:30:07 2025
 | Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 | Command      : report_utilization -file Parallel_FIR_filter_utilization_synth.rpt -pb Parallel_FIR_filter_utilization_synth.pb
 | Design       : Parallel_FIR_filter
@@ -29,20 +29,22 @@ Table of Contents
 1. CLB Logic
 ------------
 
-+-------------------------+------+-------+------------+-----------+-------+
-|        Site Type        | Used | Fixed | Prohibited | Available | Util% |
-+-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               |  181 |     0 |          0 |    425280 |  0.04 |
-|   LUT as Logic          |  181 |     0 |          0 |    425280 |  0.04 |
-|   LUT as Memory         |    0 |     0 |          0 |    213600 |  0.00 |
-| CLB Registers           |  122 |     0 |          0 |    850560 |  0.01 |
-|   Register as Flip Flop |  122 |     0 |          0 |    850560 |  0.01 |
-|   Register as Latch     |    0 |     0 |          0 |    850560 |  0.00 |
-| CARRY8                  |   24 |     0 |          0 |     53160 |  0.05 |
-| F7 Muxes                |    0 |     0 |          0 |    212640 |  0.00 |
-| F8 Muxes                |    0 |     0 |          0 |    106320 |  0.00 |
-| F9 Muxes                |    0 |     0 |          0 |     53160 |  0.00 |
-+-------------------------+------+-------+------------+-----------+-------+
++----------------------------+------+-------+------------+-----------+-------+
+|          Site Type         | Used | Fixed | Prohibited | Available | Util% |
++----------------------------+------+-------+------------+-----------+-------+
+| CLB LUTs*                  |  143 |     0 |          0 |    425280 |  0.03 |
+|   LUT as Logic             |  119 |     0 |          0 |    425280 |  0.03 |
+|   LUT as Memory            |   24 |     0 |          0 |    213600 |  0.01 |
+|     LUT as Distributed RAM |    0 |     0 |            |           |       |
+|     LUT as Shift Register  |   24 |     0 |            |           |       |
+| CLB Registers              |  266 |     0 |          0 |    850560 |  0.03 |
+|   Register as Flip Flop    |  266 |     0 |          0 |    850560 |  0.03 |
+|   Register as Latch        |    0 |     0 |          0 |    850560 |  0.00 |
+| CARRY8                     |   16 |     0 |          0 |     53160 |  0.03 |
+| F7 Muxes                   |    0 |     0 |          0 |    212640 |  0.00 |
+| F8 Muxes                   |    0 |     0 |          0 |    106320 |  0.00 |
+| F9 Muxes                   |    0 |     0 |          0 |     53160 |  0.00 |
++----------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
 
@@ -59,9 +61,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 122   |          Yes |           - |        Reset |
+| 1     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 0     |          Yes |       Reset |            - |
+| 265   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -85,8 +87,8 @@ Table of Contents
 +----------------+------+-------+------------+-----------+-------+
 |    Site Type   | Used | Fixed | Prohibited | Available | Util% |
 +----------------+------+-------+------------+-----------+-------+
-| DSPs           |   42 |     0 |          0 |      4272 |  0.98 |
-|   DSP48E2 only |   42 |       |            |           |       |
+| DSPs           |   24 |     0 |          0 |      4272 |  0.56 |
+|   DSP48E2 only |   24 |       |            |           |       |
 +----------------+------+-------+------------+-----------+-------+
 
 
@@ -163,14 +165,17 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT2     |  213 |                 CLB |
-| FDCE     |  122 |            Register |
+| FDRE     |  265 |            Register |
+| LUT2     |  117 |                 CLB |
 | OBUF     |   66 |                 I/O |
-| DSP48E2  |   42 |          Arithmetic |
 | INBUF    |   28 |                 I/O |
 | IBUFCTRL |   28 |              Others |
-| CARRY8   |   24 |                 CLB |
-| LUT1     |    8 |                 CLB |
+| SRL16E   |   24 |                 CLB |
+| DSP48E2  |   24 |          Arithmetic |
+| CARRY8   |   16 |                 CLB |
+| LUT1     |    9 |                 CLB |
+| LUT3     |    1 |                 CLB |
+| FDCE     |    1 |            Register |
 | BUFGCE   |    1 |               Clock |
 +----------+------+---------------------+
 

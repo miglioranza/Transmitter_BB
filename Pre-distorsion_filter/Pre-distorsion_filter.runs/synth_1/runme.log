@@ -9,9 +9,11 @@
     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
 source Parallel_FIR_filter.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3066.770 ; gain = 2.016 ; free physical = 19356 ; free virtual = 110358
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3066.770 ; gain = 2.016 ; free physical = 16192 ; free virtual = 110178
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/Pre-distorsion_filter'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/miglioranza/Pre-distorsion_filter' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.runs/synth_1'.)
+WARNING: [IP_Flow 19-3685] Ignored loading user repository '/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs'. The path is contained within another repository.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip'.
 Command: synth_design -top Parallel_FIR_filter -part xczu28dr-ffvg1517-2-e
 Starting synth_design
@@ -19,56 +21,31 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xczu28dr'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu28dr'
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 2497016
+INFO: [Synth 8-7075] Helper process launched with PID 3179878
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3096.977 ; gain = 0.000 ; free physical = 19005 ; free virtual = 110007
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3096.977 ; gain = 0.000 ; free physical = 15432 ; free virtual = 109426
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Parallel_FIR_filter' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:57]
-WARNING: [Synth 8-6014] Unused sequential element I_shift_reg_reg[5] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:103]
-WARNING: [Synth 8-6014] Unused sequential element I_shift_reg_reg[6] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:103]
-WARNING: [Synth 8-6014] Unused sequential element I_shift_reg_reg[7] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:103]
-WARNING: [Synth 8-6014] Unused sequential element I_shift_reg_reg[8] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:103]
-WARNING: [Synth 8-6014] Unused sequential element I_shift_reg_reg[9] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:103]
-WARNING: [Synth 8-6014] Unused sequential element I_shift_reg_reg[10] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:103]
-WARNING: [Synth 8-6014] Unused sequential element I_shift_reg_reg[11] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:103]
-WARNING: [Synth 8-6014] Unused sequential element I_shift_reg_reg[12] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:103]
-WARNING: [Synth 8-6014] Unused sequential element I_shift_reg_reg[13] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:103]
-WARNING: [Synth 8-6014] Unused sequential element I_shift_reg_reg[14] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:103]
-WARNING: [Synth 8-6014] Unused sequential element I_shift_reg_reg[15] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:103]
-WARNING: [Synth 8-6014] Unused sequential element Q_shift_reg_reg[5] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
-WARNING: [Synth 8-6014] Unused sequential element Q_shift_reg_reg[6] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
-WARNING: [Synth 8-6014] Unused sequential element Q_shift_reg_reg[7] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
-WARNING: [Synth 8-6014] Unused sequential element Q_shift_reg_reg[8] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
-WARNING: [Synth 8-6014] Unused sequential element Q_shift_reg_reg[9] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
-WARNING: [Synth 8-6014] Unused sequential element Q_shift_reg_reg[10] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
-WARNING: [Synth 8-6014] Unused sequential element Q_shift_reg_reg[11] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
-WARNING: [Synth 8-6014] Unused sequential element Q_shift_reg_reg[12] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
-WARNING: [Synth 8-6014] Unused sequential element Q_shift_reg_reg[13] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
-WARNING: [Synth 8-6014] Unused sequential element Q_shift_reg_reg[14] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
-WARNING: [Synth 8-6014] Unused sequential element Q_shift_reg_reg[15] was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
-WARNING: [Synth 8-6014] Unused sequential element I_sum_reg_reg was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:124]
-WARNING: [Synth 8-6014] Unused sequential element Q_sum_reg_reg was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:125]
-WARNING: [Synth 8-6014] Unused sequential element index_reg was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:135]
-WARNING: [Synth 8-6014] Unused sequential element partial_I_reg was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:140]
-WARNING: [Synth 8-6014] Unused sequential element partial_Q_reg was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:141]
+WARNING: [Synth 8-6014] Unused sequential element mul_reg_I_reg was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:105]
+WARNING: [Synth 8-6014] Unused sequential element mul_reg_Q_reg was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:106]
 INFO: [Synth 8-256] done synthesizing module 'Parallel_FIR_filter' (1#1) [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:57]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3096.977 ; gain = 0.000 ; free physical = 17983 ; free virtual = 108988
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3096.977 ; gain = 0.000 ; free physical = 14539 ; free virtual = 108532
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3096.977 ; gain = 0.000 ; free physical = 17977 ; free virtual = 108983
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3096.977 ; gain = 0.000 ; free physical = 14349 ; free virtual = 108343
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xczu28dr-ffvg1517-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
----------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3106.980 ; gain = 10.004 ; free physical = 17977 ; free virtual = 108982
 INFO: [Device 21-403] Loading part xczu28dr-ffvg1517-2-e
 ---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3106.980 ; gain = 10.004 ; free physical = 14348 ; free virtual = 108342
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3106.980 ; gain = 10.004 ; free physical = 17908 ; free virtual = 108914
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3106.980 ; gain = 10.004 ; free physical = 14207 ; free virtual = 108197
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -77,7 +54,8 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 2     
-	               12 Bit    Registers := 10    
+	               28 Bit    Registers := 2     
+	               12 Bit    Registers := 6     
 	                1 Bit    Registers := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -96,164 +74,162 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-DSP Report: Generating DSP Q_output15, operation Mode is: A*B.
-DSP Report: operator Q_output15 is absorbed into DSP Q_output15.
-DSP Report: Generating DSP Q_output12, operation Mode is: A*B.
-DSP Report: operator Q_output12 is absorbed into DSP Q_output12.
-DSP Report: Generating DSP Q_output11, operation Mode is: A*B.
-DSP Report: operator Q_output11 is absorbed into DSP Q_output11.
-DSP Report: Generating DSP Q_output6, operation Mode is: A*B.
-DSP Report: operator Q_output6 is absorbed into DSP Q_output6.
-DSP Report: Generating DSP Q_output3, operation Mode is: A*B.
-DSP Report: operator Q_output3 is absorbed into DSP Q_output3.
-DSP Report: Generating DSP Q_output2, operation Mode is: A*B.
-DSP Report: operator Q_output2 is absorbed into DSP Q_output2.
-DSP Report: Generating DSP Q_output1, operation Mode is: (A:0x5555)*B.
-DSP Report: operator Q_output1 is absorbed into DSP Q_output1.
-DSP Report: Generating DSP Q_output0, operation Mode is: PCIN+(A:0x6aaa)*B.
-DSP Report: operator Q_output0 is absorbed into DSP Q_output0.
-DSP Report: operator Q_output14 is absorbed into DSP Q_output0.
-DSP Report: Generating DSP Q_output0, operation Mode is: PCIN+A*(B:0x2666).
-DSP Report: operator Q_output0 is absorbed into DSP Q_output0.
-DSP Report: operator Q_output2 is absorbed into DSP Q_output0.
-DSP Report: Generating DSP Q_output5, operation Mode is: A*B.
-DSP Report: operator Q_output5 is absorbed into DSP Q_output5.
-DSP Report: Generating DSP Q_output0, operation Mode is: C+A*(B:0x1999).
-DSP Report: operator Q_output0 is absorbed into DSP Q_output0.
-DSP Report: operator Q_output4 is absorbed into DSP Q_output0.
-DSP Report: Generating DSP Q_output0, operation Mode is: PCIN+A*(B:0x1333).
-DSP Report: operator Q_output0 is absorbed into DSP Q_output0.
-DSP Report: operator Q_output5 is absorbed into DSP Q_output0.
-DSP Report: Generating DSP Q_output0, operation Mode is: PCIN+(A:0xccd)*B.
-DSP Report: operator Q_output0 is absorbed into DSP Q_output0.
-DSP Report: operator Q_output6 is absorbed into DSP Q_output0.
-DSP Report: Generating DSP Q_output9, operation Mode is: A*B.
-DSP Report: operator Q_output9 is absorbed into DSP Q_output9.
-DSP Report: Generating DSP Q_output8, operation Mode is: A*B.
-DSP Report: operator Q_output8 is absorbed into DSP Q_output8.
-DSP Report: Generating DSP Q_output0, operation Mode is: C+(A:0xccd)*B.
-DSP Report: operator Q_output0 is absorbed into DSP Q_output0.
-DSP Report: operator Q_output9 is absorbed into DSP Q_output0.
-DSP Report: Generating DSP Q_output0, operation Mode is: PCIN+A*(B:0x1333).
-DSP Report: operator Q_output0 is absorbed into DSP Q_output0.
-DSP Report: operator Q_output10 is absorbed into DSP Q_output0.
-DSP Report: Generating DSP Q_output0, operation Mode is: PCIN+A*(B:0x1999).
-DSP Report: operator Q_output0 is absorbed into DSP Q_output0.
-DSP Report: operator Q_output11 is absorbed into DSP Q_output0.
-DSP Report: Generating DSP Q_output14, operation Mode is: A*B.
-DSP Report: operator Q_output14 is absorbed into DSP Q_output14.
-DSP Report: Generating DSP Q_output0, operation Mode is: C+A*(B:0x2666).
-DSP Report: operator Q_output0 is absorbed into DSP Q_output0.
-DSP Report: operator Q_output13 is absorbed into DSP Q_output0.
-DSP Report: Generating DSP Q_output0, operation Mode is: PCIN+(A:0x5555)*B.
-DSP Report: operator Q_output0 is absorbed into DSP Q_output0.
-DSP Report: operator Q_output14 is absorbed into DSP Q_output0.
-DSP Report: Generating DSP I_output15, operation Mode is: A*B.
-DSP Report: operator I_output15 is absorbed into DSP I_output15.
-DSP Report: Generating DSP I_output12, operation Mode is: A*B.
-DSP Report: operator I_output12 is absorbed into DSP I_output12.
-DSP Report: Generating DSP I_output11, operation Mode is: A*B.
-DSP Report: operator I_output11 is absorbed into DSP I_output11.
-DSP Report: Generating DSP I_output6, operation Mode is: A*B.
-DSP Report: operator I_output6 is absorbed into DSP I_output6.
-DSP Report: Generating DSP I_output3, operation Mode is: A*B.
-DSP Report: operator I_output3 is absorbed into DSP I_output3.
-DSP Report: Generating DSP I_output2, operation Mode is: A*B.
-DSP Report: operator I_output2 is absorbed into DSP I_output2.
-DSP Report: Generating DSP I_output1, operation Mode is: (A:0x5555)*B.
-DSP Report: operator I_output1 is absorbed into DSP I_output1.
-DSP Report: Generating DSP I_output0, operation Mode is: PCIN+(A:0x6aaa)*B.
-DSP Report: operator I_output0 is absorbed into DSP I_output0.
-DSP Report: operator I_output14 is absorbed into DSP I_output0.
-DSP Report: Generating DSP I_output0, operation Mode is: PCIN+A*(B:0x2666).
-DSP Report: operator I_output0 is absorbed into DSP I_output0.
-DSP Report: operator I_output2 is absorbed into DSP I_output0.
-DSP Report: Generating DSP I_output5, operation Mode is: A*B.
-DSP Report: operator I_output5 is absorbed into DSP I_output5.
-DSP Report: Generating DSP I_output0, operation Mode is: C+A*(B:0x1999).
-DSP Report: operator I_output0 is absorbed into DSP I_output0.
-DSP Report: operator I_output4 is absorbed into DSP I_output0.
-DSP Report: Generating DSP I_output0, operation Mode is: PCIN+A*(B:0x1333).
-DSP Report: operator I_output0 is absorbed into DSP I_output0.
-DSP Report: operator I_output5 is absorbed into DSP I_output0.
-DSP Report: Generating DSP I_output0, operation Mode is: PCIN+(A:0xccd)*B.
-DSP Report: operator I_output0 is absorbed into DSP I_output0.
-DSP Report: operator I_output6 is absorbed into DSP I_output0.
-DSP Report: Generating DSP I_output9, operation Mode is: A*B.
-DSP Report: operator I_output9 is absorbed into DSP I_output9.
-DSP Report: Generating DSP I_output8, operation Mode is: A*B.
-DSP Report: operator I_output8 is absorbed into DSP I_output8.
-DSP Report: Generating DSP I_output0, operation Mode is: C+(A:0xccd)*B.
-DSP Report: operator I_output0 is absorbed into DSP I_output0.
-DSP Report: operator I_output9 is absorbed into DSP I_output0.
-DSP Report: Generating DSP I_output0, operation Mode is: PCIN+A*(B:0x1333).
-DSP Report: operator I_output0 is absorbed into DSP I_output0.
-DSP Report: operator I_output10 is absorbed into DSP I_output0.
-DSP Report: Generating DSP I_output0, operation Mode is: PCIN+A*(B:0x1999).
-DSP Report: operator I_output0 is absorbed into DSP I_output0.
-DSP Report: operator I_output11 is absorbed into DSP I_output0.
-DSP Report: Generating DSP I_output14, operation Mode is: A*B.
-DSP Report: operator I_output14 is absorbed into DSP I_output14.
-DSP Report: Generating DSP I_output0, operation Mode is: C+A*(B:0x2666).
-DSP Report: operator I_output0 is absorbed into DSP I_output0.
-DSP Report: operator I_output13 is absorbed into DSP I_output0.
-DSP Report: Generating DSP I_output0, operation Mode is: PCIN+(A:0x5555)*B.
-DSP Report: operator I_output0 is absorbed into DSP I_output0.
-DSP Report: operator I_output14 is absorbed into DSP I_output0.
+DSP Report: Generating DSP temp_reg_Q2, operation Mode is: (A:0x5555)*B''.
+DSP Report: register Q_shift_reg_reg[13] is absorbed into DSP temp_reg_Q2.
+DSP Report: register Q_shift_reg_reg[14] is absorbed into DSP temp_reg_Q2.
+DSP Report: operator temp_reg_Q2 is absorbed into DSP temp_reg_Q2.
+DSP Report: Generating DSP temp_reg_Q0, operation Mode is: PCIN+(A:0x6aaa)*BCIN2.
+DSP Report: register Q_shift_reg_reg[15] is absorbed into DSP temp_reg_Q0.
+DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
+DSP Report: operator temp_reg_Q1 is absorbed into DSP temp_reg_Q0.
+DSP Report: Generating DSP temp_reg_Q0, operation Mode is: PCIN+(A:0x2666)*B''.
+DSP Report: register Q_shift_reg_reg[12] is absorbed into DSP temp_reg_Q0.
+DSP Report: register Q_shift_reg_reg[13] is absorbed into DSP temp_reg_Q0.
+DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
+DSP Report: operator temp_reg_Q3 is absorbed into DSP temp_reg_Q0.
+DSP Report: Generating DSP temp_reg_Q0, operation Mode is: C+(A:0x1999)*B''.
+DSP Report: register Q_shift_reg_reg[10] is absorbed into DSP temp_reg_Q0.
+DSP Report: register Q_shift_reg_reg[11] is absorbed into DSP temp_reg_Q0.
+DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
+DSP Report: operator temp_reg_Q5 is absorbed into DSP temp_reg_Q0.
+DSP Report: Generating DSP temp_reg_Q0, operation Mode is: PCIN+(A:0x1333)*B''.
+DSP Report: register Q_shift_reg_reg[9] is absorbed into DSP temp_reg_Q0.
+DSP Report: register Q_shift_reg_reg[10] is absorbed into DSP temp_reg_Q0.
+DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
+DSP Report: operator temp_reg_Q6 is absorbed into DSP temp_reg_Q0.
+DSP Report: Generating DSP temp_reg_Q0, operation Mode is: PCIN+(A:0xccd)*B.
+DSP Report: register Q_shift_reg_reg[8] is absorbed into DSP temp_reg_Q0.
+DSP Report: register Q_shift_reg_reg[9] is absorbed into DSP temp_reg_Q0.
+DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
+DSP Report: operator temp_reg_Q7 is absorbed into DSP temp_reg_Q0.
+DSP Report: Generating DSP temp_reg_Q0, operation Mode is: C+(A:0xccd)*B''.
+DSP Report: register Q_shift_reg_reg[5] is absorbed into DSP temp_reg_Q0.
+DSP Report: register Q_shift_reg_reg[6] is absorbed into DSP temp_reg_Q0.
+DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
+DSP Report: operator temp_reg_Q10 is absorbed into DSP temp_reg_Q0.
+DSP Report: Generating DSP temp_reg_Q0, operation Mode is: PCIN+(A:0x1333)*B''.
+DSP Report: register Q_shift_reg_reg[4] is absorbed into DSP temp_reg_Q0.
+DSP Report: register Q_shift_reg_reg[5] is absorbed into DSP temp_reg_Q0.
+DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
+DSP Report: operator temp_reg_Q11 is absorbed into DSP temp_reg_Q0.
+DSP Report: Generating DSP temp_reg_Q0, operation Mode is: PCIN+(A:0x1999)*B.
+DSP Report: register Q_shift_reg_reg[3] is absorbed into DSP temp_reg_Q0.
+DSP Report: register Q_shift_reg_reg[4] is absorbed into DSP temp_reg_Q0.
+DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
+DSP Report: operator temp_reg_Q12 is absorbed into DSP temp_reg_Q0.
+DSP Report: Generating DSP temp_reg_Q0, operation Mode is: C+(A:0x2666)*B''.
+DSP Report: register Q_shift_reg_reg[1] is absorbed into DSP temp_reg_Q0.
+DSP Report: register Q_shift_reg_reg[2] is absorbed into DSP temp_reg_Q0.
+DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
+DSP Report: operator temp_reg_Q14 is absorbed into DSP temp_reg_Q0.
+DSP Report: Generating DSP temp_reg_Q0, operation Mode is: PCIN+(A:0x5555)*B''.
+DSP Report: register Q_shift_reg_reg[0] is absorbed into DSP temp_reg_Q0.
+DSP Report: register Q_shift_reg_reg[1] is absorbed into DSP temp_reg_Q0.
+DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
+DSP Report: operator temp_reg_Q15 is absorbed into DSP temp_reg_Q0.
+DSP Report: Generating DSP temp_reg_Q0, operation Mode is: PCIN+(A:0x6aaa)*B2.
+DSP Report: register Q_shift_reg_reg[0] is absorbed into DSP temp_reg_Q0.
+DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
+DSP Report: operator temp_reg_Q16 is absorbed into DSP temp_reg_Q0.
+DSP Report: Generating DSP temp_reg_Q0, operation Mode is: PCIN+A:B.
+DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
+DSP Report: Generating DSP temp_reg_I2, operation Mode is: (A:0x5555)*B''.
+DSP Report: register I_shift_reg_reg[13] is absorbed into DSP temp_reg_I2.
+DSP Report: register I_shift_reg_reg[14] is absorbed into DSP temp_reg_I2.
+DSP Report: operator temp_reg_I2 is absorbed into DSP temp_reg_I2.
+DSP Report: Generating DSP temp_reg_I0, operation Mode is: PCIN+(A:0x6aaa)*BCIN2.
+DSP Report: register I_shift_reg_reg[15] is absorbed into DSP temp_reg_I0.
+DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
+DSP Report: operator temp_reg_I1 is absorbed into DSP temp_reg_I0.
+DSP Report: Generating DSP temp_reg_I0, operation Mode is: PCIN+(A:0x2666)*B''.
+DSP Report: register I_shift_reg_reg[12] is absorbed into DSP temp_reg_I0.
+DSP Report: register I_shift_reg_reg[13] is absorbed into DSP temp_reg_I0.
+DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
+DSP Report: operator temp_reg_I3 is absorbed into DSP temp_reg_I0.
+DSP Report: Generating DSP temp_reg_I0, operation Mode is: C+(A:0x1999)*B''.
+DSP Report: register I_shift_reg_reg[10] is absorbed into DSP temp_reg_I0.
+DSP Report: register I_shift_reg_reg[11] is absorbed into DSP temp_reg_I0.
+DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
+DSP Report: operator temp_reg_I5 is absorbed into DSP temp_reg_I0.
+DSP Report: Generating DSP temp_reg_I0, operation Mode is: PCIN+(A:0x1333)*B''.
+DSP Report: register I_shift_reg_reg[9] is absorbed into DSP temp_reg_I0.
+DSP Report: register I_shift_reg_reg[10] is absorbed into DSP temp_reg_I0.
+DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
+DSP Report: operator temp_reg_I6 is absorbed into DSP temp_reg_I0.
+DSP Report: Generating DSP temp_reg_I0, operation Mode is: PCIN+(A:0xccd)*B.
+DSP Report: register I_shift_reg_reg[8] is absorbed into DSP temp_reg_I0.
+DSP Report: register I_shift_reg_reg[9] is absorbed into DSP temp_reg_I0.
+DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
+DSP Report: operator temp_reg_I7 is absorbed into DSP temp_reg_I0.
+DSP Report: Generating DSP temp_reg_I0, operation Mode is: C+(A:0xccd)*B''.
+DSP Report: register I_shift_reg_reg[5] is absorbed into DSP temp_reg_I0.
+DSP Report: register I_shift_reg_reg[6] is absorbed into DSP temp_reg_I0.
+DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
+DSP Report: operator temp_reg_I10 is absorbed into DSP temp_reg_I0.
+DSP Report: Generating DSP temp_reg_I0, operation Mode is: PCIN+(A:0x1333)*B''.
+DSP Report: register I_shift_reg_reg[4] is absorbed into DSP temp_reg_I0.
+DSP Report: register I_shift_reg_reg[5] is absorbed into DSP temp_reg_I0.
+DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
+DSP Report: operator temp_reg_I11 is absorbed into DSP temp_reg_I0.
+DSP Report: Generating DSP temp_reg_I0, operation Mode is: PCIN+(A:0x1999)*B.
+DSP Report: register I_shift_reg_reg[3] is absorbed into DSP temp_reg_I0.
+DSP Report: register I_shift_reg_reg[4] is absorbed into DSP temp_reg_I0.
+DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
+DSP Report: operator temp_reg_I12 is absorbed into DSP temp_reg_I0.
+DSP Report: Generating DSP temp_reg_I0, operation Mode is: C+(A:0x2666)*B''.
+DSP Report: register I_shift_reg_reg[1] is absorbed into DSP temp_reg_I0.
+DSP Report: register I_shift_reg_reg[2] is absorbed into DSP temp_reg_I0.
+DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
+DSP Report: operator temp_reg_I14 is absorbed into DSP temp_reg_I0.
+DSP Report: Generating DSP temp_reg_I0, operation Mode is: PCIN+(A:0x5555)*B''.
+DSP Report: register I_shift_reg_reg[0] is absorbed into DSP temp_reg_I0.
+DSP Report: register I_shift_reg_reg[1] is absorbed into DSP temp_reg_I0.
+DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
+DSP Report: operator temp_reg_I15 is absorbed into DSP temp_reg_I0.
+DSP Report: Generating DSP temp_reg_I0, operation Mode is: PCIN+(A:0x6aaa)*B2.
+DSP Report: register I_shift_reg_reg[0] is absorbed into DSP temp_reg_I0.
+DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
+DSP Report: operator temp_reg_I16 is absorbed into DSP temp_reg_I0.
+DSP Report: Generating DSP temp_reg_I0, operation Mode is: PCIN+A:B.
+DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 3442.582 ; gain = 345.605 ; free physical = 17921 ; free virtual = 108934
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3444.582 ; gain = 347.605 ; free physical = 13494 ; free virtual = 107498
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
-+--------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name         | DSP Mapping       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+--------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Parallel_FIR_filter | A*B               | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A*B               | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A*B               | 24     | 12     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A*B               | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A*B               | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A*B               | 24     | 12     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | (A:0x5555)*B      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+(A:0x6aaa)*B | 16     | 12     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+A*(B:0x2666) | 16     | 15     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A*B               | 24     | 12     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | C+A*(B:0x1999)    | 16     | 14     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+A*(B:0x1333) | 16     | 14     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+(A:0xccd)*B  | 13     | 12     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A*B               | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A*B               | 24     | 12     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | C+(A:0xccd)*B     | 12     | 13     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+A*(B:0x1333) | 16     | 14     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+A*(B:0x1999) | 16     | 14     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A*B               | 24     | 12     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | C+A*(B:0x2666)    | 16     | 15     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+(A:0x5555)*B | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A*B               | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A*B               | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A*B               | 24     | 12     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A*B               | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A*B               | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A*B               | 24     | 12     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | (A:0x5555)*B      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+(A:0x6aaa)*B | 16     | 12     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+A*(B:0x2666) | 16     | 15     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A*B               | 24     | 12     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | C+A*(B:0x1999)    | 16     | 14     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+A*(B:0x1333) | 16     | 14     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+(A:0xccd)*B  | 13     | 12     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A*B               | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A*B               | 24     | 12     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | C+(A:0xccd)*B     | 12     | 13     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+A*(B:0x1333) | 16     | 14     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+A*(B:0x1999) | 16     | 14     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | A*B               | 24     | 12     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | C+A*(B:0x2666)    | 16     | 15     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+(A:0x5555)*B | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-+--------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++--------------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name         | DSP Mapping           | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Parallel_FIR_filter | (A:0x5555)*B''        | 16     | 12     | -      | -      | 28     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+(A:0x6aaa)*BCIN2 | 16     | 12     | -      | -      | 28     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+(A:0x2666)*B''   | 15     | 12     | -      | -      | 28     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | C+(A:0x1999)*B''      | 12     | 14     | 28     | -      | 28     | 2    | 0    | 0    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+(A:0x1333)*B''   | 14     | 12     | -      | -      | 28     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+(A:0xccd)*B      | 13     | 12     | -      | -      | 28     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | C+(A:0xccd)*B''       | 12     | 13     | 28     | -      | 28     | 2    | 0    | 0    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+(A:0x1333)*B''   | 14     | 12     | -      | -      | 28     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+(A:0x1999)*B     | 14     | 12     | -      | -      | 28     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | C+(A:0x2666)*B''      | 12     | 15     | 28     | -      | 28     | 2    | 0    | 0    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+(A:0x5555)*B''   | 16     | 12     | -      | -      | 28     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+(A:0x6aaa)*B2    | 16     | 12     | -      | -      | 28     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+A:B              | 10     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | (A:0x5555)*B''        | 16     | 12     | -      | -      | 28     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+(A:0x6aaa)*BCIN2 | 16     | 12     | -      | -      | 28     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+(A:0x2666)*B''   | 15     | 12     | -      | -      | 28     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | C+(A:0x1999)*B''      | 12     | 14     | 28     | -      | 28     | 2    | 0    | 0    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+(A:0x1333)*B''   | 14     | 12     | -      | -      | 28     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+(A:0xccd)*B      | 13     | 12     | -      | -      | 28     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | C+(A:0xccd)*B''       | 12     | 13     | 28     | -      | 28     | 2    | 0    | 0    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+(A:0x1333)*B''   | 14     | 12     | -      | -      | 28     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+(A:0x1999)*B     | 14     | 12     | -      | -      | 28     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | C+(A:0x2666)*B''      | 12     | 15     | 28     | -      | 28     | 2    | 0    | 0    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+(A:0x5555)*B''   | 16     | 12     | -      | -      | 28     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+(A:0x6aaa)*B2    | 16     | 12     | -      | -      | 28     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | PCIN+A:B              | 10     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++--------------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -264,13 +240,13 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 3442.582 ; gain = 345.605 ; free physical = 17920 ; free virtual = 108933
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3447.551 ; gain = 350.574 ; free physical = 13493 ; free virtual = 107497
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 3450.590 ; gain = 353.613 ; free physical = 17920 ; free virtual = 108933
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3455.559 ; gain = 358.582 ; free physical = 13487 ; free virtual = 107491
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -288,37 +264,52 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3450.590 ; gain = 353.613 ; free physical = 17919 ; free virtual = 108932
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 3455.559 ; gain = 358.582 ; free physical = 13227 ; free virtual = 107232
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3450.590 ; gain = 353.613 ; free physical = 17919 ; free virtual = 108932
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 3455.559 ; gain = 358.582 ; free physical = 13227 ; free virtual = 107232
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3450.590 ; gain = 353.613 ; free physical = 17919 ; free virtual = 108932
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 3455.559 ; gain = 358.582 ; free physical = 13227 ; free virtual = 107232
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3450.590 ; gain = 353.613 ; free physical = 17919 ; free virtual = 108932
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 3455.559 ; gain = 358.582 ; free physical = 13227 ; free virtual = 107232
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3450.590 ; gain = 353.613 ; free physical = 17919 ; free virtual = 108932
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 3455.559 ; gain = 358.582 ; free physical = 13227 ; free virtual = 107232
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3450.590 ; gain = 353.613 ; free physical = 17919 ; free virtual = 108932
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 3455.559 ; gain = 358.582 ; free physical = 13227 ; free virtual = 107232
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++--------------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name         | RTL Name               | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++--------------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Parallel_FIR_filter | Q_shift_reg_reg[7][11] | 3      | 12    | NO           | NO                 | YES               | 12     | 0       | 
+|Parallel_FIR_filter | I_shift_reg_reg[7][11] | 3      | 12    | NO           | NO                 | YES               | 12     | 0       | 
++--------------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -331,59 +322,52 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+----------------+------+
-|      |Cell            |Count |
-+------+----------------+------+
-|1     |BUFG            |     1|
-|2     |CARRY8          |    24|
-|3     |DSP48E2         |    40|
-|4     |DSP_ALU         |     2|
-|5     |DSP_A_B_DATA    |     2|
-|6     |DSP_C_DATA      |     2|
-|7     |DSP_MULTIPLIER  |     2|
-|8     |DSP_M_DATA      |     2|
-|9     |DSP_OUTPUT      |     2|
-|10    |DSP_PREADD      |     2|
-|11    |DSP_PREADD_DATA |     2|
-|12    |LUT1            |     8|
-|13    |LUT2            |   213|
-|14    |FDCE            |   122|
-|15    |IBUF            |    28|
-|16    |OBUF            |    66|
-+------+----------------+------+
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY8  |    16|
+|3     |DSP48E2 |    24|
+|4     |LUT1    |     9|
+|5     |LUT2    |   117|
+|6     |LUT3    |     1|
+|7     |SRL16E  |    24|
+|8     |FDCE    |     1|
+|9     |FDRE    |   265|
+|10    |IBUF    |    28|
+|11    |OBUF    |    66|
++------+--------+------+
 
 Report Instance Areas: 
-+------+---------------+-----------------------+------+
-|      |Instance       |Module                 |Cells |
-+------+---------------+-----------------------+------+
-|1     |top            |                       |   518|
-|2     |  Q_output0__8 |Q_output0__8_funnel    |     8|
-|3     |  I_output0__8 |Q_output0__8_funnel__1 |     8|
-+------+---------------+-----------------------+------+
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   552|
++------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3450.590 ; gain = 353.613 ; free physical = 17919 ; free virtual = 108932
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 3455.559 ; gain = 358.582 ; free physical = 13227 ; free virtual = 107233
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 28 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3450.590 ; gain = 353.613 ; free physical = 17922 ; free virtual = 108935
-Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3450.598 ; gain = 353.613 ; free physical = 17922 ; free virtual = 108935
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 3455.559 ; gain = 358.582 ; free physical = 13228 ; free virtual = 107234
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 3455.566 ; gain = 358.582 ; free physical = 13228 ; free virtual = 107234
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3462.559 ; gain = 0.000 ; free physical = 18017 ; free virtual = 109030
-INFO: [Netlist 29-17] Analyzing 95 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3467.527 ; gain = 0.000 ; free physical = 13258 ; free virtual = 107267
+INFO: [Netlist 29-17] Analyzing 69 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3622.477 ; gain = 0.000 ; free physical = 17898 ; free virtual = 108911
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3549.090 ; gain = 0.000 ; free physical = 13102 ; free virtual = 107113
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 71 instances were transformed.
+  A total of 53 instances were transformed.
   BUFG => BUFGCE: 1 instance 
-  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 42 instances
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 24 instances
   IBUF => IBUF (IBUFCTRL, INBUF): 28 instances
 
-Synth Design complete, checksum: 27b8dfe5
+Synth Design complete, checksum: 2233c9df
 INFO: [Common 17-83] Releasing license: Synthesis
-18 Infos, 28 Warnings, 0 Critical Warnings and 0 Errors encountered.
+18 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 3622.477 ; gain = 555.707 ; free physical = 17951 ; free virtual = 108964
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:24 . Memory (MB): peak = 3549.090 ; gain = 482.320 ; free physical = 13155 ; free virtual = 107165
 INFO: [Common 17-1381] The checkpoint '/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.runs/synth_1/Parallel_FIR_filter.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Parallel_FIR_filter_utilization_synth.rpt -pb Parallel_FIR_filter_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Mar  4 12:18:52 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 12 09:30:07 2025...
