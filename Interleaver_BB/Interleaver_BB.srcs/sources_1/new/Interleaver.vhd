@@ -35,6 +35,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
+use ieee.std_logic_unsigned.all;
 
 entity block_interleaver is
     generic (
@@ -44,25 +45,27 @@ entity block_interleaver is
   --Possible sizes of the block R x C (21, 41, or 61)
     );
     port (
-        clk             : in  std_logic;
-        rst             : in  std_logic;
+        clk                 : in  std_logic;
+        rst                 : in  std_logic;
         -- Input interface
-        data_in         : in  signed(DATA_WIDTH-1 downto 0);
-        data_in_ready   : in  std_logic;
-        write_en        : in  std_logic;
-        code_rate       : in  std_logic_vector(1 downto 0) := (others => '0');
+        data_in             : in  std_logic_vector(DATA_WIDTH-1 downto 0);
+        data_in_ready       : in  std_logic;
+        write_en            : in  std_logic;
+        code_rate           : in  std_logic_vector(1 downto 0) := (others => '0');
         -- Output interface
-        data_out        : out signed(DATA_WIDTH-1 downto 0);
-        data_out_ready  : out std_logic;
-        read_valid      : out std_logic
+        data_out            : out std_logic_vector(DATA_WIDTH-1 downto 0);
+        data_out_ready      : out std_logic;
+        current_code_rate   : out  std_logic_vector(1 downto 0) := (others => '0');
+        read_valid          : out std_logic
+        
     );
 end block_interleaver;
 
 architecture Behavioral of block_interleaver is
-    type mem_array is array (0 to 9 * NUM_COLS - 1) of signed(DATA_WIDTH-1 downto 0);
+    type mem_array is array (0 to 9 * NUM_COLS - 1) of std_logic_vector(DATA_WIDTH-1 downto 0);
     signal memory : mem_array := (others => (others => '0'));
-
-    -- Address counters
+    signal busy : std_logic  := '0';
+        -- Address counters
     signal write_addr : unsigned(11 downto 0) := (others => '0'); -- Up to 61*32 = 1952 locations
     signal read_addr  : unsigned(11 downto 0) := (others => '0');
 
@@ -71,11 +74,12 @@ architecture Behavioral of block_interleaver is
     signal state : state_type := IDLE;
 
     -- Control signals
-    signal write_done : std_logic := '0';
-    signal read_done  : std_logic := '0';
-    signal row_cnt    : integer range 0 to 9 := 0;
-    signal col_cnt    : integer range 0 to 9 := 0;
-    signal sel_code   : integer range 0 to 3 := 0 ;
+    signal write_done           : std_logic := '0';
+    signal read_done            : std_logic := '0';
+    signal row_cnt              : integer range 0 to 9 := 0;
+    signal col_cnt              : integer range 0 to 9 := 0;
+    signal sel_code             : integer range 0 to 3 := 0 ;
+    signal current_code         : integer range 0 to 3 := 0 ;
 begin
   
   process(clk,rst) 
@@ -92,7 +96,6 @@ begin
         when others =>
           sel_code <= 1 ;
   end case ; 
-  
   end process ;
   
 --  
@@ -115,14 +118,17 @@ begin
        
             case state is
                 when IDLE =>
+                data_out_ready <= '1';       
                     read_valid <= '0';
-                    if data_in_ready = '1'then 
-                         data_out_ready <= '1';
+--                    if data_in_ready = '1'then 
+--                         data_out_ready <= '1';
+--                         state <= WRITE;
+--                    else 
+                    if write_en = '1' then
+                         current_code  <= sel_code ;
                          state <= WRITE;
-                    else 
-                         data_out_ready <= '0';
---                    if write_en = '1' then
---                        state <= WRITE;
+                         memory(to_integer(write_addr)) <= data_in;
+                         write_addr <= write_addr + 1;
                     end if;
 
                 when WRITE =>
@@ -130,7 +136,7 @@ begin
                         -- Write row-wise
                          read_valid <= '0';
                         memory(to_integer(write_addr)) <= data_in;
-                        if write_addr = (NUM_ROWS * sel_code) * NUM_COLS - sel_code then
+                        if write_addr = (NUM_ROWS * current_code) * NUM_COLS - current_code then
                             write_addr <= (others => '0');
                             write_done <= '1';
                             state <= READ;
@@ -140,25 +146,26 @@ begin
                         end if;
                      
                     end if;
+                --To be fixed , add if-statement for data_in_ready control 
 
                 when READ =>
                     -- Read column-wise
-                    read_valid <= '1';
-                    data_out <= memory(to_integer(read_addr));
+--                    read_valid <= '1';
+
+                      if data_in_ready = '1' and busy = '0' then 
+                                   data_out <= memory(to_integer(read_addr));
+                                   read_valid <= '1';
+                                   busy <= '1';
+--                    data_out <= memory(to_integer(read_addr));
                     -- Column-major addressing: addr = col + row * NUM_COLS
-                     if col_cnt = NUM_COLS-sel_code and row_cnt = ( NUM_ROWS * sel_code )-1 then
+                     if col_cnt = NUM_COLS-current_code and row_cnt = ( NUM_ROWS * current_code )-1 then
                         read_addr <= (others => '0');
                         row_cnt <= 0;
                         col_cnt <= 0;
                         read_done <= '1';
-                            if write_en = '1' then 
-                                state <= WRITE ;
-                                data_out_ready <= '1';
---                                read_valid <= '0';
-                            else                        
-                                state <= IDLE  ; 
-                            end if ;                          
-                    elsif row_cnt = (NUM_ROWS * sel_code )-1 then
+                        data_out_ready <= '1';                                           
+                        state <= IDLE  ; 
+                    elsif row_cnt = (NUM_ROWS * current_code )-1 then
                         row_cnt <= 0;
                         col_cnt <= col_cnt + 1;
                         read_addr <= to_unsigned(col_cnt + 1, 12); -- Next row, first column
@@ -167,11 +174,17 @@ begin
                           row_cnt  <= row_cnt + 1 ;
                           read_addr <= to_unsigned(col_cnt + ( NUM_COLS * (row_cnt + 1) ),12) ;
                     end if;
+                       elsif data_in_ready = '1' and busy = '1' then        
+                           busy <= '0';   
+                           read_valid <= '0';
+                    else 
+                                          read_valid <= '0';
 
+                  end if ;                     
                 when others =>
                     state <= IDLE;
             end case;
-
+current_code_rate <= std_logic_vector(to_unsigned(current_code,current_code_rate'length));
             -- Clear done flags when leaving states
             if state /= WRITE then
                 write_done <= '0';

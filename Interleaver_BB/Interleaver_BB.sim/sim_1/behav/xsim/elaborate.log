@@ -12,6 +12,8 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
 Compiling package std.env
 Compiling architecture behavioral of entity xil_defaultlib.block_interleaver [block_interleaver_default]
 Compiling architecture behavioral of entity xil_defaultlib.tb_block_interleaver

@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "tb_block_interleaver_func_synth" "xil_defaultlib.tb_block_interleaver" -log "elaborate.log" 
