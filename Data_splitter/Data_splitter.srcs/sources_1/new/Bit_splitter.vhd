@@ -40,12 +40,15 @@ entity Bit_splitter is
  clk            : in std_logic ;
  reset          : in std_logic ;
  mod_type       : in std_logic_vector(2 downto 0) ;
+ code_rate      : in std_logic_vector(1 downto 0) ;
  data_in_valid  : in std_logic;
- data_in        : in std_logic_vector(INPUT_BW-1 downto 0 ) ;
- data_out_valid  : out std_logic ;
--- data_out       : out std_logic_vector(OUTPUT_BW-1 downto 0) := (others => '0');
- output         : out std_logic_vector(5 downto 0) := (others => '0');
- data_last      : out std_logic 
+ data_in_ready  : in std_logic;
+ data_in        : in std_logic_vector(INPUT_BW-1 downto 0 ):= (others => '0') ;
+ data_out_valid : out std_logic ;
+ mod_type2mapper: out std_logic_vector(2 downto 0) ;
+ data_out_ready : out std_logic := '0' ;
+ data_out       : out std_logic_vector(5 downto 0) := (others => '0')
+-- data_out_last  : out std_logic 
  );
  end Bit_splitter;
 
@@ -68,109 +71,187 @@ entity Bit_splitter is
 
 architecture rtl of Bit_splitter is
 
-signal  bpm      : integer           := -1;       --bits per modulation  
-signal sincro    : std_logic         := '0' ; --Sincronization between the input and output 
-signal done      : std_logic         := '0' ;  --Determines the end of the data output procedure 
-signal index     : integer := 0 ;  --index for giving out the output
-signal complete  : std_logic         := '0' ; 
-type temp_out is array (0 to INPUT_BW - 1) of std_logic_vector(OUTPUT_BW - 1  downto 0 ) ; 
---signal output : temp_out :=( others =>(others => '0')); --Copy the input values in tamporary array 
+signal done                 : std_logic                     := '1' ;  --Determines the end of the data data_out procedure 
+signal current_mode_type    : std_logic_vector(2 downto 0)  := (others => '0') ;
+signal current_code         : std_logic_vector(1 downto 0)  := (others => '0') ;
 
 begin
 
+--Process for changing the modulation type , the mode type is changed only when the splitting process for the current value is completed 
+
+process (clk,reset) 
+
+begin 
+
+if reset = '1'then
+    current_code      <= code_rate ;
+    current_mode_type <= "000" ;
+    mod_type2mapper   <= "000" ;           
+elsif rising_edge(clk) then 
+    
+    if done = '1' and current_code /= code_rate then 
+           current_code      <= code_rate ;
+           current_mode_type <= mod_type  ;
+           mod_type2mapper   <= mod_type ;           
+   end if ;
+end if ;
+end process ;
+
+
+
+
+
+
 process(clk ,reset,mod_type) 
 
-variable temp       : integer := 0  ;  
-variable temp_int   : integer := 0 ;
 variable i          : integer := 0 ;
+--variable done       : std_logic := '0' ;
 begin
 
 if reset = '1'then 
 
-    output <= (others => '0');
+    data_out <= (others => '0');
     data_out_valid <= '0';
-    data_last  <= '0' ;
 
 elsif rising_edge (clk) then
-
+         data_out_valid <= '0';                    
     
---    if data_in_valid = '1' and sincro = '0' then
-    if data_in_valid = '1'  then
-    
-        case mod_type is 
-        
+   if data_in_ready = '1' and done = '1' then 
+      data_out_ready <= '1';
+--      data_out_valid <= '0';                    
+       if data_in_valid = '1' then 
+        done  <= '0' ;
+        i := 0 ;
+        data_out_ready <= '0';
+     end if ;    
+   elsif data_in_ready = '1' and done = '0' then 
+   
+     case current_mode_type is    
             when "000" =>  --BPSK  
                 if i < (INPUT_BW -1 ) then 
-                     output <=  "00000" &  data_in(i) ; --Correct way for adding zeros 
-                elsif i =  (INPUT_BW -1 ) then 
-                    output <=  "00000" &  data_in(i) ;
-                    done  <= '1' ;     
+                     data_out <=  "00000" &  data_in(i) ; --Correct way for adding zeros 
+--                     data_out_ready <= '0';
+                     done  <= '0' ;
+                elsif i =  (INPUT_BW -1 )  then 
+                    data_out <=  "00000" &  data_in(i) ;
+                    done  <= '1' ;   
+                    data_out_ready <= '1';
+--                    data_out_valid <= '0';                    
+ 
                 end if ;
                 i := i + 1 ;
             when "001" => --QPSK 
                 if i < (INPUT_BW /2) - 1   then
-                     output <=  "0000" & data_in((i+1)*2-1  downto i*2)  ;
-                 elsif i = (INPUT_BW /2) - 1  then
-                     output <=  "0000" & data_in((i+1)*2-1  downto i*2)  ;
-                     done  <= '1' ;        
+                     data_out <=  "0000" & data_in((i+1)*2-1  downto i*2)  ;
+--                     data_out_ready <= '0';
+                     done  <= '0' ;
+                 elsif i = (INPUT_BW /2) - 1   then
+                     data_out <=  "0000" & data_in((i+1)*2-1  downto i*2)  ;
+                     done  <= '1' ;     
+                     data_out_ready <= '1';   
+
                 end if  ;
                   i := i + 1 ;
             
-            when ("011" or "010") => -- 16-APSK/16-QAM 
+            when "011"  => -- 16-APSK
                 if i <((INPUT_BW /4) - 1) then
-                    output <=  "00" & data_in((i+1)*4-1  downto i*4)  ;
-                 elsif i = ((INPUT_BW /4) - 1) then 
-                     output <=  "00" & data_in((i+1)*4-1  downto i*4)  ;
+                    data_out <=  "00" & data_in((i+1)*4-1  downto i*4)  ;
+--                    data_out_ready <= '0';
+                    done  <= '0' ;
+                 elsif i = ((INPUT_BW /4) - 1)  then 
+                     data_out <=  "00" & data_in((i+1)*4-1  downto i*4)  ;
                      done  <= '1' ;
+                     data_out_ready <= '1';
                 end if ;
                 i := i + 1 ;
-            bpm <= 4;  
+             when "010" => -- 16-QAM 
+                if i <((INPUT_BW /4) - 1) then
+                    data_out <=  "00" & data_in((i+1)*4-1  downto i*4)  ;
+--                    data_out_ready <= '0';
+                    done  <= '0' ;
+                 elsif i = ((INPUT_BW /4) - 1)  then 
+                     data_out <=  "00" & data_in((i+1)*4-1  downto i*4)  ;
+                     done  <= '1' ;
+                     data_out_ready <= '1';
+--                     data_out_valid <= '0';                    
+
+                end if ;
+              i := i + 1 ;
             
-            when ("101" or "100") => -- 32-APSK/32-QAM 
+            when "101"  => -- 32-APSK
 
                 if i <= 5 then 
-                    output <= "0" & data_in((i+1)*5-1  downto i*5) ;
-                elsif i=6 then  
-                    output <=   "0000" & data_in(31 downto 30); 
+                    data_out <= "0" & data_in((i+1)*5-1  downto i*5) ;
+--                    data_out_ready <= '0';
+                    done  <= '0' ;
+                elsif i=6  then  
+                    data_out <=   "0000" & data_in(31 downto 30); 
+                    data_out_ready <= '1';
                     done  <= '1' ;  
+--                    data_out_valid <= '0';
                 end if ;
                 i := i + 1 ;
-            
-            when ("110" or "111") => -- 64-APSK/64-QAM 
+              when  "100" => -- 32-QAM 
+
+                if i <= 5 then 
+                    data_out <= "0" & data_in((i+1)*5-1  downto i*5) ;
+--                    data_out_ready <= '0';
+                    done  <= '0' ;
+                elsif i=6  then  
+                    data_out <=   "0000" & data_in(31 downto 30); 
+                    data_out_ready <= '1';
+                    done  <= '1' ;  
+--                    data_out_valid <= '0';
+                end if ;
+                i := i + 1 ; 
+            when "110"  => -- 64-APSK
                 
                 if i <= 4 then 
-                    output <= data_in((i+1)*6-1  downto i*6) ;  
+                    data_out <= data_in((i+1)*6-1  downto i*6) ;
+--                    data_out_ready <= '0';
+                    done  <= '0' ;
                 elsif i=5 then 
-                    output <=   "0000" & data_in(31 downto 30);   
+                    data_out <=   "0000" & data_in(31 downto 30);
+                    data_out_ready <= '1';   
                     done  <= '1' ;
+--                    data_out_valid <= '0';
                 end if ;
                 i := i + 1 ;
-            
+            when "111" => -- 64-QAM 
+                
+                if i <= 4 then 
+                    data_out <= data_in((i+1)*6-1  downto i*6) ;
+--                    data_out_ready <= '0';
+                    done  <= '0' ;
+                elsif i=5 then 
+                    data_out <=   "0000" & data_in(31 downto 30);
+                    data_out_ready <= '1';   
+                    done  <= '1' ;
+--                    data_out_valid <= '0';
+                end if ;
+                i := i + 1 ;
             when others =>
-                output <= (others => '0');
-                bpm <= -1 ;
-                done  <= '1' ;
-            end case ;
-            
-           
-            if done = '1'then 
-                data_out_valid<= '0';                    
-                data_last <= '1';
-                i := 0 ;
+                data_out <= (others => '0');
                 done  <= '0' ;
-            else 
-                data_last <= '0';
-                data_out_valid<= '1';
-                i := i ;
-            end if ;
+            end case ;
+                  
+                 data_out_valid <= '1';                    
 
---   
-     else    
-     data_out_valid<= '0';                    
-     end if ;   
+   elsif data_in_ready = '0' and done = '1' then 
+                  data_out_ready <= '0';
+                  if data_in_valid =  '1' then 
+                     done <= '0' ; 
+                     i := 0 ;
+                  else  
+                        done <= '1' ; 
+                  end if ;
+ else     
+      data_out_ready <= '0'  ;
+      data_out_valid <= '0';                    
               
-end if ;
-       
+end if ;       
+    
+end if ;       
 end process ;
 
 end rtl;
