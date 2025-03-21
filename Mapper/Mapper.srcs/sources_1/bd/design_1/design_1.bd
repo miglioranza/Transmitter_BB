@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xD4838868FD146DE3",
+      "boundary_crc": "0x6837FA789695CB76",
       "device": "xczu28dr-ffvg1517-2-e",
       "gen_directory": "../../../../Mapper.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -10,119 +10,149 @@
       "tool_version": "2021.2"
     },
     "design_tree": {
-      "Bit_splitter_0": "",
-      "Mapper_0": ""
-    },
-    "interface_ports": {
-      "S_AXIS_0": {
-        "mode": "Slave",
-        "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-        "parameters": {
-          "HAS_TKEEP": {
-            "value": "0"
-          },
-          "HAS_TLAST": {
-            "value": "0"
-          },
-          "HAS_TREADY": {
-            "value": "1"
-          },
-          "HAS_TSTRB": {
-            "value": "0"
-          },
-          "LAYERED_METADATA": {
-            "value": "undef"
-          },
-          "TDATA_NUM_BYTES": {
-            "value": "4"
-          },
-          "TDEST_WIDTH": {
-            "value": "0"
-          },
-          "TID_WIDTH": {
-            "value": "0"
-          },
-          "TUSER_WIDTH": {
-            "value": "0"
-          }
-        }
-      }
+      "mapper_0": "",
+      "Bit_splitter_0": ""
     },
     "ports": {
-      "clk_0": {
+      "clk": {
         "type": "clk",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "reset"
+          }
+        }
       },
-      "reset_0": {
-        "type": "rst",
-        "direction": "I"
-      },
-      "mod_type_0": {
+      "mod_type": {
         "direction": "I",
         "left": "2",
         "right": "0"
+      },
+      "reset": {
+        "type": "rst",
+        "direction": "I"
+      },
+      "i_out": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      },
+      "data_out_ready": {
+        "direction": "O"
+      },
+      "q_out": {
+        "direction": "O",
+        "left": "11",
+        "right": "0"
+      },
+      "data_out_valid": {
+        "direction": "O"
+      },
+      "data_in": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "data_in_valid": {
+        "direction": "I"
+      },
+      "data_out_ready_1": {
+        "direction": "O"
       }
     },
     "components": {
+      "mapper_0": {
+        "vlnv": "user.org:user:mapper:1.0",
+        "xci_name": "design_1_mapper_0_2",
+        "xci_path": "ip/design_1_mapper_0_2/design_1_mapper_0_2.xci",
+        "inst_hier_path": "mapper_0"
+      },
       "Bit_splitter_0": {
         "vlnv": "user.org:user:Bit_splitter:1.0",
-        "xci_name": "design_1_Bit_splitter_0_0",
-        "xci_path": "ip/design_1_Bit_splitter_0_0/design_1_Bit_splitter_0_0.xci",
+        "xci_name": "design_1_Bit_splitter_0_1",
+        "xci_path": "ip/design_1_Bit_splitter_0_1/design_1_Bit_splitter_0_1.xci",
         "inst_hier_path": "Bit_splitter_0"
-      },
-      "Mapper_0": {
-        "vlnv": "user.org:user:mapper:1.0",
-        "xci_name": "design_1_mapper_0_0",
-        "xci_path": "ip/design_1_mapper_0_0/design_1_mapper_0_0.xci",
-        "inst_hier_path": "Mapper_0"
-      }
-    },
-    "interface_nets": {
-      "S_AXIS_0_1": {
-        "interface_ports": [
-          "S_AXIS_0",
-          "Bit_splitter_0/S_AXIS"
-        ]
       }
     },
     "nets": {
       "Bit_splitter_0_data_out": {
         "ports": [
           "Bit_splitter_0/data_out",
-          "Mapper_0/data_in"
+          "mapper_0/data_in"
+        ]
+      },
+      "Bit_splitter_0_data_out_ready": {
+        "ports": [
+          "Bit_splitter_0/data_out_ready",
+          "data_out_ready_1"
         ]
       },
       "Bit_splitter_0_data_out_valid": {
         "ports": [
           "Bit_splitter_0/data_out_valid",
-          "Mapper_0/data_in_valid"
+          "mapper_0/data_in_valid"
         ]
       },
       "Net": {
         "ports": [
+          "mapper_0/data_in_ready",
           "Bit_splitter_0/data_in_ready"
         ]
       },
       "clk_0_1": {
         "ports": [
-          "clk_0",
-          "Bit_splitter_0/clk",
-          "Mapper_0/clk"
+          "clk",
+          "mapper_0/clk",
+          "Bit_splitter_0/clk"
+        ]
+      },
+      "data_in_0_1": {
+        "ports": [
+          "data_in",
+          "Bit_splitter_0/data_in"
+        ]
+      },
+      "data_in_valid_0_1": {
+        "ports": [
+          "data_in_valid",
+          "Bit_splitter_0/data_in_valid"
+        ]
+      },
+      "mapper_0_data_out_ready": {
+        "ports": [
+          "mapper_0/data_out_ready",
+          "data_out_ready"
+        ]
+      },
+      "mapper_0_data_out_valid": {
+        "ports": [
+          "mapper_0/data_out_valid",
+          "data_out_valid"
+        ]
+      },
+      "mapper_0_i_out": {
+        "ports": [
+          "mapper_0/i_out",
+          "i_out"
+        ]
+      },
+      "mapper_0_q_out": {
+        "ports": [
+          "mapper_0/q_out",
+          "q_out"
         ]
       },
       "mod_type_0_1": {
         "ports": [
-          "mod_type_0",
-          "Bit_splitter_0/mod_type",
-          "Mapper_0/mod_type"
+          "mod_type",
+          "Bit_splitter_0/mod_type"
         ]
       },
       "reset_0_1": {
         "ports": [
-          "reset_0",
-          "Bit_splitter_0/reset",
-          "Mapper_0/nreset"
+          "reset",
+          "mapper_0/nreset",
+          "Bit_splitter_0/reset"
         ]
       }
     }

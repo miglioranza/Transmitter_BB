@@ -1,0 +1,11 @@
+Time resolution is 1 ps
+Note: Start of simulation
+Time: 20 ns  Iteration: 0  Process: /mapper_tb/stim_proc  File: /home/miglioranza/mapper_tb.vhd
+Note: End of Simulation
+Time: 785 ns  Iteration: 0  Process: /mapper_tb/stim_proc  File: /home/miglioranza/mapper_tb.vhd
+$finish called at time : 785 ns : File "/home/miglioranza/mapper_tb.vhd" Line 185
+Note: Start of simulation
+Time: 20 ns  Iteration: 0  Process: /mapper_tb/stim_proc  File: /home/miglioranza/mapper_tb.vhd
+Note: End of Simulation
+Time: 785 ns  Iteration: 0  Process: /mapper_tb/stim_proc  File: /home/miglioranza/mapper_tb.vhd
+$finish called at time : 785 ns : File "/home/miglioranza/mapper_tb.vhd" Line 185

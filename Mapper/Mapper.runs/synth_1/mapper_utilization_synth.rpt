@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Feb 27 13:49:41 2025
+| Date         : Fri Mar 21 13:15:36 2025
 | Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 | Command      : report_utilization -file mapper_utilization_synth.rpt -pb mapper_utilization_synth.pb
 | Design       : mapper
@@ -32,14 +32,14 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               |  108 |     0 |          0 |    425280 |  0.03 |
-|   LUT as Logic          |  108 |     0 |          0 |    425280 |  0.03 |
+| CLB LUTs*               |  216 |     0 |          0 |    425280 |  0.05 |
+|   LUT as Logic          |  216 |     0 |          0 |    425280 |  0.05 |
 |   LUT as Memory         |    0 |     0 |          0 |    213600 |  0.00 |
-| CLB Registers           |   26 |     0 |          0 |    850560 | <0.01 |
-|   Register as Flip Flop |   26 |     0 |          0 |    850560 | <0.01 |
+| CLB Registers           |  103 |     0 |          0 |    850560 |  0.01 |
+|   Register as Flip Flop |  103 |     0 |          0 |    850560 |  0.01 |
 |   Register as Latch     |    0 |     0 |          0 |    850560 |  0.00 |
-| CARRY8                  |    0 |     0 |          0 |     53160 |  0.00 |
-| F7 Muxes                |   28 |     0 |          0 |    212640 |  0.01 |
+| CARRY8                  |    7 |     0 |          0 |     53160 |  0.01 |
+| F7 Muxes                |   18 |     0 |          0 |    212640 | <0.01 |
 | F8 Muxes                |    0 |     0 |          0 |    106320 |  0.00 |
 | F9 Muxes                |    0 |     0 |          0 |     53160 |  0.00 |
 +-------------------------+------+-------+------------+-----------+-------+
@@ -59,9 +59,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 26    |          Yes |           - |        Reset |
+| 96    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 0     |          Yes |       Reset |            - |
+| 7     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -162,16 +162,19 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |   43 |                 CLB |
-| LUT5     |   39 |                 CLB |
-| MUXF7    |   28 |                 CLB |
+| FDCE     |   96 |            Register |
+| LUT4     |   74 |                 CLB |
+| LUT6     |   69 |                 CLB |
+| LUT3     |   50 |                 CLB |
+| LUT5     |   44 |                 CLB |
+| LUT2     |   44 |                 CLB |
 | OBUF     |   26 |                 I/O |
-| LUT4     |   26 |                 CLB |
-| FDCE     |   26 |            Register |
+| MUXF7    |   18 |                 CLB |
 | INBUF    |   13 |                 I/O |
 | IBUFCTRL |   13 |              Others |
-| LUT3     |   11 |                 CLB |
-| LUT2     |    6 |                 CLB |
+| FDRE     |    7 |            Register |
+| CARRY8   |    7 |                 CLB |
+| LUT1     |    6 |                 CLB |
 | BUFGCE   |    1 |               Clock |
 +----------+------+---------------------+
 

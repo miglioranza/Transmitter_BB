@@ -71,6 +71,8 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param simulator.xceliumInstallPath /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin
+set_param chipscope.maxJobs 4
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config  -id {BD 41-759}  -new_severity {INFO} 
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMODT' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMPARITY' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 
@@ -292,13 +294,18 @@ set_property parent.project_path /home/miglioranza/Mapper/Mapper.xpr [current_pr
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part xilinx.com:zcu111:part0:1.4 [current_project]
-set_property ip_repo_paths /home/miglioranza/Mapper_new [current_project]
+set_property ip_repo_paths {
+  /home/miglioranza/IP_repository
+  /home/miglioranza/Mapper
+  /home/miglioranza/Data_splitter
+  /home/miglioranza/Mapper_new
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo /home/miglioranza/Mapper/Mapper.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib /home/miglioranza/Mapper_new/mapper.vhd
+read_vhdl -library xil_defaultlib /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -309,6 +316,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental /home/miglioranza/Mapper/Mapper.srcs/utils_1/imports/synth_1/mapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

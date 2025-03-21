@@ -22,7 +22,7 @@ architecture behavior of mapper_tb is
     Port (
      -- Clock, reset
           clk               : in  std_logic                       := '0';   
-          nreset            : in  std_logic                       := '0';   -- active on low level
+          reset            : in  std_logic                       := '0';   -- active on low level
                 
           -- Input ports     
           mod_type          : in  std_logic_vector(2 downto 0)    := (others => '0');   -- selection of modulation scheme (BPSK, QPSK, 16APSK, 32APSK, 64APSK, 16QAM, 32QAM, 64QAM)
@@ -39,7 +39,7 @@ architecture behavior of mapper_tb is
 
     -- Signal declarations
     signal clk            : std_logic := '0';
-    signal nreset         : std_logic := '0';
+    signal reset         : std_logic := '0';
 	signal mode_type      : std_logic_vector(2 downto 0);
     signal data_in        : std_logic_vector(5 downto 0):= (others => '0');
 	signal data_in_valid  : std_logic := '0';
@@ -57,7 +57,7 @@ begin
     -- Instantiate the Unit Under Test (UUT)
     uut: mapper PORT MAP (
           clk               => clk,
-          nreset            => nreset,
+          reset             => reset,
 		  mod_type          => mode_type,
           data_in           => data_in,
 		  data_in_valid     => data_in_valid,
@@ -82,9 +82,9 @@ begin
     begin		
 	
         -- hold reset state for 20 ns
-        nreset <= '1';
+        reset <= '1';
         wait for 20 ns;	
-        nreset <= '0';
+        reset <= '0';
 		
 		-- selection of modulation type
 		report "Start of simulation" ;
@@ -94,21 +94,27 @@ begin
         wait for clk_period;	
         data_in_valid <= '1';
 
-		-- data_in_valid
---        wait for 1000 ns;	
---        data_in_valid <= '0';
-
 
         -- Input data
+
         data_in <= "000000"; wait for 10 ns;
         data_in <= "000001"; wait for 10 ns;
         data_in <= "000010"; wait for 10 ns;
         data_in <= "000011"; wait for 10 ns;
         data_in <= "000100"; wait for 10 ns;
         data_in <= "000101"; wait for 10 ns;
+         data_in_ready <= '0' ;
         data_in <= "000110"; wait for 10 ns;
         data_in <= "000111"; wait for 10 ns;
-        data_in <= "001000"; wait for 10 ns;
+         data_in_valid <= '0';
+         
+        wait for 50 ns;
+          data_in_ready <= '1' ;
+          wait until data_out_ready = '1' ;
+          wait for 10 ns ;
+          data_in_valid <= '1';
+          
+        data_in <= "001000"; wait for 10 ns;       
         data_in <= "001001"; wait for 10 ns;
         data_in <= "001010"; wait for 10 ns;
         data_in <= "001011"; wait for 10 ns;
@@ -117,6 +123,12 @@ begin
         data_in <= "001110"; wait for 10 ns;
         data_in <= "001111"; wait for 10 ns;
 		data_in <= "010000"; wait for 10 ns;
+		
+		data_in_ready <= '0' ;
+        wait for 20 ns  ;	
+         data_in_valid <= '1';
+         data_in_ready <= '1' ;
+         
         data_in <= "010001"; wait for 10 ns;
         data_in <= "010010"; wait for 10 ns;
         data_in <= "010011"; wait for 10 ns;
