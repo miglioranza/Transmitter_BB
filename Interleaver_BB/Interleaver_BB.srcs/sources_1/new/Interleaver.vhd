@@ -42,7 +42,7 @@ entity block_interleaver is
         DATA_WIDTH  : integer := 32;  -- Codeword size (fixed at 32 bits)
         NUM_ROWS    : integer := 3;  -- Number of rows 
         NUM_COLS    : integer := 7   -- Number of columns (configurable)
-  --Possible sizes of the block R x C (21, 41, or 61)
+  --Possible sizes of the block R x C ( 41 or 61)
     );
     port (
         clk                 : in  std_logic;
@@ -82,11 +82,13 @@ architecture Behavioral of block_interleaver is
     signal current_code         : integer range 0 to 3 := 0 ;
 begin
   
-  process(clk,rst) 
+  process(clk, rst, code_rate) 
+
   begin 
+ 
       case code_rate is  
         when "00" => 
-          sel_code <= 1 ;
+          sel_code <= 2 ;
         when "01" => 
           sel_code <= 2 ;
         when "10" => 
@@ -94,7 +96,7 @@ begin
         when "11" => 
           sel_code <= 3 ; 
         when others =>
-          sel_code <= 1 ;
+          sel_code <= 2 ;
   end case ; 
   end process ;
   
@@ -125,7 +127,8 @@ begin
 --                         state <= WRITE;
 --                    else 
                     if write_en = '1' then
-                         current_code  <= sel_code ;
+                         current_code      <= sel_code ;
+                         current_code_rate <= code_rate ;
                          state <= WRITE;
                          memory(to_integer(write_addr)) <= data_in;
                          write_addr <= write_addr + 1;
@@ -184,7 +187,6 @@ begin
                 when others =>
                     state <= IDLE;
             end case;
-current_code_rate <= std_logic_vector(to_unsigned(current_code,current_code_rate'length));
             -- Clear done flags when leaving states
             if state /= WRITE then
                 write_done <= '0';

@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<Index Version="1" Minor="0">
+	<Repository value="/home/miglioranza/FEC">
+	</Repository>
+	<IP>
+		<VLNV value="user.org:user:Encoder:1.0">
+		</VLNV>
+		<DisplayName value="Encoder_v1_1">
+		</DisplayName>
+		<Description value="Encoder_v1_1">
+		</Description>
+		<CoreRevision value="5">
+		</CoreRevision>
+		<ComponentPath value="FEC.srcs/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="aartix7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="akintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artix7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artix7l">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artixuplus">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="aspartan7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="azynq">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="kintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="kintex7l">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="kintexu">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="kintexuplus">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qartix7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qkintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qkintex7l">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qvirtex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qzynq">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="spartan7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="versal">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="virtex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="virtexu">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="virtexuplus58g">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="virtexuplus">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="virtexuplushbm">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="zynq">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="zynquplus">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/UserIP">
+			</Taxonomy>
+		</Taxonomies>
+		<SubcoreVLNVs>
+			<SubcoreVLNV value="xilinx.com:ip:sd_fec:1.1">
+			</SubcoreVLNV>
+			<SubcoreVLNV value="xilinx.com:ip:fifo_generator:13.2">
+			</SubcoreVLNV>
+		</SubcoreVLNVs>
+		<LockPrevVersions value="false">
+		</LockPrevVersions>
+	</IP>
+	<IP>
+		<VLNV value="user.org:user:Encoder:1.0">
+		</VLNV>
+		<DisplayName value="Encoder_v1_0">
+		</DisplayName>
+		<Description value="Encoder_v1_0">
+		</Description>
+		<ManuallyDisabled value="true">
+		</ManuallyDisabled>
+		<CoreRevision value="6">
+		</CoreRevision>
+		<ComponentPath value="FEC.srcs/sources_1/imports/FEC.srcs/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="aartix7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="akintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artix7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artix7l">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="artixuplus">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="aspartan7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="azynq">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="kintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="kintex7l">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="kintexu">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="kintexuplus">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qartix7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qkintex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qkintex7l">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qvirtex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="qzynq">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="spartan7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="versal">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="virtex7">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="virtexu">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="virtexuplus58g">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="virtexuplus">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="virtexuplushbm">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="zynq">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+			<Family name="zynquplus">
+				<Part status="Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="/UserIP">
+			</Taxonomy>
+		</Taxonomies>
+		<SubcoreVLNVs>
+			<SubcoreVLNV value="xilinx.com:ip:sd_fec:1.1">
+			</SubcoreVLNV>
+			<SubcoreVLNV value="xilinx.com:ip:fifo_generator:13.2">
+			</SubcoreVLNV>
+		</SubcoreVLNVs>
+		<LockPrevVersions value="false">
+		</LockPrevVersions>
+		<Interfaces>
+			<Interface value="AXI4-Stream">
+			</Interface>
+		</Interfaces>
+	</IP>
+	<IPInst>
+		<VLNV value="xilinx.com:ipcache:026767ed55a8e3da:0">
+		</VLNV>
+		<Description value="">
+		</Description>
+		<XMLFile value="FEC.cache/ip/2021.2/0/2/026767ed55a8e3da/026767ed55a8e3da.xci">
+		</XMLFile>
+		<CoreVLNV value="xilinx.com:ip:sd_fec:1.1">
+		</CoreVLNV>
+		<CoreRevision value="8">
+		</CoreRevision>
+		<InstID value="026767ed55a8e3da">
+		</InstID>
+	</IPInst>
+	<IPInst>
+		<VLNV value="xilinx.com:ipcache:58ab6a9e8e2d6260:0">
+		</VLNV>
+		<Description value="">
+		</Description>
+		<XMLFile value="FEC.cache/ip/2021.2/5/8/58ab6a9e8e2d6260/58ab6a9e8e2d6260.xci">
+		</XMLFile>
+		<CoreVLNV value="xilinx.com:ip:fifo_generator:13.2">
+		</CoreVLNV>
+		<CoreRevision value="6">
+		</CoreRevision>
+		<InstID value="58ab6a9e8e2d6260">
+		</InstID>
+	</IPInst>
+</Index>
+

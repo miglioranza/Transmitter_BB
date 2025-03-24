@@ -1,2 +1,3 @@
 Breakpoint File Version 1.0
-146,true,"/home/miglioranza/FEC/FEC.srcs/sim_1/new/Encoder_tb.vhd"
+127,true,"/home/miglioranza/FEC/FEC.srcs/sim_1/new/Encoder_tb.vhd"
+147,true,"/home/miglioranza/FEC/FEC.srcs/sim_1/new/Encoder_tb.vhd"

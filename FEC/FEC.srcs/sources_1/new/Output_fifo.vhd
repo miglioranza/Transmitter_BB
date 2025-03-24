@@ -39,13 +39,15 @@ entity Output_fifo is
        reset                 : in STD_LOGIC;
        sel_code_rate         : in std_logic_vector(1 downto 0)  :=(others => '0') ;
        tdata_in              : in std_logic_vector(31 downto 0) :=(others => '0') ;
-       tdata_last            : in std_logic_vector(3 downto 0) :=(others => '0') ;
+       tdata_last            : in std_logic_vector(3 downto 0)  :=(others => '0') ;
        tdata_ready           : in std_logic := '0' ;
-       tdata_valid           : in std_logic_vector(3 downto 0) :=(others => '0') ;
+       tdata_valid           : in std_logic_vector(3 downto 0)  :=(others => '0') ;
        data_out              : out std_logic_vector(31 downto 0):=(others => '0');
        data_out_last         : out std_logic := '0';
        data_out_ready        : out std_logic_vector(3 downto 0) :=(others => '0');
+--       code_rate             : out std_logic_vector(1 downto 0) :=(others => '0');
        data_out_valid        : out std_logic := '0';
+       axis_data_counts      : out std_logic_vector(12 downto 0):=(others => '0');
        finish_encoding       : out std_logic := '0'
   );
 end Output_fifo;
@@ -71,12 +73,13 @@ end component ;
 
 signal current_code_rate        : integer   :=  0  ;
 signal data_in_last             : std_logic := '0' ;
-signal data_in_ready            : std_logic := '0' ;
+--signal data_in_ready            : std_logic := '0' ;
 signal data_in_valid            : std_logic := '0' ;
 signal tdata_out_ready          : std_logic := '0' ;
-signal axis_data_counts         : std_logic_vector(12 downto 0) ;
+--signal axis_data_counts         : std_logic_vector(12 downto 0) ;
 signal encoding_completed       : std_logic := '0' ;
-begin
+--signal code_rate2interleaver    : std_logic_vector(1 downto 0) ;
+begin 
 
 code_rate_selection : process (clk, sel_code_rate) 
 begin
@@ -107,8 +110,9 @@ s_aresetn           => reset ,
 s_aclk              => clk ,
 m_axis_tdata        => data_out ,
 m_axis_tlast        => data_out_last , 
+--m_axis_tlast        => open , 
 m_axis_tready       => tdata_ready,
-m_axis_tvalid       => data_out_valid , 
+m_axis_tvalid       => data_out_valid ,
 axis_data_count     => axis_data_counts ,
 wr_rst_busy         => open ,
 rd_rst_busy         => open 
@@ -118,6 +122,7 @@ process (clk)
 begin 
 
 if rising_edge (clk) then
+--    code_rate <= sel_code_rate ;
     data_out_ready(current_code_rate) <= tdata_out_ready ;
     data_in_last  <= tdata_last(current_code_rate) ;
     data_in_valid <= tdata_valid(current_code_rate);

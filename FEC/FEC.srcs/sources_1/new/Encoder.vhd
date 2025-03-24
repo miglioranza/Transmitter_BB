@@ -41,12 +41,14 @@ entity Encoder is
  data_in                : in std_logic_vector(31 downto 0) ; 
  data_in_valid          : in std_logic ;  
  din_ready_ifsm2enc     : in std_logic ;  
- data_in_last           : in std_logic ; 
+ data_in_last           : in std_logic := '0'; 
  sel_FEC_code_rate      : in std_logic_vector( 1 downto 0)   ;
  data_out_ready         : out std_logic := '0';  --LDPC encoder ready to receive data in input, the signal is fed from the fsm input control to the otuput of the encoder subsystem                   
  data_out               : out std_logic_vector(31 downto 0) ;
  data_out_valid         : out std_logic ;
  core_finish            : out std_logic := '0';
+ axis_data_count        : out std_logic_vector(12 downto 0) := (others => '0') ; 
+-- current_code_rate      : out std_logic_vector( 1 downto 0)   ;
  data_out_last          : out std_logic 
 
   );
@@ -64,7 +66,6 @@ component Wifi_Input_FSM
        fsm_din_ready         : in std_logic_vector(3 DOWNTO 0):= (others => '0') ;
        fsm_din_last          : in STD_LOGIC;
        fsm_core_finish       : in std_logic := '0' ; 
-       fsm_fifo_count        : in std_logic_vector(12 downto 0) := (others => '0') ;
        fsm_dout              : out STD_LOGIC_VECTOR (31 downto 0):= (others => '0') ;  
        fsm_dout_valid        : out std_logic_vector(3 DOWNTO 0);
        fsm_dout_ready        : out std_logic := '0';
@@ -152,6 +153,8 @@ component Output_fifo
        data_out_last         : out std_logic := '0';
        data_out_ready        : out std_logic_vector(3 downto 0) :=(others => '0');
        data_out_valid        : out std_logic := '0';
+--       code_rate             : out std_logic_vector(1 downto 0):=(others => '0');   
+       axis_data_counts      : out std_logic_vector(12 downto 0):=(others => '0');    
        finish_encoding       : out std_logic := '0'
   );
 end component ;
@@ -178,13 +181,13 @@ signal core2fifo_din_valid      : std_logic_vector(3 downto 0) := (others => '0'
 signal finish_encoding          : std_logic :=  '0';
 signal current_CR               : std_logic_vector(1 downto 0) := (others => '0') ;  
 signal dout_valid_fsm2core      : std_logic_vector(3 downto 0) := (others => '0') ;   
-signal out_valid_data            : std_logic := '0' ;
+signal out_valid_data           : std_logic := '0' ;
 
 --fifo signals 
 --signal data_in_ready_core2fsm   : std_logic_vector(3 downto 0) := (others => '0') ;
 --signal tdata_valid_fifo2cores   : std_logic_vector(3 downto 0) := (others => '0') ;
 --signal tdata_last_fifo2cores    : std_logic_vector(3 downto 0) := (others => '0') ;
-signal axis_data_count          : std_logic_vector(12 downto 0):= (others => '0') ; 
+--signal axis_data_count          : std_logic_vector(12 downto 0):= (others => '0') ; 
 --signal data_out_fifo2core       : std_logic_vector(31 downto 0):= (others =>  '0'); 
 --signal tdata_last_ifsm2fifo     : std_logic := '0' ;
 
@@ -221,7 +224,6 @@ end process ;
        fsm_din               => data_in ,
        fsm_din_valid         => data_in_valid,
        fsm_din_ready         => dout_ready_cores,   
-       fsm_fifo_count        => axis_data_count ,
        fsm_core_finish       => finish_encoding ,
        fsm_din_last          => data_in_last,
        fsm_dout_ready        => data_out_ready,
@@ -269,18 +271,20 @@ end process ;
    	
 out_fifo : Output_fifo 
 port map ( 
-clk             => clk ,
-reset           => aresetn ,
-sel_code_rate   => current_CR ,
-tdata_in        => data_out_cores ,
-tdata_last      => dout_last_core ,
-tdata_valid     => core2fifo_din_valid ,
-tdata_ready     => din_ready_ifsm2enc,
-data_out        => data_out ,
-data_out_last   => data_out_last ,
-data_out_valid  => out_valid_data ,
-data_out_ready  => din_ready_core,
-finish_encoding => finish_encoding
+clk              => clk ,
+reset            => aresetn ,
+sel_code_rate    => current_CR ,
+tdata_in         => data_out_cores ,
+tdata_last       => dout_last_core ,
+tdata_valid      => core2fifo_din_valid ,
+tdata_ready      => din_ready_ifsm2enc,
+data_out         => data_out ,
+data_out_last    => data_out_last ,
+data_out_valid   => out_valid_data ,
+data_out_ready   => din_ready_core,
+--code_rate        => current_code_rate,
+axis_data_counts => axis_data_count,
+finish_encoding  => finish_encoding
 ); 
    
    LDPC_encoder_1x16_inst0 : LDPC_core
@@ -290,7 +294,7 @@ finish_encoding => finish_encoding
        reset_n              => fsm_reset_core(0),
        din                  => dout_core,      
        din_valid            => dout_valid_fsm2core(0) ,   --input	
-       ctrl_input           => "0000" ,
+       ctrl_input           => "0001" ,  --CR = 1/2 with Block Length N = 1296
        ctrl_ready_out       => control_ready_core(0) ,
        din_ready_fsm2core   => din_ready_core(0),
        din_last             => dout_last_fsm2core(0),       
