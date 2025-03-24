@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvhdl -MESSAGES -v93 -RELAX -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -work unifast -f /home/miglioranza/Data_splitter/Data_splitter.cache/compile_simlib/xcelium/unifast/.cxl.vhdl.unifast.unifast.lin64.cmf
