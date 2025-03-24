@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>user.org</spirit:vendor>
+  <spirit:library>customized_ip</spirit:library>
+  <spirit:name>Design_2_block_interleaver_0_0</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>rst</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>rst</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.RST.POLARITY">ACTIVE_LOW</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.RST.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_RESET">rst</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_TOLERANCE_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.FREQ_TOLERANCE_HZ">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.PHASE">0.0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.CLK_DOMAIN">Design_2_clk</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_BUSIF"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_PORT</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_PORT"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.CLK.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:modelName>block_interleaver</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Mon Mar 24 16:10:24 UTC 2025</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:9bd27e31</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_synthesisconstraints</spirit:name>
+        <spirit:displayName>Synthesis Constraints</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis.constraints</spirit:envIdentifier>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:9bd27e31</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlsynthesiswrapper</spirit:name>
+        <spirit:displayName>VHDL Synthesis Wrapper</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>Design_2_block_interleaver_0_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsynthesiswrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Mon Mar 24 16:10:24 UTC 2025</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:9bd27e31</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:modelName>block_interleaver</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Mon Mar 24 16:10:24 UTC 2025</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:22138e9a</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_vhdlsimulationwrapper</spirit:name>
+        <spirit:displayName>VHDL Simulation Wrapper</spirit:displayName>
+        <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:simulation.wrapper</spirit:envIdentifier>
+        <spirit:language>vhdl</spirit:language>
+        <spirit:modelName>Design_2_block_interleaver_0_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_vhdlsimulationwrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Mon Mar 24 16:10:24 UTC 2025</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:22138e9a</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_externalfiles</spirit:name>
+        <spirit:displayName>External Files</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:9bd27e31</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>rst</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>data_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>data_in_ready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>write_en</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>code_rate</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>data_out</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>data_out_ready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>current_code_rate</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>read_valid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>DATA_WIDTH</spirit:name>
+        <spirit:displayName>Data Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DATA_WIDTH">32</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>NUM_ROWS</spirit:name>
+        <spirit:displayName>Num Rows</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.NUM_ROWS">3</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>NUM_COLS</spirit:name>
+        <spirit:displayName>Num Cols</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.NUM_COLS">7</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/4023/sources_1/new/Interleaver.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsynthesiswrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>synth/Design_2_block_interleaver_0_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/4023/sources_1/new/Interleaver.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_vhdlsimulationwrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>sim/Design_2_block_interleaver_0_0.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>Design_2_block_interleaver_0_0.dcp</spirit:name>
+        <spirit:userFileType>dcp</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>Design_2_block_interleaver_0_0_stub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>Design_2_block_interleaver_0_0_stub.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>Design_2_block_interleaver_0_0_sim_netlist.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>Design_2_block_interleaver_0_0_sim_netlist.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>block_interleaver_v1_2</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>DATA_WIDTH</spirit:name>
+      <spirit:displayName>Data Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_WIDTH">32</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>NUM_ROWS</spirit:name>
+      <spirit:displayName>Num Rows</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.NUM_ROWS">3</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>NUM_COLS</spirit:name>
+      <spirit:displayName>Num Cols</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.NUM_COLS">7</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">Design_2_block_interleaver_0_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:displayName>block_interleaver_v1_2</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>22</xilinx:coreRevision>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6ac74d1f_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@716d066b_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1bda7264_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@75383cd1_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4a6f8b6_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@593a975b_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@515fa103_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4e5d1e12_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4d1788b4_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@21fa8336_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7bebca9b_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@39d2a546_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@36333eb4_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4849173d_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6fc914de_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4c110cb9_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@41732f0c_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6b1dec24_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@55718050_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4a481aca_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@d7bf90e_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@639733e3_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@79af1197_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6002e61e_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@406b48cd_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7f728ad8_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6cd8fbfe_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@b28b04c_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3bdcdfe5_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6d9de20c_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2e1fd1_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@627f2f8d_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2f548647_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6366232b_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3eaee19a_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@39753668_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1d6f9953_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7f130be4_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@ae2dc26_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6b1dffb2_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1919693f_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3c5a529c_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4a2ce521_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@790b7264_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6e44c4fd_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7672122a_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@668ef8d8_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6850d330_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6de09bec_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@543ce9e6_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@243ed68d_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7897a859_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5a2194f9_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@201470a_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@56b76b80_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@228f4bb4_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3dd97494_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@51fca936_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1418af31_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@296a2bb7_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@10ba886_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@773863_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@38db2380_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@32a5ea8c_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1020cabb_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5f393844_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@17f001c4_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2ade1935_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@35389128_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@146d96fd_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@493dde82_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@15a58221_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@eeaa5e0_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5126a547_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@17035cd2_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3bfe56fe_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2df53b3_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5c86fb5c_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4a71797_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2f0d6319_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@77ccb66c_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1fc5ca04_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@16d2f8db_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7412cc02_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1545130c_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5fe9b2be_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@704e814c_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4c6ac473_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@75d59248_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@283c221_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4f3b89c1_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@510ffeb7_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@73fc9971_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6dbfda02_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2f15094c_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5394b048_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1ccbaba7_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5d0f5096_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@590d4034_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6aa6ddde_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4887d75a_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1a802154_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6f965b0f_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1c55a19_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1d737704_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@73357cab_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5cd430bc_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@505365f4_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@17944f23_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2c6aa46_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@641e2c2d_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3cc988d1_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3de91b0_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3a9c301f_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3e8754a7_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@8c172c6_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3bd98744_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@359cf642_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@277d939c_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6babae27_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@53710d1d_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6b99267a_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@34a23880_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@487e9c2f_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@15166d7e_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@52bd6c00_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2a4cac30_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6fc6e24e_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@451ca5d2_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5ce08b0c_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@345ac9e5_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@b789dd8_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@23a40286_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@74206bf4_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3e6764ad_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@d14de7f_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7d8fdd75_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@66a2a439_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@59c93328_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@35af6a03_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@623c9d3d_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@15a14015_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@e4bc439_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3e26ea16_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7970b9e6_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@39d341ee_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4920a4e2_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@33dcaaff_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@68bb2cf0_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@11b73475_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@91486d7_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@607856fe_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4d04c537_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4ae5694c_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@43a6b39d_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@373d682f_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5af836b6_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2ef879bb_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@327328ff_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5c0d3de_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@787c5817_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@25cdcf7a_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5a07e812_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@34c04b43_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@462733a_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@13048427_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2b8bb76f_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@85587c5_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@d535c5c_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@c3f0e8d_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3d9be127_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4cf46ffc_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@69f91772_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@10d6b8d4_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4b38a957_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@371ea400_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2d1077aa_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1de90664_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@778fa43e_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1cc7f79d_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2dd38949_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5defb76_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1ca54e8a_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@24a5b214_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6d8fc03d_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5ece554f_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3f65bd13_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6527149a_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5ae3d328_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@216e63be_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@58b0390e_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5738179a_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@42b69ffc_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4ecf30b_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2415a749_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5210880d_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2a3b0bf5_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@367df630_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2d5ab480_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@34b30e75_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3a196490_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6f7ac9fc_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@209fbe16_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6464ae8a_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@35849fdb_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5129e3ac_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3a57679b_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1021c54c_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6725cd17_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3e64391f_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@78366d44_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+      </xilinx:tags>
+      <xilinx:configElementInfos>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.ASSOCIATED_PORT" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.ASSOCIATED_RESET" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.FREQ_HZ" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.PHASE" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RST.POLARITY" xilinx:valuePermission="bd_and_user"/>
+      </xilinx:configElementInfos>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2021.2</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="25031715"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="3b8a4007"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="074041da"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="fc13977c"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="27bb5d42"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

@@ -1,0 +1,1071 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Mar 24 17:09:52 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_block_interleaver_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_block_interleaver_0_0 (user.org:user:block_interleaver:1.0) from (Rev. 21) to (Rev. 22)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Mar 24 17:09:52 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Encoder_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of Design_2_Encoder_0_0 (user.org:user:Encoder:1.0 (Rev. 5)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Fri Mar 21 17:36:32 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Bit_splitter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Bit_splitter_0_0 (user.org:user:Bit_splitter:1.0) from (Rev. 35) to (Rev. 36)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Fri Mar 21 17:27:45 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Bit_splitter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Bit_splitter_0_0 (user.org:user:Bit_splitter:1.0) from (Rev. 34) to (Rev. 35)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Fri Mar 21 17:16:28 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Bit_splitter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Bit_splitter_0_0 (user.org:user:Bit_splitter:1.0) from (Rev. 33) to (Rev. 34)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Fri Mar 21 17:04:39 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Bit_splitter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Bit_splitter_0_0 (user.org:user:Bit_splitter:1.0) from (Rev. 32) to (Rev. 33)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Fri Mar 21 16:48:06 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Bit_splitter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Bit_splitter_0_0 (user.org:user:Bit_splitter:1.0) from (Rev. 30) to (Rev. 32)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Fri Mar 21 13:18:36 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_mapper_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_mapper_0_0 (user.org:user:mapper:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Wed Mar 19 13:27:53 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_block_interleaver_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_block_interleaver_0_0 (user.org:user:block_interleaver:1.0) from (Rev. 20) to (Rev. 21)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Wed Mar 19 11:10:06 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_block_interleaver_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Design_2_block_interleaver_0_0 (user.org:user:block_interleaver:1.0) from (Rev. 19) to (Rev. 20)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Design_2_block_interleaver_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'current_code_rate'
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Wed Mar 19 10:54:07 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_block_interleaver_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_block_interleaver_0_0 (user.org:user:block_interleaver:1.0) from (Rev. 18) to (Rev. 19)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Wed Mar 19 10:54:07 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Bit_splitter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Bit_splitter_0_0 (user.org:user:Bit_splitter:1.0) from (Rev. 29) to (Rev. 30)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Wed Mar 19 10:25:59 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_block_interleaver_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_block_interleaver_0_0 (user.org:user:block_interleaver:1.0) from (Rev. 17) to (Rev. 18)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Wed Mar 19 10:20:24 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Bit_splitter_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Design_2_Bit_splitter_0_0 (user.org:user:Bit_splitter:1.0) from (Rev. 28) to (Rev. 29)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Design_2_Bit_splitter_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'code_rate'
+
+-Upgrade has added port 'mod_type2mapper'
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Wed Mar 19 10:18:57 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_block_interleaver_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_block_interleaver_0_0 (user.org:user:block_interleaver:1.0) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Wed Mar 19 10:18:57 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Bit_splitter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of Design_2_Bit_splitter_0_0 (user.org:user:Bit_splitter:1.0 (Rev. 28)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue Mar 18 17:11:31 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Encoder_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Design_2_Encoder_0_0 (user.org:user:Encoder:1.0) from (Rev. 4) to (Rev. 5)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Design_2_Encoder_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'current_code_rate'
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue Mar 18 17:06:22 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Encoder_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Design_2_Encoder_0_0 (user.org:user:Encoder:1.0) from (Rev. 3) to (Rev. 4)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Design_2_Encoder_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'axis_data_count'
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue Mar 18 16:58:46 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Encoder_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of Design_2_Encoder_0_0 (user.org:user:Encoder:1.0 (Rev. 3)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue Mar 18 13:54:01 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Bit_splitter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Bit_splitter_0_0 (user.org:user:Bit_splitter:1.0) from (Rev. 26) to (Rev. 28)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue Mar 18 11:56:30 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Bit_splitter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Bit_splitter_0_0 (user.org:user:Bit_splitter:1.0) from (Rev. 25) to (Rev. 26)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue Mar 18 11:10:20 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_block_interleaver_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_block_interleaver_0_0 (user.org:user:block_interleaver:1.0) from (Rev. 15) to (Rev. 16)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue Mar 18 10:22:55 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Bit_splitter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Bit_splitter_0_0 (user.org:user:Bit_splitter:1.0) from (Rev. 24) to (Rev. 25)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue Mar 18 10:02:42 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Bit_splitter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Bit_splitter_0_0 (user.org:user:Bit_splitter:1.0) from (Rev. 23) to (Rev. 24)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Mar 17 18:28:54 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Bit_splitter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Bit_splitter_0_0 (user.org:user:Bit_splitter:1.0) from (Rev. 22) to (Rev. 23)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Mar 17 18:11:12 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_block_interleaver_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_block_interleaver_0_0 (user.org:user:block_interleaver:1.0) from (Rev. 13) to (Rev. 15)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Mar 17 17:12:25 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Bit_splitter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Bit_splitter_0_0 (user.org:user:Bit_splitter:1.0) from (Rev. 19) to (Rev. 22)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Mar 17 17:12:01 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Bit_splitter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of Design_2_Bit_splitter_0_0 (user.org:user:Bit_splitter:1.0 (Rev. 19)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Mar 17 15:13:21 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_block_interleaver_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_block_interleaver_0_0 (user.org:user:block_interleaver:1.0) from (Rev. 12) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Mar 17 14:24:39 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_block_interleaver_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_block_interleaver_0_0 (user.org:user:block_interleaver:1.0) from (Rev. 10) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Mar 17 14:11:53 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_block_interleaver_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of Design_2_block_interleaver_0_0 (user.org:user:block_interleaver:1.0 (Rev. 10)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Mar 17 14:02:07 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_block_interleaver_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_block_interleaver_0_0 (user.org:user:block_interleaver:1.0) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Mar 17 13:41:31 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Bit_splitter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Bit_splitter_0_0 (user.org:user:Bit_splitter:1.0) from (Rev. 18) to (Rev. 19)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Mar 17 13:17:25 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_block_interleaver_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_block_interleaver_0_0 (user.org:user:block_interleaver:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Mar 17 13:17:25 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Bit_splitter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Bit_splitter_0_0 (user.org:user:Bit_splitter:1.0) from (Rev. 17) to (Rev. 18)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Mar 17 12:00:41 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_block_interleaver_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_block_interleaver_0_0 (user.org:user:block_interleaver:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Mar 17 11:25:08 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_block_interleaver_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_block_interleaver_0_0 (user.org:user:block_interleaver:1.0) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Mar 17 10:15:29 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_block_interleaver_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_block_interleaver_0_0 (user.org:user:block_interleaver:1.0) from (Rev. 4) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Fri Mar 14 17:21:33 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Pre_Distortion_Filter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Pre_Distortion_Filter_0_0 (user.org:user:Pre_Distortion_Filter:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Fri Mar 14 16:50:13 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Bit_splitter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Bit_splitter_0_0 (user.org:user:Bit_splitter:1.0) from (Rev. 14) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Fri Mar 14 15:33:09 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Pre_Distortion_Filter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Pre_Distortion_Filter_0_0 (user.org:user:Pre_Distortion_Filter:1.0) from (Rev. 4) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Fri Mar 14 15:04:40 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Pipelined_Polyphase_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Pipelined_Polyphase_0_2 (user.org:user:Pipelined_Polyphase_Filter:1.0) from (Rev. 5) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Fri Mar 14 14:43:35 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_block_interleaver_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_block_interleaver_0_0 (user.org:user:block_interleaver:1.0) from (Rev. 2) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Fri Mar 14 13:48:48 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Encoder_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Design_2_Encoder_0_0 (user.org:user:Encoder:1.0) from (Rev. 6) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'Design_2_Encoder_0_0'.
+
+
+-Upgrade has removed interface 'M_AXIS'
+
+-Upgrade has removed interface 'S_AXIS'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Design_2_Encoder_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'current_code_rate'
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Fri Mar 14 13:46:37 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Encoder_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of Design_2_Encoder_0_0 (user.org:user:Encoder:1.0 (Rev. 6)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Fri Mar 14 13:31:46 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Encoder_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of Design_2_Encoder_0_0 (user.org:user:Encoder:1.0 (Rev. 6)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Fri Mar 14 13:30:48 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Encoder_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of Design_2_Encoder_0_0 (user.org:user:Encoder:1.0 (Rev. 6)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Fri Mar 14 11:33:26 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Encoder_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of Design_2_Encoder_0_0 (user.org:user:Encoder:1.0 (Rev. 6)) to Vivado generation flows.
+

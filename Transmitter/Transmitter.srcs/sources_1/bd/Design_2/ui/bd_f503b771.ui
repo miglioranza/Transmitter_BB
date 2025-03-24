@@ -1,0 +1,202 @@
+{
+   "ActiveEmotionalView":"Color Coded",
+   "Addressing View_Layers":"/reset_0_1:false|/clk_50MHz_1:false|/aresetn_0_1:false|/clk_0_1:false|/ldpc_core_clk_0_1:false|",
+   "Addressing View_ScaleFactor":"1.0",
+   "Addressing View_TopLeft":"-491,-256",
+   "Color Coded_ExpandedHierarchyInLayout":"",
+   "Color Coded_Layers":"/reset_0_1:true|/clk_50MHz_1:true|/aresetn_0_1:true|/clk_0_1:true|/ldpc_core_clk_0_1:true|",
+   "Color Coded_Layout":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port S_AXIS_0 -pg 1 -lvl 0 -x -20 -y 190 -defaultsOSRD
+preplace port port-id_aresetn_0 -pg 1 -lvl 0 -x -20 -y 130 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -20 -y 50 -defaultsOSRD
+preplace port port-id_control_enable_0 -pg 1 -lvl 0 -x -20 -y 270 -defaultsOSRD
+preplace port port-id_core_finish_0 -pg 1 -lvl 5 -x 1740 -y 20 -defaultsOSRD
+preplace port port-id_ldpc_core_clk -pg 1 -lvl 0 -x -20 -y 90 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x -20 -y 70 -defaultsOSRD
+preplace port port-id_data_in_ready_0 -pg 1 -lvl 0 -x -20 -y 330 -defaultsOSRD
+preplace port port-id_data_out_valid_0 -pg 1 -lvl 5 -x 1740 -y 400 -defaultsOSRD
+preplace port port-id_clk_50MHz -pg 1 -lvl 0 -x -20 -y 620 -defaultsOSRD
+preplace port port-id_data_out_last_0 -pg 1 -lvl 5 -x 1740 -y 40 -defaultsOSRD
+preplace port port-id_reset_0 -pg 1 -lvl 0 -x -20 -y 380 -defaultsOSRD
+preplace portBus seed_0 -pg 1 -lvl 0 -x -20 -y 250 -defaultsOSRD
+preplace portBus sel_FEC_code_rate_0 -pg 1 -lvl 0 -x -20 -y 350 -defaultsOSRD
+preplace portBus mod_type_0 -pg 1 -lvl 0 -x -20 -y 400 -defaultsOSRD
+preplace portBus data_out_I_0 -pg 1 -lvl 5 -x 1740 -y 420 -defaultsOSRD
+preplace portBus data_out_Q_0 -pg 1 -lvl 5 -x 1740 -y 440 -defaultsOSRD
+preplace portBus code_rate_0 -pg 1 -lvl 0 -x -20 -y 230 -defaultsOSRD
+preplace portBus axis_data_count_0 -pg 1 -lvl 5 -x 1740 -y 300 -defaultsOSRD
+preplace inst Scrambler_32bits_0 -pg 1 -lvl 1 -x 200 -y 230 -defaultsOSRD
+preplace inst Pipelined_Polyphase_0 -pg 1 -lvl 4 -x 1510 -y 410 -defaultsOSRD
+preplace inst Pre_Distortion_Filter_0 -pg 1 -lvl 3 -x 1070 -y 430 -defaultsOSRD
+preplace inst mapper_0 -pg 1 -lvl 2 -x 630 -y 450 -defaultsOSRD
+preplace inst Bit_splitter_0 -pg 1 -lvl 4 -x 1510 -y 170 -defaultsOSRD
+preplace inst Encoder_0 -pg 1 -lvl 2 -x 630 -y 170 -defaultsOSRD
+preplace inst block_interleaver_0 -pg 1 -lvl 3 -x 1070 -y 150 -defaultsOSRD
+preplace netloc Bit_splitter_0_data_out 1 1 4 410 10 NJ 10 NJ 10 1720
+preplace netloc Bit_splitter_0_data_out_ready 1 2 2 910 260 1270
+preplace netloc Bit_splitter_0_data_out_valid 1 1 4 440 560 NJ 560 NJ 560 1720
+preplace netloc Bit_splitter_0_mod_type2mapper 1 1 4 420 570 NJ 570 NJ 570 1710
+preplace netloc Encoder_0_axis_data_count 1 2 3 840J 300 NJ 300 NJ
+preplace netloc Encoder_0_core_finish 1 2 3 860 20 N 20 N
+preplace netloc Encoder_0_data_out 1 2 1 N 140
+preplace netloc Encoder_0_data_out_last 1 2 3 830J 270 1250J 40 NJ
+preplace netloc Encoder_0_data_out_ready 1 1 2 360 310 820
+preplace netloc Encoder_0_data_out_valid 1 2 1 900 160n
+preplace netloc Pipelined_Polyphase_0_data_out_I 1 4 1 N 420
+preplace netloc Pipelined_Polyphase_0_data_out_Q 1 4 1 N 440
+preplace netloc Pipelined_Polyphase_0_data_out_ready 1 2 3 910 540 NJ 540 1690
+preplace netloc Pipelined_Polyphase_0_data_out_valid 1 4 1 N 400
+preplace netloc Pre_Distortion_Filter_0_I_output 1 3 1 1310 400n
+preplace netloc Pre_Distortion_Filter_0_Q_output 1 3 1 N 420
+preplace netloc Pre_Distortion_Filter_0_data_out_ready 1 1 3 430 580 NJ 580 1230
+preplace netloc Pre_Distortion_Filter_0_data_out_valid 1 3 1 1270 400n
+preplace netloc Scrambler_32bits_0_data_out 1 1 1 360 170n
+preplace netloc Scrambler_32bits_0_data_out_last 1 1 1 N 230
+preplace netloc Scrambler_32bits_0_data_out_valid 1 1 1 350 190n
+preplace netloc aresetn_0_1 1 0 2 10J 120 400
+preplace netloc block_interleaver_0_current_code_rate 1 3 1 1260 160n
+preplace netloc block_interleaver_0_data_out 1 3 1 N 120
+preplace netloc block_interleaver_0_data_out_ready 1 1 3 420 30 N 30 1230
+preplace netloc block_interleaver_0_read_valid 1 3 1 1240 140n
+preplace netloc clk_0_1 1 0 4 20 110 390 320 870 280 1280
+preplace netloc clk_50MHz_1 1 0 4 NJ 620 NJ 620 N 620 1320J
+preplace netloc code_rate_0_1 1 0 3 0J 20 NJ 20 850J
+preplace netloc control_enable_0_1 1 0 1 NJ 270
+preplace netloc data_in_ready_0_1 1 0 4 NJ 330 370J 590 NJ 590 1330
+preplace netloc ldpc_core_clk_0_1 1 0 2 NJ 90 N
+preplace netloc mapper_0_data_out_ready 1 2 3 850 550 NJ 550 1700
+preplace netloc mapper_0_data_out_valid 1 2 1 N 480
+preplace netloc mapper_0_i_out 1 2 1 N 420
+preplace netloc mapper_0_q_out 1 2 1 N 440
+preplace netloc mod_type_0_1 1 0 4 NJ 400 350J 600 NJ 600 1300
+preplace netloc reset_0_1 1 0 4 40J 340 NJ 340 880J 320 1260J
+preplace netloc reset_1 1 0 4 NJ 70 380 330 890 290 1290
+preplace netloc seed_0_1 1 0 1 NJ 250
+preplace netloc sel_FEC_code_rate_0_1 1 0 2 30J 130 370
+preplace netloc S_AXIS_0_1 1 0 1 NJ 190
+levelinfo -pg 1 -20 200 630 1070 1510 1740
+pagesize -pg 1 -db -bbox -sgen -260 0 1970 640
+",
+   "Color Coded_ScaleFactor":"0.853857",
+   "Color Coded_TopLeft":"-252,-149",
+   "Default View_ScaleFactor":"0.806534",
+   "Default View_TopLeft":"-37,0",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeOthers":"true",
+   "Display-PortTypeReset":"true",
+   "ExpandedHierarchyInLayout":"",
+   "Interfaces View_ExpandedHierarchyInLayout":"",
+   "Interfaces View_Layers":"/reset_0_1:false|/clk_50MHz_1:false|/aresetn_0_1:false|/clk_0_1:false|/ldpc_core_clk_0_1:false|",
+   "Interfaces View_Layout":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port S_AXIS_0 -pg 1 -lvl 0 -x -40 -y 210 -defaultsOSRD
+preplace port port-id_control_enable_0 -pg 1 -lvl 0 -x -40 -y 290 -defaultsOSRD
+preplace portBus seed_0 -pg 1 -lvl 0 -x -40 -y 270 -defaultsOSRD
+preplace portBus mod_type_0 -pg 1 -lvl 0 -x -40 -y 480 -defaultsOSRD
+preplace inst Scrambler_32bits_0 -pg 1 -lvl 1 -x 180 -y 250 -defaultsOSRD
+preplace inst Bit_splitter_0 -pg 1 -lvl 4 -x 1440 -y 190 -defaultsOSRD
+preplace netloc Bit_splitter_0_data_out 1 1 4 350 620 N 620 N 620 1660
+preplace netloc Bit_splitter_0_data_out_ready 1 2 2 870 280 1230
+preplace netloc Bit_splitter_0_data_out_valid 1 1 4 370 610 N 610 N 610 1650
+preplace netloc Bit_splitter_0_mod_type2mapper 1 1 4 330 630 NJ 630 NJ 630 1640
+preplace netloc Encoder_0_axis_data_count 1 2 3 830J 320 NJ 320 1670J
+preplace netloc Encoder_0_core_finish 1 2 3 830 40 N 40 N
+preplace netloc Encoder_0_data_out 1 2 1 N 160
+preplace netloc Encoder_0_data_out_last 1 2 3 850J 60 NJ 60 NJ
+preplace netloc Encoder_0_data_out_ready 1 1 2 330 330 810
+preplace netloc Encoder_0_data_out_valid 1 2 1 860 180n
+preplace netloc Mapper_tx_0_data_out_ready 1 2 3 820 590 1240 600 1620
+preplace netloc Mapper_tx_0_data_out_valid 1 2 1 N 520
+preplace netloc Mapper_tx_0_i_out 1 2 1 N 460
+preplace netloc Mapper_tx_0_q_out 1 2 1 N 480
+preplace netloc Pipelined_Polyphase_0_data_out_I 1 4 1 N 500
+preplace netloc Pipelined_Polyphase_0_data_out_Q 1 4 1 N 520
+preplace netloc Pipelined_Polyphase_0_data_out_ready 1 2 3 870 650 NJ 650 1630
+preplace netloc Pipelined_Polyphase_0_data_out_valid 1 4 1 N 480
+preplace netloc Pre_Distortion_Filter_0_I_output 1 3 1 N 480
+preplace netloc Pre_Distortion_Filter_0_Q_output 1 3 1 1220 460n
+preplace netloc Pre_Distortion_Filter_0_data_out_ready 1 1 3 360 640 NJ 640 1200
+preplace netloc Pre_Distortion_Filter_0_data_out_valid 1 3 1 1230 440n
+preplace netloc Scrambler_32bits_0_data_out 1 1 1 340 190n
+preplace netloc Scrambler_32bits_0_data_out_last 1 1 1 N 250
+preplace netloc Scrambler_32bits_0_data_out_valid 1 1 1 330 210n
+preplace netloc aresetn_0_1 1 0 2 NJ 140 370
+preplace netloc block_interleaver_0_data_out 1 3 1 N 140
+preplace netloc block_interleaver_0_data_out_ready 1 1 3 370 340 N 340 1200
+preplace netloc block_interleaver_0_read_valid 1 3 1 1220 160n
+preplace netloc clk_0_1 1 0 4 0 70 350 40 820 290 1240
+preplace netloc clk_50MHz_1 1 0 4 NJ 660 NJ 660 N 660 1260J
+preplace netloc code_rate_0_1 1 0 3 -20J 350 NJ 350 860J
+preplace netloc data_in_ready_0_1 1 0 4 -20J 600 NJ 600 NJ 600 1220
+preplace netloc ldpc_core_clk_0_1 1 0 2 NJ 110 N
+preplace netloc reset_0_1 1 0 4 -10 90 360 50 840 580 1250
+preplace netloc sel_FEC_code_rate_0_1 1 0 2 NJ 460 340
+preplace netloc block_interleaver_0_current_code_rate 1 3 1 1210 180n
+preplace netloc S_AXIS_0_1 1 0 1 -20J 210n
+levelinfo -pg 1 -40 180 620 1040 1440 1690
+pagesize -pg 1 -db -bbox -sgen -220 -370 1690 680
+",
+   "Interfaces View_ScaleFactor":"1.0",
+   "Interfaces View_TopLeft":"-392,-208",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port S_AXIS_0 -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace port port-id_aresetn_0 -pg 1 -lvl 0 -x 0 -y 300 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 70 -defaultsOSRD
+preplace port port-id_control_enable_0 -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
+preplace port port-id_core_finish_0 -pg 1 -lvl 5 -x 1510 -y 20 -defaultsOSRD
+preplace port port-id_event_tlast_missing_0 -pg 1 -lvl 5 -x 1510 -y 80 -defaultsOSRD
+preplace port port-id_event_tlast_unexpected_0 -pg 1 -lvl 5 -x 1510 -y 60 -defaultsOSRD
+preplace port port-id_ldpc_core_clk -pg 1 -lvl 0 -x 0 -y 280 -defaultsOSRD
+preplace port port-id_m_axis_data_tlast_0 -pg 1 -lvl 5 -x 1510 -y 40 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port port-id_data_in_ready_0 -pg 1 -lvl 0 -x 0 -y 570 -defaultsOSRD
+preplace portBus seed_0 -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
+preplace portBus sel_FEC_code_rate_0 -pg 1 -lvl 0 -x 0 -y 590 -defaultsOSRD
+preplace portBus mod_type_0 -pg 1 -lvl 0 -x 0 -y 610 -defaultsOSRD
+preplace inst Interleaver_Tx -pg 1 -lvl 3 -x 910 -y 250 -defaultsOSRD
+preplace inst Encoder_0 -pg 1 -lvl 2 -x 550 -y 250 -defaultsOSRD
+preplace inst Mapper_tx_0 -pg 1 -lvl 2 -x 550 -y 520 -defaultsOSRD
+preplace inst Bit_splitter_0 -pg 1 -lvl 4 -x 1310 -y 240 -defaultsOSRD
+preplace inst Scrambler_32bits_0 -pg 1 -lvl 1 -x 190 -y 200 -defaultsOSRD
+preplace inst Pre_Distortion_Filter_0 -pg 1 -lvl 3 -x 910 -y 500 -defaultsOSRD
+preplace inst Pipelined_Polyphase_0 -pg 1 -lvl 4 -x 1310 -y 480 -defaultsOSRD
+preplace netloc Bit_splitter_0_data_out 1 1 4 390 100 N 100 N 100 1470
+preplace netloc Bit_splitter_0_data_out_ready 1 3 1 N 240
+preplace netloc Bit_splitter_0_data_out_valid 1 1 4 380 90 N 90 N 90 1480
+preplace netloc Encoder_0_core_finish 1 2 3 700 20 N 20 N
+preplace netloc Interleaver_Tx_m_axis_data_tdata 1 3 1 N 200
+preplace netloc Interleaver_Tx_m_axis_data_tvalid 1 3 1 1110J 220n
+preplace netloc Mapper_tx_0_data_out_ready 1 2 3 700 610 N 610 1470
+preplace netloc Mapper_tx_0_data_out_valid 1 2 1 N 550
+preplace netloc Mapper_tx_0_i_out 1 2 1 N 490
+preplace netloc Mapper_tx_0_q_out 1 2 1 N 510
+preplace netloc aresetn_0_1 1 0 2 NJ 300 350
+preplace netloc clk_0_1 1 0 4 40 80 370 120 710 120 1120
+preplace netloc control_enable_0_1 1 0 1 NJ 240
+preplace netloc data_in_ready_0_1 1 0 2 NJ 570 NJ
+preplace netloc ldpc_core_clk_0_1 1 0 2 20J 310 340
+preplace netloc mod_type_0_1 1 0 4 50J 560 330J 110 NJ 110 1140J
+preplace netloc reset_0_1 1 0 4 50 100 320 390 700 390 1150
+preplace netloc seed_0_1 1 0 1 NJ 220
+preplace netloc sel_FEC_code_rate_0_1 1 0 2 30J 90 360
+preplace netloc sid_0_event_tlast_missing 1 3 2 1130 120 1490
+preplace netloc sid_0_event_tlast_unexpected 1 3 2 1100 60 N
+preplace netloc sid_0_m_axis_data_tlast 1 3 2 1090 40 N
+preplace netloc Pre_Distortion_Filter_0_data_out_valid 1 3 1 1100 470n
+preplace netloc Pre_Distortion_Filter_0_data_out_ready 1 3 1 1140 510n
+preplace netloc Pre_Distortion_Filter_0_I_output 1 3 1 1120 470n
+preplace netloc Pre_Distortion_Filter_0_Q_output 1 3 1 N 490
+preplace netloc Encoder_0_M_AXIS 1 2 1 N 240
+preplace netloc S_AXIS_0_1 1 0 1 NJ 160
+preplace netloc Scrambler_32bits_0_M_AXIS 1 1 1 N 200
+preplace netloc sid_0_M_AXIS_DATA 1 3 1 N 180
+levelinfo -pg 1 0 190 550 910 1310 1510
+pagesize -pg 1 -db -bbox -sgen -240 0 1750 630
+"
+}
+{
+   "da_board_cnt":"1",
+   "da_clkrst_cnt":"1"
+}
