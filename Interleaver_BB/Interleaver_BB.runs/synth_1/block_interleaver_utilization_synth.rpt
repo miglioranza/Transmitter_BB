@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 19 11:36:26 2025
+| Date         : Wed Mar 26 17:34:31 2025
 | Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 | Command      : report_utilization -file block_interleaver_utilization_synth.rpt -pb block_interleaver_utilization_synth.pb
 | Design       : block_interleaver
@@ -32,15 +32,15 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*                  |  151 |     0 |          0 |    425280 |  0.04 |
-|   LUT as Logic             |  111 |     0 |          0 |    425280 |  0.03 |
+| CLB LUTs*                  |  724 |     0 |          0 |    425280 |  0.17 |
+|   LUT as Logic             |  684 |     0 |          0 |    425280 |  0.16 |
 |   LUT as Memory            |   40 |     0 |          0 |    213600 |  0.02 |
 |     LUT as Distributed RAM |   40 |     0 |            |           |       |
 |     LUT as Shift Register  |    0 |     0 |            |           |       |
-| CLB Registers              |   76 |     0 |          0 |    850560 | <0.01 |
-|   Register as Flip Flop    |   74 |     0 |          0 |    850560 | <0.01 |
-|   Register as Latch        |    2 |     0 |          0 |    850560 | <0.01 |
-| CARRY8                     |   12 |     0 |          0 |     53160 |  0.02 |
+| CLB Registers              |  152 |     0 |          0 |    850560 |  0.02 |
+|   Register as Flip Flop    |  152 |     0 |          0 |    850560 |  0.02 |
+|   Register as Latch        |    0 |     0 |          0 |    850560 |  0.00 |
+| CARRY8                     |   72 |     0 |          0 |     53160 |  0.14 |
 | F7 Muxes                   |    0 |     0 |          0 |    212640 |  0.00 |
 | F8 Muxes                   |    0 |     0 |          0 |    106320 |  0.00 |
 | F9 Muxes                   |    0 |     0 |          0 |     53160 |  0.00 |
@@ -54,16 +54,16 @@ Table of Contents
 +-------+--------------+-------------+--------------+
 | Total | Clock Enable | Synchronous | Asynchronous |
 +-------+--------------+-------------+--------------+
-| 6     |            _ |           - |            - |
+| 0     |            _ |           - |            - |
 | 0     |            _ |           - |          Set |
 | 0     |            _ |           - |        Reset |
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 2     |          Yes |           - |          Set |
-| 63    |          Yes |           - |        Reset |
+| 1     |          Yes |           - |          Set |
+| 82    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 5     |          Yes |       Reset |            - |
+| 69    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -84,12 +84,11 @@ Table of Contents
 3. ARITHMETIC
 -------------
 
-+----------------+------+-------+------------+-----------+-------+
-|    Site Type   | Used | Fixed | Prohibited | Available | Util% |
-+----------------+------+-------+------------+-----------+-------+
-| DSPs           |    3 |     0 |          0 |      4272 |  0.07 |
-|   DSP48E2 only |    3 |       |            |           |       |
-+----------------+------+-------+------------+-----------+-------+
++-----------+------+-------+------------+-----------+-------+
+| Site Type | Used | Fixed | Prohibited | Available | Util% |
++-----------+------+-------+------------+-----------+-------+
+| DSPs      |    0 |     0 |          0 |      4272 |  0.00 |
++-----------+------+-------+------------+-----------+-------+
 
 
 4. I/O
@@ -98,7 +97,7 @@ Table of Contents
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| Bonded IOB |   74 |     0 |          0 |       347 | 21.33 |
+| Bonded IOB |   75 |     0 |          0 |       347 | 21.61 |
 | HS_ADC     |    0 |     0 |          4 |         4 |  0.00 |
 | HS_DAC     |    0 |     0 |          4 |         4 |  0.00 |
 +------------+------+-------+------------+-----------+-------+
@@ -165,22 +164,20 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDCE     |   65 |            Register |
+| LUT6     |  289 |                 CLB |
+| LUT3     |  136 |                 CLB |
+| LUT4     |  124 |                 CLB |
+| LUT5     |   90 |                 CLB |
+| FDCE     |   82 |            Register |
+| LUT2     |   80 |                 CLB |
+| CARRY8   |   72 |                 CLB |
+| FDRE     |   69 |            Register |
+| LUT1     |   47 |                 CLB |
 | RAMD64E  |   40 |                 CLB |
-| INBUF    |   38 |                 I/O |
-| IBUFCTRL |   38 |              Others |
-| LUT2     |   37 |                 CLB |
+| INBUF    |   39 |                 I/O |
+| IBUFCTRL |   39 |              Others |
 | OBUF     |   36 |                 I/O |
-| LUT1     |   31 |                 CLB |
-| LUT6     |   19 |                 CLB |
-| LUT3     |   15 |                 CLB |
-| LUT4     |   12 |                 CLB |
-| CARRY8   |   12 |                 CLB |
-| LUT5     |   11 |                 CLB |
-| FDRE     |    5 |            Register |
-| FDPE     |    4 |            Register |
-| DSP48E2  |    3 |          Arithmetic |
-| LDCE     |    2 |            Register |
+| FDPE     |    1 |            Register |
 | BUFGCE   |    1 |               Clock |
 +----------+------+---------------------+
 

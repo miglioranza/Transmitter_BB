@@ -46,7 +46,8 @@ architecture Behavioral of tb_block_interleaver is
     signal data_out_ready   : std_logic ;
     signal code_rate        : std_logic_vector(1 downto 0) := (others => '0');
     signal curr_code        : std_logic_vector(1 downto 0) := (others => '0');
-
+    signal signal_field     : std_logic := '0' ; --Signal that notify if the imput data is the SF or the payload 
+    signal data_in_last     : std_logic := '0';
     -- Test control
     signal sim_done     : std_logic := '0';
 
@@ -69,6 +70,8 @@ architecture Behavioral of tb_block_interleaver is
             data_in_ready      => data_in_ready,     
             read_valid         => read_valid,
             code_rate          => code_rate ,
+            signal_field       => signal_field,
+            data_in_last       => data_in_last, --This port defines the last word of each block 
             current_code_rate  =>  curr_code
 
         );
@@ -87,17 +90,24 @@ architecture Behavioral of tb_block_interleaver is
             total_words :=  num_rows * 7 ;
 --           write_en <= '1';
            wait for CLK_PERIOD ;
-            while i <= 62  loop
+            while i <= 29  loop
             if data_out_ready = '1'then
                  write_en <= '1';
                  data_in <= std_logic_vector(to_unsigned(i, 32)); 
-                 i := i + 1 ;              
+                 i := i + 1 ;   
+                 if i = 29 then 
+                   data_in_last <= '1';
+                 else 
+                    data_in_last <= '0';
+                  end if ;             
                 wait for CLK_PERIOD;
+                 
              else 
 --               write_en <= '1';
                 wait until rising_edge (clk) ;
              end if ;   
             end loop;
+            data_in_last <= '0' ;
 --            wait for clk_period ;
             write_en <= '0';
          wait until data_out_ready = '1';
@@ -112,10 +122,15 @@ architecture Behavioral of tb_block_interleaver is
 --            num_rows := 6  ;     
 --            total_words :=  num_rows * NUM_COLS ;
              write_en <= '1';
-             while i < 82  loop 
+             while i <= 60  loop 
             if data_out_ready = '1'then
                 data_in <= std_logic_vector(to_unsigned(i, 32)); 
                 i := i + 1 ;
+                if i = 61 then 
+                   data_in_last <= '1';
+                 else 
+                    data_in_last <= '0';
+                  end if ;             
                 wait for CLK_PERIOD;
              else 
                 wait for CLK_PERIOD;
@@ -137,6 +152,13 @@ architecture Behavioral of tb_block_interleaver is
             if data_out_ready = '1'then
                 data_in <= std_logic_vector(to_unsigned(i, 32)); 
                 i := i + 1 ;
+                 if i = 61 then 
+                   data_in_last <= '1';
+                 elsif  i = 122  then 
+                   data_in_last <= '1';
+                 else 
+                    data_in_last <= '0';
+                end if ; 
                 wait for CLK_PERIOD;
              else 
                 wait for CLK_PERIOD;

@@ -1,7 +1,4 @@
-Running: xsim.dir/tb_block_interleaver_behav/xsimk -simmode gui -wdb tb_block_interleaver_behav.wdb -simrunnum 0 -socket 33913
+Running: xsim.dir/tb_block_interleaver_behav/xsimk -simmode gui -wdb tb_block_interleaver_behav.wdb -simrunnum 0 -socket 64575
 Design successfully loaded
 Design Loading Memory Usage: 43640 KB (Peak: 43760 KB)
-Design Loading CPU Usage: 30 ms
-Simulation completed
-Simulation Memory Usage: 135624 KB (Peak: 184956 KB)
-Simulation CPU Usage: 50 ms
+Design Loading CPU Usage: 50 ms
