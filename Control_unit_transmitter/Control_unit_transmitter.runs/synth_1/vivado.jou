@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Wed Apr  2 13:53:44 2025
+# Process ID: 2643012
+# Current directory: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.runs/synth_1
+# Command line: vivado -log Control_unit_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Control_unit_top.tcl
+# Log file: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.runs/synth_1/Control_unit_top.vds
+# Journal file: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.runs/synth_1/vivado.jou
+# Running On: uxsrv005, OS: Linux, CPU Frequency: 3457.889 MHz, CPU Physical cores: 8, Host memory: 101335 MB
+#-----------------------------------------------------------
+source Control_unit_top.tcl -notrace
