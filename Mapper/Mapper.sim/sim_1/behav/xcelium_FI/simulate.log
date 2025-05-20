@@ -1,0 +1,3 @@
+xmsim(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+xmsim: *E,FLTNHT: [FLT] Hold time must be specified with 'SET' fault type.
+xmsim: *F,FLTIVT: [FLT] Invalid type (SET) specified to -fault_type option. Fault set cannot be generated.

@@ -1,0 +1,5 @@
+xmsim: *N,FLTSF: [FLT] Fault Id : 10, Fault Seed: 0, Selected fault points: :UUT:MOD_TYPE(0).
+xmsim: *N,FLTINJ: [FLT] Injecting SEU fault on :UUT:MOD_TYPE(0) at time 273 NS : old value = '1', new value = '0'.
+xmsim: *N,FLTDT: [FLT] Detected fault(s) at strobe point (:mode_type(0)) at time 273 NS.
+xmsim: *N,FLTDT: [FLT] Detected fault(s) at strobe point (:uut:mod_type(0)) at time 273 NS.
+xmsim: *N,FTUDPT: [FLT] Fault database data file is generated at /home/miglioranza/Mapper/Mapper.sim/sim_1/behav/xcelium_FI/fault_db/db_scope/test_uxsrv005_8150171746447406313/xfs_3c65076a.ucd.

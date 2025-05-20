@@ -1,0 +1,5 @@
+xfr(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+The strobe data written to file 'fault_db/xfr_strobe.out'
+
+<strobe_id> <strobe_name> <strobe_kind> <strobe_type> <strobe_mode> <strobe_severity> <start_time> <first_detection> <final_detection> <detected_count>
+

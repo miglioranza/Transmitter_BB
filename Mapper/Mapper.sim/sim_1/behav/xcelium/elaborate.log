@@ -1,0 +1,26 @@
+xmelab(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xmelab(64)	20.09-s007: Started on Apr 18, 2025 at 13:13:41 CEST
+xmelab
+    -64bit
+    -relax
+    -access +rwc
+    -namemap_mixgen
+    -messages
+    -logfile elaborate.log
+    -libname xil_defaultlib
+    -libname secureip
+    xil_defaultlib.mapper_tb
+
+xmelab: *W,ARCMRA: Elaborating the XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR, MRA (most recently analyzed) architecture.
+	Elaborating the design hierarchy:
+xmelab: *W,CUFEPC: output port SF_VALID is not connected in instance UUT [File:mapper_tb.vhd, Line:58].
+xmelab: *W,CUDEFB: default binding occurred for component instance (:mapper_tb(behavior):uut) with design unit (XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH).
+	Building instance specific data structures.
+	Design hierarchy summary:
+		            Instances  Unique
+		Components:         3       2
+		Default bindings:   1       -
+		Processes:          3       3
+		Signals:           12      12
+	Writing initial simulation snapshot: XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR
+TOOL:	xmelab(64)	20.09-s007: Exiting on Apr 18, 2025 at 13:13:41 CEST  (total: 00:00:00)

@@ -1,0 +1,86 @@
+*** Message Type: info ***
+When: Tue Apr 22 04:42:42 PM CEST 2025
+SimVision started.
+Version: TOOL:  simvision(64)   20.09-s007
+User: miglioranza
+Host: uxsrv005.ihp-ffo.de
+Platform: Linux/x86_64/4.18.0-553.8.1.el8_10.x86_64
+Started: Tue Apr 22 04:42:42 PM CEST 2025
+Command: /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/simvision/bin/64bit/simvision.exe -connect dc:uxsrv005.ihp-ffo.de:64155 -64BIT
+Work Directory: /home/miglioranza/Mapper/Mapper.sim/sim_1/behav/xcelium_FI
+ 
+*** Message Type: info ***
+When: Tue Apr 22 04:42:42 PM CEST 2025
+Create browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: Tue Apr 22 04:42:45 PM CEST 2025
+Create console window: "Console"
+ 
+*** Message Type: info ***
+When: Tue Apr 22 04:42:46 PM CEST 2025
+Exit Simulator: abnormal
+      Design: Unknown
+   Languages: Unknown
+   Simulator: Unknown
+     Version: Unknown
+        User: Unknown
+        Host: Unknown
+Time Started: Unknown
+  Process ID: Unknown
+   Directory: Unknown
+     Command: Unknown
+
+ 
+*** Message Type: error ***
+When: Tue Apr 22 04:42:46 PM CEST 2025
+Simulator Crashed:
+      Design: Unknown
+   Languages: Unknown
+   Simulator: Unknown
+     Version: Unknown
+        User: Unknown
+        Host: Unknown
+Time Started: Unknown
+  Process ID: Unknown
+   Directory: Unknown
+     Command: Unknown
+      Design: Unknown
+   Languages: Unknown
+   Simulator: Unknown
+     Version: Unknown
+        User: Unknown
+        Host: Unknown
+Time Started: Unknown
+  Process ID: Unknown
+   Directory: Unknown
+     Command: Unknown
+
+Outstanding STRAP Requests:
+        strap::get g . -xu
+        strap::get g . -ck
+        strap::get g . -sa
+ 
+*** Message Type: info ***
+When: Tue Apr 22 04:42:46 PM CEST 2025
+Connect to Simulator
+      Design: Unknown
+   Languages: Unknown
+   Simulator: Unknown
+     Version: Unknown
+        User: Unknown
+        Host: Unknown
+Time Started: Unknown
+  Process ID: Unknown
+   Directory: Unknown
+     Command: Unknown
+
+ 
+*** Message Type: info ***
+When: Tue Apr 22 04:42:47 PM CEST 2025
+Create utility window: "Properties"
+ 
+*** Message Type: info ***
+When: Tue Apr 22 04:49:43 PM CEST 2025
+SimVision Exit.
+ 
