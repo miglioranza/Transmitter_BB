@@ -42,7 +42,7 @@ entity Control_unit_top is
     control_unit_dout_ready     : out std_logic := '0';
    
    -- Interface to MAC 
-    mod_cod_schemes             : in std_logic_vector(4 downto 0)   := (others => '0') ; --modulation and coding schemes --> Possible values :   BPSK and CR = 1/2  => 0001 ,QPSK and CR = 2/3 => 0010 ,16-QAM/16-APSK  and CR = 3/4 => 0100  ,64-QAM/64-APSK  and CR = 5/6 => 1000              
+    mod_cod_schemes             : in std_logic_vector(3 downto 0)   := (others => '0') ; --modulation and coding schemes --> Possible values :   BPSK and CR = 1/2  => 0001 ,QPSK and CR = 2/3 => 0010 ,16-QAM/16-APSK  and CR = 3/4 => 0100  ,64-QAM/64-APSK  and CR = 5/6 => 1000              
     num_streams                 : in std_logic_vector(4 downto 0)   := (others => '0') ;
     ref_distance                : in std_logic_vector(7 downto 0)   := (others => '0') ;
     scrambler_init              : in std_logic_vector(31 downto 1)  := (others => '0') ;
@@ -58,7 +58,7 @@ entity Control_unit_top is
     scrambler_dout_valid        : in std_logic := '0';
     scrambler_dout_last         : in std_logic := '0';
     scrambler_dout_ready        : in std_logic := '0'; --Scrambler ready to receive data from control unit  
-    scrambler_din_data          : out std_logic_vector(31 downto 0) := (others => '0') ;  --Data stream comiing from Scrambler 
+    scrambler_din_data          : out std_logic_vector(31 downto 0) := (others => '0') ;  --Data stream coming from Scrambler 
     scrambler_seed              : out std_logic_vector(31 downto 1) := (others => '0') ;
     scrambler_din_valid         : out std_logic := '0';
     scrambler_din_last          : out std_logic := '0' ; --end of frame data
@@ -83,28 +83,31 @@ entity Control_unit_top is
     encoder_current_code_rate   : in std_logic_vector(1 downto 0) := (others => '0');
     
 --    --Interleaver ports 
---    interleaver_dout_ready      : in std_logic := '0'; --Interleaver ready to receive data stream 
-----    interleaver_dout_valid      : in std_logic := '0';
-----    interleaver_dout_data       : in  std_logic_vector(31 downto 0) := (others => '0');
-----    interleaver_out_code_rate   : in std_logic_vector(1 downto 0) := (others => '0'); 
---    interleaver_code_rate       : out std_logic_vector(1 downto 0) := (others => '0'); 
---    interleaver_din_data        : out std_logic_vector(31 downto 0) := (others => '0'); --Encoded data without padding bits 
---    interleaver_din_valid       : out std_logic := '0';
---    interleaver_din_last        : out std_logic := '0';
+--      interleaver_dout_ready      : in std_logic := '0'; --Interleaver ready to receive data stream 
+    interleaver_dout_valid      : in std_logic := '0';
+    interleaver_dout_data       : in std_logic_vector(31 downto 0) := (others => '0'); 
+    interleaver_out_code_rate   : in std_logic_vector(3 downto 0) := (others => '0'); 
+    interleaver_dout_last       : in std_logic := '0';
+    interleaver_last_frame      : in std_logic := '0';    
+    interleaver_mod_type        : out std_logic_vector(3 downto 0) := (others => '0'); 
+    interleaver_din_data        : out std_logic_vector(31 downto 0) := (others => '0'); --Encoded data without padding bits 
+    interleaver_din_valid       : out std_logic := '0';
+    interleaver_din_ready       : out std_logic := '0';
+     
 --    interleaver_error_detect    : in std_logic := '0';
 --    interleaver_dout_data       : in std_logic_vector(31 downto 0) := (others => '0') ; --Corrupted data 
 
    -- Bit splitter ports
-    splitter_dout_valid         : in std_logic := '0' ;
-    splitter_dout_ready         : in std_logic := '0' ;--Splitter ready to receive data stream 
-    splitter_dout_data          : in std_logic_vector(5 downto 0) := (others => '0') ; --Data output from srambler . since the preamble is fed from the control unit to the mapper and it has only one input for data stream , the output of the splitter 
-    splitter_mod_type2mapper    : in std_logic_vector(2 downto 0) := (others => '0') ;
-    -- must pass through the TCU and then to then to mapper   
-    splitter_mod_type           : out std_logic_vector(2 downto 0) := (others => '0') ;
-    splitter_code_rate          : out std_logic_vector(1 downto 0) := (others => '0') ;
-    splitter_din_ready          : out std_logic := '0'; --since the preambles are added before mapper , when mapper is ready sends the short and long sequences (640 + 128 bits ) to the mapper and when it finishes start sending the signal field + payload
-    splitter_din_valid          : out std_logic := '0'; 
-    splitter_din_data           : out std_logic_vector(31 downto 0) := ( others => '0') ; --Corrupted data 
+--    splitter_dout_valid         : in std_logic := '0' ;
+--    splitter_dout_ready         : in std_logic := '0' ;--Splitter ready to receive data stream 
+--    splitter_dout_data          : in std_logic_vector(5 downto 0) := (others => '0') ; --Data output from srambler . since the preamble is fed from the control unit to the mapper and it has only one input for data stream , the output of the splitter 
+--    splitter_mod_type2mapper    : in std_logic_vector(2 downto 0) := (others => '0') ;
+--    -- must pass through the TCU and then to then to mapper   
+--    splitter_mod_type           : out std_logic_vector(2 downto 0) := (others => '0') ;
+--    splitter_code_rate          : out std_logic_vector(1 downto 0) := (others => '0') ;
+--    splitter_din_ready          : out std_logic := '0'; --since the preambles are added before mapper , when mapper is ready sends the short and long sequences (640 + 128 bits ) to the mapper and when it finishes start sending the signal field + payload
+--    splitter_din_valid          : out std_logic := '0'; 
+--    splitter_din_data           : out std_logic_vector(31 downto 0) := ( others => '0') ; --Corrupted data 
     
 --    splitter_error_detect       : in std_logic := '0' ;
      
@@ -115,11 +118,15 @@ entity Control_unit_top is
    mapper_dout_data_I          : in std_logic_vector( 11 downto 0) := (others => '0') ; --Output data stream from mapper 
    mapper_dout_data_Q          : in std_logic_vector( 11 downto 0) := (others => '0') ; --Output data stream from mapper 
    mapper_dout_valid           : in std_logic := '0';
+   mapper_dout_last            : in std_logic := '0'; -- This port signals if the mapper finished to processing the signal field block
+   mapper_last_frame           : in std_logic := '0'; 
    mapper_selected_mod         : out std_logic_vector(2 downto 0) := (others => '0') ; 
-   mapper_din_data_I           : out std_logic_vector(5 downto 0) := (others => '0') ; --Preamble input data to mapper 
-   mapper_din_data_Q           : out std_logic_vector(5 downto 0) := (others => '0') ; --Preamble input data to mapper 
+   mapper_din_data             : out std_logic_vector(5 downto 0) := (others => '0') ; --Preamble input data to mapper 
    mapper_din_valid            : out std_logic := '0' ;
    mapper_din_ready            : out std_logic := '0' ;
+   mapper_signal_field_enable  : out std_logic := '0' ;  --signal for noticing the symbol mapper that the input bits are from the signal field 
+   mapper_pilot_insertion_en   : out std_logic := '0' ;  --signal for noticing the symbol mapper  if  pilot insertion has been completed or not 
+   mapper_end_of_frame         : out std_logic := '0' ;    
 --   mapper_error_detected       : in std_logic := '0';
 
 --   --DPD filter 
@@ -130,9 +137,6 @@ entity Control_unit_top is
    dpd_din_data_Q              :  out std_logic_vector(11 downto 0)  := (others => '0') ;
    dpd_din_ready               :  out std_logic := '0'
    
---   dpd_din_data_I              : out std_logic_vector( 11 downto 0)  := (others => '0') ;   --Output data stream fed to the dpd filter with pilot insertion at the beginning of each block 
---   dpd_din_data_Q              : out std_logic_vector( 11 downto 0)  := (others => '0') ;
---   dpd_din_valid               : out std_logic := '0'
 --   dpd_error_detected          : in std_logic := '0' 
              );
 end Control_unit_top;
@@ -485,10 +489,10 @@ constant pilot_Q : std_logic_vector(11 downto 0) := (others => '0') ;
 signal signal_field_counter : integer := 0 ;  
 signal signal_field_bits    : std_logic_vector(255 downto 0) := (others => '0') ;
 signal wait_counter         : integer := 0 ; 
-
+signal signal_field_en  : std_logic := '0'; --This signal notice if the signal field has been sent or not yet 
 --Payload signals
 signal payload_counter : integer :=  0 ;
- signal mapper_buf_I : std_logic_vector(11 downto 0 ) := (others => '0') ;
+signal mapper_buf_I : std_logic_vector(11 downto 0 ) := (others => '0') ;
 
 --signal preambles_inserted : std_logic := '0' ; --Signal that checks if the 2 preambles have been added to the packet structure 
 signal preambles_finish  : std_logic  := '0'; 
@@ -501,12 +505,16 @@ signal pilot_counter, pilot_symbols   : integer := 0 ;
 signal padding_value_I : std_logic_vector(11 downto 0)  := (others => '0' ) ;
 signal padding_value_Q : std_logic_vector(11 downto 0)  := (others => '0' ) ;
 signal padding_payload : std_logic := '0';
-type control_unit is (IDLE ,PREAMBLE_A,PREAMBLE_B ,PAYLOAD,PILOT) ; --, ERROR_DETECTION)
+type control_unit is (IDLE ,PREAMBLE_A, PREAMBLE_B, SIGNAL_FIELD, PAYLOAD) ; --, ERROR_DETECTION)
 signal state : control_unit := IDLE ;
+
+--Splitter signal 
+signal done              : std_logic := '1' ;  --Determines the end of the data data_out procedure 
+ 
 
 begin
     -- Assigning each field to its respective position within the 256-bit vector
-    signal_field_bits(4 downto 0)    <= mod_cod_schemes;  
+    signal_field_bits(3 downto 0)    <= mod_cod_schemes;  
     signal_field_bits(9 downto 5)    <= num_streams;
     signal_field_bits(17 downto 10)  <= ref_distance;
     signal_field_bits(48 downto 18)  <= scrambler_init;
@@ -519,6 +527,7 @@ begin
 
 control_unit_states : process (clk , reset)
 variable i,j,k,n : integer := 0 ;
+--variable index   : integer := 0 ;
 
 
 begin
@@ -532,11 +541,10 @@ encoder_din_last      <= '0' ;
 encoder_code_rate     <= (others => '0') ;
 encoder_din_data      <= (others => '0') ;
 --interleaver_code_rate <= (others => '0' ) ;
---interleaver_din_data  <= (others => '0' ) ;
---interleaver_din_valid <= '0' ;
---interleaver_din_last  <= '0' ;
+interleaver_din_data  <= (others => '0' ) ;
+interleaver_din_valid <= '0' ;
+interleaver_din_ready  <= '0';
 mapper_selected_mod   <=  (others => '0') ; 
---mapper_din_data       <=  (others => '0') ;  --Preamble input data to mapper 
 mapper_din_valid      <= '0' ;
 state                 <= IDLE ;
 control_unit_dout_ready <= '0';
@@ -560,7 +568,7 @@ elsif rising_edge(clk)  then
             if  dpd_dout_ready = '1' then 
               dpd_din_valid <= '1' ;
               dpd_din_data_Q <= preamble_Q ;
-              if i < 10 then 
+              if i < 10 then --feed 10 sequences of 64 symbols each 
                    if k < 63 then 
                       dpd_din_data_I <= preamble_sts_ROM(k) ;
                       k := k + 1 ;
@@ -570,7 +578,7 @@ elsif rising_edge(clk)  then
                    end if ;
                else 
                i := 0 ;
-               state <= PREAMBLE_B ; 
+               state <= PREAMBLE_B ; --when Preamble A finishe go to preamble B state 
                dpd_din_valid <= '0' ;   
               end if ;     
             else  
@@ -609,158 +617,394 @@ elsif rising_edge(clk)  then
            end if ;     
         dpd_din_valid <= '0' ;
       end if ;
-      
-    if encoder_dout_ready =  '1'  then 
-       if control_unit_din_valid = '1' and n < 8   then 
-          encoder_din_valid     <= '1';
-          encoder_din_data      <= signal_field_bits(((n+1)*32)-1  downto n*32); --256-bits --> 32-bits vectors  x 8 
-          n := n + 1 ;
-       elsif control_unit_din_valid = '0' and n < 8 then 
-          encoder_din_valid     <= '0';
-       else
-          encoder_din_valid     <= '0';
-          encoder_din_last <= '1';
-       end if ;
-       
-    else            
-     encoder_din_valid     <= '0';
-    end if ;  
-    
-   if  signal_field_counter = 8 and preambles_finish = '1'then 
-       state <= PAYLOAD ;
+ 
+ 
+   if  preambles_finish = '1'then 
+       state <= SIGNAL_FIELD ;
 --       encoder_din_last <= '0';
        n := 0 ;
        preambles_finish     <= '0';
 --       signal_field_counter <= 0 ;
     else 
            state <= PREAMBLE_B  ;
-   end if ; 
-  else 
+    end if ; 
+  
+ else                              --Start_tx = '0'
      dpd_din_valid     <= '0' ;
-     encoder_din_valid <= '0';
-  end if ;   
-                 
-  when PAYLOAD => 
+  end if ;    
+--    if encoder_dout_ready =  '1'  then 
+--       if control_unit_din_valid = '1' and n < 8   then 
+--          encoder_din_valid     <= '1';
+--          encoder_din_data      <= signal_field_bits(((n+1)*32)-1  downto n*32); --256-bits --> 32-bits vectors  x 8 
+--          n := n + 1 ;
+--       elsif control_unit_din_valid = '0' and n < 8 then 
+--          encoder_din_valid     <= '0';
+--       else
+--          encoder_din_valid     <= '0';
+--          encoder_din_last <= '1';
+--       end if ;
+       
+--    else            
+--     encoder_din_valid     <= '0';
+--    end if ;  
+    
+--   if  signal_field_counter = 8 and preambles_finish = '1'then 
+--       state <= PAYLOAD ;
+----       encoder_din_last <= '0';
+--       n := 0 ;
+--       preambles_finish     <= '0';
+----       signal_field_counter <= 0 ;
+--    else 
+--           state <= PREAMBLE_B  ;
+--   end if ; 
+--  else 
+--     dpd_din_valid     <= '0' ;
+--     encoder_din_valid <= '0';
+--  end if ;   
+    
+  when SIGNAL_FIELD =>
+  if start_tx = '1' then 
+       
+       
+     mapper_signal_field_enable <= '1';
+  
+     if encoder_dout_ready =  '1'  then 
+        control_unit_dout_ready <= '1';
+       if control_unit_din_valid = '1' and n < 8   then 
+          signal_field_en       <= '1' ; --start sending the signal field to the encoder 
+          encoder_din_valid     <= '1';
+          encoder_din_data      <= signal_field_bits(((n+1)*32)-1  downto n*32); --256-bits --> 32-bits vectors  x 8 
+          n := n + 1 ;
+       elsif control_unit_din_valid = '0' and n < 8 then 
+          encoder_din_valid     <= '0';
+       else       
+          encoder_din_valid     <= '0';
+          encoder_din_last <= '1';
+       end if ;
+      else
+     control_unit_dout_ready <= '0';          
+     encoder_din_valid     <= '0';
+    end if ;  
+               
+  
+  -- If mapper finishes to process the signal field then start sending the pilot 
+  if mapper_dout_last = '1' then 
+     state <= PAYLOAD ;
+     mapper_signal_field_enable <= '0';
+     pilot_insertion <= '1'; 
+     n := 0 ;
+     signal_field_en       <= '0' ;
+  else 
+     state <= SIGNAL_FIELD  ; 
+     pilot_insertion <= '0'; 
+ 
+  end if ;
+ else 
+  encoder_din_valid     <= '0';
+ end if ; 
+  when PAYLOAD =>  
       
          if start_tx = '1' then 
-          
-          --if encoder has completed the signal field encoding start sending the payoload 
-          if encoder_dout_ready = '1' and encoder_dout_last = '1' and  signal_field_counter = 8 then 
-             encoder_din_ready <= '1' ; 
-             signal_field_counter <= 0 ;
-          else                   
-              encoder_din_ready         <= '0' ;
---              control_unit_dout_ready <= '1'; --Trasnmitter chain ready to receives the input frames 
-          end if ; 
-     --Start sending data to the transmitter chain        
-            if scrambler_dout_ready = '1' and control_unit_din_valid = '1' then 
-                scrambler_seed            <= scrambler_init ; --Temporary seed    "1001001000101001000100101111101"
-                scrambler_control_enable  <= '1';   --seed is valid 
-                scrambler_din_valid       <= '1' ;
-                scrambler_din_data        <= control_unit_din_data ;
-                      
-           elsif scrambler_dout_ready = '1' and control_unit_din_valid = '0' then 
-                   scrambler_control_enable     <= '0';   --seed is not valid 
-                   scrambler_din_valid          <= '0' ;
-                   control_unit_dout_ready      <= '1';
-           else       
-               scrambler_control_enable     <= '0';   --seed is valid 
-               scrambler_din_valid          <= '0' ;
-               scrambler_control_enable  <= '0';   --seed is valid 
-
-               control_unit_dout_ready      <= '0';  
-           end if ;  
-           
-           --pilot insertion 
-         if dpd_dout_ready = '1' then
-            mapper_din_ready <= '1' ; --Notice the mapper the dpd is ready to receives tha data
-            dpd_din_valid    <= '0';
-     
-          --Send out hte signal field to dpd filter 
-            if  mapper_buf_I /= "0" then 
-                dpd_din_valid       <= '0';
-                dpd_din_data_I      <= mapper_buf_I ; 
-                dpd_din_data_Q      <= (others => '0')  ; 
-                mapper_buf_I        <= (others => '0')  ;  
-            elsif  mapper_buf_I = "0"  and pilot_insertion = '0' then 
-                if   mapper_dout_valid = '1' then 
-                dpd_din_data_I      <= mapper_dout_data_I ; 
-                dpd_din_data_Q      <= mapper_dout_data_Q  ; 
-                dpd_din_valid       <= '1';
-                
-                    if pilot_counter = 896 then 
-                      pilot_insertion <= '1';
-                      mapper_din_ready <= '0' ;
-                    else
-                      pilot_counter <= pilot_counter + 1 ;    
-                    end if ; 
-              else   
-                dpd_din_valid       <= '0';
-              end if  ;
-           elsif  mapper_buf_I = "0"  and pilot_insertion = '1' then      
-                  mapper_din_ready <= '0' ;   
-                  state <= PILOT ;                
-         else 
-            dpd_din_valid       <= '0';   
-            mapper_din_ready   <= '0' ; 
-          end if ;      
-    if control_unit_end_of_frame =  '1' and mapper_dout_valid = '1' and pilot_counter /= 896 then 
-       padding_payload  <= '1' ;     
-       state <= PILOT ;  
-    else 
-       state <= PILOT ;   
-      padding_payload  <= '0' ;         
-    end if ;    
-         else                                         
-             control_unit_dout_ready <= '0';          
-        end if ;  
-      else 
-         scrambler_din_valid <= '0';
-         scrambler_din_last  <= '0' ;  
-         scrambler_control_enable  <= '0';   --seed is not valid                                      
-         end if ; 
          
-  when PILOT => 
-   
-   if   padding_payload = '0' then              
-    if pilot_symbols < 128 then                               
-       dpd_din_valid       <= '1';                          
-       dpd_din_data_I      <= pilot_I(pilot_symbols) ;      
-       dpd_din_data_Q      <= pilot_Q  ;                    
-       pilot_symbols <=   pilot_symbols  + 1  ;             
-    else                                                    
-       pilot_insertion <= '0' ;                             
-       pilot_symbols  <= 0 ;                                
-       mapper_din_ready <= '1' ;  
-       state <= PAYLOAD ;                          
---     dpd_din_valid       <= '0';                          
-    end if ;                                                
-  else 
-      if pilot_counter < 896 then 
-         dpd_din_data_I <=  "100000000001" ;
-         dpd_din_data_Q <=  "000000000000" ;   
-         pilot_counter  <=  pilot_counter  + 1  ;
-      else 
-          if pilot_symbols < 128 then                        
-             dpd_din_valid       <= '1';                     
-             dpd_din_data_I      <= pilot_I(pilot_symbols) ;  
-             dpd_din_data_Q      <= pilot_Q  ;                                                                   
-             pilot_symbols <=   pilot_symbols  + 1  ;         
-          else                                                
-             pilot_insertion <= '0' ;                         
-             pilot_symbols   <= 0 ;  
-             pilot_counter   <=  0 ;        
-             padding_payload <= '0' ;                                                    
-             state <= IDLE ;      
+         if scrambler_dout_ready = '1' and control_unit_din_valid = '1' then --check if pilot insertion is processing
+            scrambler_din_data        <= control_unit_din_data ;
+            scrambler_seed            <= scrambler_init ;
+           
+            if control_unit_end_of_frame = '0' then 
+                scrambler_din_valid       <= '1';
+                scrambler_control_enable  <= '1' ;
+                scrambler_din_last        <= '0';  
+
+            else 
+                scrambler_din_valid       <= '0';
+                scrambler_control_enable  <= '0' ;
+                scrambler_din_last        <= '1';  
+            end if ;      
+         elsif scrambler_dout_ready = '1' and control_unit_din_valid = '0' then 
+            control_unit_dout_ready   <= '1' ;
+            scrambler_din_valid       <= '0';
+            scrambler_control_enable  <= '0' ;
+            scrambler_din_last        <= '0' ;
+         else        
+                     control_unit_dout_ready   <= '0' ;
+                     scrambler_din_valid       <= '0';
+                     scrambler_control_enable  <= '0' ;
+                     scrambler_din_last        <= '0';
+         end if ;  
+                   
+--Pilot insertion 
+--The symbol mapper when complete an entire payload block (896 symbols) sends out the data_last = '1' signal , then starts sending the pilot.
+-- while the pilot is sent out, the symbol mapper sends out data_out_ready = '0' , so consequentely the interleaver stops and so on .
+       if mapper_dout_last = '1' and dpd_dout_ready = '1' then
+        
+          if pilot_symbols < 128 then     
+           pilot_insertion     <= '1' ;                                                     
+           dpd_din_valid       <= '1';                          
+           dpd_din_data_I      <= pilot_I(pilot_symbols) ;      
+           dpd_din_data_Q      <= pilot_Q  ;                    
+           pilot_symbols       <= pilot_symbols  + 1  ;             
+          else                              
+           pilot_insertion     <= '0' ;                             
+           pilot_symbols       <=  0 ;                                
+           dpd_din_valid       <= '0'; 
+           --if mapper finishes to process the last input data of the last frame, go to the IDLE state  
+           if mapper_last_frame =  '1' then 
+             state <= IDLE ;
+           else 
+             state <= PAYLOAD ;
+            end if ;       
+        end if ;
+        --To be added an else statement  
+     else 
+           pilot_insertion     <= '0' ;                                   
+    end if ;    
+ else 
+          scrambler_din_valid       <= '0';
+          scrambler_control_enable  <= '0' ;   
+          dpd_din_valid       <= '0'; 
+          
+          end if ;  
+
+--         if dpd_dout_ready = '1' then
+--            mapper_din_ready <= '1' ; --Notice the mapper the dpd is ready to receives tha data
+--            dpd_din_valid    <= '0';
+     
+--          --Send out the signal field to dpd filter 
+--            if  mapper_buf_I /= "0" then 
+--                dpd_din_valid       <= '0';
+--                dpd_din_data_I      <= mapper_buf_I ; 
+--                dpd_din_data_Q      <= (others => '0')  ; 
+--                mapper_buf_I        <= (others => '0')  ;  
+--            elsif  mapper_buf_I = "0"  and pilot_insertion = '0' then 
+--                if   mapper_dout_valid = '1' then 
+--                dpd_din_data_I      <= mapper_dout_data_I ; 
+--                dpd_din_data_Q      <= mapper_dout_data_Q  ; 
+--                dpd_din_valid       <= '1';
+                
+--                    if pilot_counter = 896 then 
+--                      pilot_insertion <= '1';
+--                      mapper_din_ready <= '0' ;
+--                    else
+--                      pilot_counter <= pilot_counter + 1 ;    
+--                    end if ; 
+--              else   
+--                dpd_din_valid       <= '0';
+--              end if  ;
+--           elsif  mapper_buf_I = "0"  and pilot_insertion = '1' then      
+--                  mapper_din_ready <= '0' ;   
+--                  state <= PILOT ;                
+--         else 
+--            dpd_din_valid       <= '0';   
+--            mapper_din_ready   <= '0' ; 
+--          end if ;      
+--    if control_unit_end_of_frame =  '1' and mapper_dout_valid = '1' and pilot_counter /= 896 then 
+--       padding_payload  <= '1' ;     
+--       state <= PILOT ;  
+--    else 
+--       state <= PILOT ;   
+--      padding_payload  <= '0' ;         
+--    end if ;    
+--         else                                         
+--             control_unit_dout_ready <= '0';          
+--        end if ;  
+--      else 
+--         scrambler_din_valid <= '0';
+--         scrambler_din_last  <= '0' ;  
+--         scrambler_control_enable  <= '0';   --seed is not valid                                      
+--         end if ; 
+         
+--  when PILOT => 
+-- --Pilot insertion  
+--   if   padding_payload = '0' then              
+--    if pilot_symbols < 128 then                               
+--       dpd_din_valid       <= '1';                          
+--       dpd_din_data_I      <= pilot_I(pilot_symbols) ;      
+--       dpd_din_data_Q      <= pilot_Q  ;                    
+--       pilot_symbols       <= pilot_symbols  + 1  ;             
+--    else                                                    
+--       pilot_insertion  <= '0' ;                             
+--       pilot_symbols    <= 0 ;                                
+--       mapper_din_ready <= '1' ;  
+--       if control_unit_end_of_frame = '1' then 
+--        state            <= IDLE ;     
+--       else 
+--        state            <= PAYLOAD ;
+--       end if ;
+----     dpd_din_valid       <= '0';                          
+--    end if ;                                                
+--  else 
+--   --Padding + Pilot insertion  
+
+--      if pilot_counter < 896 then 
+--         dpd_din_data_I <=  "100000000001" ;
+--         dpd_din_data_Q <=  "000000000000" ;   
+--         pilot_counter  <=  pilot_counter  + 1  ;
+--      else 
+--          if pilot_symbols < 128 then                        
+--             dpd_din_valid       <= '1';                     
+--             dpd_din_data_I      <= pilot_I(pilot_symbols) ;  
+--             dpd_din_data_Q      <= pilot_Q  ;                                                                   
+--             pilot_symbols <=   pilot_symbols  + 1  ;         
+--          else                                                
+--             pilot_insertion <= '0' ;                         
+--             pilot_symbols   <= 0 ;  
+--             pilot_counter   <=  0 ;        
+--             padding_payload <= '0' ;                                                    
+--             state <= IDLE ;      
                                      
-          end if ;                                           
-    end if ;
+--          end if ;                                           
+--    end if ;
     
-end if ;
- end case ;
-end if ;  
+--end if ;
   
+end case ;
+end if;
 end process ; 
+
+data_splitter: process(clk,reset) 
+variable index   : integer := 0 ;
+variable temp    : integer := 0 ;
+begin 
+ 
+   if mapper_dout_ready = '1' and done = '1' then 
+       interleaver_din_ready <= '1'; --Splitter process ready to split the interleaved data 
+       mapper_din_valid <= '0';   
+        if  interleaver_last_frame = '0'  then         
+            done  <= '0' ;
+            index := 0 ;
+            interleaver_din_ready <= '0'; --Wait until the splitting process of the input data is complited 
+            mapper_end_of_frame <= '0' ;
+
+        else 
+           mapper_end_of_frame <= '1' ;
+       end if ;    
+       
+   elsif mapper_dout_ready = '1' and done = '0' then 
+    
+    
+     case interleaver_out_code_rate is    
+            when "0001" =>  --BPSK  
+                if index < (32 -1 ) then 
+                     mapper_din_data <=  "00000" &  interleaver_dout_data(index) ; --Correct way for adding zeros 
+--                     interleaver_din_ready <= '0';
+                     done  <= '0' ;
+                elsif index=  (32 -1 )  then 
+                    mapper_din_data <=  "00000" &  interleaver_dout_data(index) ;
+                    done  <= '1' ;   
+                    interleaver_din_ready <= '1';
+--                    interleaver_din_valid <= '0';                    
+ 
+                end if ;
+                index:= index+ 1 ;
+            when "0010" => --QPSK 
+                if index< (32 /2) - 1   then
+                     mapper_din_data <=  "0000" & interleaver_dout_data((index+1)*2-1  downto index*2)  ;
+--                     interleaver_din_ready <= '0';
+                     done  <= '0' ;
+                 elsif index= (32 /2) - 1   then
+                     mapper_din_data <=  "0000" & interleaver_dout_data((index+1)*2-1  downto index*2)  ;
+                     done  <= '1' ;     
+                     interleaver_din_ready <= '1';   
+
+                end if  ;
+                  index:= index+ 1 ;
             
+            when "0110"  => -- 16-APSK
+                if index<((32 /4) - 1) then
+                    mapper_din_data <=  "00" & interleaver_dout_data((index+1)*4-1  downto index*4)  ;
+--                    interleaver_din_ready <= '0';
+                    done  <= '0' ;
+                 elsif index= ((32 /4) - 1)  then 
+                     mapper_din_data <=  "00" & interleaver_dout_data((index+1)*4-1  downto index*4)  ;
+                     done  <= '1' ;
+                     interleaver_din_ready <= '1';
+                end if ;
+                index:= index+ 1 ;
+             when "0100" => -- 16-QAM 
+                if index<((32 /4) - 1) then
+                    mapper_din_data <=  "00" & interleaver_dout_data((index+1)*4-1  downto index*4)  ;
+--                    interleaver_din_ready <= '0';
+                    done  <= '0' ;
+                 elsif index= ((32 /4) - 1)  then 
+                     mapper_din_data <=  "00" & interleaver_dout_data((index+1)*4-1  downto index*4)  ;
+                     done  <= '1' ;
+                     interleaver_din_ready <= '1';
+--                     interleaver_din_valid <= '0';                    
+
+                end if ;
+              index:= index+ 1 ;
+            
+            when "0101"  => -- 32-APSK
+
+                if index<= 5 then 
+                    mapper_din_data <= "0" & interleaver_dout_data((index+1)*5-1  downto index*5) ;
+--                    interleaver_din_ready <= '0';
+                    done  <= '0' ;
+                elsif index=6  then  
+                    mapper_din_data <=   "0000" & interleaver_dout_data(31 downto 30); 
+                    interleaver_din_ready <= '1';
+                    done  <= '1' ;  
+--                    interleaver_din_valid <= '0';
+                end if ;
+                index:= index+ 1 ;
+              when  "0111" => -- 32-QAM 
+
+                if index<= 5 then 
+                    mapper_din_data <= "0" & interleaver_dout_data((index+1)*5-1  downto index*5) ;
+--                    interleaver_din_ready <= '0';
+                    done  <= '0' ;
+                elsif index=6  then  
+                    mapper_din_data <=   "0000" & interleaver_dout_data(31 downto 30); 
+                    interleaver_din_ready <= '1';
+                    done  <= '1' ;  
+--                    interleaver_din_valid <= '0';
+                end if ;
+                index:= index+ 1 ; 
+            when "1000"  => -- 64-APSK
+                
+                if index <= 4 then 
+                    mapper_din_data <= interleaver_dout_data((index+1)*6-1  downto index*6) ;
+--                    interleaver_din_ready <= '0';
+                    done  <= '0' ;
+                elsif index=5 then 
+                    mapper_din_data <=   "0000" & interleaver_dout_data(31 downto 30);
+                    interleaver_din_ready <= '1';   
+                    done  <= '1' ;
+--                    interleaver_din_valid <= '0';
+                end if ;
+                index := index + 1 ;
+            when "1111" => -- 64-QAM 
+                
+                if index <= 4 then 
+                    mapper_din_data <= interleaver_dout_data((index+1)*6-1  downto index*6) ;
+--                    interleaver_din_ready <= '0';
+                    done  <= '0' ;
+                elsif index=5 then 
+                    mapper_din_data <=   "0000" & interleaver_dout_data(31 downto 30);
+                    interleaver_din_ready <= '1';   
+                    done  <= '1' ;
+--                    interleaver_din_valid <= '0';
+                end if ;
+                index := index + 1 ;
+            when others =>
+                mapper_din_data <= (others => '0');
+                done  <= '0' ;
+            end case ;
+                 mapper_din_valid <= '1';                    
+
+   elsif mapper_dout_ready = '0' and done = '1' then 
+                  interleaver_din_ready <= '0';
+                  if interleaver_dout_valid =  '1' then  --The interleaver takes 2 clock cycles to switches from out valid = '1'to '0', the mapper has an internal buffer for storing the input data
+                     done <= '0' ; 
+                     index := 0 ;
+                  else  
+                     done <= '1' ; 
+                  end if ;
+ else     
+      interleaver_din_ready <= '0'  ;
+      mapper_din_valid <= '0';                    
+              
+end if ;       
+end process ;             
 end Behavioral;
          

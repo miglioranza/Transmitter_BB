@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Apr  2 13:54:58 2025
+| Date         : Wed Apr  2 15:12:25 2025
 | Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 | Command      : report_utilization -file Control_unit_top_utilization_synth.rpt -pb Control_unit_top_utilization_synth.pb
 | Design       : Control_unit_top
@@ -32,15 +32,15 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               |  273 |     0 |          0 |    425280 |  0.06 |
-|   LUT as Logic          |  273 |     0 |          0 |    425280 |  0.06 |
+| CLB LUTs*               |  496 |     0 |          0 |    425280 |  0.12 |
+|   LUT as Logic          |  496 |     0 |          0 |    425280 |  0.12 |
 |   LUT as Memory         |    0 |     0 |          0 |    213600 |  0.00 |
-| CLB Registers           |  291 |     0 |          0 |    850560 |  0.03 |
-|   Register as Flip Flop |  291 |     0 |          0 |    850560 |  0.03 |
+| CLB Registers           |  332 |     0 |          0 |    850560 |  0.04 |
+|   Register as Flip Flop |  332 |     0 |          0 |    850560 |  0.04 |
 |   Register as Latch     |    0 |     0 |          0 |    850560 |  0.00 |
-| CARRY8                  |   34 |     0 |          0 |     53160 |  0.06 |
-| F7 Muxes                |    4 |     0 |          0 |    212640 | <0.01 |
-| F8 Muxes                |    0 |     0 |          0 |    106320 |  0.00 |
+| CARRY8                  |   50 |     0 |          0 |     53160 |  0.09 |
+| F7 Muxes                |   18 |     0 |          0 |    212640 | <0.01 |
+| F8 Muxes                |    2 |     0 |          0 |    106320 | <0.01 |
 | F9 Muxes                |    0 |     0 |          0 |     53160 |  0.00 |
 +-------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -61,7 +61,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 71    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 220   |          Yes |       Reset |            - |
+| 261   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -95,7 +95,7 @@ Table of Contents
 +------------+------+-------+------------+-----------+--------+
 |  Site Type | Used | Fixed | Prohibited | Available |  Util% |
 +------------+------+-------+------------+-----------+--------+
-| Bonded IOB |  351 |     0 |          0 |       347 | 101.15 |
+| Bonded IOB |  380 |     0 |          0 |       347 | 109.51 |
 | HS_ADC     |    0 |     0 |          4 |         4 |   0.00 |
 | HS_DAC     |    0 |     0 |          4 |         4 |   0.00 |
 +------------+------+-------+------------+-----------+--------+
@@ -162,19 +162,20 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |  223 |                 I/O |
-| FDRE     |  220 |            Register |
-| LUT2     |  184 |                 CLB |
-| INBUF    |  128 |                 I/O |
-| IBUFCTRL |  128 |              Others |
+| LUT2     |  291 |                 CLB |
+| FDRE     |  261 |            Register |
+| OBUF     |  219 |                 I/O |
+| INBUF    |  161 |                 I/O |
+| IBUFCTRL |  161 |              Others |
+| LUT6     |  153 |                 CLB |
 | FDCE     |   71 |            Register |
-| LUT6     |   67 |                 CLB |
-| CARRY8   |   34 |                 CLB |
-| LUT4     |   17 |                 CLB |
-| LUT5     |   15 |                 CLB |
-| LUT1     |    8 |                 CLB |
-| LUT3     |    5 |                 CLB |
-| MUXF7    |    4 |                 CLB |
+| CARRY8   |   50 |                 CLB |
+| LUT5     |   40 |                 CLB |
+| LUT4     |   26 |                 CLB |
+| LUT3     |   21 |                 CLB |
+| MUXF7    |   18 |                 CLB |
+| LUT1     |    9 |                 CLB |
+| MUXF8    |    2 |                 CLB |
 | BUFGCE   |    1 |               Clock |
 +----------+------+---------------------+
 
