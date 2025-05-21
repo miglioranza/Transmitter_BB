@@ -292,6 +292,8 @@ set_property parent.project_path /home/miglioranza/Control_unit_transmitter/Cont
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part xilinx.com:zcu111:part0:1.4 [current_project]
+set_property ip_repo_paths /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new [current_project]
+update_ip_catalog
 set_property ip_output_repo /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }

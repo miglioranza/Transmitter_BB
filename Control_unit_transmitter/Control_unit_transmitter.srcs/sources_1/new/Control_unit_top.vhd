@@ -69,18 +69,18 @@ entity Control_unit_top is
    
    --Because the Signal Field must be added before the encoder, the data coming from the scrambler pass throught the TCU and then to the enconder 
     --Encoder ports 
-    encoder_dout_ready          : in std_logic := '0' ;  --Encoder ready to receive data 
-    encoder_finish2encode       : in std_logic := '0' ; 
-    encoder_fifo_data_count     : in std_logic_vector(12 downto 0) := (others => '0');
-    encoder_dout_data           : in std_logic_vector(31 downto 0) := (others => '0'); --Output data stream from encoder that need the padded bit removed 
-    encoder_dout_last           : in std_logic := '0' ; 
-    encoder_dout_valid          : in std_logic := '0' ;
-    encoder_din_data            : out std_logic_vector(31 downto 0) := (others => '0'); --Data stream fed to the encoder 
-    encoder_code_rate           : out std_logic_vector(1 downto 0) := (others => '0'); --coding scheme selected for encoder --> starting CR = 1/2 ;
-    encoder_din_valid           : out std_logic := '0' ;
-    encoder_din_last            : out std_logic := '0' ;
-    encoder_din_ready           : out std_logic := '0' ;
-    encoder_current_code_rate   : in std_logic_vector(1 downto 0) := (others => '0');
+--    encoder_dout_ready          : in std_logic := '0' ;  --Encoder ready to receive data 
+--    encoder_finish2encode       : in std_logic := '0' ; 
+--    encoder_fifo_data_count     : in std_logic_vector(12 downto 0) := (others => '0');
+--    encoder_dout_data           : in std_logic_vector(31 downto 0) := (others => '0'); --Output data stream from encoder that need the padded bit removed 
+--    encoder_dout_last           : in std_logic := '0' ; 
+--    encoder_dout_valid          : in std_logic := '0' ;
+--    encoder_din_data            : out std_logic_vector(31 downto 0) := (others => '0'); --Data stream fed to the encoder 
+--    encoder_code_rate           : out std_logic_vector(1 downto 0) := (others => '0'); --coding scheme selected for encoder --> starting CR = 1/2 ;
+--    encoder_din_valid           : out std_logic := '0' ;
+--    encoder_din_last            : out std_logic := '0' ;
+--    encoder_din_ready           : out std_logic := '0' ;
+--    encoder_current_code_rate   : in std_logic_vector(1 downto 0) := (others => '0');
     
 --    --Interleaver ports 
 --      interleaver_dout_ready      : in std_logic := '0'; --Interleaver ready to receive data stream 
@@ -96,20 +96,6 @@ entity Control_unit_top is
      
 --    interleaver_error_detect    : in std_logic := '0';
 --    interleaver_dout_data       : in std_logic_vector(31 downto 0) := (others => '0') ; --Corrupted data 
-
-   -- Bit splitter ports
---    splitter_dout_valid         : in std_logic := '0' ;
---    splitter_dout_ready         : in std_logic := '0' ;--Splitter ready to receive data stream 
---    splitter_dout_data          : in std_logic_vector(5 downto 0) := (others => '0') ; --Data output from srambler . since the preamble is fed from the control unit to the mapper and it has only one input for data stream , the output of the splitter 
---    splitter_mod_type2mapper    : in std_logic_vector(2 downto 0) := (others => '0') ;
---    -- must pass through the TCU and then to then to mapper   
---    splitter_mod_type           : out std_logic_vector(2 downto 0) := (others => '0') ;
---    splitter_code_rate          : out std_logic_vector(1 downto 0) := (others => '0') ;
---    splitter_din_ready          : out std_logic := '0'; --since the preambles are added before mapper , when mapper is ready sends the short and long sequences (640 + 128 bits ) to the mapper and when it finishes start sending the signal field + payload
---    splitter_din_valid          : out std_logic := '0'; 
---    splitter_din_data           : out std_logic_vector(31 downto 0) := ( others => '0') ; --Corrupted data 
-    
---    splitter_error_detect       : in std_logic := '0' ;
      
  -- Mapper ports 
    
@@ -494,10 +480,10 @@ signal signal_field_en  : std_logic := '0'; --This signal notice if the signal f
 signal payload_counter : integer :=  0 ;
 signal mapper_buf_I : std_logic_vector(11 downto 0 ) := (others => '0') ;
 
---signal preambles_inserted : std_logic := '0' ; --Signal that checks if the 2 preambles have been added to the packet structure 
+--!signal preambles_inserted : std_logic := '0' ; --Signal that checks if the 2 preambles have been added to the packet structure 
 signal preambles_finish  : std_logic  := '0'; 
 
---signals Pilot insertion
+--!signals Pilot insertion
 signal pilot_insertion : std_logic := '1' ;
 signal pilot_counter, pilot_symbols   : integer := 0 ;
 
@@ -532,20 +518,12 @@ variable i,j,k,n : integer := 0 ;
 
 begin
 if reset = '1' then 
-scrambler_din_data   <= (others => '0') ;  --Data stream comiing from Scrambler 
+scrambler_din_data   <= (others => '0') ;  --Data stream cominng from Scrambler 
 scrambler_din_valid  <= '0' ;
 scrambler_din_last   <= '0';
 scrambler_control_enable <= '0' ;
-encoder_din_valid     <= '0'; 
-encoder_din_last      <= '0' ; 
-encoder_code_rate     <= (others => '0') ;
-encoder_din_data      <= (others => '0') ;
 --interleaver_code_rate <= (others => '0' ) ;
-interleaver_din_data  <= (others => '0' ) ;
-interleaver_din_valid <= '0' ;
-interleaver_din_ready  <= '0';
-mapper_selected_mod   <=  (others => '0') ; 
-mapper_din_valid      <= '0' ;
+
 state                 <= IDLE ;
 control_unit_dout_ready <= '0';
 elsif rising_edge(clk)  then 
@@ -563,7 +541,7 @@ elsif rising_edge(clk)  then
          
   when PREAMBLE_A =>    --Short_term_sequence      
            
-  
+  -- Short term preamble insertion , 10 sequences of 64 symbols each 
        if  start_tx = '1'then 
             if  dpd_dout_ready = '1' then 
               dpd_din_valid <= '1' ;
@@ -589,6 +567,7 @@ elsif rising_edge(clk)  then
            dpd_din_ready <= '0';
       end if ;
   when PREAMBLE_B => 
+  --short preamble insertion , 2 sequences of 128 symbols each
   if   start_tx = '1'  then
   
        if dpd_dout_ready = '1' then 
@@ -631,59 +610,31 @@ elsif rising_edge(clk)  then
   
  else                              --Start_tx = '0'
      dpd_din_valid     <= '0' ;
-  end if ;    
---    if encoder_dout_ready =  '1'  then 
---       if control_unit_din_valid = '1' and n < 8   then 
---          encoder_din_valid     <= '1';
---          encoder_din_data      <= signal_field_bits(((n+1)*32)-1  downto n*32); --256-bits --> 32-bits vectors  x 8 
---          n := n + 1 ;
---       elsif control_unit_din_valid = '0' and n < 8 then 
---          encoder_din_valid     <= '0';
---       else
---          encoder_din_valid     <= '0';
---          encoder_din_last <= '1';
---       end if ;
-       
---    else            
---     encoder_din_valid     <= '0';
---    end if ;  
-    
---   if  signal_field_counter = 8 and preambles_finish = '1'then 
---       state <= PAYLOAD ;
-----       encoder_din_last <= '0';
---       n := 0 ;
---       preambles_finish     <= '0';
-----       signal_field_counter <= 0 ;
---    else 
---           state <= PREAMBLE_B  ;
---   end if ; 
---  else 
---     dpd_din_valid     <= '0' ;
---     encoder_din_valid <= '0';
---  end if ;   
+  end if ;       
     
   when SIGNAL_FIELD =>
+  --!Signal field insertion , it goes through the SCRAMBLER and then to the others blocks !!!
   if start_tx = '1' then 
        
        
      mapper_signal_field_enable <= '1';
   
-     if encoder_dout_ready =  '1'  then 
+     if scrambler_dout_ready =  '1'  then 
         control_unit_dout_ready <= '1';
        if control_unit_din_valid = '1' and n < 8   then 
           signal_field_en       <= '1' ; --start sending the signal field to the encoder 
-          encoder_din_valid     <= '1';
-          encoder_din_data      <= signal_field_bits(((n+1)*32)-1  downto n*32); --256-bits --> 32-bits vectors  x 8 
+          scrambler_din_valid     <= '1';
+          scrambler_din_data      <= signal_field_bits(((n+1)*32)-1  downto n*32); --256-bits --> 32-bits vectors  x 8 
           n := n + 1 ;
        elsif control_unit_din_valid = '0' and n < 8 then 
-          encoder_din_valid     <= '0';
+          scrambler_din_valid     <= '0';
        else       
-          encoder_din_valid     <= '0';
-          encoder_din_last <= '1';
+          scrambler_din_valid     <= '0';
+          scrambler_din_last      <= '1';
        end if ;
       else
      control_unit_dout_ready <= '0';          
-     encoder_din_valid     <= '0';
+     scrambler_din_valid     <= '0';
     end if ;  
                
   
@@ -700,7 +651,7 @@ elsif rising_edge(clk)  then
  
   end if ;
  else 
-  encoder_din_valid     <= '0';
+  scrambler_din_valid     <= '0';
  end if ; 
   when PAYLOAD =>  
       
@@ -865,22 +816,29 @@ data_splitter: process(clk,reset)
 variable index   : integer := 0 ;
 variable temp    : integer := 0 ;
 begin 
- 
+   if reset = '1' then 
+      interleaver_din_data  <= (others => '0' ) ;
+      interleaver_din_valid <= '0' ;
+      interleaver_din_ready  <= '0';
+      mapper_din_valid <= '0';   
+      index := 0 ;
+   elsif rising_edge (clk) then    
    if mapper_dout_ready = '1' and done = '1' then 
        interleaver_din_ready <= '1'; --Splitter process ready to split the interleaved data 
-       mapper_din_valid <= '0';   
+       mapper_din_valid <= '0'; 
+       index := 0 ;  
         if  interleaver_last_frame = '0'  then         
             done  <= '0' ;
-            index := 0 ;
             interleaver_din_ready <= '0'; --Wait until the splitting process of the input data is complited 
             mapper_end_of_frame <= '0' ;
 
         else 
+          
            mapper_end_of_frame <= '1' ;
        end if ;    
        
    elsif mapper_dout_ready = '1' and done = '0' then 
-    
+               interleaver_din_ready  <= '0';
     
      case interleaver_out_code_rate is    
             when "0001" =>  --BPSK  
@@ -1004,7 +962,8 @@ begin
       interleaver_din_ready <= '0'  ;
       mapper_din_valid <= '0';                    
               
-end if ;       
+end if ;   
+end if ;    
 end process ;             
 end Behavioral;
          
