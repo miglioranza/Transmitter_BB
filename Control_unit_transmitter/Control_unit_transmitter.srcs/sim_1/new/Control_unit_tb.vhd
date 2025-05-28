@@ -21,10 +21,12 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use std.env.finish;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
+use ieee.std_logic_unsigned.all;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -36,7 +38,7 @@ entity Control_unit_tb is
 end Control_unit_tb;
 
 architecture Behavioral of Control_unit_tb is
-component Control_unit_transmitter 
+component Control_unit_top 
 port (
   
   --General input port 
@@ -54,7 +56,7 @@ port (
     scrambler_init              : in std_logic_vector(31 downto 1)  := (others => '0') ;
     num_words                   : in std_logic_vector(15 downto 0)  := (others => '0') ; --Number of bytes per frame (payload) 
     start_tx                    : in std_logic := '0';   
-    phy_src_address             : in std_logic_vector(4 downto 0 ) := (others => '0') ; 
+    phy_src_address             : in std_logic_vector(5 downto 0 ) := (others => '0') ; 
     phy_dest_address            : in std_logic_vector(4 downto 0 ) := (others => '0') ; 
   
  --Scrambler ports 
@@ -69,28 +71,29 @@ port (
     scrambler_din_ready         : out std_logic := '0'; --Encoder ready to receive data from scrambler
     scrambler_control_enable    : out std_logic := '0' ;  --input seed valid    
     --Scrambler ready to receives the input frames 
---    scrambler_error_detect  : in std_logic := '0';  --signal coming from scrambler voter 
+--!    scrambler_error_detect  : in std_logic := '0';  --signal coming from scrambler voter 
    
---    --Interleaver ports 
---      interleaver_dout_ready      : in std_logic := '0'; --Interleaver ready to receive data stream 
+--!   --Interleaver ports 
+--!      interleaver_dout_ready      : in std_logic := '0'; --Interleaver ready to receive data stream 
     interleaver_dout_valid      : in std_logic := '0';
     interleaver_dout_data       : in std_logic_vector(31 downto 0) := (others => '0'); 
     interleaver_out_code_rate   : in std_logic_vector(3 downto 0) := (others => '0'); 
     interleaver_dout_last       : in std_logic := '0';
     interleaver_last_frame      : in std_logic := '0';    
     interleaver_mod_type        : out std_logic_vector(3 downto 0) := (others => '0'); 
-    interleaver_din_data        : out std_logic_vector(31 downto 0) := (others => '0'); --Encoded data without padding bits 
+    interleaver_din_data        : out std_logic_vector(31 downto 0):= (others => '0'); --Encoded data without padding bits 
     interleaver_din_valid       : out std_logic := '0';
     interleaver_din_ready       : out std_logic := '0';
-     
+    interleaver_din_last        : out std_logic := '0';
+
 --    interleaver_error_detect    : in std_logic := '0';
      
  -- Mapper ports 
    
    mapper_dout_ready           : in std_logic  := '0' ; --Mapper ready to receive data stream 
-   mapper_mod_from_splitter    : in std_logic_vector(2 downto 0) := (others => '0') ; --Modulation scheme coming from the bit splitter 
-   mapper_dout_data_I          : in std_logic_vector( 11 downto 0) := (others => '0') ; --Output data stream from mapper 
-   mapper_dout_data_Q          : in std_logic_vector( 11 downto 0) := (others => '0') ; --Output data stream from mapper 
+   mapper_mod_from_splitter    : in std_logic_vector(3 downto 0) := (others => '0') ; --Modulation scheme coming from the bit splitter 
+--   mapper_dout_data_I          : in std_logic_vector( 11 downto 0) := (others => '0') ; --Output data stream from mapper 
+--   mapper_dout_data_Q          : in std_logic_vector( 11 downto 0) := (others => '0') ; --Output data stream from mapper 
    mapper_dout_valid           : in std_logic := '0';
    mapper_dout_last            : in std_logic := '0'; -- This port signals if the mapper finished to processing the signal field block
    mapper_last_frame           : in std_logic := '0'; 
@@ -98,9 +101,11 @@ port (
    mapper_din_data             : out std_logic_vector(5 downto 0) := (others => '0') ; --Preamble input data to mapper 
    mapper_din_valid            : out std_logic := '0' ;
    mapper_din_ready            : out std_logic := '0' ;
+   mapper_din_last             : out std_logic := '0' ;
    mapper_signal_field_enable  : out std_logic := '0' ;  --signal for noticing the symbol mapper that the input bits are from the signal field 
    mapper_pilot_insertion_en   : out std_logic := '0' ;  --signal for noticing the symbol mapper  if  pilot insertion has been completed or not 
-   mapper_end_of_frame         : out std_logic := '0' ;    
+   mapper_end_of_frame         : out std_logic := '0' ;   
+   mapper_split_end            : out std_logic := '0'  ;
 --   mapper_error_detected       : in std_logic := '0';
 
 --   --DPD filter 
@@ -120,7 +125,7 @@ signal control_unit_din_data     : std_logic_vector(31 downto 0) := (others => '
 signal control_unit_din_valid    : std_logic := '0';
 signal control_unit_end_of_frame : std_logic := '0';
 signal control_unit_dout_ready   : std_logic := '0';
-
+ 
 -- Interface to MAC
 signal mod_cod_schemes           : std_logic_vector(3 downto 0) := (others => '0');
 signal num_streams               : std_logic_vector(4 downto 0) := (others => '0');
@@ -128,7 +133,7 @@ signal ref_distance              : std_logic_vector(7 downto 0) := (others => '0
 signal scrambler_init            : std_logic_vector(31 downto 1) := (others => '0');
 signal num_words                 : std_logic_vector(15 downto 0) := (others => '0');
 signal start_tx                  : std_logic := '0';
-signal phy_src_address           : std_logic_vector(4 downto 0) := (others => '0');
+signal phy_src_address           : std_logic_vector(5 downto 0) := (others => '0');
 signal phy_dest_address          : std_logic_vector(4 downto 0) := (others => '0');
 
 -- Scrambler ports
@@ -149,13 +154,13 @@ signal interleaver_out_code_rate : std_logic_vector(3 downto 0) := (others => '0
 signal interleaver_dout_last     : std_logic := '0';
 signal interleaver_last_frame    : std_logic := '0';
 signal interleaver_mod_type      : std_logic_vector(3 downto 0) := (others => '0');
-signal interleaver_din_data      : std_logic_vector(31 downto 0) := (others => '0');
+signal interleaver_din_data      : std_logic_vector(31 downto 0);
 signal interleaver_din_valid     : std_logic := '0';
 signal interleaver_din_ready     : std_logic := '0';
-
+signal interleaver_din_last      : std_logic := '0';
 -- Mapper ports
 signal mapper_dout_ready         : std_logic := '0';
-signal mapper_mod_from_splitter  : std_logic_vector(2 downto 0) := (others => '0');
+signal mapper_mod_from_splitter  : std_logic_vector(3 downto 0) := (others => '0');
 signal mapper_dout_data_I        : std_logic_vector(11 downto 0) := (others => '0');
 signal mapper_dout_data_Q        : std_logic_vector(11 downto 0) := (others => '0');
 signal mapper_dout_valid         : std_logic := '0';
@@ -165,10 +170,11 @@ signal mapper_selected_mod       : std_logic_vector(2 downto 0) := (others => '0
 signal mapper_din_data           : std_logic_vector(5 downto 0) := (others => '0');
 signal mapper_din_valid          : std_logic := '0';
 signal mapper_din_ready          : std_logic := '0';
+signal mapper_din_last           : std_logic := '0' ;
 signal mapper_signal_field_enable: std_logic := '0';
 signal mapper_pilot_insertion_en : std_logic := '0';
 signal mapper_end_of_frame       : std_logic := '0';
-
+signal mapper_split_end          : std_logic := '0'; 
 -- DPD filter
 signal dpd_dout_ready            : std_logic := '0';
 signal dpd_din_valid             : std_logic := '0';
@@ -178,11 +184,45 @@ signal dpd_din_ready             : std_logic := '0';
 
 constant clock_period : time := 5 ns ;
 
+--procedure interleaver_test( 
+--signal inter_out_code_rate : in std_logic_vector(3 downto 0);
+--signal inter_last_frame    : in std_logic;
+--signal inter_din_ready     : in std_logic ;
+--variable i                 : inout integer;
+--variable tmp               : inout integer  ;
+--signal inter_mod_type      : out std_logic_vector(3 downto 0);
+--signal inter_din_data      : out std_logic_vector(31 downto 0);
+--signal inter_din_valid     : out std_logic ;
+--signal inter_din_last      : out std_logic 
+--) is 
+--begin 
+--while  i <  7 loop 
+----! Select the modulation scheme depening from the encoder coding scheme 
+--if inter_din_ready = '1' then 
+--inter_mod_type <= inter_out_code_rate ;
+--inter_din_data <= std_logic_vector(to_unsigned(tmp,32)) ;
+--inter_din_valid <= '1';
+--tmp := tmp + 10 ; 
+--if i = 7 then 
+--inter_din_last <= '1';
+--else 
+--inter_din_last <= '0';
+--end if ; 
+--i:= i + 1 ;
+--wait for clock_period ;
+--else 
+--inter_din_data <= (others => '0') ;
+--inter_din_valid <= '0';
+--inter_din_last <= '0';
+--wait for clock_period ;
+--end if ;
+--end loop ;
+--end procedure ;
 
 begin
--- DUT Instantiation
+--! DUT Instantiation
 
-DUT : Control_unit_transmitter 
+DUT : Control_unit_top 
 port map( 
 
     clk                         => clk,
@@ -192,7 +232,7 @@ port map(
     control_unit_end_of_frame   => control_unit_end_of_frame,
     control_unit_dout_ready     => control_unit_dout_ready,
 
-    -- Interface to MAC
+    --! Interface to MAC
     mod_cod_schemes             => mod_cod_schemes,
     num_streams                 => num_streams,
     ref_distance                => ref_distance,
@@ -202,7 +242,7 @@ port map(
     phy_src_address             => phy_src_address,
     phy_dest_address            => phy_dest_address,
 
-    -- Scrambler ports
+    --! Scrambler ports
     scrambler_dout_valid        => scrambler_dout_valid,
     scrambler_dout_last         => scrambler_dout_last,
     scrambler_dout_ready        => scrambler_dout_ready,
@@ -213,7 +253,7 @@ port map(
     scrambler_din_ready         => scrambler_din_ready,
     scrambler_control_enable    => scrambler_control_enable,
 
-    -- Interleaver ports
+    --! Interleaver ports
     interleaver_dout_valid      => interleaver_dout_valid,
     interleaver_dout_data       => interleaver_dout_data,
     interleaver_out_code_rate   => interleaver_out_code_rate,
@@ -223,12 +263,12 @@ port map(
     interleaver_din_data        => interleaver_din_data,
     interleaver_din_valid       => interleaver_din_valid,
     interleaver_din_ready       => interleaver_din_ready,
-
-    -- Mapper ports
+    interleaver_din_last        => interleaver_din_last,
+    --! Mapper ports
     mapper_dout_ready           => mapper_dout_ready,
     mapper_mod_from_splitter    => mapper_mod_from_splitter,
-    mapper_dout_data_I          => mapper_dout_data_I,
-    mapper_dout_data_Q          => mapper_dout_data_Q,
+--    mapper_dout_data_I          => mapper_dout_data_I,
+--    mapper_dout_data_Q          => mapper_dout_data_Q,
     mapper_dout_valid           => mapper_dout_valid,
     mapper_dout_last            => mapper_dout_last,
     mapper_last_frame           => mapper_last_frame,
@@ -236,11 +276,12 @@ port map(
     mapper_din_data             => mapper_din_data,
     mapper_din_valid            => mapper_din_valid,
     mapper_din_ready            => mapper_din_ready,
+    mapper_din_last             => mapper_din_last,
     mapper_signal_field_enable  => mapper_signal_field_enable,
     mapper_pilot_insertion_en   => mapper_pilot_insertion_en,
     mapper_end_of_frame         => mapper_end_of_frame,
-
-    -- DPD filter
+    mapper_split_end            => mapper_split_end,
+    --! DPD filter
     dpd_dout_ready              => dpd_dout_ready,
     dpd_din_valid               => dpd_din_valid,
     dpd_din_data_I              => dpd_din_data_I,
@@ -248,7 +289,7 @@ port map(
     dpd_din_ready               => dpd_din_ready
 
 );
-    -- Clock process definition
+    --! Clock process definition
     clk_process :process
     begin
         clk <= '0';
@@ -257,9 +298,263 @@ port map(
         wait for clock_period/2;
     end process;
 stimuli_process : process 
+variable i,j,k   : integer := 0 ;
+--variable tmp : integer := 1 ;
+
+
 begin
 reset <= '1', '0' after 20 ns ;
+wait for 50 ns ;
+interleaver_dout_valid <= '0';
+start_tx <= '1';
+wait for 10 ns ;
+dpd_dout_ready <= '1';
+wait for 50 ns ;
+scrambler_dout_ready <= '1';
+mapper_dout_ready <= '1';
+wait until control_unit_dout_ready = '1' ;
+mapper_dout_ready <= '1';
+control_unit_din_valid <= '1';
+--interleaver_out_code_rate <= "0001" ;
+mod_cod_schemes  <= "0001";
+--! random numbers
+num_streams      <= "10000" ; 
+ref_distance     <= "10000000" ;
+scrambler_init   <= "1001001000101001000100101111101"; 
+phy_src_address  <= "100000";
+phy_dest_address <= "01000";
+wait for 100 ns ;
+control_unit_din_valid <= '0';
+mapper_dout_last <= '1';
+wait for clock_period ;
+wait until mapper_pilot_insertion_en = '0' ;
+mapper_dout_last <= '0';
+wait for clock_period ;--mapper_dout_last <= '0';
+
+if  control_unit_dout_ready = '1' then
+control_unit_din_valid <= '1';
+else 
+control_unit_din_valid <= '0';
+end if ;
+wait for 100 ns ;
+mapper_dout_last <= '1';
+wait for clock_period ;
+wait until mapper_pilot_insertion_en = '0' ;
+mapper_dout_last <= '0';
+wait for clock_period ;--mapper_dout_last <= '0';
+
+if  control_unit_dout_ready = '1' then
+control_unit_din_valid <= '1';
+else 
+control_unit_din_valid <= '0';
+end if ;
+--!interleaver test 
+--!BPSK 
+interleaver_out_code_rate <= "0001" ;
+interleaver_last_frame    <= '0';
+
+while i <  8 loop 
+
+if interleaver_din_ready = '1'then 
+interleaver_dout_data <= std_logic_vector(to_unsigned(j,32)) ;
+j:= j + 10 ;
+i := i + 1 ;
+interleaver_dout_valid <= '1';
+
+if i = 8 then 
+interleaver_dout_last <= '1';
+--interleaver_dout_valid <= '0';
+else 
+interleaver_dout_last <= '0';
+end if ;
+wait until mapper_split_end = '1' ;
+else 
+interleaver_dout_valid <= '0';
+wait until clk'event and clk = '1';
+end if ;
+end loop ;
+wait until mapper_din_last = '1' ;
+interleaver_dout_valid <= '0';
+interleaver_dout_last <= '0';
+i := 0 ; 
+wait for clock_period ;
+
+--!interleaver test 
+--!QPSK 
+
+interleaver_out_code_rate <= "0010" ;
+
+while i <  50  loop 
+
+if interleaver_din_ready = '1'then 
+interleaver_dout_data <= std_logic_vector(to_unsigned(j,32)) ;
+j:= j + 10 ;
+i := i + 1 ;
+interleaver_dout_valid <= '1';
+
+if i = 50 then 
+interleaver_dout_last <= '1';
+--interleaver_dout_valid <= '0';
+else 
+interleaver_dout_last <= '0';
+end if ;
+wait until mapper_split_end = '1' ;
+else 
+interleaver_dout_valid <= '0';
+wait until clk'event and clk = '1';
+end if ;
+end loop ;
+wait until mapper_din_last = '1' ;
+interleaver_dout_valid <= '0';
+interleaver_dout_last <= '0';
+i := 0 ; 
 
 
+--!interleaver test 
+--!QPSK 
+
+interleaver_out_code_rate <= "0100" ;
+wait for clock_period ;
+
+while i <  50  loop 
+
+if interleaver_din_ready = '1'then 
+interleaver_dout_data <= std_logic_vector(to_unsigned(j,32)) ;
+j:= j + 10 ;
+i := i + 1 ;
+interleaver_dout_valid <= '1';
+
+if i = 50 then 
+interleaver_dout_last <= '1';
+--interleaver_dout_valid <= '0';
+else 
+interleaver_dout_last <= '0';
+end if ;
+wait until mapper_split_end = '1' ;
+else 
+interleaver_dout_valid <= '0';
+wait until clk'event and clk = '1';
+end if ;
+end loop ;
+wait until mapper_din_last = '1' ;
+interleaver_dout_valid <= '0';
+interleaver_dout_last <= '0';
+i := 0 ; 
+
+interleaver_out_code_rate <= "0101" ;
+wait for clock_period ;
+
+while i <  50  loop 
+
+if interleaver_din_ready = '1'then 
+interleaver_dout_data <= std_logic_vector(to_unsigned(j,32)) ;
+j:= j + 10 ;
+i := i + 1 ;
+interleaver_dout_valid <= '1';
+
+if i = 50 then 
+interleaver_dout_last <= '1';
+--interleaver_dout_valid <= '0';
+else 
+interleaver_dout_last <= '0';
+end if ;
+wait until mapper_split_end = '1' ;
+else 
+interleaver_dout_valid <= '0';
+wait until clk'event and clk = '1';
+end if ;
+end loop ;
+wait until mapper_din_last = '1' ;
+interleaver_dout_valid <= '0';
+interleaver_dout_last <= '0';
+i := 0 ; 
+
+interleaver_out_code_rate <= "1000" ;
+wait for clock_period ;
+mapper_dout_last <= '1';
+mapper_dout_ready <= '0';
+wait for 2 * clock_period ;
+mapper_dout_last <= '0';
+wait until mapper_pilot_insertion_en = '0';
+mapper_dout_ready <= '1';
+
+while i <  50  loop 
+
+if interleaver_din_ready = '1'then 
+interleaver_dout_data <= std_logic_vector(to_unsigned(j,32)) ;
+j:= j + 10 ;
+i := i + 1 ;
+interleaver_dout_valid <= '1';
+
+if i = 50 then 
+interleaver_dout_last <= '1';
+--interleaver_dout_valid <= '0';
+else 
+interleaver_dout_last <= '0';
+end if ;
+wait until mapper_split_end = '1' ;
+else 
+interleaver_dout_valid <= '0';
+wait until clk'event and clk = '1';
+end if ;
+end loop ;
+wait until mapper_din_last = '1' ;
+interleaver_dout_valid <= '0';
+interleaver_dout_last <= '0';
+i := 0 ; 
+wait for 5 * clock_period ;
+control_unit_din_valid    <= '0';
+control_unit_end_of_frame <= '1';
+wait ;
+--interleaver_test(interleaver_out_code_rate,interleaver_last_frame,interleaver_din_ready,j,k,mapper_mod_from_splitter,interleaver_din_data,interleaver_dout_valid,interleaver_din_last) ;
+--wait for 10 ns ;
+--interleaver_out_code_rate <= "0010" ;
+--interleaver_test(interleaver_out_code_rate,interleaver_last_frame,interleaver_din_ready,j,k,mapper_mod_from_splitter,interleaver_din_data,interleaver_din_valid,interleaver_din_last) ;
+--wait for 10 ns ;
+--interleaver_test("0110",'0',interleaver_din_ready,0,0,mapper_mod_from_splitter,interleaver_din_data,interleaver_din_valid,interleaver_din_last) ;
+--wait for 10 ns ;
+--interleaver_test("0100",'0',interleaver_din_ready,0,0,mapper_mod_from_splitter,interleaver_din_data,interleaver_din_valid,interleaver_din_last) ;
+--wait for 10 ns ;
+--interleaver_test("0101",'0',interleaver_din_ready,0,0,mapper_mod_from_splitter,interleaver_din_data,interleaver_din_valid,interleaver_din_last) ;
+--wait for 10 ns ;
+--interleaver_test("0111",'0',interleaver_din_ready,0,0,mapper_mod_from_splitter,interleaver_din_data,interleaver_din_valid,interleaver_din_last) ;
+--wait for 10 ns ;
+--interleaver_test("1000",'0',interleaver_din_ready,0,0,mapper_mod_from_splitter,interleaver_din_data,interleaver_din_valid,interleaver_din_last) ;
+--wait for 10 ns ;
+--interleaver_test("1111",'0',interleaver_din_ready,0,0,mapper_mod_from_splitter,interleaver_din_data,interleaver_din_valid,interleaver_din_last) ;
+--wait for 100 ns ;
+--mapper_din_last <='0';
+----mapper_dout_last <= '1';
+--wait for 10 ns ;
+--while  i < 50 and scrambler_din_ready = '1'loop 
+--control_unit_din_valid <= '1';
+--control_unit_din_data <= std_logic_vector(to_unsigned(i ,32) );
+--wait for clock_period ;
+--i:= i + 1 ;
+--if i = 50 then  
+--control_unit_end_of_frame <= '1';
+--control_unit_din_valid <= '0';
+--end if ;
+--end loop ;
+--wait for 50 ns ;
+--mapper_dout_last <= '1';
+--wait for clock_period ;
+--wait until mapper_pilot_insertion_en =  '1';
+wait until mapper_pilot_insertion_en =  '0';
+
+--if interleaver_din_ready = '1' and i < 8 then 
+--interleaver_out_code_rate <= "0001";
+--interleaver_dout_data <= std_logic_vector(to_unsigned(tmp,32)) ;
+--tmp := tmp + 10 ; 
+--i := i + 1 ;
+--interleaver_dout_valid <= '1';
+--wait for clock_period ;
+--else 
+--interleaver_dout_valid <= '0';
+--wait for clock_period ;
+--end if ;
+wait for clock_period ;
+finish ;
 end process ;
+
 end Behavioral;
