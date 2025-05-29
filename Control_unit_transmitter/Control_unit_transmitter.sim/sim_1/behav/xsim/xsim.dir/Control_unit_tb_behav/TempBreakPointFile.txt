@@ -1,3 +1,5 @@
 Breakpoint File Version 1.0
-477,true,"/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd"
-479,true,"/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd"
+409,true,"/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd"
+358,true,"/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd"
+369,true,"/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd"
+921,true,"/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/Control_unit_top.vhd"

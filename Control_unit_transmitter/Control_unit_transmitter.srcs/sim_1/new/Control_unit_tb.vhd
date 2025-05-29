@@ -48,7 +48,8 @@ port (
     control_unit_din_valid      : in std_logic := '0';
     control_unit_end_of_frame   : in std_logic := '0';
     control_unit_dout_ready     : out std_logic := '0';
-   
+    control_unit_last_frame     : out std_logic := '0';
+
    -- Interface to MAC 
     mod_cod_schemes             : in std_logic_vector(3 downto 0)   := (others => '0') ; --modulation and coding schemes --> Possible values :   BPSK and CR = 1/2  => 0001 ,QPSK and CR = 2/3 => 0010 ,16-QAM/16-APSK  and CR = 3/4 => 0100  ,64-QAM/64-APSK  and CR = 5/6 => 1000              
     num_streams                 : in std_logic_vector(4 downto 0)   := (others => '0') ;
@@ -56,13 +57,13 @@ port (
     scrambler_init              : in std_logic_vector(31 downto 1)  := (others => '0') ;
     num_words                   : in std_logic_vector(15 downto 0)  := (others => '0') ; --Number of bytes per frame (payload) 
     start_tx                    : in std_logic := '0';   
-    phy_src_address             : in std_logic_vector(5 downto 0 ) := (others => '0') ; 
+    phy_src_address             : in std_logic_vector(4 downto 0 ) := (others => '0') ; 
     phy_dest_address            : in std_logic_vector(4 downto 0 ) := (others => '0') ; 
   
  --Scrambler ports 
     
-    scrambler_dout_valid        : in std_logic := '0';
-    scrambler_dout_last         : in std_logic := '0';
+--    scrambler_dout_valid        : in std_logic := '0';
+--    scrambler_dout_last         : in std_logic := '0';
     scrambler_dout_ready        : in std_logic := '0'; --Scrambler ready to receive data from control unit  
     scrambler_din_data          : out std_logic_vector(31 downto 0) := (others => '0') ;  --Data stream coming from Scrambler 
     scrambler_seed              : out std_logic_vector(31 downto 1) := (others => '0') ;
@@ -80,11 +81,11 @@ port (
     interleaver_out_code_rate   : in std_logic_vector(3 downto 0) := (others => '0'); 
     interleaver_dout_last       : in std_logic := '0';
     interleaver_last_frame      : in std_logic := '0';    
-    interleaver_mod_type        : out std_logic_vector(3 downto 0) := (others => '0'); 
-    interleaver_din_data        : out std_logic_vector(31 downto 0):= (others => '0'); --Encoded data without padding bits 
-    interleaver_din_valid       : out std_logic := '0';
+--    interleaver_mod_type        : out std_logic_vector(3 downto 0) := (others => '0'); 
+--    interleaver_din_data        : out std_logic_vector(31 downto 0):= (others => '0'); --Encoded data without padding bits 
+--    interleaver_din_valid       : out std_logic := '0';
     interleaver_din_ready       : out std_logic := '0';
-    interleaver_din_last        : out std_logic := '0';
+--    interleaver_din_last        : out std_logic := '0';
 
 --    interleaver_error_detect    : in std_logic := '0';
      
@@ -92,8 +93,6 @@ port (
    
    mapper_dout_ready           : in std_logic  := '0' ; --Mapper ready to receive data stream 
    mapper_mod_from_splitter    : in std_logic_vector(3 downto 0) := (others => '0') ; --Modulation scheme coming from the bit splitter 
---   mapper_dout_data_I          : in std_logic_vector( 11 downto 0) := (others => '0') ; --Output data stream from mapper 
---   mapper_dout_data_Q          : in std_logic_vector( 11 downto 0) := (others => '0') ; --Output data stream from mapper 
    mapper_dout_valid           : in std_logic := '0';
    mapper_dout_last            : in std_logic := '0'; -- This port signals if the mapper finished to processing the signal field block
    mapper_last_frame           : in std_logic := '0'; 
@@ -101,11 +100,11 @@ port (
    mapper_din_data             : out std_logic_vector(5 downto 0) := (others => '0') ; --Preamble input data to mapper 
    mapper_din_valid            : out std_logic := '0' ;
    mapper_din_ready            : out std_logic := '0' ;
-   mapper_din_last             : out std_logic := '0' ;
+   mapper_din_last             : out std_logic := '0';
    mapper_signal_field_enable  : out std_logic := '0' ;  --signal for noticing the symbol mapper that the input bits are from the signal field 
    mapper_pilot_insertion_en   : out std_logic := '0' ;  --signal for noticing the symbol mapper  if  pilot insertion has been completed or not 
    mapper_end_of_frame         : out std_logic := '0' ;   
-   mapper_split_end            : out std_logic := '0'  ;
+   mapper_split_end            : out std_logic := '0'; 
 --   mapper_error_detected       : in std_logic := '0';
 
 --   --DPD filter 
@@ -125,7 +124,7 @@ signal control_unit_din_data     : std_logic_vector(31 downto 0) := (others => '
 signal control_unit_din_valid    : std_logic := '0';
 signal control_unit_end_of_frame : std_logic := '0';
 signal control_unit_dout_ready   : std_logic := '0';
- 
+signal control_unit_last_frame   : std_logic := '0' ; 
 -- Interface to MAC
 signal mod_cod_schemes           : std_logic_vector(3 downto 0) := (others => '0');
 signal num_streams               : std_logic_vector(4 downto 0) := (others => '0');
@@ -133,7 +132,7 @@ signal ref_distance              : std_logic_vector(7 downto 0) := (others => '0
 signal scrambler_init            : std_logic_vector(31 downto 1) := (others => '0');
 signal num_words                 : std_logic_vector(15 downto 0) := (others => '0');
 signal start_tx                  : std_logic := '0';
-signal phy_src_address           : std_logic_vector(5 downto 0) := (others => '0');
+signal phy_src_address           : std_logic_vector(4 downto 0) := (others => '0');
 signal phy_dest_address          : std_logic_vector(4 downto 0) := (others => '0');
 
 -- Scrambler ports
@@ -231,7 +230,7 @@ port map(
     control_unit_din_valid      => control_unit_din_valid,
     control_unit_end_of_frame   => control_unit_end_of_frame,
     control_unit_dout_ready     => control_unit_dout_ready,
-
+    control_unit_last_frame     => control_unit_last_frame,
     --! Interface to MAC
     mod_cod_schemes             => mod_cod_schemes,
     num_streams                 => num_streams,
@@ -243,8 +242,8 @@ port map(
     phy_dest_address            => phy_dest_address,
 
     --! Scrambler ports
-    scrambler_dout_valid        => scrambler_dout_valid,
-    scrambler_dout_last         => scrambler_dout_last,
+--    scrambler_dout_valid        => scrambler_dout_valid,
+--    scrambler_dout_last         => scrambler_dout_last,
     scrambler_dout_ready        => scrambler_dout_ready,
     scrambler_din_data          => scrambler_din_data,
     scrambler_seed              => scrambler_seed,
@@ -259,11 +258,11 @@ port map(
     interleaver_out_code_rate   => interleaver_out_code_rate,
     interleaver_dout_last       => interleaver_dout_last,
     interleaver_last_frame      => interleaver_last_frame,
-    interleaver_mod_type        => interleaver_mod_type,
-    interleaver_din_data        => interleaver_din_data,
-    interleaver_din_valid       => interleaver_din_valid,
-    interleaver_din_ready       => interleaver_din_ready,
-    interleaver_din_last        => interleaver_din_last,
+--    interleaver_mod_type        => interleaver_mod_type,
+--    interleaver_din_data        => interleaver_din_data,
+--    interleaver_din_valid       => interleaver_din_valid,
+--    interleaver_din_ready       => interleaver_din_ready,
+--    interleaver_din_last        => interleaver_din_last,
     --! Mapper ports
     mapper_dout_ready           => mapper_dout_ready,
     mapper_mod_from_splitter    => mapper_mod_from_splitter,
@@ -321,7 +320,7 @@ mod_cod_schemes  <= "0001";
 num_streams      <= "10000" ; 
 ref_distance     <= "10000000" ;
 scrambler_init   <= "1001001000101001000100101111101"; 
-phy_src_address  <= "100000";
+phy_src_address  <= "10000";
 phy_dest_address <= "01000";
 wait for 100 ns ;
 control_unit_din_valid <= '0';

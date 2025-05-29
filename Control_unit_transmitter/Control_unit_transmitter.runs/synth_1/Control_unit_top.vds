@@ -2,8 +2,8 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Wed May 28 13:57:13 2025
-# Process ID: 2144038
+# Start of session at: Thu May 29 20:57:50 2025
+# Process ID: 3120993
 # Current directory: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.runs/synth_1
 # Command line: vivado -log Control_unit_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Control_unit_top.tcl
 # Log file: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.runs/synth_1/Control_unit_top.vds
@@ -11,10 +11,12 @@
 # Running On: uxsrv005, OS: Linux, CPU Frequency: 3457.889 MHz, CPU Physical cores: 8, Host memory: 101335 MB
 #-----------------------------------------------------------
 source Control_unit_top.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3069.703 ; gain = 2.016 ; free physical = 48634 ; free virtual = 111339
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3072.672 ; gain = 2.016 ; free physical = 46934 ; free virtual = 110046
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository '/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new'. The path is contained within another repository.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:Control_unit_top:1.0'. The one found in IP location '/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs' will take precedence over the same IP in location /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new
 Command: read_checkpoint -auto_incremental -incremental /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/utils_1/imports/synth_1/Control_unit_top.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/utils_1/imports/synth_1/Control_unit_top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -26,83 +28,45 @@ WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis b
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 2144455
+INFO: [Synth 8-7075] Helper process launched with PID 3121609
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3099.910 ; gain = 0.000 ; free physical = 48280 ; free virtual = 110987
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3102.879 ; gain = 0.000 ; free physical = 46639 ; free virtual = 109752
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Control_unit_top' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/Control_unit_top.vhd:135]
-WARNING: [Synth 8-6014] Unused sequential element done_reg was removed.  [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/Control_unit_top.vhd:790]
-WARNING: [Synth 8-3848] Net interleaver_din_data in module/entity Control_unit_top does not have driver. [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/Control_unit_top.vhd:93]
-INFO: [Synth 8-256] done synthesizing module 'Control_unit_top' (1#1) [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/Control_unit_top.vhd:135]
+INFO: [Synth 8-638] synthesizing module 'Control_unit_top' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/Control_unit_top.vhd:132]
+WARNING: [Synth 8-6014] Unused sequential element signal_field_en_reg was removed.  [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/Control_unit_top.vhd:632]
+WARNING: [Synth 8-6014] Unused sequential element pilot_insertion_reg was removed.  [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/Control_unit_top.vhd:657]
+INFO: [Synth 8-256] done synthesizing module 'Control_unit_top' (1#1) [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/Control_unit_top.vhd:132]
+WARNING: [Synth 8-3917] design Control_unit_top has port control_unit_last_frame driven by constant 0
 WARNING: [Synth 8-3917] design Control_unit_top has port scrambler_din_ready driven by constant 0
-WARNING: [Synth 8-3917] design Control_unit_top has port interleaver_mod_type[3] driven by constant 0
-WARNING: [Synth 8-3917] design Control_unit_top has port interleaver_mod_type[2] driven by constant 0
-WARNING: [Synth 8-3917] design Control_unit_top has port interleaver_mod_type[1] driven by constant 0
-WARNING: [Synth 8-3917] design Control_unit_top has port interleaver_mod_type[0] driven by constant 0
-WARNING: [Synth 8-3917] design Control_unit_top has port interleaver_din_valid driven by constant 0
-WARNING: [Synth 8-3917] design Control_unit_top has port interleaver_din_last driven by constant 0
 WARNING: [Synth 8-3917] design Control_unit_top has port mapper_selected_mod[2] driven by constant 0
 WARNING: [Synth 8-3917] design Control_unit_top has port mapper_selected_mod[1] driven by constant 0
 WARNING: [Synth 8-3917] design Control_unit_top has port mapper_selected_mod[0] driven by constant 0
 WARNING: [Synth 8-3917] design Control_unit_top has port mapper_din_ready driven by constant 0
+WARNING: [Synth 8-3917] design Control_unit_top has port mapper_din_last driven by constant 0
 WARNING: [Synth 8-3917] design Control_unit_top has port mapper_end_of_frame driven by constant 0
-WARNING: [Synth 8-7129] Port interleaver_din_data[31] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[30] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[29] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[28] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[27] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[26] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[25] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[24] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[23] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[22] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[21] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[20] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[19] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[18] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[17] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[16] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[15] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[14] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[13] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[12] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[11] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[10] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[9] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[8] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[7] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[6] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[5] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[4] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[3] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[2] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[1] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[0] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port scrambler_dout_valid in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port scrambler_dout_last in module Control_unit_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interleaver_dout_last in module Control_unit_top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port interleaver_last_frame in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port mapper_mod_from_splitter[3] in module Control_unit_top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port mapper_mod_from_splitter[2] in module Control_unit_top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port mapper_mod_from_splitter[1] in module Control_unit_top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port mapper_mod_from_splitter[0] in module Control_unit_top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port mapper_dout_valid in module Control_unit_top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3099.910 ; gain = 0.000 ; free physical = 47312 ; free virtual = 110020
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3102.879 ; gain = 0.000 ; free physical = 45674 ; free virtual = 108788
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3099.910 ; gain = 0.000 ; free physical = 47309 ; free virtual = 110017
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3102.879 ; gain = 0.000 ; free physical = 45673 ; free virtual = 108786
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xczu28dr-ffvg1517-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xczu28dr-ffvg1517-2-e
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3112.883 ; gain = 10.004 ; free physical = 45672 ; free virtual = 108785
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3109.914 ; gain = 10.004 ; free physical = 47309 ; free virtual = 110016
 ---------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3109.914 ; gain = 10.004 ; free physical = 48066 ; free virtual = 110774
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3112.883 ; gain = 10.004 ; free physical = 46422 ; free virtual = 109535
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -112,27 +76,32 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input   32 Bit       Adders := 4     
 +---Registers : 
-	               32 Bit    Registers := 7     
+	               32 Bit    Registers := 6     
 	               31 Bit    Registers := 1     
 	               12 Bit    Registers := 1     
 	                6 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 15    
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 14    
 +---Multipliers : 
 	               4x32  Multipliers := 2     
 +---Muxes : 
 	   7 Input   32 Bit        Muxes := 4     
-	   2 Input   32 Bit        Muxes := 19    
-	   9 Input   32 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 9     
+	   9 Input   32 Bit        Muxes := 1     
 	   7 Input   12 Bit        Muxes := 1     
 	   2 Input    6 Bit        Muxes := 1     
 	   9 Input    6 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 1     
 	   3 Input    3 Bit        Muxes := 1     
-	   7 Input    1 Bit        Muxes := 23    
-	   2 Input    1 Bit        Muxes := 16    
-	   9 Input    1 Bit        Muxes := 2     
+	   9 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 5     
+	   9 Input    2 Bit        Muxes := 1     
+	   7 Input    1 Bit        Muxes := 22    
+	   2 Input    1 Bit        Muxes := 24    
+	   3 Input    1 Bit        Muxes := 6     
+	   9 Input    1 Bit        Muxes := 4     
+	   4 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -150,60 +119,22 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design Control_unit_top has port control_unit_last_frame driven by constant 0
 WARNING: [Synth 8-3917] design Control_unit_top has port scrambler_din_ready driven by constant 0
-WARNING: [Synth 8-3917] design Control_unit_top has port interleaver_mod_type[3] driven by constant 0
-WARNING: [Synth 8-3917] design Control_unit_top has port interleaver_mod_type[2] driven by constant 0
-WARNING: [Synth 8-3917] design Control_unit_top has port interleaver_mod_type[1] driven by constant 0
-WARNING: [Synth 8-3917] design Control_unit_top has port interleaver_mod_type[0] driven by constant 0
-WARNING: [Synth 8-3917] design Control_unit_top has port interleaver_din_valid driven by constant 0
-WARNING: [Synth 8-3917] design Control_unit_top has port interleaver_din_last driven by constant 0
 WARNING: [Synth 8-3917] design Control_unit_top has port mapper_selected_mod[2] driven by constant 0
 WARNING: [Synth 8-3917] design Control_unit_top has port mapper_selected_mod[1] driven by constant 0
 WARNING: [Synth 8-3917] design Control_unit_top has port mapper_selected_mod[0] driven by constant 0
 WARNING: [Synth 8-3917] design Control_unit_top has port mapper_din_ready driven by constant 0
+WARNING: [Synth 8-3917] design Control_unit_top has port mapper_din_last driven by constant 0
 WARNING: [Synth 8-3917] design Control_unit_top has port mapper_end_of_frame driven by constant 0
-WARNING: [Synth 8-7129] Port interleaver_din_data[31] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[30] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[29] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[28] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[27] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[26] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[25] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[24] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[23] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[22] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[21] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[20] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[19] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[18] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[17] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[16] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[15] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[14] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[13] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[12] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[11] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[10] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[9] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[8] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[7] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[6] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[5] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[4] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[3] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[2] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[1] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port interleaver_din_data[0] in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port scrambler_dout_valid in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port scrambler_dout_last in module Control_unit_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interleaver_dout_last in module Control_unit_top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port interleaver_last_frame in module Control_unit_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port mapper_mod_from_splitter[3] in module Control_unit_top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port mapper_mod_from_splitter[2] in module Control_unit_top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port mapper_mod_from_splitter[1] in module Control_unit_top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port mapper_mod_from_splitter[0] in module Control_unit_top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port mapper_dout_valid in module Control_unit_top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 3485.180 ; gain = 385.270 ; free physical = 46027 ; free virtual = 108752
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 3481.789 ; gain = 378.910 ; free physical = 45663 ; free virtual = 108781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -229,13 +160,13 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 3485.180 ; gain = 385.270 ; free physical = 46026 ; free virtual = 108751
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 3481.789 ; gain = 378.910 ; free physical = 45663 ; free virtual = 108781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 3485.180 ; gain = 385.270 ; free physical = 46028 ; free virtual = 108752
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 3489.797 ; gain = 386.918 ; free physical = 45662 ; free virtual = 108780
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -253,37 +184,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 3485.180 ; gain = 385.270 ; free physical = 46005 ; free virtual = 108730
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 3489.797 ; gain = 386.918 ; free physical = 45664 ; free virtual = 108782
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 3485.180 ; gain = 385.270 ; free physical = 46005 ; free virtual = 108730
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 3489.797 ; gain = 386.918 ; free physical = 45664 ; free virtual = 108782
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 3485.180 ; gain = 385.270 ; free physical = 46005 ; free virtual = 108730
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 3489.797 ; gain = 386.918 ; free physical = 45664 ; free virtual = 108782
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 3485.180 ; gain = 385.270 ; free physical = 46005 ; free virtual = 108730
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 3489.797 ; gain = 386.918 ; free physical = 45664 ; free virtual = 108782
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 3485.180 ; gain = 385.270 ; free physical = 46005 ; free virtual = 108730
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 3489.797 ; gain = 386.918 ; free physical = 45664 ; free virtual = 108782
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 3485.180 ; gain = 385.270 ; free physical = 46005 ; free virtual = 108730
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 3489.797 ; gain = 386.918 ; free physical = 45664 ; free virtual = 108782
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -302,49 +233,48 @@ Report Cell Usage:
 |1     |BUFG   |     1|
 |2     |CARRY8 |    44|
 |3     |LUT1   |     8|
-|4     |LUT2   |   165|
-|5     |LUT3   |   115|
-|6     |LUT4   |    74|
-|7     |LUT5   |    58|
-|8     |LUT6   |   241|
-|9     |MUXF7  |    12|
-|10    |FDCE   |    73|
-|11    |FDRE   |   191|
-|12    |IBUF   |   155|
-|13    |OBUF   |   117|
-|14    |OBUFT  |    32|
+|4     |LUT2   |   139|
+|5     |LUT3   |    23|
+|6     |LUT4   |   107|
+|7     |LUT5   |   133|
+|8     |LUT6   |   154|
+|9     |MUXF7  |    10|
+|10    |FDCE   |    74|
+|11    |FDRE   |   177|
+|12    |IBUF   |   153|
+|13    |OBUF   |   112|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+---------+-------+------+
 |      |Instance |Module |Cells |
 +------+---------+-------+------+
-|1     |top      |       |  1286|
+|1     |top      |       |  1135|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 3485.180 ; gain = 385.270 ; free physical = 46005 ; free virtual = 108730
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 3489.797 ; gain = 386.918 ; free physical = 45664 ; free virtual = 108782
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 107 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 3485.180 ; gain = 385.270 ; free physical = 46007 ; free virtual = 108731
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 3485.188 ; gain = 385.270 ; free physical = 46007 ; free virtual = 108732
+Synthesis finished with 0 errors, 0 critical warnings and 31 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 3489.797 ; gain = 386.918 ; free physical = 45666 ; free virtual = 108784
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 3489.805 ; gain = 386.918 ; free physical = 45666 ; free virtual = 108784
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3491.117 ; gain = 0.000 ; free physical = 46208 ; free virtual = 108934
-INFO: [Netlist 29-17] Analyzing 212 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3497.797 ; gain = 0.000 ; free physical = 45763 ; free virtual = 108882
+INFO: [Netlist 29-17] Analyzing 208 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'Control_unit_top' is not ideal for floorplanning, since the cellview 'Control_unit_top' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3626.676 ; gain = 0.000 ; free physical = 46079 ; free virtual = 108804
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3625.418 ; gain = 0.000 ; free physical = 45670 ; free virtual = 108789
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 156 instances were transformed.
+  A total of 154 instances were transformed.
   BUFG => BUFGCE: 1 instance 
-  IBUF => IBUF (IBUFCTRL, INBUF): 155 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 153 instances
 
-Synth Design complete, checksum: 65d9635b
+Synth Design complete, checksum: 2a7ce1f
 INFO: [Common 17-83] Releasing license: Synthesis
-21 Infos, 109 Warnings, 0 Critical Warnings and 0 Errors encountered.
+21 Infos, 35 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:59 . Memory (MB): peak = 3626.676 ; gain = 556.973 ; free physical = 46219 ; free virtual = 108945
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:54 . Memory (MB): peak = 3625.418 ; gain = 552.746 ; free physical = 45818 ; free virtual = 108936
 INFO: [Common 17-1381] The checkpoint '/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.runs/synth_1/Control_unit_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Control_unit_top_utilization_synth.rpt -pb Control_unit_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed May 28 13:58:35 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu May 29 20:59:08 2025...
