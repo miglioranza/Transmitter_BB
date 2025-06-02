@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work axi_fifo_mm_s_v4_2_7 -f /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.cache/compile_simlib/xcelium/axi_fifo_mm_s_v4_2_7/.cxl.vhdl.axi_fifo_mm_s_v4_2_7.axi_fifo_mm_s_v4_2_7.lin64.cmf

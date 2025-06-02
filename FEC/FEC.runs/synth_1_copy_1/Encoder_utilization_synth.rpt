@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Fri Mar 14 13:46:42 2025
+| Date         : Mon Jun  2 13:28:19 2025
 | Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 | Command      : report_utilization -file Encoder_utilization_synth.rpt -pb Encoder_utilization_synth.pb
 | Design       : Encoder
@@ -32,13 +32,13 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*                  |  559 |     0 |          0 |    425280 |  0.13 |
-|   LUT as Logic             |  479 |     0 |          0 |    425280 |  0.11 |
+| CLB LUTs*                  |  571 |     0 |          0 |    425280 |  0.13 |
+|   LUT as Logic             |  491 |     0 |          0 |    425280 |  0.12 |
 |   LUT as Memory            |   80 |     0 |          0 |    213600 |  0.04 |
 |     LUT as Distributed RAM |   80 |     0 |            |           |       |
 |     LUT as Shift Register  |    0 |     0 |            |           |       |
-| CLB Registers              |  332 |     0 |          0 |    850560 |  0.04 |
-|   Register as Flip Flop    |  332 |     0 |          0 |    850560 |  0.04 |
+| CLB Registers              |  366 |     0 |          0 |    850560 |  0.04 |
+|   Register as Flip Flop    |  366 |     0 |          0 |    850560 |  0.04 |
 |   Register as Latch        |    0 |     0 |          0 |    850560 |  0.00 |
 | CARRY8                     |   28 |     0 |          0 |     53160 |  0.05 |
 | F7 Muxes                   |    0 |     0 |          0 |    212640 |  0.00 |
@@ -63,7 +63,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 57    |          Yes |           - |        Reset |
 | 16    |          Yes |         Set |            - |
-| 259   |          Yes |       Reset |            - |
+| 293   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -97,7 +97,7 @@ Table of Contents
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| Bonded IOB |   79 |     0 |          0 |       347 | 22.77 |
+| Bonded IOB |   94 |     0 |          0 |       347 | 27.09 |
 | HS_ADC     |    0 |     0 |          4 |         4 |  0.00 |
 | HS_DAC     |    0 |     0 |          4 |         4 |  0.00 |
 +------------+------+-------+------------+-----------+-------+
@@ -164,20 +164,20 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  259 |            Register |
-| LUT6     |  160 |                 CLB |
+| FDRE     |  293 |            Register |
+| LUT6     |  162 |                 CLB |
 | RAMD32   |  136 |                 CLB |
-| LUT2     |  120 |                 CLB |
-| LUT5     |  100 |                 CLB |
-| LUT1     |   86 |                 CLB |
+| LUT2     |  119 |                 CLB |
+| LUT5     |  104 |                 CLB |
+| LUT1     |   87 |                 CLB |
 | FDCE     |   57 |            Register |
-| LUT3     |   51 |                 CLB |
-| INBUF    |   41 |                 I/O |
-| IBUFCTRL |   41 |              Others |
-| OBUF     |   38 |                 I/O |
+| LUT3     |   53 |                 CLB |
+| OBUF     |   52 |                 I/O |
+| INBUF    |   42 |                 I/O |
+| IBUFCTRL |   42 |              Others |
+| LUT4     |   28 |                 CLB |
 | CARRY8   |   28 |                 CLB |
 | RAMS32   |   24 |                 CLB |
-| LUT4     |   24 |                 CLB |
 | FDSE     |   16 |            Register |
 | BUFGCE   |    1 |               Clock |
 +----------+------+---------------------+

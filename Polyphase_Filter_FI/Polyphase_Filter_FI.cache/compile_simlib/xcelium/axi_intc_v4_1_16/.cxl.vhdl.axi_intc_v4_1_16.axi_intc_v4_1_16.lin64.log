@@ -1,0 +1,23 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_intc_v4_1/hdl/axi_intc_v4_1_vh_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_INTC_V4_1_16.DOUBLE_SYNCHRONIZER (entity):
+	streams: 9, words: 1923
+AXI_INTC_V4_1_16.DOUBLE_SYNCHRONIZER:RTL (architecture):
+	streams: 2, words: 3533
+AXI_INTC_V4_1_16.SHARED_RAM_IVAR (entity):
+	streams: 24, words: 5894
+AXI_INTC_V4_1_16.SHARED_RAM_IVAR:BYTE_DATA_RAM_A (architecture):
+	streams: 3, words: 6799
+AXI_INTC_V4_1_16.PULSE_SYNCHRONIZER (entity):
+	streams: 7, words: 111
+AXI_INTC_V4_1_16.PULSE_SYNCHRONIZER:RTL (architecture):
+	streams: 4, words: 3351
+AXI_INTC_V4_1_16.INTC_CORE (entity):
+	streams: 71, words: 8628
+AXI_INTC_V4_1_16.INTC_CORE:IMP (architecture):
+	streams: 26, words: 84517
+AXI_INTC_V4_1_16.AXI_INTC (entity):
+	streams: 88, words: 11514
+AXI_INTC_V4_1_16.AXI_INTC:IMP (architecture):
+	streams: 7, words: 28929

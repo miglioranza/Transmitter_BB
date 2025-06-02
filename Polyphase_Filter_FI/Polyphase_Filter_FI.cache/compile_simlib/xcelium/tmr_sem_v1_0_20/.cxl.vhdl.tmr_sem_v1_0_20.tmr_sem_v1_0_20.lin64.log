@@ -1,0 +1,39 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/tmr_sem_v1_0/hdl/tmr_sem_v1_0_rfs.vhd:
+  attribute KEEP of RX_Frame_Error    : signal is "TRUE";
+                                 |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/tmr_sem_v1_0/hdl/tmr_sem_v1_0_rfs.vhd,1084|33): illegal entity designator [5.1].
+  attribute KEEP of RX_Parity_Error   : signal is "TRUE";
+                                  |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/tmr_sem_v1_0/hdl/tmr_sem_v1_0_rfs.vhd,1085|34): illegal entity designator [5.1].
+  attribute KEEP of TX_Buffer_Empty : signal is "TRUE";
+                                  |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/tmr_sem_v1_0/hdl/tmr_sem_v1_0_rfs.vhd,1472|34): illegal entity designator [5.1].
+  attribute KEEP of TX              : signal is "TRUE";
+                     |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/tmr_sem_v1_0/hdl/tmr_sem_v1_0_rfs.vhd,1473|21): illegal entity designator [5.1].
+	errors: 0, warnings: 4
+TMR_SEM_V1_0_20.SRL_FIFO (entity):
+	streams: 13, words: 2041
+TMR_SEM_V1_0_20.SRL_FIFO:IMP (architecture):
+	streams: 3, words: 9699
+TMR_SEM_V1_0_20.DIVIDE_PART (entity):
+	streams: 7, words: 241
+TMR_SEM_V1_0_20.DIVIDE_PART:VHDL_RTL (architecture):
+	streams: 3, words: 8443
+TMR_SEM_V1_0_20.FIT_MODULE (entity):
+	streams: 7, words: 247
+TMR_SEM_V1_0_20.FIT_MODULE:VHDL_RTL (architecture):
+	streams: 8, words: 16281
+TMR_SEM_V1_0_20.UART_RECEIVE (entity):
+	streams: 12, words: 528
+TMR_SEM_V1_0_20.UART_RECEIVE:IMP (architecture):
+	streams: 3, words: 7103
+TMR_SEM_V1_0_20.UART_TRANSMIT (entity):
+	streams: 11, words: 520
+TMR_SEM_V1_0_20.UART_TRANSMIT:IMP (architecture):
+	streams: 2, words: 6069
+TMR_SEM_V1_0_20.TMR_SEM (entity):
+	streams: 66, words: 7647
+TMR_SEM_V1_0_20.TMR_SEM:IMP (architecture):
+	streams: 3, words: 64080

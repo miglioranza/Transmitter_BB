@@ -1,0 +1,9 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/pci64_v5_0/hdl/pci64_v5_0_rfs.vhd:
+	errors: 0, warnings: 0
+	streams: 2, words: 502
+	streams: 5, words: 48321
+	streams: 185, words: 19868
+	streams: 1, words: 13512
+	streams: 184, words: 20596
+	streams: 2, words: 14465

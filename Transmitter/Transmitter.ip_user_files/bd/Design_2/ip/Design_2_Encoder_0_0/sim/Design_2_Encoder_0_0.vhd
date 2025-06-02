@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:Encoder:1.0
--- IP Revision: 5
+-- IP Revision: 9
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -63,12 +63,15 @@ ENTITY Design_2_Encoder_0_0 IS
     data_in_valid : IN STD_LOGIC;
     din_ready_ifsm2enc : IN STD_LOGIC;
     data_in_last : IN STD_LOGIC;
+    end_of_frame : IN STD_LOGIC;
     sel_FEC_code_rate : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     data_out_ready : OUT STD_LOGIC;
     data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     data_out_valid : OUT STD_LOGIC;
     core_finish : OUT STD_LOGIC;
+    last_frame : OUT STD_LOGIC;
     axis_data_count : OUT STD_LOGIC_VECTOR(12 DOWNTO 0);
+    current_code_rate : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     data_out_last : OUT STD_LOGIC
   );
 END Design_2_Encoder_0_0;
@@ -86,12 +89,15 @@ ARCHITECTURE Design_2_Encoder_0_0_arch OF Design_2_Encoder_0_0 IS
       data_in_valid : IN STD_LOGIC;
       din_ready_ifsm2enc : IN STD_LOGIC;
       data_in_last : IN STD_LOGIC;
+      end_of_frame : IN STD_LOGIC;
       sel_FEC_code_rate : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
       data_out_ready : OUT STD_LOGIC;
       data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       data_out_valid : OUT STD_LOGIC;
       core_finish : OUT STD_LOGIC;
+      last_frame : OUT STD_LOGIC;
       axis_data_count : OUT STD_LOGIC_VECTOR(12 DOWNTO 0);
+      current_code_rate : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
       data_out_last : OUT STD_LOGIC
     );
   END COMPONENT Encoder;
@@ -118,12 +124,15 @@ BEGIN
       data_in_valid => data_in_valid,
       din_ready_ifsm2enc => din_ready_ifsm2enc,
       data_in_last => data_in_last,
+      end_of_frame => end_of_frame,
       sel_FEC_code_rate => sel_FEC_code_rate,
       data_out_ready => data_out_ready,
       data_out => data_out,
       data_out_valid => data_out_valid,
       core_finish => core_finish,
+      last_frame => last_frame,
       axis_data_count => axis_data_count,
+      current_code_rate => current_code_rate,
       data_out_last => data_out_last
     );
 END Design_2_Encoder_0_0_arch;

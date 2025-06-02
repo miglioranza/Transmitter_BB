@@ -1,0 +1,92 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/iomodule_v3_0/hdl/vhdl/xilinx_primitives.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/iomodule_v3_0/hdl/vhdl/pselect_mask.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/iomodule_v3_0/hdl/vhdl/divide_part.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/iomodule_v3_0/hdl/vhdl/fit_module.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/iomodule_v3_0/hdl/vhdl/gpi_module.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/iomodule_v3_0/hdl/vhdl/gpo_module.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/iomodule_v3_0/hdl/vhdl/intr_ctrl.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/iomodule_v3_0/hdl/vhdl/pit_module.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/iomodule_v3_0/hdl/vhdl/uart_control_status.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/iomodule_v3_0/hdl/vhdl/uart_receive.vhd:
+  attribute KEEP of RX_Frame_Error    : signal is "SOFT";
+                                 |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/iomodule_v3_0/hdl/vhdl/uart_receive.vhd,171|33): illegal entity designator [5.1].
+  attribute KEEP of RX_Parity_Error   : signal is "SOFT";
+                                  |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/iomodule_v3_0/hdl/vhdl/uart_receive.vhd,172|34): illegal entity designator [5.1].
+	errors: 0, warnings: 2
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/iomodule_v3_0/hdl/vhdl/uart_transmit.vhd:
+  attribute KEEP of TX                : signal is "SOFT";
+                     |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/iomodule_v3_0/hdl/vhdl/uart_transmit.vhd,173|21): illegal entity designator [5.1].
+	errors: 0, warnings: 1
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/iomodule_v3_0/hdl/vhdl/iomodule_core.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/iomodule_v3_0/hdl/vhdl/iomodule.vhd:
+	errors: 0, warnings: 0
+IOMODULE_V3_0.XIL_SRL16E (entity):
+	streams: 12, words: 362
+IOMODULE_V3_0.XIL_SRL16E:IMP (architecture):
+	streams: 1, words: 2697
+IOMODULE_V3_0.XIL_SRLC16E (entity):
+	streams: 12, words: 300
+IOMODULE_V3_0.XIL_SRLC16E:IMP (architecture):
+	streams: 1, words: 1740
+IOMODULE_V3_0.PSELECT_MASK (entity):
+	streams: 10, words: 1293
+IOMODULE_V3_0.PSELECT_MASK:IMP (architecture):
+	streams: 3, words: 2439
+IOMODULE_V3_0.DIVIDE_PART (entity):
+	streams: 8, words: 252
+IOMODULE_V3_0.DIVIDE_PART:VHDL_RTL (architecture):
+	streams: 3, words: 8458
+IOMODULE_V3_0.FIT_MODULE (entity):
+	streams: 9, words: 337
+IOMODULE_V3_0.FIT_MODULE:VHDL_RTL (architecture):
+	streams: 13, words: 20774
+IOMODULE_V3_0.GPI_MODULE (entity):
+	streams: 12, words: 2092
+IOMODULE_V3_0.GPI_MODULE:IMP (architecture):
+	streams: 1, words: 2127
+IOMODULE_V3_0.GPO_MODULE (entity):
+	streams: 13, words: 1567
+IOMODULE_V3_0.GPO_MODULE:IMP (architecture):
+	streams: 1, words: 1252
+IOMODULE_V3_0.INTR_CTRL (entity):
+	streams: 41, words: 3240
+IOMODULE_V3_0.INTR_CTRL:IMP (architecture):
+	streams: 5, words: 21813
+IOMODULE_V3_0.PIT_MODULE (entity):
+	streams: 16, words: 1572
+IOMODULE_V3_0.PIT_MODULE:IMP (architecture):
+	streams: 2, words: 8827
+IOMODULE_V3_0.UART_CONTROL_STATUS (entity):
+	streams: 23, words: 837
+IOMODULE_V3_0.UART_CONTROL_STATUS:IMP (architecture):
+	streams: 1, words: 200
+IOMODULE_V3_0.UART_RECEIVE (entity):
+	streams: 18, words: 1285
+IOMODULE_V3_0.UART_RECEIVE:IMP (architecture):
+	streams: 3, words: 7888
+IOMODULE_V3_0.UART_TRANSMIT (entity):
+	streams: 15, words: 1261
+IOMODULE_V3_0.UART_TRANSMIT:IMP (architecture):
+	streams: 2, words: 8053
+IOMODULE_V3_0.IOMODULE_CORE (entity):
+	streams: 193, words: 16779
+IOMODULE_V3_0.IOMODULE_CORE:IMP (architecture):
+	streams: 6, words: 38948
+IOMODULE_V3_0.IOMODULE (entity):
+	streams: 206, words: 24346
+IOMODULE_V3_0.IOMODULE:IMP (architecture):
+	streams: 2, words: 24295

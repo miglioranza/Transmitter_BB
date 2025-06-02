@@ -1,6 +1,957 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Jun  2 16:08:35 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Control_unit_top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Control_unit_top_0_0 (user.org:user:Control_unit_top:1.0) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Jun  2 15:49:05 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Control_unit_top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of Design_2_Control_unit_top_0_0 (user.org:user:Control_unit_top:1.0 (Rev. 16)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Jun  2 15:42:59 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Pipelined_Polyphase_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Pipelined_Polyphase_0_2 (user.org:user:Pipelined_Polyphase_Filter:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Jun  2 15:38:59 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Pipelined_Polyphase_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Pipelined_Polyphase_0_2 (user.org:user:Pipelined_Polyphase_Filter:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Jun  2 15:14:13 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Control_unit_top_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Design_2_Control_unit_top_0_0 (user.org:user:Control_unit_top:1.0) from (Rev. 13) to (Rev. 16)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Design_2_Control_unit_top_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'dpd_din_ready'
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Jun  2 14:40:59 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Control_unit_top_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Design_2_Control_unit_top_0_0 (user.org:user:Control_unit_top:1.0) from (Rev. 12) to (Rev. 13)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Design_2_Control_unit_top_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'mapper_din_last'
+
+-Upgrade has removed port 'mapper_din_ready'
+
+-Upgrade has removed port 'mapper_dout_valid'
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Jun  2 14:32:31 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Control_unit_top_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Design_2_Control_unit_top_0_0 (user.org:user:Control_unit_top:1.0) from (Rev. 11) to (Rev. 12)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Design_2_Control_unit_top_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'mapper_split_end'
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Jun  2 14:03:01 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Control_unit_top_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Design_2_Control_unit_top_0_0 (user.org:user:Control_unit_top:1.0) from (Rev. 9) to (Rev. 11)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Design_2_Control_unit_top_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'mapper_mod_from_splitter'
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Jun  2 13:54:48 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Control_unit_top_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Design_2_Control_unit_top_0_0 (user.org:user:Control_unit_top:1.0) from (Rev. 7) to (Rev. 9)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Design_2_Control_unit_top_0_0'. These changes may impact your design.
+
+
+-Upgraded port 'mod_cod_schemes' width 5 differs from original width 4
+
+-Upgrade has removed port 'interleaver_out_code_rate'
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Jun  2 13:52:58 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_block_interleaver_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Design_2_block_interleaver_0_0 (user.org:user:block_interleaver:1.0) from (Rev. 24) to (Rev. 25)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Design_2_block_interleaver_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'current_code_rate'
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Jun  2 13:45:09 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Encoder_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Design_2_Encoder_0_0 (user.org:user:Encoder:1.0) from (Rev. 8) to (Rev. 9)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Design_2_Encoder_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'current_code_rate'
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Jun  2 13:21:16 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Control_unit_top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Control_unit_top_0_0 (user.org:user:Control_unit_top:1.0) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Jun  2 13:20:04 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_block_interleaver_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of Design_2_block_interleaver_0_0 (user.org:user:block_interleaver:1.0 (Rev. 24)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Jun  2 13:20:04 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Encoder_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of Design_2_Encoder_0_0 (user.org:user:Encoder:1.0 (Rev. 8)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Jun  2 13:20:04 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Control_unit_top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of Design_2_Control_unit_top_0_0 (user.org:user:Control_unit_top:1.0 (Rev. 6)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Jun  2 11:23:12 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Control_unit_top_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Design_2_Control_unit_top_0_0 (user.org:user:Control_unit_top:1.0) from (Rev. 5) to (Rev. 6)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Design_2_Control_unit_top_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'scrambler_din_ready'
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Jun  2 11:22:25 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Control_unit_top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of Design_2_Control_unit_top_0_0 (user.org:user:Control_unit_top:1.0 (Rev. 5)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Mon Jun  2 11:17:35 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Control_unit_top_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Design_2_Control_unit_top_0_0 (user.org:user:Control_unit_top:1.0) from (Rev. 4) to (Rev. 5)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Design_2_Control_unit_top_0_0'. These changes may impact your design.
+
+
+-Upgraded port 'phy_src_address' width 5 differs from original width 6
+
+-Upgrade has removed port 'interleaver_din_data'
+
+-Upgrade has removed port 'interleaver_din_last'
+
+-Upgrade has removed port 'interleaver_din_valid'
+
+-Upgrade has removed port 'interleaver_mod_type'
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Wed May 28 18:09:46 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_block_interleaver_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Design_2_block_interleaver_0_0 (user.org:user:block_interleaver:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Design_2_block_interleaver_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'signal_field'
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Wed May 28 18:02:06 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Control_unit_top_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Design_2_Control_unit_top_0_0 (user.org:user:Control_unit_top:1.0) from (Rev. 5) to (Rev. 4)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Design_2_Control_unit_top_0_0'. These changes may impact your design.
+
+
+-Upgraded port 'mapper_mod_from_splitter' width 4 differs from original width 3
+
+-Upgraded port 'phy_src_address' width 6 differs from original width 5
+
+-Upgrade has removed port 'mapper_dout_data_I'
+
+-Upgrade has removed port 'mapper_dout_data_Q'
+
+-Upgrade has removed port 'scrambler_dout_last'
+
+-Upgrade has removed port 'scrambler_dout_valid'
+
+-Upgrade has added port 'control_unit_last_frame'
+
+-Upgrade has added port 'interleaver_din_last'
+
+-Upgrade has added port 'mapper_din_last'
+
+-Upgrade has added port 'mapper_split_end'
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Wed May 28 17:43:50 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Control_unit_top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of Design_2_Control_unit_top_0_0 (user.org:user:Control_unit_top:1.0 (Rev. 5)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Wed May 28 17:37:03 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Scrambler_32bits_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Design_2_Scrambler_32bits_0_0 (user.org:user:Scrambler_32bits:1.0) from (Rev. 8) to (Rev. 9)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Design_2_Scrambler_32bits_0_0'. These changes may impact your design.
+
+
+-Upgraded port 'data_in' vector [32:1] differs from original vector [31:0]
+
+-Upgraded port 'seed' vector [30:0] differs from original vector [31:1]
+
+-Upgrade has added port 'end_of_frame'
+
+-Upgrade has added port 'last_frame'
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Wed May 28 15:57:36 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Control_unit_top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Control_unit_top_0_0 (user.org:user:Control_unit_top:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Wed May 28 15:30:08 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Control_unit_top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of Design_2_Control_unit_top_0_0 (user.org:user:Control_unit_top:1.0 (Rev. 4)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Wed May 28 15:18:34 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Pre_Distortion_Filter_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Design_2_Pre_Distortion_Filter_0_0 (user.org:user:Pre_Distortion_Filter:1.0) from (Rev. 8) to (Rev. 9)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Design_2_Pre_Distortion_Filter_0_0'. These changes may impact your design.
+
+
+-Upgraded port 'I_output' width 16 differs from original width 32
+
+-Upgraded port 'Q_output' width 16 differs from original width 32
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Wed May 28 15:18:34 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Pipelined_Polyphase_0_2'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Design_2_Pipelined_Polyphase_0_2 (user.org:user:Pipelined_Polyphase_Filter:1.0) from (Rev. 6) to (Rev. 7)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Design_2_Pipelined_Polyphase_0_2'. These changes may impact your design.
+
+
+-Upgraded port 'data_out_I' width 16 differs from original width 52
+
+-Upgraded port 'data_out_Q' width 16 differs from original width 52
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Wed May 28 15:18:34 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Encoder_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Encoder_0_0 (user.org:user:Encoder:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Wed May 28 15:10:41 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Encoder_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the conversion of Design_2_Encoder_0_0 (user.org:user:Encoder:1.0 (Rev. 7)) to Vivado generation flows.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Design_2_Encoder_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'end_of_frame'
+
+-Upgrade has added port 'last_frame'
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue May 20 17:19:16 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_mapper_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Design_2_mapper_0_0 (user.org:user:mapper:1.0) from (Rev. 4) to (Rev. 5)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Design_2_mapper_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'data_out_last'
+
+-Upgrade has added port 'end_of_frame'
+
+-Upgrade has added port 'last_frame'
+
+-Upgrade has added port 'pilot_insertion'
+
+-Upgrade has added port 'signal_field_en'
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue May 20 17:19:16 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_block_interleaver_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Design_2_block_interleaver_0_0 (user.org:user:block_interleaver:1.0) from (Rev. 22) to (Rev. 23)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Design_2_block_interleaver_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'data_in_last'
+
+-Upgrade has added port 'data_out_last'
+
+-Upgrade has added port 'end_of_frame'
+
+-Upgrade has added port 'last_frame_to_cu'
+
+-Upgrade has added port 'signal_field'
+
+
+3. Customization warnings
+-------------------------
+
+Parameter 'NUM_ROWS' is no longer present on the upgraded IP 'Design_2_block_interleaver_0_0', and cannot be set to '3'
+
+
+4. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv user.org:user:block_interleaver:1.0 -user_name Design_2_block_interleaver_0_0
+set_property -dict "\
+  CONFIG.Component_Name {Design_2_block_interleaver_0_0} \
+  CONFIG.DATA_WIDTH {32} \
+  CONFIG.NUM_COLS {7} \
+  CONFIG.clk.ASSOCIATED_BUSIF {} \
+  CONFIG.clk.ASSOCIATED_PORT {} \
+  CONFIG.clk.ASSOCIATED_RESET {rst} \
+  CONFIG.clk.CLK_DOMAIN {Design_2_clk} \
+  CONFIG.clk.FREQ_HZ {100000000} \
+  CONFIG.clk.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.clk.INSERT_VIP {0} \
+  CONFIG.clk.PHASE {0.0} \
+  CONFIG.rst.INSERT_VIP {0} \
+  CONFIG.rst.POLARITY {ACTIVE_LOW} " [get_ips Design_2_block_interleaver_0_0]
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue May 20 17:19:15 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Encoder_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Design_2_Encoder_0_0 (user.org:user:Encoder:1.0) from (Rev. 5) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Wed Apr  2 18:02:09 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command      : upgrade_ip
+| Device       : xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Design_2_Encoder_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of Design_2_Encoder_0_0 (user.org:user:Encoder:1.0 (Rev. 5)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
 | Date         : Mon Mar 24 17:09:52 2025
 | Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 | Command      : upgrade_ip

@@ -2,8 +2,8 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Mon Mar 24 17:10:32 2025
-# Process ID: 1124182
+# Start of session at: Mon Jun  2 15:55:43 2025
+# Process ID: 1186557
 # Current directory: /home/miglioranza/Transmitter/Transmitter.runs/Design_2_Encoder_0_0_synth_1
 # Command line: vivado -log Design_2_Encoder_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Design_2_Encoder_0_0.tcl
 # Log file: /home/miglioranza/Transmitter/Transmitter.runs/Design_2_Encoder_0_0_synth_1/Design_2_Encoder_0_0.vds
@@ -11,9 +11,10 @@
 # Running On: uxsrv005, OS: Linux, CPU Frequency: 3457.889 MHz, CPU Physical cores: 8, Host memory: 101335 MB
 #-----------------------------------------------------------
 source Design_2_Encoder_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3102.422 ; gain = 2.016 ; free physical = 10199 ; free virtual = 108324
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3081.609 ; gain = 2.016 ; free physical = 47668 ; free virtual = 111796
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/Scrambler_32bits'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/Control_unit_transmitter'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/Mapper'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/Interleaver_BB'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/Polyphase_Filter_FI'.
@@ -23,8 +24,8 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/IP_reposito
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/Data_splitter'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/FEC'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:Control_unit_top:1.0'. The one found in IP location '/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs' will take precedence over the same IP in location /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new
 WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:mapper:1.0'. The one found in IP location '/home/miglioranza/Mapper' will take precedence over the same IP in location /home/miglioranza/Mapper/Mapper_1
-update_ip_catalog: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 3102.422 ; gain = 0.000 ; free physical = 10182 ; free virtual = 108307
 Command: synth_design -top Design_2_Encoder_0_0 -part xczu28dr-ffvg1517-2-e -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xczu28dr'
@@ -32,23 +33,26 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu28d
 INFO: [Device 21-403] Loading part xczu28dr-ffvg1517-2-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1124569
+INFO: [Synth 8-7075] Helper process launched with PID 1187302
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3475.914 ; gain = 228.656 ; free physical = 5851 ; free virtual = 103792
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3477.133 ; gain = 229.688 ; free physical = 42587 ; free virtual = 106731
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Design_2_Encoder_0_0' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Encoder_0_0/synth/Design_2_Encoder_0_0.vhd:76]
-INFO: [Synth 8-3491] module 'Encoder' declared at '/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/Encoder.vhd:35' bound to instance 'U0' of component 'Encoder' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Encoder_0_0/synth/Design_2_Encoder_0_0.vhd:115]
-INFO: [Synth 8-638] synthesizing module 'Encoder' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/Encoder.vhd:57]
-INFO: [Synth 8-3491] module 'Wifi_Input_FSM' declared at '/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/Wifi_Input_FSM.vhd:35' bound to instance 'FSM_Input' of component 'Wifi_Input_FSM' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/Encoder.vhd:219]
-INFO: [Synth 8-638] synthesizing module 'Wifi_Input_FSM' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/Wifi_Input_FSM.vhd:55]
-INFO: [Synth 8-226] default block is never used [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/Wifi_Input_FSM.vhd:80]
-INFO: [Synth 8-226] default block is never used [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/Wifi_Input_FSM.vhd:120]
-WARNING: [Synth 8-6014] Unused sequential element block_counter_reg was removed.  [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/Wifi_Input_FSM.vhd:175]
-INFO: [Synth 8-256] done synthesizing module 'Wifi_Input_FSM' (1#1) [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/Wifi_Input_FSM.vhd:55]
-INFO: [Synth 8-3491] module 'Output_fifo' declared at '/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/Output_fifo.vhd:35' bound to instance 'out_fifo' of component 'Output_fifo' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/Encoder.vhd:272]
-INFO: [Synth 8-638] synthesizing module 'Output_fifo' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/Output_fifo.vhd:55]
-INFO: [Synth 8-226] default block is never used [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/Output_fifo.vhd:87]
-INFO: [Synth 8-3491] module 'fifo_generator_0' declared at '/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Encoder_0_0/sources_1/ip/fifo_generator_0/synth/fifo_generator_0.vhd:59' bound to instance 'axis_fifo' of component 'fifo_generator_0' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/Output_fifo.vhd:103]
+INFO: [Synth 8-638] synthesizing module 'Design_2_Encoder_0_0' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Encoder_0_0/synth/Design_2_Encoder_0_0.vhd:79]
+INFO: [Synth 8-3491] module 'Encoder' declared at '/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Encoder.vhd:35' bound to instance 'U0' of component 'Encoder' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Encoder_0_0/synth/Design_2_Encoder_0_0.vhd:121]
+INFO: [Synth 8-638] synthesizing module 'Encoder' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Encoder.vhd:59]
+WARNING: [Synth 8-614] signal 'end_of_frame' is read in the process but is not in the sensitivity list [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Encoder.vhd:202]
+WARNING: [Synth 8-614] signal 'finish_encoding' is read in the process but is not in the sensitivity list [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Encoder.vhd:202]
+WARNING: [Synth 8-614] signal 'temp' is read in the process but is not in the sensitivity list [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Encoder.vhd:202]
+INFO: [Synth 8-3491] module 'Wifi_Input_FSM' declared at '/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Wifi_Input_FSM.vhd:35' bound to instance 'FSM_Input' of component 'Wifi_Input_FSM' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Encoder.vhd:245]
+INFO: [Synth 8-638] synthesizing module 'Wifi_Input_FSM' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Wifi_Input_FSM.vhd:55]
+INFO: [Synth 8-226] default block is never used [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Wifi_Input_FSM.vhd:80]
+INFO: [Synth 8-226] default block is never used [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Wifi_Input_FSM.vhd:120]
+WARNING: [Synth 8-6014] Unused sequential element block_counter_reg was removed.  [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Wifi_Input_FSM.vhd:175]
+INFO: [Synth 8-256] done synthesizing module 'Wifi_Input_FSM' (1#1) [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Wifi_Input_FSM.vhd:55]
+INFO: [Synth 8-3491] module 'Output_fifo' declared at '/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Output_fifo.vhd:35' bound to instance 'out_fifo' of component 'Output_fifo' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Encoder.vhd:298]
+INFO: [Synth 8-638] synthesizing module 'Output_fifo' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Output_fifo.vhd:55]
+INFO: [Synth 8-226] default block is never used [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Output_fifo.vhd:86]
+INFO: [Synth 8-3491] module 'fifo_generator_0' declared at '/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Encoder_0_0/sources_1/ip/fifo_generator_0/synth/fifo_generator_0.vhd:59' bound to instance 'axis_fifo' of component 'fifo_generator_0' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Output_fifo.vhd:102]
 INFO: [Synth 8-638] synthesizing module 'fifo_generator_0' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Encoder_0_0/sources_1/ip/fifo_generator_0/synth/fifo_generator_0.vhd:77]
 	Parameter C_COMMON_CLOCK bound to: 1 - type: integer 
 	Parameter C_SELECT_XPM bound to: 0 - type: integer 
@@ -256,10 +260,10 @@ INFO: [Synth 8-3491] module 'fifo_generator_v13_2_6' declared at '/home/migliora
 INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (2#1) [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
 INFO: [Synth 8-256] done synthesizing module 'fifo_generator_0' (29#1) [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Encoder_0_0/sources_1/ip/fifo_generator_0/synth/fifo_generator_0.vhd:77]
-INFO: [Synth 8-256] done synthesizing module 'Output_fifo' (30#1) [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/Output_fifo.vhd:55]
-INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst0' of component 'LDPC_core' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/Encoder.vhd:290]
-INFO: [Synth 8-638] synthesizing module 'LDPC_core' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/LDPC_core.vhd:57]
-INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Encoder_0_0/sources_1/ip/sd_fec_0/synth/sd_fec_0.sv:59' bound to instance 'ldpc_encoder' of component 'sd_fec_0' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/LDPC_core.vhd:109]
+INFO: [Synth 8-256] done synthesizing module 'Output_fifo' (30#1) [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Output_fifo.vhd:55]
+INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst0' of component 'LDPC_core' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Encoder.vhd:316]
+INFO: [Synth 8-638] synthesizing module 'LDPC_core' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/LDPC_core.vhd:57]
+INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Encoder_0_0/sources_1/ip/sd_fec_0/synth/sd_fec_0.sv:59' bound to instance 'ldpc_encoder' of component 'sd_fec_0' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/LDPC_core.vhd:109]
 INFO: [Synth 8-6157] synthesizing module 'sd_fec_0' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Encoder_0_0/sources_1/ip/sd_fec_0/synth/sd_fec_0.sv:59]
 INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst__parameterized0' [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst__parameterized0' (31#1) [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
@@ -303,12 +307,12 @@ INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync__parameterized0' (4
 INFO: [Synth 8-6157] synthesizing module 'FE' [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/scripts/rt/data/unisim_comp_diablo.v:28032]
 INFO: [Synth 8-6155] done synthesizing module 'FE' (53#1) [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/scripts/rt/data/unisim_comp_diablo.v:28032]
 INFO: [Synth 8-6155] done synthesizing module 'sd_fec_0' (56#1) [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Encoder_0_0/sources_1/ip/sd_fec_0/synth/sd_fec_0.sv:59]
-INFO: [Synth 8-256] done synthesizing module 'LDPC_core' (57#1) [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/LDPC_core.vhd:57]
-INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst1' of component 'LDPC_core' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/Encoder.vhd:311]
-INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst2' of component 'LDPC_core' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/Encoder.vhd:332]
-INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst3' of component 'LDPC_core' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/Encoder.vhd:353]
-INFO: [Synth 8-256] done synthesizing module 'Encoder' (58#1) [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/337f/sources_1/new/Encoder.vhd:57]
-INFO: [Synth 8-256] done synthesizing module 'Design_2_Encoder_0_0' (59#1) [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Encoder_0_0/synth/Design_2_Encoder_0_0.vhd:76]
+INFO: [Synth 8-256] done synthesizing module 'LDPC_core' (57#1) [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/LDPC_core.vhd:57]
+INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst1' of component 'LDPC_core' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Encoder.vhd:337]
+INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst2' of component 'LDPC_core' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Encoder.vhd:358]
+INFO: [Synth 8-3491] module 'LDPC_core' declared at '/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/LDPC_core.vhd:35' bound to instance 'LDPC_encoder_1x16_inst3' of component 'LDPC_core' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Encoder.vhd:379]
+INFO: [Synth 8-256] done synthesizing module 'Encoder' (58#1) [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Encoder.vhd:59]
+INFO: [Synth 8-256] done synthesizing module 'Design_2_Encoder_0_0' (59#1) [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Encoder_0_0/synth/Design_2_Encoder_0_0.vhd:79]
 WARNING: [Synth 8-7129] Port rd_clk in module xpm_fifo_rst is either unconnected or has no load
 WARNING: [Synth 8-7129] Port sleep in module xpm_memory_base__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port rsta in module xpm_memory_base__parameterized0 is either unconnected or has no load
@@ -411,18 +415,18 @@ WARNING: [Synth 8-7129] Port code_param_reg[reg3][qc_off][5] in module sd_fec_v1
 WARNING: [Synth 8-7129] Port code_param_reg[reg3][qc_off][4] in module sd_fec_v1_1_8_non_5g_code_generator is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 3782.469 ; gain = 535.211 ; free physical = 7440 ; free virtual = 105354
+Finished RTL Elaboration : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 3782.688 ; gain = 535.242 ; free physical = 42959 ; free virtual = 107111
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 3782.469 ; gain = 535.211 ; free physical = 7447 ; free virtual = 105362
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 3782.688 ; gain = 535.242 ; free physical = 42989 ; free virtual = 107130
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 3782.469 ; gain = 535.211 ; free physical = 7447 ; free virtual = 105362
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 3782.688 ; gain = 535.242 ; free physical = 42989 ; free virtual = 107130
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.14 . Memory (MB): peak = 3790.469 ; gain = 0.000 ; free physical = 7434 ; free virtual = 105348
+Netlist sorting complete. Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.14 . Memory (MB): peak = 3793.656 ; gain = 0.000 ; free physical = 42957 ; free virtual = 107102
 INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -440,13 +444,13 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/Design_2_Enc
 INFO: [Project 1-1714] 13 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3908.312 ; gain = 0.000 ; free physical = 7338 ; free virtual = 105252
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3915.469 ; gain = 0.000 ; free physical = 42841 ; free virtual = 106986
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.11 . Memory (MB): peak = 3908.312 ; gain = 0.000 ; free physical = 7335 ; free virtual = 105249
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.11 . Memory (MB): peak = 3915.469 ; gain = 0.000 ; free physical = 42838 ; free virtual = 106983
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 3908.312 ; gain = 661.055 ; free physical = 9701 ; free virtual = 107619
+Finished Constraint Validation : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 3915.469 ; gain = 668.023 ; free physical = 43732 ; free virtual = 107877
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -454,7 +458,7 @@ Start Loading Part and Timing Information
 Loading part: xczu28dr-ffvg1517-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 3908.312 ; gain = 661.055 ; free physical = 9702 ; free virtual = 107619
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 3915.469 ; gain = 668.023 ; free physical = 43809 ; free virtual = 107953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -479,7 +483,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for U0/LDPC_encoder_1x16_inst1/ldpc_e
 Applied set_property KEEP_HIERARCHY = SOFT for U0/LDPC_encoder_1x16_inst2/ldpc_encoder/inst/\STD_OTHER_G.STD_OTHER_I /\S_AXI_INITIALIZED_G.SD_FEC_NON_5G_CODE_GEN_I /\LDPC_MODE.AXI_WADDR_IF_I . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for U0/LDPC_encoder_1x16_inst3/ldpc_encoder/inst/\STD_OTHER_G.STD_OTHER_I /\S_AXI_INITIALIZED_G.SD_FEC_NON_5G_CODE_GEN_I /\LDPC_MODE.AXI_WADDR_IF_I . (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 3908.312 ; gain = 661.055 ; free physical = 9689 ; free virtual = 107607
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 3915.469 ; gain = 668.023 ; free physical = 45708 ; free virtual = 109853
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft'
 INFO: [Synth 8-802] inferred FSM for state register 'sm_5g_code_manage_reg' in module 'sd_fec_v1_1_8_non_5g_code_manager'
@@ -639,7 +643,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'LDPC_MODE.sm_5g_code_gen_r
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'LDPC_MODE.sm_axi4_reg' using encoding 'sequential' in module 'sd_fec_v1_1_8_non_5g_code_generator'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 3908.312 ; gain = 661.055 ; free physical = 9679 ; free virtual = 107596
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:43 ; elapsed = 00:00:50 . Memory (MB): peak = 3915.469 ; gain = 668.023 ; free physical = 47446 ; free virtual = 111590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -667,23 +671,45 @@ WARNING: [Synth 8-3332] Sequential element (STD_OTHER_G.STD_OTHER_I/S_AXI_INITIA
 WARNING: [Synth 8-3332] Sequential element (STD_OTHER_G.STD_OTHER_I/S_AXI_INITIALIZED_G.SD_FEC_NON_5G_ARBITER_I/FSM_sequential_sm_arb_reg[0]) is unused and will be removed from module sd_fec_v1_1_8__xdcDup__3.
 WARNING: [Synth 8-3332] Sequential element (STD_OTHER_G.STD_OTHER_I/S_AXI_INITIALIZED_G.SD_FEC_NON_5G_ARBITER_I/FSM_sequential_sm_arb_reg[0]) is unused and will be removed from module sd_fec_v1_1_8.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:58 ; elapsed = 00:01:04 . Memory (MB): peak = 3908.312 ; gain = 661.055 ; free physical = 9644 ; free virtual = 107582
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:07 . Memory (MB): peak = 3915.469 ; gain = 668.023 ; free physical = 47424 ; free virtual = 111584
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:07 ; elapsed = 00:01:15 . Memory (MB): peak = 4068.191 ; gain = 820.934 ; free physical = 9110 ; free virtual = 107051
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:08 ; elapsed = 00:01:18 . Memory (MB): peak = 4068.379 ; gain = 820.934 ; free physical = 46898 ; free virtual = 111058
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:08 ; elapsed = 00:01:16 . Memory (MB): peak = 4088.199 ; gain = 840.941 ; free physical = 9097 ; free virtual = 107038
+Finished Timing Optimization : Time (s): cpu = 00:01:08 ; elapsed = 00:01:18 . Memory (MB): peak = 4088.387 ; gain = 840.941 ; free physical = 46886 ; free virtual = 111045
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+Found timing loop:
+     0: i_410/O (LUT2)
+      [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Wifi_Input_FSM.vhd:120]
+     1: i_410/I1 (LUT2)
+     2: i_363/O (LUT3)
+      [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Wifi_Input_FSM.vhd:120]
+     3: i_363/I0 (LUT3)
+     4: i_410/O (LUT2)
+      [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Wifi_Input_FSM.vhd:120]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Encoder_0_0/synth/Design_2_Encoder_0_0.vhd:56]
+Inferred a: "set_disable_timing -from I1 -to O i_410"
+Found timing loop:
+     0: i_410/O (LUT2)
+      [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Wifi_Input_FSM.vhd:120]
+     1: i_410/I0 (LUT2)
+     2: i_411/O (LUT2)
+      [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Wifi_Input_FSM.vhd:120]
+     3: i_411/I0 (LUT2)
+     4: i_410/O (LUT2)
+      [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Wifi_Input_FSM.vhd:120]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Encoder_0_0/synth/Design_2_Encoder_0_0.vhd:56]
+Inferred a: "set_disable_timing -from I0 -to O i_410"
 INFO: [Synth 8-7052] The timing for the instance U0/LDPC_encoder_1x16_inst0/ldpc_encoder/inst/RD_LAT_NZ_G.rdata_d_reg[1]_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance U0/LDPC_encoder_1x16_inst0/ldpc_encoder/inst/RD_LAT_NZ_G.rdata_d_reg[1]_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance U0/LDPC_encoder_1x16_inst0/ldpc_encoder/inst/RD_LAT_NZ_G.rdata_d_reg[1]_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
@@ -701,7 +727,7 @@ INFO: [Synth 8-7052] The timing for the instance U0/LDPC_encoder_1x16_inst3/ldpc
 INFO: [Synth 8-7052] The timing for the instance U0/LDPC_encoder_1x16_inst3/ldpc_encoder/inst/RD_LAT_NZ_G.rdata_d_reg[1]_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance U0/LDPC_encoder_1x16_inst3/ldpc_encoder/inst/RD_LAT_NZ_G.rdata_d_reg[1]_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:10 ; elapsed = 00:01:18 . Memory (MB): peak = 4115.238 ; gain = 867.980 ; free physical = 9096 ; free virtual = 107037
+Finished Technology Mapping : Time (s): cpu = 00:01:10 ; elapsed = 00:01:21 . Memory (MB): peak = 4115.426 ; gain = 867.980 ; free physical = 46885 ; free virtual = 111045
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -719,37 +745,44 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:12 ; elapsed = 00:01:20 . Memory (MB): peak = 4115.238 ; gain = 867.980 ; free physical = 9042 ; free virtual = 107017
+Finished IO Insertion : Time (s): cpu = 00:01:13 ; elapsed = 00:01:23 . Memory (MB): peak = 4115.426 ; gain = 867.980 ; free physical = 46883 ; free virtual = 111043
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:12 ; elapsed = 00:01:20 . Memory (MB): peak = 4115.238 ; gain = 867.980 ; free physical = 9041 ; free virtual = 107015
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:13 ; elapsed = 00:01:23 . Memory (MB): peak = 4115.426 ; gain = 867.980 ; free physical = 46883 ; free virtual = 111043
 ---------------------------------------------------------------------------------
+Found timing loop:
+     0: last_frame_INST_0/O (LUT3)
+      [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ipshared/4916/sources_1/new/Wifi_Input_FSM.vhd:120]
+     1: last_frame_INST_0/I2 (LUT3)
+     2: last_frame_INST_0/O (LUT3)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Encoder_0_0/synth/Design_2_Encoder_0_0.vhd:56]
+Inferred a: "set_disable_timing -from I2 -to O last_frame_INST_0"
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:12 ; elapsed = 00:01:21 . Memory (MB): peak = 4115.238 ; gain = 867.980 ; free physical = 9091 ; free virtual = 107036
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:13 ; elapsed = 00:01:23 . Memory (MB): peak = 4115.426 ; gain = 867.980 ; free physical = 46883 ; free virtual = 111043
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:12 ; elapsed = 00:01:21 . Memory (MB): peak = 4115.238 ; gain = 867.980 ; free physical = 9091 ; free virtual = 107036
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:13 ; elapsed = 00:01:23 . Memory (MB): peak = 4115.426 ; gain = 867.980 ; free physical = 46883 ; free virtual = 111043
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:12 ; elapsed = 00:01:21 . Memory (MB): peak = 4115.238 ; gain = 867.980 ; free physical = 9091 ; free virtual = 107036
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:13 ; elapsed = 00:01:23 . Memory (MB): peak = 4115.426 ; gain = 867.980 ; free physical = 46883 ; free virtual = 111043
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:12 ; elapsed = 00:01:21 . Memory (MB): peak = 4115.238 ; gain = 867.980 ; free physical = 9091 ; free virtual = 107036
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:13 ; elapsed = 00:01:24 . Memory (MB): peak = 4115.426 ; gain = 867.980 ; free physical = 46883 ; free virtual = 111043
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -768,47 +801,47 @@ Report Cell Usage:
 |1     |CARRY8   |    74|
 |2     |FE       |     4|
 |3     |LUT1     |   133|
-|4     |LUT2     |   459|
-|5     |LUT3     |   318|
-|6     |LUT4     |   294|
-|7     |LUT5     |   248|
-|8     |LUT6     |   899|
+|4     |LUT2     |   457|
+|5     |LUT3     |   319|
+|6     |LUT4     |   301|
+|7     |LUT5     |   251|
+|8     |LUT6     |   907|
 |9     |MUXCY    |    24|
 |10    |RAM32M   |    12|
 |11    |RAM32M16 |    20|
 |12    |RAMB36E2 |    20|
 |17    |SRL16E   |   129|
 |18    |FDCE     |    57|
-|19    |FDRE     |  2131|
+|19    |FDRE     |  2165|
 |20    |FDSE     |   136|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:12 ; elapsed = 00:01:21 . Memory (MB): peak = 4115.238 ; gain = 867.980 ; free physical = 9091 ; free virtual = 107036
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:13 ; elapsed = 00:01:24 . Memory (MB): peak = 4115.426 ; gain = 867.980 ; free physical = 46883 ; free virtual = 111043
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1454 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:08 ; elapsed = 00:01:17 . Memory (MB): peak = 4115.238 ; gain = 742.137 ; free physical = 9129 ; free virtual = 107073
-Synthesis Optimization Complete : Time (s): cpu = 00:01:13 ; elapsed = 00:01:21 . Memory (MB): peak = 4115.246 ; gain = 867.980 ; free physical = 9129 ; free virtual = 107073
+Synthesis finished with 0 errors, 3 critical warnings and 1454 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:09 ; elapsed = 00:01:20 . Memory (MB): peak = 4115.426 ; gain = 735.199 ; free physical = 46912 ; free virtual = 111075
+Synthesis Optimization Complete : Time (s): cpu = 00:01:13 ; elapsed = 00:01:24 . Memory (MB): peak = 4115.434 ; gain = 867.980 ; free physical = 46907 ; free virtual = 111071
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 4115.246 ; gain = 0.000 ; free physical = 9225 ; free virtual = 107169
+Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.09 . Memory (MB): peak = 4115.434 ; gain = 0.000 ; free physical = 47009 ; free virtual = 111169
 INFO: [Netlist 29-17] Analyzing 130 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4204.914 ; gain = 0.000 ; free physical = 9145 ; free virtual = 107090
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4206.102 ; gain = 0.000 ; free physical = 46920 ; free virtual = 111080
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 36 instances were transformed.
   (CARRY4) => CARRY8: 4 instances
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 12 instances
   RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 20 instances
 
-Synth Design complete, checksum: dd4d5e02
+Synth Design complete, checksum: b6258428
 INFO: [Common 17-83] Releasing license: Synthesis
-142 Infos, 112 Warnings, 0 Critical Warnings and 0 Errors encountered.
+143 Infos, 116 Warnings, 3 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:28 ; elapsed = 00:02:03 . Memory (MB): peak = 4204.914 ; gain = 1076.344 ; free physical = 9354 ; free virtual = 107299
+synth_design: Time (s): cpu = 00:01:29 ; elapsed = 00:02:06 . Memory (MB): peak = 4206.102 ; gain = 1098.344 ; free physical = 47131 ; free virtual = 111291
 INFO: [Common 17-1381] The checkpoint '/home/miglioranza/Transmitter/Transmitter.runs/Design_2_Encoder_0_0_synth_1/Design_2_Encoder_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP Design_2_Encoder_0_0, cache-ID = cf24814a7d4f5e61
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Coretcl 2-1174] Renamed 188 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/miglioranza/Transmitter/Transmitter.runs/Design_2_Encoder_0_0_synth_1/Design_2_Encoder_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Design_2_Encoder_0_0_utilization_synth.rpt -pb Design_2_Encoder_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 24 17:13:13 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun  2 15:58:17 2025...

@@ -1,0 +1,155 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_msg_v1_0/hdl/axi_msg_v1_0_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_MSG_V1_0_7.AXI_MSG_PKG (package):
+	streams: 1, words: 809
+AXI_MSG_V1_0_7.AXI_MSG_PKG:BODY (package body):
+	streams: 2, words: 253
+AXI_MSG_V1_0_7.AXI_MSG_BMG_CTRL (entity):
+	streams: 18, words: 919
+AXI_MSG_V1_0_7.AXI_MSG_BMG_CTRL:IMPLEMENTATION (architecture):
+	streams: 2, words: 5340
+AXI_MSG_V1_0_7.AXI_MSG_BMG (entity):
+	streams: 16, words: 1738
+AXI_MSG_V1_0_7.AXI_MSG_BMG:BLK_MEM_GEN_0_ARCH (architecture):
+	streams: 1, words: 5006
+AXI_MSG_V1_0_7.AXI_MSG_RESET (entity):
+	streams: 18, words: 264
+AXI_MSG_V1_0_7.AXI_MSG_RESET:IMPLEMENTATION (architecture):
+	streams: 1, words: 1137
+AXI_MSG_V1_0_7.AXI_MSG_SFIFO_AUTORD (entity):
+	streams: 32, words: 5284
+AXI_MSG_V1_0_7.AXI_MSG_SFIFO_AUTORD:IMP (architecture):
+	streams: 2, words: 9154
+AXI_MSG_V1_0_7.AXI_MSG_AFIFO_AUTORD (entity):
+	streams: 32, words: 5989
+AXI_MSG_V1_0_7.AXI_MSG_AFIFO_AUTORD:IMP (architecture):
+	streams: 2, words: 8964
+AXI_MSG_V1_0_7.AXI_MSG_FIFO (entity):
+	streams: 22, words: 2425
+AXI_MSG_V1_0_7.AXI_MSG_FIFO:IMP (architecture):
+	streams: 5, words: 21027
+AXI_MSG_V1_0_7.AXI_MSG_CMD_STATUS (entity):
+	streams: 39, words: 5898
+AXI_MSG_V1_0_7.AXI_MSG_CMD_STATUS:IMPLEMENTATION (architecture):
+	streams: 5, words: 8489
+AXI_MSG_V1_0_7.AXI_MSG_RDMUX (entity):
+	streams: 13, words: 2955
+AXI_MSG_V1_0_7.AXI_MSG_RDMUX:IMPLEMENTATION (architecture):
+	streams: 3, words: 20464
+AXI_MSG_V1_0_7.AXI_MSG_ADDR_CNTL (entity):
+	streams: 58, words: 7369
+AXI_MSG_V1_0_7.AXI_MSG_ADDR_CNTL:IMPLEMENTATION (architecture):
+	streams: 1, words: 12731
+AXI_MSG_V1_0_7.AXI_MSG_RDDATA_CNTL (entity):
+	streams: 78, words: 12529
+AXI_MSG_V1_0_7.AXI_MSG_RDDATA_CNTL:IMPLEMENTATION (architecture):
+	streams: 2, words: 20519
+AXI_MSG_V1_0_7.AXI_MSG_RD_STATUS_CNTL (entity):
+	streams: 23, words: 2142
+AXI_MSG_V1_0_7.AXI_MSG_RD_STATUS_CNTL:IMPLEMENTATION (architecture):
+	streams: 1, words: 3818
+AXI_MSG_V1_0_7.AXI_MSG_SCC (entity):
+	streams: 57, words: 9041
+AXI_MSG_V1_0_7.AXI_MSG_SCC:IMPLEMENTATION (architecture):
+	streams: 3, words: 27025
+AXI_MSG_V1_0_7.AXI_MSG_WR_DEMUX (entity):
+	streams: 13, words: 3027
+AXI_MSG_V1_0_7.AXI_MSG_WR_DEMUX:IMPLEMENTATION (architecture):
+	streams: 3, words: 215998
+AXI_MSG_V1_0_7.AXI_MSG_SCC_WR (entity):
+	streams: 57, words: 9041
+AXI_MSG_V1_0_7.AXI_MSG_SCC_WR:IMPLEMENTATION (architecture):
+	streams: 3, words: 27042
+AXI_MSG_V1_0_7.AXI_MSG_SKID2MM_BUF (entity):
+	streams: 25, words: 4938
+AXI_MSG_V1_0_7.AXI_MSG_SKID2MM_BUF:IMPLEMENTATION (architecture):
+	streams: 2, words: 11475
+AXI_MSG_V1_0_7.AXI_MSG_WRDATA_CNTL (entity):
+	streams: 80, words: 12017
+AXI_MSG_V1_0_7.AXI_MSG_WRDATA_CNTL:IMPLEMENTATION (architecture):
+	streams: 4, words: 23480
+AXI_MSG_V1_0_7.AXI_MSG_WR_STATUS_CNTL (entity):
+	streams: 39, words: 3774
+AXI_MSG_V1_0_7.AXI_MSG_WR_STATUS_CNTL:IMPLEMENTATION (architecture):
+	streams: 5, words: 24461
+AXI_MSG_V1_0_7.AXI_MSG_SKID_BUF (entity):
+	streams: 19, words: 3869
+AXI_MSG_V1_0_7.AXI_MSG_SKID_BUF:IMPLEMENTATION (architecture):
+	streams: 1, words: 8498
+AXI_MSG_V1_0_7.AXI_MSG_MM2S_BASIC_WRAP (entity):
+	streams: 93, words: 11338
+AXI_MSG_V1_0_7.AXI_MSG_MM2S_BASIC_WRAP:IMPLEMENTATION (architecture):
+	streams: 8, words: 46897
+AXI_MSG_V1_0_7.AXI_MSG_S2MM_BASIC_WRAP (entity):
+	streams: 98, words: 12483
+AXI_MSG_V1_0_7.AXI_MSG_S2MM_BASIC_WRAP:IMPLEMENTATION (architecture):
+	streams: 8, words: 52714
+AXI_MSG_V1_0_7.AXI_MSG_DATAMOVER (entity):
+	streams: 187, words: 25561
+AXI_MSG_V1_0_7.AXI_MSG_DATAMOVER:IMPLEMENTATION (architecture):
+	streams: 8, words: 27333
+AXI_MSG_V1_0_7.AXI_MSG_FTCH_SM (entity):
+	streams: 102, words: 24856
+AXI_MSG_V1_0_7.AXI_MSG_FTCH_SM:IMPLEMENTATION (architecture):
+	streams: 9, words: 36500
+AXI_MSG_V1_0_7.AXI_MSG_CHANNEL_PNTR (entity):
+	streams: 19, words: 3794
+AXI_MSG_V1_0_7.AXI_MSG_CHANNEL_PNTR:IMPLEMENTATION (architecture):
+	streams: 1, words: 1133
+AXI_MSG_V1_0_7.AXI_MSG_FTCH_PNTR (entity):
+	streams: 53, words: 20732
+AXI_MSG_V1_0_7.AXI_MSG_FTCH_PNTR:IMPLEMENTATION (architecture):
+	streams: 7, words: 25069
+AXI_MSG_V1_0_7.AXI_MSG_FTCH_CMDSTS_IF (entity):
+	streams: 28, words: 3046
+AXI_MSG_V1_0_7.AXI_MSG_FTCH_CMDSTS_IF:IMPLEMENTATION (architecture):
+	streams: 1, words: 734
+AXI_MSG_V1_0_7.AXI_MSG_FTCH_MNGR (entity):
+	streams: 122, words: 32194
+AXI_MSG_V1_0_7.AXI_MSG_FTCH_MNGR:IMPLEMENTATION (architecture):
+	streams: 4, words: 50769
+AXI_MSG_V1_0_7.AXI_MSG_CNTRL_STRM (entity):
+	streams: 28, words: 4891
+AXI_MSG_V1_0_7.AXI_MSG_CNTRL_STRM:IMPLEMENTATION (architecture):
+	streams: 5, words: 20298
+AXI_MSG_V1_0_7.AXI_MSG_FTCH_FIFO (entity):
+	streams: 19, words: 1101
+AXI_MSG_V1_0_7.AXI_MSG_FTCH_FIFO:IMPLEMENTATION (architecture):
+	streams: 2, words: 1367
+AXI_MSG_V1_0_7.AXI_MSG_FTCH_QUEUE (entity):
+	streams: 65, words: 11682
+AXI_MSG_V1_0_7.AXI_MSG_FTCH_QUEUE:IMPLEMENTATION (architecture):
+	streams: 7, words: 40505
+AXI_MSG_V1_0_7.AXI_MSG_FTCH_Q_MNGR (entity):
+	streams: 115, words: 25081
+AXI_MSG_V1_0_7.AXI_MSG_FTCH_Q_MNGR:IMPLEMENTATION (architecture):
+	streams: 6, words: 39262
+AXI_MSG_V1_0_7.AXI_MSG_UPDT_CMDSTS_IF (entity):
+	streams: 24, words: 2751
+AXI_MSG_V1_0_7.AXI_MSG_UPDT_CMDSTS_IF:IMPLEMENTATION (architecture):
+	streams: 1, words: 487
+AXI_MSG_V1_0_7.AXI_MSG_UPDT_SM (entity):
+	streams: 61, words: 3755
+AXI_MSG_V1_0_7.AXI_MSG_UPDT_SM:IMPLEMENTATION (architecture):
+	streams: 1, words: 6547
+AXI_MSG_V1_0_7.AXI_MSG_UPDT_MNGR (entity):
+	streams: 65, words: 4300
+AXI_MSG_V1_0_7.AXI_MSG_UPDT_MNGR:IMPLEMENTATION (architecture):
+	streams: 3, words: 7321
+AXI_MSG_V1_0_7.AXI_MSG_UPDT_QUEUE (entity):
+	streams: 87, words: 10622
+AXI_MSG_V1_0_7.AXI_MSG_UPDT_QUEUE:IMPLEMENTATION (architecture):
+	streams: 3, words: 21218
+AXI_MSG_V1_0_7.AXI_MSG_UPDT_Q_MNGR (entity):
+	streams: 88, words: 10642
+AXI_MSG_V1_0_7.AXI_MSG_UPDT_Q_MNGR:IMPLEMENTATION (architecture):
+	streams: 2, words: 11572
+AXI_MSG_V1_0_7.AXI_MSG_INTRPT (entity):
+	streams: 26, words: 1705
+AXI_MSG_V1_0_7.AXI_MSG_INTRPT:IMPLEMENTATION (architecture):
+	streams: 1, words: 4169
+AXI_MSG_V1_0_7.AXI_MSG (entity):
+	streams: 390, words: 98751
+AXI_MSG_V1_0_7.AXI_MSG:IMPLEMENTATION (architecture):
+	streams: 16, words: 161390

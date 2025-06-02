@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-// Date        : Fri Mar 14 17:23:26 2025
+// Date        : Mon Jun  2 15:16:48 2025
 // Host        : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 // Command     : write_verilog -force -mode funcsim -rename_top Design_2_Pre_Distortion_Filter_0_0 -prefix
 //               Design_2_Pre_Distortion_Filter_0_0_ Design_2_Pre_Distortion_Filter_0_0_sim_netlist.v
@@ -33,14 +33,14 @@ module Design_2_Pre_Distortion_Filter_0_0
   input data_in_ready;
   input data_in_valid;
   output data_out_valid;
-  output [31:0]Q_output;
-  output [31:0]I_output;
+  output [15:0]Q_output;
+  output [15:0]I_output;
   output data_out_ready;
 
   wire [11:0]I_input;
-  wire [31:0]I_output;
+  wire [15:0]I_output;
   wire [11:0]Q_input;
-  wire [31:0]Q_output;
+  wire [15:0]Q_output;
   wire clk;
   wire data_in_ready;
   wire data_in_valid;
@@ -73,8 +73,8 @@ module Design_2_Pre_Distortion_Filter_0_0_Parallel_FIR_filter
     Q_input,
     I_input);
   output data_out_valid;
-  output [31:0]Q_output;
-  output [31:0]I_output;
+  output [15:0]Q_output;
+  output [15:0]I_output;
   output data_out_ready;
   input clk;
   input data_in_valid;
@@ -85,7 +85,7 @@ module Design_2_Pre_Distortion_Filter_0_0_Parallel_FIR_filter
 
   wire [31:13]C;
   wire [11:0]I_input;
-  wire [31:0]I_output;
+  wire [15:0]I_output;
   wire [11:0]\I_shift_reg_reg[0]_12 ;
   wire [11:0]\I_shift_reg_reg[10]_19 ;
   wire [11:0]\I_shift_reg_reg[11]_20 ;
@@ -110,7 +110,7 @@ module Design_2_Pre_Distortion_Filter_0_0_Parallel_FIR_filter
   wire [11:0]\I_shift_reg_reg[8]_17 ;
   wire [11:0]\I_shift_reg_reg[9]_18 ;
   wire [11:0]Q_input;
-  wire [31:0]Q_output;
+  wire [15:0]Q_output;
   wire [11:0]\Q_shift_reg_reg[0]_2 ;
   wire [11:0]\Q_shift_reg_reg[10]_9 ;
   wire [11:0]\Q_shift_reg_reg[11]_10 ;
@@ -142,6 +142,7 @@ module Design_2_Pre_Distortion_Filter_0_0_Parallel_FIR_filter
   wire data_out_valid_i_1_n_0;
   wire data_out_valid_i_2_n_0;
   wire reset;
+  wire [31:16]temp_reg_I;
   wire temp_reg_I0__0_n_100;
   wire temp_reg_I0__0_n_101;
   wire temp_reg_I0__0_n_102;
@@ -867,6 +868,7 @@ module Design_2_Pre_Distortion_Filter_0_0_Parallel_FIR_filter
   wire temp_reg_I2_n_7;
   wire temp_reg_I2_n_8;
   wire temp_reg_I2_n_9;
+  wire [31:16]temp_reg_Q;
   wire temp_reg_Q0__0_n_100;
   wire temp_reg_Q0__0_n_101;
   wire temp_reg_Q0__0_n_102;
@@ -5736,7 +5738,7 @@ module Design_2_Pre_Distortion_Filter_0_0_Parallel_FIR_filter
     .B_INPUT("DIRECT"),
     .CARRYINREG(0),
     .CARRYINSELREG(0),
-    .CREG(1),
+    .CREG(0),
     .DREG(1),
     .INMODEREG(0),
     .MASK(48'h3FFFFFFFFFFF),
@@ -5761,7 +5763,7 @@ module Design_2_Pre_Distortion_Filter_0_0_Parallel_FIR_filter
         .B({I_input[11],I_input[11],I_input[11],I_input[11],I_input[11],I_input[11],I_input}),
         .BCIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .BCOUT(NLW_temp_reg_I0__9_BCOUT_UNCONNECTED[17:0]),
-        .C({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .C({temp_reg_I[31],temp_reg_I[31],temp_reg_I[31],temp_reg_I[31],temp_reg_I[31],temp_reg_I[31],temp_reg_I[31],temp_reg_I[31],temp_reg_I[31],temp_reg_I[31],temp_reg_I[31],temp_reg_I[31],temp_reg_I[31],temp_reg_I[31],temp_reg_I[31],temp_reg_I[31],temp_reg_I,I_output}),
         .CARRYCASCIN(1'b0),
         .CARRYCASCOUT(NLW_temp_reg_I0__9_CARRYCASCOUT_UNCONNECTED),
         .CARRYIN(1'b0),
@@ -5785,9 +5787,9 @@ module Design_2_Pre_Distortion_Filter_0_0_Parallel_FIR_filter
         .INMODE({1'b0,1'b0,1'b0,1'b0,1'b0}),
         .MULTSIGNIN(1'b0),
         .MULTSIGNOUT(NLW_temp_reg_I0__9_MULTSIGNOUT_UNCONNECTED),
-        .OPMODE({1'b0,1'b1,1'b0,1'b0,1'b1,1'b0,1'b1,1'b0,1'b1}),
+        .OPMODE({1'b1,1'b1,1'b0,1'b0,1'b1,1'b0,1'b1,1'b0,1'b1}),
         .OVERFLOW(NLW_temp_reg_I0__9_OVERFLOW_UNCONNECTED),
-        .P({temp_reg_I0__9_n_58,temp_reg_I0__9_n_59,temp_reg_I0__9_n_60,temp_reg_I0__9_n_61,temp_reg_I0__9_n_62,temp_reg_I0__9_n_63,temp_reg_I0__9_n_64,temp_reg_I0__9_n_65,temp_reg_I0__9_n_66,temp_reg_I0__9_n_67,temp_reg_I0__9_n_68,temp_reg_I0__9_n_69,temp_reg_I0__9_n_70,temp_reg_I0__9_n_71,temp_reg_I0__9_n_72,temp_reg_I0__9_n_73,I_output}),
+        .P({temp_reg_I0__9_n_58,temp_reg_I0__9_n_59,temp_reg_I0__9_n_60,temp_reg_I0__9_n_61,temp_reg_I0__9_n_62,temp_reg_I0__9_n_63,temp_reg_I0__9_n_64,temp_reg_I0__9_n_65,temp_reg_I0__9_n_66,temp_reg_I0__9_n_67,temp_reg_I0__9_n_68,temp_reg_I0__9_n_69,temp_reg_I0__9_n_70,temp_reg_I0__9_n_71,temp_reg_I0__9_n_72,temp_reg_I0__9_n_73,temp_reg_I,I_output}),
         .PATTERNBDETECT(NLW_temp_reg_I0__9_PATTERNBDETECT_UNCONNECTED),
         .PATTERNDETECT(NLW_temp_reg_I0__9_PATTERNDETECT_UNCONNECTED),
         .PCIN({temp_reg_I0__8_n_106,temp_reg_I0__8_n_107,temp_reg_I0__8_n_108,temp_reg_I0__8_n_109,temp_reg_I0__8_n_110,temp_reg_I0__8_n_111,temp_reg_I0__8_n_112,temp_reg_I0__8_n_113,temp_reg_I0__8_n_114,temp_reg_I0__8_n_115,temp_reg_I0__8_n_116,temp_reg_I0__8_n_117,temp_reg_I0__8_n_118,temp_reg_I0__8_n_119,temp_reg_I0__8_n_120,temp_reg_I0__8_n_121,temp_reg_I0__8_n_122,temp_reg_I0__8_n_123,temp_reg_I0__8_n_124,temp_reg_I0__8_n_125,temp_reg_I0__8_n_126,temp_reg_I0__8_n_127,temp_reg_I0__8_n_128,temp_reg_I0__8_n_129,temp_reg_I0__8_n_130,temp_reg_I0__8_n_131,temp_reg_I0__8_n_132,temp_reg_I0__8_n_133,temp_reg_I0__8_n_134,temp_reg_I0__8_n_135,temp_reg_I0__8_n_136,temp_reg_I0__8_n_137,temp_reg_I0__8_n_138,temp_reg_I0__8_n_139,temp_reg_I0__8_n_140,temp_reg_I0__8_n_141,temp_reg_I0__8_n_142,temp_reg_I0__8_n_143,temp_reg_I0__8_n_144,temp_reg_I0__8_n_145,temp_reg_I0__8_n_146,temp_reg_I0__8_n_147,temp_reg_I0__8_n_148,temp_reg_I0__8_n_149,temp_reg_I0__8_n_150,temp_reg_I0__8_n_151,temp_reg_I0__8_n_152,temp_reg_I0__8_n_153}),
@@ -7315,7 +7317,7 @@ module Design_2_Pre_Distortion_Filter_0_0_Parallel_FIR_filter
     .B_INPUT("DIRECT"),
     .CARRYINREG(0),
     .CARRYINSELREG(0),
-    .CREG(1),
+    .CREG(0),
     .DREG(1),
     .INMODEREG(0),
     .MASK(48'h3FFFFFFFFFFF),
@@ -7340,7 +7342,7 @@ module Design_2_Pre_Distortion_Filter_0_0_Parallel_FIR_filter
         .B({Q_input[11],Q_input[11],Q_input[11],Q_input[11],Q_input[11],Q_input[11],Q_input}),
         .BCIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .BCOUT(NLW_temp_reg_Q0__9_BCOUT_UNCONNECTED[17:0]),
-        .C({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .C({temp_reg_Q[31],temp_reg_Q[31],temp_reg_Q[31],temp_reg_Q[31],temp_reg_Q[31],temp_reg_Q[31],temp_reg_Q[31],temp_reg_Q[31],temp_reg_Q[31],temp_reg_Q[31],temp_reg_Q[31],temp_reg_Q[31],temp_reg_Q[31],temp_reg_Q[31],temp_reg_Q[31],temp_reg_Q[31],temp_reg_Q,Q_output}),
         .CARRYCASCIN(1'b0),
         .CARRYCASCOUT(NLW_temp_reg_Q0__9_CARRYCASCOUT_UNCONNECTED),
         .CARRYIN(1'b0),
@@ -7364,9 +7366,9 @@ module Design_2_Pre_Distortion_Filter_0_0_Parallel_FIR_filter
         .INMODE({1'b0,1'b0,1'b0,1'b0,1'b0}),
         .MULTSIGNIN(1'b0),
         .MULTSIGNOUT(NLW_temp_reg_Q0__9_MULTSIGNOUT_UNCONNECTED),
-        .OPMODE({1'b0,1'b1,1'b0,1'b0,1'b1,1'b0,1'b1,1'b0,1'b1}),
+        .OPMODE({1'b1,1'b1,1'b0,1'b0,1'b1,1'b0,1'b1,1'b0,1'b1}),
         .OVERFLOW(NLW_temp_reg_Q0__9_OVERFLOW_UNCONNECTED),
-        .P({temp_reg_Q0__9_n_58,temp_reg_Q0__9_n_59,temp_reg_Q0__9_n_60,temp_reg_Q0__9_n_61,temp_reg_Q0__9_n_62,temp_reg_Q0__9_n_63,temp_reg_Q0__9_n_64,temp_reg_Q0__9_n_65,temp_reg_Q0__9_n_66,temp_reg_Q0__9_n_67,temp_reg_Q0__9_n_68,temp_reg_Q0__9_n_69,temp_reg_Q0__9_n_70,temp_reg_Q0__9_n_71,temp_reg_Q0__9_n_72,temp_reg_Q0__9_n_73,Q_output}),
+        .P({temp_reg_Q0__9_n_58,temp_reg_Q0__9_n_59,temp_reg_Q0__9_n_60,temp_reg_Q0__9_n_61,temp_reg_Q0__9_n_62,temp_reg_Q0__9_n_63,temp_reg_Q0__9_n_64,temp_reg_Q0__9_n_65,temp_reg_Q0__9_n_66,temp_reg_Q0__9_n_67,temp_reg_Q0__9_n_68,temp_reg_Q0__9_n_69,temp_reg_Q0__9_n_70,temp_reg_Q0__9_n_71,temp_reg_Q0__9_n_72,temp_reg_Q0__9_n_73,temp_reg_Q,Q_output}),
         .PATTERNBDETECT(NLW_temp_reg_Q0__9_PATTERNBDETECT_UNCONNECTED),
         .PATTERNDETECT(NLW_temp_reg_Q0__9_PATTERNDETECT_UNCONNECTED),
         .PCIN({temp_reg_Q0__8_n_106,temp_reg_Q0__8_n_107,temp_reg_Q0__8_n_108,temp_reg_Q0__8_n_109,temp_reg_Q0__8_n_110,temp_reg_Q0__8_n_111,temp_reg_Q0__8_n_112,temp_reg_Q0__8_n_113,temp_reg_Q0__8_n_114,temp_reg_Q0__8_n_115,temp_reg_Q0__8_n_116,temp_reg_Q0__8_n_117,temp_reg_Q0__8_n_118,temp_reg_Q0__8_n_119,temp_reg_Q0__8_n_120,temp_reg_Q0__8_n_121,temp_reg_Q0__8_n_122,temp_reg_Q0__8_n_123,temp_reg_Q0__8_n_124,temp_reg_Q0__8_n_125,temp_reg_Q0__8_n_126,temp_reg_Q0__8_n_127,temp_reg_Q0__8_n_128,temp_reg_Q0__8_n_129,temp_reg_Q0__8_n_130,temp_reg_Q0__8_n_131,temp_reg_Q0__8_n_132,temp_reg_Q0__8_n_133,temp_reg_Q0__8_n_134,temp_reg_Q0__8_n_135,temp_reg_Q0__8_n_136,temp_reg_Q0__8_n_137,temp_reg_Q0__8_n_138,temp_reg_Q0__8_n_139,temp_reg_Q0__8_n_140,temp_reg_Q0__8_n_141,temp_reg_Q0__8_n_142,temp_reg_Q0__8_n_143,temp_reg_Q0__8_n_144,temp_reg_Q0__8_n_145,temp_reg_Q0__8_n_146,temp_reg_Q0__8_n_147,temp_reg_Q0__8_n_148,temp_reg_Q0__8_n_149,temp_reg_Q0__8_n_150,temp_reg_Q0__8_n_151,temp_reg_Q0__8_n_152,temp_reg_Q0__8_n_153}),

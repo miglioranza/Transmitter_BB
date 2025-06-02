@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -work gigantic_mux -f /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.cache/compile_simlib/xcelium/gigantic_mux/.cxl.verilog.gigantic_mux.gigantic_mux.lin64.cmf

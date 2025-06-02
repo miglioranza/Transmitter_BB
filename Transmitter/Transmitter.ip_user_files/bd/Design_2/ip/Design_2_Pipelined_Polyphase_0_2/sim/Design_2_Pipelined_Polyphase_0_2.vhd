@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:Pipelined_Polyphase_Filter:1.0
--- IP Revision: 6
+-- IP Revision: 9
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -57,14 +57,14 @@ ENTITY Design_2_Pipelined_Polyphase_0_2 IS
   PORT (
     clk : IN STD_LOGIC;
     reset : IN STD_LOGIC;
-    input_I : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    input_Q : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    input_I : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    input_Q : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     data_in_ready : IN STD_LOGIC;
     data_in_valid : IN STD_LOGIC;
     data_out_ready : OUT STD_LOGIC;
     data_out_valid : OUT STD_LOGIC;
-    data_out_I : OUT STD_LOGIC_VECTOR(51 DOWNTO 0);
-    data_out_Q : OUT STD_LOGIC_VECTOR(51 DOWNTO 0)
+    data_out_I : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    data_out_Q : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
   );
 END Design_2_Pipelined_Polyphase_0_2;
 
@@ -81,14 +81,14 @@ ARCHITECTURE Design_2_Pipelined_Polyphase_0_2_arch OF Design_2_Pipelined_Polypha
     PORT (
       clk : IN STD_LOGIC;
       reset : IN STD_LOGIC;
-      input_I : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-      input_Q : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      input_I : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      input_Q : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       data_in_ready : IN STD_LOGIC;
       data_in_valid : IN STD_LOGIC;
       data_out_ready : OUT STD_LOGIC;
       data_out_valid : OUT STD_LOGIC;
-      data_out_I : OUT STD_LOGIC_VECTOR(51 DOWNTO 0);
-      data_out_Q : OUT STD_LOGIC_VECTOR(51 DOWNTO 0)
+      data_out_I : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+      data_out_Q : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
     );
   END COMPONENT Pipelined_Polyphase_Filter;
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
@@ -102,7 +102,7 @@ ARCHITECTURE Design_2_Pipelined_Polyphase_0_2_arch OF Design_2_Pipelined_Polypha
 BEGIN
   U0 : Pipelined_Polyphase_Filter
     GENERIC MAP (
-      DATA_WIDTH => 32,
+      DATA_WIDTH => 16,
       CONVERSION_FACTOR => 4,
       FILTER_TAPS => 16,
       DECIMATION_FILTER => false

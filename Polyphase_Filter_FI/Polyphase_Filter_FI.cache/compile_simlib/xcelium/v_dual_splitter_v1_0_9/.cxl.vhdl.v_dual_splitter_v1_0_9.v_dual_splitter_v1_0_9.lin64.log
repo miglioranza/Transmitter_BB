@@ -1,0 +1,7 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/v_dual_splitter_v1_0/hdl/v_dual_splitter_v1_0_rfs.vhd:
+	errors: 0, warnings: 0
+V_DUAL_SPLITTER_V1_0_9.VIDEO_CTRL_WRAPPER (entity):
+	streams: 63, words: 15473
+V_DUAL_SPLITTER_V1_0_9.VIDEO_CTRL_WRAPPER:RTL (architecture):
+	streams: 5, words: 35152

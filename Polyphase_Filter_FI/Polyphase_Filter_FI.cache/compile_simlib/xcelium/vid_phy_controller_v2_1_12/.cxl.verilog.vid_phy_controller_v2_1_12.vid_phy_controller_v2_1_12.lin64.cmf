@@ -1,0 +1,9 @@
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/vid_phy_controller_v2_1/hdl/src/verilog/vid_phy_controller_v2_1_sync_block.v
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/vid_phy_controller_v2_1/hdl/src/verilog/vid_phy_controller_v2_1_sync_pulse.v
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/vid_phy_controller_v2_1/hdl/src/verilog/vid_phy_controller_v2_1_cpll_railing.v
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/vid_phy_controller_v2_1/hdl/src/verilog/vid_phy_controller_v2_1_axi4lite.v
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/vid_phy_controller_v2_1/hdl/src/verilog/vid_phy_controller_v2_1_drp_control.v
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/vid_phy_controller_v2_1/hdl/src/verilog/vid_phy_controller_v2_1_drp_control_8series.v
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/vid_phy_controller_v2_1/hdl/src/verilog/vid_phy_controller_v2_1_drp_control_hdmi.v
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/vid_phy_controller_v2_1/hdl/src/verilog/vid_phy_controller_v2_1_interrupts.v
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/vid_phy_controller_v2_1/hdl/src/verilog/vid_phy_controller_v2_1_gtp_common.v

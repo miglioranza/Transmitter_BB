@@ -1,0 +1,30 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/v_tc_v6_2/hdl/v_tc_v6_2_vh_rfs.vhd:
+	errors: 0, warnings: 0
+	streams: 1, words: 1128
+	streams: 7, words: 17341
+	streams: 34, words: 2415
+	streams: 1, words: 2215
+	streams: 168, words: 63835
+	streams: 1, words: 28046
+	streams: 176, words: 66681
+	streams: 1, words: 36127
+	streams: 97, words: 32648
+	streams: 1, words: 66754
+	streams: 8, words: 2232
+	streams: 1, words: 2040
+	streams: 1, words: 8
+	streams: 5, words: 243
+	streams: 2, words: 7430
+	streams: 1, words: 63
+	streams: 2, words: 758
+	streams: 12, words: 3799
+	streams: 7, words: 15440
+	streams: 86, words: 17019
+	streams: 6, words: 59151
+	streams: 36, words: 6532
+	streams: 2, words: 12193
+	streams: 184, words: 72178
+	streams: 4, words: 158032
+	streams: 170, words: 19067
+	streams: 4, words: 149817

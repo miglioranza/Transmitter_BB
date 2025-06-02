@@ -1,0 +1,27 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/dfx_axi_shutdown_manager_v1_0/hdl/dfx_axi_shutdown_manager_v1_0_vh_rfs.vhd:
+	errors: 0, warnings: 0
+	streams: 18, words: 2712
+	streams: 1, words: 4277
+	streams: 72, words: 11682
+	streams: 5, words: 14939
+	streams: 45, words: 8247
+	streams: 4, words: 15263
+	streams: 86, words: 16632
+	streams: 3, words: 21673
+	streams: 73, words: 11328
+	streams: 5, words: 14973
+	streams: 36, words: 6344
+	streams: 3, words: 9435
+	streams: 36, words: 5972
+	streams: 4, words: 11528
+	streams: 99, words: 20181
+	streams: 4, words: 26797
+	streams: 175, words: 35793
+	streams: 3, words: 33565
+	streams: 34, words: 4789
+	streams: 1, words: 1833
+	streams: 199, words: 40337
+	streams: 3, words: 39633
+	streams: 198, words: 40844
+	streams: 1, words: 36104

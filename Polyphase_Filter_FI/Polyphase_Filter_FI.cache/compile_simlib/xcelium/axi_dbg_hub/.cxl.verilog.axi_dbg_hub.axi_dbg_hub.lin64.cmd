@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -sv -work axi_dbg_hub -f /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.cache/compile_simlib/xcelium/axi_dbg_hub/.cxl.systemverilog.axi_dbg_hub.axi_dbg_hub.lin64.cmf

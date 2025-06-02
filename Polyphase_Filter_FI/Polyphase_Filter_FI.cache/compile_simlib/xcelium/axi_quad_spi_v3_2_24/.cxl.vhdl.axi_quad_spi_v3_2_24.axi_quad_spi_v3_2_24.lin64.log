@@ -1,0 +1,105 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_quad_spi_v3_2/hdl/axi_quad_spi_v3_2_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_QUAD_SPI_V3_2_24.COMP_DEFS (package):
+	streams: 1, words: 8
+AXI_QUAD_SPI_V3_2_24.PSELECT_F (entity):
+	streams: 8, words: 1280
+AXI_QUAD_SPI_V3_2_24.PSELECT_F:IMP (architecture):
+	streams: 2, words: 1624
+AXI_QUAD_SPI_V3_2_24.COUNTER_F (entity):
+	streams: 13, words: 2125
+AXI_QUAD_SPI_V3_2_24.COUNTER_F:IMP (architecture):
+	streams: 1, words: 2177
+AXI_QUAD_SPI_V3_2_24.SOFT_RESET (entity):
+	streams: 14, words: 2085
+AXI_QUAD_SPI_V3_2_24.SOFT_RESET:IMPLEMENTATION (architecture):
+	streams: 2, words: 3397
+AXI_QUAD_SPI_V3_2_24.XIP_CROSS_CLK_SYNC (entity):
+	streams: 53, words: 5291
+AXI_QUAD_SPI_V3_2_24.XIP_CROSS_CLK_SYNC:IMP (architecture):
+	streams: 27, words: 60867
+AXI_QUAD_SPI_V3_2_24.RESET_SYNC_MODULE (entity):
+	streams: 4, words: 87
+AXI_QUAD_SPI_V3_2_24.RESET_SYNC_MODULE:IMP (architecture):
+	streams: 1, words: 1172
+AXI_QUAD_SPI_V3_2_24.QSPI_STATUS_SLAVE_SEL_REG (entity):
+	streams: 32, words: 4123
+AXI_QUAD_SPI_V3_2_24.QSPI_STATUS_SLAVE_SEL_REG:IMP (architecture):
+	streams: 4, words: 8276
+AXI_QUAD_SPI_V3_2_24.QSPI_STARTUP_BLOCK (entity):
+	streams: 30, words: 1273
+AXI_QUAD_SPI_V3_2_24.QSPI_STARTUP_BLOCK:IMP (architecture):
+	streams: 1, words: 6878
+AXI_QUAD_SPI_V3_2_24.QSPI_RECEIVE_TRANSMIT_REG (entity):
+	streams: 26, words: 3924
+AXI_QUAD_SPI_V3_2_24.QSPI_RECEIVE_TRANSMIT_REG:IMP (architecture):
+	streams: 4, words: 6769
+AXI_QUAD_SPI_V3_2_24.QSPI_OCCUPANCY_REG (entity):
+	streams: 7, words: 1907
+AXI_QUAD_SPI_V3_2_24.QSPI_OCCUPANCY_REG:IMP (architecture):
+	streams: 2, words: 2233
+AXI_QUAD_SPI_V3_2_24.QSPI_MODE_CONTROL_LOGIC (entity):
+	streams: 77, words: 5971
+AXI_QUAD_SPI_V3_2_24.QSPI_MODE_CONTROL_LOGIC:IMP (architecture):
+	streams: 2, words: 17206
+AXI_QUAD_SPI_V3_2_24.QSPI_MODE_0_MODULE (entity):
+	streams: 59, words: 5765
+AXI_QUAD_SPI_V3_2_24.QSPI_MODE_0_MODULE:IMP (architecture):
+	streams: 4, words: 16448
+AXI_QUAD_SPI_V3_2_24.QSPI_LOOK_UP_LOGIC (entity):
+	streams: 25, words: 1412
+AXI_QUAD_SPI_V3_2_24.QSPI_LOOK_UP_LOGIC:IMP (architecture):
+	streams: 21, words: 69427
+AXI_QUAD_SPI_V3_2_24.QSPI_FIFO_IFMODULE (entity):
+	streams: 30, words: 3882
+AXI_QUAD_SPI_V3_2_24.QSPI_FIFO_IFMODULE:IMP (architecture):
+	streams: 3, words: 4071
+AXI_QUAD_SPI_V3_2_24.QSPI_CNTRL_REG (entity):
+	streams: 30, words: 2600
+AXI_QUAD_SPI_V3_2_24.QSPI_CNTRL_REG:IMP (architecture):
+	streams: 6, words: 11378
+AXI_QUAD_SPI_V3_2_24.QSPI_ADDRESS_DECODER (entity):
+	streams: 24, words: 5259
+AXI_QUAD_SPI_V3_2_24.QSPI_ADDRESS_DECODER:IMP (architecture):
+	streams: 12, words: 34696
+AXI_QUAD_SPI_V3_2_24.QSPI_DUAL_QUAD_MODE (entity):
+	streams: 37, words: 2351
+AXI_QUAD_SPI_V3_2_24.QSPI_DUAL_QUAD_MODE:WORK (architecture):
+	streams: 2, words: 2320
+AXI_QUAD_SPI_V3_2_24.CROSS_CLK_SYNC_FIFO_1 (entity):
+	streams: 72, words: 3341
+AXI_QUAD_SPI_V3_2_24.CROSS_CLK_SYNC_FIFO_1:IMP (architecture):
+	streams: 33, words: 70517
+AXI_QUAD_SPI_V3_2_24.CROSS_CLK_SYNC_FIFO_0 (entity):
+	streams: 66, words: 6608
+AXI_QUAD_SPI_V3_2_24.CROSS_CLK_SYNC_FIFO_0:IMP (architecture):
+	streams: 29, words: 65050
+AXI_QUAD_SPI_V3_2_24.XIP_STATUS_REG (entity):
+	streams: 15, words: 1196
+AXI_QUAD_SPI_V3_2_24.XIP_STATUS_REG:IMP (architecture):
+	streams: 2, words: 3518
+AXI_QUAD_SPI_V3_2_24.XIP_CNTRL_REG (entity):
+	streams: 17, words: 2162
+AXI_QUAD_SPI_V3_2_24.XIP_CNTRL_REG:IMP (architecture):
+	streams: 2, words: 3391
+AXI_QUAD_SPI_V3_2_24.QSPI_CORE_INTERFACE (entity):
+	streams: 87, words: 9750
+AXI_QUAD_SPI_V3_2_24.QSPI_CORE_INTERFACE:IMP (architecture):
+	streams: 24, words: 125162
+AXI_QUAD_SPI_V3_2_24.AXI_QSPI_XIP_IF (entity):
+	streams: 121, words: 15588
+AXI_QUAD_SPI_V3_2_24.AXI_QSPI_XIP_IF:IMP (architecture):
+	streams: 11, words: 125127
+AXI_QUAD_SPI_V3_2_24.AXI_QSPI_ENHANCED_MODE (entity):
+	streams: 107, words: 19796
+AXI_QUAD_SPI_V3_2_24.AXI_QSPI_ENHANCED_MODE:IMP (architecture):
+	streams: 2, words: 10391
+AXI_QUAD_SPI_V3_2_24.AXI_QUAD_SPI_TOP (entity):
+	streams: 168, words: 17283
+AXI_QUAD_SPI_V3_2_24.AXI_QUAD_SPI_TOP:IMP (architecture):
+	streams: 16, words: 102125
+AXI_QUAD_SPI_V3_2_24.AXI_QUAD_SPI (entity):
+	streams: 183, words: 17350
+AXI_QUAD_SPI_V3_2_24.AXI_QUAD_SPI:IMP (architecture):
+	streams: 4, words: 34480

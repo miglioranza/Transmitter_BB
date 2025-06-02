@@ -1,0 +1,135 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/iomodule_v3_1/hdl/iomodule_v3_1_vh_rfs.vhd:
+	errors: 0, warnings: 0
+IOMODULE_V3_1_7.IOMODULE_VOTE_PKG (package):
+	streams: 1, words: 8
+IOMODULE_V3_1_7.IOMODULE_VOTE_PKG:BODY (package body):
+	streams: 10, words: 6694
+IOMODULE_V3_1_7.IOMODULE_FUNCS (package):
+	streams: 1, words: 8
+IOMODULE_V3_1_7.IOMODULE_FUNCS:BODY (package body):
+	streams: 6, words: 3954
+IOMODULE_V3_1_7.XIL_SCAN_RESET_CONTROL (entity):
+	streams: 6, words: 103
+IOMODULE_V3_1_7.XIL_SCAN_RESET_CONTROL:IMP (architecture):
+	streams: 1, words: 200
+IOMODULE_V3_1_7.XIL_SRL16E (entity):
+	streams: 13, words: 432
+IOMODULE_V3_1_7.XIL_SRL16E:IMP (architecture):
+	streams: 1, words: 2743
+IOMODULE_V3_1_7.XIL_SRLC16E (entity):
+	streams: 13, words: 370
+IOMODULE_V3_1_7.XIL_SRLC16E:IMP (architecture):
+	streams: 1, words: 1786
+IOMODULE_V3_1_7.MB_MUXCY (entity):
+	streams: 6, words: 162
+IOMODULE_V3_1_7.MB_MUXCY:IMP (architecture):
+	streams: 1, words: 651
+IOMODULE_V3_1_7.MB_XORCY (entity):
+	streams: 5, words: 154
+IOMODULE_V3_1_7.MB_XORCY:IMP (architecture):
+	streams: 1, words: 651
+IOMODULE_V3_1_7.MB_MUXCY_XORCY (entity):
+	streams: 7, words: 170
+IOMODULE_V3_1_7.MB_MUXCY_XORCY:IMP (architecture):
+	streams: 1, words: 651
+IOMODULE_V3_1_7.MB_FDR (entity):
+	streams: 7, words: 229
+IOMODULE_V3_1_7.MB_FDR:IMP (architecture):
+	streams: 2, words: 808
+IOMODULE_V3_1_7.MB_FDRE (entity):
+	streams: 8, words: 237
+IOMODULE_V3_1_7.MB_FDRE:IMP (architecture):
+	streams: 2, words: 808
+IOMODULE_V3_1_7.MB_FDSE (entity):
+	streams: 8, words: 246
+IOMODULE_V3_1_7.MB_FDSE:IMP (architecture):
+	streams: 2, words: 808
+IOMODULE_V3_1_7.MB_MULT_AND (entity):
+	streams: 6, words: 221
+IOMODULE_V3_1_7.MB_MULT_AND:IMP (architecture):
+	streams: 1, words: 651
+IOMODULE_V3_1_7.MB_LUT3 (entity):
+	streams: 7, words: 310
+IOMODULE_V3_1_7.MB_LUT3:IMP (architecture):
+	streams: 1, words: 1343
+IOMODULE_V3_1_7.MB_MUXF5 (entity):
+	streams: 6, words: 162
+IOMODULE_V3_1_7.MB_MUXF5:IMP (architecture):
+	streams: 1, words: 651
+IOMODULE_V3_1_7.MB_MUXF6 (entity):
+	streams: 6, words: 162
+IOMODULE_V3_1_7.MB_MUXF6:IMP (architecture):
+	streams: 1, words: 651
+IOMODULE_V3_1_7.MB_SYNC_BIT (entity):
+	streams: 12, words: 423
+IOMODULE_V3_1_7.MB_SYNC_BIT:IMP (architecture):
+	streams: 1, words: 2775
+IOMODULE_V3_1_7.MB_SYNC_VEC (entity):
+	streams: 15, words: 2426
+IOMODULE_V3_1_7.MB_SYNC_VEC:IMP (architecture):
+	streams: 2, words: 2230
+IOMODULE_V3_1_7.MB_SYNC_RESET (entity):
+	streams: 10, words: 339
+IOMODULE_V3_1_7.MB_SYNC_RESET:IMP (architecture):
+	streams: 1, words: 1967
+IOMODULE_V3_1_7.PULSE_SYNC (entity):
+	streams: 21, words: 1260
+IOMODULE_V3_1_7.PULSE_SYNC:IMP (architecture):
+	streams: 1, words: 1139
+IOMODULE_V3_1_7.DIVIDE_PART (entity):
+	streams: 9, words: 322
+IOMODULE_V3_1_7.DIVIDE_PART:VHDL_RTL (architecture):
+	streams: 3, words: 8460
+IOMODULE_V3_1_7.FIT_MODULE (entity):
+	streams: 20, words: 3322
+IOMODULE_V3_1_7.FIT_MODULE:VHDL_RTL (architecture):
+	streams: 8, words: 18333
+IOMODULE_V3_1_7.GPI_MODULE (entity):
+	streams: 13, words: 2100
+IOMODULE_V3_1_7.GPI_MODULE:IMP (architecture):
+	streams: 1, words: 2117
+IOMODULE_V3_1_7.GPO_MODULE (entity):
+	streams: 23, words: 4542
+IOMODULE_V3_1_7.GPO_MODULE:IMP (architecture):
+	streams: 1, words: 2555
+IOMODULE_V3_1_7.INTR_CTRL (entity):
+	streams: 55, words: 7189
+IOMODULE_V3_1_7.INTR_CTRL:IMP (architecture):
+	streams: 6, words: 30992
+IOMODULE_V3_1_7.PIT_MODULE (entity):
+	streams: 28, words: 4568
+IOMODULE_V3_1_7.PIT_MODULE:IMP (architecture):
+	streams: 2, words: 12769
+IOMODULE_V3_1_7.UART_CONTROL_STATUS (entity):
+	streams: 34, words: 3760
+IOMODULE_V3_1_7.UART_CONTROL_STATUS:IMP (architecture):
+	streams: 1, words: 709
+IOMODULE_V3_1_7.UART_RECEIVE (entity):
+	streams: 29, words: 4270
+IOMODULE_V3_1_7.UART_RECEIVE:IMP (architecture):
+	streams: 4, words: 17063
+IOMODULE_V3_1_7.UART_TRANSMIT (entity):
+	streams: 26, words: 4246
+IOMODULE_V3_1_7.UART_TRANSMIT:IMP (architecture):
+	streams: 3, words: 15320
+IOMODULE_V3_1_7.UART_CORE (entity):
+	streams: 43, words: 6144
+IOMODULE_V3_1_7.UART_CORE:IMP (architecture):
+	streams: 2, words: 18757
+IOMODULE_V3_1_7.UART (entity):
+	streams: 49, words: 5544
+IOMODULE_V3_1_7.UART:IMP (architecture):
+	streams: 1, words: 28495
+IOMODULE_V3_1_7.IOMODULE_CORE (entity):
+	streams: 216, words: 18849
+IOMODULE_V3_1_7.IOMODULE_CORE:IMP (architecture):
+	streams: 5, words: 71628
+IOMODULE_V3_1_7.PSELECT_MASK (entity):
+	streams: 10, words: 1293
+IOMODULE_V3_1_7.PSELECT_MASK:IMP (architecture):
+	streams: 3, words: 2438
+IOMODULE_V3_1_7.IOMODULE (entity):
+	streams: 222, words: 27064
+IOMODULE_V3_1_7.IOMODULE:IMP (architecture):
+	streams: 2, words: 27034

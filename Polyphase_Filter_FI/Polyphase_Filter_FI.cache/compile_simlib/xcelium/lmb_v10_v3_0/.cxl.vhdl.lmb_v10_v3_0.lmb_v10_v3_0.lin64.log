@@ -1,0 +1,7 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/lmb_v10_v3_0/hdl/vhdl/lmb_v10.vhd:
+	errors: 0, warnings: 0
+LMB_V10_V3_0.LMB_V10 (entity):
+	streams: 42, words: 12000
+LMB_V10_V3_0.LMB_V10:IMP (architecture):
+	streams: 1, words: 1399

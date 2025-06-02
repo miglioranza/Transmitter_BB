@@ -1,0 +1,21 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/c_shift_ram_v12_0/hdl/c_shift_ram_v12_0_vh_rfs.vhd:
+	errors: 0, warnings: 0
+	streams: 1, words: 8
+	streams: 1, words: 8
+	streams: 7, words: 212
+	streams: 1, words: 430
+	streams: 10, words: 1199
+	streams: 1, words: 3392
+	streams: 6, words: 171
+	streams: 1, words: 1192
+	streams: 1, words: 8
+	streams: 18, words: 45491
+	streams: 26, words: 2873
+	streams: 2, words: 12267
+	streams: 44, words: 7182
+	streams: 26, words: 100332
+	streams: 34, words: 6539
+	streams: 2, words: 4693
+	streams: 34, words: 5242
+	streams: 2, words: 4223

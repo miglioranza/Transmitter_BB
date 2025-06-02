@@ -1,0 +1,55 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_cdma_v4_1/hdl/axi_cdma_v4_1_vh_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_CDMA_V4_1_25.AXI_CDMA_PKG (package):
+	streams: 1, words: 976
+AXI_CDMA_V4_1_25.AXI_CDMA_PKG:BODY (package body):
+	streams: 2, words: 760
+AXI_CDMA_V4_1_25.AXI_CDMA_PULSE_GEN (entity):
+	streams: 11, words: 341
+AXI_CDMA_V4_1_25.AXI_CDMA_PULSE_GEN:IMPLEMENTATION (architecture):
+	streams: 3, words: 6374
+AXI_CDMA_V4_1_25.AXI_CDMA_RESET (entity):
+	streams: 26, words: 399
+AXI_CDMA_V4_1_25.AXI_CDMA_RESET:IMPLEMENTATION (architecture):
+	streams: 9, words: 13008
+AXI_CDMA_V4_1_25.AXI_CDMA_LITE_IF (entity):
+	streams: 44, words: 9134
+AXI_CDMA_V4_1_25.AXI_CDMA_LITE_IF:IMPLEMENTATION (architecture):
+	streams: 14, words: 49766
+AXI_CDMA_V4_1_25.AXI_CDMA_REGISTER (entity):
+	streams: 76, words: 16445
+AXI_CDMA_V4_1_25.AXI_CDMA_REGISTER:IMPLEMENTATION (architecture):
+	streams: 1, words: 13316
+AXI_CDMA_V4_1_25.AXI_CDMA_REG_MODULE (entity):
+	streams: 89, words: 14485
+AXI_CDMA_V4_1_25.AXI_CDMA_REG_MODULE:IMPLEMENTATION (architecture):
+	streams: 4, words: 41004
+AXI_CDMA_V4_1_25.AXI_CDMA_SFIFO_AUTORD (entity):
+	streams: 32, words: 5284
+AXI_CDMA_V4_1_25.AXI_CDMA_SFIFO_AUTORD:IMP (architecture):
+	streams: 2, words: 9154
+AXI_CDMA_V4_1_25.AXI_CDMA_SF (entity):
+	streams: 37, words: 4707
+AXI_CDMA_V4_1_25.AXI_CDMA_SF:IMPLEMENTATION (architecture):
+	streams: 8, words: 30193
+AXI_CDMA_V4_1_25.AXI_CDMA_SIMPLE_CNTLR (entity):
+	streams: 50, words: 9040
+AXI_CDMA_V4_1_25.AXI_CDMA_SIMPLE_CNTLR:IMPLEMENTATION (architecture):
+	streams: 2, words: 10307
+AXI_CDMA_V4_1_25.AXI_CDMA_SIMPLE_WRAP (entity):
+	streams: 104, words: 13848
+AXI_CDMA_V4_1_25.AXI_CDMA_SIMPLE_WRAP:IMPLEMENTATION (architecture):
+	streams: 10, words: 79775
+AXI_CDMA_V4_1_25.AXI_CDMA_SG_CNTLR (entity):
+	streams: 90, words: 11850
+AXI_CDMA_V4_1_25.AXI_CDMA_SG_CNTLR:IMPLEMENTATION (architecture):
+	streams: 5, words: 26080
+AXI_CDMA_V4_1_25.AXI_CDMA_SG_WRAP (entity):
+	streams: 158, words: 22114
+AXI_CDMA_V4_1_25.AXI_CDMA_SG_WRAP:IMPLEMENTATION (architecture):
+	streams: 11, words: 108955
+AXI_CDMA_V4_1_25.AXI_CDMA (entity):
+	streams: 153, words: 21198
+AXI_CDMA_V4_1_25.AXI_CDMA:IMPLEMENTATION (architecture):
+	streams: 6, words: 36066

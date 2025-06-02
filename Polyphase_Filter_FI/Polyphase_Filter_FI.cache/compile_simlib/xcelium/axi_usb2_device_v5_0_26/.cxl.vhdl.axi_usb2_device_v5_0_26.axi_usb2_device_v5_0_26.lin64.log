@@ -1,0 +1,27 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_usb2_device_v5_0/hdl/axi_usb2_device_v5_0_rfs.vhd:
+	errors: 0, warnings: 0
+	streams: 14, words: 3133
+	streams: 1, words: 6368
+	streams: 13, words: 2626
+	streams: 1, words: 6288
+	streams: 107, words: 18064
+	streams: 2, words: 7481
+	streams: 93, words: 15954
+	streams: 2, words: 7921
+	streams: 40, words: 7112
+	streams: 1, words: 10016
+	streams: 56, words: 8754
+	streams: 22, words: 58292
+	streams: 26, words: 6263
+	streams: 1, words: 1444
+	streams: 117, words: 17930
+	streams: 26, words: 73447
+	streams: 102, words: 17194
+	streams: 5, words: 50630
+	streams: 77, words: 15660
+	streams: 1, words: 3317
+	streams: 42, words: 4664
+	streams: 5, words: 108122
+	streams: 175, words: 23622
+	streams: 8, words: 92476

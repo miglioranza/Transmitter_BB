@@ -1,0 +1,31 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unifast/primitive/DSP48E1.vhd:
+	errors: 0, warnings: 0
+/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unifast/primitive/MMCME2_ADV.vhd:
+	errors: 0, warnings: 0
+/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unifast/primitive/PLLE2_ADV.vhd:
+	errors: 0, warnings: 0
+/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unifast/secureip/GTHE2_CHANNEL.vhd:
+	errors: 0, warnings: 0
+/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unifast/secureip/GTXE2_CHANNEL.vhd:
+	errors: 0, warnings: 0
+UNIFAST.DSP48E1 (entity):
+	streams: 99, words: 8582
+UNIFAST.DSP48E1:DSP48E1_V (architecture):
+	streams: 6, words: 35506
+UNIFAST.MMCME2_ADV (entity):
+	streams: 85, words: 6253
+UNIFAST.MMCME2_ADV:MMCME2_ADV_V (architecture):
+	streams: 3, words: 44913
+UNIFAST.PLLE2_ADV (entity):
+	streams: 56, words: 4316
+UNIFAST.PLLE2_ADV:PLLE2_ADV_V (architecture):
+	streams: 3, words: 26432
+UNIFAST.GTHE2_CHANNEL (entity):
+	streams: 612, words: 55972
+UNIFAST.GTHE2_CHANNEL:GTHE2_CHANNEL_FAST_V (architecture):
+	streams: 6, words: 296953
+UNIFAST.GTXE2_CHANNEL (entity):
+	streams: 494, words: 46360
+UNIFAST.GTXE2_CHANNEL:GTXE2_CHANNEL_FAST_V (architecture):
+	streams: 6, words: 230779

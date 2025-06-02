@@ -1,0 +1,20 @@
+<SIMMODEL_NAME>:tlm_ext
+<LIBRARY_NAME>:axi_tlm_ext_v1_0
+<LIBRARY_TYPE>:SystemC
+<OUTPUT_FORMAT>:library
+<SYSTEMC_SOURCES>:systemc/simlibs/tlm_ext/axi_tlm_ext_v1_0/src/TlmExtDef.cxx
+<SYSTEMC_INCLUDE_DIRS>:simlibs/axi_tlm_ext_v1_0/include,simlibs/xtlm/include,simlibs/common_cpp_v1_0/include
+<OSCI_INCLUDE_DIRS>:/data/osci_systemc/include
+<SYSTEMC_COMPILE_OPTION>:-64bit -noedg -cFlags " -O3 -fPIC -c -o
+<CPP_COMPILE_OPTION>:-O3
+<C_COMPILE_OPTION>:-O3
+<G++_COMPILE_FLAGS>:-fPIC -DSC_INCLUDE_DYNAMIC_PROCESSES
+<G++_COMPILE_DEBUG_FLAGS>:-g -O0
+<SCCOM_COMPILE_FLAGS>:-std=c++14
+<G++_LDFLAGS_OPTION>:
+<GCC_LDFLAGS_OPTION>:
+<MORE_XSC_OPTIONS>:-v
+<G++_LDLIBS_OPTION>:
+<GCC_LDLIBS_OPTION>:
+<SHARED_LIBRARY>:axi_tlm_ext_v1_0
+<SIMULATOR_PLATFORM>:all

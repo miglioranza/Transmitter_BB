@@ -1,0 +1,16 @@
+
+#ifndef EM_DIAG_CORE_INCLUDE_EM_DIAG_CORE_DEFINES_H_
+#define EM_DIAG_CORE_INCLUDE_EM_DIAG_CORE_DEFINES_H_
+
+
+namespace xsc{
+
+namespace em_diag_core_defines {
+	typedef enum MM_TRAN_COMMAND   {MM_READ=0,MM_WRITE=1} MM_TRAN_COMMAND;
+	typedef enum STRM_TRAN_COMMAND {STRM_READ=0,STRM_WRITE=1} STRM_TRAN_COMMAND;
+};
+
+};
+
+
+#endif /* EM_DIAG_CORE_INCLUDE_EM_DIAG_CORE_DEFINES_H_ */

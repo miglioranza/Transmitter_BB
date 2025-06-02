@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Fri Mar 14 17:23:26 2025
+-- Date        : Mon Jun  2 15:16:48 2025
 -- Host        : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 -- Command     : write_vhdl -force -mode funcsim -rename_top Design_2_Pre_Distortion_Filter_0_0 -prefix
 --               Design_2_Pre_Distortion_Filter_0_0_ Design_2_Pre_Distortion_Filter_0_0_sim_netlist.vhdl
@@ -17,8 +17,8 @@ use UNISIM.VCOMPONENTS.ALL;
 entity Design_2_Pre_Distortion_Filter_0_0_Parallel_FIR_filter is
   port (
     data_out_valid : out STD_LOGIC;
-    Q_output : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    I_output : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    Q_output : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    I_output : out STD_LOGIC_VECTOR ( 15 downto 0 );
     data_out_ready : out STD_LOGIC;
     clk : in STD_LOGIC;
     data_in_valid : in STD_LOGIC;
@@ -31,6 +31,7 @@ end Design_2_Pre_Distortion_Filter_0_0_Parallel_FIR_filter;
 
 architecture STRUCTURE of Design_2_Pre_Distortion_Filter_0_0_Parallel_FIR_filter is
   signal C : STD_LOGIC_VECTOR ( 31 downto 13 );
+  signal \^i_output\ : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal \I_shift_reg_reg[0]_12\ : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal \I_shift_reg_reg[10]_19\ : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal \I_shift_reg_reg[11]_20\ : STD_LOGIC_VECTOR ( 11 downto 0 );
@@ -54,6 +55,7 @@ architecture STRUCTURE of Design_2_Pre_Distortion_Filter_0_0_Parallel_FIR_filter
   signal \I_shift_reg_reg[7]_1\ : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal \I_shift_reg_reg[8]_17\ : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal \I_shift_reg_reg[9]_18\ : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal \^q_output\ : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal \Q_shift_reg_reg[0]_2\ : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal \Q_shift_reg_reg[10]_9\ : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal \Q_shift_reg_reg[11]_10\ : STD_LOGIC_VECTOR ( 11 downto 0 );
@@ -79,6 +81,7 @@ architecture STRUCTURE of Design_2_Pre_Distortion_Filter_0_0_Parallel_FIR_filter
   signal \Q_shift_reg_reg[9]_8\ : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal data_out_valid_i_1_n_0 : STD_LOGIC;
   signal data_out_valid_i_2_n_0 : STD_LOGIC;
+  signal temp_reg_I : STD_LOGIC_VECTOR ( 31 downto 16 );
   signal \temp_reg_I0__0_n_100\ : STD_LOGIC;
   signal \temp_reg_I0__0_n_101\ : STD_LOGIC;
   signal \temp_reg_I0__0_n_102\ : STD_LOGIC;
@@ -804,6 +807,7 @@ architecture STRUCTURE of Design_2_Pre_Distortion_Filter_0_0_Parallel_FIR_filter
   signal temp_reg_I2_n_7 : STD_LOGIC;
   signal temp_reg_I2_n_8 : STD_LOGIC;
   signal temp_reg_I2_n_9 : STD_LOGIC;
+  signal temp_reg_Q : STD_LOGIC_VECTOR ( 31 downto 16 );
   signal \temp_reg_Q0__0_n_100\ : STD_LOGIC;
   signal \temp_reg_Q0__0_n_101\ : STD_LOGIC;
   signal \temp_reg_Q0__0_n_102\ : STD_LOGIC;
@@ -1919,6 +1923,8 @@ architecture STRUCTURE of Design_2_Pre_Distortion_Filter_0_0_Parallel_FIR_filter
   attribute KEEP_HIERARCHY of temp_reg_Q2 : label is "yes";
   attribute METHODOLOGY_DRC_VIOS of temp_reg_Q2 : label is "{SYNTH-11 {cell *THIS*}}";
 begin
+  I_output(15 downto 0) <= \^i_output\(15 downto 0);
+  Q_output(15 downto 0) <= \^q_output\(15 downto 0);
 \I_shift_reg_reg[0][0]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -8082,7 +8088,7 @@ temp_reg_I0: unisim.vcomponents.DSP48E2
       B_INPUT => "DIRECT",
       CARRYINREG => 0,
       CARRYINSELREG => 0,
-      CREG => 1,
+      CREG => 0,
       DREG => 1,
       INMODEREG => 0,
       MASK => X"3FFFFFFFFFFF",
@@ -8114,7 +8120,24 @@ temp_reg_I0: unisim.vcomponents.DSP48E2
       B(11 downto 0) => I_input(11 downto 0),
       BCIN(17 downto 0) => B"000000000000000000",
       BCOUT(17 downto 0) => \NLW_temp_reg_I0__9_BCOUT_UNCONNECTED\(17 downto 0),
-      C(47 downto 0) => B"000000000000000000000000000000000000000000000000",
+      C(47) => temp_reg_I(31),
+      C(46) => temp_reg_I(31),
+      C(45) => temp_reg_I(31),
+      C(44) => temp_reg_I(31),
+      C(43) => temp_reg_I(31),
+      C(42) => temp_reg_I(31),
+      C(41) => temp_reg_I(31),
+      C(40) => temp_reg_I(31),
+      C(39) => temp_reg_I(31),
+      C(38) => temp_reg_I(31),
+      C(37) => temp_reg_I(31),
+      C(36) => temp_reg_I(31),
+      C(35) => temp_reg_I(31),
+      C(34) => temp_reg_I(31),
+      C(33) => temp_reg_I(31),
+      C(32) => temp_reg_I(31),
+      C(31 downto 16) => temp_reg_I(31 downto 16),
+      C(15 downto 0) => \^i_output\(15 downto 0),
       CARRYCASCIN => '0',
       CARRYCASCOUT => \NLW_temp_reg_I0__9_CARRYCASCOUT_UNCONNECTED\,
       CARRYIN => '0',
@@ -8138,7 +8161,7 @@ temp_reg_I0: unisim.vcomponents.DSP48E2
       INMODE(4 downto 0) => B"00000",
       MULTSIGNIN => '0',
       MULTSIGNOUT => \NLW_temp_reg_I0__9_MULTSIGNOUT_UNCONNECTED\,
-      OPMODE(8 downto 0) => B"010010101",
+      OPMODE(8 downto 0) => B"110010101",
       OVERFLOW => \NLW_temp_reg_I0__9_OVERFLOW_UNCONNECTED\,
       P(47) => \temp_reg_I0__9_n_58\,
       P(46) => \temp_reg_I0__9_n_59\,
@@ -8156,7 +8179,8 @@ temp_reg_I0: unisim.vcomponents.DSP48E2
       P(34) => \temp_reg_I0__9_n_71\,
       P(33) => \temp_reg_I0__9_n_72\,
       P(32) => \temp_reg_I0__9_n_73\,
-      P(31 downto 0) => I_output(31 downto 0),
+      P(31 downto 16) => temp_reg_I(31 downto 16),
+      P(15 downto 0) => \^i_output\(15 downto 0),
       PATTERNBDETECT => \NLW_temp_reg_I0__9_PATTERNBDETECT_UNCONNECTED\,
       PATTERNDETECT => \NLW_temp_reg_I0__9_PATTERNDETECT_UNCONNECTED\,
       PCIN(47) => \temp_reg_I0__8_n_106\,
@@ -11227,7 +11251,7 @@ temp_reg_Q0: unisim.vcomponents.DSP48E2
       B_INPUT => "DIRECT",
       CARRYINREG => 0,
       CARRYINSELREG => 0,
-      CREG => 1,
+      CREG => 0,
       DREG => 1,
       INMODEREG => 0,
       MASK => X"3FFFFFFFFFFF",
@@ -11259,7 +11283,24 @@ temp_reg_Q0: unisim.vcomponents.DSP48E2
       B(11 downto 0) => Q_input(11 downto 0),
       BCIN(17 downto 0) => B"000000000000000000",
       BCOUT(17 downto 0) => \NLW_temp_reg_Q0__9_BCOUT_UNCONNECTED\(17 downto 0),
-      C(47 downto 0) => B"000000000000000000000000000000000000000000000000",
+      C(47) => temp_reg_Q(31),
+      C(46) => temp_reg_Q(31),
+      C(45) => temp_reg_Q(31),
+      C(44) => temp_reg_Q(31),
+      C(43) => temp_reg_Q(31),
+      C(42) => temp_reg_Q(31),
+      C(41) => temp_reg_Q(31),
+      C(40) => temp_reg_Q(31),
+      C(39) => temp_reg_Q(31),
+      C(38) => temp_reg_Q(31),
+      C(37) => temp_reg_Q(31),
+      C(36) => temp_reg_Q(31),
+      C(35) => temp_reg_Q(31),
+      C(34) => temp_reg_Q(31),
+      C(33) => temp_reg_Q(31),
+      C(32) => temp_reg_Q(31),
+      C(31 downto 16) => temp_reg_Q(31 downto 16),
+      C(15 downto 0) => \^q_output\(15 downto 0),
       CARRYCASCIN => '0',
       CARRYCASCOUT => \NLW_temp_reg_Q0__9_CARRYCASCOUT_UNCONNECTED\,
       CARRYIN => '0',
@@ -11283,7 +11324,7 @@ temp_reg_Q0: unisim.vcomponents.DSP48E2
       INMODE(4 downto 0) => B"00000",
       MULTSIGNIN => '0',
       MULTSIGNOUT => \NLW_temp_reg_Q0__9_MULTSIGNOUT_UNCONNECTED\,
-      OPMODE(8 downto 0) => B"010010101",
+      OPMODE(8 downto 0) => B"110010101",
       OVERFLOW => \NLW_temp_reg_Q0__9_OVERFLOW_UNCONNECTED\,
       P(47) => \temp_reg_Q0__9_n_58\,
       P(46) => \temp_reg_Q0__9_n_59\,
@@ -11301,7 +11342,8 @@ temp_reg_Q0: unisim.vcomponents.DSP48E2
       P(34) => \temp_reg_Q0__9_n_71\,
       P(33) => \temp_reg_Q0__9_n_72\,
       P(32) => \temp_reg_Q0__9_n_73\,
-      P(31 downto 0) => Q_output(31 downto 0),
+      P(31 downto 16) => temp_reg_Q(31 downto 16),
+      P(15 downto 0) => \^q_output\(15 downto 0),
       PATTERNBDETECT => \NLW_temp_reg_Q0__9_PATTERNBDETECT_UNCONNECTED\,
       PATTERNDETECT => \NLW_temp_reg_Q0__9_PATTERNDETECT_UNCONNECTED\,
       PCIN(47) => \temp_reg_Q0__8_n_106\,
@@ -11546,8 +11588,8 @@ entity Design_2_Pre_Distortion_Filter_0_0 is
     data_in_ready : in STD_LOGIC;
     data_in_valid : in STD_LOGIC;
     data_out_valid : out STD_LOGIC;
-    Q_output : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    I_output : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    Q_output : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    I_output : out STD_LOGIC_VECTOR ( 15 downto 0 );
     data_out_ready : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
@@ -11573,9 +11615,9 @@ begin
 U0: entity work.Design_2_Pre_Distortion_Filter_0_0_Parallel_FIR_filter
      port map (
       I_input(11 downto 0) => I_input(11 downto 0),
-      I_output(31 downto 0) => I_output(31 downto 0),
+      I_output(15 downto 0) => I_output(15 downto 0),
       Q_input(11 downto 0) => Q_input(11 downto 0),
-      Q_output(31 downto 0) => Q_output(31 downto 0),
+      Q_output(15 downto 0) => Q_output(15 downto 0),
       clk => clk,
       data_in_ready => data_in_ready,
       data_in_valid => data_in_valid,

@@ -1,0 +1,55 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/mdm_v3_2/hdl/vhdl/mdm_primitives.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/mdm_v3_2/hdl/vhdl/arbiter.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/mdm_v3_2/hdl/vhdl/srl_fifo.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/mdm_v3_2/hdl/vhdl/bus_master.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/mdm_v3_2/hdl/vhdl/jtag_control.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/mdm_v3_2/hdl/vhdl/mdm_core.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/mdm_v3_2/hdl/vhdl/mdm.vhd:
+	errors: 0, warnings: 0
+MDM_V3_2.CARRY_AND (entity):
+	streams: 4, words: 87
+MDM_V3_2.CARRY_AND:IMP (architecture):
+	streams: 1, words: 348
+MDM_V3_2.CARRY_OR_VEC (entity):
+	streams: 6, words: 1029
+MDM_V3_2.CARRY_OR_VEC:IMP (architecture):
+	streams: 2, words: 6715
+MDM_V3_2.CARRY_OR (entity):
+	streams: 4, words: 87
+MDM_V3_2.CARRY_OR:IMP (architecture):
+	streams: 1, words: 348
+MDM_V3_2.SELECT_BIT (entity):
+	streams: 9, words: 739
+MDM_V3_2.SELECT_BIT:IMP (architecture):
+	streams: 1, words: 330
+MDM_V3_2.ARBITER (entity):
+	streams: 13, words: 2896
+MDM_V3_2.ARBITER:IMP (architecture):
+	streams: 5, words: 18031
+MDM_V3_2.SRL_FIFO (entity):
+	streams: 13, words: 2041
+MDM_V3_2.SRL_FIFO:IMP (architecture):
+	streams: 3, words: 9697
+MDM_V3_2.BUS_MASTER (entity):
+	streams: 124, words: 22263
+MDM_V3_2.BUS_MASTER:IMP (architecture):
+	streams: 2, words: 11875
+MDM_V3_2.JTAG_CONTROL (entity):
+	streams: 372, words: 47952
+MDM_V3_2.JTAG_CONTROL:IMP (architecture):
+	streams: 4, words: 57132
+MDM_V3_2.MDM_CORE (entity):
+	streams: 837, words: 75342
+MDM_V3_2.MDM_CORE:IMP (architecture):
+	streams: 4, words: 109467
+MDM_V3_2.MDM (entity):
+	streams: 1361, words: 197582
+MDM_V3_2.MDM:IMP (architecture):
+	streams: 4, words: 140824

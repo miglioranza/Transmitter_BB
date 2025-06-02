@@ -1,0 +1,27 @@
+xmsim(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+xmsim: *E,IONOEN: file does not exist, strobe.tcl.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> set pack_assert_off {numeric_std std_logic_arith}
+numeric_std std_logic_arith
+xcelium> 
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> catch {probe -create -shm -all -variables -depth 1 -waveform} msg
+0
+xcelium> 
+xcelium> run 1000ns
+Ran until 1 US + 0
+xcelium> 
+xcelium> probe -create -shm :uut:clk :uut:coeff_reg :uut:control_ready :uut:CONVERSION_FACTOR :uut:data_i :uut:data_in_last :uut:data_input :uut:data_o :uut:data_out_last :uut:DATA_WIDTH :uut:DECIMATION_FILTER :uut:delay :uut:FILTER_TAPS :uut:final_sum :uut:in_valid :uut:mul_reg :uut:out_ready :uut:out_valid :uut:product_sum :uut:reset
+Created probe 2
+xcelium> reset
+xmsim: *W,INTEMGR: Failed to open the VMANAGER Library: /linux64/vm/libngen64.so: cannot open shared object file: No such file or directory.
+Loaded snapshot xil_defaultlib.polyphase_filter_tb:behavioral
+xcelium> run
+ASSERT/FAILURE (time 1057500 PS) from process :stim_process (architecture xil_defaultlib.Polyphase_filter_tb:Behavioral)
+End of simulation
+Assertion at 1057500 PS + 0
+xcelium> ^C
+xcelium> exit

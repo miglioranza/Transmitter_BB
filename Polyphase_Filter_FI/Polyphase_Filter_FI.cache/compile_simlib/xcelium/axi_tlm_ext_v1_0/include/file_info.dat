@@ -1,0 +1,99 @@
+#############################################################################################
+#
+# Filename : xtlm/xtlm/file_info.dat
+# Purpose  : Setup file required for compiling this IP
+#
+# IMPORTANT: The path to the sources or include directories should be either relative to the
+# current directory or an absolute path.
+#
+# ----
+# TAGS
+# ----
+#
+# <SIMMODEL_NAME>              : Simulation model name
+# <LIBRARY_NAME>               : Simulation model library name
+# <LIBRARY_TYPE>               : Output shared library type (SystemC, CPP, C)
+# <OUTPUT_FORMAT>              : Output product of compiled library (library, executable)
+# <SYSTEMC_SOURCES>            : SystemC files, if any
+# <SYSTEMC_INCLUDE_DIRS>       : Include directories to be referenced for SystemC files
+# <OSCI_INCLUDE_DIRS>          : Include directories to be referenced for OSCI SystemC files
+# <CPP_SOURCES>                : C files (.cpp/.cxx), if any
+# <CPP_INCLUDE_DIRS>           : Include directories to be referenced for C files
+# <C_SOURCES>                  : C files (.c) files, if any
+# <C_INCLUDE_DIRS>             : Include directories to be referenced for C files
+# <EXPORTED_HEADERS>           : Header files to be exported
+# <G++_COMPILE_FLAGS>          : g++ compile options
+# <G++_COMPILE_OPTIMIZE_FLAGS> : g++ non-debug compile options
+# <G++_COMPILE_DEBUG_FLAGS>    : g++ debug compile options
+# <SYSTEMC_DEPENDENT_LIBS>     : SystemC libraries to be linked during elaboration
+# <CPP_DEPENDENT_LIBS>         : CPP libraries to be linked during elaboration
+# <C_DEPENDENT_LIBS>           : C libraries to be linked during elaboration
+# <SCCOM_COMPILE_FLAGS>        : sccom compile options (for ModelSim/Questa)
+# <MORE_XSC_OPTIONS>           : More XSC options (for Vivado Simulator)
+# <SIMULATOR_PLATFORM>         : Enable this model for the specified simulator and platform
+#
+#          Syntax: <simulator>:<platform>,<simulator>:<platform>,...,<simulator>:<platform>
+#
+#              <simulator> - name of simulator (xsim, questa, osci)
+#              <platform>  - compile for the specified platform (all, linux or windows)
+#
+# ---------------------
+# ENVIRONMENT VARIABLES
+# ---------------------
+#
+# $HDI_APPROOT               : Path to the Vivado root directory
+# $CXL_SIMMODEL_ROOT         : Path to the pre-compiled simulation model directory
+# $CXL_COMPILED_LIBRARY_DIR  : Path to the compiled simulation library directory
+# $BUILD_PLATFORM            : Build platform ID (<platform>.<build>)
+#                              <platform> : lnx64, win64
+#                              <build>    : o, d
+#############################################################################################
+<SIMMODEL_NAME>
+tlm_ext
+
+<LIBRARY_NAME>
+axi_tlm_ext_v1_0
+
+<LIBRARY_TYPE>
+SystemC
+
+<OUTPUT_FORMAT>
+library
+
+<SYSTEMC_SOURCES>
+./src/*.cxx
+
+<SYSTEMC_INCLUDE_DIRS>
+./include
+$CXL_COMPILED_LIBRARY_DIR/xtlm/include
+$CXL_COMPILED_LIBRARY_DIR/common_cpp_v1_0/include
+
+<OSCI_INCLUDE_DIRS>
+$HDI_APPROOT/data/osci_systemc/include
+
+<LDFLAGS>
+
+<LDLIBS>
+
+<CPP_DEPENDENT_LIBS>
+common_cpp_v1_0
+
+<G++_COMPILE_FLAGS>
+-fPIC -DSC_INCLUDE_DYNAMIC_PROCESSES
+
+<G++_COMPILE_OPTIMIZE_FLAGS>
+
+<G++_COMPILE_DEBUG_FLAGS>
+-g -O0
+
+<SCCOM_COMPILE_FLAGS>
+-std=c++14
+
+<MORE_XSC_OPTIONS>
+-v
+
+<EXPORTED_HEADERS>
+./
+
+<SIMULATOR_PLATFORM>
+xsim:all,questa:linux,xcelium:linux,vcs:linux,osci:linux,riviera:linux

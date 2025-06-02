@@ -1,0 +1,19 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/lib_srl_fifo_v1_0/hdl/lib_srl_fifo_v1_0_rfs.vhd:
+	errors: 0, warnings: 0
+LIB_SRL_FIFO_V1_0_2.CNTR_INCR_DECR_ADDN_F (entity):
+	streams: 13, words: 2992
+LIB_SRL_FIFO_V1_0_2.CNTR_INCR_DECR_ADDN_F:IMP (architecture):
+	streams: 4, words: 3308
+LIB_SRL_FIFO_V1_0_2.DYNSHREG_F (entity):
+	streams: 12, words: 3287
+LIB_SRL_FIFO_V1_0_2.DYNSHREG_F:BEHAVIORAL (architecture):
+	streams: 3, words: 1993
+LIB_SRL_FIFO_V1_0_2.SRL_FIFO_RBU_F (entity):
+	streams: 20, words: 4486
+LIB_SRL_FIFO_V1_0_2.SRL_FIFO_RBU_F:IMP (architecture):
+	streams: 4, words: 9331
+LIB_SRL_FIFO_V1_0_2.SRL_FIFO_F (entity):
+	streams: 16, words: 3343
+LIB_SRL_FIFO_V1_0_2.SRL_FIFO_F:IMP (architecture):
+	streams: 2, words: 4834

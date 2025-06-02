@@ -1,0 +1,11 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/fit_timer_v2_0/hdl/fit_timer_v2_0_vh_rfs.vhd:
+	errors: 0, warnings: 0
+FIT_TIMER_V2_0_10.DIVIDE_PART (entity):
+	streams: 7, words: 241
+FIT_TIMER_V2_0_10.DIVIDE_PART:VHDL_RTL (architecture):
+	streams: 3, words: 8443
+FIT_TIMER_V2_0_10.FIT_TIMER (entity):
+	streams: 8, words: 469
+FIT_TIMER_V2_0_10.FIT_TIMER:VHDL_RTL (architecture):
+	streams: 14, words: 22536

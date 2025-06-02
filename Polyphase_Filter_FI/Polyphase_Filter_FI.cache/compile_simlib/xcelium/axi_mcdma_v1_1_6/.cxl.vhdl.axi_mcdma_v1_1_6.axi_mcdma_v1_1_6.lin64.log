@@ -1,0 +1,139 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_mcdma_v1_1/hdl/axi_mcdma_v1_1_vh_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_MCDMA_V1_1_6.AXI_MCDMA_PKG (package):
+	streams: 1, words: 10713
+AXI_MCDMA_V1_1_6.AXI_MCDMA_PKG:BODY (package body):
+	streams: 5, words: 1083
+AXI_MCDMA_V1_1_6.AXI_MCDMA_RESET (entity):
+	streams: 25, words: 4005
+AXI_MCDMA_V1_1_6.AXI_MCDMA_RESET:IMPLEMENTATION (architecture):
+	streams: 8, words: 17492
+AXI_MCDMA_V1_1_6.AXI_MCDMA_RST_MODULE (entity):
+	streams: 45, words: 3006
+AXI_MCDMA_V1_1_6.AXI_MCDMA_RST_MODULE:IMPLEMENTATION (architecture):
+	streams: 5, words: 7491
+AXI_MCDMA_V1_1_6.AXI_MCDMA_LITE_IF (entity):
+	streams: 44, words: 9134
+AXI_MCDMA_V1_1_6.AXI_MCDMA_LITE_IF:IMPLEMENTATION (architecture):
+	streams: 14, words: 49783
+AXI_MCDMA_V1_1_6.AXI_MCDMA_REGISTER (entity):
+	streams: 82, words: 12619
+AXI_MCDMA_V1_1_6.AXI_MCDMA_REGISTER:IMPLEMENTATION (architecture):
+	streams: 1, words: 13743
+AXI_MCDMA_V1_1_6.AXI_MCDMA_COMMON_REGISTER (entity):
+	streams: 93, words: 11015
+AXI_MCDMA_V1_1_6.AXI_MCDMA_COMMON_REGISTER:IMPLEMENTATION (architecture):
+	streams: 1, words: 9269
+AXI_MCDMA_V1_1_6.AXI_MCDMA_S2MM_COMMON_REGISTER (entity):
+	streams: 91, words: 18856
+AXI_MCDMA_V1_1_6.AXI_MCDMA_S2MM_COMMON_REGISTER:IMPLEMENTATION (architecture):
+	streams: 1, words: 9027
+AXI_MCDMA_V1_1_6.AXI_MCDMA_MM2S_COMMON_REGISTER (entity):
+	streams: 99, words: 21637
+AXI_MCDMA_V1_1_6.AXI_MCDMA_MM2S_COMMON_REGISTER:IMPLEMENTATION (architecture):
+	streams: 1, words: 10262
+AXI_MCDMA_V1_1_6.AXI_MCDMA_READ_MUX (entity):
+	streams: 23, words: 3168
+AXI_MCDMA_V1_1_6.AXI_MCDMA_READ_MUX:IMPLEMENTATION (architecture):
+	streams: 1, words: 419
+AXI_MCDMA_V1_1_6.AXI_MCDMA_REG_MODULE (entity):
+	streams: 327, words: 94754
+AXI_MCDMA_V1_1_6.AXI_MCDMA_REG_MODULE:IMPLEMENTATION (architecture):
+	streams: 26, words: 276929
+AXI_MCDMA_V1_1_6.AXI_MCDMA_SKID_BUF (entity):
+	streams: 20, words: 3877
+AXI_MCDMA_V1_1_6.AXI_MCDMA_SKID_BUF:IMPLEMENTATION (architecture):
+	streams: 1, words: 8464
+AXI_MCDMA_V1_1_6.AXI_MCDMA_AFIFO_AUTORD (entity):
+	streams: 32, words: 6060
+AXI_MCDMA_V1_1_6.AXI_MCDMA_AFIFO_AUTORD:IMP (architecture):
+	streams: 4, words: 13553
+AXI_MCDMA_V1_1_6.AXI_MCDMA_PKT_DROP (entity):
+	streams: 26, words: 2038
+AXI_MCDMA_V1_1_6.AXI_MCDMA_PKT_DROP:IMPLEMENTATION (architecture):
+	streams: 1, words: 2958
+AXI_MCDMA_V1_1_6.AXI_MCDMA_S2MM_TDEST (entity):
+	streams: 70, words: 13207
+AXI_MCDMA_V1_1_6.AXI_MCDMA_S2MM_TDEST:IMPLEMENTATION (architecture):
+	streams: 33, words: 107345
+AXI_MCDMA_V1_1_6.AXI_MCDMA_SOFEOF_GEN (entity):
+	streams: 23, words: 2608
+AXI_MCDMA_V1_1_6.AXI_MCDMA_SOFEOF_GEN:IMPLEMENTATION (architecture):
+	streams: 2, words: 10655
+AXI_MCDMA_V1_1_6.AXI_MCDMA_SMPLE_SM (entity):
+	streams: 25, words: 3411
+AXI_MCDMA_V1_1_6.AXI_MCDMA_SMPLE_SM:IMPLEMENTATION (architecture):
+	streams: 1, words: 2688
+AXI_MCDMA_V1_1_6.AXI_MCDMA_MM2S_TDEST (entity):
+	streams: 25, words: 2049
+AXI_MCDMA_V1_1_6.AXI_MCDMA_MM2S_TDEST:IMPLEMENTATION (architecture):
+	streams: 5, words: 18162
+AXI_MCDMA_V1_1_6.AXI_MCDMA_MM2S_PRIORITY (entity):
+	streams: 41, words: 5403
+AXI_MCDMA_V1_1_6.AXI_MCDMA_MM2S_PRIORITY:IMPLEMENTATION (architecture):
+	streams: 1, words: 6020
+AXI_MCDMA_V1_1_6.AXI_MCDMA_MM2S_WRR (entity):
+	streams: 41, words: 5403
+AXI_MCDMA_V1_1_6.AXI_MCDMA_MM2S_WRR:IMPLEMENTATION (architecture):
+	streams: 3, words: 15104
+AXI_MCDMA_V1_1_6.AXI_MCDMA_MM2S_SG_IF (entity):
+	streams: 88, words: 14545
+AXI_MCDMA_V1_1_6.AXI_MCDMA_MM2S_SG_IF:IMPLEMENTATION (architecture):
+	streams: 4, words: 32284
+AXI_MCDMA_V1_1_6.AXI_MCDMA_MM2S_SM (entity):
+	streams: 32, words: 2735
+AXI_MCDMA_V1_1_6.AXI_MCDMA_MM2S_SM:IMPLEMENTATION (architecture):
+	streams: 1, words: 3466
+AXI_MCDMA_V1_1_6.AXI_MCDMA_MM2S_CMDSTS_IF (entity):
+	streams: 31, words: 3074
+AXI_MCDMA_V1_1_6.AXI_MCDMA_MM2S_CMDSTS_IF:IMPLEMENTATION (architecture):
+	streams: 1, words: 336
+AXI_MCDMA_V1_1_6.AXI_MCDMA_MM2S_STS_MNGR (entity):
+	streams: 17, words: 256
+AXI_MCDMA_V1_1_6.AXI_MCDMA_MM2S_STS_MNGR:IMPLEMENTATION (architecture):
+	streams: 2, words: 3010
+AXI_MCDMA_V1_1_6.AXI_MCDMA_MM2S_CNTRL_STRM (entity):
+	streams: 24, words: 3030
+AXI_MCDMA_V1_1_6.AXI_MCDMA_MM2S_CNTRL_STRM:IMPLEMENTATION (architecture):
+	streams: 5, words: 21924
+AXI_MCDMA_V1_1_6.AXI_MCDMA_MM2S_MNGR (entity):
+	streams: 131, words: 17890
+AXI_MCDMA_V1_1_6.AXI_MCDMA_MM2S_MNGR:IMPLEMENTATION (architecture):
+	streams: 10, words: 52922
+AXI_MCDMA_V1_1_6.AXI_MCDMA_STBS_SET (entity):
+	streams: 7, words: 1298
+AXI_MCDMA_V1_1_6.AXI_MCDMA_STBS_SET:IMPLEMENTATION (architecture):
+	streams: 3, words: 22395
+AXI_MCDMA_V1_1_6.AXI_MCDMA_S2MM_SG_IF (entity):
+	streams: 94, words: 16599
+AXI_MCDMA_V1_1_6.AXI_MCDMA_S2MM_SG_IF:IMPLEMENTATION (architecture):
+	streams: 4, words: 35750
+AXI_MCDMA_V1_1_6.AXI_MCDMA_S2MM_SM (entity):
+	streams: 39, words: 3815
+AXI_MCDMA_V1_1_6.AXI_MCDMA_S2MM_SM:IMPLEMENTATION (architecture):
+	streams: 1, words: 4815
+AXI_MCDMA_V1_1_6.AXI_MCDMA_S2MM_CMDSTS_IF (entity):
+	streams: 57, words: 6872
+AXI_MCDMA_V1_1_6.AXI_MCDMA_S2MM_CMDSTS_IF:IMPLEMENTATION (architecture):
+	streams: 5, words: 19388
+AXI_MCDMA_V1_1_6.AXI_MCDMA_S2MM_STS_MNGR (entity):
+	streams: 17, words: 256
+AXI_MCDMA_V1_1_6.AXI_MCDMA_S2MM_STS_MNGR:IMPLEMENTATION (architecture):
+	streams: 2, words: 3010
+AXI_MCDMA_V1_1_6.AXI_MCDMA_S2MM_STS_STRM (entity):
+	streams: 33, words: 4061
+AXI_MCDMA_V1_1_6.AXI_MCDMA_S2MM_STS_STRM:IMPLEMENTATION (architecture):
+	streams: 9, words: 34868
+AXI_MCDMA_V1_1_6.AXI_MCDMA_S2MM_MNGR (entity):
+	streams: 112, words: 13510
+AXI_MCDMA_V1_1_6.AXI_MCDMA_S2MM_MNGR:IMPLEMENTATION (architecture):
+	streams: 6, words: 39162
+AXI_MCDMA_V1_1_6.AXI_MCDMA_CMD_SPLIT (entity):
+	streams: 29, words: 4490
+AXI_MCDMA_V1_1_6.AXI_MCDMA_CMD_SPLIT:IMPLEMENTATION (architecture):
+	streams: 4, words: 13238
+AXI_MCDMA_V1_1_6.AXI_MCDMA (entity):
+	streams: 295, words: 39009
+AXI_MCDMA_V1_1_6.AXI_MCDMA:IMPLEMENTATION (architecture):
+	streams: 35, words: 369230

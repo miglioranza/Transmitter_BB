@@ -1,0 +1,41 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/uhdsdi_gt_v2_0/hdl/nidru/uhdsdi_gt_v2_0_bs_flex_v_2.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/uhdsdi_gt_v2_0/hdl/nidru/uhdsdi_gt_v2_0_nidru_20_v_7.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/uhdsdi_gt_v2_0/hdl/nidru/uhdsdi_gt_v2_0_nidru_20_wrapper.vhd:
+	errors: 0, warnings: 0
+	streams: 17, words: 2442
+	streams: 1, words: 12906
+	streams: 18, words: 1145
+	streams: 1, words: 775
+	streams: 20, words: 2812
+	streams: 1, words: 8908
+	streams: 46, words: 6246
+	streams: 1, words: 18044
+	streams: 15, words: 1711
+	streams: 1, words: 1013
+	streams: 12, words: 1273
+	streams: 1, words: 458
+	streams: 24, words: 2549
+	streams: 1, words: 2838
+	streams: 21, words: 2163
+	streams: 6, words: 22201
+	streams: 17, words: 1937
+	streams: 5, words: 13009
+	streams: 9, words: 1271
+	streams: 1, words: 6140
+	streams: 12, words: 1237
+	streams: 1, words: 8820
+	streams: 9, words: 1221
+	streams: 1, words: 200
+	streams: 12, words: 1237
+	streams: 1, words: 5112
+	streams: 24, words: 2544
+	streams: 1, words: 2324
+	streams: 19, words: 2072
+	streams: 6, words: 13343
+	streams: 16, words: 1870
+	streams: 9, words: 19202
+	streams: 47, words: 5450
+	streams: 1, words: 6309

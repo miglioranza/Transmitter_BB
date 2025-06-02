@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -work trace_s2mm_v1_2_0 -f /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.cache/compile_simlib/xcelium/trace_s2mm_v1_2_0/.cxl.verilog.trace_s2mm_v1_2_0.trace_s2mm_v1_2_0.lin64.cmf

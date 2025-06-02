@@ -1,0 +1,43 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_uart16550_v2_0/hdl/axi_uart16550_v2_0_vh_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_UART16550_V2_0_27.RX_FIFO_CONTROL (entity):
+	streams: 18, words: 1119
+AXI_UART16550_V2_0_27.RX_FIFO_CONTROL:IMPLEMENTATION (architecture):
+	streams: 1, words: 1089
+AXI_UART16550_V2_0_27.XUART_TX_LOAD_SM (entity):
+	streams: 11, words: 653
+AXI_UART16550_V2_0_27.XUART_TX_LOAD_SM:IMPLEMENTATION (architecture):
+	streams: 1, words: 856
+AXI_UART16550_V2_0_27.TX_FIFO_BLOCK (entity):
+	streams: 12, words: 810
+AXI_UART16550_V2_0_27.TX_FIFO_BLOCK:IMPLEMENTATION (architecture):
+	streams: 2, words: 4095
+AXI_UART16550_V2_0_27.TX16550 (entity):
+	streams: 16, words: 951
+AXI_UART16550_V2_0_27.TX16550:IMPLEMENTATION (architecture):
+	streams: 1, words: 1301
+AXI_UART16550_V2_0_27.RX_FIFO_BLOCK (entity):
+	streams: 19, words: 1143
+AXI_UART16550_V2_0_27.RX_FIFO_BLOCK:IMPLEMENTATION (architecture):
+	streams: 3, words: 5575
+AXI_UART16550_V2_0_27.RX16550 (entity):
+	streams: 18, words: 975
+AXI_UART16550_V2_0_27.RX16550:IMPLEMENTATION (architecture):
+	streams: 1, words: 1301
+AXI_UART16550_V2_0_27.UART16550 (entity):
+	streams: 43, words: 1673
+AXI_UART16550_V2_0_27.UART16550:IMPLEMENTATION (architecture):
+	streams: 7, words: 17182
+AXI_UART16550_V2_0_27.IPIC_IF (entity):
+	streams: 11, words: 143
+AXI_UART16550_V2_0_27.IPIC_IF:IMP (architecture):
+	streams: 1, words: 419
+AXI_UART16550_V2_0_27.XUART (entity):
+	streams: 41, words: 2866
+AXI_UART16550_V2_0_27.XUART:IMP (architecture):
+	streams: 5, words: 7457
+AXI_UART16550_V2_0_27.AXI_UART16550 (entity):
+	streams: 59, words: 4112
+AXI_UART16550_V2_0_27.AXI_UART16550:RTL (architecture):
+	streams: 3, words: 20935

@@ -3,17 +3,6 @@
 	"modules": {
 		"Design_2": {
 			"proto_instances": {
-				"/Scrambler_32bits_0/S_AXIS": {
-					"interface": "xilinx.com:interface:axis:1.0",
-					"ports": {
-						"ACLK": { "actual": "clk"},
-						"ARESETN": { "actual": "rst"},
-						"TDATA": { "actual": "data_in"},
-						"TLAST": { "actual": "data_in_last"},
-						"TREADY": { "actual": "data_out_ready"},
-						"TVALID": { "actual": "data_in_valid"}
-					}
-				}
 			}
 		}
 	}

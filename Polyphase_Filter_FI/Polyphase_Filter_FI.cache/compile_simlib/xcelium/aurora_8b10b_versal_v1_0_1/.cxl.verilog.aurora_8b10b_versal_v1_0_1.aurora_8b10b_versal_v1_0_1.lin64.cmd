@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -work aurora_8b10b_versal_v1_0_1 -f /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.cache/compile_simlib/xcelium/aurora_8b10b_versal_v1_0_1/.cxl.verilog.aurora_8b10b_versal_v1_0_1.aurora_8b10b_versal_v1_0_1.lin64.cmf

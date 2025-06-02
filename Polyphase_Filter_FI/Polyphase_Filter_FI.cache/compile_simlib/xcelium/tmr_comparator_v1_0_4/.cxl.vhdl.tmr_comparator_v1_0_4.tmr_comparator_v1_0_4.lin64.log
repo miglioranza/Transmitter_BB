@@ -1,0 +1,51 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/tmr_comparator_v1_0/hdl/tmr_comparator_v1_0_vh_rfs.vhd:
+	errors: 0, warnings: 0
+TMR_COMPARATOR_V1_0_4.COMPARATOR (entity):
+	streams: 16, words: 5480
+TMR_COMPARATOR_V1_0_4.COMPARATOR:IMP (architecture):
+	streams: 1, words: 2534
+TMR_COMPARATOR_V1_0_4.LMB_COMPARATOR (entity):
+	streams: 30, words: 7728
+TMR_COMPARATOR_V1_0_4.LMB_COMPARATOR:IMP (architecture):
+	streams: 3, words: 22605
+TMR_COMPARATOR_V1_0_4.S_LMB_COMPARATOR (entity):
+	streams: 23, words: 4010
+TMR_COMPARATOR_V1_0_4.S_LMB_COMPARATOR:IMP (architecture):
+	streams: 3, words: 15965
+TMR_COMPARATOR_V1_0_4.BRAM_COMPARATOR (entity):
+	streams: 27, words: 9171
+TMR_COMPARATOR_V1_0_4.BRAM_COMPARATOR:IMP (architecture):
+	streams: 3, words: 22165
+TMR_COMPARATOR_V1_0_4.AXI_COMPARATOR (entity):
+	streams: 163, words: 31458
+TMR_COMPARATOR_V1_0_4.AXI_COMPARATOR:IMP (architecture):
+	streams: 3, words: 117797
+TMR_COMPARATOR_V1_0_4.S_AXI_COMPARATOR (entity):
+	streams: 77, words: 17476
+TMR_COMPARATOR_V1_0_4.S_AXI_COMPARATOR:IMP (architecture):
+	streams: 3, words: 50064
+TMR_COMPARATOR_V1_0_4.S_AXIS_COMPARATOR (entity):
+	streams: 12, words: 2054
+TMR_COMPARATOR_V1_0_4.S_AXIS_COMPARATOR:IMP (architecture):
+	streams: 3, words: 7840
+TMR_COMPARATOR_V1_0_4.M_AXIS_COMPARATOR (entity):
+	streams: 42, words: 13324
+TMR_COMPARATOR_V1_0_4.M_AXIS_COMPARATOR:IMP (architecture):
+	streams: 3, words: 40172
+TMR_COMPARATOR_V1_0_4.TRACE_COMPARATOR (entity):
+	streams: 95, words: 14407
+TMR_COMPARATOR_V1_0_4.TRACE_COMPARATOR:IMP (architecture):
+	streams: 3, words: 53846
+TMR_COMPARATOR_V1_0_4.INTERRUPT_COMPARATOR (entity):
+	streams: 14, words: 1977
+TMR_COMPARATOR_V1_0_4.INTERRUPT_COMPARATOR:IMP (architecture):
+	streams: 3, words: 7999
+TMR_COMPARATOR_V1_0_4.TMR_TEST (entity):
+	streams: 22, words: 3957
+TMR_COMPARATOR_V1_0_4.TMR_TEST:IMP (architecture):
+	streams: 1, words: 5944
+TMR_COMPARATOR_V1_0_4.TMR_COMPARATOR (entity):
+	streams: 1081, words: 251756
+TMR_COMPARATOR_V1_0_4.TMR_COMPARATOR:IMP (architecture):
+	streams: 85, words: 1194107

@@ -1,0 +1,11 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/tmr_inject_v1_0/hdl/tmr_inject_v1_0_vh_rfs.vhd:
+	errors: 0, warnings: 0
+TMR_INJECT_V1_0_4.PSELECT_MASK (entity):
+	streams: 10, words: 1293
+TMR_INJECT_V1_0_4.PSELECT_MASK:IMP (architecture):
+	streams: 3, words: 2439
+TMR_INJECT_V1_0_4.TMR_INJECT (entity):
+	streams: 62, words: 12103
+TMR_INJECT_V1_0_4.TMR_INJECT:IMP (architecture):
+	streams: 2, words: 9305

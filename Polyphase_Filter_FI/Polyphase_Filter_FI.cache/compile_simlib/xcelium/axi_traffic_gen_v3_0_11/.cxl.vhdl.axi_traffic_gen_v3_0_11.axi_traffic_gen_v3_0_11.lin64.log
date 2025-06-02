@@ -1,0 +1,7 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_traffic_gen_v3_0/hdl/axi_traffic_gen_v3_0_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_TRAFFIC_GEN_V3_0_11.AXI_TRAFFIC_GEN_V3_0_11_BMG_WRAP (entity):
+	streams: 73, words: 12098
+AXI_TRAFFIC_GEN_V3_0_11.AXI_TRAFFIC_GEN_V3_0_11_BMG_WRAP:IMPLEMENTATION (architecture):
+	streams: 2, words: 9815

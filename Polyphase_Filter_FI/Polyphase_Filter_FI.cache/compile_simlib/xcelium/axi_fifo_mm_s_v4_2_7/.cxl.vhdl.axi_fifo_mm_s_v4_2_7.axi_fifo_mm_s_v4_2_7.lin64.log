@@ -1,0 +1,43 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_fifo_mm_s_v4_2/hdl/axi_fifo_mm_s_v4_2_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_FIFO_MM_S_V4_2_7.AXI_FIFO_MM_S_PKG (package):
+	streams: 1, words: 470
+AXI_FIFO_MM_S_V4_2_7.AXI_FIFO_MM_S_PKG:BODY (package body):
+	streams: 6, words: 2112
+AXI_FIFO_MM_S_V4_2_7.AXI_WRITE_FSM (entity):
+	streams: 16, words: 881
+AXI_FIFO_MM_S_V4_2_7.AXI_WRITE_FSM:AXI_WRITE_FSM_ARCH (architecture):
+	streams: 1, words: 1359
+AXI_FIFO_MM_S_V4_2_7.AXI_WRITE_WRAPPER (entity):
+	streams: 32, words: 5621
+AXI_FIFO_MM_S_V4_2_7.AXI_WRITE_WRAPPER:AXI_WRITE_WRAP_ARCH (architecture):
+	streams: 2, words: 12604
+AXI_FIFO_MM_S_V4_2_7.AXI_READ_FSM (entity):
+	streams: 22, words: 1450
+AXI_FIFO_MM_S_V4_2_7.AXI_READ_FSM:AXI_READ_FSM_ARCH (architecture):
+	streams: 1, words: 2645
+AXI_FIFO_MM_S_V4_2_7.AXI_READ_WRAPPER (entity):
+	streams: 35, words: 5794
+AXI_FIFO_MM_S_V4_2_7.AXI_READ_WRAPPER:AXI_READ_WRAPPER_ARCH (architecture):
+	streams: 2, words: 13410
+AXI_FIFO_MM_S_V4_2_7.AXI_WRAPPER (entity):
+	streams: 66, words: 14099
+AXI_FIFO_MM_S_V4_2_7.AXI_WRAPPER:XILINX (architecture):
+	streams: 3, words: 16098
+AXI_FIFO_MM_S_V4_2_7.AXIS_FG (entity):
+	streams: 54, words: 13752
+AXI_FIFO_MM_S_V4_2_7.AXIS_FG:STRUCTURE (architecture):
+	streams: 1, words: 35130
+AXI_FIFO_MM_S_V4_2_7.FIFO (entity):
+	streams: 64, words: 14519
+AXI_FIFO_MM_S_V4_2_7.FIFO:STRUCTURE (architecture):
+	streams: 2, words: 33202
+AXI_FIFO_MM_S_V4_2_7.IPIC2AXI_S (entity):
+	streams: 87, words: 17189
+AXI_FIFO_MM_S_V4_2_7.IPIC2AXI_S:BEH (architecture):
+	streams: 3, words: 57373
+AXI_FIFO_MM_S_V4_2_7.AXI_FIFO_MM_S (entity):
+	streams: 167, words: 38531
+AXI_FIFO_MM_S_V4_2_7.AXI_FIFO_MM_S:STRUCTURE (architecture):
+	streams: 4, words: 58171

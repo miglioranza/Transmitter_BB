@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work lte_3gpp_channel_estimator_v2_0_19 -f /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.cache/compile_simlib/xcelium/lte_3gpp_channel_estimator_v2_0_19/.cxl.vhdl.lte_3gpp_channel_estimator_v2_0_19.lte_3gpp_channel_estimator_v2_0_19.lin64.cmf

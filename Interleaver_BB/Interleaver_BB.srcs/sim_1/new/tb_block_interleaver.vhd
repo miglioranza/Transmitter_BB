@@ -45,12 +45,14 @@ architecture Behavioral of tb_block_interleaver is
     signal data_in_ready    : std_logic ;
     signal data_out_ready   : std_logic ;
     signal code_rate        : std_logic_vector(1 downto 0) := (others => '0');
-    signal curr_code        : std_logic_vector(1 downto 0) := (others => '0');
-    signal signal_field     : std_logic := '0' ; --Signal that notify if the imput data is the SF or the payload 
+--    signal curr_code        : std_logic_vector(1 downto 0) := (others => '0');
+--    signal signal_field     : std_logic := '0' ; --Signal that notify if the imput data is the SF or the payload 
     signal data_in_last     : std_logic := '0';
+    signal end_of_frame     : std_logic := '0';
+    signal last_frame_to_cu : std_logic := '0' ; 
     -- Test control
     signal sim_done     : std_logic := '0';
-
+    signal data_out_last : std_logic := '0'; 
     -- Clock generation
        begin
    clk <= not clk after CLK_PERIOD / 2;
@@ -66,13 +68,16 @@ architecture Behavioral of tb_block_interleaver is
             data_in            => data_in ,
             write_en           => write_en,
             data_out           => data_out,
-            data_out_ready     => data_out_ready,     
+            data_out_ready     => data_out_ready,
+            end_of_frame       => end_of_frame ,    
             data_in_ready      => data_in_ready,     
             read_valid         => read_valid,
             code_rate          => code_rate ,
-            signal_field       => signal_field,
-            data_in_last       => data_in_last, --This port defines the last word of each block 
-            current_code_rate  =>  curr_code
+            data_out_last      => data_out_last,
+            last_frame_to_cu   => last_frame_to_cu, 
+--            signal_field       => signal_field,
+            data_in_last       => data_in_last --This port defines the last word of each block 
+--            current_code_rate  =>  curr_code
 
         );
 

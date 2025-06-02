@@ -1,0 +1,38 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/mailbox_v2_1/hdl/mailbox_v2_1_vh_rfs.vhd:
+  attribute ASYNC_REG of full                 : signal is "TRUE";
+                            |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/mailbox_v2_1/hdl/mailbox_v2_1_vh_rfs.vhd,1197|28): illegal entity designator [5.1].
+	errors: 0, warnings: 1
+MAILBOX_V2_1_15.SRL_FIFO (entity):
+	streams: 15, words: 2874
+MAILBOX_V2_1_15.SRL_FIFO:IMP (architecture):
+	streams: 3, words: 6330
+MAILBOX_V2_1_15.SYNC_BRAM (entity):
+	streams: 17, words: 4775
+MAILBOX_V2_1_15.SYNC_BRAM:SYN (architecture):
+	streams: 3, words: 4372
+MAILBOX_V2_1_15.SYNC_DPRAM (entity):
+	streams: 15, words: 4658
+MAILBOX_V2_1_15.SYNC_DPRAM:SYN (architecture):
+	streams: 1, words: 1630
+MAILBOX_V2_1_15.SYNC_FIFO (entity):
+	streams: 17, words: 3038
+MAILBOX_V2_1_15.SYNC_FIFO:VHDL_RTL (architecture):
+	streams: 2, words: 16716
+MAILBOX_V2_1_15.ASYNC_FIFO (entity):
+	streams: 21, words: 3967
+MAILBOX_V2_1_15.ASYNC_FIFO:IMP (architecture):
+	streams: 9, words: 34953
+MAILBOX_V2_1_15.FSL_V20 (entity):
+	streams: 31, words: 4127
+MAILBOX_V2_1_15.FSL_V20:IMP (architecture):
+	streams: 1, words: 9700
+MAILBOX_V2_1_15.IF_DECODE (entity):
+	streams: 59, words: 9980
+MAILBOX_V2_1_15.IF_DECODE:IMP (architecture):
+	streams: 2, words: 25695
+MAILBOX_V2_1_15.MAILBOX (entity):
+	streams: 102, words: 16268
+MAILBOX_V2_1_15.MAILBOX:IMP (architecture):
+	streams: 2, words: 34234

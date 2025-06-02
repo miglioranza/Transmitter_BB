@@ -1,0 +1,314 @@
+
+*** Running vivado
+    with args -log Pipelined_Polyphase_Filter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Pipelined_Polyphase_Filter.tcl
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source Pipelined_Polyphase_Filter.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3069.703 ; gain = 2.016 ; free physical = 49705 ; free virtual = 112422
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/Polyphase_Filter_FI'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/miglioranza/Polyphase_Filter_FI' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.runs/synth_1'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.srcs/utils_1/imports/synth_1/Pipelined_Polyphase_Filter.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.srcs/utils_1/imports/synth_1/Pipelined_Polyphase_Filter.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top Pipelined_Polyphase_Filter -part xczu28dr-ffvg1517-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu28dr'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu28dr'
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2155660
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3099.910 ; gain = 0.000 ; free physical = 49411 ; free virtual = 112128
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Pipelined_Polyphase_Filter' [/home/miglioranza/Multi-rate_Filter/Pipelined_Polyphase_Filter.vhd:52]
+WARNING: [Synth 8-6014] Unused sequential element tmp_I_reg was removed.  [/home/miglioranza/Multi-rate_Filter/Pipelined_Polyphase_Filter.vhd:147]
+WARNING: [Synth 8-6014] Unused sequential element tmp_Q_reg was removed.  [/home/miglioranza/Multi-rate_Filter/Pipelined_Polyphase_Filter.vhd:148]
+WARNING: [Synth 8-6014] Unused sequential element tmp_reg was removed.  [/home/miglioranza/Multi-rate_Filter/Pipelined_Polyphase_Filter.vhd:152]
+INFO: [Synth 8-256] done synthesizing module 'Pipelined_Polyphase_Filter' (1#1) [/home/miglioranza/Multi-rate_Filter/Pipelined_Polyphase_Filter.vhd:52]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3099.910 ; gain = 0.000 ; free physical = 48532 ; free virtual = 111250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3099.910 ; gain = 0.000 ; free physical = 48445 ; free virtual = 111162
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu28dr-ffvg1517-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+INFO: [Device 21-403] Loading part xczu28dr-ffvg1517-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3109.914 ; gain = 10.004 ; free physical = 48444 ; free virtual = 111162
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul_reg_Q_reg[0]' and it is trimmed from '36' to '16' bits. [/home/miglioranza/Multi-rate_Filter/Pipelined_Polyphase_Filter.vhd:132]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul_reg_Q_reg[1]' and it is trimmed from '36' to '16' bits. [/home/miglioranza/Multi-rate_Filter/Pipelined_Polyphase_Filter.vhd:132]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul_reg_Q_reg[2]' and it is trimmed from '36' to '16' bits. [/home/miglioranza/Multi-rate_Filter/Pipelined_Polyphase_Filter.vhd:132]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul_reg_Q_reg[3]' and it is trimmed from '36' to '16' bits. [/home/miglioranza/Multi-rate_Filter/Pipelined_Polyphase_Filter.vhd:132]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul_reg_Q_reg[4]' and it is trimmed from '36' to '16' bits. [/home/miglioranza/Multi-rate_Filter/Pipelined_Polyphase_Filter.vhd:132]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul_reg_Q_reg[5]' and it is trimmed from '36' to '16' bits. [/home/miglioranza/Multi-rate_Filter/Pipelined_Polyphase_Filter.vhd:132]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul_reg_Q_reg[6]' and it is trimmed from '36' to '16' bits. [/home/miglioranza/Multi-rate_Filter/Pipelined_Polyphase_Filter.vhd:132]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul_reg_Q_reg[7]' and it is trimmed from '36' to '16' bits. [/home/miglioranza/Multi-rate_Filter/Pipelined_Polyphase_Filter.vhd:132]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul_reg_Q_reg[8]' and it is trimmed from '36' to '16' bits. [/home/miglioranza/Multi-rate_Filter/Pipelined_Polyphase_Filter.vhd:132]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul_reg_Q_reg[9]' and it is trimmed from '36' to '16' bits. [/home/miglioranza/Multi-rate_Filter/Pipelined_Polyphase_Filter.vhd:132]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul_reg_Q_reg[10]' and it is trimmed from '36' to '16' bits. [/home/miglioranza/Multi-rate_Filter/Pipelined_Polyphase_Filter.vhd:132]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul_reg_Q_reg[11]' and it is trimmed from '36' to '16' bits. [/home/miglioranza/Multi-rate_Filter/Pipelined_Polyphase_Filter.vhd:132]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul_reg_Q_reg[12]' and it is trimmed from '36' to '16' bits. [/home/miglioranza/Multi-rate_Filter/Pipelined_Polyphase_Filter.vhd:132]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul_reg_Q_reg[13]' and it is trimmed from '36' to '16' bits. [/home/miglioranza/Multi-rate_Filter/Pipelined_Polyphase_Filter.vhd:132]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul_reg_Q_reg[14]' and it is trimmed from '36' to '16' bits. [/home/miglioranza/Multi-rate_Filter/Pipelined_Polyphase_Filter.vhd:132]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3109.914 ; gain = 10.004 ; free physical = 48388 ; free virtual = 111106
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	               36 Bit    Registers := 17    
+	               16 Bit    Registers := 23    
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   8 Input   15 Bit        Muxes := 1     
+	   5 Input   15 Bit        Muxes := 3     
+	   2 Input    4 Bit        Muxes := 3     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 4272 (col length:192)
+BRAMs: 2160 (col length: RAMB18 192 RAMB36 96)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP mul_reg_I_reg[15]0, operation Mode is: A2*B.
+DSP Report: register data_input_I_reg is absorbed into DSP mul_reg_I_reg[15]0.
+DSP Report: operator mul_reg_I_reg[15]0 is absorbed into DSP mul_reg_I_reg[15]0.
+DSP Report: Generating DSP mul_reg_I_reg[11]0, operation Mode is: C+A2*B.
+DSP Report: register data_input_I_reg is absorbed into DSP mul_reg_I_reg[11]0.
+DSP Report: operator mul_reg_I_reg[11]0 is absorbed into DSP mul_reg_I_reg[11]0.
+DSP Report: operator mul_reg_I_reg[11]1 is absorbed into DSP mul_reg_I_reg[11]0.
+DSP Report: Generating DSP mul_reg_I_reg[7]0, operation Mode is: C+A2*B.
+DSP Report: register data_input_I_reg is absorbed into DSP mul_reg_I_reg[7]0.
+DSP Report: operator mul_reg_I_reg[7]0 is absorbed into DSP mul_reg_I_reg[7]0.
+DSP Report: operator mul_reg_I_reg[7]1 is absorbed into DSP mul_reg_I_reg[7]0.
+DSP Report: Generating DSP mul_reg_I_reg[3]0, operation Mode is: C+A2*B.
+DSP Report: register data_input_I_reg is absorbed into DSP mul_reg_I_reg[3]0.
+DSP Report: operator mul_reg_I_reg[3]0 is absorbed into DSP mul_reg_I_reg[3]0.
+DSP Report: operator mul_reg_I_reg[3]1 is absorbed into DSP mul_reg_I_reg[3]0.
+DSP Report: Generating DSP mul_reg_Q_reg[15]0, operation Mode is: A2*B.
+DSP Report: register data_input_Q_reg is absorbed into DSP mul_reg_Q_reg[15]0.
+DSP Report: operator mul_reg_Q_reg[15]0 is absorbed into DSP mul_reg_Q_reg[15]0.
+DSP Report: Generating DSP mul_reg_Q_reg[11], operation Mode is: (C'+A2*B)'.
+DSP Report: register data_input_Q_reg is absorbed into DSP mul_reg_Q_reg[11].
+DSP Report: register mul_reg_Q_reg[12] is absorbed into DSP mul_reg_Q_reg[11].
+DSP Report: register mul_reg_Q_reg[11] is absorbed into DSP mul_reg_Q_reg[11].
+DSP Report: operator mul_reg_Q_reg[11]0 is absorbed into DSP mul_reg_Q_reg[11].
+DSP Report: operator mul_reg_Q_reg[11]1 is absorbed into DSP mul_reg_Q_reg[11].
+DSP Report: Generating DSP mul_reg_Q_reg[7], operation Mode is: (C'+A2*B)'.
+DSP Report: register mul_reg_Q_reg[8] is absorbed into DSP mul_reg_Q_reg[7].
+DSP Report: register data_input_Q_reg is absorbed into DSP mul_reg_Q_reg[7].
+DSP Report: register mul_reg_Q_reg[7] is absorbed into DSP mul_reg_Q_reg[7].
+DSP Report: operator mul_reg_Q_reg[7]0 is absorbed into DSP mul_reg_Q_reg[7].
+DSP Report: operator mul_reg_Q_reg[7]1 is absorbed into DSP mul_reg_Q_reg[7].
+DSP Report: Generating DSP mul_reg_Q_reg[3], operation Mode is: (C'+A2*B)'.
+DSP Report: register mul_reg_Q_reg[4] is absorbed into DSP mul_reg_Q_reg[3].
+DSP Report: register data_input_Q_reg is absorbed into DSP mul_reg_Q_reg[3].
+DSP Report: register mul_reg_Q_reg[3] is absorbed into DSP mul_reg_Q_reg[3].
+DSP Report: operator mul_reg_Q_reg[3]0 is absorbed into DSP mul_reg_Q_reg[3].
+DSP Report: operator mul_reg_Q_reg[3]1 is absorbed into DSP mul_reg_Q_reg[3].
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 3442.516 ; gain = 342.605 ; free physical = 48453 ; free virtual = 111173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++---------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Pipelined_Polyphase_Filter | A2*B        | 16     | 16     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|Pipelined_Polyphase_Filter | C+A2*B      | 16     | 16     | 36     | -      | 36     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|Pipelined_Polyphase_Filter | C+A2*B      | 16     | 16     | 36     | -      | 36     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|Pipelined_Polyphase_Filter | C+A2*B      | 16     | 16     | 36     | -      | 36     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|Pipelined_Polyphase_Filter | A2*B        | 16     | 16     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|Pipelined_Polyphase_Filter | (C'+A2*B)'  | 16     | 16     | 16     | -      | 16     | 1    | 0    | 1    | -    | -     | 0    | 1    | 
+|Pipelined_Polyphase_Filter | (C'+A2*B)'  | 16     | 16     | 16     | -      | 16     | 1    | 0    | 1    | -    | -     | 0    | 1    | 
+|Pipelined_Polyphase_Filter | (C'+A2*B)'  | 16     | 16     | 16     | -      | 16     | 1    | 0    | 1    | -    | -     | 0    | 1    | 
++---------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 3445.484 ; gain = 345.574 ; free physical = 48451 ; free virtual = 111172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 3453.492 ; gain = 353.582 ; free physical = 48453 ; free virtual = 111173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3453.492 ; gain = 353.582 ; free physical = 48452 ; free virtual = 111173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3453.492 ; gain = 353.582 ; free physical = 48452 ; free virtual = 111173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3453.492 ; gain = 353.582 ; free physical = 48452 ; free virtual = 111173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3453.492 ; gain = 353.582 ; free physical = 48452 ; free virtual = 111173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3453.492 ; gain = 353.582 ; free physical = 48452 ; free virtual = 111173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3453.492 ; gain = 353.582 ; free physical = 48452 ; free virtual = 111173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++---------------------------+--------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name                | RTL Name           | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++---------------------------+--------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Pipelined_Polyphase_Filter | data_out_Q_reg[15] | 4      | 16    | NO           | NO                 | YES               | 16     | 0       | 
++---------------------------+--------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |BUFG            |     1|
+|2     |DSP48E2         |     4|
+|3     |DSP_ALU         |     4|
+|4     |DSP_A_B_DATA    |     4|
+|5     |DSP_C_DATA      |     4|
+|6     |DSP_MULTIPLIER  |     4|
+|7     |DSP_M_DATA      |     4|
+|8     |DSP_OUTPUT      |     4|
+|9     |DSP_PREADD      |     4|
+|10    |DSP_PREADD_DATA |     4|
+|11    |LUT1            |     1|
+|12    |LUT2            |   125|
+|13    |LUT3            |    15|
+|14    |LUT5            |     1|
+|15    |LUT6            |     1|
+|16    |SRL16E          |    16|
+|17    |FDCE            |   382|
+|18    |FDRE            |   120|
+|19    |IBUF            |    36|
+|20    |OBUF            |    34|
++------+----------------+------+
+
+Report Instance Areas: 
++------+-----------------------+-------------------------------+------+
+|      |Instance               |Module                         |Cells |
++------+-----------------------+-------------------------------+------+
+|1     |top                    |                               |   768|
+|2     |  \mul_reg_I_reg[15]0  |\mul_reg_I_reg[15]0_funnel     |     8|
+|3     |  \mul_reg_I_reg[11]0  |\mul_reg_I_reg[11]0_funnel     |     8|
+|4     |  \mul_reg_I_reg[7]0   |\mul_reg_I_reg[11]0_funnel__1  |     8|
+|5     |  \mul_reg_I_reg[3]0   |\mul_reg_I_reg[11]0_funnel__2  |     8|
++------+-----------------------+-------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 3453.492 ; gain = 353.582 ; free physical = 48452 ; free virtual = 111173
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 19 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 3453.492 ; gain = 353.582 ; free physical = 48454 ; free virtual = 111175
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 3453.500 ; gain = 353.582 ; free physical = 48454 ; free virtual = 111175
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3465.461 ; gain = 0.000 ; free physical = 48547 ; free virtual = 111268
+INFO: [Netlist 29-17] Analyzing 45 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3618.051 ; gain = 0.000 ; free physical = 48445 ; free virtual = 111166
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 45 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 8 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 36 instances
+
+Synth Design complete, checksum: db605863
+INFO: [Common 17-83] Releasing license: Synthesis
+21 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:51 . Memory (MB): peak = 3618.051 ; gain = 548.348 ; free physical = 48591 ; free virtual = 111312
+INFO: [Common 17-1381] The checkpoint '/home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.runs/synth_1/Pipelined_Polyphase_Filter.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Pipelined_Polyphase_Filter_utilization_synth.rpt -pb Pipelined_Polyphase_Filter_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed May 28 14:17:57 2025...

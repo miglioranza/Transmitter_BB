@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work ahblite_axi_bridge_v3_0_20 -f /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.cache/compile_simlib/xcelium/ahblite_axi_bridge_v3_0_20/.cxl.vhdl.ahblite_axi_bridge_v3_0_20.ahblite_axi_bridge_v3_0_20.lin64.cmf

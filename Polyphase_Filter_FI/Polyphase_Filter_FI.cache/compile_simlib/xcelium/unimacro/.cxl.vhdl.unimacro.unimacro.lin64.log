@@ -1,0 +1,79 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/unimacro_VCOMP.vhd:
+	errors: 0, warnings: 0
+/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/ADDMACC_MACRO.vhd:
+	errors: 0, warnings: 0
+/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/ADDSUB_MACRO.vhd:
+	errors: 0, warnings: 0
+/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd:
+	errors: 0, warnings: 0
+/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd:
+	errors: 0, warnings: 0
+/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/BRAM_TDP_MACRO.vhd:
+	errors: 0, warnings: 0
+/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/COUNTER_LOAD_MACRO.vhd:
+	errors: 0, warnings: 0
+/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/COUNTER_TC_MACRO.vhd:
+	errors: 0, warnings: 0
+/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/EQ_COMPARE_MACRO.vhd:
+	errors: 0, warnings: 0
+/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhd:
+	errors: 0, warnings: 0
+/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/FIFO_SYNC_MACRO.vhd:
+	errors: 0, warnings: 0
+/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/MACC_MACRO.vhd:
+	errors: 0, warnings: 0
+/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/vhdl/src/unimacro/MULT_MACRO.vhd:
+	errors: 0, warnings: 0
+UNIMACRO.VCOMPONENTS (package):
+	streams: 1, words: 8
+UNIMACRO.VCOMPONENTS:BODY (package body):
+	streams: 2, words: 1672
+UNIMACRO.ADDMACC_MACRO (entity):
+	streams: 21, words: 5057
+UNIMACRO.ADDMACC_MACRO:ADDMACC (architecture):
+	streams: 15, words: 33932
+UNIMACRO.ADDSUB_MACRO (entity):
+	streams: 21, words: 3584
+UNIMACRO.ADDSUB_MACRO:ADDSUB (architecture):
+	streams: 9, words: 28954
+UNIMACRO.BRAM_SDP_MACRO (entity):
+	streams: 166, words: 26449
+UNIMACRO.BRAM_SDP_MACRO:BRAM_V (architecture):
+	streams: 35, words: 312829
+UNIMACRO.BRAM_SINGLE_MACRO (entity):
+	streams: 163, words: 26279
+UNIMACRO.BRAM_SINGLE_MACRO:BRAM_V (architecture):
+	streams: 37, words: 292991
+UNIMACRO.BRAM_TDP_MACRO (entity):
+	streams: 178, words: 28990
+UNIMACRO.BRAM_TDP_MACRO:BRAM_V (architecture):
+	streams: 40, words: 250756
+UNIMACRO.COUNTER_LOAD_MACRO (entity):
+	streams: 14, words: 2455
+UNIMACRO.COUNTER_LOAD_MACRO:COUNTER (architecture):
+	streams: 6, words: 25236
+UNIMACRO.COUNTER_TC_MACRO (entity):
+	streams: 14, words: 2035
+UNIMACRO.COUNTER_TC_MACRO:COUNT (architecture):
+	streams: 6, words: 20809
+UNIMACRO.EQ_COMPARE_MACRO (entity):
+	streams: 16, words: 2846
+UNIMACRO.EQ_COMPARE_MACRO:COMPARE (architecture):
+	streams: 11, words: 25731
+UNIMACRO.FIFO_DUALCLOCK_MACRO (entity):
+	streams: 29, words: 5966
+UNIMACRO.FIFO_DUALCLOCK_MACRO:FIFO_V (architecture):
+	streams: 16, words: 81677
+UNIMACRO.FIFO_SYNC_MACRO (entity):
+	streams: 28, words: 5961
+UNIMACRO.FIFO_SYNC_MACRO:FIFO_V (architecture):
+	streams: 16, words: 81543
+UNIMACRO.MACC_MACRO (entity):
+	streams: 20, words: 4170
+UNIMACRO.MACC_MACRO:MACC (architecture):
+	streams: 14, words: 41002
+UNIMACRO.MULT_MACRO (entity):
+	streams: 15, words: 3437
+UNIMACRO.MULT_MACRO:MULT (architecture):
+	streams: 14, words: 42923

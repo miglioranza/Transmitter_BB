@@ -1,0 +1,27 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_hwicap_v3_0/hdl/axi_hwicap_v3_0_vh_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_HWICAP_V3_0_29.IPIC_IF (entity):
+	streams: 78, words: 8654
+AXI_HWICAP_V3_0_29.IPIC_IF:IMP (architecture):
+	streams: 19, words: 56268
+AXI_HWICAP_V3_0_29.ICAP_STATEMACHINE (entity):
+	streams: 37, words: 6749
+AXI_HWICAP_V3_0_29.ICAP_STATEMACHINE:IMP (architecture):
+	streams: 1, words: 6565
+AXI_HWICAP_V3_0_29.ICAP_STATEMACHINE_SHARED (entity):
+	streams: 40, words: 6773
+AXI_HWICAP_V3_0_29.ICAP_STATEMACHINE_SHARED:IMP (architecture):
+	streams: 1, words: 6616
+AXI_HWICAP_V3_0_29.HWICAP (entity):
+	streams: 54, words: 5475
+AXI_HWICAP_V3_0_29.HWICAP:IMP (architecture):
+	streams: 4, words: 24366
+AXI_HWICAP_V3_0_29.HWICAP_SHARED (entity):
+	streams: 66, words: 6248
+AXI_HWICAP_V3_0_29.HWICAP_SHARED:IMP (architecture):
+	streams: 4, words: 19258
+AXI_HWICAP_V3_0_29.AXI_HWICAP (entity):
+	streams: 77, words: 7580
+AXI_HWICAP_V3_0_29.AXI_HWICAP:IMPLEMENTATION (architecture):
+	streams: 6, words: 41857

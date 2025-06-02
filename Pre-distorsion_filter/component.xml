@@ -58,7 +58,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>2cdd249f</spirit:value>
+            <spirit:value>fe4e90a0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -74,7 +74,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>2cdd249f</spirit:value>
+            <spirit:value>fe4e90a0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -89,7 +89,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>cb63d0e1</spirit:value>
+            <spirit:value>f9241e7e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -222,7 +222,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -242,7 +242,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -298,7 +298,7 @@
       <spirit:file>
         <spirit:name>Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_2cdd249f</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_fe4e90a0</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -337,7 +337,7 @@
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
-  <spirit:description>Pre_Distortion_Filter_v1</spirit:description>
+  <spirit:description>Pre_Distortion_Filter_v1.1</spirit:description>
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>FILTER_TAPS</spirit:name>
@@ -391,10 +391,10 @@
       <xilinx:taxonomies>
         <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
       </xilinx:taxonomies>
-      <xilinx:displayName>Pre_Distortion_Filter_v1</xilinx:displayName>
+      <xilinx:displayName>Pre_Distortion_Filter_v1.1</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>3</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-03-11T15:38:05Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>9</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-05-28T13:16:18Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.df@61126b5a_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@50ef043f_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
@@ -423,13 +423,60 @@
         <xilinx:tag xilinx:name="ui.data.coregen.df@47b159c2_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@71dc61c9_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@1e7e06ae_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3e64c700_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@52235a2e_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7aa01cfe_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@14b4ee61_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7d49a6d3_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4ff02c15_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1665c34a_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6afb2963_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4bca2cb5_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@65fe65c6_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@10fe43e_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@76677014_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@68fb016c_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@32e5ef23_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@11558720_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6d6d8df_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1849eabc_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2f739be6_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7f86b9d6_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@38ad465c_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4f45c197_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@50622e65_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@b5fc90d_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@45733b3_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5c05a88f_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5a4ed4c7_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7198f9b8_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@25efd235_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3fb542a7_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2d82744c_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7c7b880a_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@465ddcb2_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@c0836f6_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@73261ee3_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4ba14f92_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@8c75474_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@66579c31_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@78fa2821_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7e05f3bb_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@37b99eda_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@697d5037_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@317d3776_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5dee5208_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1aedf5b8_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4995791b_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2348890_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@56a946fe_ARCHIVE_LOCATION">/home/miglioranza/Pre-distorsion_filter</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2021.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="50102c5c"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="52b5abc0"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="7fedbbbc"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="e2bb1ffb"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="11bf0b28"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="6654c37e"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="b6bd5b8b"/>
     </xilinx:packagingInfo>

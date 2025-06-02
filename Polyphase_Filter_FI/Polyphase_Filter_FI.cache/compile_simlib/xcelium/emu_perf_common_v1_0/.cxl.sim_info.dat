@@ -1,0 +1,26 @@
+<SIMMODEL_NAME>:emu_perf_common
+<LIBRARY_NAME>:emu_perf_common_v1_0
+<LIBRARY_TYPE>:SystemC
+<OUTPUT_FORMAT>:library
+<SYSTEMC_SOURCES>:systemc/simlibs/emu_perf_common/emu_perf_common_v1_0/src/emdiagcore.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/emu_perf_common/emu_perf_common_v1_0/src/emulation_profiler_core_base.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/emu_perf_common/emu_perf_common_v1_0/src/perf_utils.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/emu_perf_common/emu_perf_common_v1_0/src/tlm_mem_if_analyzer.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/emu_perf_common/emu_perf_common_v1_0/src/tlm_mem_if_analyzer_impl.cpp
+<SYSTEMC_INCLUDE_DIRS>:simlibs/emu_perf_common_v1_0/include,simlibs/emu_perf_common_v1_0/src,simlibs/xtlm/include,simlibs/common_cpp_v1_0/include
+<OSCI_INCLUDE_DIRS>:/data/osci_systemc/include
+<SYSTEMC_COMPILE_OPTION>:-64bit -noedg -cFlags " -O3 -fPIC -c -o
+<CPP_COMPILE_OPTION>:-O3
+<C_COMPILE_OPTION>:-O3
+<G++_COMPILE_FLAGS>:-Wall -fPIC -std=gnu++14,-Wno-reorder -Wno-deprecated-declarations -Wno-unused-function,-DSC_INCLUDE_DYNAMIC_PROCESSES
+<G++_COMPILE_OPTIMIZE_FLAGS>:-DNDEBUG
+<G++_COMPILE_DEBUG_FLAGS>:-g -O0
+<SCCOM_COMPILE_FLAGS>:-std=c++11
+<G++_LDFLAGS_OPTION>:
+<GCC_LDFLAGS_OPTION>:
+<LDLIBS>:-Lxcelium_lib/xtlm -lxtlm,-Lxcelium_lib/common_cpp_v1_0 -lcommon_cpp_v1_0
+<MORE_XSC_OPTIONS>:-v
+<G++_LDLIBS_OPTION>:
+<GCC_LDLIBS_OPTION>:
+<SHARED_LIBRARY>:emu_perf_common_v1_0
+<SIMULATOR_PLATFORM>:all

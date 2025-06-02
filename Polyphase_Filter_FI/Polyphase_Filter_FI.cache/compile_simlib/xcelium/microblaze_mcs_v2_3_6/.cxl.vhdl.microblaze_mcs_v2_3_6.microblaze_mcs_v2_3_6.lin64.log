@@ -1,0 +1,17 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/hdl/ram_module_top.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/hdl/lmb_bram.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/hdl/lmb2axi.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/hdl/microblaze_mcs.vhd:
+	errors: 0, warnings: 0
+	streams: 32, words: 8287
+	streams: 13, words: 221059
+	streams: 28, words: 7928
+	streams: 1, words: 8651
+	streams: 52, words: 9615
+	streams: 1, words: 2390
+	streams: 197, words: 21122
+	streams: 11, words: 463085

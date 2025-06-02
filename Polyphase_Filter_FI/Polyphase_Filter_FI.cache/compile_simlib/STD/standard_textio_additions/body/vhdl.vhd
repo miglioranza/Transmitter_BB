@@ -1,0 +1,1 @@
+../../../IEEE_PROPOSED.src/standard_textio_additions_c.vhdl

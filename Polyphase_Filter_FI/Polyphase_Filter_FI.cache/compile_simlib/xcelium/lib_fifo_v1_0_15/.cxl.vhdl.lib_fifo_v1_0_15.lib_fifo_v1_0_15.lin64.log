@@ -1,0 +1,11 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/lib_fifo_v1_0/hdl/lib_fifo_v1_0_rfs.vhd:
+	errors: 0, warnings: 0
+LIB_FIFO_V1_0_15.ASYNC_FIFO_FG (entity):
+	streams: 48, words: 6086
+LIB_FIFO_V1_0_15.ASYNC_FIFO_FG:IMPLEMENTATION (architecture):
+	streams: 10, words: 51132
+LIB_FIFO_V1_0_15.SYNC_FIFO_FG (entity):
+	streams: 43, words: 4743
+LIB_FIFO_V1_0_15.SYNC_FIFO_FG:IMPLEMENTATION (architecture):
+	streams: 9, words: 39853

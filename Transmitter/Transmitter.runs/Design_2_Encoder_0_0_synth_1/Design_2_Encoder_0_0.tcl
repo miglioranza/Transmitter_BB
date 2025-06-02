@@ -297,6 +297,7 @@ set_property target_language VHDL [current_project]
 set_property board_part xilinx.com:zcu111:part0:1.4 [current_project]
 set_property ip_repo_paths {
   /home/miglioranza/Scrambler_32bits
+  /home/miglioranza/Control_unit_transmitter
   /home/miglioranza/Mapper
   /home/miglioranza/Interleaver_BB
   /home/miglioranza/Polyphase_Filter_FI

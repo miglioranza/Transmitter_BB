@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work dfx_bitstream_monitor_v1_0_1 -f /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.cache/compile_simlib/xcelium/dfx_bitstream_monitor_v1_0_1/.cxl.vhdl.dfx_bitstream_monitor_v1_0_1.dfx_bitstream_monitor_v1_0_1.lin64.cmf

@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../Multi-rate_Filter/Pipelined_Polyphase_Filter.vhd" \
+"../../../../../Multi-rate_Filter/Polyphase_filter_tb.vhd" \
+
+# Do not sort compile order
+nosort

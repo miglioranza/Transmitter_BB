@@ -58,7 +58,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>3dbd4cba</spirit:value>
+            <spirit:value>cfbbe323</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -74,7 +74,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>3dbd4cba</spirit:value>
+            <spirit:value>cfbbe323</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -89,7 +89,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9bc8a510</spirit:value>
+            <spirit:value>7aeca2d3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -103,7 +103,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9fe1a1d3</spirit:value>
+            <spirit:value>6a99eb03</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -154,6 +154,32 @@
       </spirit:port>
       <spirit:port>
         <spirit:name>data_in_ready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>data_in_last</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>end_of_frame</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -229,22 +255,34 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>current_code_rate</spirit:name>
+        <spirit:name>data_out_last</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long">1</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:typeName>std_logic</spirit:typeName>
               <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>last_frame_to_cu</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
       </spirit:port>
@@ -269,11 +307,6 @@
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DATA_WIDTH">32</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
-        <spirit:name>NUM_ROWS</spirit:name>
-        <spirit:displayName>Num Rows</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.NUM_ROWS">3</spirit:value>
-      </spirit:modelParameter>
-      <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>NUM_COLS</spirit:name>
         <spirit:displayName>Num Cols</spirit:displayName>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.NUM_COLS">7</spirit:value>
@@ -286,7 +319,7 @@
       <spirit:file>
         <spirit:name>sources_1/new/Interleaver.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_3dbd4cba</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_cfbbe323</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -310,7 +343,7 @@
       <spirit:file>
         <spirit:name>xgui/block_interleaver_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_9fe1a1d3</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_6a99eb03</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -321,11 +354,6 @@
       <spirit:name>DATA_WIDTH</spirit:name>
       <spirit:displayName>Data Width</spirit:displayName>
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_WIDTH">32</spirit:value>
-    </spirit:parameter>
-    <spirit:parameter>
-      <spirit:name>NUM_ROWS</spirit:name>
-      <spirit:displayName>Num Rows</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.NUM_ROWS">3</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>NUM_COLS</spirit:name>
@@ -371,8 +399,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>block_interleaver_v1_2</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>22</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-03-24T15:43:37Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>25</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-06-02T11:52:37Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.df@6ac74d1f_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@716d066b_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
@@ -585,15 +613,49 @@
         <xilinx:tag xilinx:name="ui.data.coregen.df@6725cd17_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@3e64391f_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@78366d44_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@163311e8_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4cf17ae3_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4dbacce_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3329c1b2_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@57db5cff_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@30f22966_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@536353da_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5614cb9d_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1d1f8e77_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3782de68_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@69e49985_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4e7ba675_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1d0ccc3b_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6b29e550_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@32a1cce7_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@16dcbb92_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@578400a7_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@47664fd6_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3522aa81_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2a4c6cd_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@392f6d0e_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3b8bb1e7_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4e0d4493_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1cd7e471_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@74af296a_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@117840ea_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@29f22672_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@a8a6e3_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7b5cfb9d_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@50040f2_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@50779649_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5a03a349_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3fda9821_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@54af07d5_ARCHIVE_LOCATION">/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2021.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="25031715"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="3b8a4007"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="074041da"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="fc13977c"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="27bb5d42"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="dfe942a0"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="ddef129b"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="61c9366a"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="16208bac"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

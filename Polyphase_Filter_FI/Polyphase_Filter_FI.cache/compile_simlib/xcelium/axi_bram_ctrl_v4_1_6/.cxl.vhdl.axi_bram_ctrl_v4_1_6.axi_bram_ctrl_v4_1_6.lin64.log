@@ -1,0 +1,87 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_bram_ctrl_v4_1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_BRAM_CTRL_V4_1_6.SRL_FIFO (entity):
+	streams: 16, words: 2382
+AXI_BRAM_CTRL_V4_1_6.SRL_FIFO:IMP (architecture):
+	streams: 3, words: 5611
+AXI_BRAM_CTRL_V4_1_6.AXI_BRAM_CTRL_FUNCS (package):
+	streams: 2, words: 502
+AXI_BRAM_CTRL_V4_1_6.AXI_BRAM_CTRL_FUNCS:BODY (package body):
+	streams: 12, words: 5919
+AXI_BRAM_CTRL_V4_1_6.AXI_LITE_IF (entity):
+	streams: 38, words: 8243
+AXI_BRAM_CTRL_V4_1_6.AXI_LITE_IF:IMP (architecture):
+	streams: 2, words: 3713
+AXI_BRAM_CTRL_V4_1_6.CHECKBIT_HANDLER_64 (entity):
+	streams: 22, words: 2085
+AXI_BRAM_CTRL_V4_1_6.CHECKBIT_HANDLER_64:IMP (architecture):
+	streams: 1, words: 88700
+AXI_BRAM_CTRL_V4_1_6.CHECKBIT_HANDLER (entity):
+	streams: 22, words: 2248
+AXI_BRAM_CTRL_V4_1_6.CHECKBIT_HANDLER:IMP (architecture):
+	streams: 1, words: 28536
+AXI_BRAM_CTRL_V4_1_6.CORRECT_ONE_BIT_64 (entity):
+	streams: 8, words: 538
+AXI_BRAM_CTRL_V4_1_6.CORRECT_ONE_BIT_64:IMP (architecture):
+	streams: 2, words: 1284
+AXI_BRAM_CTRL_V4_1_6.CORRECT_ONE_BIT (entity):
+	streams: 8, words: 554
+AXI_BRAM_CTRL_V4_1_6.CORRECT_ONE_BIT:IMP (architecture):
+	streams: 2, words: 1284
+AXI_BRAM_CTRL_V4_1_6.XOR18 (entity):
+	streams: 5, words: 433
+AXI_BRAM_CTRL_V4_1_6.XOR18:IMP (architecture):
+	streams: 1, words: 1234
+AXI_BRAM_CTRL_V4_1_6.PARITY (entity):
+	streams: 6, words: 1103
+AXI_BRAM_CTRL_V4_1_6.PARITY:IMP (architecture):
+	streams: 2, words: 3864
+AXI_BRAM_CTRL_V4_1_6.ECC_GEN (entity):
+	streams: 6, words: 1681
+AXI_BRAM_CTRL_V4_1_6.ECC_GEN:TRANS (architecture):
+	streams: 7, words: 14820
+AXI_BRAM_CTRL_V4_1_6.LITE_ECC_REG (entity):
+	streams: 59, words: 9705
+AXI_BRAM_CTRL_V4_1_6.LITE_ECC_REG:IMPLEMENTATION (architecture):
+	streams: 6, words: 41700
+AXI_BRAM_CTRL_V4_1_6.AXI_LITE (entity):
+	streams: 89, words: 19265
+AXI_BRAM_CTRL_V4_1_6.AXI_LITE:IMPLEMENTATION (architecture):
+	streams: 41, words: 168113
+AXI_BRAM_CTRL_V4_1_6.SNG_PORT_ARB (entity):
+	streams: 19, words: 2505
+AXI_BRAM_CTRL_V4_1_6.SNG_PORT_ARB:IMPLEMENTATION (architecture):
+	streams: 1, words: 589
+AXI_BRAM_CTRL_V4_1_6.UA_NARROW (entity):
+	streams: 17, words: 2712
+AXI_BRAM_CTRL_V4_1_6.UA_NARROW:IMPLEMENTATION (architecture):
+	streams: 1, words: 3704
+AXI_BRAM_CTRL_V4_1_6.WRAP_BRST (entity):
+	streams: 20, words: 4072
+AXI_BRAM_CTRL_V4_1_6.WRAP_BRST:IMPLEMENTATION (architecture):
+	streams: 1, words: 7062
+AXI_BRAM_CTRL_V4_1_6.WRAP_BRST_RD (entity):
+	streams: 20, words: 4072
+AXI_BRAM_CTRL_V4_1_6.WRAP_BRST_RD:IMPLEMENTATION (architecture):
+	streams: 1, words: 8064
+AXI_BRAM_CTRL_V4_1_6.RD_CHNL (entity):
+	streams: 60, words: 10823
+AXI_BRAM_CTRL_V4_1_6.RD_CHNL:IMPLEMENTATION (architecture):
+	streams: 49, words: 243325
+AXI_BRAM_CTRL_V4_1_6.WR_CHNL (entity):
+	streams: 76, words: 16848
+AXI_BRAM_CTRL_V4_1_6.WR_CHNL:IMPLEMENTATION (architecture):
+	streams: 28, words: 129332
+AXI_BRAM_CTRL_V4_1_6.FULL_AXI (entity):
+	streams: 122, words: 29715
+AXI_BRAM_CTRL_V4_1_6.FULL_AXI:IMPLEMENTATION (architecture):
+	streams: 12, words: 78017
+AXI_BRAM_CTRL_V4_1_6.AXI_BRAM_CTRL_TOP (entity):
+	streams: 121, words: 30454
+AXI_BRAM_CTRL_V4_1_6.AXI_BRAM_CTRL_TOP:IMPLEMENTATION (architecture):
+	streams: 3, words: 61151
+AXI_BRAM_CTRL_V4_1_6.AXI_BRAM_CTRL (entity):
+	streams: 123, words: 30699
+AXI_BRAM_CTRL_V4_1_6.AXI_BRAM_CTRL:IMPLEMENTATION (architecture):
+	streams: 5, words: 93692

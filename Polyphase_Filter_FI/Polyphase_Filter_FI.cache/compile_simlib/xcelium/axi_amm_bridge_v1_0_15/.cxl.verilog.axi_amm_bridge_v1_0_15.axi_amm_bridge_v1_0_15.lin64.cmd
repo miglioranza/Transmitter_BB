@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -work axi_amm_bridge_v1_0_15 -f /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.cache/compile_simlib/xcelium/axi_amm_bridge_v1_0_15/.cxl.verilog.axi_amm_bridge_v1_0_15.axi_amm_bridge_v1_0_15.lin64.cmf

@@ -1,0 +1,5 @@
+Name:remote_port_c_v4
+Type:C
+Link_SYSTEMC:empty
+Link_CPP:empty
+Link_C:empty

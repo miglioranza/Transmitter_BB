@@ -51,13 +51,15 @@ port (
  data_in_valid          : in std_logic ;
  din_ready_ifsm2enc     : in std_logic ;  
  data_in_last           : in std_logic ; 
+ end_of_frame           : in std_logic ;
  sel_FEC_code_rate      : in std_logic_vector( 1 downto 0)   ;
  data_out_ready         : out std_logic :=  '0';   --Encoder ready to receive data in input                   
  data_out               : out std_logic_vector(31 downto 0) ;
  data_out_valid         : out std_logic ;
  core_finish            : out std_logic := '0' ; 
+ last_frame             : out std_logic := '0' ;
  axis_data_count        : out std_logic_vector(12 downto 0) := (others => '0') ; 
--- current_code_rate      : out std_logic_vector( 1 downto 0)   ;
+ current_code_rate      : out std_logic_vector( 1 downto 0)   ;
  data_out_last          : out std_logic 
 
 );
@@ -86,9 +88,11 @@ signal out_last             : std_logic := '0';
 signal finish_encoding      : std_logic := '0' ;
 signal code_rate            : std_logic_vector(1 downto 0) := (others =>'0');
 signal  axis_data_count     :  std_logic_vector(12 downto 0) := (others => '0') ; 
-
+signal end_of_frame         : std_logic := '0' ;
+signal last_frame           : std_logic := '0' ;
 signal temp                 : integer   := 0 ;
 signal enable               : std_logic := '0' ;
+--signal current_code_rate    : std_logic := '0';
 begin
 
 --Clock generation 
@@ -120,7 +124,9 @@ Port map (
     data_out_valid      => data_out_valid,
     data_out_last       => out_last ,
     core_finish         => finish_encoding ,
---    current_code_rate   => code_rate,
+    end_of_frame        => end_of_frame,
+    last_frame          => last_frame ,
+    current_code_rate   => code_rate,
     axis_data_count     => axis_data_count,
     sel_FEC_code_rate   => sel_FEC_code_rate 
 );
@@ -181,6 +187,7 @@ begin
 wait until reset = '0';
 data_in_ready_core <= '1';
 while temp < 850 loop 
+end_of_frame       <= '0' ;
 data_in_last       <= '0' ;  
 if data_out_ready  = '1' and enable = '1' then
 data_in_valid      <= '1';
@@ -195,6 +202,7 @@ end loop ;
 if temp = 850 then 
 --    data_in_valid <= '0';
     data_in_last       <= '1' ;  
+    end_of_frame       <= '1' ;
 end if ;
 wait until finish_encoding  = '1' ;
 --wait until out_last = '1'and data_out_valid = '0'  ;

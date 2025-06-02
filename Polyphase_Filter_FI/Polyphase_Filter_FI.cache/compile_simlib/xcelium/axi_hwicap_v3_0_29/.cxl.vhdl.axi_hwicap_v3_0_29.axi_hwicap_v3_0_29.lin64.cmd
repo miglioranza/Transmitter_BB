@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work axi_hwicap_v3_0_29 -f /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.cache/compile_simlib/xcelium/axi_hwicap_v3_0_29/.cxl.vhdl.axi_hwicap_v3_0_29.axi_hwicap_v3_0_29.lin64.cmf

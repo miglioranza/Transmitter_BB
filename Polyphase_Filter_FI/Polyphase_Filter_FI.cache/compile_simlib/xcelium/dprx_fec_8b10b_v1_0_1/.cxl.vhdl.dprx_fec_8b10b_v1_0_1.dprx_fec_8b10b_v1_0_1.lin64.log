@@ -1,0 +1,9 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/dprx_fec_8b10b_v1_0/hdl/dprx_fec_8b10b_v1_0_rfs.vhd:
+	errors: 0, warnings: 0
+	streams: 2, words: 756
+	streams: 7, words: 8178
+	streams: 24, words: 1909
+	streams: 1, words: 1605
+	streams: 25, words: 2089
+	streams: 1, words: 4579

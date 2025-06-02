@@ -1,0 +1,9 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+./../../../../../Multi-rate_Filter/Pipelined_Polyphase_Filter.vhd:
+	errors: 0, warnings: 0
+./../../../../../Multi-rate_Filter/Polyphase_filter_tb.vhd:
+	errors: 0, warnings: 0
+XIL_DEFAULTLIB.PIPELINED_POLYPHASE_FILTER:RTL (architecture):
+	streams: 1, words: 4882
+XIL_DEFAULTLIB.POLYPHASE_FILTER_TB:BEHAVIORAL (architecture):
+	streams: 1, words: 2430

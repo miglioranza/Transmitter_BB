@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -sv -work switch_core_top_v1_0_10 -f /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.cache/compile_simlib/xcelium/switch_core_top_v1_0_10/.cxl.systemverilog.switch_core_top_v1_0_10.switch_core_top_v1_0_10.lin64.cmf

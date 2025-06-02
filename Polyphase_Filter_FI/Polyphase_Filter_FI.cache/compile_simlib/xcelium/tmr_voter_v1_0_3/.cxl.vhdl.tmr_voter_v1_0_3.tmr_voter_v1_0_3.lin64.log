@@ -1,0 +1,99 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/tmr_voter_v1_0/hdl/tmr_voter_v1_0_vh_rfs.vhd:
+	errors: 0, warnings: 0
+TMR_VOTER_V1_0_3.VOTER (entity):
+	streams: 13, words: 4000
+TMR_VOTER_V1_0_3.VOTER:IMP (architecture):
+	streams: 2, words: 2470
+TMR_VOTER_V1_0_3.LMB_VOTER (entity):
+	streams: 66, words: 15289
+TMR_VOTER_V1_0_3.LMB_VOTER:IMP (architecture):
+	streams: 2, words: 11715
+TMR_VOTER_V1_0_3.S_LMB_VOTER (entity):
+	streams: 66, words: 15289
+TMR_VOTER_V1_0_3.S_LMB_VOTER:IMP (architecture):
+	streams: 2, words: 8726
+TMR_VOTER_V1_0_3.BRAM_VOTER (entity):
+	streams: 52, words: 19466
+TMR_VOTER_V1_0_3.BRAM_VOTER:IMP (architecture):
+	streams: 2, words: 11466
+TMR_VOTER_V1_0_3.M_BRAM_VOTER (entity):
+	streams: 51, words: 19455
+TMR_VOTER_V1_0_3.M_BRAM_VOTER:IMP (architecture):
+	streams: 2, words: 7934
+TMR_VOTER_V1_0_3.AXI_VOTER (entity):
+	streams: 417, words: 87928
+TMR_VOTER_V1_0_3.AXI_VOTER:IMP (architecture):
+	streams: 2, words: 56900
+TMR_VOTER_V1_0_3.S_AXI_VOTER (entity):
+	streams: 417, words: 87928
+TMR_VOTER_V1_0_3.S_AXI_VOTER:IMP (architecture):
+	streams: 2, words: 24615
+TMR_VOTER_V1_0_3.S_AXIS_VOTER (entity):
+	streams: 68, words: 22641
+TMR_VOTER_V1_0_3.S_AXIS_VOTER:IMP (architecture):
+	streams: 2, words: 4925
+TMR_VOTER_V1_0_3.M_AXIS_VOTER (entity):
+	streams: 68, words: 22641
+TMR_VOTER_V1_0_3.M_AXIS_VOTER:IMP (architecture):
+	streams: 2, words: 19056
+TMR_VOTER_V1_0_3.TRACE_VOTER (entity):
+	streams: 168, words: 24768
+TMR_VOTER_V1_0_3.TRACE_VOTER:IMP (architecture):
+	streams: 2, words: 27584
+TMR_VOTER_V1_0_3.INTERRUPT_VOTER (entity):
+	streams: 24, words: 2813
+TMR_VOTER_V1_0_3.INTERRUPT_VOTER:IMP (architecture):
+	streams: 2, words: 4945
+TMR_VOTER_V1_0_3.COMPARATOR (entity):
+	streams: 16, words: 5480
+TMR_VOTER_V1_0_3.COMPARATOR:IMP (architecture):
+	streams: 1, words: 2532
+TMR_VOTER_V1_0_3.LMB_COMPARATOR (entity):
+	streams: 30, words: 7728
+TMR_VOTER_V1_0_3.LMB_COMPARATOR:IMP (architecture):
+	streams: 3, words: 22591
+TMR_VOTER_V1_0_3.S_LMB_COMPARATOR (entity):
+	streams: 23, words: 4010
+TMR_VOTER_V1_0_3.S_LMB_COMPARATOR:IMP (architecture):
+	streams: 3, words: 15951
+TMR_VOTER_V1_0_3.BRAM_COMPARATOR (entity):
+	streams: 27, words: 9171
+TMR_VOTER_V1_0_3.BRAM_COMPARATOR:IMP (architecture):
+	streams: 3, words: 22151
+TMR_VOTER_V1_0_3.AXI_COMPARATOR (entity):
+	streams: 163, words: 31466
+TMR_VOTER_V1_0_3.AXI_COMPARATOR:IMP (architecture):
+	streams: 3, words: 117797
+TMR_VOTER_V1_0_3.S_AXI_COMPARATOR (entity):
+	streams: 77, words: 17476
+TMR_VOTER_V1_0_3.S_AXI_COMPARATOR:IMP (architecture):
+	streams: 3, words: 50064
+TMR_VOTER_V1_0_3.S_AXIS_COMPARATOR (entity):
+	streams: 12, words: 2054
+TMR_VOTER_V1_0_3.S_AXIS_COMPARATOR:IMP (architecture):
+	streams: 3, words: 7840
+TMR_VOTER_V1_0_3.M_AXIS_COMPARATOR (entity):
+	streams: 42, words: 13324
+TMR_VOTER_V1_0_3.M_AXIS_COMPARATOR:IMP (architecture):
+	streams: 3, words: 40172
+TMR_VOTER_V1_0_3.TRACE_COMPARATOR (entity):
+	streams: 95, words: 14407
+TMR_VOTER_V1_0_3.TRACE_COMPARATOR:IMP (architecture):
+	streams: 3, words: 53846
+TMR_VOTER_V1_0_3.INTERRUPT_COMPARATOR (entity):
+	streams: 14, words: 1977
+TMR_VOTER_V1_0_3.INTERRUPT_COMPARATOR:IMP (architecture):
+	streams: 3, words: 7999
+TMR_VOTER_V1_0_3.TMR_TEST (entity):
+	streams: 22, words: 3957
+TMR_VOTER_V1_0_3.TMR_TEST:IMP (architecture):
+	streams: 1, words: 5944
+TMR_VOTER_V1_0_3.TMR_COMPARATOR (entity):
+	streams: 1081, words: 251756
+TMR_VOTER_V1_0_3.TMR_COMPARATOR:IMP (architecture):
+	streams: 85, words: 1194107
+TMR_VOTER_V1_0_3.TMR_VOTER (entity):
+	streams: 1538, words: 350972
+TMR_VOTER_V1_0_3.TMR_VOTER:IMP (architecture):
+	streams: 18, words: 696872

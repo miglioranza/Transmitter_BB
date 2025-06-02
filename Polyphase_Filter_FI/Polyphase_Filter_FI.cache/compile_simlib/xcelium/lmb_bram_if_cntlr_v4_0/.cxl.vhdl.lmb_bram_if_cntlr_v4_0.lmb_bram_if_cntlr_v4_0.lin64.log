@@ -1,0 +1,87 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/lmb_bram_if_cntlr_v4_0/hdl/vhdl/lmb_bram_if_funcs.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/lmb_bram_if_cntlr_v4_0/hdl/vhdl/lmb_bram_if_primitives.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/lmb_bram_if_cntlr_v4_0/hdl/vhdl/xor18.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/lmb_bram_if_cntlr_v4_0/hdl/vhdl/parity.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/lmb_bram_if_cntlr_v4_0/hdl/vhdl/parityenable.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/lmb_bram_if_cntlr_v4_0/hdl/vhdl/checkbit_handler.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/lmb_bram_if_cntlr_v4_0/hdl/vhdl/correct_one_bit.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/lmb_bram_if_cntlr_v4_0/hdl/vhdl/pselect_mask.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/lmb_bram_if_cntlr_v4_0/hdl/vhdl/axi_interface.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/lmb_bram_if_cntlr_v4_0/hdl/vhdl/lmb_mux.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/microblaze_mcs_v2_3/pcores/lmb_bram_if_cntlr_v4_0/hdl/vhdl/lmb_bram_if_cntlr.vhd:
+	errors: 0, warnings: 0
+LMB_BRAM_IF_CNTLR_V4_0.LMB_BRAM_IF_FUNCS (package):
+	streams: 1, words: 8
+LMB_BRAM_IF_CNTLR_V4_0.LMB_BRAM_IF_FUNCS:BODY (package body):
+	streams: 5, words: 7080
+LMB_BRAM_IF_CNTLR_V4_0.MB_LUT6 (entity):
+	streams: 10, words: 340
+LMB_BRAM_IF_CNTLR_V4_0.MB_LUT6:IMP (architecture):
+	streams: 1, words: 1385
+LMB_BRAM_IF_CNTLR_V4_0.MB_MUXCY (entity):
+	streams: 6, words: 162
+LMB_BRAM_IF_CNTLR_V4_0.MB_MUXCY:IMP (architecture):
+	streams: 1, words: 651
+LMB_BRAM_IF_CNTLR_V4_0.MB_XORCY (entity):
+	streams: 5, words: 154
+LMB_BRAM_IF_CNTLR_V4_0.MB_XORCY:IMP (architecture):
+	streams: 1, words: 651
+LMB_BRAM_IF_CNTLR_V4_0.MB_MUXF7 (entity):
+	streams: 6, words: 162
+LMB_BRAM_IF_CNTLR_V4_0.MB_MUXF7:IMP (architecture):
+	streams: 1, words: 651
+LMB_BRAM_IF_CNTLR_V4_0.MB_MUXF8 (entity):
+	streams: 6, words: 162
+LMB_BRAM_IF_CNTLR_V4_0.MB_MUXF8:IMP (architecture):
+	streams: 1, words: 651
+LMB_BRAM_IF_CNTLR_V4_0.MB_FDRE (entity):
+	streams: 8, words: 237
+LMB_BRAM_IF_CNTLR_V4_0.MB_FDRE:IMP (architecture):
+	streams: 2, words: 808
+LMB_BRAM_IF_CNTLR_V4_0.XOR18 (entity):
+	streams: 5, words: 433
+LMB_BRAM_IF_CNTLR_V4_0.XOR18:IMP (architecture):
+	streams: 1, words: 1018
+LMB_BRAM_IF_CNTLR_V4_0.PARITY (entity):
+	streams: 6, words: 1094
+LMB_BRAM_IF_CNTLR_V4_0.PARITY:IMP (architecture):
+	streams: 2, words: 3633
+LMB_BRAM_IF_CNTLR_V4_0.PARITYENABLE (entity):
+	streams: 7, words: 1102
+LMB_BRAM_IF_CNTLR_V4_0.PARITYENABLE:IMP (architecture):
+	streams: 2, words: 1675
+LMB_BRAM_IF_CNTLR_V4_0.CHECKBIT_HANDLER (entity):
+	streams: 16, words: 1402
+LMB_BRAM_IF_CNTLR_V4_0.CHECKBIT_HANDLER:IMP (architecture):
+	streams: 1, words: 29702
+LMB_BRAM_IF_CNTLR_V4_0.CORRECT_ONE_BIT (entity):
+	streams: 8, words: 545
+LMB_BRAM_IF_CNTLR_V4_0.CORRECT_ONE_BIT:IMP (architecture):
+	streams: 2, words: 1065
+LMB_BRAM_IF_CNTLR_V4_0.PSELECT_MASK (entity):
+	streams: 10, words: 1293
+LMB_BRAM_IF_CNTLR_V4_0.PSELECT_MASK:IMP (architecture):
+	streams: 3, words: 2438
+LMB_BRAM_IF_CNTLR_V4_0.AXI_INTERFACE (entity):
+	streams: 41, words: 8630
+LMB_BRAM_IF_CNTLR_V4_0.AXI_INTERFACE:IMP (architecture):
+	streams: 2, words: 3472
+LMB_BRAM_IF_CNTLR_V4_0.LMB_MUX (entity):
+	streams: 92, words: 19487
+LMB_BRAM_IF_CNTLR_V4_0.LMB_MUX:IMP (architecture):
+	streams: 2, words: 30500
+LMB_BRAM_IF_CNTLR_V4_0.LMB_BRAM_IF_CNTLR (entity):
+	streams: 133, words: 27219
+LMB_BRAM_IF_CNTLR_V4_0.LMB_BRAM_IF_CNTLR:IMP (architecture):
+	streams: 2, words: 60271

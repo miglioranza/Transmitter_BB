@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Mon Mar 24 17:13:11 2025
+-- Date        : Mon Jun  2 15:58:15 2025
 -- Host        : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Encoder_0_0/Design_2_Encoder_0_0_stub.vhdl
@@ -22,12 +22,15 @@ entity Design_2_Encoder_0_0 is
     data_in_valid : in STD_LOGIC;
     din_ready_ifsm2enc : in STD_LOGIC;
     data_in_last : in STD_LOGIC;
+    end_of_frame : in STD_LOGIC;
     sel_FEC_code_rate : in STD_LOGIC_VECTOR ( 1 downto 0 );
     data_out_ready : out STD_LOGIC;
     data_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
     data_out_valid : out STD_LOGIC;
     core_finish : out STD_LOGIC;
+    last_frame : out STD_LOGIC;
     axis_data_count : out STD_LOGIC_VECTOR ( 12 downto 0 );
+    current_code_rate : out STD_LOGIC_VECTOR ( 1 downto 0 );
     data_out_last : out STD_LOGIC
   );
 
@@ -37,7 +40,7 @@ architecture stub of Design_2_Encoder_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "ldpc_core_clk,clk,reset,aresetn,data_in[31:0],data_in_valid,din_ready_ifsm2enc,data_in_last,sel_FEC_code_rate[1:0],data_out_ready,data_out[31:0],data_out_valid,core_finish,axis_data_count[12:0],data_out_last";
+attribute black_box_pad_pin of stub : architecture is "ldpc_core_clk,clk,reset,aresetn,data_in[31:0],data_in_valid,din_ready_ifsm2enc,data_in_last,end_of_frame,sel_FEC_code_rate[1:0],data_out_ready,data_out[31:0],data_out_valid,core_finish,last_frame,axis_data_count[12:0],current_code_rate[1:0],data_out_last";
 attribute x_core_info : string;
 attribute x_core_info of stub : architecture is "Encoder,Vivado 2021.2";
 begin

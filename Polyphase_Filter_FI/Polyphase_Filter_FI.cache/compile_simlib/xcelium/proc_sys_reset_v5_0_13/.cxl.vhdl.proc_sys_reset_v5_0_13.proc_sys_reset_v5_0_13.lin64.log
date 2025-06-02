@@ -1,0 +1,19 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/proc_sys_reset_v5_0/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:
+	errors: 0, warnings: 0
+PROC_SYS_RESET_V5_0_13.UPCNT_N (entity):
+	streams: 10, words: 1931
+PROC_SYS_RESET_V5_0_13.UPCNT_N:IMP (architecture):
+	streams: 1, words: 924
+PROC_SYS_RESET_V5_0_13.SEQUENCE_PSR (entity):
+	streams: 6, words: 103
+PROC_SYS_RESET_V5_0_13.SEQUENCE_PSR:IMP (architecture):
+	streams: 2, words: 6406
+PROC_SYS_RESET_V5_0_13.LPF (entity):
+	streams: 11, words: 397
+PROC_SYS_RESET_V5_0_13.LPF:IMP (architecture):
+	streams: 7, words: 14796
+PROC_SYS_RESET_V5_0_13.PROC_SYS_RESET (entity):
+	streams: 24, words: 4550
+PROC_SYS_RESET_V5_0_13.PROC_SYS_RESET:IMP (architecture):
+	streams: 7, words: 9730

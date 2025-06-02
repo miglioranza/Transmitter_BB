@@ -1,0 +1,29 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_timer_v2_0/hdl/axi_timer_v2_0_vh_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_TIMER_V2_0_27.COUNTER_F (entity):
+	streams: 13, words: 2125
+AXI_TIMER_V2_0_27.COUNTER_F:IMP (architecture):
+	streams: 1, words: 2327
+AXI_TIMER_V2_0_27.MUX_ONEHOT_F (entity):
+	streams: 10, words: 3537
+AXI_TIMER_V2_0_27.MUX_ONEHOT_F:IMP (architecture):
+	streams: 5, words: 10209
+AXI_TIMER_V2_0_27.TC_TYPES (package):
+	streams: 1, words: 159
+AXI_TIMER_V2_0_27.TIMER_CONTROL (entity):
+	streams: 37, words: 5946
+AXI_TIMER_V2_0_27.TIMER_CONTROL:IMP (architecture):
+	streams: 6, words: 14339
+AXI_TIMER_V2_0_27.COUNT_MODULE (entity):
+	streams: 20, words: 3339
+AXI_TIMER_V2_0_27.COUNT_MODULE:IMP (architecture):
+	streams: 3, words: 7684
+AXI_TIMER_V2_0_27.TC_CORE (entity):
+	streams: 34, words: 5182
+AXI_TIMER_V2_0_27.TC_CORE:IMP (architecture):
+	streams: 5, words: 24966
+AXI_TIMER_V2_0_27.AXI_TIMER (entity):
+	streams: 43, words: 3087
+AXI_TIMER_V2_0_27.AXI_TIMER:IMP (architecture):
+	streams: 3, words: 23118

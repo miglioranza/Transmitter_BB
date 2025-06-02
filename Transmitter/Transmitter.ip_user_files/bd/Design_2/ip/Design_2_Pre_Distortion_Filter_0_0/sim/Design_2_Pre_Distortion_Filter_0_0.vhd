@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:Pre_Distortion_Filter:1.0
--- IP Revision: 8
+-- IP Revision: 9
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -62,8 +62,8 @@ ENTITY Design_2_Pre_Distortion_Filter_0_0 IS
     data_in_ready : IN STD_LOGIC;
     data_in_valid : IN STD_LOGIC;
     data_out_valid : OUT STD_LOGIC;
-    Q_output : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    I_output : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    Q_output : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    I_output : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
     data_out_ready : OUT STD_LOGIC
   );
 END Design_2_Pre_Distortion_Filter_0_0;
@@ -85,8 +85,8 @@ ARCHITECTURE Design_2_Pre_Distortion_Filter_0_0_arch OF Design_2_Pre_Distortion_
       data_in_ready : IN STD_LOGIC;
       data_in_valid : IN STD_LOGIC;
       data_out_valid : OUT STD_LOGIC;
-      Q_output : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-      I_output : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      Q_output : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+      I_output : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
       data_out_ready : OUT STD_LOGIC
     );
   END COMPONENT Parallel_FIR_filter;

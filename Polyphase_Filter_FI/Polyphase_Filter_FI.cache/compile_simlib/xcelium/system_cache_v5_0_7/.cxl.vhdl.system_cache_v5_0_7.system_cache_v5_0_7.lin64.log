@@ -1,0 +1,1216 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd:
+  attribute MARK_DEBUG of OPT_IF0_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_OPTIMIZED_PORTS >  0 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341290|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of OPT_IF1_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_OPTIMIZED_PORTS >  1 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341291|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of OPT_IF2_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_OPTIMIZED_PORTS >  2 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341292|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of OPT_IF3_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_OPTIMIZED_PORTS >  3 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341293|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of OPT_IF4_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_OPTIMIZED_PORTS >  4 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341294|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of OPT_IF5_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_OPTIMIZED_PORTS >  5 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341295|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of OPT_IF6_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_OPTIMIZED_PORTS >  6 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341296|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of OPT_IF7_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_OPTIMIZED_PORTS >  7 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341297|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of OPT_IF8_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_OPTIMIZED_PORTS >  8 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341298|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of OPT_IF9_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_OPTIMIZED_PORTS >  9 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341299|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of OPT_IF10_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_OPTIMIZED_PORTS > 10 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341300|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of OPT_IF11_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_OPTIMIZED_PORTS > 11 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341301|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of OPT_IF12_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_OPTIMIZED_PORTS > 12 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341302|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of OPT_IF13_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_OPTIMIZED_PORTS > 13 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341303|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of OPT_IF14_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_OPTIMIZED_PORTS > 14 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341304|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of OPT_IF15_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_OPTIMIZED_PORTS > 15 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341305|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of GEN_IF0_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_GENERIC_PORTS   >  0 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341306|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of GEN_IF1_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_GENERIC_PORTS   >  1 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341307|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of GEN_IF2_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_GENERIC_PORTS   >  2 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341308|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of GEN_IF3_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_GENERIC_PORTS   >  3 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341309|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of GEN_IF4_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_GENERIC_PORTS   >  4 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341310|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of GEN_IF5_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_GENERIC_PORTS   >  5 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341311|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of GEN_IF6_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_GENERIC_PORTS   >  6 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341312|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of GEN_IF7_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_GENERIC_PORTS   >  7 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341313|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of GEN_IF8_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_GENERIC_PORTS   >  8 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341314|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of GEN_IF9_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_GENERIC_PORTS   >  9 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341315|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of GEN_IF10_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_GENERIC_PORTS   > 10 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341316|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of GEN_IF11_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_GENERIC_PORTS   > 11 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341317|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of GEN_IF12_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_GENERIC_PORTS   > 12 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341318|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of GEN_IF13_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_GENERIC_PORTS   > 13 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341319|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of GEN_IF14_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_GENERIC_PORTS   > 14 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341320|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of GEN_IF15_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_NUM_GENERIC_PORTS   > 15 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341321|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of CTRL_IF_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341322|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of ARBITER0_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 0 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341323|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of ARBITER1_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 1 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341324|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of ARBITER2_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 2 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341325|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of ARBITER3_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 3 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341326|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of ARBITER4_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 4 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341327|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of ARBITER5_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 5 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341328|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of ARBITER6_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 6 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341329|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of ARBITER7_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 7 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341330|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of ACCESS0_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 0 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341331|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of ACCESS1_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 1 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341332|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of ACCESS2_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 2 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341333|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of ACCESS3_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 3 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341334|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of ACCESS4_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 4 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341335|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of ACCESS5_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 5 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341336|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of ACCESS6_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 6 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341337|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of ACCESS7_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 7 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341338|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of MEMORY0_DEBUG1             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 0 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341339|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of MEMORY0_DEBUG2             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 0 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341340|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of MEMORY1_DEBUG1             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 1 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341341|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of MEMORY1_DEBUG2             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 1 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341342|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of MEMORY2_DEBUG1             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 2 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341343|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of MEMORY2_DEBUG2             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 2 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341344|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of MEMORY3_DEBUG1             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 3 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341345|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of MEMORY3_DEBUG2             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 3 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341346|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of MEMORY4_DEBUG1             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 4 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341347|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of MEMORY4_DEBUG2             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 4 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341348|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of MEMORY5_DEBUG1             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 5 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341349|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of MEMORY5_DEBUG2             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 5 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341350|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of MEMORY6_DEBUG1             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 6 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341351|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of MEMORY6_DEBUG2             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 6 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341352|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of MEMORY7_DEBUG1             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 7 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341353|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of MEMORY7_DEBUG2             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 7 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341354|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of LOOKUP0_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 0 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341355|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of LOOKUP1_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 1 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341356|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of LOOKUP2_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 2 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341357|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of LOOKUP3_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 3 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341358|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of LOOKUP4_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 4 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341359|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of LOOKUP5_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 5 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341360|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of LOOKUP6_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 6 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341361|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of LOOKUP7_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 7 ) );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341362|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of UPDATE0_DEBUG1             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 0 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341363|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of UPDATE0_DEBUG2             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 0 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341364|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of UPDATE1_DEBUG1             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 1 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341365|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of UPDATE1_DEBUG2             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 1 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341366|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of UPDATE2_DEBUG1             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 2 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341367|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of UPDATE2_DEBUG2             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 2 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341368|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of UPDATE3_DEBUG1             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 3 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341369|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of UPDATE3_DEBUG2             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 3 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341370|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of UPDATE4_DEBUG1             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 4 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341371|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of UPDATE4_DEBUG2             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 4 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341372|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of UPDATE5_DEBUG1             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 5 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341373|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of UPDATE5_DEBUG2             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 5 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341374|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of UPDATE6_DEBUG1             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 6 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341375|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of UPDATE6_DEBUG2             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 6 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341376|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of UPDATE7_DEBUG1             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 7 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341377|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of UPDATE7_DEBUG2             : signal is has_debug( C_USE_DEBUG_BOOL and ( C_CACHE_BLOCKS > 7 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341378|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of BACKEND0_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and C_HAS_MASTER_PORTS and ( C_NUM_MASTER_PORTS > 0 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341379|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of BACKEND1_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and C_HAS_MASTER_PORTS and ( C_NUM_MASTER_PORTS > 1 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341380|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of BACKEND2_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and C_HAS_MASTER_PORTS and ( C_NUM_MASTER_PORTS > 2 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341381|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of BACKEND3_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and C_HAS_MASTER_PORTS and ( C_NUM_MASTER_PORTS > 3 ) );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341382|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of CHI0_RN_DEBUG              : signal is has_debug( C_USE_DEBUG_BOOL and is_mst_coherent(C_ENABLE_COHERENCY) and C_ENABLE_CHI_PROTOCOL > 0 );
+                                      |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341383|38): illegal entity designator [5.1].
+  attribute MARK_DEBUG of CCIX0_RA_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and is_mst_coherent(C_ENABLE_COHERENCY) and C_ENABLE_CCIX_PROTOCOL > 0 );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341384|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of CCIX0_HA_HAZ_DEBUG         : signal is has_debug( C_USE_DEBUG_BOOL and is_mst_coherent(C_ENABLE_COHERENCY) and C_ENABLE_CCIX_PROTOCOL > 0 and C_ENABLE_HOME > 0 );
+                                           |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341385|43): illegal entity designator [5.1].
+  attribute MARK_DEBUG of CCIX0_HA_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and is_mst_coherent(C_ENABLE_COHERENCY) and C_ENABLE_CCIX_PROTOCOL > 0 and C_ENABLE_HOME > 0 );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341386|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of CCIX0_TX_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and is_mst_coherent(C_ENABLE_COHERENCY) and C_ENABLE_CCIX_PROTOCOL > 0 );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341387|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of CCIX0_RX_DEBUG             : signal is has_debug( C_USE_DEBUG_BOOL and is_mst_coherent(C_ENABLE_COHERENCY) and C_ENABLE_CCIX_PROTOCOL > 0 );
+                                       |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341388|39): illegal entity designator [5.1].
+  attribute MARK_DEBUG of TXN0_DEBUG                 : signal is has_debug( C_USE_DEBUG_BOOL and is_mst_coherent(C_ENABLE_COHERENCY) and ( C_ENABLE_CCIX_PROTOCOL > 0 or C_ENABLE_CHI_PROTOCOL > 0 ) );
+                                   |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341389|35): illegal entity designator [5.1].
+  attribute MARK_DEBUG of TXN0_DATA_DEBUG            : signal is has_debug( C_USE_DEBUG_BOOL and is_mst_coherent(C_ENABLE_COHERENCY) and ( C_ENABLE_CCIX_PROTOCOL > 0 or C_ENABLE_CHI_PROTOCOL > 0 ) );
+                                        |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341390|40): illegal entity designator [5.1].
+  attribute MARK_DEBUG of M0_IF_DEBUG                : signal is has_debug( C_USE_DEBUG_BOOL and C_HAS_MASTER_PORTS and ( C_NUM_MASTER_PORTS > 0 ) );
+                                    |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341391|36): illegal entity designator [5.1].
+  attribute MARK_DEBUG of M1_IF_DEBUG                : signal is has_debug( C_USE_DEBUG_BOOL and C_HAS_MASTER_PORTS and ( C_NUM_MASTER_PORTS > 1 ) );
+                                    |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341392|36): illegal entity designator [5.1].
+  attribute MARK_DEBUG of M2_IF_DEBUG                : signal is has_debug( C_USE_DEBUG_BOOL and C_HAS_MASTER_PORTS and ( C_NUM_MASTER_PORTS > 2 ) );
+                                    |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341393|36): illegal entity designator [5.1].
+  attribute MARK_DEBUG of M3_IF_DEBUG                : signal is has_debug( C_USE_DEBUG_BOOL and C_HAS_MASTER_PORTS and ( C_NUM_MASTER_PORTS > 3 ) );
+                                    |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341394|36): illegal entity designator [5.1].
+  attribute MARK_DEBUG of ATS_HANDLE_DEBUG           : signal is has_debug( C_USE_DEBUG_BOOL and C_ENABLE_ADDRESS_TRANSLATION > 0 and C_ENABLE_COHERENCY /= 1 );
+                                         |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341395|41): illegal entity designator [5.1].
+  attribute MARK_DEBUG of ATS_IF_DEBUG               : signal is has_debug( C_USE_DEBUG_BOOL and C_ENABLE_ADDRESS_TRANSLATION > 0 and C_ENABLE_COHERENCY /= 1 );
+                                     |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/system_cache_v5_0/hdl/system_cache_v5_0_vh_rfs.vhd,341396|37): illegal entity designator [5.1].
+	errors: 0, warnings: 107
+SYSTEM_CACHE_V5_0_7.SYSTEM_CACHE_PKG (package):
+	streams: 76, words: 560883
+SYSTEM_CACHE_V5_0_7.SYSTEM_CACHE_PKG:BODY (package body):
+	streams: 428, words: 949785
+SYSTEM_CACHE_V5_0_7.SYSTEM_CACHE_QUEUE_PKG (package):
+	streams: 1, words: 7192
+SYSTEM_CACHE_V5_0_7.SYSTEM_CACHE_QUEUE_PKG:BODY (package body):
+	streams: 1, words: 158
+SYSTEM_CACHE_V5_0_7.SC_CCIX_HOME_PKG (package):
+	streams: 1, words: 8
+SYSTEM_CACHE_V5_0_7.SC_CCIX_HOME_PKG:BODY (package body):
+	streams: 2, words: 1000
+SYSTEM_CACHE_V5_0_7.MB_LUT6 (entity):
+	streams: 10, words: 340
+SYSTEM_CACHE_V5_0_7.MB_LUT6:IMP (architecture):
+	streams: 1, words: 1385
+SYSTEM_CACHE_V5_0_7.MB_LUT6_2 (entity):
+	streams: 11, words: 348
+SYSTEM_CACHE_V5_0_7.MB_LUT6_2:IMP (architecture):
+	streams: 1, words: 1801
+SYSTEM_CACHE_V5_0_7.MB_MUXCY (entity):
+	streams: 6, words: 162
+SYSTEM_CACHE_V5_0_7.MB_MUXCY:IMP (architecture):
+	streams: 1, words: 651
+SYSTEM_CACHE_V5_0_7.MB_XORCY (entity):
+	streams: 5, words: 154
+SYSTEM_CACHE_V5_0_7.MB_XORCY:IMP (architecture):
+	streams: 1, words: 651
+SYSTEM_CACHE_V5_0_7.MB_MUXF7 (entity):
+	streams: 6, words: 162
+SYSTEM_CACHE_V5_0_7.MB_MUXF7:IMP (architecture):
+	streams: 1, words: 651
+SYSTEM_CACHE_V5_0_7.MB_MUXF8 (entity):
+	streams: 6, words: 162
+SYSTEM_CACHE_V5_0_7.MB_MUXF8:IMP (architecture):
+	streams: 1, words: 651
+SYSTEM_CACHE_V5_0_7.MB_FDRE (entity):
+	streams: 8, words: 237
+SYSTEM_CACHE_V5_0_7.MB_FDRE:IMP (architecture):
+	streams: 2, words: 808
+SYSTEM_CACHE_V5_0_7.MB_FDSE (entity):
+	streams: 8, words: 246
+SYSTEM_CACHE_V5_0_7.MB_FDSE:IMP (architecture):
+	streams: 2, words: 808
+SYSTEM_CACHE_V5_0_7.MUXCY_XORCY (entity):
+	streams: 8, words: 237
+SYSTEM_CACHE_V5_0_7.MUXCY_XORCY:IMP (architecture):
+	streams: 1, words: 1281
+SYSTEM_CACHE_V5_0_7.CARRY_AND_DI (entity):
+	streams: 7, words: 229
+SYSTEM_CACHE_V5_0_7.CARRY_AND_DI:IMP (architecture):
+	streams: 1, words: 1278
+SYSTEM_CACHE_V5_0_7.CARRY_AND (entity):
+	streams: 7, words: 288
+SYSTEM_CACHE_V5_0_7.CARRY_AND:IMP (architecture):
+	streams: 1, words: 1361
+SYSTEM_CACHE_V5_0_7.CARRY_AND_N (entity):
+	streams: 7, words: 288
+SYSTEM_CACHE_V5_0_7.CARRY_AND_N:IMP (architecture):
+	streams: 1, words: 1364
+SYSTEM_CACHE_V5_0_7.CARRY_OR (entity):
+	streams: 7, words: 288
+SYSTEM_CACHE_V5_0_7.CARRY_OR:IMP (architecture):
+	streams: 1, words: 1364
+SYSTEM_CACHE_V5_0_7.CARRY_OR_N (entity):
+	streams: 7, words: 288
+SYSTEM_CACHE_V5_0_7.CARRY_OR_N:IMP (architecture):
+	streams: 1, words: 1361
+SYSTEM_CACHE_V5_0_7.CARRY_VEC_OR (entity):
+	streams: 10, words: 1300
+SYSTEM_CACHE_V5_0_7.CARRY_VEC_OR:IMP (architecture):
+	streams: 2, words: 6293
+SYSTEM_CACHE_V5_0_7.CARRY_VEC_AND_N (entity):
+	streams: 10, words: 1300
+SYSTEM_CACHE_V5_0_7.CARRY_VEC_AND_N:IMP (architecture):
+	streams: 2, words: 6293
+SYSTEM_CACHE_V5_0_7.CARRY_LATCH_AND (entity):
+	streams: 9, words: 366
+SYSTEM_CACHE_V5_0_7.CARRY_LATCH_AND:IMP (architecture):
+	streams: 2, words: 4740
+SYSTEM_CACHE_V5_0_7.CARRY_LATCH_AND_N (entity):
+	streams: 9, words: 366
+SYSTEM_CACHE_V5_0_7.CARRY_LATCH_AND_N:IMP (architecture):
+	streams: 2, words: 4740
+SYSTEM_CACHE_V5_0_7.CARRY_LATCH_OR (entity):
+	streams: 9, words: 366
+SYSTEM_CACHE_V5_0_7.CARRY_LATCH_OR:IMP (architecture):
+	streams: 2, words: 4740
+SYSTEM_CACHE_V5_0_7.CARRY_LATCH_OR_N (entity):
+	streams: 9, words: 366
+SYSTEM_CACHE_V5_0_7.CARRY_LATCH_OR_N:IMP (architecture):
+	streams: 2, words: 4740
+SYSTEM_CACHE_V5_0_7.CARRY_PIPERUN_STEP (entity):
+	streams: 8, words: 237
+SYSTEM_CACHE_V5_0_7.CARRY_PIPERUN_STEP:IMP (architecture):
+	streams: 1, words: 672
+SYSTEM_CACHE_V5_0_7.CARRY_COMPARE (entity):
+	streams: 10, words: 2043
+SYSTEM_CACHE_V5_0_7.CARRY_COMPARE:IMP (architecture):
+	streams: 2, words: 7957
+SYSTEM_CACHE_V5_0_7.CARRY_LTE (entity):
+	streams: 10, words: 2043
+SYSTEM_CACHE_V5_0_7.CARRY_LTE:IMP (architecture):
+	streams: 2, words: 8962
+SYSTEM_CACHE_V5_0_7.CARRY_PRIO_MUX (entity):
+	streams: 12, words: 2186
+SYSTEM_CACHE_V5_0_7.CARRY_PRIO_MUX:IMP (architecture):
+	streams: 3, words: 22413
+SYSTEM_CACHE_V5_0_7.CARRY_PRIO_MUX_ENABLE (entity):
+	streams: 13, words: 2194
+SYSTEM_CACHE_V5_0_7.CARRY_PRIO_MUX_ENABLE:IMP (architecture):
+	streams: 3, words: 22413
+SYSTEM_CACHE_V5_0_7.CARRY_SELECT_AND (entity):
+	streams: 10, words: 1609
+SYSTEM_CACHE_V5_0_7.CARRY_SELECT_AND:IMP (architecture):
+	streams: 2, words: 4348
+SYSTEM_CACHE_V5_0_7.CARRY_SELECT_AND_N (entity):
+	streams: 10, words: 1609
+SYSTEM_CACHE_V5_0_7.CARRY_SELECT_AND_N:IMP (architecture):
+	streams: 2, words: 4348
+SYSTEM_CACHE_V5_0_7.CARRY_SELECT_OR (entity):
+	streams: 10, words: 1609
+SYSTEM_CACHE_V5_0_7.CARRY_SELECT_OR:IMP (architecture):
+	streams: 2, words: 4348
+SYSTEM_CACHE_V5_0_7.CARRY_SELECT_OR_N (entity):
+	streams: 10, words: 1609
+SYSTEM_CACHE_V5_0_7.CARRY_SELECT_OR_N:IMP (architecture):
+	streams: 2, words: 4348
+SYSTEM_CACHE_V5_0_7.CARRY_COMPARE_CONST (entity):
+	streams: 9, words: 1248
+SYSTEM_CACHE_V5_0_7.CARRY_COMPARE_CONST:IMP (architecture):
+	streams: 2, words: 7999
+SYSTEM_CACHE_V5_0_7.CARRY_COMPARE_MASK (entity):
+	streams: 12, words: 2923
+SYSTEM_CACHE_V5_0_7.CARRY_COMPARE_MASK:IMP (architecture):
+	streams: 2, words: 9701
+SYSTEM_CACHE_V5_0_7.CARRY_COMPARE_MASK_CONST (entity):
+	streams: 10, words: 2061
+SYSTEM_CACHE_V5_0_7.CARRY_COMPARE_MASK_CONST:IMP (architecture):
+	streams: 2, words: 9657
+SYSTEM_CACHE_V5_0_7.COMPARATOR (entity):
+	streams: 11, words: 2051
+SYSTEM_CACHE_V5_0_7.COMPARATOR:IMP (architecture):
+	streams: 3, words: 16332
+SYSTEM_CACHE_V5_0_7.REG_CE (entity):
+	streams: 12, words: 2977
+SYSTEM_CACHE_V5_0_7.REG_CE:IMP (architecture):
+	streams: 2, words: 8483
+SYSTEM_CACHE_V5_0_7.REG_CE_KILL (entity):
+	streams: 13, words: 2985
+SYSTEM_CACHE_V5_0_7.REG_CE_KILL:IMP (architecture):
+	streams: 2, words: 8573
+SYSTEM_CACHE_V5_0_7.BIT_REG_CE (entity):
+	streams: 10, words: 1197
+SYSTEM_CACHE_V5_0_7.BIT_REG_CE:IMP (architecture):
+	streams: 1, words: 3447
+SYSTEM_CACHE_V5_0_7.BIT_REG_CE_KILL (entity):
+	streams: 11, words: 1205
+SYSTEM_CACHE_V5_0_7.BIT_REG_CE_KILL:IMP (architecture):
+	streams: 1, words: 3450
+SYSTEM_CACHE_V5_0_7.FIND_FIRST (entity):
+	streams: 8, words: 2740
+SYSTEM_CACHE_V5_0_7.FIND_FIRST:IMP (architecture):
+	streams: 1, words: 200
+SYSTEM_CACHE_V5_0_7.FSB_ELEMENT (entity):
+	streams: 10, words: 1339
+SYSTEM_CACHE_V5_0_7.FSB_ELEMENT:IMP (architecture):
+	streams: 2, words: 3129
+SYSTEM_CACHE_V5_0_7.FSB32 (entity):
+	streams: 7, words: 813
+SYSTEM_CACHE_V5_0_7.FSB32:IMP (architecture):
+	streams: 5, words: 12217
+SYSTEM_CACHE_V5_0_7.FSB64 (entity):
+	streams: 7, words: 877
+SYSTEM_CACHE_V5_0_7.FSB64:IMP (architecture):
+	streams: 5, words: 14258
+SYSTEM_CACHE_V5_0_7.FSB128 (entity):
+	streams: 7, words: 781
+SYSTEM_CACHE_V5_0_7.FSB128:IMP (architecture):
+	streams: 5, words: 14989
+SYSTEM_CACHE_V5_0_7.FSB256 (entity):
+	streams: 7, words: 779
+SYSTEM_CACHE_V5_0_7.FSB256:IMP (architecture):
+	streams: 5, words: 16062
+SYSTEM_CACHE_V5_0_7.GEN_FSB (entity):
+	streams: 9, words: 2763
+SYSTEM_CACHE_V5_0_7.GEN_FSB:IMP (architecture):
+	streams: 1, words: 4087
+SYSTEM_CACHE_V5_0_7.SC_ACCESS_BUFFER (entity):
+	streams: 27, words: 4349
+SYSTEM_CACHE_V5_0_7.SC_ACCESS_BUFFER:IMP (architecture):
+	streams: 1, words: 6993
+SYSTEM_CACHE_V5_0_7.SC_TXNID_BUFFER (entity):
+	streams: 27, words: 1465
+SYSTEM_CACHE_V5_0_7.SC_TXNID_BUFFER:IMP (architecture):
+	streams: 1, words: 5363
+SYSTEM_CACHE_V5_0_7.CCIX_COMMON_REG_CE (entity):
+	streams: 10, words: 2351
+SYSTEM_CACHE_V5_0_7.CCIX_COMMON_REG_CE:IMP (architecture):
+	streams: 1, words: 21148
+SYSTEM_CACHE_V5_0_7.SAM_ROUTING_REG_CE (entity):
+	streams: 10, words: 2453
+SYSTEM_CACHE_V5_0_7.SAM_ROUTING_REG_CE:IMP (architecture):
+	streams: 1, words: 19810
+SYSTEM_CACHE_V5_0_7.SC_MST_SNP_REQ_PEEK (entity):
+	streams: 31, words: 2922
+SYSTEM_CACHE_V5_0_7.SC_MST_SNP_REQ_PEEK:IMP (architecture):
+	streams: 1, words: 4902
+SYSTEM_CACHE_V5_0_7.SC_CORE_RELEASE (entity):
+	streams: 27, words: 1467
+SYSTEM_CACHE_V5_0_7.SC_CORE_RELEASE:IMP (architecture):
+	streams: 1, words: 4831
+SYSTEM_CACHE_V5_0_7.SC_BIT_BUFFER (entity):
+	streams: 27, words: 939
+SYSTEM_CACHE_V5_0_7.SC_BIT_BUFFER:IMP (architecture):
+	streams: 1, words: 4638
+SYSTEM_CACHE_V5_0_7.SC_SEQUENCE_CHECK (entity):
+	streams: 25, words: 1443
+SYSTEM_CACHE_V5_0_7.SC_SEQUENCE_CHECK:IMP (architecture):
+	streams: 1, words: 5095
+SYSTEM_CACHE_V5_0_7.SC_PARITY (entity):
+	streams: 6, words: 1094
+SYSTEM_CACHE_V5_0_7.SC_PARITY:IMP (architecture):
+	streams: 2, words: 3657
+SYSTEM_CACHE_V5_0_7.SC_CHECKBIT_HANDLER (entity):
+	streams: 22, words: 2076
+SYSTEM_CACHE_V5_0_7.SC_CHECKBIT_HANDLER:IMP (architecture):
+	streams: 1, words: 88019
+SYSTEM_CACHE_V5_0_7.SC_INTEGRITY (entity):
+	streams: 9, words: 1515
+SYSTEM_CACHE_V5_0_7.SC_INTEGRITY:IMP (architecture):
+	streams: 1, words: 1287
+SYSTEM_CACHE_V5_0_7.SC_INTEGRITY_GENERATE (entity):
+	streams: 22, words: 4326
+SYSTEM_CACHE_V5_0_7.SC_INTEGRITY_GENERATE:IMP (architecture):
+	streams: 6, words: 21439
+SYSTEM_CACHE_V5_0_7.SC_INTEGRITY_CHECK (entity):
+	streams: 33, words: 6391
+SYSTEM_CACHE_V5_0_7.SC_INTEGRITY_CHECK:IMP (architecture):
+	streams: 10, words: 46814
+SYSTEM_CACHE_V5_0_7.SC_INTEGRITY_PIPELINE (entity):
+	streams: 33, words: 4999
+SYSTEM_CACHE_V5_0_7.SC_INTEGRITY_PIPELINE:IMP (architecture):
+	streams: 1, words: 8524
+SYSTEM_CACHE_V5_0_7.SC_STATISTICS_COUNTERS (entity):
+	streams: 28, words: 2170
+SYSTEM_CACHE_V5_0_7.SC_STATISTICS_COUNTERS:IMP (architecture):
+	streams: 2, words: 10808
+SYSTEM_CACHE_V5_0_7.SC_STAT_LATENCY (entity):
+	streams: 32, words: 2432
+SYSTEM_CACHE_V5_0_7.SC_STAT_LATENCY:IMP (architecture):
+	streams: 1, words: 3536
+SYSTEM_CACHE_V5_0_7.SC_SRL_FIFO_COUNTER (entity):
+	streams: 47, words: 3445
+SYSTEM_CACHE_V5_0_7.SC_SRL_FIFO_COUNTER:IMP (architecture):
+	streams: 2, words: 28668
+SYSTEM_CACHE_V5_0_7.SC_STAT_COUNTER (entity):
+	streams: 21, words: 1977
+SYSTEM_CACHE_V5_0_7.SC_STAT_COUNTER:IMP (architecture):
+	streams: 1, words: 9052
+SYSTEM_CACHE_V5_0_7.SC_STAT_EVENT (entity):
+	streams: 17, words: 995
+SYSTEM_CACHE_V5_0_7.SC_STAT_EVENT:IMP (architecture):
+	streams: 1, words: 2411
+SYSTEM_CACHE_V5_0_7.SC_LUD_PIPELINE (entity):
+	streams: 19, words: 786
+SYSTEM_CACHE_V5_0_7.SC_LUD_PIPELINE:IMP (architecture):
+	streams: 1, words: 200
+SYSTEM_CACHE_V5_0_7.SC_UD_PIPELINE (entity):
+	streams: 19, words: 786
+SYSTEM_CACHE_V5_0_7.SC_UD_PIPELINE:IMP (architecture):
+	streams: 1, words: 200
+SYSTEM_CACHE_V5_0_7.SC_SNP_PIPELINE (entity):
+	streams: 116, words: 22635
+SYSTEM_CACHE_V5_0_7.SC_SNP_PIPELINE:IMP (architecture):
+	streams: 1, words: 4931
+SYSTEM_CACHE_V5_0_7.SC_DATA_MERGE (entity):
+	streams: 41, words: 2914
+SYSTEM_CACHE_V5_0_7.SC_DATA_MERGE:IMP (architecture):
+	streams: 3, words: 17638
+SYSTEM_CACHE_V5_0_7.SC_TXN_BUFFER (entity):
+	streams: 137, words: 49254
+SYSTEM_CACHE_V5_0_7.SC_TXN_BUFFER:IMP (architecture):
+	streams: 6, words: 69395
+SYSTEM_CACHE_V5_0_7.SC_TXN_HANDLING (entity):
+	streams: 50, words: 4714
+SYSTEM_CACHE_V5_0_7.SC_TXN_HANDLING:IMP (architecture):
+	streams: 1, words: 12873
+SYSTEM_CACHE_V5_0_7.SC_CREDIT_BANK (entity):
+	streams: 42, words: 5698
+SYSTEM_CACHE_V5_0_7.SC_CREDIT_BANK:IMP (architecture):
+	streams: 1, words: 2787
+SYSTEM_CACHE_V5_0_7.SC_SHADOW_TRACKER (entity):
+	streams: 51, words: 4434
+SYSTEM_CACHE_V5_0_7.SC_SHADOW_TRACKER:IMP (architecture):
+	streams: 1, words: 1258
+SYSTEM_CACHE_V5_0_7.SC_OOO_DATA_BUFFER (entity):
+	streams: 34, words: 2568
+SYSTEM_CACHE_V5_0_7.SC_OOO_DATA_BUFFER:IMP (architecture):
+	streams: 1, words: 5553
+SYSTEM_CACHE_V5_0_7.SC_OOO_SNOOP_BUFFER (entity):
+	streams: 34, words: 2568
+SYSTEM_CACHE_V5_0_7.SC_OOO_SNOOP_BUFFER:IMP (architecture):
+	streams: 1, words: 3987
+SYSTEM_CACHE_V5_0_7.SC_OOO_HIT_BUFFER (entity):
+	streams: 37, words: 3017
+SYSTEM_CACHE_V5_0_7.SC_OOO_HIT_BUFFER:IMP (architecture):
+	streams: 2, words: 8835
+SYSTEM_CACHE_V5_0_7.SC_OOO_SETUP_BUFFER (entity):
+	streams: 28, words: 2289
+SYSTEM_CACHE_V5_0_7.SC_OOO_SETUP_BUFFER:IMP (architecture):
+	streams: 1, words: 2760
+SYSTEM_CACHE_V5_0_7.SC_OOO_BRESP_BUFFER (entity):
+	streams: 28, words: 2201
+SYSTEM_CACHE_V5_0_7.SC_OOO_BRESP_BUFFER:IMP (architecture):
+	streams: 1, words: 2748
+SYSTEM_CACHE_V5_0_7.SC_OOO_EARLY_BUFFER (entity):
+	streams: 28, words: 2131
+SYSTEM_CACHE_V5_0_7.SC_OOO_EARLY_BUFFER:IMP (architecture):
+	streams: 1, words: 2754
+SYSTEM_CACHE_V5_0_7.SC_OOO_WC_BUFFER (entity):
+	streams: 28, words: 2121
+SYSTEM_CACHE_V5_0_7.SC_OOO_WC_BUFFER:IMP (architecture):
+	streams: 1, words: 2748
+SYSTEM_CACHE_V5_0_7.SC_OOO_SEGMENT_BUFFER (entity):
+	streams: 34, words: 3407
+SYSTEM_CACHE_V5_0_7.SC_OOO_SEGMENT_BUFFER:IMP (architecture):
+	streams: 1, words: 4373
+SYSTEM_CACHE_V5_0_7.SC_OOO_SLOT_BUFFER (entity):
+	streams: 26, words: 1495
+SYSTEM_CACHE_V5_0_7.SC_OOO_SLOT_BUFFER:IMP (architecture):
+	streams: 1, words: 3039
+SYSTEM_CACHE_V5_0_7.SC_OOO_READ_SOURCE_BUFFER (entity):
+	streams: 28, words: 2141
+SYSTEM_CACHE_V5_0_7.SC_OOO_READ_SOURCE_BUFFER:IMP (architecture):
+	streams: 1, words: 2760
+SYSTEM_CACHE_V5_0_7.SC_OOO_VALID_BUFFER (entity):
+	streams: 28, words: 2027
+SYSTEM_CACHE_V5_0_7.SC_OOO_VALID_BUFFER:IMP (architecture):
+	streams: 1, words: 1895
+SYSTEM_CACHE_V5_0_7.SC_OOO_WR_CHANNEL (entity):
+	streams: 41, words: 4615
+SYSTEM_CACHE_V5_0_7.SC_OOO_WR_CHANNEL:IMP (architecture):
+	streams: 1, words: 15298
+SYSTEM_CACHE_V5_0_7.SC_OOO_WR_INTERFACE (entity):
+	streams: 56, words: 11296
+SYSTEM_CACHE_V5_0_7.SC_OOO_WR_INTERFACE:IMP (architecture):
+	streams: 2, words: 28332
+SYSTEM_CACHE_V5_0_7.SC_OOO_RD_CHANNEL (entity):
+	streams: 43, words: 4570
+SYSTEM_CACHE_V5_0_7.SC_OOO_RD_CHANNEL:IMP (architecture):
+	streams: 1, words: 14180
+SYSTEM_CACHE_V5_0_7.SC_OOO_RD_INTERFACE (entity):
+	streams: 60, words: 14011
+SYSTEM_CACHE_V5_0_7.SC_OOO_RD_INTERFACE:IMP (architecture):
+	streams: 2, words: 32941
+SYSTEM_CACHE_V5_0_7.SC_TRANSACTION_TRACKER (entity):
+	streams: 6, words: 280
+SYSTEM_CACHE_V5_0_7.SC_TRANSACTION_TRACKER:IMP (architecture):
+	streams: 1, words: 200
+SYSTEM_CACHE_V5_0_7.SC_ADDRESS_CHECK (entity):
+	streams: 38, words: 2021
+SYSTEM_CACHE_V5_0_7.SC_ADDRESS_CHECK:IMP (architecture):
+	streams: 1, words: 4575
+SYSTEM_CACHE_V5_0_7.SC_SAM (entity):
+	streams: 44, words: 5164
+SYSTEM_CACHE_V5_0_7.SC_SAM:IMP (architecture):
+	streams: 1, words: 11343
+SYSTEM_CACHE_V5_0_7.SC_RR_ARBITER (entity):
+	streams: 37, words: 7004
+SYSTEM_CACHE_V5_0_7.SC_RR_ARBITER:IMP (architecture):
+	streams: 8, words: 19979
+SYSTEM_CACHE_V5_0_7.SC_ATS_DESIGN_PKG (package):
+	streams: 1, words: 40559
+SYSTEM_CACHE_V5_0_7.SC_ATS_DESIGN_PKG:BODY (package body):
+	streams: 45, words: 94806
+SYSTEM_CACHE_V5_0_7.SC_ATC_TABLE (entity):
+	streams: 48, words: 8723
+SYSTEM_CACHE_V5_0_7.SC_ATC_TABLE:IMP (architecture):
+	streams: 1, words: 58868
+SYSTEM_CACHE_V5_0_7.SC_ATC_CORE (entity):
+	streams: 61, words: 10262
+SYSTEM_CACHE_V5_0_7.SC_ATC_CORE:IMP (architecture):
+	streams: 2, words: 32566
+SYSTEM_CACHE_V5_0_7.ATS_CMD_DECODE_256 (entity):
+	streams: 65, words: 11873
+SYSTEM_CACHE_V5_0_7.ATS_CMD_DECODE_256:RTL (architecture):
+	streams: 2, words: 26208
+SYSTEM_CACHE_V5_0_7.ATS_CMD_DECODE_512_1024 (entity):
+	streams: 65, words: 11873
+SYSTEM_CACHE_V5_0_7.ATS_CMD_DECODE_512_1024:RTL (architecture):
+	streams: 2, words: 41281
+SYSTEM_CACHE_V5_0_7.RC_DECOMPOSER_TOP (entity):
+	streams: 69, words: 21418
+SYSTEM_CACHE_V5_0_7.RC_DECOMPOSER_TOP:RTL (architecture):
+	streams: 15, words: 291871
+SYSTEM_CACHE_V5_0_7.ATS_CPL_DECODE_256 (entity):
+	streams: 59, words: 9694
+SYSTEM_CACHE_V5_0_7.ATS_CPL_DECODE_256:RTL (architecture):
+	streams: 2, words: 23089
+SYSTEM_CACHE_V5_0_7.ATS_CPL_DECODE_512_1024 (entity):
+	streams: 59, words: 9694
+SYSTEM_CACHE_V5_0_7.ATS_CPL_DECODE_512_1024:RTL (architecture):
+	streams: 2, words: 32397
+SYSTEM_CACHE_V5_0_7.CQ_DECOMPOSER_TOP (entity):
+	streams: 80, words: 27771
+SYSTEM_CACHE_V5_0_7.CQ_DECOMPOSER_TOP:RTL (architecture):
+	streams: 14, words: 234428
+SYSTEM_CACHE_V5_0_7.CC_COMPLETER (entity):
+	streams: 75, words: 12884
+SYSTEM_CACHE_V5_0_7.CC_COMPLETER:RTL (architecture):
+	streams: 1, words: 11642
+SYSTEM_CACHE_V5_0_7.CC_COMPLETER_512_1024 (entity):
+	streams: 75, words: 12884
+SYSTEM_CACHE_V5_0_7.CC_COMPLETER_512_1024:RTL (architecture):
+	streams: 1, words: 21782
+SYSTEM_CACHE_V5_0_7.RQ_COMPOSER (entity):
+	streams: 66, words: 14025
+SYSTEM_CACHE_V5_0_7.RQ_COMPOSER:RTL (architecture):
+	streams: 1, words: 17713
+SYSTEM_CACHE_V5_0_7.RQ_COMPOSER_512_1024 (entity):
+	streams: 66, words: 14025
+SYSTEM_CACHE_V5_0_7.RQ_COMPOSER_512_1024:RTL (architecture):
+	streams: 1, words: 27256
+SYSTEM_CACHE_V5_0_7.RC_MUX_QUEUE_HANDLER (entity):
+	streams: 63, words: 19800
+SYSTEM_CACHE_V5_0_7.RC_MUX_QUEUE_HANDLER:RTL (architecture):
+	streams: 2, words: 26845
+SYSTEM_CACHE_V5_0_7.CQ_MUX_QUEUE_CC_HANDLER (entity):
+	streams: 111, words: 35036
+SYSTEM_CACHE_V5_0_7.CQ_MUX_QUEUE_CC_HANDLER:RTL (architecture):
+	streams: 3, words: 53525
+SYSTEM_CACHE_V5_0_7.RQ_MESSAGE_QUEUE_HANDLER (entity):
+	streams: 76, words: 19926
+SYSTEM_CACHE_V5_0_7.RQ_MESSAGE_QUEUE_HANDLER:RTL (architecture):
+	streams: 2, words: 8996
+SYSTEM_CACHE_V5_0_7.SC_ATS_TABLE_HANDLER (entity):
+	streams: 247, words: 56570
+SYSTEM_CACHE_V5_0_7.SC_ATS_TABLE_HANDLER:RTL (architecture):
+	streams: 3, words: 54983
+SYSTEM_CACHE_V5_0_7.SC_ATC (entity):
+	streams: 96, words: 18007
+SYSTEM_CACHE_V5_0_7.SC_ATC:IMP (architecture):
+	streams: 1, words: 32242
+SYSTEM_CACHE_V5_0_7.SC_ATS_INTERFACE (entity):
+	streams: 293, words: 60258
+SYSTEM_CACHE_V5_0_7.SC_ATS_INTERFACE:RTL (architecture):
+	streams: 2, words: 605399
+SYSTEM_CACHE_V5_0_7.SC_HAZARD_STORE (entity):
+	streams: 47, words: 5238
+SYSTEM_CACHE_V5_0_7.SC_HAZARD_STORE:IMP (architecture):
+	streams: 1, words: 12272
+SYSTEM_CACHE_V5_0_7.SC_HAZARD_TRACK (entity):
+	streams: 57, words: 7245
+SYSTEM_CACHE_V5_0_7.SC_HAZARD_TRACK:IMP (architecture):
+	streams: 1, words: 28259
+SYSTEM_CACHE_V5_0_7.SC_CCIX_HOME_HAZARD (entity):
+	streams: 97, words: 24387
+SYSTEM_CACHE_V5_0_7.SC_CCIX_HOME_HAZARD:IMP (architecture):
+	streams: 13, words: 196036
+SYSTEM_CACHE_V5_0_7.SC_CXS_INTERFACE (entity):
+	streams: 133, words: 35598
+SYSTEM_CACHE_V5_0_7.SC_CXS_INTERFACE:IMP (architecture):
+	streams: 1, words: 24128
+SYSTEM_CACHE_V5_0_7.SC_CXS_ENCODE (entity):
+	streams: 188, words: 61529
+SYSTEM_CACHE_V5_0_7.SC_CXS_ENCODE:IMP (architecture):
+	streams: 5, words: 121467
+SYSTEM_CACHE_V5_0_7.SC_CXS_DECODE (entity):
+	streams: 171, words: 36756
+SYSTEM_CACHE_V5_0_7.SC_CXS_DECODE:IMP (architecture):
+	streams: 5, words: 194499
+SYSTEM_CACHE_V5_0_7.SC_CCHIX_COMPLETE (entity):
+	streams: 51, words: 10343
+SYSTEM_CACHE_V5_0_7.SC_CCHIX_COMPLETE:IMP (architecture):
+	streams: 2, words: 16848
+SYSTEM_CACHE_V5_0_7.SC_CCHIX_RD_PIPE (entity):
+	streams: 180, words: 35077
+SYSTEM_CACHE_V5_0_7.SC_CCHIX_RD_PIPE:IMP (architecture):
+	streams: 3, words: 83775
+SYSTEM_CACHE_V5_0_7.SC_CCHIX_WR_PIPE (entity):
+	streams: 245, words: 55545
+SYSTEM_CACHE_V5_0_7.SC_CCHIX_WR_PIPE:IMP (architecture):
+	streams: 4, words: 106700
+SYSTEM_CACHE_V5_0_7.SC_CCHIX_RSP_PIPE (entity):
+	streams: 218, words: 45629
+SYSTEM_CACHE_V5_0_7.SC_CCHIX_RSP_PIPE:IMP (architecture):
+	streams: 5, words: 125204
+SYSTEM_CACHE_V5_0_7.SC_CCHIX_SNP_PIPE (entity):
+	streams: 200, words: 42314
+SYSTEM_CACHE_V5_0_7.SC_CCHIX_SNP_PIPE:IMP (architecture):
+	streams: 1, words: 41828
+SYSTEM_CACHE_V5_0_7.SC_CCIX_LINE_STATE_BUFFER (entity):
+	streams: 27, words: 1887
+SYSTEM_CACHE_V5_0_7.SC_CCIX_LINE_STATE_BUFFER:IMP (architecture):
+	streams: 1, words: 5056
+SYSTEM_CACHE_V5_0_7.SC_CCIX_REQ_BUFFER_CONFLICT (entity):
+	streams: 32, words: 4505
+SYSTEM_CACHE_V5_0_7.SC_CCIX_REQ_BUFFER_CONFLICT:IMP (architecture):
+	streams: 1, words: 6117
+SYSTEM_CACHE_V5_0_7.SC_CCIX_REQ_BUFFER (entity):
+	streams: 29, words: 3577
+SYSTEM_CACHE_V5_0_7.SC_CCIX_REQ_BUFFER:IMP (architecture):
+	streams: 1, words: 6117
+SYSTEM_CACHE_V5_0_7.SC_CCIX_RSP_BUFFER (entity):
+	streams: 31, words: 4301
+SYSTEM_CACHE_V5_0_7.SC_CCIX_RSP_BUFFER:IMP (architecture):
+	streams: 1, words: 7318
+SYSTEM_CACHE_V5_0_7.SC_CCIX_SNP_BUFFER (entity):
+	streams: 29, words: 3147
+SYSTEM_CACHE_V5_0_7.SC_CCIX_SNP_BUFFER:IMP (architecture):
+	streams: 1, words: 6325
+SYSTEM_CACHE_V5_0_7.SC_CCIX_CRD_BUFFER (entity):
+	streams: 29, words: 3149
+SYSTEM_CACHE_V5_0_7.SC_CCIX_CRD_BUFFER:IMP (architecture):
+	streams: 1, words: 6032
+SYSTEM_CACHE_V5_0_7.SC_CCIX_PER_BUFFER (entity):
+	streams: 29, words: 3817
+SYSTEM_CACHE_V5_0_7.SC_CCIX_PER_BUFFER:IMP (architecture):
+	streams: 1, words: 6035
+SYSTEM_CACHE_V5_0_7.SC_CCIX_BCAST_BUFFER (entity):
+	streams: 27, words: 1953
+SYSTEM_CACHE_V5_0_7.SC_CCIX_BCAST_BUFFER:IMP (architecture):
+	streams: 1, words: 4835
+SYSTEM_CACHE_V5_0_7.SC_TXN_RETURN_BUFFER (entity):
+	streams: 25, words: 1507
+SYSTEM_CACHE_V5_0_7.SC_TXN_RETURN_BUFFER:IMP (architecture):
+	streams: 1, words: 4793
+SYSTEM_CACHE_V5_0_7.SC_COMPACK_BUFFER (entity):
+	streams: 25, words: 1735
+SYSTEM_CACHE_V5_0_7.SC_COMPACK_BUFFER:IMP (architecture):
+	streams: 1, words: 5215
+SYSTEM_CACHE_V5_0_7.SC_SNP_DEC_BUFFER (entity):
+	streams: 31, words: 2800
+SYSTEM_CACHE_V5_0_7.SC_SNP_DEC_BUFFER:IMP (architecture):
+	streams: 1, words: 5596
+SYSTEM_CACHE_V5_0_7.SC_CCIX_DUMMY_BUFFER (entity):
+	streams: 25, words: 917
+SYSTEM_CACHE_V5_0_7.SC_CCIX_DUMMY_BUFFER:IMP (architecture):
+	streams: 1, words: 5611
+SYSTEM_CACHE_V5_0_7.SC_CCIX_HA_TXN_BUFFER (entity):
+	streams: 31, words: 3273
+SYSTEM_CACHE_V5_0_7.SC_CCIX_HA_TXN_BUFFER:IMP (architecture):
+	streams: 1, words: 7279
+SYSTEM_CACHE_V5_0_7.SC_CCIX_HA_RD_STATE_BUFFER (entity):
+	streams: 27, words: 939
+SYSTEM_CACHE_V5_0_7.SC_CCIX_HA_RD_STATE_BUFFER:IMP (architecture):
+	streams: 1, words: 4613
+SYSTEM_CACHE_V5_0_7.READ_REQ_HOME_INFO_BUFFER (entity):
+	streams: 29, words: 3099
+SYSTEM_CACHE_V5_0_7.READ_REQ_HOME_INFO_BUFFER:IMP (architecture):
+	streams: 1, words: 6120
+SYSTEM_CACHE_V5_0_7.WRITE_REQ_HOME_INFO_BUFFER (entity):
+	streams: 31, words: 4271
+SYSTEM_CACHE_V5_0_7.WRITE_REQ_HOME_INFO_BUFFER:IMP (architecture):
+	streams: 1, words: 7321
+SYSTEM_CACHE_V5_0_7.SC_CCIX_CHAIN (entity):
+	streams: 96, words: 18840
+SYSTEM_CACHE_V5_0_7.SC_CCIX_CHAIN:IMP (architecture):
+	streams: 3, words: 113553
+SYSTEM_CACHE_V5_0_7.SC_CCIX_BASE (entity):
+	streams: 36, words: 8228
+SYSTEM_CACHE_V5_0_7.SC_CCIX_BASE:IMP (architecture):
+	streams: 1, words: 4002
+SYSTEM_CACHE_V5_0_7.SC_CCIX_HOME_WR_PATH (entity):
+	streams: 32, words: 3840
+SYSTEM_CACHE_V5_0_7.SC_CCIX_HOME_WR_PATH:IMP (architecture):
+	streams: 4, words: 18667
+SYSTEM_CACHE_V5_0_7.SC_SNOOPFILTER (entity):
+	streams: 27, words: 3127
+SYSTEM_CACHE_V5_0_7.SC_SNOOPFILTER:IMP (architecture):
+	streams: 1, words: 23098
+SYSTEM_CACHE_V5_0_7.SC_CCIX_SLAVE (entity):
+	streams: 6, words: 280
+SYSTEM_CACHE_V5_0_7.SC_CCIX_SLAVE:IMP (architecture):
+	streams: 1, words: 200
+SYSTEM_CACHE_V5_0_7.SC_HA_CMP (entity):
+	streams: 19, words: 4082
+SYSTEM_CACHE_V5_0_7.SC_HA_CMP:IMP (architecture):
+	streams: 1, words: 1000
+SYSTEM_CACHE_V5_0_7.RRARBITER_256 (entity):
+	streams: 13, words: 2023
+SYSTEM_CACHE_V5_0_7.RRARBITER_256:IMP (architecture):
+	streams: 1, words: 5047
+SYSTEM_CACHE_V5_0_7.SC_HA_SNP_DELAY (entity):
+	streams: 58, words: 11962
+SYSTEM_CACHE_V5_0_7.SC_HA_SNP_DELAY:IMP (architecture):
+	streams: 13, words: 73944
+SYSTEM_CACHE_V5_0_7.SC_HA_SNP_TRACKER (entity):
+	streams: 20, words: 5573
+SYSTEM_CACHE_V5_0_7.SC_HA_SNP_TRACKER:IMP (architecture):
+	streams: 4, words: 20833
+SYSTEM_CACHE_V5_0_7.SC_HOME_COHERENCY (entity):
+	streams: 202, words: 41055
+SYSTEM_CACHE_V5_0_7.SC_HOME_COHERENCY:IMP (architecture):
+	streams: 13, words: 469886
+SYSTEM_CACHE_V5_0_7.SC_SLAVE_INTERFACE_SELECT (entity):
+	streams: 146, words: 15376
+SYSTEM_CACHE_V5_0_7.SC_SLAVE_INTERFACE_SELECT:IMP (architecture):
+	streams: 1, words: 30000
+SYSTEM_CACHE_V5_0_7.SC_SLAVE_MEMORY_READ (entity):
+	streams: 167, words: 24647
+SYSTEM_CACHE_V5_0_7.SC_SLAVE_MEMORY_READ:IMP (architecture):
+	streams: 6, words: 291156
+SYSTEM_CACHE_V5_0_7.SC_SLAVE_MEMORY_WRITE (entity):
+	streams: 183, words: 29899
+SYSTEM_CACHE_V5_0_7.SC_SLAVE_MEMORY_WRITE:IMP (architecture):
+	streams: 6, words: 261332
+SYSTEM_CACHE_V5_0_7.SC_SLAVE_MEMORY_INTERFACE (entity):
+	streams: 203, words: 37110
+SYSTEM_CACHE_V5_0_7.SC_SLAVE_MEMORY_INTERFACE:IMP (architecture):
+	streams: 1, words: 60660
+SYSTEM_CACHE_V5_0_7.SC_SLAVE_RESPONSE_GEN (entity):
+	streams: 155, words: 19965
+SYSTEM_CACHE_V5_0_7.SC_SLAVE_RESPONSE_GEN:IMP (architecture):
+	streams: 1, words: 52755
+SYSTEM_CACHE_V5_0_7.SC_CCIX_HOME (entity):
+	streams: 234, words: 49962
+SYSTEM_CACHE_V5_0_7.SC_CCIX_HOME:IMP (architecture):
+	streams: 1, words: 121940
+SYSTEM_CACHE_V5_0_7.SC_CCIX_RA_HAZARD (entity):
+	streams: 92, words: 16650
+SYSTEM_CACHE_V5_0_7.SC_CCIX_RA_HAZARD:IMP (architecture):
+	streams: 4, words: 49915
+SYSTEM_CACHE_V5_0_7.SC_CCIX_RA (entity):
+	streams: 347, words: 103003
+SYSTEM_CACHE_V5_0_7.SC_CCIX_RA:IMP (architecture):
+	streams: 5, words: 338056
+SYSTEM_CACHE_V5_0_7.SC_CCIX_SWITCH (entity):
+	streams: 337, words: 187644
+SYSTEM_CACHE_V5_0_7.SC_CCIX_SWITCH:IMP (architecture):
+	streams: 20, words: 174707
+SYSTEM_CACHE_V5_0_7.SC_CCIX_RX_LINK (entity):
+	streams: 179, words: 38654
+SYSTEM_CACHE_V5_0_7.SC_CCIX_RX_LINK:IMP (architecture):
+	streams: 1, words: 123329
+SYSTEM_CACHE_V5_0_7.SC_CCIX_TX_LINK (entity):
+	streams: 188, words: 39735
+SYSTEM_CACHE_V5_0_7.SC_CCIX_TX_LINK:IMP (architecture):
+	streams: 3, words: 191985
+SYSTEM_CACHE_V5_0_7.SC_CCIX_REQ_MSG_DECODE (entity):
+	streams: 38, words: 4695
+SYSTEM_CACHE_V5_0_7.SC_CCIX_REQ_MSG_DECODE:IMP (architecture):
+	streams: 1, words: 2843
+SYSTEM_CACHE_V5_0_7.SC_CCIX_RSP_MSG_DECODE (entity):
+	streams: 36, words: 5130
+SYSTEM_CACHE_V5_0_7.SC_CCIX_RSP_MSG_DECODE:IMP (architecture):
+	streams: 1, words: 2602
+SYSTEM_CACHE_V5_0_7.SC_CCIX_SNP_MSG_DECODE (entity):
+	streams: 34, words: 3903
+SYSTEM_CACHE_V5_0_7.SC_CCIX_SNP_MSG_DECODE:IMP (architecture):
+	streams: 1, words: 2407
+SYSTEM_CACHE_V5_0_7.SC_CCIX_MSG_ENCODE (entity):
+	streams: 107, words: 35401
+SYSTEM_CACHE_V5_0_7.SC_CCIX_MSG_ENCODE:IMP (architecture):
+	streams: 9, words: 169122
+SYSTEM_CACHE_V5_0_7.SC_CCIX_DECODE (entity):
+	streams: 262, words: 90399
+SYSTEM_CACHE_V5_0_7.SC_CCIX_DECODE:IMP (architecture):
+	streams: 9, words: 182742
+SYSTEM_CACHE_V5_0_7.SC_CCIX_ENCODE (entity):
+	streams: 249, words: 80980
+SYSTEM_CACHE_V5_0_7.SC_CCIX_ENCODE:IMP (architecture):
+	streams: 5, words: 173860
+SYSTEM_CACHE_V5_0_7.SC_CCIX_PORT (entity):
+	streams: 399, words: 141511
+SYSTEM_CACHE_V5_0_7.SC_CCIX_PORT:IMP (architecture):
+	streams: 3, words: 236867
+SYSTEM_CACHE_V5_0_7.SC_CCIX_INTERFACE (entity):
+	streams: 899, words: 274549
+SYSTEM_CACHE_V5_0_7.SC_CCIX_INTERFACE:IMP (architecture):
+	streams: 12, words: 856326
+SYSTEM_CACHE_V5_0_7.SC_CHI_LINK_INTERFACE (entity):
+	streams: 137, words: 17383
+SYSTEM_CACHE_V5_0_7.SC_CHI_LINK_INTERFACE:IMP (architecture):
+	streams: 1, words: 38566
+SYSTEM_CACHE_V5_0_7.SC_CHI_REQ_BUFFER (entity):
+	streams: 27, words: 3015
+SYSTEM_CACHE_V5_0_7.SC_CHI_REQ_BUFFER:IMP (architecture):
+	streams: 1, words: 4846
+SYSTEM_CACHE_V5_0_7.SC_CHI_SNP_BUFFER (entity):
+	streams: 27, words: 2213
+SYSTEM_CACHE_V5_0_7.SC_CHI_SNP_BUFFER:IMP (architecture):
+	streams: 1, words: 4899
+SYSTEM_CACHE_V5_0_7.SC_CHI_SNP_BUFFER_PEEK (entity):
+	streams: 31, words: 3222
+SYSTEM_CACHE_V5_0_7.SC_CHI_SNP_BUFFER_PEEK:IMP (architecture):
+	streams: 1, words: 4899
+SYSTEM_CACHE_V5_0_7.SC_CHI_DAT_BUFFER (entity):
+	streams: 27, words: 2903
+SYSTEM_CACHE_V5_0_7.SC_CHI_DAT_BUFFER:IMP (architecture):
+	streams: 1, words: 4846
+SYSTEM_CACHE_V5_0_7.SC_CHI_RSP_BUFFER (entity):
+	streams: 27, words: 2345
+SYSTEM_CACHE_V5_0_7.SC_CHI_RSP_BUFFER:IMP (architecture):
+	streams: 1, words: 4843
+SYSTEM_CACHE_V5_0_7.SC_CHI_RETRY_RSP_BUFFER (entity):
+	streams: 27, words: 1715
+SYSTEM_CACHE_V5_0_7.SC_CHI_RETRY_RSP_BUFFER:IMP (architecture):
+	streams: 1, words: 4799
+SYSTEM_CACHE_V5_0_7.SC_CHI_RECEIPT_RSP_BUFFER (entity):
+	streams: 27, words: 1895
+SYSTEM_CACHE_V5_0_7.SC_CHI_RECEIPT_RSP_BUFFER:IMP (architecture):
+	streams: 1, words: 4823
+SYSTEM_CACHE_V5_0_7.SC_CHI_COMP_RSP_BUFFER (entity):
+	streams: 27, words: 1895
+SYSTEM_CACHE_V5_0_7.SC_CHI_COMP_RSP_BUFFER:IMP (architecture):
+	streams: 1, words: 4823
+SYSTEM_CACHE_V5_0_7.SC_CHI_NODATA_RSP_BUFFER (entity):
+	streams: 27, words: 2209
+SYSTEM_CACHE_V5_0_7.SC_CHI_NODATA_RSP_BUFFER:IMP (architecture):
+	streams: 1, words: 4853
+SYSTEM_CACHE_V5_0_7.SC_CHI_DVM_RSP_BUFFER (entity):
+	streams: 27, words: 1805
+SYSTEM_CACHE_V5_0_7.SC_CHI_DVM_RSP_BUFFER:IMP (architecture):
+	streams: 1, words: 4817
+SYSTEM_CACHE_V5_0_7.SC_CHI_DATA_RSP_BUFFER (entity):
+	streams: 27, words: 2617
+SYSTEM_CACHE_V5_0_7.SC_CHI_DATA_RSP_BUFFER:IMP (architecture):
+	streams: 1, words: 4843
+SYSTEM_CACHE_V5_0_7.SC_CHI_COMPACK_RSP_BUFFER (entity):
+	streams: 27, words: 1715
+SYSTEM_CACHE_V5_0_7.SC_CHI_COMPACK_RSP_BUFFER:IMP (architecture):
+	streams: 1, words: 4811
+SYSTEM_CACHE_V5_0_7.SC_CHI_DBID_RSP_BUFFER (entity):
+	streams: 27, words: 1805
+SYSTEM_CACHE_V5_0_7.SC_CHI_DBID_RSP_BUFFER:IMP (architecture):
+	streams: 1, words: 4823
+SYSTEM_CACHE_V5_0_7.SC_CHI_SIZE_REQ_BUFFER (entity):
+	streams: 27, words: 1569
+SYSTEM_CACHE_V5_0_7.SC_CHI_SIZE_REQ_BUFFER:IMP (architecture):
+	streams: 1, words: 4775
+SYSTEM_CACHE_V5_0_7.SC_CHI_SETUP_REQ_BUFFER (entity):
+	streams: 27, words: 1899
+SYSTEM_CACHE_V5_0_7.SC_CHI_SETUP_REQ_BUFFER:IMP (architecture):
+	streams: 1, words: 4843
+SYSTEM_CACHE_V5_0_7.SC_CHI_SNP_REQ_BUFFER (entity):
+	streams: 27, words: 1807
+SYSTEM_CACHE_V5_0_7.SC_CHI_SNP_REQ_BUFFER:IMP (architecture):
+	streams: 1, words: 4805
+SYSTEM_CACHE_V5_0_7.SC_CHI_SNP_RSP_BUFFER (entity):
+	streams: 27, words: 1809
+SYSTEM_CACHE_V5_0_7.SC_CHI_SNP_RSP_BUFFER:IMP (architecture):
+	streams: 1, words: 4861
+SYSTEM_CACHE_V5_0_7.SC_CHI_TRACETAG_BUFFER (entity):
+	streams: 27, words: 939
+SYSTEM_CACHE_V5_0_7.SC_CHI_TRACETAG_BUFFER:IMP (architecture):
+	streams: 1, words: 4529
+SYSTEM_CACHE_V5_0_7.SC_CHI_PCRD_RSP_BUFFER (entity):
+	streams: 27, words: 1625
+SYSTEM_CACHE_V5_0_7.SC_CHI_PCRD_RSP_BUFFER:IMP (architecture):
+	streams: 1, words: 4787
+SYSTEM_CACHE_V5_0_7.SC_CHI_DECODE (entity):
+	streams: 49, words: 5003
+SYSTEM_CACHE_V5_0_7.SC_CHI_DECODE:IMP (architecture):
+	streams: 1, words: 9188
+SYSTEM_CACHE_V5_0_7.SC_CHI_ENCODE (entity):
+	streams: 112, words: 15992
+SYSTEM_CACHE_V5_0_7.SC_CHI_ENCODE:IMP (architecture):
+	streams: 3, words: 56516
+SYSTEM_CACHE_V5_0_7.SC_CHI_REQ_MUX (entity):
+	streams: 79, words: 10608
+SYSTEM_CACHE_V5_0_7.SC_CHI_REQ_MUX:IMP (architecture):
+	streams: 1, words: 70072
+SYSTEM_CACHE_V5_0_7.SC_CHI_SNP (entity):
+	streams: 83, words: 9464
+SYSTEM_CACHE_V5_0_7.SC_CHI_SNP:IMP (architecture):
+	streams: 1, words: 18607
+SYSTEM_CACHE_V5_0_7.SC_CHI_CRSP (entity):
+	streams: 67, words: 6428
+SYSTEM_CACHE_V5_0_7.SC_CHI_CRSP:IMP (architecture):
+	streams: 1, words: 11842
+SYSTEM_CACHE_V5_0_7.SC_CHI_SRSP (entity):
+	streams: 48, words: 4985
+SYSTEM_CACHE_V5_0_7.SC_CHI_SRSP:IMP (architecture):
+	streams: 1, words: 15381
+SYSTEM_CACHE_V5_0_7.SC_CHI_RNF (entity):
+	streams: 383, words: 96357
+SYSTEM_CACHE_V5_0_7.SC_CHI_RNF:IMP (architecture):
+	streams: 3, words: 449816
+SYSTEM_CACHE_V5_0_7.SC_CHI_INTERFACE (entity):
+	streams: 395, words: 99328
+SYSTEM_CACHE_V5_0_7.SC_CHI_INTERFACE:IMP (architecture):
+	streams: 1, words: 104575
+SYSTEM_CACHE_V5_0_7.SC_REPLAY_MODULE (entity):
+	streams: 104, words: 19448
+SYSTEM_CACHE_V5_0_7.SC_REPLAY_MODULE:IMP (architecture):
+	streams: 1, words: 51360
+SYSTEM_CACHE_V5_0_7.SC_TRACE_MODULE (entity):
+	streams: 88, words: 15253
+SYSTEM_CACHE_V5_0_7.SC_TRACE_MODULE:IMP (architecture):
+	streams: 1, words: 55250
+SYSTEM_CACHE_V5_0_7.SC_M_AXI_INTERFACE (entity):
+	streams: 159, words: 23750
+SYSTEM_CACHE_V5_0_7.SC_M_AXI_INTERFACE:IMP (architecture):
+	streams: 16, words: 82768
+SYSTEM_CACHE_V5_0_7.SC_M_ACE_INTERFACE (entity):
+	streams: 279, words: 66910
+SYSTEM_CACHE_V5_0_7.SC_M_ACE_INTERFACE:IMP (architecture):
+	streams: 26, words: 119404
+SYSTEM_CACHE_V5_0_7.SC_AXI_TRANSACTION_ORDERING (entity):
+	streams: 106, words: 12517
+SYSTEM_CACHE_V5_0_7.SC_AXI_TRANSACTION_ORDERING:IMP (architecture):
+	streams: 1, words: 57701
+SYSTEM_CACHE_V5_0_7.SC_CCIX_TRANSACTION_ORDERING (entity):
+	streams: 110, words: 15844
+SYSTEM_CACHE_V5_0_7.SC_CCIX_TRANSACTION_ORDERING:IMP (architecture):
+	streams: 1, words: 94672
+SYSTEM_CACHE_V5_0_7.SC_CROSSBAR (entity):
+	streams: 174, words: 56903
+SYSTEM_CACHE_V5_0_7.SC_CROSSBAR:IMP (architecture):
+	streams: 9, words: 68714
+SYSTEM_CACHE_V5_0_7.SC_BACK_END (entity):
+	streams: 1371, words: 355681
+SYSTEM_CACHE_V5_0_7.SC_BACK_END:IMP (architecture):
+	streams: 5, words: 639426
+SYSTEM_CACHE_V5_0_7.SC_RAM_MODULE (entity):
+	streams: 35, words: 8183
+SYSTEM_CACHE_V5_0_7.SC_RAM_MODULE:IMP (architecture):
+	streams: 23, words: 214338
+SYSTEM_CACHE_V5_0_7.SC_LRU_CALCULATE (entity):
+	streams: 13, words: 4624
+SYSTEM_CACHE_V5_0_7.SC_LRU_CALCULATE:RTL (architecture):
+	streams: 1, words: 3081
+SYSTEM_CACHE_V5_0_7.SC_LRU_MODULE (entity):
+	streams: 25, words: 7387
+SYSTEM_CACHE_V5_0_7.SC_LRU_MODULE:IMP (architecture):
+	streams: 1, words: 21910
+SYSTEM_CACHE_V5_0_7.SC_UPDATE (entity):
+	streams: 370, words: 86146
+SYSTEM_CACHE_V5_0_7.SC_UPDATE:IMP (architecture):
+	streams: 19, words: 261464
+SYSTEM_CACHE_V5_0_7.SC_LOOKUP (entity):
+	streams: 377, words: 96226
+SYSTEM_CACHE_V5_0_7.SC_LOOKUP:IMP (architecture):
+	streams: 25, words: 330593
+SYSTEM_CACHE_V5_0_7.SC_CACHE_CORE (entity):
+	streams: 446, words: 186913
+SYSTEM_CACHE_V5_0_7.SC_CACHE_CORE:IMP (architecture):
+	streams: 9, words: 440288
+SYSTEM_CACHE_V5_0_7.SC_S_AXI_LENGTH_GENERATION (entity):
+	streams: 59, words: 6732
+SYSTEM_CACHE_V5_0_7.SC_S_AXI_LENGTH_GENERATION:IMP (architecture):
+	streams: 10, words: 38165
+SYSTEM_CACHE_V5_0_7.SC_S_AXI_A_CHANNEL (entity):
+	streams: 112, words: 11346
+SYSTEM_CACHE_V5_0_7.SC_S_AXI_A_CHANNEL:IMP (architecture):
+	streams: 3, words: 108771
+SYSTEM_CACHE_V5_0_7.SC_S_AXI_W_CHANNEL (entity):
+	streams: 52, words: 7730
+SYSTEM_CACHE_V5_0_7.SC_S_AXI_W_CHANNEL:IMP (architecture):
+	streams: 2, words: 33429
+SYSTEM_CACHE_V5_0_7.SC_S_AXI_B_CHANNEL (entity):
+	streams: 69, words: 12553
+SYSTEM_CACHE_V5_0_7.SC_S_AXI_B_CHANNEL:IMP (architecture):
+	streams: 2, words: 22233
+SYSTEM_CACHE_V5_0_7.SC_S_AXI_R_CHANNEL (entity):
+	streams: 134, words: 23203
+SYSTEM_CACHE_V5_0_7.SC_S_AXI_R_CHANNEL:IMP (architecture):
+	streams: 4, words: 119124
+SYSTEM_CACHE_V5_0_7.SC_S_AXI_OPT_INTERFACE (entity):
+	streams: 408, words: 85214
+SYSTEM_CACHE_V5_0_7.SC_S_AXI_OPT_INTERFACE:IMP (architecture):
+	streams: 26, words: 235077
+SYSTEM_CACHE_V5_0_7.SC_S_AXI_GEN_INTERFACE (entity):
+	streams: 365, words: 79708
+SYSTEM_CACHE_V5_0_7.SC_S_AXI_GEN_INTERFACE:IMP (architecture):
+	streams: 15, words: 158258
+SYSTEM_CACHE_V5_0_7.SC_S_AXI_CTRL_INTERFACE (entity):
+	streams: 3507, words: 452732
+SYSTEM_CACHE_V5_0_7.SC_S_AXI_CTRL_INTERFACE:IMP (architecture):
+	streams: 38, words: 620900
+SYSTEM_CACHE_V5_0_7.SC_ACCESS (entity):
+	streams: 123, words: 33612
+SYSTEM_CACHE_V5_0_7.SC_ACCESS:IMP (architecture):
+	streams: 10, words: 122176
+SYSTEM_CACHE_V5_0_7.SC_ARBITER (entity):
+	streams: 75, words: 17690
+SYSTEM_CACHE_V5_0_7.SC_ARBITER:IMP (architecture):
+	streams: 8, words: 73747
+SYSTEM_CACHE_V5_0_7.SC_CONTROL (entity):
+	streams: 3573, words: 474975
+SYSTEM_CACHE_V5_0_7.SC_CONTROL:IMP (architecture):
+	streams: 4, words: 500532
+SYSTEM_CACHE_V5_0_7.SC_FRONT_END (entity):
+	streams: 5467, words: 790307
+SYSTEM_CACHE_V5_0_7.SC_FRONT_END:IMP (architecture):
+	streams: 38, words: 4155734
+SYSTEM_CACHE_V5_0_7.SYSTEM_CACHE (entity):
+	streams: 5570, words: 804513
+SYSTEM_CACHE_V5_0_7.SYSTEM_CACHE:IMP (architecture):
+	streams: 1, words: 2065137

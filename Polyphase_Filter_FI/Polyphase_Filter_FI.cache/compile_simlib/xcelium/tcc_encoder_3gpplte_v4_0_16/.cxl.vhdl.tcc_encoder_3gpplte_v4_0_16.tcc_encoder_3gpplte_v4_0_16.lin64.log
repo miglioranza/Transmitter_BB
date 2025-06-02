@@ -1,0 +1,46 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/tcc_encoder_3gpplte_v4_0/hdl/tcc_encoder_3gpplte_v4_0_vh_rfs.vhd:
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+	errors: 0, warnings: 1
+	streams: 32, words: 15384
+	streams: 226, words: 270983
+	streams: 2, words: 1315
+	streams: 10, words: 15211
+	streams: 20, words: 4670
+	streams: 3, words: 12736
+	streams: 12, words: 1217
+	streams: 4, words: 35029
+	streams: 1, words: 8
+	streams: 1, words: 158
+	streams: 2, words: 502
+	streams: 10, words: 6024
+	streams: 1, words: 2236
+	streams: 1, words: 158
+	streams: 1, words: 8
+	streams: 15, words: 4326
+	streams: 1, words: 3322
+	streams: 20, words: 3446
+	streams: 2, words: 14314
+	streams: 18, words: 875
+	streams: 1, words: 1569
+	streams: 16, words: 690
+	streams: 1, words: 2277
+	streams: 12, words: 1386
+	streams: 2, words: 2302
+	streams: 19, words: 4458
+	streams: 1, words: 6252
+	streams: 17, words: 2478
+	streams: 3, words: 7625
+	streams: 17, words: 2481
+	streams: 3, words: 7915
+	streams: 16, words: 4111
+	streams: 1, words: 5901
+	streams: 30, words: 2837
+	streams: 2, words: 24968
+	streams: 14, words: 726
+	streams: 1, words: 2171
+	streams: 25, words: 3697
+	streams: 3, words: 17866
+	streams: 1, words: 8
+	streams: 26, words: 1707
+	streams: 1, words: 805

@@ -1,0 +1,35 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_emc_v3_0/hdl/axi_emc_v3_0_vh_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_EMC_V3_0_25.EMC_PKG (package):
+	streams: 1, words: 8
+AXI_EMC_V3_0_25.EMC_PKG:BODY (package body):
+	streams: 3, words: 1127
+AXI_EMC_V3_0_25.COUNTER_F (entity):
+	streams: 13, words: 2125
+AXI_EMC_V3_0_25.COUNTER_F:IMP (architecture):
+	streams: 1, words: 2327
+AXI_EMC_V3_0_25.PSELECT_F (entity):
+	streams: 8, words: 1280
+AXI_EMC_V3_0_25.PSELECT_F:IMP (architecture):
+	streams: 1, words: 1330
+AXI_EMC_V3_0_25.AXI_EMC_ADDR_GEN (entity):
+	streams: 23, words: 2914
+AXI_EMC_V3_0_25.AXI_EMC_ADDR_GEN:IMP (architecture):
+	streams: 2, words: 11601
+AXI_EMC_V3_0_25.AXI_EMC_ADDRESS_DECODE (entity):
+	streams: 27, words: 5293
+AXI_EMC_V3_0_25.AXI_EMC_ADDRESS_DECODE:IMP (architecture):
+	streams: 13, words: 30566
+AXI_EMC_V3_0_25.AXI_EMC_NATIVE_INTERFACE (entity):
+	streams: 108, words: 21504
+AXI_EMC_V3_0_25.AXI_EMC_NATIVE_INTERFACE:IMP (architecture):
+	streams: 10, words: 44650
+AXI_EMC_V3_0_25.STARTUP_WRAPPER (entity):
+	streams: 23, words: 1391
+AXI_EMC_V3_0_25.STARTUP_WRAPPER:STARTUP_ARCH (architecture):
+	streams: 1, words: 1251
+AXI_EMC_V3_0_25.AXI_EMC (entity):
+	streams: 239, words: 41057
+AXI_EMC_V3_0_25.AXI_EMC:IMP (architecture):
+	streams: 28, words: 167487

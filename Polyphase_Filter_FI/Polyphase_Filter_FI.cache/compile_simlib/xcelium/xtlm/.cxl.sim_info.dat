@@ -1,0 +1,53 @@
+<SIMMODEL_NAME>:xtlm
+<LIBRARY_NAME>:xtlm
+<LIBRARY_TYPE>:SystemC
+<OUTPUT_FORMAT>:library
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/utils/xsc_sim_manager.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/utils/xtlm_aximm_fifo.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/utils/xtlm_aximm_initiator_rd_socket_util.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/utils/xtlm_aximm_initiator_wr_socket_util.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/utils/xtlm_aximm_master_if.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/utils/xtlm_aximm_passthru_module.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/utils/xtlm_aximm_rd_protocol_checker.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/utils/xtlm_aximm_slave_if.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/utils/xtlm_aximm_target_rd_socket_util.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/utils/xtlm_aximm_target_wr_socket_util.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/utils/xtlm_aximm_tracer.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/utils/xtlm_aximm_wr_protocol_checker.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/utils/xtlm_axis_initiator_socket_util.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/utils/xtlm_axis_master_if.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/utils/xtlm_axis_passthru_module.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/utils/xtlm_axis_slave_if.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/utils/xtlm_axis_target_socket_util.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/utils/xtlm_logger.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/xtlm_adaptors/xaximm_tlm2xtlm.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/xtlm_adaptors/xaximm_xtlm2tlm.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/xtlm_interfaces/tlm_mem_manager.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/xtlm_interfaces/xtlm_aximm_mem_manager.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/xtlm_interfaces/xtlm_axis_mem_manager.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/xtlm_sockets/xtlm_aximm_initiator_socket.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/xtlm_sockets/xtlm_aximm_monitor_socket.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/xtlm_sockets/xtlm_aximm_passthrough_target_socket_tagged.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/xtlm_sockets/xtlm_aximm_simple_initiator_socket_tagged.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/xtlm_sockets/xtlm_aximm_target_socket.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/xtlm_sockets/xtlm_axis_initiator_socket.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/xtlm_sockets/xtlm_axis_monitor_socket.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/xtlm_sockets/xtlm_axis_passthrough_target_socket_tagged.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/xtlm_sockets/xtlm_axis_simple_initiator_socket_tagged.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm/xtlm/src/xtlm_sockets/xtlm_axis_target_socket.cxx
+<SYSTEMC_INCLUDE_DIRS>:simlibs/xtlm/include,simlibs/common_cpp_v1_0/include
+<OSCI_INCLUDE_DIRS>:/data/osci_systemc/include
+<SYSTEMC_COMPILE_OPTION>:-64bit -noedg -cFlags " -O3 -fPIC -c -o
+<CPP_COMPILE_OPTION>:-O3
+<C_COMPILE_OPTION>:-O3
+<G++_COMPILE_FLAGS>:-fPIC -DXTLM_DLL
+<G++_COMPILE_DEBUG_FLAGS>:-g -O0
+<SCCOM_COMPILE_FLAGS>:-std=c++11
+<G++_LDFLAGS_OPTION>:
+<GCC_LDFLAGS_OPTION>:
+<LDLIBS>:-Lxcelium_lib/common_cpp_v1_0 -lcommon_cpp_v1_0
+<MORE_XSC_OPTIONS>:-v
+<G++_LDLIBS_OPTION>:
+<GCC_LDLIBS_OPTION>:
+<SHARED_LIBRARY>:xtlm
+<SIMULATOR_PLATFORM>:all

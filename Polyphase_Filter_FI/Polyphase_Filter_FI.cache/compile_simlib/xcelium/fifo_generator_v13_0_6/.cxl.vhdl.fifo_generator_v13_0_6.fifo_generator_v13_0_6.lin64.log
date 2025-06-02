@@ -1,0 +1,89 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/fifo_generator_v13_0/simulation/fifo_generator_vhdl_beh.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/fifo_generator_v13_0/hdl/fifo_generator_v13_0_rfs.vhd:
+	errors: 0, warnings: 0
+FIFO_GENERATOR_V13_0_6.FIFO_GENERATOR_V13_0_6_BHV_AS (entity):
+	streams: 89, words: 13569
+FIFO_GENERATOR_V13_0_6.FIFO_GENERATOR_V13_0_6_BHV_AS:BEHAVIORAL (architecture):
+	streams: 14, words: 77710
+FIFO_GENERATOR_V13_0_6.FIFO_GENERATOR_V13_0_6_BHV_SS (entity):
+	streams: 93, words: 14971
+FIFO_GENERATOR_V13_0_6.FIFO_GENERATOR_V13_0_6_BHV_SS:BEHAVIORAL (architecture):
+	streams: 15, words: 87089
+FIFO_GENERATOR_V13_0_6.FIFO_GENERATOR_V13_0_6_BHV_PRELOAD0 (entity):
+	streams: 39, words: 3476
+FIFO_GENERATOR_V13_0_6.FIFO_GENERATOR_V13_0_6_BHV_PRELOAD0:BEHAVIORAL (architecture):
+	streams: 2, words: 11246
+FIFO_GENERATOR_V13_0_6.FIFO_GENERATOR_V13_0_6_CONV (entity):
+	streams: 119, words: 16319
+FIFO_GENERATOR_V13_0_6.FIFO_GENERATOR_V13_0_6_CONV:BEHAVIORAL (architecture):
+	streams: 6, words: 55574
+FIFO_GENERATOR_V13_0_6.FIFO_GENERATOR_V13_0_6_AXIC_REG_SLICE (entity):
+	streams: 14, words: 2260
+FIFO_GENERATOR_V13_0_6.FIFO_GENERATOR_V13_0_6_AXIC_REG_SLICE:XILINX (architecture):
+	streams: 1, words: 2741
+FIFO_GENERATOR_V13_0_6.FIFO_GENERATOR_VHDL_BEH (entity):
+	streams: 552, words: 112332
+FIFO_GENERATOR_V13_0_6.FIFO_GENERATOR_VHDL_BEH:BEHAVIORAL (architecture):
+	streams: 9, words: 189826
+	streams: 4, words: 1490
+	streams: 81, words: 222713
+	streams: 66, words: 14742
+	streams: 2, words: 6784
+	streams: 66, words: 9670
+	streams: 2, words: 8420
+	streams: 17, words: 4315
+	streams: 2, words: 6077
+	streams: 20, words: 3899
+	streams: 5, words: 27132
+	streams: 29, words: 5827
+	streams: 1, words: 11949
+	streams: 36, words: 6960
+	streams: 1, words: 17507
+	streams: 24, words: 5479
+	streams: 1, words: 11671
+	streams: 34, words: 6885
+	streams: 1, words: 21538
+	streams: 9, words: 2089
+	streams: 1, words: 1723
+	streams: 11, words: 2336
+	streams: 2, words: 5208
+	streams: 8, words: 1272
+	streams: 1, words: 1777
+	streams: 25, words: 4775
+	streams: 7, words: 29950
+	streams: 39, words: 7219
+	streams: 8, words: 40780
+	streams: 63, words: 10116
+	streams: 1, words: 79302
+	streams: 65, words: 7874
+	streams: 19, words: 179891
+	streams: 78, words: 8900
+	streams: 14, words: 107116
+	streams: 17, words: 1335
+	streams: 1, words: 7622
+	streams: 39, words: 5908
+	streams: 1, words: 17793
+	streams: 55, words: 10122
+	streams: 8, words: 52441
+	streams: 58, words: 10359
+	streams: 4, words: 50266
+	streams: 76, words: 11452
+	streams: 5, words: 60178
+	streams: 93, words: 14497
+	streams: 7, words: 68236
+	streams: 5, words: 303
+	streams: 1, words: 1034
+	streams: 14, words: 865
+	streams: 2, words: 4552
+	streams: 28, words: 3520
+	streams: 2, words: 15533
+	streams: 15, words: 2339
+	streams: 2, words: 5732
+	streams: 127, words: 16953
+	streams: 2, words: 22442
+	streams: 552, words: 112332
+	streams: 25, words: 244809
+	streams: 552, words: 112332
+	streams: 17, words: 1474966

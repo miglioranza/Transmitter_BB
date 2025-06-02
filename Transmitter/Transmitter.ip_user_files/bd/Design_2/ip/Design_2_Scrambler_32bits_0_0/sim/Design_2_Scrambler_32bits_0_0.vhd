@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:Scrambler_32bits:1.0
--- IP Revision: 8
+-- IP Revision: 9
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -57,15 +57,17 @@ ENTITY Design_2_Scrambler_32bits_0_0 IS
   PORT (
     clk : IN STD_LOGIC;
     rst : IN STD_LOGIC;
-    data_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    data_in : IN STD_LOGIC_VECTOR(32 DOWNTO 1);
     data_in_valid : IN STD_LOGIC;
     data_in_ready : IN STD_LOGIC;
     data_in_last : IN STD_LOGIC;
-    seed : IN STD_LOGIC_VECTOR(31 DOWNTO 1);
+    end_of_frame : IN STD_LOGIC;
+    seed : IN STD_LOGIC_VECTOR(30 DOWNTO 0);
     control_enable : IN STD_LOGIC;
     data_out : OUT STD_LOGIC_VECTOR(32 DOWNTO 1);
     data_out_valid : OUT STD_LOGIC;
     data_out_last : OUT STD_LOGIC;
+    last_frame : OUT STD_LOGIC;
     data_out_ready : OUT STD_LOGIC
   );
 END Design_2_Scrambler_32bits_0_0;
@@ -82,15 +84,17 @@ ARCHITECTURE Design_2_Scrambler_32bits_0_0_arch OF Design_2_Scrambler_32bits_0_0
     PORT (
       clk : IN STD_LOGIC;
       rst : IN STD_LOGIC;
-      data_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      data_in : IN STD_LOGIC_VECTOR(32 DOWNTO 1);
       data_in_valid : IN STD_LOGIC;
       data_in_ready : IN STD_LOGIC;
       data_in_last : IN STD_LOGIC;
-      seed : IN STD_LOGIC_VECTOR(31 DOWNTO 1);
+      end_of_frame : IN STD_LOGIC;
+      seed : IN STD_LOGIC_VECTOR(30 DOWNTO 0);
       control_enable : IN STD_LOGIC;
       data_out : OUT STD_LOGIC_VECTOR(32 DOWNTO 1);
       data_out_valid : OUT STD_LOGIC;
       data_out_last : OUT STD_LOGIC;
+      last_frame : OUT STD_LOGIC;
       data_out_ready : OUT STD_LOGIC
     );
   END COMPONENT Scrambler_32bits;
@@ -126,11 +130,13 @@ BEGIN
       data_in_valid => data_in_valid,
       data_in_ready => data_in_ready,
       data_in_last => data_in_last,
+      end_of_frame => end_of_frame,
       seed => seed,
       control_enable => control_enable,
       data_out => data_out,
       data_out_valid => data_out_valid,
       data_out_last => data_out_last,
+      last_frame => last_frame,
       data_out_ready => data_out_ready
     );
 END Design_2_Scrambler_32bits_0_0_arch;

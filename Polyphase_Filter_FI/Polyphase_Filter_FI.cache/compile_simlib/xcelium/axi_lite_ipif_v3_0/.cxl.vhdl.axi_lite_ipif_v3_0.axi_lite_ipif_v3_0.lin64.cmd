@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work axi_lite_ipif_v3_0 -f /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.cache/compile_simlib/xcelium/axi_lite_ipif_v3_0/.cxl.vhdl.axi_lite_ipif_v3_0.axi_lite_ipif_v3_0.lin64.cmf

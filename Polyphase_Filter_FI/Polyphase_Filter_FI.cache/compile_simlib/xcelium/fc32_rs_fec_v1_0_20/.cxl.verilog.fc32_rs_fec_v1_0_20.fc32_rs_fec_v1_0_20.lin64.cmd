@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -work fc32_rs_fec_v1_0_20 -f /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.cache/compile_simlib/xcelium/fc32_rs_fec_v1_0_20/.cxl.verilog.fc32_rs_fec_v1_0_20.fc32_rs_fec_v1_0_20.lin64.cmf

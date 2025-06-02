@@ -1,0 +1,31 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_apb_bridge_v3_0/hdl/axi_apb_bridge_v3_0_vh_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_APB_BRIDGE_V3_0_17.PSELECT_F (entity):
+	streams: 8, words: 1280
+AXI_APB_BRIDGE_V3_0_17.PSELECT_F:IMP (architecture):
+	streams: 2, words: 1624
+AXI_APB_BRIDGE_V3_0_17.COUNTER_F (entity):
+	streams: 13, words: 2125
+AXI_APB_BRIDGE_V3_0_17.COUNTER_F:IMP (architecture):
+	streams: 1, words: 2177
+AXI_APB_BRIDGE_V3_0_17.PSEL_DECODER (entity):
+	streams: 75, words: 6398
+AXI_APB_BRIDGE_V3_0_17.PSEL_DECODER:RTL (architecture):
+	streams: 137, words: 208764
+AXI_APB_BRIDGE_V3_0_17.MULTIPLEXOR (entity):
+	streams: 52, words: 19108
+AXI_APB_BRIDGE_V3_0_17.MULTIPLEXOR:RTL (architecture):
+	streams: 1, words: 13251
+AXI_APB_BRIDGE_V3_0_17.AXILITE_SIF (entity):
+	streams: 45, words: 6369
+AXI_APB_BRIDGE_V3_0_17.AXILITE_SIF:RTL (architecture):
+	streams: 2, words: 5280
+AXI_APB_BRIDGE_V3_0_17.APB_MIF (entity):
+	streams: 45, words: 9626
+AXI_APB_BRIDGE_V3_0_17.APB_MIF:RTL (architecture):
+	streams: 1, words: 3559
+AXI_APB_BRIDGE_V3_0_17.AXI_APB_BRIDGE (entity):
+	streams: 158, words: 18808
+AXI_APB_BRIDGE_V3_0_17.AXI_APB_BRIDGE:RTL (architecture):
+	streams: 5, words: 39187

@@ -9,7 +9,7 @@
 		</DisplayName>
 		<Description value="Encoder_v1_1">
 		</Description>
-		<CoreRevision value="5">
+		<CoreRevision value="9">
 		</CoreRevision>
 		<ComponentPath value="FEC.srcs/component.xml">
 		</ComponentPath>

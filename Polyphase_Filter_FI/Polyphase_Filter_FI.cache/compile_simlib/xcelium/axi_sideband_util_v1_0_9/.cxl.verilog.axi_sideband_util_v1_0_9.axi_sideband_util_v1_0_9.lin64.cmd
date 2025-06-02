@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -sv -work axi_sideband_util_v1_0_9 -f /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.cache/compile_simlib/xcelium/axi_sideband_util_v1_0_9/.cxl.systemverilog.axi_sideband_util_v1_0_9.axi_sideband_util_v1_0_9.lin64.cmf

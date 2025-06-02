@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -work v_vid_gt_bridge_v1_0_4 -f /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.cache/compile_simlib/xcelium/v_vid_gt_bridge_v1_0_4/.cxl.verilog.v_vid_gt_bridge_v1_0_4.v_vid_gt_bridge_v1_0_4.lin64.cmf

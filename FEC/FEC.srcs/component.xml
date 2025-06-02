@@ -96,7 +96,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>52de7b55</spirit:value>
+            <spirit:value>d928ecc9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -118,7 +118,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>52de7b55</spirit:value>
+            <spirit:value>d928ecc9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -133,7 +133,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>be0ff4d5</spirit:value>
+            <spirit:value>d0cb24af</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -265,6 +265,19 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+        <spirit:name>end_of_frame</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
         <spirit:name>sel_FEC_code_rate</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
@@ -344,6 +357,22 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+        <spirit:name>last_frame</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
         <spirit:name>axis_data_count</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
@@ -361,6 +390,23 @@
           <spirit:driver>
             <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
           </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>current_code_rate</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -411,7 +457,7 @@
       <spirit:file>
         <spirit:name>sources_1/new/Encoder.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_3a8fffb5</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_021c7d3a</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -546,8 +592,8 @@
         <xilinx:xpmLibrary>XPM_FIFO</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>6</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-03-24T15:37:15Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>9</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-06-02T11:43:03Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.df@1aa9bb0e_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@54302ac4_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
@@ -599,13 +645,46 @@
         <xilinx:tag xilinx:name="ui.data.coregen.df@72e8e839_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@650ed600_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@111dc333_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@300161a3_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2917e87d_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@57b984f5_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6dfcf69b_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@68523338_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@b5b2af5_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@44b56ee0_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6e5e4b2_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1dc71e93_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@57e28bcb_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@102e32c6_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2a98de2c_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@e73db71_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@16a4e71c_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@15ec6183_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@771255bf_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2c812ff6_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3e1818d5_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7e85ada8_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@38100620_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5ca6ce7d_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@f962662_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@185447ce_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1d9227f6_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@44adf557_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4ad86a41_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2a69be99_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@57d6c24f_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@36a77899_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7fc16a9e_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5b331f8_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6b7bf75f_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1093ea36_ARCHIVE_LOCATION">/home/miglioranza/FEC/FEC.srcs</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2021.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="4524832d"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="4bb3c6ac"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="164ea4ed"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a0164c44"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="f669765c"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="a64ce56d"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>

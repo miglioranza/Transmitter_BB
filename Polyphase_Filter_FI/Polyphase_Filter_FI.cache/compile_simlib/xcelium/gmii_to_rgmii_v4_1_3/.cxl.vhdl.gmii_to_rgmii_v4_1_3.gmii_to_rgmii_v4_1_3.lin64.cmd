@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work gmii_to_rgmii_v4_1_3 -f /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.cache/compile_simlib/xcelium/gmii_to_rgmii_v4_1_3/.cxl.vhdl.gmii_to_rgmii_v4_1_3.gmii_to_rgmii_v4_1_3.lin64.cmf

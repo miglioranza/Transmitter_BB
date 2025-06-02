@@ -1,0 +1,25 @@
+xmelab(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xmelab(64)	20.09-s007: Started on Oct 24, 2024 at 12:10:50 CEST
+xmelab
+    -64bit
+    -relax
+    -access +rwc
+    -namemap_mixgen
+    -messages
+    -logfile elaborate.log
+    -libname xil_defaultlib
+    -libname secureip
+    xil_defaultlib.Polyphase_filter_tb
+
+xmelab: *W,ARCMRA: Elaborating the XIL_DEFAULTLIB.POLYPHASE_FILTER_TB:BEHAVIORAL, MRA (most recently analyzed) architecture.
+	Elaborating the design hierarchy:
+xmelab: *W,CUDEFB: default binding occurred for component instance (:Polyphase_filter_tb(Behavioral):uut) with design unit (XIL_DEFAULTLIB.PIPELINED_POLYPHASE_FILTER:RTL).
+	Building instance specific data structures.
+	Design hierarchy summary:
+		            Instances  Unique
+		Components:         3       2
+		Default bindings:   1       -
+		Processes:          4       4
+		Signals:           16      16
+	Writing initial simulation snapshot: XIL_DEFAULTLIB.POLYPHASE_FILTER_TB:BEHAVIORAL
+TOOL:	xmelab(64)	20.09-s007: Exiting on Oct 24, 2024 at 12:10:50 CEST  (total: 00:00:00)

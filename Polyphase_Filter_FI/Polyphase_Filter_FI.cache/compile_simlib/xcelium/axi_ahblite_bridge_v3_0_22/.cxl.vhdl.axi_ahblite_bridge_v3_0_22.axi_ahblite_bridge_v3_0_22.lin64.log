@@ -1,0 +1,27 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_ahblite_bridge_v3_0/hdl/axi_ahblite_bridge_v3_0_vh_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_AHBLITE_BRIDGE_V3_0_22.COUNTER_F (entity):
+	streams: 13, words: 2125
+AXI_AHBLITE_BRIDGE_V3_0_22.COUNTER_F:IMP (architecture):
+	streams: 1, words: 2327
+AXI_AHBLITE_BRIDGE_V3_0_22.TIME_OUT (entity):
+	streams: 9, words: 335
+AXI_AHBLITE_BRIDGE_V3_0_22.TIME_OUT:RTL (architecture):
+	streams: 3, words: 3943
+AXI_AHBLITE_BRIDGE_V3_0_22.AHB_SKID_BUF (entity):
+	streams: 36, words: 8189
+AXI_AHBLITE_BRIDGE_V3_0_22.AHB_SKID_BUF:IMPLEMENTATION (architecture):
+	streams: 1, words: 13269
+AXI_AHBLITE_BRIDGE_V3_0_22.AXI_SLV_IF (entity):
+	streams: 97, words: 16259
+AXI_AHBLITE_BRIDGE_V3_0_22.AXI_SLV_IF:RTL (architecture):
+	streams: 1, words: 3867
+AXI_AHBLITE_BRIDGE_V3_0_22.AHB_MSTR_IF (entity):
+	streams: 59, words: 8405
+AXI_AHBLITE_BRIDGE_V3_0_22.AHB_MSTR_IF:RTL (architecture):
+	streams: 1, words: 17519
+AXI_AHBLITE_BRIDGE_V3_0_22.AXI_AHBLITE_BRIDGE (entity):
+	streams: 90, words: 16359
+AXI_AHBLITE_BRIDGE_V3_0_22.AXI_AHBLITE_BRIDGE:RTL (architecture):
+	streams: 5, words: 36154

@@ -1,0 +1,15 @@
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/v_vid_sdi_tx_bridge_v2_0/hdl/verilog/v_vid_sdi_tx_bridge_v2_0_lib.v
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/v_vid_sdi_tx_bridge_v2_0/hdl/verilog/v_vid_sdi_tx_bridge_v2_0_12g_ce_gen.v
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/v_vid_sdi_tx_bridge_v2_0/hdl/verilog/v_vid_sdi_tx_bridge_v2_0_12g_clamp.v
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/v_vid_sdi_tx_bridge_v2_0/hdl/verilog/v_vid_sdi_tx_bridge_v2_0_12g_converter.v
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/v_vid_sdi_tx_bridge_v2_0/hdl/verilog/v_vid_sdi_tx_bridge_v2_0_12g_embedder.v
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/v_vid_sdi_tx_bridge_v2_0/hdl/verilog/v_vid_sdi_tx_bridge_v2_0_12g_fifo.v
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/v_vid_sdi_tx_bridge_v2_0/hdl/verilog/v_vid_sdi_tx_bridge_v2_0_12g_formatter.v
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/v_vid_sdi_tx_bridge_v2_0/hdl/verilog/v_vid_sdi_tx_bridge_v2_0_12g.v
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/v_vid_sdi_tx_bridge_v2_0/hdl/verilog/v_vid_sdi_tx_bridge_v2_0_3g_ce_gen.v
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/v_vid_sdi_tx_bridge_v2_0/hdl/verilog/v_vid_sdi_tx_bridge_v2_0_3g_converter.v
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/v_vid_sdi_tx_bridge_v2_0/hdl/verilog/v_vid_sdi_tx_bridge_v2_0_3g_embedder.v
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/v_vid_sdi_tx_bridge_v2_0/hdl/verilog/v_vid_sdi_tx_bridge_v2_0_3g_fifo.v
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/v_vid_sdi_tx_bridge_v2_0/hdl/verilog/v_vid_sdi_tx_bridge_v2_0_3g_formatter.v
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/v_vid_sdi_tx_bridge_v2_0/hdl/verilog/v_vid_sdi_tx_bridge_v2_0_3g.v
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/v_vid_sdi_tx_bridge_v2_0/hdl/verilog/v_vid_sdi_tx_bridge_v2_0.v

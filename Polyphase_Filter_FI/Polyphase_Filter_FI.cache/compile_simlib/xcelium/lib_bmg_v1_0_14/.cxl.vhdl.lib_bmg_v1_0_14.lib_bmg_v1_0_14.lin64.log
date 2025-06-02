@@ -1,0 +1,7 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/lib_bmg_v1_0/hdl/lib_bmg_v1_0_rfs.vhd:
+	errors: 0, warnings: 0
+LIB_BMG_V1_0_14.BLK_MEM_GEN_WRAPPER (entity):
+	streams: 74, words: 12171
+LIB_BMG_V1_0_14.BLK_MEM_GEN_WRAPPER:IMPLEMENTATION (architecture):
+	streams: 7, words: 35521

@@ -1,0 +1,147 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_sg_v4_1/hdl/axi_sg_v4_1_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_SG_V4_1_14.AXI_SG_PKG (package):
+	streams: 1, words: 809
+AXI_SG_V4_1_14.AXI_SG_PKG:BODY (package body):
+	streams: 2, words: 253
+AXI_SG_V4_1_14.AXI_SG_RESET (entity):
+	streams: 18, words: 264
+AXI_SG_V4_1_14.AXI_SG_RESET:IMPLEMENTATION (architecture):
+	streams: 1, words: 1137
+AXI_SG_V4_1_14.AXI_SG_SFIFO_AUTORD (entity):
+	streams: 32, words: 5284
+AXI_SG_V4_1_14.AXI_SG_SFIFO_AUTORD:IMP (architecture):
+	streams: 2, words: 9207
+AXI_SG_V4_1_14.AXI_SG_AFIFO_AUTORD (entity):
+	streams: 32, words: 5989
+AXI_SG_V4_1_14.AXI_SG_AFIFO_AUTORD:IMP (architecture):
+	streams: 2, words: 9017
+AXI_SG_V4_1_14.AXI_SG_FIFO (entity):
+	streams: 22, words: 2425
+AXI_SG_V4_1_14.AXI_SG_FIFO:IMP (architecture):
+	streams: 5, words: 21102
+AXI_SG_V4_1_14.AXI_SG_CMD_STATUS (entity):
+	streams: 39, words: 5882
+AXI_SG_V4_1_14.AXI_SG_CMD_STATUS:IMPLEMENTATION (architecture):
+	streams: 5, words: 8495
+AXI_SG_V4_1_14.AXI_SG_RDMUX (entity):
+	streams: 13, words: 2955
+AXI_SG_V4_1_14.AXI_SG_RDMUX:IMPLEMENTATION (architecture):
+	streams: 3, words: 20684
+AXI_SG_V4_1_14.AXI_SG_ADDR_CNTL (entity):
+	streams: 58, words: 7361
+AXI_SG_V4_1_14.AXI_SG_ADDR_CNTL:IMPLEMENTATION (architecture):
+	streams: 1, words: 12731
+AXI_SG_V4_1_14.AXI_SG_RDDATA_CNTL (entity):
+	streams: 78, words: 12529
+AXI_SG_V4_1_14.AXI_SG_RDDATA_CNTL:IMPLEMENTATION (architecture):
+	streams: 2, words: 20519
+AXI_SG_V4_1_14.AXI_SG_RD_STATUS_CNTL (entity):
+	streams: 23, words: 2142
+AXI_SG_V4_1_14.AXI_SG_RD_STATUS_CNTL:IMPLEMENTATION (architecture):
+	streams: 1, words: 3818
+AXI_SG_V4_1_14.AXI_SG_SCC (entity):
+	streams: 57, words: 9041
+AXI_SG_V4_1_14.AXI_SG_SCC:IMPLEMENTATION (architecture):
+	streams: 3, words: 27025
+AXI_SG_V4_1_14.AXI_SG_WR_DEMUX (entity):
+	streams: 13, words: 3027
+AXI_SG_V4_1_14.AXI_SG_WR_DEMUX:IMPLEMENTATION (architecture):
+	streams: 3, words: 215998
+AXI_SG_V4_1_14.AXI_SG_SCC_WR (entity):
+	streams: 57, words: 9041
+AXI_SG_V4_1_14.AXI_SG_SCC_WR:IMPLEMENTATION (architecture):
+	streams: 3, words: 27042
+AXI_SG_V4_1_14.AXI_SG_SKID2MM_BUF (entity):
+	streams: 25, words: 4938
+AXI_SG_V4_1_14.AXI_SG_SKID2MM_BUF:IMPLEMENTATION (architecture):
+	streams: 2, words: 11475
+AXI_SG_V4_1_14.AXI_SG_WRDATA_CNTL (entity):
+	streams: 80, words: 12017
+AXI_SG_V4_1_14.AXI_SG_WRDATA_CNTL:IMPLEMENTATION (architecture):
+	streams: 4, words: 23480
+AXI_SG_V4_1_14.AXI_SG_WR_STATUS_CNTL (entity):
+	streams: 39, words: 3774
+AXI_SG_V4_1_14.AXI_SG_WR_STATUS_CNTL:IMPLEMENTATION (architecture):
+	streams: 5, words: 24461
+AXI_SG_V4_1_14.AXI_SG_SKID_BUF (entity):
+	streams: 19, words: 3869
+AXI_SG_V4_1_14.AXI_SG_SKID_BUF:IMPLEMENTATION (architecture):
+	streams: 1, words: 8498
+AXI_SG_V4_1_14.AXI_SG_MM2S_BASIC_WRAP (entity):
+	streams: 93, words: 11338
+AXI_SG_V4_1_14.AXI_SG_MM2S_BASIC_WRAP:IMPLEMENTATION (architecture):
+	streams: 8, words: 46897
+AXI_SG_V4_1_14.AXI_SG_S2MM_BASIC_WRAP (entity):
+	streams: 98, words: 12483
+AXI_SG_V4_1_14.AXI_SG_S2MM_BASIC_WRAP:IMPLEMENTATION (architecture):
+	streams: 8, words: 52714
+AXI_SG_V4_1_14.AXI_SG_DATAMOVER (entity):
+	streams: 187, words: 25561
+AXI_SG_V4_1_14.AXI_SG_DATAMOVER:IMPLEMENTATION (architecture):
+	streams: 8, words: 27333
+AXI_SG_V4_1_14.AXI_SG_FTCH_SM (entity):
+	streams: 69, words: 4846
+AXI_SG_V4_1_14.AXI_SG_FTCH_SM:IMPLEMENTATION (architecture):
+	streams: 1, words: 7036
+AXI_SG_V4_1_14.AXI_SG_FTCH_PNTR (entity):
+	streams: 40, words: 6750
+AXI_SG_V4_1_14.AXI_SG_FTCH_PNTR:IMPLEMENTATION (architecture):
+	streams: 1, words: 2598
+AXI_SG_V4_1_14.AXI_SG_FTCH_CMDSTS_IF (entity):
+	streams: 28, words: 3046
+AXI_SG_V4_1_14.AXI_SG_FTCH_CMDSTS_IF:IMPLEMENTATION (architecture):
+	streams: 1, words: 734
+AXI_SG_V4_1_14.AXI_SG_FTCH_MNGR (entity):
+	streams: 91, words: 9407
+AXI_SG_V4_1_14.AXI_SG_FTCH_MNGR:IMPLEMENTATION (architecture):
+	streams: 4, words: 16495
+AXI_SG_V4_1_14.AXI_SG_CNTRL_STRM (entity):
+	streams: 24, words: 3030
+AXI_SG_V4_1_14.AXI_SG_CNTRL_STRM:IMPLEMENTATION (architecture):
+	streams: 5, words: 20173
+AXI_SG_V4_1_14.AXI_SG_FTCH_QUEUE (entity):
+	streams: 95, words: 13122
+AXI_SG_V4_1_14.AXI_SG_FTCH_QUEUE:IMPLEMENTATION (architecture):
+	streams: 4, words: 39237
+AXI_SG_V4_1_14.AXI_SG_FTCH_NOQUEUE (entity):
+	streams: 85, words: 13417
+AXI_SG_V4_1_14.AXI_SG_FTCH_NOQUEUE:IMPLEMENTATION (architecture):
+	streams: 2, words: 13826
+AXI_SG_V4_1_14.AXI_SG_FTCH_Q_MNGR (entity):
+	streams: 96, words: 13899
+AXI_SG_V4_1_14.AXI_SG_FTCH_Q_MNGR:IMPLEMENTATION (architecture):
+	streams: 3, words: 35984
+AXI_SG_V4_1_14.AXI_SG_UPDT_CMDSTS_IF (entity):
+	streams: 24, words: 2751
+AXI_SG_V4_1_14.AXI_SG_UPDT_CMDSTS_IF:IMPLEMENTATION (architecture):
+	streams: 1, words: 487
+AXI_SG_V4_1_14.AXI_SG_UPDT_SM (entity):
+	streams: 61, words: 3755
+AXI_SG_V4_1_14.AXI_SG_UPDT_SM:IMPLEMENTATION (architecture):
+	streams: 1, words: 6436
+AXI_SG_V4_1_14.AXI_SG_UPDT_MNGR (entity):
+	streams: 65, words: 4300
+AXI_SG_V4_1_14.AXI_SG_UPDT_MNGR:IMPLEMENTATION (architecture):
+	streams: 3, words: 7321
+AXI_SG_V4_1_14.AXI_SG_UPDT_QUEUE (entity):
+	streams: 73, words: 6769
+AXI_SG_V4_1_14.AXI_SG_UPDT_QUEUE:IMPLEMENTATION (architecture):
+	streams: 2, words: 15755
+AXI_SG_V4_1_14.AXI_SG_UPDT_NOQUEUE (entity):
+	streams: 59, words: 6100
+AXI_SG_V4_1_14.AXI_SG_UPDT_NOQUEUE:IMPLEMENTATION (architecture):
+	streams: 1, words: 2561
+AXI_SG_V4_1_14.AXI_SG_UPDT_Q_MNGR (entity):
+	streams: 74, words: 6789
+AXI_SG_V4_1_14.AXI_SG_UPDT_Q_MNGR:IMPLEMENTATION (architecture):
+	streams: 3, words: 13884
+AXI_SG_V4_1_14.AXI_SG_INTRPT (entity):
+	streams: 45, words: 2757
+AXI_SG_V4_1_14.AXI_SG_INTRPT:IMPLEMENTATION (architecture):
+	streams: 1, words: 6454
+AXI_SG_V4_1_14.AXI_SG (entity):
+	streams: 260, words: 31797
+AXI_SG_V4_1_14.AXI_SG:IMPLEMENTATION (architecture):
+	streams: 7, words: 73285

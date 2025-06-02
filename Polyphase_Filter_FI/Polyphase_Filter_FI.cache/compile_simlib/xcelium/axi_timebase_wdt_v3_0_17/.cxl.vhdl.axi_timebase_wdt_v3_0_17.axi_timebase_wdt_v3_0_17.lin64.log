@@ -1,0 +1,27 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_timebase_wdt_v3_0/hdl/axi_timebase_wdt_v3_0_vh_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_TIMEBASE_WDT_V3_0_17.WINDOW_WDT_COUNTER (entity):
+	streams: 20, words: 2703
+AXI_TIMEBASE_WDT_V3_0_17.WINDOW_WDT_COUNTER:WC_IMP (architecture):
+	streams: 2, words: 4854
+AXI_TIMEBASE_WDT_V3_0_17.WINDOW_WDT_FAIL_CNT (entity):
+	streams: 12, words: 1250
+AXI_TIMEBASE_WDT_V3_0_17.WINDOW_WDT_FAIL_CNT:FC_IMP (architecture):
+	streams: 1, words: 1817
+AXI_TIMEBASE_WDT_V3_0_17.TIMEBASE_WDT_CORE (entity):
+	streams: 23, words: 2875
+AXI_TIMEBASE_WDT_V3_0_17.TIMEBASE_WDT_CORE:IMP (architecture):
+	streams: 3, words: 7933
+AXI_TIMEBASE_WDT_V3_0_17.AXI_TIMEBASE_WDT (entity):
+	streams: 39, words: 2758
+AXI_TIMEBASE_WDT_V3_0_17.AXI_TIMEBASE_WDT:IMP (architecture):
+	streams: 4, words: 23107
+AXI_TIMEBASE_WDT_V3_0_17.AXI_WINDOW_WDT (entity):
+	streams: 45, words: 4459
+AXI_TIMEBASE_WDT_V3_0_17.AXI_WINDOW_WDT:IMP (architecture):
+	streams: 5, words: 41214
+AXI_TIMEBASE_WDT_V3_0_17.AXI_TIMEBASE_WDT_TOP (entity):
+	streams: 49, words: 4501
+AXI_TIMEBASE_WDT_V3_0_17.AXI_TIMEBASE_WDT_TOP:TOP_ARCH (architecture):
+	streams: 3, words: 6874

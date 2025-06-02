@@ -1,0 +1,243 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_vdma_v6_3/hdl/axi_vdma_v6_3_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_VDMA_V6_3_13.AXI_SG_PKG (package):
+	streams: 1, words: 809
+AXI_VDMA_V6_3_13.AXI_SG_PKG:BODY (package body):
+	streams: 2, words: 253
+AXI_VDMA_V6_3_13.AXI_SG_FTCH_SM (entity):
+	streams: 66, words: 4757
+AXI_VDMA_V6_3_13.AXI_SG_FTCH_SM:IMPLEMENTATION (architecture):
+	streams: 1, words: 5709
+AXI_VDMA_V6_3_13.AXI_SG_FTCH_PNTR (entity):
+	streams: 35, words: 6710
+AXI_VDMA_V6_3_13.AXI_SG_FTCH_PNTR:IMPLEMENTATION (architecture):
+	streams: 1, words: 2598
+AXI_VDMA_V6_3_13.AXI_SG_FTCH_CMDSTS_IF (entity):
+	streams: 28, words: 3046
+AXI_VDMA_V6_3_13.AXI_SG_FTCH_CMDSTS_IF:IMPLEMENTATION (architecture):
+	streams: 1, words: 734
+AXI_VDMA_V6_3_13.AXI_SG_FTCH_MNGR (entity):
+	streams: 83, words: 9278
+AXI_VDMA_V6_3_13.AXI_SG_FTCH_MNGR:IMPLEMENTATION (architecture):
+	streams: 4, words: 16471
+AXI_VDMA_V6_3_13.AXI_SG_AFIFO_AUTORD (entity):
+	streams: 30, words: 5908
+AXI_VDMA_V6_3_13.AXI_SG_AFIFO_AUTORD:IMP (architecture):
+	streams: 2, words: 8217
+AXI_VDMA_V6_3_13.AXI_SG_FTCH_QUEUE (entity):
+	streams: 35, words: 3563
+AXI_VDMA_V6_3_13.AXI_SG_FTCH_QUEUE:IMPLEMENTATION (architecture):
+	streams: 3, words: 16309
+AXI_VDMA_V6_3_13.AXI_SG_FTCH_NOQUEUE (entity):
+	streams: 26, words: 3129
+AXI_VDMA_V6_3_13.AXI_SG_FTCH_NOQUEUE:IMPLEMENTATION (architecture):
+	streams: 1, words: 2209
+AXI_VDMA_V6_3_13.AXI_SG_FTCH_Q_MNGR (entity):
+	streams: 61, words: 6808
+AXI_VDMA_V6_3_13.AXI_SG_FTCH_Q_MNGR:IMPLEMENTATION (architecture):
+	streams: 5, words: 19221
+AXI_VDMA_V6_3_13.AXI_SG_UPDT_CMDSTS_IF (entity):
+	streams: 24, words: 2751
+AXI_VDMA_V6_3_13.AXI_SG_UPDT_CMDSTS_IF:IMPLEMENTATION (architecture):
+	streams: 1, words: 487
+AXI_VDMA_V6_3_13.AXI_SG_UPDT_SM (entity):
+	streams: 64, words: 4661
+AXI_VDMA_V6_3_13.AXI_SG_UPDT_SM:IMPLEMENTATION (architecture):
+	streams: 1, words: 4459
+AXI_VDMA_V6_3_13.AXI_SG_UPDT_MNGR (entity):
+	streams: 68, words: 5206
+AXI_VDMA_V6_3_13.AXI_SG_UPDT_MNGR:IMPLEMENTATION (architecture):
+	streams: 3, words: 8192
+AXI_VDMA_V6_3_13.AXI_SG_UPDT_QUEUE (entity):
+	streams: 47, words: 4596
+AXI_VDMA_V6_3_13.AXI_SG_UPDT_QUEUE:IMPLEMENTATION (architecture):
+	streams: 5, words: 23008
+AXI_VDMA_V6_3_13.AXI_SG_UPDT_NOQUEUE (entity):
+	streams: 39, words: 4176
+AXI_VDMA_V6_3_13.AXI_SG_UPDT_NOQUEUE:IMPLEMENTATION (architecture):
+	streams: 1, words: 1185
+AXI_VDMA_V6_3_13.AXI_SG_UPDT_Q_MNGR (entity):
+	streams: 77, words: 7695
+AXI_VDMA_V6_3_13.AXI_SG_UPDT_Q_MNGR:IMPLEMENTATION (architecture):
+	streams: 5, words: 19492
+AXI_VDMA_V6_3_13.AXI_SG_INTRPT (entity):
+	streams: 45, words: 2757
+AXI_VDMA_V6_3_13.AXI_SG_INTRPT:IMPLEMENTATION (architecture):
+	streams: 1, words: 6454
+AXI_VDMA_V6_3_13.AXI_SG (entity):
+	streams: 211, words: 23610
+AXI_VDMA_V6_3_13.AXI_SG:IMPLEMENTATION (architecture):
+	streams: 7, words: 59855
+AXI_VDMA_V6_3_13.AXI_VDMA_PKG (package):
+	streams: 1, words: 63859
+AXI_VDMA_V6_3_13.AXI_VDMA_PKG:BODY (package body):
+	streams: 19, words: 8319
+AXI_VDMA_V6_3_13.AXI_VDMA_CDC (entity):
+	streams: 24, words: 3970
+AXI_VDMA_V6_3_13.AXI_VDMA_CDC:IMPLEMENTATION (architecture):
+	streams: 1, words: 29986
+AXI_VDMA_V6_3_13.AXI_VDMA_VID_CDC (entity):
+	streams: 36, words: 5895
+AXI_VDMA_V6_3_13.AXI_VDMA_VID_CDC:IMPLEMENTATION (architecture):
+	streams: 7, words: 19892
+AXI_VDMA_V6_3_13.AXI_VDMA_SG_CDC (entity):
+	streams: 37, words: 5773
+AXI_VDMA_V6_3_13.AXI_VDMA_SG_CDC:IMPLEMENTATION (architecture):
+	streams: 12, words: 26274
+AXI_VDMA_V6_3_13.AXI_VDMA_RESET (entity):
+	streams: 25, words: 654
+AXI_VDMA_V6_3_13.AXI_VDMA_RESET:IMPLEMENTATION (architecture):
+	streams: 16, words: 35552
+AXI_VDMA_V6_3_13.AXI_VDMA_RST_MODULE (entity):
+	streams: 46, words: 1633
+AXI_VDMA_V6_3_13.AXI_VDMA_RST_MODULE:IMPLEMENTATION (architecture):
+	streams: 3, words: 5606
+AXI_VDMA_V6_3_13.AXI_VDMA_LITE_IF (entity):
+	streams: 62, words: 13842
+AXI_VDMA_V6_3_13.AXI_VDMA_LITE_IF:IMPLEMENTATION (architecture):
+	streams: 10, words: 41347
+AXI_VDMA_V6_3_13.AXI_VDMA_REGISTER (entity):
+	streams: 125, words: 15845
+AXI_VDMA_V6_3_13.AXI_VDMA_REGISTER:IMPLEMENTATION (architecture):
+	streams: 1, words: 17866
+AXI_VDMA_V6_3_13.AXI_VDMA_REGDIRECT (entity):
+	streams: 101, words: 34343
+AXI_VDMA_V6_3_13.AXI_VDMA_REGDIRECT:IMPLEMENTATION (architecture):
+	streams: 1, words: 44764
+AXI_VDMA_V6_3_13.AXI_VDMA_REG_MUX (entity):
+	streams: 119, words: 40408
+AXI_VDMA_V6_3_13.AXI_VDMA_REG_MUX:IMPLEMENTATION (architecture):
+	streams: 1, words: 16581
+AXI_VDMA_V6_3_13.AXI_VDMA_REG_MODULE (entity):
+	streams: 152, words: 17571
+AXI_VDMA_V6_3_13.AXI_VDMA_REG_MODULE:IMPLEMENTATION (architecture):
+	streams: 5, words: 123079
+AXI_VDMA_V6_3_13.AXI_VDMA_REG_IF (entity):
+	streams: 125, words: 17095
+AXI_VDMA_V6_3_13.AXI_VDMA_REG_IF:IMPLEMENTATION (architecture):
+	streams: 4, words: 35256
+AXI_VDMA_V6_3_13.AXI_VDMA_INTRPT (entity):
+	streams: 85, words: 4287
+AXI_VDMA_V6_3_13.AXI_VDMA_INTRPT:IMPLEMENTATION (architecture):
+	streams: 1, words: 7034
+AXI_VDMA_V6_3_13.AXI_VDMA_SOF_GEN (entity):
+	streams: 7, words: 111
+AXI_VDMA_V6_3_13.AXI_VDMA_SOF_GEN:IMPLEMENTATION (architecture):
+	streams: 1, words: 475
+AXI_VDMA_V6_3_13.AXI_VDMA_SKID_BUF (entity):
+	streams: 26, words: 5760
+AXI_VDMA_V6_3_13.AXI_VDMA_SKID_BUF:IMPLEMENTATION (architecture):
+	streams: 1, words: 10516
+AXI_VDMA_V6_3_13.AXI_VDMA_SFIFO (entity):
+	streams: 20, words: 3975
+AXI_VDMA_V6_3_13.AXI_VDMA_SFIFO:XILINX (architecture):
+	streams: 1, words: 9511
+AXI_VDMA_V6_3_13.AXI_VDMA_SFIFO_AUTORD (entity):
+	streams: 32, words: 5284
+AXI_VDMA_V6_3_13.AXI_VDMA_SFIFO_AUTORD:IMP (architecture):
+	streams: 2, words: 9147
+AXI_VDMA_V6_3_13.AXI_VDMA_AFIFO_BUILTIN (entity):
+	streams: 22, words: 3363
+AXI_VDMA_V6_3_13.AXI_VDMA_AFIFO_BUILTIN:XILINX (architecture):
+	streams: 8, words: 52296
+AXI_VDMA_V6_3_13.AXI_VDMA_AFIFO (entity):
+	streams: 23, words: 5211
+AXI_VDMA_V6_3_13.AXI_VDMA_AFIFO:XILINX (architecture):
+	streams: 1, words: 8951
+AXI_VDMA_V6_3_13.AXI_VDMA_AFIFO_AUTORD (entity):
+	streams: 30, words: 5908
+AXI_VDMA_V6_3_13.AXI_VDMA_AFIFO_AUTORD:IMP (architecture):
+	streams: 3, words: 10392
+AXI_VDMA_V6_3_13.AXI_VDMA_MM2S_LINEBUF (entity):
+	streams: 116, words: 8837
+AXI_VDMA_V6_3_13.AXI_VDMA_MM2S_LINEBUF:IMPLEMENTATION (architecture):
+	streams: 23, words: 88708
+AXI_VDMA_V6_3_13.AXI_VDMA_S2MM_LINEBUF (entity):
+	streams: 120, words: 9409
+AXI_VDMA_V6_3_13.AXI_VDMA_S2MM_LINEBUF:IMPLEMENTATION (architecture):
+	streams: 26, words: 91841
+AXI_VDMA_V6_3_13.AXI_VDMA_BLKMEM (entity):
+	streams: 18, words: 4083
+AXI_VDMA_V6_3_13.AXI_VDMA_BLKMEM:IMPLEMENTATION (architecture):
+	streams: 3, words: 20963
+AXI_VDMA_V6_3_13.AXI_VDMA_FSYNC_GEN (entity):
+	streams: 33, words: 1224
+AXI_VDMA_V6_3_13.AXI_VDMA_FSYNC_GEN:IMPLEMENTATION (architecture):
+	streams: 1, words: 2807
+AXI_VDMA_V6_3_13.AXI_VDMA_VREGISTER (entity):
+	streams: 29, words: 4670
+AXI_VDMA_V6_3_13.AXI_VDMA_VREGISTER:IMPLEMENTATION (architecture):
+	streams: 2, words: 2322
+AXI_VDMA_V6_3_13.AXI_VDMA_VREGISTER_64 (entity):
+	streams: 29, words: 4694
+AXI_VDMA_V6_3_13.AXI_VDMA_VREGISTER_64:IMPLEMENTATION (architecture):
+	streams: 2, words: 2322
+AXI_VDMA_V6_3_13.AXI_VDMA_SGREGISTER (entity):
+	streams: 42, words: 5228
+AXI_VDMA_V6_3_13.AXI_VDMA_SGREGISTER:IMPLEMENTATION (architecture):
+	streams: 7, words: 35603
+AXI_VDMA_V6_3_13.AXI_VDMA_VADDRREG_MUX (entity):
+	streams: 13, words: 2447
+AXI_VDMA_V6_3_13.AXI_VDMA_VADDRREG_MUX:IMPLEMENTATION (architecture):
+	streams: 1, words: 1282
+AXI_VDMA_V6_3_13.AXI_VDMA_VADDRREG_MUX_64 (entity):
+	streams: 13, words: 2459
+AXI_VDMA_V6_3_13.AXI_VDMA_VADDRREG_MUX_64:IMPLEMENTATION (architecture):
+	streams: 1, words: 1282
+AXI_VDMA_V6_3_13.AXI_VDMA_VIDREG_MODULE (entity):
+	streams: 58, words: 7626
+AXI_VDMA_V6_3_13.AXI_VDMA_VIDREG_MODULE:IMPLEMENTATION (architecture):
+	streams: 6, words: 18139
+AXI_VDMA_V6_3_13.AXI_VDMA_VIDREG_MODULE_64 (entity):
+	streams: 58, words: 7638
+AXI_VDMA_V6_3_13.AXI_VDMA_VIDREG_MODULE_64:IMPLEMENTATION (architecture):
+	streams: 6, words: 18219
+AXI_VDMA_V6_3_13.AXI_VDMA_GENLOCK_MUX (entity):
+	streams: 16, words: 2452
+AXI_VDMA_V6_3_13.AXI_VDMA_GENLOCK_MUX:IMPLEMENTATION (architecture):
+	streams: 1, words: 3855
+AXI_VDMA_V6_3_13.AXI_VDMA_GREYCODER (entity):
+	streams: 11, words: 3667
+AXI_VDMA_V6_3_13.AXI_VDMA_GREYCODER:IMPLEMENTATION (architecture):
+	streams: 1, words: 1688
+AXI_VDMA_V6_3_13.AXI_VDMA_GENLOCK_MNGR (entity):
+	streams: 33, words: 3803
+AXI_VDMA_V6_3_13.AXI_VDMA_GENLOCK_MNGR:IMPLEMENTATION (architecture):
+	streams: 11, words: 43897
+AXI_VDMA_V6_3_13.AXI_VDMA_SG_IF (entity):
+	streams: 32, words: 4252
+AXI_VDMA_V6_3_13.AXI_VDMA_SG_IF:IMPLEMENTATION (architecture):
+	streams: 1, words: 8736
+AXI_VDMA_V6_3_13.AXI_VDMA_SM (entity):
+	streams: 64, words: 4041
+AXI_VDMA_V6_3_13.AXI_VDMA_SM:IMPLEMENTATION (architecture):
+	streams: 2, words: 11930
+AXI_VDMA_V6_3_13.AXI_VDMA_CMDSTS_IF (entity):
+	streams: 83, words: 6807
+AXI_VDMA_V6_3_13.AXI_VDMA_CMDSTS_IF:IMPLEMENTATION (architecture):
+	streams: 1, words: 2124
+AXI_VDMA_V6_3_13.AXI_VDMA_STS_MNGR (entity):
+	streams: 22, words: 231
+AXI_VDMA_V6_3_13.AXI_VDMA_STS_MNGR:IMPLEMENTATION (architecture):
+	streams: 1, words: 521
+AXI_VDMA_V6_3_13.AXI_VDMA_MNGR (entity):
+	streams: 194, words: 15974
+AXI_VDMA_V6_3_13.AXI_VDMA_MNGR:IMPLEMENTATION (architecture):
+	streams: 7, words: 36026
+AXI_VDMA_V6_3_13.AXI_VDMA_MNGR_64 (entity):
+	streams: 194, words: 15986
+AXI_VDMA_V6_3_13.AXI_VDMA_MNGR_64:IMPLEMENTATION (architecture):
+	streams: 7, words: 36016
+AXI_VDMA_V6_3_13.AXI_VDMA_MM2S_AXIS_DWIDTH_CONVERTER (entity):
+	streams: 53, words: 12189
+AXI_VDMA_V6_3_13.AXI_VDMA_MM2S_AXIS_DWIDTH_CONVERTER:IMPLEMENTATION (architecture):
+	streams: 1, words: 28028
+AXI_VDMA_V6_3_13.AXI_VDMA_S2MM_AXIS_DWIDTH_CONVERTER (entity):
+	streams: 53, words: 12189
+AXI_VDMA_V6_3_13.AXI_VDMA_S2MM_AXIS_DWIDTH_CONVERTER:IMPLEMENTATION (architecture):
+	streams: 1, words: 27943
+AXI_VDMA_V6_3_13.AXI_VDMA (entity):
+	streams: 264, words: 33075
+AXI_VDMA_V6_3_13.AXI_VDMA:IMPLEMENTATION (architecture):
+	streams: 36, words: 305833

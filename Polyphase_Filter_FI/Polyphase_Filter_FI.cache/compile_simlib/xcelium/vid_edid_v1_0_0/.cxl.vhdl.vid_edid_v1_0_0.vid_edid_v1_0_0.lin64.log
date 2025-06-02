@@ -1,0 +1,51 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/vid_edid_v1_0/hdl/vid_edid_v1_0_rfs.vhd:
+	errors: 0, warnings: 0
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_FAMILY_SUPPORT (package):
+	streams: 3, words: 996
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_FAMILY_SUPPORT:BODY (package body):
+	streams: 14, words: 28440
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_PSELECT_F (entity):
+	streams: 8, words: 1280
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_PSELECT_F:IMP (architecture):
+	streams: 3, words: 6904
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_PROC_COMMON_PKG (package):
+	streams: 2, words: 2196
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_PROC_COMMON_PKG:BODY (package body):
+	streams: 11, words: 11407
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_COUNTER_F (entity):
+	streams: 13, words: 2125
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_COUNTER_F:IMP (architecture):
+	streams: 2, words: 10158
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_COMMON_PKG (package):
+	streams: 11, words: 5304
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_COMMON_PKG:BODY (package body):
+	streams: 29, words: 42431
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_MULTIPLEXOR (entity):
+	streams: 52, words: 19108
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_MULTIPLEXOR:RTL (architecture):
+	streams: 1, words: 13251
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_AXILITE_SIF (entity):
+	streams: 44, words: 6361
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_AXILITE_SIF:RTL (architecture):
+	streams: 1, words: 5195
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_APB_MIF (entity):
+	streams: 45, words: 9626
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_APB_MIF:RTL (architecture):
+	streams: 1, words: 3570
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_PSEL_DECODER (entity):
+	streams: 75, words: 6398
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_PSEL_DECODER:RTL (architecture):
+	streams: 2, words: 151222
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_ROM (entity):
+	streams: 13, words: 1412
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_ROM:RTL (architecture):
+	streams: 1, words: 1765
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_AXI_APB_BRIDGE (entity):
+	streams: 69, words: 13504
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_AXI_APB_BRIDGE:RTL (architecture):
+	streams: 1, words: 56491
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_EDID_ROM (entity):
+	streams: 40, words: 3504
+VID_EDID_V1_0_0.VID_EDID_V1_0_0_EDID_ROM:RTL (architecture):
+	streams: 5, words: 25079

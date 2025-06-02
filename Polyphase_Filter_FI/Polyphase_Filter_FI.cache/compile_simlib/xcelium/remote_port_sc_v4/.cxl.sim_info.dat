@@ -1,0 +1,23 @@
+<SIMMODEL_NAME>:remote_port_sc
+<LIBRARY_NAME>:remote_port_sc_v4
+<LIBRARY_TYPE>:SystemC
+<OUTPUT_FORMAT>:library
+<SYSTEMC_SOURCES>:systemc/simlibs/remote_port_sc/remote_port_sc_v4/src/remote_port_tlm.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/remote_port_sc/remote_port_sc_v4/src/remote_port_tlm_memory_master.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/remote_port_sc/remote_port_sc_v4/src/remote_port_tlm_memory_slave.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/remote_port_sc/remote_port_sc_v4/src/remote_port_tlm_wires.cpp
+<SYSTEMC_INCLUDE_DIRS>:simlibs/remote_port_sc_v4/include,simlibs/remote_port_c_v4/include,simlibs/remote_port_sc_v4/src,simlibs/common_cpp_v1_0/include
+<OSCI_INCLUDE_DIRS>:/data/osci_systemc/include
+<SYSTEMC_COMPILE_OPTION>:-64bit -noedg -cFlags " -O3 -fPIC -c -o
+<CPP_COMPILE_OPTION>:-O3
+<C_COMPILE_OPTION>:-O3
+<G++_COMPILE_FLAGS>:-fPIC -std=c++11 -DREMOTEPORT_SC_DLL
+<G++_LDFLAGS_OPTION>:
+<GCC_LDFLAGS_OPTION>:
+<LDLIBS>:-v -Lxcelium_lib/remote_port_c_v4 -lremote_port_c_v4 -Lxcelium_lib/common_cpp_v1_0 -lcommon_cpp_v1_0
+<LDLIBS_WIN64>:-lws2_32 -lwinmm
+<MORE_XSC_OPTIONS>:-v
+<G++_LDLIBS_OPTION>:
+<GCC_LDLIBS_OPTION>:
+<SHARED_LIBRARY>:remote_port_sc_v4
+<SIMULATOR_PLATFORM>:all

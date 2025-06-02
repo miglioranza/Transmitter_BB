@@ -1,0 +1,23 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_lite_ipif_v3_0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_LITE_IPIF_V3_0_4.IPIF_PKG (package):
+	streams: 2, words: 502
+AXI_LITE_IPIF_V3_0_4.IPIF_PKG:BODY (package body):
+	streams: 27, words: 30286
+AXI_LITE_IPIF_V3_0_4.PSELECT_F (entity):
+	streams: 8, words: 1280
+AXI_LITE_IPIF_V3_0_4.PSELECT_F:IMP (architecture):
+	streams: 2, words: 1445
+AXI_LITE_IPIF_V3_0_4.ADDRESS_DECODER (entity):
+	streams: 24, words: 5259
+AXI_LITE_IPIF_V3_0_4.ADDRESS_DECODER:IMP (architecture):
+	streams: 12, words: 34028
+AXI_LITE_IPIF_V3_0_4.SLAVE_ATTACHMENT (entity):
+	streams: 57, words: 13372
+AXI_LITE_IPIF_V3_0_4.SLAVE_ATTACHMENT:IMP (architecture):
+	streams: 3, words: 9483
+AXI_LITE_IPIF_V3_0_4.AXI_LITE_IPIF (entity):
+	streams: 58, words: 13380
+AXI_LITE_IPIF_V3_0_4.AXI_LITE_IPIF:IMP (architecture):
+	streams: 2, words: 12519

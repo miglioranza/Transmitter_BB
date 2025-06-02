@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-// Date        : Fri Mar 14 17:23:26 2025
+// Date        : Mon Jun  2 15:16:48 2025
 // Host        : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 // Command     : write_verilog -force -mode synth_stub -rename_top Design_2_Pre_Distortion_Filter_0_0 -prefix
 //               Design_2_Pre_Distortion_Filter_0_0_ Design_2_Pre_Distortion_Filter_0_0_stub.v
@@ -16,7 +16,7 @@
 (* x_core_info = "Parallel_FIR_filter,Vivado 2021.2" *)
 module Design_2_Pre_Distortion_Filter_0_0(clk, reset, I_input, Q_input, data_in_ready, 
   data_in_valid, data_out_valid, Q_output, I_output, data_out_ready)
-/* synthesis syn_black_box black_box_pad_pin="clk,reset,I_input[11:0],Q_input[11:0],data_in_ready,data_in_valid,data_out_valid,Q_output[31:0],I_output[31:0],data_out_ready" */;
+/* synthesis syn_black_box black_box_pad_pin="clk,reset,I_input[11:0],Q_input[11:0],data_in_ready,data_in_valid,data_out_valid,Q_output[15:0],I_output[15:0],data_out_ready" */;
   input clk;
   input reset;
   input [11:0]I_input;
@@ -24,7 +24,7 @@ module Design_2_Pre_Distortion_Filter_0_0(clk, reset, I_input, Q_input, data_in_
   input data_in_ready;
   input data_in_valid;
   output data_out_valid;
-  output [31:0]Q_output;
-  output [31:0]I_output;
+  output [15:0]Q_output;
+  output [15:0]I_output;
   output data_out_ready;
 endmodule

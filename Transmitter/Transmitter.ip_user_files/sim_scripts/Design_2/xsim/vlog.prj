@@ -1,0 +1,9 @@
+sv xil_defaultlib --include "../../../../Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Encoder_0_0/sources_1/ip/sd_fec_0/hdl" \
+"../../../bd/Design_2/ip/Design_2_Encoder_0_0/sources_1/ip/sd_fec_0/sim/sd_fec_0.sv" \
+
+verilog xil_defaultlib --include "../../../../Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Encoder_0_0/sources_1/ip/sd_fec_0/hdl" \
+"../../../bd/Design_2/ip/Design_2_Encoder_0_0/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

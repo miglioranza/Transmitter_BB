@@ -1,0 +1,9 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/tsn_endpoint_ethernet_mac_block_v1_0/hdl/tsn_endpoint_ethernet_mac_block_v1_0_rfs.vhd:
+	errors: 0, warnings: 0
+	streams: 26, words: 5867
+	streams: 1, words: 10626
+	streams: 5, words: 163
+	streams: 2, words: 3869
+	streams: 5, words: 163
+	streams: 2, words: 1359

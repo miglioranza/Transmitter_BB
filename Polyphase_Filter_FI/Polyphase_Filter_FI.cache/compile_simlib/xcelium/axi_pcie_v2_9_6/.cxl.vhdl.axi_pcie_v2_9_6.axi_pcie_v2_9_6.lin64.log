@@ -1,0 +1,83 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_pcie_v2_9/hdl/axi_pcie_v2_9_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_PCIE_V2_9_6.AXI_ENHANCED_PCIE (entity):
+	streams: 802, words: 202451
+AXI_PCIE_V2_9_6.AXI_ENHANCED_PCIE:STRUCTURE (architecture):
+	streams: 1, words: 80529
+AXI_PCIE_V2_9_6.AXI_PCIE_MM_S_PKG (package):
+	streams: 1, words: 8
+AXI_PCIE_V2_9_6.AXI_MM_MASTERBRIDGE_RD (entity):
+	streams: 58, words: 8092
+AXI_PCIE_V2_9_6.AXI_MM_MASTERBRIDGE_RD:BEHAVIORAL (architecture):
+	streams: 2, words: 7519
+AXI_PCIE_V2_9_6.AXI_MM_MASTERBRIDGE_WR (entity):
+	streams: 63, words: 10518
+AXI_PCIE_V2_9_6.AXI_MM_MASTERBRIDGE_WR:BEHAVIORAL (architecture):
+	streams: 2, words: 5559
+AXI_PCIE_V2_9_6.ARRAY_ARITH (entity):
+	streams: 7, words: 754
+AXI_PCIE_V2_9_6.ARRAY_ARITH:RTL (architecture):
+	streams: 1, words: 655
+AXI_PCIE_V2_9_6.AXI_S_MASTERBRIDGE_RD (entity):
+	streams: 66, words: 12187
+AXI_PCIE_V2_9_6.AXI_S_MASTERBRIDGE_RD:BEHAVIORAL (architecture):
+	streams: 3, words: 25867
+AXI_PCIE_V2_9_6.AXI_S_MASTERBRIDGE_WR (entity):
+	streams: 38, words: 5981
+AXI_PCIE_V2_9_6.AXI_S_MASTERBRIDGE_WR:BEHAVIORAL (architecture):
+	streams: 3, words: 10631
+AXI_PCIE_V2_9_6.AXI_MM_S_MASTERBRIDGE_RD (entity):
+	streams: 93, words: 14751
+AXI_PCIE_V2_9_6.AXI_MM_S_MASTERBRIDGE_RD:BEHAVIORAL (architecture):
+	streams: 4, words: 25047
+AXI_PCIE_V2_9_6.AXI_MM_S_MASTERBRIDGE_WR (entity):
+	streams: 58, words: 9046
+AXI_PCIE_V2_9_6.AXI_MM_S_MASTERBRIDGE_WR:BEHAVIORAL (architecture):
+	streams: 4, words: 24440
+AXI_PCIE_V2_9_6.AXI_MM_S_MASTERBRIDGE (entity):
+	streams: 124, words: 21090
+AXI_PCIE_V2_9_6.AXI_MM_S_MASTERBRIDGE:BEHAVIORAL (architecture):
+	streams: 3, words: 24406
+AXI_PCIE_V2_9_6.REGISTER_BLOCK (entity):
+	streams: 45, words: 6107
+AXI_PCIE_V2_9_6.REGISTER_BLOCK:STRUCTURE (architecture):
+	streams: 1, words: 53227
+AXI_PCIE_V2_9_6.SLAVE_READ_CPL_TLP (entity):
+	streams: 60, words: 10211
+AXI_PCIE_V2_9_6.SLAVE_READ_CPL_TLP:STRUCTURE (architecture):
+	streams: 10, words: 55175
+AXI_PCIE_V2_9_6.SLAVE_READ_REQ_TLP (entity):
+	streams: 76, words: 11253
+AXI_PCIE_V2_9_6.SLAVE_READ_REQ_TLP:STRUCTURE (architecture):
+	streams: 1, words: 24924
+AXI_PCIE_V2_9_6.SLAVE_WRITE_REQ_TLP (entity):
+	streams: 75, words: 11623
+AXI_PCIE_V2_9_6.SLAVE_WRITE_REQ_TLP:STRUCTURE (architecture):
+	streams: 3, words: 28157
+AXI_PCIE_V2_9_6.AXI_SLAVE_READ (entity):
+	streams: 100, words: 17618
+AXI_PCIE_V2_9_6.AXI_SLAVE_READ:STRUCTURE (architecture):
+	streams: 4, words: 50181
+AXI_PCIE_V2_9_6.AXI_SLAVE_WRITE (entity):
+	streams: 83, words: 13005
+AXI_PCIE_V2_9_6.AXI_SLAVE_WRITE:STRUCTURE (architecture):
+	streams: 3, words: 29122
+AXI_PCIE_V2_9_6.SLAVE_BRIDGE (entity):
+	streams: 153, words: 26407
+AXI_PCIE_V2_9_6.SLAVE_BRIDGE:STRUCTURE (architecture):
+	streams: 9, words: 126655
+AXI_PCIE_V2_9_6.AXI_PCIE_MM_S (entity):
+	streams: 225, words: 40551
+AXI_PCIE_V2_9_6.AXI_PCIE_MM_S:STRUCTURE (architecture):
+	streams: 4, words: 49355
+AXI_PCIE_V2_9_6.AXI_PCIE_MSI_IRQ_PKG (package):
+	streams: 1, words: 8
+AXI_PCIE_V2_9_6.AXI_PCIE_MSI_IRQ (entity):
+	streams: 18, words: 4057
+AXI_PCIE_V2_9_6.AXI_PCIE_MSI_IRQ:BEHAVIOR (architecture):
+	streams: 5, words: 22426
+AXI_PCIE_V2_9_6.AXI_PCIE (entity):
+	streams: 426, words: 92995
+AXI_PCIE_V2_9_6.AXI_PCIE:STRUCTURE (architecture):
+	streams: 49, words: 337340

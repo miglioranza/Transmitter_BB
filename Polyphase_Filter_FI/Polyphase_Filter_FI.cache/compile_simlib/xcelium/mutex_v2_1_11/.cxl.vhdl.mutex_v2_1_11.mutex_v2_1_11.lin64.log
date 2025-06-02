@@ -1,0 +1,31 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/mutex_v2_1/hdl/mutex_v2_1_vh_rfs.vhd:
+	errors: 0, warnings: 0
+MUTEX_V2_1_11.PSELECT (entity):
+	streams: 7, words: 1111
+MUTEX_V2_1_11.PSELECT:IMP (architecture):
+	streams: 3, words: 7735
+MUTEX_V2_1_11.GEN_DRAM (entity):
+	streams: 11, words: 2871
+MUTEX_V2_1_11.GEN_DRAM:SYN (architecture):
+	streams: 1, words: 1630
+MUTEX_V2_1_11.MULTI_CHANNEL_REGISTER (entity):
+	streams: 13, words: 2973
+MUTEX_V2_1_11.MULTI_CHANNEL_REGISTER:IMP (architecture):
+	streams: 1, words: 3267
+MUTEX_V2_1_11.MULTI_CHANNEL_MUTEX (entity):
+	streams: 16, words: 4247
+MUTEX_V2_1_11.MULTI_CHANNEL_MUTEX:IMP (architecture):
+	streams: 1, words: 4698
+MUTEX_V2_1_11.MUTEX_CORE (entity):
+	streams: 35, words: 9031
+MUTEX_V2_1_11.MUTEX_CORE:IMP (architecture):
+	streams: 2, words: 23345
+MUTEX_V2_1_11.AXI_DECODE (entity):
+	streams: 52, words: 9745
+MUTEX_V2_1_11.AXI_DECODE:IMP (architecture):
+	streams: 4, words: 11745
+MUTEX_V2_1_11.MUTEX (entity):
+	streams: 255, words: 45995
+MUTEX_V2_1_11.MUTEX:IMP (architecture):
+	streams: 7, words: 120408

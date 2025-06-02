@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:mapper:1.0
--- IP Revision: 4
+-- IP Revision: 5
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -61,8 +61,13 @@ ENTITY Design_2_mapper_0_0 IS
     data_in : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
     data_in_valid : IN STD_LOGIC;
     data_in_ready : IN STD_LOGIC;
+    end_of_frame : IN STD_LOGIC;
+    signal_field_en : IN STD_LOGIC;
+    pilot_insertion : IN STD_LOGIC;
     i_out : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
     q_out : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+    data_out_last : OUT STD_LOGIC;
+    last_frame : OUT STD_LOGIC;
     data_out_ready : OUT STD_LOGIC;
     data_out_valid : OUT STD_LOGIC
   );
@@ -79,8 +84,13 @@ ARCHITECTURE Design_2_mapper_0_0_arch OF Design_2_mapper_0_0 IS
       data_in : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
       data_in_valid : IN STD_LOGIC;
       data_in_ready : IN STD_LOGIC;
+      end_of_frame : IN STD_LOGIC;
+      signal_field_en : IN STD_LOGIC;
+      pilot_insertion : IN STD_LOGIC;
       i_out : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
       q_out : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+      data_out_last : OUT STD_LOGIC;
+      last_frame : OUT STD_LOGIC;
       data_out_ready : OUT STD_LOGIC;
       data_out_valid : OUT STD_LOGIC
     );
@@ -106,8 +116,13 @@ BEGIN
       data_in => data_in,
       data_in_valid => data_in_valid,
       data_in_ready => data_in_ready,
+      end_of_frame => end_of_frame,
+      signal_field_en => signal_field_en,
+      pilot_insertion => pilot_insertion,
       i_out => i_out,
       q_out => q_out,
+      data_out_last => data_out_last,
+      last_frame => last_frame,
       data_out_ready => data_out_ready,
       data_out_valid => data_out_valid
     );

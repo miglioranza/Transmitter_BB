@@ -118,14 +118,14 @@ begin
         -- Release reset
         reset <= '0';
         wait for CLK_PERIOD;
-
+        data_in_ready <= '1';  -- Simulate ready signal from downstream
+        wait for CLK_PERIOD;
         -- Apply test stimulus
-        for i in 1 to 10 loop
+        for i in 1 to 50 loop
             -- Set input data
-            I_input <= std_logic_vector(to_signed(i, INPUT_WIDTH));  -- Example I input
+            I_input <= std_logic_vector(to_signed(i*10, INPUT_WIDTH));  -- Example I input
             Q_input <= std_logic_vector(to_signed(-i, INPUT_WIDTH)); -- Example Q input
             data_in_valid <= '1';  -- Assert valid signal
-            data_in_ready <= '1';  -- Simulate ready signal from downstream
             wait for CLK_PERIOD;
 
 --            data_in_valid <= '0';

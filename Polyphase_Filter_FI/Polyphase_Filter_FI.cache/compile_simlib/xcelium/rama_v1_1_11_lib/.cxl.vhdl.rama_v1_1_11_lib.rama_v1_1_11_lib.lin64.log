@@ -1,0 +1,42 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/rama_v1_1/hdl/rama_v1_1_vh_rfs.vhd:
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+	errors: 0, warnings: 1
+	streams: 1, words: 468
+	streams: 3, words: 1652
+	streams: 27, words: 2888
+	streams: 1, words: 15027
+	streams: 33, words: 3490
+	streams: 1, words: 18595
+	streams: 50, words: 5685
+	streams: 3, words: 5650
+	streams: 69, words: 12966
+	streams: 1, words: 2835
+	streams: 67, words: 12998
+	streams: 1, words: 200
+	streams: 6, words: 1035
+	streams: 1, words: 1127
+	streams: 13, words: 1865
+	streams: 1, words: 914
+	streams: 33, words: 6224
+	streams: 1, words: 34141
+	streams: 17, words: 4045
+	streams: 1, words: 6232
+	streams: 16, words: 1975
+	streams: 1, words: 5370
+	streams: 22, words: 2309
+	streams: 5, words: 16627
+	streams: 27, words: 3123
+	streams: 3, words: 6251
+	streams: 45, words: 6027
+	streams: 1, words: 15850
+	streams: 32, words: 5981
+	streams: 1, words: 24477
+	streams: 15, words: 3803
+	streams: 1, words: 5619
+	streams: 18, words: 2049
+	streams: 1, words: 5148
+	streams: 20, words: 1816
+	streams: 4, words: 14174
+	streams: 25, words: 2630
+	streams: 3, words: 5916

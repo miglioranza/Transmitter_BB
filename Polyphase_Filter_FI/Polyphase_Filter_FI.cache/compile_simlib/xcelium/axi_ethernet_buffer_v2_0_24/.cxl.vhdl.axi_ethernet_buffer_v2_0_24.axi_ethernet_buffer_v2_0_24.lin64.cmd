@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work axi_ethernet_buffer_v2_0_24 -f /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.cache/compile_simlib/xcelium/axi_ethernet_buffer_v2_0_24/.cxl.vhdl.axi_ethernet_buffer_v2_0_24.axi_ethernet_buffer_v2_0_24.lin64.cmf

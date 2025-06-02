@@ -1,0 +1,2 @@
+INCLUDE /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.cache/compile_simlib/xcelium/cds.lib
+DEFINE xil_defaultlib xcelium_lib/xil_defaultlib

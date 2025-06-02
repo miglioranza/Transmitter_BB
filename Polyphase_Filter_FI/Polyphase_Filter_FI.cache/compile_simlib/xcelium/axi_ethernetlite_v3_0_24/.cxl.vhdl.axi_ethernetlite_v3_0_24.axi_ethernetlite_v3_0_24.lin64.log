@@ -1,0 +1,110 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_ethernetlite_v3_0/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:
+attribute keep of Phy_col : signal is "true";
+                        |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_ethernetlite_v3_0/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd,7779|24): illegal entity designator [5.1].
+	errors: 0, warnings: 1
+AXI_ETHERNETLITE_V3_0_24.LD_ARITH_REG (entity):
+	streams: 17, words: 3221
+AXI_ETHERNETLITE_V3_0_24.LD_ARITH_REG:IMP (architecture):
+	streams: 2, words: 9480
+AXI_ETHERNETLITE_V3_0_24.MUX_ONEHOT_F (entity):
+	streams: 10, words: 3537
+AXI_ETHERNETLITE_V3_0_24.MUX_ONEHOT_F:IMP (architecture):
+	streams: 5, words: 10209
+AXI_ETHERNETLITE_V3_0_24.MAC_PKG (package):
+	streams: 10, words: 5186
+AXI_ETHERNETLITE_V3_0_24.MAC_PKG:BODY (package body):
+	streams: 21, words: 22773
+AXI_ETHERNETLITE_V3_0_24.LFSR16 (entity):
+	streams: 6, words: 103
+AXI_ETHERNETLITE_V3_0_24.LFSR16:IMP (architecture):
+	streams: 1, words: 654
+AXI_ETHERNETLITE_V3_0_24.DEFER_STATE (entity):
+	streams: 13, words: 159
+AXI_ETHERNETLITE_V3_0_24.DEFER_STATE:IMPLEMENTATION (architecture):
+	streams: 1, words: 419
+AXI_ETHERNETLITE_V3_0_24.CRCNIBSHIFTREG (entity):
+	streams: 10, words: 677
+AXI_ETHERNETLITE_V3_0_24.CRCNIBSHIFTREG:IMPLEMENTATION (architecture):
+	streams: 1, words: 649
+AXI_ETHERNETLITE_V3_0_24.CNTR5BIT (entity):
+	streams: 10, words: 661
+AXI_ETHERNETLITE_V3_0_24.CNTR5BIT:IMPLEMENTATION (architecture):
+	streams: 1, words: 641
+AXI_ETHERNETLITE_V3_0_24.TX_STATEMACHINE (entity):
+	streams: 59, words: 2671
+AXI_ETHERNETLITE_V3_0_24.TX_STATEMACHINE:IMPLEMENTATION (architecture):
+	streams: 2, words: 1369
+AXI_ETHERNETLITE_V3_0_24.TX_INTRFCE (entity):
+	streams: 15, words: 851
+AXI_ETHERNETLITE_V3_0_24.TX_INTRFCE:IMPLEMENTATION (architecture):
+	streams: 3, words: 7079
+AXI_ETHERNETLITE_V3_0_24.RX_STATEMACHINE (entity):
+	streams: 35, words: 1956
+AXI_ETHERNETLITE_V3_0_24.RX_STATEMACHINE:IMP (architecture):
+	streams: 1, words: 1543
+AXI_ETHERNETLITE_V3_0_24.RX_INTRFCE (entity):
+	streams: 17, words: 867
+AXI_ETHERNETLITE_V3_0_24.RX_INTRFCE:IMPLEMENTATION (architecture):
+	streams: 3, words: 7177
+AXI_ETHERNETLITE_V3_0_24.RAM16X4 (entity):
+	streams: 17, words: 1408
+AXI_ETHERNETLITE_V3_0_24.RAM16X4:IMP (architecture):
+	streams: 1, words: 3703
+AXI_ETHERNETLITE_V3_0_24.MSH_CNT (entity):
+	streams: 14, words: 2913
+AXI_ETHERNETLITE_V3_0_24.MSH_CNT:IMP (architecture):
+	streams: 2, words: 8743
+AXI_ETHERNETLITE_V3_0_24.DEFERRAL (entity):
+	streams: 14, words: 693
+AXI_ETHERNETLITE_V3_0_24.DEFERRAL:IMPLEMENTATION (architecture):
+	streams: 4, words: 2552
+AXI_ETHERNETLITE_V3_0_24.CRCGENTX (entity):
+	streams: 10, words: 645
+AXI_ETHERNETLITE_V3_0_24.CRCGENTX:ARCH1 (architecture):
+	streams: 5, words: 13693
+AXI_ETHERNETLITE_V3_0_24.CRCGENRX (entity):
+	streams: 7, words: 366
+AXI_ETHERNETLITE_V3_0_24.CRCGENRX:ARCH1 (architecture):
+	streams: 2, words: 10332
+AXI_ETHERNETLITE_V3_0_24.BOCNTR (entity):
+	streams: 8, words: 382
+AXI_ETHERNETLITE_V3_0_24.BOCNTR:IMPLEMENTATION (architecture):
+	streams: 2, words: 1915
+AXI_ETHERNETLITE_V3_0_24.TRANSMIT (entity):
+	streams: 33, words: 2103
+AXI_ETHERNETLITE_V3_0_24.TRANSMIT:IMP (architecture):
+	streams: 15, words: 33260
+AXI_ETHERNETLITE_V3_0_24.RECEIVE (entity):
+	streams: 27, words: 1784
+AXI_ETHERNETLITE_V3_0_24.RECEIVE:IMP (architecture):
+	streams: 4, words: 4318
+AXI_ETHERNETLITE_V3_0_24.MACADDRRAM (entity):
+	streams: 13, words: 1150
+AXI_ETHERNETLITE_V3_0_24.MACADDRRAM:IMP (architecture):
+	streams: 2, words: 2220
+AXI_ETHERNETLITE_V3_0_24.MDIO_IF (entity):
+	streams: 20, words: 1283
+AXI_ETHERNETLITE_V3_0_24.MDIO_IF:IMP (architecture):
+	streams: 2, words: 2625
+AXI_ETHERNETLITE_V3_0_24.EMAC_DPRAM (entity):
+	streams: 21, words: 2097
+AXI_ETHERNETLITE_V3_0_24.EMAC_DPRAM:IMP (architecture):
+	streams: 2, words: 21169
+AXI_ETHERNETLITE_V3_0_24.EMAC (entity):
+	streams: 44, words: 3133
+AXI_ETHERNETLITE_V3_0_24.EMAC:IMP (architecture):
+	streams: 5, words: 9621
+AXI_ETHERNETLITE_V3_0_24.XEMAC (entity):
+	streams: 42, words: 4711
+AXI_ETHERNETLITE_V3_0_24.XEMAC:IMP (architecture):
+	streams: 10, words: 26830
+AXI_ETHERNETLITE_V3_0_24.AXI_INTERFACE (entity):
+	streams: 71, words: 15254
+AXI_ETHERNETLITE_V3_0_24.AXI_INTERFACE:RTL (architecture):
+	streams: 1, words: 5264
+AXI_ETHERNETLITE_V3_0_24.AXI_ETHERNETLITE (entity):
+	streams: 88, words: 10022
+AXI_ETHERNETLITE_V3_0_24.AXI_ETHERNETLITE:IMP (architecture):
+	streams: 11, words: 42656

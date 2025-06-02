@@ -1,37 +1,17 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/ipshared/5553/sources_1/new/Scrambler_32bits.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Scrambler_32bits'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/ip/Design_2_Scrambler_32bits_0_0/sim/Design_2_Scrambler_32bits_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Design_2_Scrambler_32bits_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/ipshared/5bcf/src/Pipelined_Polyphase_Filter.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Pipelined_Polyphase_Filter'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/ip/Design_2_Pipelined_Polyphase_0_2/sim/Design_2_Pipelined_Polyphase_0_2.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Design_2_Pipelined_Polyphase_0_2'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/ipshared/c64a/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Parallel_FIR_filter'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/ip/Design_2_Pre_Distortion_Filter_0_0/sim/Design_2_Pre_Distortion_Filter_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Design_2_Pre_Distortion_Filter_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/ipshared/3b69/sources_1/new/LDPC_core.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/ipshared/ea30/sources_1/new/LDPC_core.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'LDPC_core'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/ipshared/3b69/sources_1/new/Output_fifo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/ipshared/ea30/sources_1/new/Output_fifo.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'Output_fifo'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/ipshared/3b69/sources_1/new/Wifi_Input_FSM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/ipshared/ea30/sources_1/new/Wifi_Input_FSM.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'Wifi_Input_FSM'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/ipshared/3b69/sources_1/new/Encoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/ipshared/ea30/sources_1/new/Encoder.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'Encoder'
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/ip/Design_2_Encoder_0_0/sim/Design_2_Encoder_0_0.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'Design_2_Encoder_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/ipshared/9be5/sources_1/new/Interleaver.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/ipshared/4023/sources_1/new/Interleaver.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'block_interleaver'
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/ip/Design_2_block_interleaver_0_0/sim/Design_2_block_interleaver_0_0.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'Design_2_block_interleaver_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/ipshared/0899/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'mapper'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/ip/Design_2_mapper_0_0/sim/Design_2_mapper_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Design_2_mapper_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/ipshared/0e6e/sources_1/new/Bit_splitter.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Bit_splitter'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/ip/Design_2_Bit_splitter_0_0/sim/Design_2_Bit_splitter_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Design_2_Bit_splitter_0_0'
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.ip_user_files/bd/Design_2/sim/Design_2.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'Design_2'
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/hdl/Design_2_wrapper.vhd" into library xil_defaultlib

@@ -1,0 +1,22 @@
+<SIMMODEL_NAME>:xtlm_ap_ctrl
+<LIBRARY_NAME>:xtlm_ap_ctrl_v1_0
+<LIBRARY_TYPE>:SystemC
+<OUTPUT_FORMAT>:library
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm_ap_ctrl/xtlm_ap_ctrl_v1_0/src/xtlm_ap_ctrl.cpp
+<SYSTEMC_INCLUDE_DIRS>:simlibs/xtlm_ap_ctrl_v1_0/include,simlibs/xtlm/include,simlibs/common_cpp_v1_0/include
+<OSCI_INCLUDE_DIRS>:/data/osci_systemc/include
+<SYSTEMC_COMPILE_OPTION>:-64bit -noedg -cFlags " -O3 -fPIC -c -o
+<CPP_COMPILE_OPTION>:-O3
+<C_COMPILE_OPTION>:-O3
+<G++_COMPILE_FLAGS>:-Wall -fPIC -std=gnu++14,-Wno-reorder -Wno-sign-compare -Wno-deprecated-declarations,-DSC_INCLUDE_DYNAMIC_PROCESSES
+<G++_COMPILE_OPTIMIZE_FLAGS>:-DNDEBUG
+<G++_COMPILE_DEBUG_FLAGS>:-g -O0
+<SCCOM_COMPILE_FLAGS>:-DBOOST_SYSTEM_NO_DEPRECATED
+<G++_LDFLAGS_OPTION>:
+<GCC_LDFLAGS_OPTION>:
+<LDLIBS>:-Lxcelium_lib/xtlm,-Lxcelium_lib/common_cpp_v1_0,-lxtlm -lcommon_cpp_v1_0
+<MORE_XSC_OPTIONS>:-v -mt auto -cppversion 14
+<G++_LDLIBS_OPTION>:
+<GCC_LDLIBS_OPTION>:
+<SHARED_LIBRARY>:xtlm_ap_ctrl_v1_0
+<SIMULATOR_PLATFORM>:linux

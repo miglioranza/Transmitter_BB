@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work rs_decoder_v9_0_17 -f /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.cache/compile_simlib/xcelium/rs_decoder_v9_0_17/.cxl.vhdl.rs_decoder_v9_0_17.rs_decoder_v9_0_17.lin64.cmf

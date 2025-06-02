@@ -1,0 +1,50 @@
+xmelab(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xmelab(64)	20.09-s007: Started on Nov 13, 2024 at 11:59:39 CET
+xmelab
+    -64bit
+    -relax
+    -access +rwc
+    -namemap_mixgen
+    -messages
+    -logfile elaborate.log
+    -fault_dbg
+    -fault_top Polyphase_filter_tb
+    -fault_overwrite
+    -fault_file ./fault_list
+    -libname xil_defaultlib
+    -libname secureip
+    xil_defaultlib.Polyphase_filter_tb
+
+xmelab: *N,FLTOVR: [FLT] An existing fault directory (fault_db) has been overwritten.
+xmelab: *N,SPUNSP: -sparsearray is not supported with Fault Simulation. Disabling the default -sparsearray=100000 option.
+xmelab: *W,ARCMRA: Elaborating the XIL_DEFAULTLIB.POLYPHASE_FILTER_TB:BEHAVIORAL, MRA (most recently analyzed) architecture.
+	Elaborating the design hierarchy:
+xmelab: *W,CUDEFB: default binding occurred for component instance (:Polyphase_filter_tb(Behavioral):uut) with design unit (XIL_DEFAULTLIB.PIPELINED_POLYPHASE_FILTER:RTL).
+xmelab: *N,FTUDPT: [FLT] Fault database data file is generated at /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.sim/sim_1/behav/xcelium_FI/fault_db/db_scope/test_uxsrv005_41112171731495579931/xfs_276c16b2.ucd.
+	Building instance specific data structures.
+	Design hierarchy summary:
+		            Instances  Unique
+		Components:         3       2
+		Default bindings:   1       -
+		Processes:          4       4
+		Signals:           16      16
+	Writing initial simulation snapshot: XIL_DEFAULTLIB.POLYPHASE_FILTER_TB:BEHAVIORAL
+
+
+####   Fault Instrumentation Information  ####
+
+   Total number of faults instrumented: 1362
+   Number of fault nodes excluded: 0
+   Number of fault nodes ignored: 0
+   Number of faultable nodes: 1362
+   Number of Untestable faults: 96
+       Number of SA0 faults: 0 [Prime: 0]
+       Number of SA1 faults: 0 [Prime: 0]
+       Number of SET faults: 0 [Prime: 0]
+       Number of SEU faults: 1266 [Prime: 1266]
+
+#### End of Fault Instrumentation Information ####
+
+
+xmelab: *N,FTUMPT: [FLT] Fault database model file is generated at /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.sim/sim_1/behav/xcelium_FI/fault_db/db_scope/xfs_276c16b2.ucm.
+TOOL:	xmelab(64)	20.09-s007: Exiting on Nov 13, 2024 at 11:59:39 CET  (total: 00:00:00)

@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -work v_frmbuf_rd_v2_3_0 -f /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.cache/compile_simlib/xcelium/v_frmbuf_rd_v2_3_0/.cxl.verilog.v_frmbuf_rd_v2_3_0.v_frmbuf_rd_v2_3_0.lin64.cmf

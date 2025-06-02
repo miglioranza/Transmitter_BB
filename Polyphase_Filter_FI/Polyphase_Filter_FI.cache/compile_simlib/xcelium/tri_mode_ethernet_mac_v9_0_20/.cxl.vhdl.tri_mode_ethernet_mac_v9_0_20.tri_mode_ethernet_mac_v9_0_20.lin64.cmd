@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work tri_mode_ethernet_mac_v9_0_20 -f /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.cache/compile_simlib/xcelium/tri_mode_ethernet_mac_v9_0_20/.cxl.vhdl.tri_mode_ethernet_mac_v9_0_20.tri_mode_ethernet_mac_v9_0_20.lin64.cmf

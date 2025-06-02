@@ -1,0 +1,303 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/pc_cfr_v6_4/hdl/pc_cfr_v6_4_vh_rfs.vhd:
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+xmvhdl_p: *W,WARIPR: warning within protected source code.
+	errors: 0, warnings: 58
+	streams: 21, words: 9888
+	streams: 142, words: 154834
+	streams: 1, words: 263
+	streams: 1, words: 158
+	streams: 1, words: 8
+	streams: 1, words: 158
+	streams: 11, words: 2984
+	streams: 1, words: 5000
+	streams: 21, words: 5522
+	streams: 1, words: 4228
+	streams: 18, words: 4561
+	streams: 1, words: 2188
+	streams: 17, words: 4495
+	streams: 1, words: 3008
+	streams: 13, words: 1962
+	streams: 3, words: 25706
+	streams: 10, words: 2051
+	streams: 1, words: 5611
+	streams: 9, words: 1759
+	streams: 1, words: 5557
+	streams: 24, words: 4176
+	streams: 2, words: 11622
+	streams: 24, words: 4208
+	streams: 2, words: 10987
+	streams: 11, words: 2221
+	streams: 1, words: 3088
+	streams: 12, words: 2580
+	streams: 1, words: 5304
+	streams: 13, words: 3253
+	streams: 1, words: 4687
+	streams: 10, words: 2289
+	streams: 2, words: 6183
+	streams: 15, words: 4571
+	streams: 2, words: 22366
+	streams: 28, words: 4991
+	streams: 1, words: 9336
+	streams: 23, words: 3142
+	streams: 1, words: 3983
+	streams: 38, words: 10003
+	streams: 4, words: 45802
+	streams: 39, words: 10058
+	streams: 14, words: 80323
+	streams: 14, words: 1452
+	streams: 3, words: 22250
+	streams: 16, words: 2432
+	streams: 2, words: 13021
+	streams: 26, words: 5011
+	streams: 2, words: 18175
+	streams: 17, words: 2987
+	streams: 2, words: 40839
+	streams: 11, words: 2695
+	streams: 1, words: 4210
+	streams: 9, words: 1703
+	streams: 2, words: 17522
+	streams: 11, words: 2679
+	streams: 1, words: 8816
+	streams: 14, words: 4106
+	streams: 3, words: 16212
+	streams: 12, words: 2685
+	streams: 1, words: 5040
+	streams: 10, words: 2863
+	streams: 3, words: 7653
+	streams: 21, words: 4346
+	streams: 3, words: 22441
+	streams: 9, words: 1943
+	streams: 1, words: 4857
+	streams: 9, words: 1338
+	streams: 2, words: 5766
+	streams: 17, words: 4122
+	streams: 1, words: 4583
+	streams: 9, words: 1551
+	streams: 1, words: 2468
+	streams: 17, words: 4895
+	streams: 1, words: 5832
+	streams: 38, words: 6632
+	streams: 24, words: 170703
+	streams: 19, words: 5716
+	streams: 1, words: 23220
+	streams: 15, words: 3920
+	streams: 1, words: 19598
+	streams: 11, words: 2877
+	streams: 1, words: 10297
+	streams: 17, words: 5577
+	streams: 1, words: 7501
+	streams: 25, words: 9214
+	streams: 5, words: 21049
+	streams: 9, words: 1991
+	streams: 1, words: 3452
+	streams: 9, words: 1991
+	streams: 1, words: 3366
+	streams: 9, words: 1991
+	streams: 1, words: 5553
+	streams: 9, words: 1991
+	streams: 1, words: 4830
+	streams: 9, words: 1991
+	streams: 1, words: 5002
+	streams: 9, words: 1991
+	streams: 1, words: 4830
+	streams: 19, words: 5771
+	streams: 3, words: 18609
+	streams: 19, words: 5777
+	streams: 3, words: 20640
+	streams: 15, words: 3939
+	streams: 3, words: 15528
+	streams: 13, words: 3032
+	streams: 3, words: 18402
+	streams: 12, words: 2947
+	streams: 3, words: 14832
+	streams: 9, words: 1991
+	streams: 1, words: 6258
+	streams: 9, words: 1991
+	streams: 1, words: 6258
+	streams: 15, words: 3809
+	streams: 7, words: 29243
+	streams: 9, words: 1994
+	streams: 7, words: 25801
+	streams: 9, words: 1991
+	streams: 1, words: 5605
+	streams: 9, words: 1991
+	streams: 1, words: 3366
+	streams: 9, words: 1991
+	streams: 1, words: 3366
+	streams: 9, words: 1997
+	streams: 4, words: 17716
+	streams: 11, words: 2871
+	streams: 4, words: 17722
+	streams: 15, words: 3809
+	streams: 4, words: 18030
+	streams: 11, words: 2874
+	streams: 1, words: 7333
+	streams: 21, words: 5787
+	streams: 7, words: 31660
+	streams: 24, words: 7621
+	streams: 5, words: 21159
+	streams: 31, words: 11146
+	streams: 9, words: 43665
+	streams: 22, words: 5841
+	streams: 3, words: 24668
+	streams: 22, words: 5866
+	streams: 8, words: 95849
+	streams: 23, words: 5812
+	streams: 1, words: 6432
+	streams: 11, words: 1939
+	streams: 5, words: 35069
+	streams: 17, words: 3599
+	streams: 1, words: 9353
+	streams: 7, words: 653
+	streams: 1, words: 12637
+	streams: 7, words: 653
+	streams: 1, words: 12637
+	streams: 7, words: 653
+	streams: 1, words: 12637
+	streams: 12, words: 1895
+	streams: 1, words: 11844
+	streams: 11, words: 1210
+	streams: 1, words: 3316
+	streams: 9, words: 1991
+	streams: 1, words: 1472
+	streams: 1, words: 8
+	streams: 9, words: 1516
+	streams: 1, words: 23979
+	streams: 11, words: 882
+	streams: 1, words: 9658
+	streams: 26, words: 9130
+	streams: 1, words: 19723
+	streams: 11, words: 2349
+	streams: 2, words: 6183
+	streams: 11, words: 2824
+	streams: 2, words: 21801
+	streams: 13, words: 3769
+	streams: 2, words: 17904
+	streams: 29, words: 8649
+	streams: 4, words: 27366
+	streams: 10, words: 2070
+	streams: 1, words: 5173
+	streams: 8, words: 1918
+	streams: 1, words: 3613
+	streams: 12, words: 2095
+	streams: 4, words: 18312
+	streams: 14, words: 3857
+	streams: 1, words: 2564
+	streams: 11, words: 2078
+	streams: 2, words: 14958
+	streams: 12, words: 2151
+	streams: 3, words: 10209
+	streams: 41, words: 8357
+	streams: 11, words: 80383
+	streams: 22, words: 4629
+	streams: 2, words: 20215
+	streams: 9, words: 1991
+	streams: 1, words: 7025
+	streams: 9, words: 1991
+	streams: 1, words: 8584
+	streams: 9, words: 1991
+	streams: 1, words: 9553
+	streams: 9, words: 1991
+	streams: 1, words: 6973
+	streams: 9, words: 1991
+	streams: 1, words: 8670
+	streams: 9, words: 1991
+	streams: 1, words: 9244
+	streams: 9, words: 1991
+	streams: 1, words: 7981
+	streams: 9, words: 1991
+	streams: 1, words: 7680
+	streams: 9, words: 1991
+	streams: 1, words: 9298
+	streams: 9, words: 1991
+	streams: 1, words: 7757
+	streams: 9, words: 1991
+	streams: 1, words: 7791
+	streams: 9, words: 1991
+	streams: 1, words: 7895
+	streams: 9, words: 1991
+	streams: 1, words: 7843
+	streams: 9, words: 1991
+	streams: 1, words: 8589
+	streams: 9, words: 1991
+	streams: 1, words: 7929
+	streams: 20, words: 4066
+	streams: 12, words: 114909
+	streams: 43, words: 7451
+	streams: 27, words: 182999
+	streams: 24, words: 4781
+	streams: 33, words: 138039
+	streams: 31, words: 6990
+	streams: 2, words: 15998
+	streams: 10, words: 1966
+	streams: 1, words: 3305
+	streams: 57, words: 11313
+	streams: 15, words: 122429
+	streams: 33, words: 7940
+	streams: 1, words: 39634
+	streams: 110, words: 35212
+	streams: 2, words: 86381
+	streams: 45, words: 13333
+	streams: 4, words: 33368
+	streams: 90, words: 15554
+	streams: 35, words: 473279
+	streams: 1, words: 8
+	streams: 90, words: 13505
+	streams: 2, words: 11639

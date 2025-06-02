@@ -1,0 +1,47 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_epc_v2_0/hdl/axi_epc_v2_0_vh_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_EPC_V2_0_28.LD_ARITH_REG (entity):
+	streams: 17, words: 3221
+AXI_EPC_V2_0_28.LD_ARITH_REG:IMP (architecture):
+	streams: 2, words: 9480
+AXI_EPC_V2_0_28.ASYNC_STATEMACHINE (entity):
+	streams: 77, words: 12033
+AXI_EPC_V2_0_28.ASYNC_STATEMACHINE:IMP (architecture):
+	streams: 1, words: 10696
+AXI_EPC_V2_0_28.ASYNC_COUNTERS (entity):
+	streams: 71, words: 18940
+AXI_EPC_V2_0_28.ASYNC_COUNTERS:IMP (architecture):
+	streams: 11, words: 33588
+AXI_EPC_V2_0_28.SYNC_CNTL (entity):
+	streams: 61, words: 6981
+AXI_EPC_V2_0_28.SYNC_CNTL:IMP (architecture):
+	streams: 8, words: 49277
+AXI_EPC_V2_0_28.IPIC_IF_DECODE (entity):
+	streams: 50, words: 3610
+AXI_EPC_V2_0_28.IPIC_IF_DECODE:IMP (architecture):
+	streams: 3, words: 7010
+AXI_EPC_V2_0_28.DATA_STEER (entity):
+	streams: 42, words: 10104
+AXI_EPC_V2_0_28.DATA_STEER:IMP (architecture):
+	streams: 13, words: 50681
+AXI_EPC_V2_0_28.ASYNC_CNTL (entity):
+	streams: 98, words: 10806
+AXI_EPC_V2_0_28.ASYNC_CNTL:IMP (architecture):
+	streams: 6, words: 136987
+AXI_EPC_V2_0_28.ADDRESS_GEN (entity):
+	streams: 25, words: 3508
+AXI_EPC_V2_0_28.ADDRESS_GEN:IMP (architecture):
+	streams: 3, words: 12365
+AXI_EPC_V2_0_28.ACCESS_MUX (entity):
+	streams: 58, words: 10750
+AXI_EPC_V2_0_28.ACCESS_MUX:IMP (architecture):
+	streams: 6, words: 15142
+AXI_EPC_V2_0_28.EPC_CORE (entity):
+	streams: 138, words: 20383
+AXI_EPC_V2_0_28.EPC_CORE:IMP (architecture):
+	streams: 10, words: 53796
+AXI_EPC_V2_0_28.AXI_EPC (entity):
+	streams: 187, words: 25680
+AXI_EPC_V2_0_28.AXI_EPC:IMP (architecture):
+	streams: 6, words: 64496

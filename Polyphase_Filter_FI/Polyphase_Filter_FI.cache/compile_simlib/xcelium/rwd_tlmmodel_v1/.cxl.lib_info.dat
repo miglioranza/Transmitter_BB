@@ -1,0 +1,5 @@
+Name:rwd_tlmmodel_v1
+Type:SystemC
+Link_SYSTEMC:empty
+Link_CPP:debug_tcp_server_v1
+Link_C:empty

@@ -1,0 +1,27 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_uartlite_v2_0/hdl/axi_uartlite_v2_0_vh_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_UARTLITE_V2_0_29.DYNSHREG_I_F (entity):
+	streams: 13, words: 3438
+AXI_UARTLITE_V2_0_29.DYNSHREG_I_F:BEHAVIORAL (architecture):
+	streams: 4, words: 9689
+AXI_UARTLITE_V2_0_29.UARTLITE_TX (entity):
+	streams: 18, words: 1434
+AXI_UARTLITE_V2_0_29.UARTLITE_TX:RTL (architecture):
+	streams: 2, words: 7330
+AXI_UARTLITE_V2_0_29.UARTLITE_RX (entity):
+	streams: 21, words: 1458
+AXI_UARTLITE_V2_0_29.UARTLITE_RX:RTL (architecture):
+	streams: 4, words: 10308
+AXI_UARTLITE_V2_0_29.BAUDRATE (entity):
+	streams: 5, words: 163
+AXI_UARTLITE_V2_0_29.BAUDRATE:RTL (architecture):
+	streams: 1, words: 666
+AXI_UARTLITE_V2_0_29.UARTLITE_CORE (entity):
+	streams: 27, words: 1789
+AXI_UARTLITE_V2_0_29.UARTLITE_CORE:RTL (architecture):
+	streams: 5, words: 6023
+AXI_UARTLITE_V2_0_29.AXI_UARTLITE (entity):
+	streams: 42, words: 2928
+AXI_UARTLITE_V2_0_29.AXI_UARTLITE:RTL (architecture):
+	streams: 3, words: 20213

@@ -1,0 +1,39 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/emc_common_v3_0/hdl/emc_common_v3_0_vh_rfs.vhd:
+	errors: 0, warnings: 0
+EMC_COMMON_V3_0_5.LD_ARITH_REG (entity):
+	streams: 17, words: 3221
+EMC_COMMON_V3_0_5.LD_ARITH_REG:IMP (architecture):
+	streams: 2, words: 9480
+EMC_COMMON_V3_0_5.IPIC_IF (entity):
+	streams: 45, words: 3965
+EMC_COMMON_V3_0_5.IPIC_IF:IMP (architecture):
+	streams: 3, words: 7418
+EMC_COMMON_V3_0_5.IO_REGISTERS (entity):
+	streams: 72, words: 22565
+EMC_COMMON_V3_0_5.IO_REGISTERS:IMP (architecture):
+	streams: 1, words: 13826
+EMC_COMMON_V3_0_5.COUNTERS (entity):
+	streams: 37, words: 2209
+EMC_COMMON_V3_0_5.COUNTERS:IMP (architecture):
+	streams: 8, words: 21423
+EMC_COMMON_V3_0_5.MEM_STATE_MACHINE (entity):
+	streams: 74, words: 702
+EMC_COMMON_V3_0_5.MEM_STATE_MACHINE:IMP (architecture):
+	streams: 2, words: 2755
+EMC_COMMON_V3_0_5.SELECT_PARAM (entity):
+	streams: 136, words: 10232
+EMC_COMMON_V3_0_5.SELECT_PARAM:IMP (architecture):
+	streams: 3, words: 8426
+EMC_COMMON_V3_0_5.ADDR_COUNTER_MUX (entity):
+	streams: 45, words: 6699
+EMC_COMMON_V3_0_5.ADDR_COUNTER_MUX:IMP (architecture):
+	streams: 5, words: 17158
+EMC_COMMON_V3_0_5.MEM_STEER (entity):
+	streams: 93, words: 16775
+EMC_COMMON_V3_0_5.MEM_STEER:IMP (architecture):
+	streams: 18, words: 60483
+EMC_COMMON_V3_0_5.EMC (entity):
+	streams: 176, words: 24958
+EMC_COMMON_V3_0_5.EMC:IMP (architecture):
+	streams: 13, words: 90590

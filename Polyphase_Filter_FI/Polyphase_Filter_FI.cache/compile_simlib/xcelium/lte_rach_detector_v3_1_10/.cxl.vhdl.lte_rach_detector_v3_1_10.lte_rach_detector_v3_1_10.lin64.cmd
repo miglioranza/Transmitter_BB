@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work lte_rach_detector_v3_1_10 -f /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.cache/compile_simlib/xcelium/lte_rach_detector_v3_1_10/.cxl.vhdl.lte_rach_detector_v3_1_10.lte_rach_detector_v3_1_10.lin64.cmf

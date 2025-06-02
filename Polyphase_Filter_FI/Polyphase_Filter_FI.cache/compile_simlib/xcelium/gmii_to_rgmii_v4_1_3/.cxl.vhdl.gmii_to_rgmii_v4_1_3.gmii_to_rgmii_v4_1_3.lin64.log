@@ -1,0 +1,19 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/gmii_to_rgmii_v4_1/hdl/gmii_to_rgmii_v4_1_vh_rfs.vhd:
+	errors: 0, warnings: 0
+	streams: 45, words: 2846
+	streams: 13, words: 51891
+	streams: 28, words: 2266
+	streams: 1, words: 1827
+	streams: 25, words: 2598
+	streams: 1, words: 482
+	streams: 14, words: 609
+	streams: 1, words: 8176
+	streams: 7, words: 224
+	streams: 1, words: 3408
+	streams: 6, words: 216
+	streams: 1, words: 3384
+	streams: 52, words: 2715
+	streams: 1, words: 3252
+	streams: 52, words: 2715
+	streams: 1, words: 1761

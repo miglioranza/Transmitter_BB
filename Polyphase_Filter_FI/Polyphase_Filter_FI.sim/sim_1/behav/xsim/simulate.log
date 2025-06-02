@@ -1,0 +1,7 @@
+Time resolution is 1 ps
+Note: End of simulation
+Time: 1027500 ps  Iteration: 0  Process: /Polyphase_filter_tb/stim_process  File: /home/miglioranza/Multi-rate_Filter/Polyphase_filter_tb.vhd
+$finish called at time : 1027500 ps : File "/home/miglioranza/Multi-rate_Filter/Polyphase_filter_tb.vhd" Line 129
+Note: End of simulation
+Time: 1027500 ps  Iteration: 0  Process: /Polyphase_filter_tb/stim_process  File: /home/miglioranza/Multi-rate_Filter/Polyphase_filter_tb.vhd
+$finish called at time : 1027500 ps : File "/home/miglioranza/Multi-rate_Filter/Polyphase_filter_tb.vhd" Line 129

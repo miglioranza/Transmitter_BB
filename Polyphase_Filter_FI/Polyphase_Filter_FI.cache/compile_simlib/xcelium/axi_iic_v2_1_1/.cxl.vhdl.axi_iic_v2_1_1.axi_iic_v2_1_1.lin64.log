@@ -1,0 +1,55 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_iic_v2_1/hdl/axi_iic_v2_1_vh_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_IIC_V2_1_1.SOFT_RESET (entity):
+	streams: 14, words: 2085
+AXI_IIC_V2_1_1.SOFT_RESET:IMPLEMENTATION (architecture):
+	streams: 2, words: 3395
+AXI_IIC_V2_1_1.SRL_FIFO (entity):
+	streams: 16, words: 2382
+AXI_IIC_V2_1_1.SRL_FIFO:IMP (architecture):
+	streams: 3, words: 5392
+AXI_IIC_V2_1_1.UPCNT_N (entity):
+	streams: 10, words: 1931
+AXI_IIC_V2_1_1.UPCNT_N:RTL (architecture):
+	streams: 1, words: 1130
+AXI_IIC_V2_1_1.SHIFT8 (entity):
+	streams: 11, words: 653
+AXI_IIC_V2_1_1.SHIFT8:RTL (architecture):
+	streams: 1, words: 633
+AXI_IIC_V2_1_1.IIC_PKG (package):
+	streams: 4, words: 1357
+AXI_IIC_V2_1_1.IIC_PKG:BODY (package body):
+	streams: 5, words: 2861
+AXI_IIC_V2_1_1.DEBOUNCE (entity):
+	streams: 10, words: 271
+AXI_IIC_V2_1_1.DEBOUNCE:RTL (architecture):
+	streams: 2, words: 3085
+AXI_IIC_V2_1_1.REG_INTERFACE (entity):
+	streams: 98, words: 18606
+AXI_IIC_V2_1_1.REG_INTERFACE:RTL (architecture):
+	streams: 7, words: 36280
+AXI_IIC_V2_1_1.IIC_CONTROL (entity):
+	streams: 66, words: 9212
+AXI_IIC_V2_1_1.IIC_CONTROL:RTL (architecture):
+	streams: 6, words: 14608
+AXI_IIC_V2_1_1.FILTER (entity):
+	streams: 11, words: 279
+AXI_IIC_V2_1_1.FILTER:RTL (architecture):
+	streams: 3, words: 1243
+AXI_IIC_V2_1_1.DYNAMIC_MASTER (entity):
+	streams: 23, words: 1006
+AXI_IIC_V2_1_1.DYNAMIC_MASTER:RTL (architecture):
+	streams: 1, words: 861
+AXI_IIC_V2_1_1.AXI_IPIF_SSP1 (entity):
+	streams: 48, words: 10429
+AXI_IIC_V2_1_1.AXI_IPIF_SSP1:RTL (architecture):
+	streams: 4, words: 32952
+AXI_IIC_V2_1_1.IIC (entity):
+	streams: 56, words: 7704
+AXI_IIC_V2_1_1.IIC:RTL (architecture):
+	streams: 9, words: 57159
+AXI_IIC_V2_1_1.AXI_IIC (entity):
+	streams: 53, words: 4481
+AXI_IIC_V2_1_1.AXI_IIC:RTL (architecture):
+	streams: 2, words: 6729

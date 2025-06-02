@@ -160,7 +160,7 @@ begin
         control_enable_0 <= '1';  -- Enable the core
         mod_type_0 <= "000";      -- BPSK modulation (assuming "000" represents BPSK)
         sel_FEC_code_rate_0 <= "00";  -- Code rate 0.5 (assuming "00" represents 0.5)
-       code_rate2Interleaver <= "00" ;
+        code_rate2Interleaver <= "00" ;
         seed_0 <= "1001001000101001000100101111101";  -- Initialize seed (if needed)
         data_in_ready_0 <= '1' ;
         -- Generate first 100 values with code rate 0.5 and BPSK modulation
@@ -201,7 +201,7 @@ begin
 
 --        wait for 200 ns;
         -- Generate next 100 values with code rate 3/4 and QPSK modulation
-               while i >= 101 and i< 300 loop
+        while i >= 101 and i< 300 loop
             S_AXIS_0_tvalid <= '1';
             if S_AXIS_0_tready = '1' then
                  -- Assert valid signal 

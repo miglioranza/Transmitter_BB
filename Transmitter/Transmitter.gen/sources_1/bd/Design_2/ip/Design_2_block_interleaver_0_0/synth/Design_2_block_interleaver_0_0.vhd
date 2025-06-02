@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:block_interleaver:1.0
--- IP Revision: 22
+-- IP Revision: 25
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -59,11 +59,14 @@ ENTITY Design_2_block_interleaver_0_0 IS
     rst : IN STD_LOGIC;
     data_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     data_in_ready : IN STD_LOGIC;
+    data_in_last : IN STD_LOGIC;
+    end_of_frame : IN STD_LOGIC;
     write_en : IN STD_LOGIC;
     code_rate : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     data_out_ready : OUT STD_LOGIC;
-    current_code_rate : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    data_out_last : OUT STD_LOGIC;
+    last_frame_to_cu : OUT STD_LOGIC;
     read_valid : OUT STD_LOGIC
   );
 END Design_2_block_interleaver_0_0;
@@ -74,7 +77,6 @@ ARCHITECTURE Design_2_block_interleaver_0_0_arch OF Design_2_block_interleaver_0
   COMPONENT block_interleaver IS
     GENERIC (
       DATA_WIDTH : INTEGER;
-      NUM_ROWS : INTEGER;
       NUM_COLS : INTEGER
     );
     PORT (
@@ -82,11 +84,14 @@ ARCHITECTURE Design_2_block_interleaver_0_0_arch OF Design_2_block_interleaver_0
       rst : IN STD_LOGIC;
       data_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       data_in_ready : IN STD_LOGIC;
+      data_in_last : IN STD_LOGIC;
+      end_of_frame : IN STD_LOGIC;
       write_en : IN STD_LOGIC;
       code_rate : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
       data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       data_out_ready : OUT STD_LOGIC;
-      current_code_rate : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+      data_out_last : OUT STD_LOGIC;
+      last_frame_to_cu : OUT STD_LOGIC;
       read_valid : OUT STD_LOGIC
     );
   END COMPONENT block_interleaver;
@@ -106,7 +111,6 @@ BEGIN
   U0 : block_interleaver
     GENERIC MAP (
       DATA_WIDTH => 32,
-      NUM_ROWS => 3,
       NUM_COLS => 7
     )
     PORT MAP (
@@ -114,11 +118,14 @@ BEGIN
       rst => rst,
       data_in => data_in,
       data_in_ready => data_in_ready,
+      data_in_last => data_in_last,
+      end_of_frame => end_of_frame,
       write_en => write_en,
       code_rate => code_rate,
       data_out => data_out,
       data_out_ready => data_out_ready,
-      current_code_rate => current_code_rate,
+      data_out_last => data_out_last,
+      last_frame_to_cu => last_frame_to_cu,
       read_valid => read_valid
     );
 END Design_2_block_interleaver_0_0_arch;

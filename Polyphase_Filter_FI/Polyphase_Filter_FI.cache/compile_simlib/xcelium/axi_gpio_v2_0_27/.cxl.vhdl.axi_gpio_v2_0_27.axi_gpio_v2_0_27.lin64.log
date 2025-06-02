@@ -1,0 +1,11 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_gpio_v2_0/hdl/axi_gpio_v2_0_vh_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_GPIO_V2_0_27.GPIO_CORE (entity):
+	streams: 54, words: 10941
+AXI_GPIO_V2_0_27.GPIO_CORE:IMP (architecture):
+	streams: 16, words: 71510
+AXI_GPIO_V2_0_27.AXI_GPIO (entity):
+	streams: 69, words: 13235
+AXI_GPIO_V2_0_27.AXI_GPIO:IMP (architecture):
+	streams: 14, words: 60349

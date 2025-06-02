@@ -1,0 +1,19 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/v_smpte_uhdsdi_rx_v1_0/hdl/cross_clk_reg.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/v_smpte_uhdsdi_rx_v1_0/hdl/cross_clk_bus.vhd:
+	errors: 0, warnings: 0
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/v_smpte_uhdsdi_rx_v1_0/hdl/map_pulse.vhd:
+	errors: 0, warnings: 0
+V_SMPTE_UHDSDI_RX_V1_0_1.CROSS_CLK_REG (entity):
+	streams: 10, words: 2261
+V_SMPTE_UHDSDI_RX_V1_0_1.CROSS_CLK_REG:RTL (architecture):
+	streams: 1, words: 3689
+V_SMPTE_UHDSDI_RX_V1_0_1.CROSS_CLK_BUS (entity):
+	streams: 9, words: 1991
+V_SMPTE_UHDSDI_RX_V1_0_1.CROSS_CLK_BUS:RTL (architecture):
+	streams: 1, words: 5935
+V_SMPTE_UHDSDI_RX_V1_0_1.MAP_PULSE (entity):
+	streams: 6, words: 171
+V_SMPTE_UHDSDI_RX_V1_0_1.MAP_PULSE:STRUCT (architecture):
+	streams: 1, words: 2050

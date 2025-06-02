@@ -1,0 +1,107 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_dma_v7_1/hdl/axi_dma_v7_1_vh_rfs.vhd:
+	errors: 0, warnings: 0
+AXI_DMA_V7_1_26.AXI_DMA_PKG (package):
+	streams: 1, words: 21109
+AXI_DMA_V7_1_26.AXI_DMA_PKG:BODY (package body):
+	streams: 4, words: 984
+AXI_DMA_V7_1_26.AXI_DMA_RESET (entity):
+	streams: 25, words: 4005
+AXI_DMA_V7_1_26.AXI_DMA_RESET:IMPLEMENTATION (architecture):
+	streams: 8, words: 17492
+AXI_DMA_V7_1_26.AXI_DMA_RST_MODULE (entity):
+	streams: 45, words: 3006
+AXI_DMA_V7_1_26.AXI_DMA_RST_MODULE:IMPLEMENTATION (architecture):
+	streams: 5, words: 7491
+AXI_DMA_V7_1_26.AXI_DMA_LITE_IF (entity):
+	streams: 44, words: 9134
+AXI_DMA_V7_1_26.AXI_DMA_LITE_IF:IMPLEMENTATION (architecture):
+	streams: 14, words: 49766
+AXI_DMA_V7_1_26.AXI_DMA_REGISTER (entity):
+	streams: 79, words: 15170
+AXI_DMA_V7_1_26.AXI_DMA_REGISTER:IMPLEMENTATION (architecture):
+	streams: 1, words: 12240
+AXI_DMA_V7_1_26.AXI_DMA_REGISTER_S2MM (entity):
+	streams: 203, words: 69419
+AXI_DMA_V7_1_26.AXI_DMA_REGISTER_S2MM:IMPLEMENTATION (architecture):
+	streams: 1, words: 64728
+AXI_DMA_V7_1_26.AXI_DMA_REG_MODULE (entity):
+	streams: 160, words: 22832
+AXI_DMA_V7_1_26.AXI_DMA_REG_MODULE:IMPLEMENTATION (architecture):
+	streams: 6, words: 169081
+AXI_DMA_V7_1_26.AXI_DMA_SKID_BUF (entity):
+	streams: 20, words: 3877
+AXI_DMA_V7_1_26.AXI_DMA_SKID_BUF:IMPLEMENTATION (architecture):
+	streams: 1, words: 8464
+AXI_DMA_V7_1_26.AXI_DMA_AFIFO_AUTORD (entity):
+	streams: 32, words: 6060
+AXI_DMA_V7_1_26.AXI_DMA_AFIFO_AUTORD:IMP (architecture):
+	streams: 4, words: 13546
+AXI_DMA_V7_1_26.AXI_DMA_S2MM (entity):
+	streams: 30, words: 2297
+AXI_DMA_V7_1_26.AXI_DMA_S2MM:IMPLEMENTATION (architecture):
+	streams: 2, words: 7572
+AXI_DMA_V7_1_26.AXI_DMA_SOFEOF_GEN (entity):
+	streams: 12, words: 213
+AXI_DMA_V7_1_26.AXI_DMA_SOFEOF_GEN:IMPLEMENTATION (architecture):
+	streams: 4, words: 7637
+AXI_DMA_V7_1_26.AXI_DMA_SMPLE_SM (entity):
+	streams: 27, words: 4098
+AXI_DMA_V7_1_26.AXI_DMA_SMPLE_SM:IMPLEMENTATION (architecture):
+	streams: 1, words: 3905
+AXI_DMA_V7_1_26.AXI_DMA_MM2S_SG_IF (entity):
+	streams: 95, words: 15833
+AXI_DMA_V7_1_26.AXI_DMA_MM2S_SG_IF:IMPLEMENTATION (architecture):
+	streams: 3, words: 35173
+AXI_DMA_V7_1_26.AXI_DMA_MM2S_SM (entity):
+	streams: 44, words: 5847
+AXI_DMA_V7_1_26.AXI_DMA_MM2S_SM:IMPLEMENTATION (architecture):
+	streams: 1, words: 5950
+AXI_DMA_V7_1_26.AXI_DMA_MM2S_CMDSTS_IF (entity):
+	streams: 37, words: 4979
+AXI_DMA_V7_1_26.AXI_DMA_MM2S_CMDSTS_IF:IMPLEMENTATION (architecture):
+	streams: 1, words: 899
+AXI_DMA_V7_1_26.AXI_DMA_MM2S_STS_MNGR (entity):
+	streams: 17, words: 256
+AXI_DMA_V7_1_26.AXI_DMA_MM2S_STS_MNGR:IMPLEMENTATION (architecture):
+	streams: 2, words: 3010
+AXI_DMA_V7_1_26.AXI_DMA_MM2S_CNTRL_STRM (entity):
+	streams: 24, words: 3030
+AXI_DMA_V7_1_26.AXI_DMA_MM2S_CNTRL_STRM:IMPLEMENTATION (architecture):
+	streams: 5, words: 21526
+AXI_DMA_V7_1_26.AXI_DMA_MM2S_MNGR (entity):
+	streams: 117, words: 13347
+AXI_DMA_V7_1_26.AXI_DMA_MM2S_MNGR:IMPLEMENTATION (architecture):
+	streams: 7, words: 45898
+AXI_DMA_V7_1_26.AXI_DMA_S2MM_SG_IF (entity):
+	streams: 110, words: 19794
+AXI_DMA_V7_1_26.AXI_DMA_S2MM_SG_IF:IMPLEMENTATION (architecture):
+	streams: 3, words: 47078
+AXI_DMA_V7_1_26.AXI_DMA_S2MM_SM (entity):
+	streams: 54, words: 7010
+AXI_DMA_V7_1_26.AXI_DMA_S2MM_SM:IMPLEMENTATION (architecture):
+	streams: 1, words: 10139
+AXI_DMA_V7_1_26.AXI_DMA_S2MM_CMDSTS_IF (entity):
+	streams: 52, words: 7688
+AXI_DMA_V7_1_26.AXI_DMA_S2MM_CMDSTS_IF:IMPLEMENTATION (architecture):
+	streams: 1, words: 2200
+AXI_DMA_V7_1_26.AXI_DMA_S2MM_STS_MNGR (entity):
+	streams: 17, words: 256
+AXI_DMA_V7_1_26.AXI_DMA_S2MM_STS_MNGR:IMPLEMENTATION (architecture):
+	streams: 2, words: 3010
+AXI_DMA_V7_1_26.AXI_DMA_S2MM_STS_STRM (entity):
+	streams: 32, words: 4118
+AXI_DMA_V7_1_26.AXI_DMA_S2MM_STS_STRM:IMPLEMENTATION (architecture):
+	streams: 10, words: 35720
+AXI_DMA_V7_1_26.AXI_DMA_S2MM_MNGR (entity):
+	streams: 125, words: 16669
+AXI_DMA_V7_1_26.AXI_DMA_S2MM_MNGR:IMPLEMENTATION (architecture):
+	streams: 7, words: 54629
+AXI_DMA_V7_1_26.AXI_DMA_CMD_SPLIT (entity):
+	streams: 29, words: 4490
+AXI_DMA_V7_1_26.AXI_DMA_CMD_SPLIT:IMPLEMENTATION (architecture):
+	streams: 4, words: 13238
+AXI_DMA_V7_1_26.AXI_DMA (entity):
+	streams: 240, words: 33541
+AXI_DMA_V7_1_26.AXI_DMA:IMPLEMENTATION (architecture):
+	streams: 16, words: 161439

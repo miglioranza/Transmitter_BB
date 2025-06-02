@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-// Date        : Fri Mar 14 15:09:29 2025
+// Date        : Mon Jun  2 15:45:49 2025
 // Host        : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 // Command     : write_verilog -force -mode synth_stub -rename_top Design_2_Pipelined_Polyphase_0_2 -prefix
 //               Design_2_Pipelined_Polyphase_0_2_ Design_2_Pipelined_Polyphase_0_2_stub.v
@@ -16,15 +16,15 @@
 (* x_core_info = "Pipelined_Polyphase_Filter,Vivado 2021.2" *)
 module Design_2_Pipelined_Polyphase_0_2(clk, reset, input_I, input_Q, data_in_ready, 
   data_in_valid, data_out_ready, data_out_valid, data_out_I, data_out_Q)
-/* synthesis syn_black_box black_box_pad_pin="clk,reset,input_I[31:0],input_Q[31:0],data_in_ready,data_in_valid,data_out_ready,data_out_valid,data_out_I[51:0],data_out_Q[51:0]" */;
+/* synthesis syn_black_box black_box_pad_pin="clk,reset,input_I[15:0],input_Q[15:0],data_in_ready,data_in_valid,data_out_ready,data_out_valid,data_out_I[15:0],data_out_Q[15:0]" */;
   input clk;
   input reset;
-  input [31:0]input_I;
-  input [31:0]input_Q;
+  input [15:0]input_I;
+  input [15:0]input_Q;
   input data_in_ready;
   input data_in_valid;
   output data_out_ready;
   output data_out_valid;
-  output [51:0]data_out_I;
-  output [51:0]data_out_Q;
+  output [15:0]data_out_I;
+  output [15:0]data_out_Q;
 endmodule
