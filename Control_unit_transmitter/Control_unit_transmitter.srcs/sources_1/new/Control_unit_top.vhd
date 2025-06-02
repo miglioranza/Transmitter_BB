@@ -676,15 +676,15 @@ elsif rising_edge(clk)  then
            --if mapper finishes to process the last input data of the last frame, go to the IDLE state  
            if mapper_last_frame =  '1' and mapper_dout_last = '0' then 
              state <= IDLE ;
-           elsif  mapper_last_frame =  '0' and mapper_dout_last = '0' then
+           else  
              state <= PAYLOAD ;
-           else   
-            state <= PILOT ;
+--           else   
+--            state <= PILOT ;
             end if ;       
         end if ;
         --To be added an else statement  
      else 
-           pilot_insertion     <= '0' ;                                   
+ dpd_din_valid       <= '0';                              
     end if ;    
   when PAYLOAD =>  
       
@@ -751,12 +751,14 @@ elsif rising_edge(clk)  then
 --        end if ;
         --To be added an else statement  
      
-              mapper_pilot_insertion_en <= '1';
-              control_unit_dout_ready   <= '0' ;
-              scrambler_din_valid       <= '0';
+--              mapper_pilot_insertion_en <= '1';
+--              control_unit_dout_ready   <= '0' ;
+--              scrambler_din_valid       <= '0';
      else    
-             
-             mapper_pilot_insertion_en <= '0';
+              
+             scrambler_din_valid       <= '0';
+             scrambler_control_enable  <= '0' ;
+--             mapper_pilot_insertion_en <= '0';
     end if ;    
 -- else 
 --          scrambler_din_valid       <= '0';
@@ -887,19 +889,24 @@ begin
        
 --   elsif mapper_dout_ready = '1' and done = '0' then 
 if mapper_dout_ready = '1'  then 
- interleaver_din_ready <= '1';
+-- interleaver_din_ready <= '1';
+mapper_din_last <= '0';   
     if interleaver_dout_valid = '1' and start = '0' then
        interleaver_din_ready <= '0';
        start := '1' ;      
     elsif interleaver_dout_valid = '0' and start = '1' then
        
+        interleaver_din_ready  <= '0';
+
         if temp = 1 then 
            start := '0';
-           interleaver_din_ready  <= '1';
+--           interleaver_din_ready  <= '1';
            index := 0 ;
+           mapper_split_end <= '1';
         else          
            start := '1';
-           interleaver_din_ready  <= '0';
+           mapper_split_end <= '0';
+--           interleaver_din_ready  <= '0';
         end if ;
      else    
        interleaver_din_ready <= '1';
@@ -1034,7 +1041,14 @@ if mapper_dout_ready = '1'  then
                 temp := 0 ;
                 mapper_split_end <= '0';
             end case ;
-                 mapper_din_valid <= '1';                    
+                 mapper_din_valid <= '1';   
+                 
+                 if interleaver_dout_last = '1' and temp = 1 then 
+                    mapper_din_last <= '1';
+                 else 
+                    mapper_din_last <= '0';   
+                 end if ;
+                                  
           else 
            mapper_din_valid <= '0';   
           end if  ;

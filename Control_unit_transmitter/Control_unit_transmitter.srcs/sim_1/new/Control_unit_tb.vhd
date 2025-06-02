@@ -261,7 +261,7 @@ port map(
 --    interleaver_mod_type        => interleaver_mod_type,
 --    interleaver_din_data        => interleaver_din_data,
 --    interleaver_din_valid       => interleaver_din_valid,
---    interleaver_din_ready       => interleaver_din_ready,
+    interleaver_din_ready       => interleaver_din_ready,
 --    interleaver_din_last        => interleaver_din_last,
     --! Mapper ports
     mapper_dout_ready           => mapper_dout_ready,
@@ -326,6 +326,7 @@ wait for 100 ns ;
 control_unit_din_valid <= '0';
 mapper_dout_last <= '1';
 wait for clock_period ;
+--wait until mapper_pilot_insertion_en = '1' ;
 wait until mapper_pilot_insertion_en = '0' ;
 mapper_dout_last <= '0';
 wait for clock_period ;--mapper_dout_last <= '0';
@@ -342,11 +343,14 @@ wait until mapper_pilot_insertion_en = '0' ;
 mapper_dout_last <= '0';
 wait for clock_period ;--mapper_dout_last <= '0';
 
-if  control_unit_dout_ready = '1' then
+wait until control_unit_dout_ready = '1' ;
 control_unit_din_valid <= '1';
-else 
-control_unit_din_valid <= '0';
-end if ;
+
+--if  control_unit_dout_ready = '1' then
+--control_unit_din_valid <= '1';
+--else 
+--control_unit_din_valid <= '0';
+--end if ;
 --!interleaver test 
 --!BPSK 
 interleaver_out_code_rate <= "0001" ;
@@ -473,8 +477,9 @@ wait for clock_period ;
 mapper_dout_last <= '1';
 mapper_dout_ready <= '0';
 wait for 2 * clock_period ;
-mapper_dout_last <= '0';
+--mapper_dout_last <= '0';
 wait until mapper_pilot_insertion_en = '0';
+mapper_dout_last <= '0';
 mapper_dout_ready <= '1';
 
 while i <  50  loop 
