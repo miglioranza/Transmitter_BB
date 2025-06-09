@@ -1,0 +1,108 @@
+*** Message Type: info ***
+When: Wed May 28 04:25:24 PM CEST 2025
+SimVision started.
+Version: TOOL:  simvision(64)   20.09-s007
+User: miglioranza
+Host: uxsrv005.ihp-ffo.de
+Platform: Linux/x86_64/4.18.0-553.8.1.el8_10.x86_64
+Started: Wed May 28 04:25:24 PM CEST 2025
+Command: /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/simvision/bin/64bit/simvision.exe -connect dc:uxsrv005.ihp-ffo.de:59559 -64BIT
+Work Directory: /home/miglioranza/Mapper/Mapper.sim/sim_1/behav/xcelium_FI
+ 
+*** Message Type: info ***
+When: Wed May 28 04:25:24 PM CEST 2025
+Create browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: Wed May 28 04:25:30 PM CEST 2025
+Create console window: "Console"
+ 
+*** Message Type: info ***
+When: Wed May 28 04:25:34 PM CEST 2025
+Create waveform window: "Waveform 1"
+ 
+*** Message Type: info ***
+When: Wed May 28 04:25:41 PM CEST 2025
+Connect to Simulator
+      Design: xil_defaultlib.mapper_tb
+   Languages: vhdl
+   Simulator: XM-Sim
+     Version: TOOL:      xmsim(64)       20.09-s007
+        User: miglioranza
+        Host: uxsrv005.ihp-ffo.de
+Time Started: Wed May 28 04:25:22 PM CEST 2025
+  Process ID: 2216348
+   Directory: /home/miglioranza/Mapper/Mapper.sim/sim_1/behav/xcelium_FI
+     Command: xmsim -64bit -logfile simulate2.log -gui -fault_sim_run -fault_checker_on -fault_timeout 1000ns -fault_test strobe_test2 -fault_tw 50ns:350ns -fault_strobe_data detect_verbose -fault_id 8 -fault_work fault_db2 xil_defaultlib.mapper_tb -input mapper_tb_simulate.do
+
+ 
+*** Message Type: info ***
+When: Wed May 28 04:25:42 PM CEST 2025
+Create utility window: "Properties"
+ 
+*** Message Type: info ***
+When: Wed May 28 04:28:06 PM CEST 2025
+Delete waveform window: "Waveform 1"
+ 
+*** Message Type: info ***
+When: Wed May 28 04:34:56 PM CEST 2025
+Create waveform window: "Waveform 2"
+ 
+*** Message Type: info ***
+When: Wed May 28 04:35:29 PM CEST 2025
+Delete waveform window: "Waveform 2"
+ 
+*** Message Type: info ***
+When: Wed May 28 04:35:32 PM CEST 2025
+Delete browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: Wed May 28 04:40:32 PM CEST 2025
+Exit XM-Sim: user
+      Design: xil_defaultlib.mapper_tb
+   Languages: vhdl
+   Simulator: XM-Sim
+     Version: TOOL:      xmsim(64)       20.09-s007
+        User: miglioranza
+        Host: uxsrv005.ihp-ffo.de
+Time Started: Wed May 28 04:25:22 PM CEST 2025
+  Process ID: 2216348
+   Directory: /home/miglioranza/Mapper/Mapper.sim/sim_1/behav/xcelium_FI
+     Command: xmsim -64bit -logfile simulate2.log -gui -fault_sim_run -fault_checker_on -fault_timeout 1000ns -fault_test strobe_test2 -fault_tw 50ns:350ns -fault_strobe_data detect_verbose -fault_id 8 -fault_work fault_db2 xil_defaultlib.mapper_tb -input mapper_tb_simulate.do
+
+ 
+*** Message Type: error ***
+When: Wed May 28 04:40:33 PM CEST 2025
+XM-Sim Crashed:
+      Design: xil_defaultlib.mapper_tb
+   Languages: vhdl
+   Simulator: XM-Sim
+     Version: TOOL:      xmsim(64)       20.09-s007
+        User: miglioranza
+        Host: uxsrv005.ihp-ffo.de
+Time Started: Wed May 28 04:25:22 PM CEST 2025
+  Process ID: 2216348
+   Directory: /home/miglioranza/Mapper/Mapper.sim/sim_1/behav/xcelium_FI
+     Command: xmsim -64bit -logfile simulate2.log -gui -fault_sim_run -fault_checker_on -fault_timeout 1000ns -fault_test strobe_test2 -fault_tw 50ns:350ns -fault_strobe_data detect_verbose -fault_id 8 -fault_work fault_db2 xil_defaultlib.mapper_tb -input mapper_tb_simulate.do
+      Design: xil_defaultlib.mapper_tb
+   Languages: vhdl
+   Simulator: XM-Sim
+     Version: TOOL:   xmsim(64)       20.09-s007
+        User: miglioranza
+        Host: uxsrv005.ihp-ffo.de
+Time Started: Wed May 28 04:25:22 PM CEST 2025
+  Process ID: 2216348
+   Directory: /home/miglioranza/Mapper/Mapper.sim/sim_1/behav/xcelium_FI
+     Command: xmsim -64bit -logfile simulate2.log -gui -fault_sim_run -fault_checker_on -fault_timeout 1000ns -fault_test strobe_test2 -fault_tw 50ns:350ns -fault_strobe_data detect_verbose -fault_id 8 -fault_work fault_db2 xil_defaultlib.mapper_tb -input mapper_tb_simulate.do
+
+Outstanding STRAP Requests:
+        strap::report enable out
+ 
+*** Message Type: info ***
+When: Wed May 28 04:40:41 PM CEST 2025
+Recall Simulator
+ 
+*** Message Type: info ***
+When: Wed May 28 04:40:43 PM CEST 2025
+SimVision Exit.
+ 

@@ -1,0 +1,310 @@
+csi-xmelab - CSI: Command line:
+xmelab
+    -64bit
+    -relax
+    -access +rwc
+    -namemap_mixgen
+    -messages
+    -logfile elaborate.log
+    -FAULT_WORK fault_db
+    -fault_dbg
+    -fault_top mapper_tb
+    -fault_overwrite
+    -fault_file ./fault_list
+    -libname xil_defaultlib
+    -libname secureip
+    xil_defaultlib.mapper_tb
+
+csi-xmelab - CSI: *F,INTERR: INTERNAL EXCEPTION
+-----------------------------------------------------------------
+The tool has encountered an unexpected condition and must exit.
+Contact Cadence Design Systems customer support about this
+problem and provide enough information to help us reproduce it,
+including the logfile that contains this error message.
+  TOOL:	xmelab(64)	20.09-s007
+  HOSTNAME: uxsrv005
+  OPERATING SYSTEM: Linux 4.18.0-553.8.1.el8_10.x86_64 #1 SMP Fri Jun 14 03:19:37 EDT 2024 x86_64
+  MESSAGE:  cu_vhdl_flop_sensitivity_list - flop must have single wait 
+-----------------------------------------------------------------
+
+csi-xmelab - CSI: Cadence Support Investigation, recording details
+Error: Error processing stack frame(2) - skipping rest of frame!
+Abstract Syntax Tree: signal declaration (AST_D_SIGNAL) in architecture XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR (AST)
+	File: /home/miglioranza/mapper_tb.vhd, line 49, position 17
+	Scope: STD::BEHAVIOR
+	Decompile: DATA_IN
+	Source  :     signal data_in        : std_logic_vector(5 downto 0):= (others => '0');
+	Position:                  ^
+Abstract Syntax Tree: stmt process (AST_PROCESS_STMT) in architecture XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR (AST)
+	File: /home/miglioranza/mapper_tb.vhd, line 95, position 12
+	Scope: STD::BEHAVIOR
+	Decompile: STIM_PROC
+	Source  :     stim_proc: process
+	Position:             ^
+Abstract Syntax Tree: signal declaration (AST_D_SIGNAL) in architecture XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR (AST)
+	File: /home/miglioranza/mapper_tb.vhd, line 55, position 24
+	Scope: STD::BEHAVIOR
+	Decompile: DATA_OUT_READY
+	Source  :     signal data_out_ready  : std_logic;
+	Position:                         ^
+Abstract Syntax Tree: subprogram call expression (AST_E_SUBPROGRAM_CALL) in architecture XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR (AST)
+	File: /home/miglioranza/mapper_tb.vhd, line 107, position 34
+	Decompile: (DATA_OUT_READY) = ('1')
+	Source  :         wait until data_out_ready = '1' ;
+	Position:                                   ^
+Abstract Syntax Tree: wait statement (AST_S_WAIT) in architecture XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR (AST)
+	File: /home/miglioranza/mapper_tb.vhd, line 107, position 11
+	Decompile: Error: csi_sighandler received SIGSEGV
+	Source  :         wait until data_out_ready = '1' ;
+	Position:            ^
+Intermediate File: large pointer block (IF_LPTRBLK) in architecture XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR (AST)
+Abstract Syntax Tree: enumeration type declaration (AST_D_ENUMERATION_TYPE) in package IEEE.STD_LOGIC_1164 (AST)
+	File: /ihpusr/cadence/xcelium2009/tools.lnx86/inca/files/IEEE.src/std_logic_1164.vhd, line 56, position 18
+	Scope: STD::STD_LOGIC_1164
+	Decompile: STD_ULOGIC
+	Source  :     TYPE std_ulogic IS ( 'U',  -- Uninitialized
+	Position:                   ^
+Abstract Syntax Tree: clause cond (AST_COND_CLAUSE) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 885, position 23
+	Source  :                     else    
+	Position:                        ^
+Abstract Syntax Tree: signal declaration (AST_D_SIGNAL) in architecture XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR (AST)
+	File: /home/miglioranza/mapper_tb.vhd, line 54, position 23
+	Scope: STD::BEHAVIOR
+	Decompile: DATA_IN_READY
+	Source  :     signal data_in_ready  : std_logic;
+	Position:                        ^
+Abstract Syntax Tree: clause cond (AST_COND_CLAUSE) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 835, position 20
+	Source  :                  else 
+	Position:                     ^
+Abstract Syntax Tree: enumeration literal expression (AST_E_ENUMERATION_LITERAL) in architecture XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR (AST)
+	File: /home/miglioranza/mapper_tb.vhd, line 106, position 27
+	Decompile: '1'
+	Source  :         data_in_ready <= '1' ;
+	Position:                            ^
+Abstract Syntax Tree: port declaration (AST_D_PORT) in entity XIL_DEFAULTLIB.MAPPER (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 34, position 19
+	Scope: STD::MAPPER
+	Decompile: LAST_FRAME
+	Source  :           last_frame        : out std_logic                       := '0'  ; 
+	Position:                    ^
+Abstract Syntax Tree: expanded expression (AST_E_EXPANDED) in architecture XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR (AST)
+	File: /home/miglioranza/mapper_tb.vhd, line 106, position 20
+	Decompile: DATA_IN_READY
+	Source  :         data_in_ready <= '1' ;
+	Position:                     ^
+Abstract Syntax Tree: alt case (AST_CASE_ALT) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 844, position 28
+	Decompile: unable to decompile type 166 (AST_CASE_ALT)
+	Source  :                          when "000" =>  --bpsk
+	Position:                             ^
+Abstract Syntax Tree: signal assignment statement (AST_S_SIGNAL_ASSIGNMENT) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 899, position 36
+	Scope: K
+	Decompile: DATA_OUT_VALID := '0' 
+	Source  :                     data_out_valid <= '0';
+	Position:                                     ^
+Abstract Syntax Tree: integer literal expression (AST_E_INTEGER_LITERAL) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 896, position 32
+	Decompile: 0
+	Source  :               symbol_counter := 0 ; 
+	Position:                                 ^
+Abstract Syntax Tree: port declaration (AST_D_PORT) in entity XIL_DEFAULTLIB.MAPPER (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 35, position 23
+	Scope: STD::MAPPER
+	Decompile: DATA_OUT_READY
+	Source  :           data_out_ready    : out std_logic                       := '0'  ;
+	Position:                        ^
+Abstract Syntax Tree: enumeration literal expression (AST_E_ENUMERATION_LITERAL) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 899, position 40
+	Decompile: '0'
+	Source  :                     data_out_valid <= '0';
+	Position:                                         ^
+Abstract Syntax Tree: variable declaration (AST_D_VARIABLE) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 48, position 32
+	Scope: STD::MAPPER_ARCH::$PROCESS_000
+	Decompile: SYMBOL_COUNTER
+	Source  :        variable k, symbol_counter : integer := 0 ;  
+	Position:                                 ^
+Abstract Syntax Tree: root (AST_ROOT) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 41, position 0
+	Decompile: MAPPER_ARCH
+	Source  : architecture mapper_arch of mapper is
+Abstract Syntax Tree: root (AST_ROOT) in package STD.STANDARD (AST)
+	File: /ihpusr/cadence/xcelium2009/tools.lnx86/inca/files/STD.src/standard.vhd, line 5, position 0
+	Decompile: STANDARD
+	Source  : package STANDARD is
+Intermediate File: string (IF_STRING) in entity XIL_DEFAULTLIB.MAPPER_TB (AST)
+	Decompile: MAPPER_TB
+Abstract Syntax Tree: root (AST_ROOT) in entity XIL_DEFAULTLIB.MAPPER_TB (AST)
+	File: /home/miglioranza/mapper_tb.vhd, line 6, position 0
+	Decompile: MAPPER_TB
+	Source  : library IEEE;
+Abstract Syntax Tree: architecture body declaration (AST_D_ARCHITECTURE_BODY) in architecture XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR (AST)
+	File: /home/miglioranza/mapper_tb.vhd, line 18, position 20
+	Scope: STD
+	Decompile: BEHAVIOR
+	Source  : architecture behavior of mapper_tb is
+	Position:                     ^
+Intermediate File: string (IF_STRING) in architecture XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR (AST)
+	Decompile: uut
+Intermediate File: string (IF_STRING) in architecture XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR (AST)
+	Decompile: BEHAVIOR
+Abstract Syntax Tree: component declaration (AST_D_COMPONENT) in architecture XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR (AST)
+	File: /home/miglioranza/mapper_tb.vhd, line 21, position 19
+	Scope: STD::BEHAVIOR
+	Decompile: MAPPER
+	Source  :     component mapper
+	Position:                    ^
+Intermediate File: string (IF_STRING) in architecture XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR (AST)
+	Decompile: XIL_DEFAULTLIB
+Intermediate File: string (IF_STRING) in architecture XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR (AST)
+	Decompile: mapper
+Abstract Syntax Tree: entity declaration (AST_D_ENTITY) in entity XIL_DEFAULTLIB.MAPPER_TB (AST)
+	File: /home/miglioranza/mapper_tb.vhd, line 13, position 15
+	Scope: STD
+	Decompile: MAPPER_TB
+	Source  : entity mapper_tb is
+	Position:                ^
+Abstract Syntax Tree: instantiation stmt component (AST_COMPONENT_INSTANTIATION_STMT) in architecture XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR (AST)
+	File: /home/miglioranza/mapper_tb.vhd, line 67, position 6
+	Scope: STD::BEHAVIOR
+	Decompile: UUT
+	Source  :     uut: mapper PORT MAP (
+	Position:       ^
+Abstract Syntax Tree: entity declaration (AST_D_ENTITY) in entity XIL_DEFAULTLIB.MAPPER (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 14, position 12
+	Scope: STD
+	Decompile: MAPPER
+	Source  : entity mapper is
+	Position:             ^
+Abstract Syntax Tree: elem association (AST_ASSOCIATION_ELEM) in architecture XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR (AST)
+	File: /home/miglioranza/mapper_tb.vhd, line 82, position 38
+	Decompile: DATA_OUT_VALID 
+	Source  : 		  data_out_valid    => data_out_valid
+	Position: 		                                    ^
+Abstract Syntax Tree: architecture body declaration (AST_D_ARCHITECTURE_BODY) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 41, position 23
+	Scope: STD
+	Decompile: MAPPER_ARCH
+	Source  : architecture mapper_arch of mapper is
+	Position:                        ^
+Abstract Syntax Tree: stmt process (AST_PROCESS_STMT) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 47, position 8
+	Scope: STD::MAPPER_ARCH
+	Decompile: $PROCESS_000
+	Source  :   process(clk, reset )
+	Position:         ^
+Abstract Syntax Tree: clause cond (AST_COND_CLAUSE) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 59, position 8
+	Decompile: RISING_EDGE(S=>CLK)
+	Source  :     elsif rising_edge(clk) then
+	Position:         ^
+Abstract Syntax Tree: elem association (AST_ASSOCIATION_ELEM) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 59, position 24
+	Decompile: CLK 
+	Source  :     elsif rising_edge(clk) then
+	Position:                         ^
+Abstract Syntax Tree: if statement (AST_S_IF) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 65, position 3
+	Scope: STD::MAPPER_ARCH::$PROCESS_000::K
+	Decompile: if (((DATA_IN_READY) = ('1')) AND (((DATA_IN_VALID) = ('1')) OR ((BUFF_COUNTER) > (0)))) AND ((PILOT_INSERTION) = ('0')) ((((DATA_IN_READY) = ('0')) AND ((DATA_IN_VALID) = ('1'))) AND ((PILOT_INSERTION) = ('0'))) AND ((PILOT_INSERTION) = ('0')) ((((DATA_I
+	Source  : 	 if data_in_ready =  '1'  and (data_in_valid = '1' or buff_counter > 0 ) and  pilot_insertion = '0'then 
+	Position: 	  ^
+Abstract Syntax Tree: clause cond (AST_COND_CLAUSE) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 897, position 8
+	Source  :      else 
+	Position:         ^
+Abstract Syntax Tree: elem association (AST_ASSOCIATION_ELEM) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 891, position 101
+	Decompile: (PILOT_INSERTION) = ('1') 
+	Source  :      elsif  data_in_ready =  '1' and data_in_valid = '0' and buff_counter = 0  and   pilot_insertion = '1' then   
+	Position:                                                                                                      ^
+Abstract Syntax Tree: elem waveform (AST_WAVEFORM_ELEM) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 899, position 40
+	Decompile: '0' 
+	Source  :                     data_out_valid <= '0';
+	Position:                                         ^
+Abstract Syntax Tree: elem association (AST_ASSOCIATION_ELEM) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 891, position 105
+	Decompile: '1' 
+	Source  :      elsif  data_in_ready =  '1' and data_in_valid = '0' and buff_counter = 0  and   pilot_insertion = '1' then   
+	Position:                                                                                                          ^
+Abstract Syntax Tree: elem association (AST_ASSOCIATION_ELEM) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 830, position 38
+	Decompile: '0' 
+	Source  :                   if end_of_frame = '0'then   
+	Position:                                       ^
+Abstract Syntax Tree: elem association (AST_ASSOCIATION_ELEM) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 891, position 76
+	Decompile: 0 
+	Source  :      elsif  data_in_ready =  '1' and data_in_valid = '0' and buff_counter = 0  and   pilot_insertion = '1' then   
+	Position:                                                                             ^
+Abstract Syntax Tree: elem association (AST_ASSOCIATION_ELEM) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 891, position 55
+	Decompile: '0' 
+	Source  :      elsif  data_in_ready =  '1' and data_in_valid = '0' and buff_counter = 0  and   pilot_insertion = '1' then   
+	Position:                                                        ^
+Abstract Syntax Tree: elem waveform (AST_WAVEFORM_ELEM) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 888, position 49
+	Decompile: '0' 
+	Source  :                              data_out_valid <= '0';
+	Position:                                                  ^
+Abstract Syntax Tree: elem association (AST_ASSOCIATION_ELEM) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 883, position 55
+	Decompile: 1 
+	Source  :                     symbol_counter := symbol_counter + 1 ;   
+	Position:                                                        ^
+Abstract Syntax Tree: elem waveform (AST_WAVEFORM_ELEM) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 879, position 50
+	Decompile: "000011001111" 
+	Source  :                           q_out   <= "000011001111";            -- -1340 
+	Position:                                                   ^
+Abstract Syntax Tree: elem association (AST_ASSOCIATION_ELEM) in architecture XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR (AST)
+	File: /home/miglioranza/mapper_tb.vhd, line 68, position 33
+	Decompile: CLK 
+	Source  :           clk               => clk,
+	Position:                                  ^
+Abstract Syntax Tree: port declaration (AST_D_PORT) in entity XIL_DEFAULTLIB.MAPPER (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 18, position 12
+	Scope: STD::MAPPER
+	Decompile: CLK
+	Source  :           clk               : in  std_logic                       := '0';   
+	Position:             ^
+Intermediate File: string (IF_STRING) in entity XIL_DEFAULTLIB.MAPPER (AST)
+	Decompile: MAPPER
+Intermediate File: string (IF_STRING) in architecture XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (AST)
+	Decompile: MAPPER_ARCH
+Intermediate File: string (IF_STRING) in entity XIL_DEFAULTLIB.MAPPER_TB (AST)
+	Decompile: XIL_DEFAULTLIB
+Abstract Syntax Tree: package body declaration (AST_D_PACKAGE_BODY) in package body IEEE.NUMERIC_STD:BODY (AST)
+	File: /ihpusr/cadence/xcelium2009/tools.lnx86/inca/files/IEEE.src/numeric_std.vhd, line 859, position 23
+	Scope: STD
+	Decompile: NUMERIC_STD
+	Source  : package body NUMERIC_STD is
+	Position:                        ^
+Abstract Syntax Tree: package declaration (AST_D_PACKAGE) in package IEEE.NUMERIC_STD (AST)
+	File: /ihpusr/cadence/xcelium2009/tools.lnx86/inca/files/IEEE.src/numeric_std.vhd, line 57, position 18
+	Scope: STD
+	Decompile: NUMERIC_STD
+	Source  : package NUMERIC_STD is
+	Position:                   ^
+Intermediate File: string (IF_STRING) in architecture XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR (AST)
+	Decompile: MAPPER
+Abstract Syntax Tree: root (AST_ROOT) in entity XIL_DEFAULTLIB.MAPPER (AST)
+	File: /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd, line 8, position 0
+	Decompile: MAPPER
+	Source  : library ieee;
+Abstract Syntax Tree: scope outer (AST_OUTER_SCOPE) in entity XIL_DEFAULTLIB.MAPPER_TB (AST)
+	File: /home/miglioranza/mapper_tb.vhd, line 6, position 0
+	Scope: STD
+	Decompile: unable to decompile type 99 (AST_OUTER_SCOPE)
+	Source  : library IEEE;
+Abstract Syntax Tree: procedure declaration (AST_D_PROCEDURE) in package STD.ENV (AST)
+	File: /ihpusr/cadence/xcelium2009/tools.lnx86/inca/files/IEEE_PROPOSED.src/env_c.vhdl, line 6, position 17
+	Scope: STD::ENV
+	Decompile: FINISH
+	Source  :   procedure FINISH;
+	Position:                  ^
+csi-xmelab - CSI: investigation complete took 0.057 secs, send this file to Cadence Support

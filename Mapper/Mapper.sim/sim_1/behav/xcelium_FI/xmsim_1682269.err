@@ -1,0 +1,47 @@
+csi-xmsim - CSI: Command line:
+xmsim
+    -64bit
+    -logfile simulate.log
+    -fault_sim_run
+    -fault_timeout 1000ns
+    -fault_test strobe_test1
+    -fault_checker_on
+    -fault_tw 50ns:350ns
+    -fault_strobe_data detect_verbose
+    -fault_id 59
+    -fault_work fault_db4
+    xil_defaultlib.mapper_tb
+    -input mapper_tb_simulate.do
+
+csi-xmsim - CSI: *F,INTERR: INTERNAL EXCEPTION
+Observed simulation time : 61 NS + 1
+-----------------------------------------------------------------
+The tool has encountered an unexpected condition and must exit.
+Contact Cadence Design Systems customer support about this
+problem and provide enough information to help us reproduce it,
+including the logfile that contains this error message.
+  TOOL:	xmsim(64)	20.09-s007
+  HOSTNAME: uxsrv005
+  OPERATING SYSTEM: Linux 4.18.0-553.8.1.el8_10.x86_64 #1 SMP Fri Jun 14 03:19:37 EDT 2024 x86_64
+  MESSAGE: value_item - ssl_get_value default
+-----------------------------------------------------------------
+
+csi-xmsim - CSI: Cadence Support Investigation, recording details
+External Code in function: <unavailable> offset -65515
+External Code in function: <unavailable> offset -65530
+External Code in function: <unavailable> offset -65536
+Abstract Syntax Tree: indication subtype (AST_SUBTYPE_INDICATION) in package IEEE.STD_LOGIC_1164 (AST)
+	File: /ihpusr/cadence/xcelium2009/tools.lnx86/inca/files/IEEE.src/std_logic_1164.vhd, line 92, position 66
+	Source  :     TYPE std_logic_vector IS ARRAY ( NATURAL RANGE <>) OF std_logic;
+	Position:                                                                   ^
+Error: Error processing stack frame(11) - skipping rest of frame!
+Intermediate File: ffstructa (IF_FFSTRUCTA) in snapshot xil_defaultlib.mapper_tb:behavior (SSS)
+Abstract Syntax Tree: signal declaration (AST_D_SIGNAL) in architecture XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR (AST)
+	File: /home/miglioranza/mapper_tb.vhd, line 60, position 25
+	Scope: STD::BEHAVIOR
+	Decompile: PILOT_INSERTION
+	Source  :     signal pilot_insertion : std_logic := '0';
+	Position:                          ^
+External Code in function: <unavailable> offset -65535
+External Code in function: <unavailable> offset -65516
+csi-xmsim - CSI: investigation complete took 0.022 secs, send this file to Cadence Support

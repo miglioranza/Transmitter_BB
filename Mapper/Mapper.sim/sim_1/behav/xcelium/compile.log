@@ -3,3 +3,9 @@ xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
 	errors: 0, warnings: 0
 ./../../../../../mapper_tb.vhd:
 	errors: 0, warnings: 0
+XIL_DEFAULTLIB.MAPPER (entity):
+	streams: 21, words: 1986
+XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (architecture):
+	streams: 1, words: 717
+XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR (architecture):
+	streams: 1, words: 2375

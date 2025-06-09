@@ -1,0 +1,22 @@
+xmsim(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+xmsim: *N,FLTSF: [FLT] Fault Id : 501, Fault Seed: 0, Selected fault points: :UUT:\buff_counter_reg[21]\:Q_OUT.
+xcelium> set pack_assert_off {numeric_std std_logic_arith}
+numeric_std std_logic_arith
+xcelium> 
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm -all -variables -depth 1 -waveform
+Created probe 1
+xcelium> 
+xcelium> run 1000ns
+REPORT/NOTE (time 20 NS) from process :stim_proc (architecture xil_defaultlib.mapper_tb:behavior)
+Start of simulation
+xmsim: *W,STDBNF: [FLT] Strobe database not found. Strobe comparison will be disabled.
+xmsim: *N,FLTINJ: [FLT] Injecting SEU fault on :UUT:\buff_counter_reg[21]\:Q_OUT at time 53 NS : old value = '0', new value = '1'.
+REPORT/NOTE (time 775100 PS) from process :stim_proc (architecture xil_defaultlib.mapper_tb:behavior)
+End of Simulation
+Ran until 1 US + 0
+xcelium> exit
+xmsim: *N,FTUDPT: [FLT] Fault database data file is generated at /home/miglioranza/Mapper/Mapper.sim/sim_1/behav/xcelium_FI/fault_db2/db_scope/strobe_test2_uxsrv005_9108051749465567476/xfs_68f0cfdf.ucd.
+xmsim: *N,FTUDPT: [FLT] Fault database data file is generated at /home/miglioranza/Mapper/Mapper.sim/sim_1/behav/xcelium_FI/fault_db2/db_scope/strobe_test2_uxsrv005_9108051749465567476/xfs_68f0cfdf.usm.
+xmsim: *W,INTEMGR: Failed to open the VMANAGER Library: /linux64/vm/libngen64.so: cannot open shared object file: No such file or directory.

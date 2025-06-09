@@ -5,6 +5,8 @@ Relinquished control to SimVision...
 xcelium> set pack_assert_off {numeric_std std_logic_arith}
 numeric_std std_logic_arith
 xcelium> 
+xcelium> dumpsaif -scope /home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd -overwrite -output mapper_toggle
+xmsim: *E,SAFBDS: The scope argument (/home/miglioranza/Mapper/Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd) could not be found in the design hierarchy.
 xcelium> database -open waves -into waves.shm -default
 Created default SHM database waves
 xcelium> catch {probe -create -shm -all -variables -depth 1 -waveform} msg
@@ -13,10 +15,11 @@ xcelium>
 xcelium> run 1000ns
 REPORT/NOTE (time 20 NS) from process :stim_proc (architecture xil_defaultlib.mapper_tb:behavior)
 Start of simulation
-REPORT/NOTE (time 875 NS) from process :stim_proc (architecture xil_defaultlib.mapper_tb:behavior)
+REPORT/NOTE (time 775 NS) from process :stim_proc (architecture xil_defaultlib.mapper_tb:behavior)
 End of Simulation
-std.env.finish invoked from mapper_tb.vhd, line: 194, pos: 13
-Simulation complete via std.env.finish(1) at time 875 NS + 0
+Ran until 1 US + 0
+xcelium> dumpsaif -end
+xmsim: *W,SFALDM: No data available for the Backward SAIF file.
 xcelium> 
-xcelium> ...Regained control from SimVision
--------------------------------------
+xcelium> ^C
+xcelium> exit

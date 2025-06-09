@@ -1,0 +1,11 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/bin/64bit/xmsim
+Obtained 9 stack frames.
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/bin/64bit/../../../lib/64bit/libcbreakpad.so(_Z13use_backtracev+0x9d) [0x7f08fb1bfae9]
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/bin/64bit/../../../lib/64bit/libcbreakpad.so(cbpad_generate_dump_on_demand+0x66) [0x7f08fb1bfe3c]
+xmsim() [0x178f5fc]
+xmsim(serror+0x95) [0x1790d05]
+xmsim() [0xa4f96e]
+xmsim() [0x1a3d03d]
+xmsim() [0x1a3e2a1]
+xmsim() [0xc3943f]
+[0x53324ea]

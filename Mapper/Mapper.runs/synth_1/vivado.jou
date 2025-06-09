@@ -2,8 +2,8 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Tue May 20 12:06:24 2025
-# Process ID: 1208356
+# Start of session at: Fri Jun  6 15:53:15 2025
+# Process ID: 3514295
 # Current directory: /home/miglioranza/Mapper/Mapper.runs/synth_1
 # Command line: vivado -log mapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mapper.tcl
 # Log file: /home/miglioranza/Mapper/Mapper.runs/synth_1/mapper.vds

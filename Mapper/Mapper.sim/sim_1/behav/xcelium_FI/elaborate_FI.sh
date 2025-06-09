@@ -20,13 +20,13 @@ set -Eeuo pipefail
 bin_path="/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin"
 
 # set xmelab command line args
-xmelab_opts="-64bit -relax -access +rwc -namemap_mixgen -messages -logfile elaborate.log"
+xmelab_opts="-64bit -relax -access +rwc -namemap_mixgen -messages -logfile elaborate.log -FAULT_WORK fault_db"
 
 # set design libraries
 design_libs_elab="-libname xil_defaultlib -libname secureip"
 
 # set fault injection parameters
-fi_opts="-fault_dbg -fault_top mapper_tb  -fault_overwrite -fault_file ./fault_list"
+fi_opts="-fault_dbg -fault_top mapper_tb -fault_overwrite -fault_file ./fault_list"
 
 
 # run elaboration

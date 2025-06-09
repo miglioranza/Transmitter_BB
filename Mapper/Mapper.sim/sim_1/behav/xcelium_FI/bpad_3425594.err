@@ -1,0 +1,61 @@
+Operating system: Linux
+                  0.0.0 Linux 4.18.0-553.8.1.el8_10.x86_64 #1 SMP Fri Jun 14 03:19:37 EDT 2024 x86_64
+CPU: amd64
+     family 6 model 44 stepping 2
+     16 CPUs
+
+GPU: UNKNOWN
+
+Crash reason:  DUMP_REQUESTED
+Crash address: 0x7fe1decafb4a
+Process uptime: not available
+
+Thread 0 (crashed)
+ 0  libcbreakpad.so + 0x30b4a
+    rax = 0x00007fe1e000849c   rdx = 0x0000000000000000
+    rcx = 0x00007fe1decae3ad   rbx = 0x00007ffc686a2db0
+    rsi = 0x0000000000000001   rdi = 0x00007ffc686a2768
+    rbp = 0x00007ffc686a2d20   rsp = 0x00007ffc686a26d0
+     r8 = 0x0000000000000000    r9 = 0x0000000000000000
+    r10 = 0x0000000000000580   r11 = 0x00007fe1dec8a1c8
+    r12 = 0x00007ffc686a3098   r13 = 0x0000000000000000
+    r14 = 0x00007ffc686a2d30   r15 = 0x0000000000000000
+    rip = 0x00007fe1decafb4a
+    Found by: given as instruction pointer in context
+ 1  libcbreakpad.so + 0x2ee7e
+    rbp = 0x00007ffc686a2e50   rsp = 0x00007ffc686a2d30
+    rip = 0x00007fe1decade7e
+    Found by: previous frame's frame pointer
+ 2  xmelab!cmsum_genreport_avlwalk + 0x1b8
+    rbp = 0x00007ffc686a2e50   rsp = 0x00007ffc686a2d58
+    rip = 0x0000000001010038
+    Found by: stack scanning
+
+Loaded modules:
+0x00400000 - 0x0347efff  xmelab  ???  (main)
+0x7fe1ddffa000 - 0x7fe1de150fff  libcfault.so  ???
+0x7fe1dec7f000 - 0x7fe1decdbfff  libcbreakpad.so  ???  (WARNING: No symbols, libcbreakpad.so, 49C998A3E1AE795CD9B13713D8D628FB0)
+0x7fe1deee7000 - 0x7fe1df0b3fff  libc-2.28.so  ???
+0x7fe1df2bd000 - 0x7fe1df2d2fff  libgcc_s.so.1  ???
+0x7fe1df4d4000 - 0x7fe1df654fff  libm-2.28.so  ???
+0x7fe1df856000 - 0x7fe1df9c7fff  libstdc++.so.6.0.22  ???
+0x7fe1dfbd7000 - 0x7fe1dfbf1fff  libpthread-2.28.so  ???
+0x7fe1dfdf7000 - 0x7fe1dfdf9fff  libdl-2.28.so  ???
+0x7fe1dfffb000 - 0x7fe1e0029fff  ld-2.28.so  ???
+0x7ffc687ad000 - 0x7ffc687aefff  linux-gate.so  ???
+
+******BACKTRACE*****
+vserror [0x1ebe94c]
+serror [0x1ec0055]
+cu_extract_proc_ctrl_info [0xe5f3cb]
+cu_extract_vhdl_seq_control_info [0xecd77a]
+parseFaultFile [0x1f7f7f4]
+faultProcessSpec [0x1f66fe8]
+cu_tlui_create_hierarchy.constprop.182 [0xfc8131]
+cu_tlui_common.constprop.181 [0xfcd5c5]
+cu_elaborate [0xfd0f88]
+process [0x793b86]
+xncmain [0x7b9049]
+main [0x6488a0]
+_start [0x6488d1]
+******BACKTRACE END*****

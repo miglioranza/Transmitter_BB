@@ -1,0 +1,18 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/bin/64bit/xmelab
+Obtained 16 stack frames.
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/bin/64bit/../../../lib/64bit/libcbreakpad.so(_Z13use_backtracev+0x9d) [0x7fe1decadae9]
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/bin/64bit/../../../lib/64bit/libcbreakpad.so(cbpad_generate_dump_on_demand+0x66) [0x7fe1decade3c]
+xmelab() [0x1ebe94c]
+xmelab(serror+0x95) [0x1ec0055]
+xmelab() [0xe5f3cb]
+xmelab() [0xecd77a]
+xmelab() [0x1f7f7f4]
+xmelab() [0x1f66fe8]
+xmelab() [0xfc8131]
+xmelab() [0xfcd5c5]
+xmelab() [0xfd0f88]
+xmelab() [0x793b86]
+xmelab() [0x7b9049]
+xmelab(main+0x10) [0x6488a0]
+/lib64/libc.so.6(__libc_start_main+0xe5) [0x7fe1def217e5]
+xmelab() [0x6488d1]

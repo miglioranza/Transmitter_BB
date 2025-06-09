@@ -1,0 +1,218 @@
+Operating system: Linux
+                  0.0.0 Linux 4.18.0-553.8.1.el8_10.x86_64 #1 SMP Fri Jun 14 03:19:37 EDT 2024 x86_64
+CPU: amd64
+     family 6 model 44 stepping 2
+     16 CPUs
+
+GPU: UNKNOWN
+
+Crash reason:  DUMP_REQUESTED
+Crash address: 0x7fa93cc64b4a
+Process uptime: not available
+
+Thread 0 (crashed)
+ 0  libcbreakpad.so + 0x30b4a
+    rax = 0x00007fa93dfbd49c   rdx = 0x0000000000000000
+    rcx = 0x00007fa93cc633ad   rbx = 0x00007fa92e305470
+    rsi = 0x0000000000000001   rdi = 0x00007fa92e304e28
+    rbp = 0x00007fa92e3053e0   rsp = 0x00007fa92e304d90
+     r8 = 0x0000000000000000    r9 = 0x0000000000000000
+    r10 = 0x0000000000000580   r11 = 0x00007fa93cc3f1c8
+    r12 = 0x00007fa92e305758   r13 = 0x0000000000000000
+    r14 = 0x00007fa92e3053f0   r15 = 0x0000000005dc3fb0
+    rip = 0x00007fa93cc64b4a
+    Found by: given as instruction pointer in context
+ 1  libcbreakpad.so + 0x2ee7e
+    rbp = 0x00007fa92e305510   rsp = 0x00007fa92e3053f0
+    rip = 0x00007fa93cc62e7e
+    Found by: previous frame's frame pointer
+ 2  xmsim + 0x138f5fc
+    rsp = 0x00007fa92e305520   rip = 0x000000000178f5fc
+    Found by: stack scanning
+ 3  xmsim + 0x8a4a2e
+    rsp = 0x00007fa92e3055f0   rip = 0x0000000000ca4a2e
+    Found by: stack scanning
+ 4  xmsim + 0x8a4c0f
+    rsp = 0x00007fa92e305600   rip = 0x0000000000ca4c0f
+    Found by: stack scanning
+ 5  xmsim + 0xded2dd
+    rsp = 0x00007fa92e305640   rip = 0x00000000011ed2dd
+    Found by: stack scanning
+ 6  libc-2.28.so + 0x503d2
+    rsp = 0x00007fa92e305710   rip = 0x00007fa93ceec3d2
+    Found by: stack scanning
+ 7  xmsim + 0x1390d05
+    rsp = 0x00007fa92e305750   rip = 0x0000000001790d05
+    Found by: stack scanning
+ 8  xmsim + 0x1ff44f0
+    rsp = 0x00007fa92e305780   rip = 0x00000000023f44f0
+    Found by: stack scanning
+ 9  xmsim + 0x8a85d8
+    rsp = 0x00007fa92e3057b0   rip = 0x0000000000ca85d8
+    Found by: stack scanning
+10  xmsim + 0x8a85a2
+    rsp = 0x00007fa92e3057d0   rip = 0x0000000000ca85a2
+    Found by: stack scanning
+11  xmsim + 0x64fddf
+    rsp = 0x00007fa92e305820   rip = 0x0000000000a4fddf
+    Found by: stack scanning
+12  xmsim + 0x64f96e
+    rsp = 0x00007fa92e305830   rip = 0x0000000000a4f96e
+    Found by: stack scanning
+13  xmsim + 0xb5c327
+    rsp = 0x00007fa92e305860   rip = 0x0000000000f5c327
+    Found by: stack scanning
+14  xmsim + 0x460080
+    rsp = 0x00007fa92e305868   rip = 0x0000000000860080
+    Found by: stack scanning
+15  xmsim + 0x77ac09
+    rsp = 0x00007fa92e3058f0   rip = 0x0000000000b7ac09
+    Found by: stack scanning
+16  xmsim + 0x1614b1b
+    rsp = 0x00007fa92e305910   rip = 0x0000000001a14b1b
+    Found by: stack scanning
+17  xmsim + 0x1614af1
+    rsp = 0x00007fa92e305920   rip = 0x0000000001a14af1
+    Found by: stack scanning
+18  xmsim + 0x163d03d
+    rsp = 0x00007fa92e305980   rip = 0x0000000001a3d03d
+    Found by: stack scanning
+19  xmsim + 0x8f598c
+    rsp = 0x00007fa92e3059d0   rip = 0x0000000000cf598c
+    Found by: stack scanning
+20  libc-2.28.so + 0x9c096
+    rsp = 0x00007fa92e305ad0   rip = 0x00007fa93cf38096
+    Found by: stack scanning
+21  xmsim + 0x163e2a1
+    rsp = 0x00007fa92e305b30   rip = 0x0000000001a3e2a1
+    Found by: stack scanning
+22  xmsim + 0x83943f
+    rsp = 0x00007fa92e305b90   rip = 0x0000000000c3943f
+    Found by: stack scanning
+
+Thread 1
+ 0  libc-2.28.so + 0x3941d
+    rax = 0xfffffffffffffe00   rdx = 0x0000000000000002
+    rcx = 0x00007fa93ced541d   rbx = 0x0000000000000000
+    rsi = 0x0000000000000000   rdi = 0x00007fa92b2d46a8
+    rbp = 0x00007fa92b4cbd80   rsp = 0x00007fa92b2d4658
+     r8 = 0x0000000000000000    r9 = 0x0000000000000000
+    r10 = 0x0000000000000000   r11 = 0x0000000000000246
+    r12 = 0x0000000000000001   r13 = 0x00007fa92b4cbd88
+    r14 = 0x0000000000000001   r15 = 0x00007fa92b2d4708
+    rip = 0x00007fa93ced541d
+    Found by: given as instruction pointer in context
+ 1  libtbb.so.2 + 0x10744
+    rbp = 0x00007fa92b4cbd80   rsp = 0x00007fa92b2d4660
+    rip = 0x00007fa92b993744
+    Found by: stack scanning
+ 2  libtbb.so.2 + 0x106a7
+    rbp = 0x00007fa92b4cbd80   rsp = 0x00007fa92b2d4670
+    rip = 0x00007fa92b9936a7
+    Found by: stack scanning
+ 3  libtbb.so.2 + 0x16a8
+    rbp = 0x00007fa92b4cbd80   rsp = 0x00007fa92b2d46c8
+    rip = 0x00007fa92b9846a8
+    Found by: stack scanning
+ 4  libtbbshm.so + 0x13c71
+    rbp = 0x00007fa92b4cbd80   rsp = 0x00007fa92b2d4700
+    rip = 0x00007fa92bbedc71
+    Found by: stack scanning
+ 5  libtbb.so.2 + 0x18e11
+    rbp = 0x00007fa92b4cbd80   rsp = 0x00007fa92b2d4740
+    rip = 0x00007fa92b99be11
+    Found by: stack scanning
+ 6  libtbb.so.2 + 0x198ee
+    rbp = 0x00007fa92b4cbd80   rsp = 0x00007fa92b2d4750
+    rip = 0x00007fa92b99c8ee
+    Found by: stack scanning
+ 7  libtbb.so.2 + 0x16a8
+    rbp = 0x00007fa92b4cbd80   rsp = 0x00007fa92b2d4758
+    rip = 0x00007fa92b9846a8
+    Found by: stack scanning
+ 8  libtbb.so.2 + 0x18a60
+    rbp = 0x00007fa92b4cbd80   rsp = 0x00007fa92b2d4760
+    rip = 0x00007fa92b99ba60
+    Found by: stack scanning
+ 9  libtbbmalloc.so.2 + 0x127b0
+    rbp = 0x00007fa92b4cbd80   rsp = 0x00007fa92b2d4770
+    rip = 0x00007fa92b7417b0
+    Found by: stack scanning
+10  libtbb.so.2 + 0x287dc
+    rbp = 0x00007fa92b4cbd80   rsp = 0x00007fa92b2d47c0
+    rip = 0x00007fa92b9ab7dc
+    Found by: stack scanning
+11  libtbbmalloc.so.2 + 0x13eb5
+    rbp = 0x00007fa92b4cbd80   rsp = 0x00007fa92b2d47d0
+    rip = 0x00007fa92b742eb5
+    Found by: stack scanning
+12  libtbb.so.2 + 0x262aa
+    rbp = 0x00007fa92b4cbd80   rsp = 0x00007fa92b2d4850
+    rip = 0x00007fa92b9a92aa
+    Found by: stack scanning
+13  libtbb.so.2 + 0x261c8
+    rbp = 0x00007fa92b4cbd80   rsp = 0x00007fa92b2d4870
+    rip = 0x00007fa92b9a91c8
+    Found by: stack scanning
+14  libtbb.so.2 + 0x18bd9
+    rbp = 0x00007fa92b4cbd80   rsp = 0x00007fa92b2d4890
+    rip = 0x00007fa92b99bbd9
+    Found by: stack scanning
+15  libtbb.so.2 + 0x18ac7
+    rbp = 0x00007fa92b4cbd80   rsp = 0x00007fa92b2d48c0
+    rip = 0x00007fa92b99bac7
+    Found by: stack scanning
+16  libtbb.so.2 + 0x188fb
+    rbp = 0x00007fa92b4cbd80   rsp = 0x00007fa92b2d4990
+    rip = 0x00007fa92b99b8fb
+    Found by: stack scanning
+17  libtbb.so.2 + 0x18819
+    rbp = 0x00007fa92b4cbd80   rsp = 0x00007fa92b2d49c0
+    rip = 0x00007fa92b99b819
+    Found by: stack scanning
+18  libtbbshm.so + 0x131b0
+    rbp = 0x00007fa92b4cbd80   rsp = 0x00007fa92b2d49f0
+    rip = 0x00007fa92bbed1b0
+    Found by: stack scanning
+
+Loaded modules:
+0x00400000 - 0x0294bfff  xmsim  ???  (main)  (WARNING: No symbols, xmsim, B7B50667F4675A02FC2514A87F0B8CE70)
+0x7fa92a8ac000 - 0x7fa92aaadfff  libdrapi.so  ???
+0x7fa92b527000 - 0x7fa92b52dfff  librt-2.28.so  ???
+0x7fa92b72f000 - 0x7fa92b75cfff  libtbbmalloc.so.2  ???  (WARNING: No symbols, libtbbmalloc.so.2, 75ACC95FCD50E68ABB676F15B2CBB7870)
+0x7fa92b983000 - 0x7fa92b9d3fff  libtbb.so.2  ???  (WARNING: No symbols, libtbb.so.2, B6B984F8EC95047733825065E49CB11D0)
+0x7fa92bbda000 - 0x7fa92bbf4fff  libtbbshm.so  ???  (WARNING: No symbols, libtbbshm.so, 8AA4CB93569F1C1336615C819538468E0)
+0x7fa92c278000 - 0x7fa92c2ecfff  libdwapi.so  ???
+0x7fa92c4f0000 - 0x7fa92c508fff  libz_sh.so  ???
+0x7fa92c70a000 - 0x7fa92cc33fff  libucis.so  ???
+0x7fa92d1fa000 - 0x7fa92d350fff  libcfault.so  ???
+0x7fa92d8e6000 - 0x7fa92d906fff  libml_uvm.so  ???
+0x7fa92e308000 - 0x7fa92e474fff  libStrapNC.so  ???
+0x7fa92e6b9000 - 0x7fa92e75afff  libdcapi.so  ???
+0x7fa92e968000 - 0x7fa92e96cfff  libnss_dns-2.28.so  ???
+0x7fa92eb6f000 - 0x7fa92eb82fff  libresolv-2.28.so  ???
+0x7fa92ed87000 - 0x7fa92ed89fff  libnss_mdns4_minimal.so.2  ???
+0x7fa92ef8c000 - 0x7fa92f85ffff  passwd  ???
+0x7fa92f860000 - 0x7fa92f869fff  libnss_sss.so.2  ???
+0x7fa92fa6b000 - 0x7fa92fa75fff  libnss_files-2.28.so  ???
+0x7fa92fc7e000 - 0x7fa93cc33fff  locale-archive  ???
+0x7fa93cc34000 - 0x7fa93cc90fff  libcbreakpad.so  ???  (WARNING: No symbols, libcbreakpad.so, 49C998A3E1AE795CD9B13713D8D628FB0)
+0x7fa93ce9c000 - 0x7fa93d068fff  libc-2.28.so  ???  (WARNING: No symbols, libc-2.28.so, C11514B88873B50636FB1599D7AF2D150)
+0x7fa93d272000 - 0x7fa93d287fff  libgcc_s.so.1  ???
+0x7fa93d489000 - 0x7fa93d5fafff  libstdc++.so.6.0.22  ???
+0x7fa93d80a000 - 0x7fa93d98afff  libm-2.28.so  ???
+0x7fa93db8c000 - 0x7fa93db8efff  libdl-2.28.so  ???
+0x7fa93dd90000 - 0x7fa93ddaafff  libpthread-2.28.so  ???
+0x7fa93dfb0000 - 0x7fa93dfdefff  ld-2.28.so  ???
+0x7fa93e1cc000 - 0x7fa93e1ccfff  strobe.dsn  ???
+0x7fa93e1cd000 - 0x7fa93e1dcfff  waves.dsn  ???
+0x7ffffb9e5000 - 0x7ffffb9e6fff  linux-gate.so  ???
+
+******BACKTRACE*****
+vserror [0x178f5fc]
+serror [0x1790d05]
+value_item [0xa4f96e]
+injectFaultModel.isra.45 [0x1a3d03d]
+injectFault [0x1a3e2a1]
+ssl_minnow_call [0xc3943f]
+******BACKTRACE END*****

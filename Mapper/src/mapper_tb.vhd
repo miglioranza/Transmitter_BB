@@ -29,11 +29,16 @@ architecture behavior of mapper_tb is
           data_in           : in  std_logic_vector(5 downto 0)    := (others => '0');   -- bits are used from LSB to MSB for increasing mod_type (all 6 bits for 64QAM and 64APSK)
           data_in_valid     : in  std_logic                       := '0';               -- indicates that there is input data to be processed (output from previous stage or controller)
           data_in_ready     : in  std_logic                       := '0';    
+          end_of_frame      : in  std_logic                       := '0';
+          signal_field_en   : in  std_logic                       := '0';   
+          pilot_insertion   : in  std_logic                       := '0';  --input port that notify when the pilot insertion has been completed or not 
           -- Output ports      
           i_out             : out std_logic_vector(11 downto 0)   := (others => '0'); -- i output (input for DAC)
-          q_out             : out std_logic_vector(11 downto 0)   := (others => '0'); -- q output (input for DAC)   
+          q_out             : out std_logic_vector(11 downto 0)   := (others => '0'); -- q output (input for DAC)  
+          data_out_last     : out std_logic                       := '0'  ; 
+          last_frame        : out std_logic                       := '0'  ; 
           data_out_ready    : out std_logic                       := '0'  ;
-          data_out_valid    : out std_logic                       := '0'  --indicates that processing is finished (data is available at the output) 
+          data_out_valid    : out std_logic                      := '0'  --indicates that processing is finished (data is available at the output) 
     );
     end component;
 
@@ -48,7 +53,11 @@ architecture behavior of mapper_tb is
 	signal data_out_valid : std_logic;
     signal data_in_ready  : std_logic;
     signal data_out_ready  : std_logic;
-
+    signal signal_field_en : std_logic := '0';
+    signal end_of_frame   : std_logic := '0';
+    signal last_frame     : std_logic := '0';
+    signal data_out_last  : std_logic := '0';
+    signal pilot_insertion : std_logic := '0';
     -- Clock period definition
     constant clk_period : time := 10 ns;
 
@@ -62,9 +71,14 @@ begin
           data_in           => data_in,
 		  data_in_valid     => data_in_valid,
 		  data_in_ready     => data_in_ready,
-          I_out             => I_out,
-          Q_out             => Q_out,
-          data_out_ready     => data_out_ready,
+          i_out             => I_out,
+          q_out             => Q_out,
+          data_out_ready    => data_out_ready,
+          signal_field_en   => signal_field_en,
+          end_of_frame      => end_of_frame,
+          last_frame        => last_frame,
+		  data_out_last     => data_out_last,
+		  pilot_insertion   => pilot_insertion,
 		  data_out_valid    => data_out_valid
         );
 
@@ -88,7 +102,7 @@ begin
 		
 		-- selection of modulation type
 		report "Start of simulation" ;
-        mode_type <= "001";
+        mode_type <= "001"; --QPSK
         data_in_ready <= '1' ;
         wait until data_out_ready = '1' ;
         wait for clk_period;	
@@ -97,22 +111,31 @@ begin
 
         -- Input data
 
+        data_in <= "000000"; wait for 10 ns; -- LSB = 0
+        data_in <= "000001"; wait for 10 ns; -- LSB = 1
+        data_in <= "000000"; wait for 10 ns; -- LSB = 0
+        data_in <= "000001"; wait for 10 ns; -- LSB = 1
+        data_in <= "000000"; wait for 10 ns; -- LSB = 0
+        data_in <= "000001"; wait for 10 ns; -- LSB = 1
+        data_in <= "000000"; wait for 10 ns; -- LSB = 0
+        data_in <= "000001"; wait for 10 ns; -- LSB = 1
+        data_in <= "000000"; wait for 10 ns; -- LSB = 0
+        data_in <= "000001"; wait for 10 ns; -- LSB = 1
+        data_in <= "000000"; wait for 10 ns; -- LSB = 0
+        data_in <= "000001"; wait for 10 ns; -- LSB = 1
+        data_in <= "000000"; wait for 10 ns; -- LSB = 0
+        data_in <= "000001"; wait for 10 ns; -- LSB = 1
+        data_in <= "000000"; wait for 10 ns; -- LSB = 0
+--         data_in_ready <= '0' ;
         data_in <= "000000"; wait for 10 ns;
         data_in <= "000001"; wait for 10 ns;
-        data_in <= "000010"; wait for 10 ns;
-        data_in <= "000011"; wait for 10 ns;
-        data_in <= "000100"; wait for 10 ns;
-        data_in <= "000101"; wait for 10 ns;
-         data_in_ready <= '0' ;
-        data_in <= "000110"; wait for 10 ns;
-        data_in <= "000111"; wait for 10 ns;
-         data_in_valid <= '0';
+--         data_in_valid <= '0';
          
-        wait for 50 ns;
-          data_in_ready <= '1' ;
-          wait until data_out_ready = '1' ;
-          wait for 10 ns ;
-          data_in_valid <= '1';
+-- !       wait for 50 ns;
+--!        data_in_ready <= '1' ;
+--!        wait until data_out_ready = '1' ;
+--!      wait for 10 ns ;
+--!        data_in_valid <= '1';
           
         data_in <= "001000"; wait for 10 ns;       
         data_in <= "001001"; wait for 10 ns;
@@ -122,41 +145,35 @@ begin
         data_in <= "001101"; wait for 10 ns;
         data_in <= "001110"; wait for 10 ns;
         data_in <= "001111"; wait for 10 ns;
-		data_in <= "010000"; wait for 10 ns;
-		
-		data_in_ready <= '0' ;
-        wait for 20 ns  ;	
-         data_in_valid <= '1';
-         data_in_ready <= '1' ;
-         
+		data_in <= "010000"; wait for 10 ns;       
         data_in <= "010001"; wait for 10 ns;
         data_in <= "010010"; wait for 10 ns;
         data_in <= "010011"; wait for 10 ns;
         
-        mode_type <= "011";
+--        mode_type <= "111";
         
         data_in <= "000100"; wait for 10 ns;
-        data_in <= "111110"; wait for 10 ns;
+        data_in <= "011110"; wait for 10 ns;
         data_in <= "000000"; wait for 10 ns;
-        data_in <= "101011"; wait for 10 ns;
-        data_in <= "111110"; wait for 10 ns;
-        data_in <= "101001"; wait for 10 ns;
-        data_in <= "110111"; wait for 10 ns;
+        data_in <= "001011"; wait for 10 ns;
+        data_in <= "011110"; wait for 10 ns;
+        data_in <= "001001"; wait for 10 ns;
+        data_in <= "010111"; wait for 10 ns;
         data_in <= "001101"; wait for 10 ns;
-        data_in <= "110100"; wait for 10 ns;
+        data_in <= "010100"; wait for 10 ns;
         data_in <= "000000"; wait for 10 ns;
-        data_in <= "100100"; wait for 10 ns;
-        data_in <= "110110"; wait for 10 ns;
+        data_in <= "000100"; wait for 10 ns;
+        data_in <= "010110"; wait for 10 ns;
         data_in <= "000100"; wait for 10 ns;
         data_in <= "011001"; wait for 10 ns;
         data_in <= "001000"; wait for 10 ns;
-        data_in <= "110010"; wait for 10 ns;
+        data_in <= "010010"; wait for 10 ns;
         data_in <= "001011"; wait for 10 ns;
         data_in <= "000001"; wait for 10 ns;
-        data_in <= "100111"; wait for 10 ns;
+        data_in <= "000111"; wait for 10 ns;
         data_in <= "001111"; wait for 10 ns;
         
-         mode_type <= "101";
+--         mode_type <= "101";
 
         data_in <= "000000"; wait for 10 ns;
         data_in <= "000001"; wait for 10 ns;
@@ -182,7 +199,8 @@ begin
         wait for clk_period * 5 ;
         data_in_valid <= '0';
         report "End of Simulation" ;
-        finish ;
+        wait ;
+--        finish ;
         
         wait;
     end process;

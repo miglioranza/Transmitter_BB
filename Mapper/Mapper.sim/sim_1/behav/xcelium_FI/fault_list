@@ -1,1 +1,1 @@
-fault_target mapper_tb... -type SET -force
+fault_target mapper_tb... -select_seqs -type SEU -force

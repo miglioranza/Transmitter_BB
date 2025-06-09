@@ -16,16 +16,21 @@ entity mapper is
    (
           -- Clock, reset
           clk               : in  std_logic                       := '0';   
-          reset            : in  std_logic                       := '0';   -- active on low level
+          reset             : in  std_logic                       := '0';   -- active on low level
                 
           -- Input ports     
           mod_type          : in  std_logic_vector(2 downto 0)    := (others => '0');   -- selection of modulation scheme (BPSK, QPSK, 16APSK, 32APSK, 64APSK, 16QAM, 32QAM, 64QAM)
           data_in           : in  std_logic_vector(5 downto 0)    := (others => '0');   -- bits are used from LSB to MSB for increasing mod_type (all 6 bits for 64QAM and 64APSK)
           data_in_valid     : in  std_logic                       := '0';               -- indicates that there is input data to be processed (output from previous stage or controller)
           data_in_ready     : in  std_logic                       := '0';    
+          end_of_frame      : in  std_logic                       := '0';
+          signal_field_en   : in  std_logic                       := '0';   
+          pilot_insertion   : in  std_logic                       := '0';  --input port that notify when the pilot insertion has been completed or not 
           -- Output ports      
           i_out             : out std_logic_vector(11 downto 0)   := (others => '0'); -- i output (input for DAC)
-          q_out             : out std_logic_vector(11 downto 0)   := (others => '0'); -- q output (input for DAC)   
+          q_out             : out std_logic_vector(11 downto 0)   := (others => '0'); -- q output (input for DAC)  
+          data_out_last     : out std_logic                       := '0'  ; 
+          last_frame        : out std_logic                       := '0'  ; 
           data_out_ready    : out std_logic                       := '0'  ;
           data_out_valid    : out std_logic                       := '0'  --indicates that processing is finished (data is available at the output)        
    );
@@ -35,12 +40,11 @@ end entity mapper;
 architecture mapper_arch of mapper is
 --Buffer array for storing data because of the synchronizazion  with the DPD filter and data splitter 
 type buff_register is array(5 downto 0) of std_logic_vector(5 downto 0) ;
-signal buff_reg     : buff_register := (others => (others => '0')) ;     
-signal buff_counter : integer := 0 ;   
-
+signal buff_reg         : buff_register := (others => (others => '0')) ;     
+signal buff_counter     : integer := 0 ;   
 begin    
   process(clk, reset )
-       variable k : integer := 0 ;  
+       variable k, symbol_counter : integer := 0 ;  
        variable input_data   : std_logic_vector(5 downto 0)    := (others => '0');  
       begin
   
@@ -52,13 +56,15 @@ begin
       buff_counter <=  0;  
       buff_reg <= (others => (others => '0')) ;      
     elsif rising_edge(clk) then
-
+        
   data_out_valid <= '0';
+  data_out_last  <= '0' ;   
 
-	 if data_in_ready =  '1'  and (data_in_valid = '1' or buff_counter > 0 ) then 
+	 if data_in_ready =  '1'  and (data_in_valid = '1' or buff_counter > 0 ) and  pilot_insertion = '0'then 
 --	   data_out_valid <= '0';
 	   if data_in_valid = '1' then 
 	      input_data := data_in ;
+	   
 	   elsif  buff_counter > 0 then
 	      input_data := buff_reg(k) ;
 	      buff_counter <= buff_counter - 1 ;
@@ -243,8 +249,7 @@ begin
               q_out   <= "111001100110";            -- -410 			  
             end if; 
 			
-			
-			
+					
 		  when "100" => --qam64
             if input_data(5 downto 0) = "000000" then     -- 1(first point)
               i_out   <= "100000000001";            -- -2047
@@ -795,17 +800,92 @@ begin
 			
         end case;
              data_out_valid <= '1';
+             data_out_last  <= '0' ;      
+                  
+             if signal_field_en = '0'  then   --if the input data is the signal field then sends to an output port a signal for noticing that the output data are coming from the singal field  
+                if symbol_counter < 895 then  --2 clock cycle delay 
+                   symbol_counter := symbol_counter + 1;
+                else 
+                 data_out_ready <= '0';  
+                 data_out_last  <= '1' ;   
+             end if ;            
+             end if ; 
          elsif  data_in_ready =  '0' and data_in_valid = '1'then           
                   data_out_ready <= '0';
                   buff_reg(buff_counter) <= data_in;
                   buff_counter <= buff_counter + 1 ;
                   data_out_valid   <= '0';   
-       elsif     data_in_ready =  '1' and data_in_valid = '0' and buff_counter = 0 then 
-                data_out_ready <= '1';
-                k := 0 ;
-       else 
-       data_out_ready <= '0';
-       data_out_valid <= '0';
+                 
+        elsif     data_in_ready =  '1' and data_in_valid = '0' and buff_counter = 0  then
+                   last_frame <= '0';
+                  if pilot_insertion = '0' and end_of_frame = '0'then   
+                    data_out_ready <= '1'; --starting state 
+                    k := 0 ;
+                    data_out_last  <= '0' ;
+                  elsif pilot_insertion = '1'and end_of_frame = '0' then 
+                        data_out_ready <= '0'; 
+                        symbol_counter := 0 ;
+                  
+                  elsif   pilot_insertion = '0' and end_of_frame = '1'   then 
+                         data_out_ready <= '0';                           
+--                         data_out_last <= '0' ;
+                   -- if the frame does not fit in the 896 symbols block, start the padding process adding only 0s (the 0 symbol value change depending from the modulation) and then add the pilot      
+                    if symbol_counter < 895 then 
+                       data_out_last <= '0' ;
+                       last_frame <= '0';
+                       case mod_type is 
+                         when "000" =>  --bpsk
+                            i_out   <= "100000000001";   -- -2047
+                            q_out   <= "000000000000";  
+                        when "001" => --qpsk
+          
+                            i_out   <= "010110100111";            -- 1447
+                            q_out   <= "010110100111";            -- -1447
+                         
+                         when "010" => --qam16
+                           i_out   <= "100000000001";            -- -2047
+                           q_out   <= "011111111111";  
+                         
+                         when "011" => --qam32
+            
+                           i_out   <= "101100110011";            -- -1229
+                           q_out   <= "011111111111";            -- 2047         
+                         
+                          when "100" => --qam64
+            
+                           i_out   <= "100000000001";            -- -2047
+                           q_out   <= "011111111111";            -- 2047
+                        
+                          when "101" => --apsk16
+                     
+                          i_out   <= "000111100010";            -- 482
+                          q_out   <= "000111100010";            -- 482
+                          	
+		                  when "110" => --apsk32
+            
+                          i_out   <= "000100100001";            -- 289
+                          q_out   <= "000100100001";            -- 289
+                          
+                          when "111" => --apsk64
+            
+                          i_out   <= "000011001111";            -- -1340
+                          q_out   <= "000011001111";            -- -1340 
+                    end case ;
+                    symbol_counter := symbol_counter + 1 ;   
+                    data_out_valid <= '1';
+                 else    
+                     last_frame <= '1';
+                     data_out_last <= '1' ;
+                     data_out_valid <= '0';
+                 end if ;
+                  else 
+                          data_out_ready <= '0'; 
+                          data_out_valid <= '0';
+                  end if ;
+                        
+          else 
+                    data_out_ready <= '0';
+                    data_out_valid <= '0';
        end if ;
 
 

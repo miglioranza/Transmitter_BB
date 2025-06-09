@@ -1,5 +1,5 @@
 xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	xmvhdl(64)	20.09-s007: Started on Apr 18, 2025 at 13:13:40 CEST
+TOOL:	xmvhdl(64)	20.09-s007: Started on Jun 05, 2025 at 18:27:48 CEST
 xmvhdl
     -V93
     -64bit
@@ -15,4 +15,10 @@ xmvhdl
 	errors: 0, warnings: 0
 ./../../../../../mapper_tb.vhd:
 	errors: 0, warnings: 0
-TOOL:	xmvhdl(64)	20.09-s007: Exiting on Apr 18, 2025 at 13:13:41 CEST  (total: 00:00:01)
+XIL_DEFAULTLIB.MAPPER (entity):
+	streams: 21, words: 1986
+XIL_DEFAULTLIB.MAPPER:MAPPER_ARCH (architecture):
+	streams: 1, words: 717
+XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR (architecture):
+	streams: 1, words: 2375
+TOOL:	xmvhdl(64)	20.09-s007: Exiting on Jun 05, 2025 at 18:27:50 CEST  (total: 00:00:02)
