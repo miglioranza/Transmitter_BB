@@ -1,0 +1,189 @@
+Operating system: Linux
+                  0.0.0 Linux 4.18.0-553.16.1.el8_10.x86_64 #1 SMP Thu Aug 1 04:16:12 EDT 2024 x86_64
+CPU: amd64
+     family 6 model 62 stepping 4
+     1 CPU
+
+GPU: UNKNOWN
+
+Crash reason:  DUMP_REQUESTED
+Crash address: 0x7fe390ed2b4a
+Process uptime: not available
+
+Thread 0 (crashed)
+ 0  libcbreakpad.so + 0x30b4a
+    rax = 0x0000000005e49ad0   rdx = 0x0000000000000000
+    rcx = 0x00007fe390ed13ad   rbx = 0x00007ffe41905d50
+    rsi = 0x0000000000000001   rdi = 0x00007ffe41905708
+    rbp = 0x00007ffe41905cc0   rsp = 0x00007ffe41905670
+     r8 = 0x0000000000000000    r9 = 0x0000000000000000
+    r10 = 0x00007ffe41905830   r11 = 0x00007ffe41905820
+    r12 = 0x00007ffe41906038   r13 = 0x0000000000000000
+    r14 = 0x00007ffe41905cd0   r15 = 0x00007fe37c9310c0
+    rip = 0x00007fe390ed2b4a
+    Found by: given as instruction pointer in context
+ 1  libcbreakpad.so + 0x2ee7e
+    rbp = 0x00007ffe41905df0   rsp = 0x00007ffe41905cd0
+    rip = 0x00007fe390ed0e7e
+    Found by: previous frame's frame pointer
+ 2  xmsim + 0x138f5fc
+    rsp = 0x00007ffe41905e00   rip = 0x000000000178f5fc
+    Found by: stack scanning
+ 3  xmsim + 0x678ed0
+    rsp = 0x00007ffe41905e08   rip = 0x0000000000a78ed0
+    Found by: stack scanning
+ 4  xmsim + 0x678ed0
+    rsp = 0x00007ffe41905e68   rip = 0x0000000000a78ed0
+    Found by: stack scanning
+ 5  libc-2.28.so + 0x4ff85
+    rsp = 0x00007ffe41905e70   rip = 0x00007fe391159f85
+    Found by: stack scanning
+ 6  xmsim + 0x678ed0
+    rsp = 0x00007ffe41905e78   rip = 0x0000000000a78ed0
+    Found by: stack scanning
+ 7  xmsim + 0x1d121bf
+    rsp = 0x00007ffe41905ea8   rip = 0x00000000021121bf
+    Found by: stack scanning
+ 8  xmsim + 0x678ed0
+    rsp = 0x00007ffe41905ed8   rip = 0x0000000000a78ed0
+    Found by: stack scanning
+ 9  libc-2.28.so + 0x4ff85
+    rsp = 0x00007ffe41905ee0   rip = 0x00007fe391159f85
+    Found by: stack scanning
+10  xmsim + 0x678ed0
+    rsp = 0x00007ffe41905ee8   rip = 0x0000000000a78ed0
+    Found by: stack scanning
+11  xmsim + 0x678ed0
+    rsp = 0x00007ffe41905f48   rip = 0x0000000000a78ed0
+    Found by: stack scanning
+12  libc-2.28.so + 0x4fed2
+    rsp = 0x00007ffe41905f50   rip = 0x00007fe391159ed2
+    Found by: stack scanning
+13  xmsim + 0x678ed0
+    rsp = 0x00007ffe41905f58   rip = 0x0000000000a78ed0
+    Found by: stack scanning
+14  xmsim + 0x678ed0
+    rsp = 0x00007ffe41905fb8   rip = 0x0000000000a78ed0
+    Found by: stack scanning
+15  libc-2.28.so + 0x4ff85
+    rsp = 0x00007ffe41905fc0   rip = 0x00007fe391159f85
+    Found by: stack scanning
+16  xmsim + 0x678ed0
+    rsp = 0x00007ffe41905fc8   rip = 0x0000000000a78ed0
+    Found by: stack scanning
+17  libc-2.28.so + 0x50398
+    rsp = 0x00007ffe41905ff0   rip = 0x00007fe39115a398
+    Found by: stack scanning
+18  waves.dsn (deleted) + 0x10
+    rsp = 0x00007ffe41906020   rip = 0x00007fe39243b010
+    Found by: stack scanning
+19  xmsim + 0x1390d05
+    rsp = 0x00007ffe41906030   rip = 0x0000000001790d05
+    Found by: stack scanning
+20  xmsim + 0x1d122a8
+    rsp = 0x00007ffe41906060   rip = 0x00000000021122a8
+    Found by: stack scanning
+21  libdwapi.so + 0x310c0
+    rsp = 0x00007ffe41906068   rip = 0x00007fe37c9310c0
+    Found by: stack scanning
+22  waves.dsn (deleted) + 0x10
+    rsp = 0x00007ffe41906070   rip = 0x00007fe39243b010
+    Found by: stack scanning
+23  libdwapi.so + 0x310c0
+    rsp = 0x00007ffe419060a8   rip = 0x00007fe37c9310c0
+    Found by: stack scanning
+24  waves.dsn (deleted) + 0x10
+    rsp = 0x00007ffe419060b0   rip = 0x00007fe39243b010
+    Found by: stack scanning
+25  libdwapi.so + 0x310c0
+    rsp = 0x00007ffe419060c0   rip = 0x00007fe37c9310c0
+    Found by: stack scanning
+26  xmsim + 0x67e97b
+    rsp = 0x00007ffe419060d0   rip = 0x0000000000a7e97b
+    Found by: stack scanning
+27  xmsim + 0x67945d
+    rsp = 0x00007ffe419060e0   rip = 0x0000000000a7945d
+    Found by: stack scanning
+28  xmsim + 0x6d11d9
+    rsp = 0x00007ffe41906100   rip = 0x0000000000ad11d9
+    Found by: stack scanning
+29  xmsim + 0x6d5e73
+    rsp = 0x00007ffe41906110   rip = 0x0000000000ad5e73
+    Found by: stack scanning
+30  libdwapi.so + 0x310c0
+    rsp = 0x00007ffe41906138   rip = 0x00007fe37c9310c0
+    Found by: stack scanning
+31  0x7fe39243b000
+    rsp = 0x00007ffe419061d8   rip = 0x00007fe39243b000
+    Found by: stack scanning
+32  libpthread-2.28.so + 0x12d20
+    rsp = 0x00007ffe41906200   rip = 0x00007fe392010d20
+    Found by: stack scanning
+33  0x7fe39243b000
+    rsp = 0x00007ffe41906250   rip = 0x00007fe39243b000
+    Found by: stack scanning
+34  libdwapi.so + 0x310c0
+    rsp = 0x00007ffe419062b0   rip = 0x00007fe37c9310c0
+    Found by: stack scanning
+35  waves.dsn (deleted) + 0x10
+    rsp = 0x00007ffe419062e0   rip = 0x00007fe39243b010
+    Found by: stack scanning
+36  waves.dsn (deleted) + 0x10
+    rsp = 0x00007ffe41906348   rip = 0x00007fe39243b010
+    Found by: stack scanning
+37  xmsim + 0x136d8a2
+    rsp = 0x00007ffe419063d0   rip = 0x000000000176d8a2
+    Found by: stack scanning
+
+Loaded modules:
+0x00400000 - 0x0294bfff  xmsim  ???  (main)  (WARNING: No symbols, xmsim, B7B50667F4675A02FC2514A87F0B8CE70)
+0x7fe37c900000 - 0x7fe37c974fff  libdwapi.so  ???  (WARNING: No symbols, libdwapi.so, 094982F4ED0871070B0D0A6D68AD164E0)
+0x7fe37cb78000 - 0x7fe37cb90fff  libz_sh.so  ???
+0x7fe37cd92000 - 0x7fe37d2bbfff  libucis.so  ???
+0x7fe37d53d000 - 0x7fe37d693fff  libcfault.so  ???
+0x7fe381b54000 - 0x7fe381b74fff  libml_uvm.so  ???
+0x7fe382576000 - 0x7fe3826e2fff  libStrapNC.so  ???
+0x7fe382927000 - 0x7fe3829c8fff  libdcapi.so  ???
+0x7fe382bd6000 - 0x7fe382bdafff  libnss_dns-2.28.so  ???
+0x7fe382ddd000 - 0x7fe382df0fff  libresolv-2.28.so  ???
+0x7fe382ff5000 - 0x7fe382ff7fff  libnss_mdns4_minimal.so.2  ???
+0x7fe3831fa000 - 0x7fe383acdfff  passwd  ???
+0x7fe383ace000 - 0x7fe383ad7fff  libnss_sss.so.2  ???
+0x7fe383cd9000 - 0x7fe383ce3fff  libnss_files-2.28.so  ???
+0x7fe383eec000 - 0x7fe390ea1fff  locale-archive  ???
+0x7fe390ea2000 - 0x7fe390efefff  libcbreakpad.so  ???  (WARNING: No symbols, libcbreakpad.so, 49C998A3E1AE795CD9B13713D8D628FB0)
+0x7fe39110a000 - 0x7fe3912d6fff  libc-2.28.so  ???  (WARNING: No symbols, libc-2.28.so, 71CBF6A391DE94640DA0A7E395E469E30)
+0x7fe3914e0000 - 0x7fe3914f5fff  libgcc_s.so.1  ???
+0x7fe3916f7000 - 0x7fe391868fff  libstdc++.so.6.0.22  ???
+0x7fe391a78000 - 0x7fe391bf8fff  libm-2.28.so  ???
+0x7fe391dfa000 - 0x7fe391dfcfff  libdl-2.28.so  ???
+0x7fe391ffe000 - 0x7fe392018fff  libpthread-2.28.so  ???  (WARNING: No symbols, libpthread-2.28.so, D492215987A534E9C5216E8D9EF04BB80)
+0x7fe39221e000 - 0x7fe39224cfff  ld-2.28.so  ???
+0x7fe39243b000 - 0x7fe39244afff  waves.dsn (deleted)  ???  (WARNING: No symbols, , )
+0x7ffe419df000 - 0x7ffe419e0fff  linux-gate.so  ???
+
+******BACKTRACE*****
+vserror [0x178f5fc]
+serror [0x1790d05]
+sv_bushandler [0xad5e73]
+sslu_shm_open_db_real.isra.136 [0xd5f1fe]
+ssl_shm_open_db [0xd44135]
+dbase_create [0xf92f8a]
+dbase_cmd_open [0x6040f9]
+database_command [0xf95e94]
+cmd_wrapper [0xa14319]
+TclInvokeStringCommand [0x10d5a46]
+TclNRRunCallbacks [0x10da8c7]
+TclEvalEx [0x10dce5a]
+Tcl_EvalEx [0x10dd303]
+TclNREvalObjEx [0x10dd4c8]
+TclEvalObjEx [0x10dd719]
+Tcl_RecordAndEvalObj [0x117d680]
+Tcl_RecordAndEval [0x117d867]
+cmd_tcl_run [0xa18e96]
+wrap_cmd_tcl_run [0x5a0812]
+xncmain [0x5b02ab]
+ncmain [0x5a294f]
+main [0x1fc32aa]
+_start [0x52fa61]
+******BACKTRACE END*****

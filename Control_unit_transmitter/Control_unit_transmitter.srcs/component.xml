@@ -58,7 +58,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f097e5c6</spirit:value>
+            <spirit:value>54aa2063</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -74,7 +74,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f097e5c6</spirit:value>
+            <spirit:value>54aa2063</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -89,7 +89,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>574e6e04</spirit:value>
+            <spirit:value>6607d10b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -211,6 +211,22 @@
       </spirit:port>
       <spirit:port>
         <spirit:name>control_unit_last_frame</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>control_unit_enable</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -486,6 +502,26 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+        <spirit:name>encoder_code_rate</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
         <spirit:name>interleaver_dout_valid</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
@@ -690,22 +726,6 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>mapper_pilot_insertion_en</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
-          </spirit:driver>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
         <spirit:name>mapper_end_of_frame</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
@@ -793,6 +813,22 @@
           </spirit:driver>
         </spirit:wire>
       </spirit:port>
+      <spirit:port>
+        <spirit:name>multi_din_ready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
     </spirit:ports>
   </spirit:model>
   <spirit:fileSets>
@@ -801,7 +837,7 @@
       <spirit:file>
         <spirit:name>sources_1/new/Control_unit_top.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_f097e5c6</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_54aa2063</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -871,8 +907,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Control_unit_top_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>17</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-06-02T13:48:50Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>20</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-06-12T15:33:44Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.df@4bb899b_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@36be26c5_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
@@ -1078,13 +1114,45 @@
         <xilinx:tag xilinx:name="ui.data.coregen.df@6aaef931_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@532ae939_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@7cd3d75c_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@25b52b8c_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@549896b0_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@74989092_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@63f1b43_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2b3b2328_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@41990dab_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@407ca645_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2450a636_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@768bcc25_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@11f7e906_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@50d961be_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4500a754_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@45e4357d_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2582de23_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@354abc8c_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1ae1b1ff_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@16ef639a_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@79f2f0fe_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@427cd857_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6406305f_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@737a115e_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4deaa90c_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@dcd704b_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1509d05f_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2a7e7e9e_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@493bc545_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@57793ffa_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4079d99e_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5c4896df_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@563efa37_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6db75c1f_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7ce25329_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2021.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="50102c5c"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="4d3d855d"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="5f4d6eb5"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="695a369c"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="8942e293"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="697673c5"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>

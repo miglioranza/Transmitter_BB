@@ -16,44 +16,141 @@
 # ****************************************************************************
 set -Eeuo pipefail
 # === Range of Fault IDs to Inject ===
-START_FAULT_ID=501
-END_FAULT_ID=510
+#!/bin/bash
+ 
 
-
-
-# installation path setting
+# === Installation path for xmsim ===
 bin_path="/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin"
 
-# set xmsim command line args
-xmsim_opts="-64bit -logfile simulate.log "
+# === Simulation options (logfile removed to avoid parallel conflicts) ===
+xmsim_opts="-64bit"
 
-# set fault injection parameters
+# === Number of parallel jobs (adjust to match your system's cores) ===
+NUM_JOBS=40
 
+# === Fault IDs to inject ===
+fault_ids=(
+404
+634
+645
+656
+667
+678
+689
+700
+784
+795
+806
+817
+828
+839
+850
+861
+872
+956
+967
+978
+989
+1000
+1011
+1022
+1033
+1044
+1055
+1066
+1077
+1088
+1099
+1183
+1477
+1488
+1499
+1510
+1521
+1532
+1750
+1783
+1803
+2098
+2109
+2120
+2277
+2288
+2299
+2310
+2321
+2332
+2343
+2360
+2395
+2479
+2490
+2515
+2622
+2633
+2644
+2655
+2666
+2677
+2688
+2699
+2948
+3105
+3116
+3127
+3138
+3149
+3160
+3171
+3328
+3339
+3350
+3361
+3372
+3383
+3394
+3405
+3416
+3573
+3584
+3595
+3606
+3617
+3628
+3639
+3650
+3661
+3672
+3683
+3694
+3705
+3716
+3873
 
-for (( fault_id=$START_FAULT_ID; fault_id<=$END_FAULT_ID; fault_id++ ))
-do
-    echo "==> Running Fault ID: $fault_id"
-    # run simulation
-        fi_opts="-fault_sim_run -fault_timeout 1000ns -fault_test strobe_test1 -fault_checker_on -fault_tw 50ns:350ns  -fault_strobe_data detect_verbose -fault_id $fault_id -fault_work fault_db"
+)
 
-    if [ "$fault_id" -eq "$END_FAULT_ID" ]; then
-        $bin_path/xmsim $xmsim_opts $fi_opts xil_defaultlib.mapper_tb -input mapper_tb_simulate_last_fault.do
-    else
-	$bin_path/xmsim $xmsim_opts $fi_opts xil_defaultlib.mapper_tb -input mapper_tb_simulate.do
-    fi
-    #Fault sim. commands definition :
-    #-fault_sim_run: Enables serial fault simulation. Xcelium injects only a single fault for each fault simulation run.
-   # -fault_timeout: Specifies the time, as an absolute time value, to terminate the simulation.
-   # -fault_checker_on : Enables the alternative fault detection technique for the fs_strobe command.If you define strobe points to monitor as functional and checker outputs during the good simulation run,
-   # those strobe points are used to help classify detected faults during fault simulation.
-   # -fault_id: Injects faults by internal ID. With Xcelium, you can inject faults by an internal ID that corresponds to a unique fault node or by some random ID
-   # -fault_work : Specifies a name for the output directory in which to save the results of each fault run.
-  
+# === Function to run a simulation ===
+run_simulation() {
+    local fault_id=$1
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting Fault ID: $fault_id"
 
+    local fi_opts="-fault_sim_run -fault_checker_on -fault_timeout 1000ns -fault_tw 50ns:450ns -fault_id $fault_id -fault_work fault_db"
 
-    
-done
-#print="xfr -fault_work fault_db -fault_report  fault_report_test"
- #$bin_path/xmsim $print
+    $bin_path/xmsim $xmsim_opts $fi_opts xil_defaultlib.mapper_tb -input mapper_tb_simulate.do > /dev/null 2>&1
+    local exit_status=$?
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Finished Fault ID: $fault_id (Exit: $exit_status)"
+    return $exit_status
+}
 
-echo "All fault injection runs completed."
+# === Export for xargs parallelization ===
+export -f run_simulation
+export bin_path xmsim_opts
+
+# === Run in parallel ===
+printf "%s\n" "${fault_ids[@]}" | xargs -n 1 -P $NUM_JOBS -I {} bash -c 'run_simulation "$@"' _ {}
+
+# === Final report ===
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] Running xfr..."
+$bin_path/xfr -fault_work ./fault_db -logfile fault_report_SEU.log 2>&1 | tee xfr_debug.log
+exit_status=$?
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] Fault report generated (Exit: $exit_status)"

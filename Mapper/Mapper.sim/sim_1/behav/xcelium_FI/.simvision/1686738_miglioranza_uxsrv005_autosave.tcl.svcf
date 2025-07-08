@@ -55,7 +55,7 @@ mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor or
 # Console windows
 #
 console set -windowname Console
-window geometry Console 730x250+278+252
+window geometry Console 730x250+206+157
 
 #
 # Layout selection

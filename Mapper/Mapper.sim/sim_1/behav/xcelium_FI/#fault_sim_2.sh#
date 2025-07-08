@@ -16,7 +16,7 @@
 # ****************************************************************************
 set -Eeuo pipefail
 # === Range of Fault IDs to Inject ===
-START_FAULT_ID=501
+START_FAULT_ID=
 END_FAULT_ID=1000
 
 
@@ -24,7 +24,7 @@ END_FAULT_ID=1000
 bin_path="/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin"
 
 # set xmsim command line args
-xmsim_opts="-64bit -logfile simulate2.log "
+xmsim_opts="-64bit - "
 
 # set fault injection parameters
 
@@ -42,6 +42,5 @@ do
     fi
    
 done
-
 
 echo "All fault injection runs completed."

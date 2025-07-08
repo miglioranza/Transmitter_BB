@@ -71,14 +71,6 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param simulator.xceliumInstallPath /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin
-set_param power.enableUnconnectedCarry8PinPower 1
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param power.enableCarry8RouteBelPower 1
-set_param power.BramSDPPropagationFix 1
-set_param power.enableLutRouteBelPower 1
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-3427731-uxsrv005/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 set_msg_config  -id {BD 41-759}  -new_severity {INFO} 
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMODT' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMPARITY' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 

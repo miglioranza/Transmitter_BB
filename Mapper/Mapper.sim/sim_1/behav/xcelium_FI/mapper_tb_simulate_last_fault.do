@@ -4,6 +4,6 @@ database -open waves -into waves.shm -default
 catch {probe -create -shm -all -variables -depth 1 -waveform} msg
 
 run 1000ns
-xfr -fault_work ./fault_db -logfile  fault_report.log
+xfr -fault_work fault_db -logfile  fault_report.log
 
 exit

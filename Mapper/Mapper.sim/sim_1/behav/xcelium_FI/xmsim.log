@@ -1,1 +1,19 @@
 xmsim(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+xmsim: *N,FLTSF: [FLT] Fault Id : 3672, Fault Seed: 0, Selected fault points: :UUT:\symbol_counter_reg[4]\:Q.
+xcelium> set pack_assert_off {numeric_std std_logic_arith}
+numeric_std std_logic_arith
+xcelium> 
+xcelium> database -open waves -into waves.shm -default
+CCreated default SHM database waves
+xcelium> probe -create -shm -all -variables -depth 1 -waveformCCreated probe 1
+xcelium> 
+xcelium> run 1000nsREPORT/NOTE (time 20 NS) from process :stim_proc (architecture xil_defaultlib.mapper_tb:behavior)
+Start of simulation
+xmsim: *N,FLTINJ: [FLT] Injecting SEU fault on :UUT:\symbol_counter_reg[6]\:Q at time 87 NS : old value = '0', new value = '1'.
+Ran until 1 US + 0
+xcelium> exit
+xmsim: *N,FTUDPT: [FLT] Fault database data file is generated at /home/miglioranza/Mapper/Mapper.sim/sim_1/behav/xcelium_FI/fault_db/db_scope/test_uxsrv003_23600401750334098482/xfs_1c187be1.ucd.
+xmsim: *W,INTEMGR: Failed to open the VMANAGER Library: /linux64/vm/libngen64.so: cannot open shared object file: No such file or directory.
+y.
+gen64.so: cannot open shared object file: No such file or directory.
+y.

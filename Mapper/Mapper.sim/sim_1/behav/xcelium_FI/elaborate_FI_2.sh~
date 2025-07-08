@@ -26,7 +26,7 @@ xmelab_opts="-64bit -relax -access +rwc -namemap_mixgen -messages -logfile elabo
 design_libs_elab="-libname xil_defaultlib -libname secureip"
 
 # set fault injection parameters
-fi_opts="-fault_dbg -fault_top mapper_tb  -fault_overwrite -fault_file ./fault_list_SEU"
+fi_opts="-fault_dbg -fault_top mapper_tb  -fault_overwrite -fault_file ./fault_list"
 
 
 # run elaboration

@@ -41,6 +41,6 @@ xmvhdl_opts="-64bit -messages -relax -logfile .tmp_log -update"
 $bin_path/xmvhdl -V93 $xmvhdl_opts -work xil_defaultlib  \
 "$origin_dir/../../../../Mapper.srcs/sources_1/imports/miglioranza/mapper.vhd" \
 "$origin_dir/../../../../../mapper_tb.vhd" \
-"$origin_dir/Mapper/Mapper.sim/sim_1/behav/xcelium_FI/mapper.vhd"
+"$origin_dir/../../../../../mapper.vhd"
 2>&1 | tee compile.log; cat .tmp_log > xmvhdl.log 2>/dev/null \
     

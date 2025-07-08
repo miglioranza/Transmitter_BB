@@ -16,12 +16,16 @@
 # ****************************************************************************
 set -Eeuo pipefail
 
-#!/bin/bash
-set -Eeuo pipefail
-
-# === Range of Fault IDs to Inject ===
-START_FAULT_ID=1001
-END_FAULT_ID=5515
+# === Ranges of Fault IDs to Inject ===
+RANGES=(
+    "3477"
+    "3488"
+    "3499"
+    "3510"
+    "3521"
+    "3532"
+   
+)
 
 # Installation path setting
 bin_path="/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin"
@@ -30,37 +34,41 @@ bin_path="/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin"
 xmsim_opts="-64bit"
 
 # Number of parallel jobs (adjust based on CPU cores)
-NUM_JOBS=14
+NUM_JOBS=70  # Optimized for 32-core machine
 
-# Create a dedicated logs directory
-LOGS_DIR="logs"
-mkdir -p "$LOGS_DIR"  # Creates the directory if it doesn't exist
-
-# Function to run a single simulation
+# Function to run a single simulation (no log files)
 run_simulation() {
     local fault_id=$1
-    local logfile="${LOGS_DIR}/fault_${fault_id}.log"  # Log saved to logs/
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting Fault ID: $fault_id" | tee "$logfile"
-    
-    # Set fault injection parameters
-    local fi_opts="-fault_sim_run -fault_checker_on -fault_timeout 1000ns -fault_test strobe_test2 -fault_tw 50ns:450ns -fault_strobe_data detect_verbose -fault_id $fault_id -fault_work fault_db"
-    
-    if [ "$fault_id" -eq "$END_FAULT_ID" ]; then
-        $bin_path/xmsim $xmsim_opts $fi_opts xil_defaultlib.mapper_tb -input mapper_tb_simulate_last_fault.do >> "$logfile" 2>&1
-    else
-        $bin_path/xmsim $xmsim_opts $fi_opts xil_defaultlib.mapper_tb -input mapper_tb_simulate.do >> "$logfile" 2>&1
-    fi
-    
+
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting Fault ID: $fault_id"
+
+    local fi_opts="-fault_sim_run -fault_checker_on -fault_timeout 1000ns  -fault_tw 50ns:450ns  -fault_id $fault_id -fault_work fault_db"
+
+    $bin_path/xmsim $xmsim_opts $fi_opts xil_defaultlib.mapper_tb -input mapper_tb_simulate.do > /dev/null 2>&1
+
     exit_status=$?
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Finished Fault ID: $fault_id (Exit status: $exit_status)" | tee -a "$logfile"
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Finished Fault ID: $fault_id (Exit status: $exit_status)"
     return $exit_status
 }
 
 # Export function and variables for parallel execution
 export -f run_simulation
-export bin_path xmsim_opts END_FAULT_ID LOGS_DIR
+export bin_path xmsim_opts
+
+# Generate all fault IDs from the specified ranges
+fault_ids=()
+for range in "${RANGES[@]}"; do
+    read start end <<< "$range"
+    fault_ids+=($(seq $start $end))
+done
 
 # Run simulations in parallel using xargs
-seq $START_FAULT_ID $END_FAULT_ID | xargs -n 1 -P $NUM_JOBS -I {} bash -c 'run_simulation {}'
+printf "%s\n" "${fault_ids[@]}" | xargs -n 1 -P $NUM_JOBS -I {} bash -c 'run_simulation {}'
 
-echo "All simulations completed. Logs are saved in: $LOGS_DIR/"
+echo "All simulations completed."
+
+# Run xfr only after all simulations are done
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] Generating fault report..."
+$bin_path/xfr -fault_work fault_db -logfile fault_report_SEU.log
+exit_status=$?
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] Fault report generated (Exit status: $exit_status)"

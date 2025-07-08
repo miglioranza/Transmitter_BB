@@ -16,15 +16,60 @@
 # ****************************************************************************
 set -Eeuo pipefail
 
-# installation path setting
+# === Ranges of Fault IDs to Inject ===
+RANGES=(
+    "7 13"
+    "2288 2850"
+    "3856 4171"
+)
+
+# Installation path setting
 bin_path="/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin"
 
-# set xmsim command line args
-xmsim_opts="-64bit -logfile simulate.log"
+# xmsim command line args (removed global logfile to avoid conflicts)
+xmsim_opts="-64bit"
 
-# set fault injection parameters
-fi_opts="-fault_overwrite -fault_good_run -fault_type SET+100ps -input strobe_in_out.tcl -fault_tw 50ns:350ns  -fault_work fault_db2"
-#fi_opts="-fault_overwrite -fault_good_run -fault_type SET -fault_num_nodes 5 -fault_tw 100ns:300ns  -input strobe.tcl"
+# Number of parallel jobs (adjust based on CPU cores)
+NUM_JOBS=30  # Optimized for 32-core machine
 
-# run simulation
-$bin_path/xmsim $xmsim_opts $fi_opts xil_defaultlib.mapper_tb -input mapper_tb_simulate.do
+# Function to run a single simulation (no log files)
+run_simulation() {
+    local fault_id=$1
+    
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting Fault ID: $fault_id"
+    
+    # Special case: Run xfr command when fault_id=4171
+    if [ "$fault_id" -eq 4171 ]; then
+        echo "[$(date '+%Y-%m-%d %H:%M:%S')] Generating fault report for ID 4171..."
+        $bin_path/xfr -fault_work ./fault_db -logfile fault_report.log
+        exit_status=$?
+        echo "[$(date '+%Y-%m-%d %H:%M:%S')] Fault report generated (Exit status: $exit_status)"
+        return $exit_status
+    fi
+    
+    # Normal fault injection for all other IDs
+    local fi_opts="-fault_overwrite -fault_good_run -fault_type SET+100ps -input strobe_list.tcl -fault_tw 50ns:450ns  -fault_work fault_db2"
+
+    
+    $bin_path/xmsim $xmsim_opts $fi_opts xil_defaultlib.mapper_tb -input mapper_tb_simulate.do > /dev/null 2>&1
+    
+    exit_status=$?
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Finished Fault ID: $fault_id (Exit status: $exit_status)"
+    return $exit_status
+}
+
+# Export function and variables for parallel execution
+export -f run_simulation
+export bin_path xmsim_opts
+
+# Generate all fault IDs from the specified ranges
+fault_ids=()
+for range in "${RANGES[@]}"; do
+    read start end <<< "$range"
+    fault_ids+=($(seq $start $end))
+done
+
+# Run simulations in parallel using xargs
+printf "%s\n" "${fault_ids[@]}" | xargs -n 1 -P $NUM_JOBS -I {} bash -c 'run_simulation {}'
+
+echo "All simulations completed."

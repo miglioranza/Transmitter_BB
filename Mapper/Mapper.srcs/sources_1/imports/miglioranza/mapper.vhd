@@ -24,14 +24,10 @@ entity mapper is
           data_in_valid     : in  std_logic                       := '0';               --! indicates that there is input data to be processed (output from previous stage or controller)
           data_in_ready     : in  std_logic                       := '0';
           data_in_last      : in  std_logic                       := '0'; --! end of each block 
-          end_of_frame      : in  std_logic                       := '0';
-          signal_field_en   : in  std_logic                       := '0';   
-          pilot_insertion   : in  std_logic                       := '0';  --input port that notify when the pilot insertion has been completed or not 
           -- Output ports      
           i_out             : out std_logic_vector(11 downto 0)   := (others => '0'); --! i output (input for DAC)
           q_out             : out std_logic_vector(11 downto 0)   := (others => '0'); --! q output (input for DAC)  
           data_out_last     : out std_logic                       := '0'  ; 
-          last_frame        : out std_logic                       := '0'  ; 
           data_out_ready    : out std_logic                       := '0'  ;
           data_out_valid    : out std_logic                       := '0'  --! indicates that processing is finished (data is available at the output)        
    );
@@ -62,18 +58,19 @@ begin
   data_out_last  <= '0' ;   
 --! this if-stat. checks if the dpd filter is ready, if the data is valid or in the buffer and  if the pilot_insertion is not on going 
 
-	 if data_in_ready =  '1'  and (data_in_valid = '1' or buff_counter > 0 ) and  pilot_insertion = '0'then 
+	 if data_in_ready =  '1'  and (data_in_valid = '1' or buff_counter > 0 ) then 
+
 --	   data_out_valid <= '0';
 	   if data_in_valid = '1' then 
 	      input_data := data_in ;
-	   
 	   elsif  buff_counter > 0 then
 	      input_data := buff_reg(k) ;
 	      buff_counter <= buff_counter - 1 ;
-	      k := k + 1 ;   
+	      k := k + 1 ;
+          
 	   end if ;
-        case mod_type is
-		
+	    case mod_type is 
+   	
           when "000" => --!bpsk
             if input_data(0) = '1' then
               i_out   <= "011111111111";   -- 2047
@@ -802,101 +799,34 @@ begin
 			
         end case;
              data_out_valid <= '1';
-             data_out_last  <= '0' ;      
-                  
-             if signal_field_en = '0'  then   --!if the input data is the signal field then sends to an output port a signal for noticing that the output data are coming from the singal field  
-                if symbol_counter < 895 then  --!2 clock cycle delay 
-                   symbol_counter := symbol_counter + 1;
-                else 
-                 data_out_ready <= '0';  
-                 data_out_last  <= '1' ;   
-             end if ;            
+             if data_in_last = '1' then 
+                data_out_last  <= '1' ;      
+             else      
+                data_out_last  <= '0' ;  
              end if ; 
-     elsif  data_in_ready =  '0' and data_in_valid = '1'and  pilot_insertion = '0' and  pilot_insertion = '0' then           
+
+     elsif  data_in_ready =  '0' and data_in_valid = '1' then           
                   data_out_ready <= '0';
                   --Fault protection in case of bit-flip of data_in_ready signal
                  if buff_counter < 5 then 
                   buff_reg(buff_counter) <= data_in;
                   buff_counter <= buff_counter + 1 ;
                   data_out_valid   <= '0';   
-                 else 
-                  buff_reg(5) <= data_in ;
+               
                  end if ; 
-     elsif  data_in_ready =  '1' and data_in_valid = '0' and buff_counter = 0  and   pilot_insertion = '0' then --!starting case
+     elsif  data_in_ready =  '1' and data_in_valid = '0' and buff_counter = 0  then 
                  
                  
                   k := 0 ;
-
-                  if end_of_frame = '0'then   
-                    data_out_last  <= '0' ;               
-                    data_out_ready <= '1';                           
-                    last_frame <= '0';
-                    
-                 else 
-                   data_out_ready <= '0';                           
-
---                         data_out_last <= '0' ;
-                   --! if the frame does not fit in the 896 symbols block, start the padding process adding only 0s (the 0 symbol value change depending from the modulation) and then add the pilot      
-                    if symbol_counter < 895 then 
-                       data_out_last <= '0' ;
-                       last_frame <= '0';
-                       case mod_type is 
-                         when "000" =>  --bpsk
-                            i_out   <= "100000000001";   -- -2047
-                            q_out   <= "000000000000";  
-                        when "001" => --qpsk
-          
-                            i_out   <= "010110100111";            -- 1447
-                            q_out   <= "010110100111";            -- -1447
-                         
-                         when "010" => --qam16
-                           i_out   <= "100000000001";            -- -2047
-                           q_out   <= "011111111111";  
-                         
-                         when "011" => --qam32
-            
-                           i_out   <= "101100110011";            -- -1229
-                           q_out   <= "011111111111";            -- 2047         
-                         
-                          when "100" => --qam64
-            
-                           i_out   <= "100000000001";            -- -2047
-                           q_out   <= "011111111111";            -- 2047
-                        
-                          when "101" => --apsk16
-                     
-                          i_out   <= "000111100010";            -- 482
-                          q_out   <= "000111100010";            -- 482
-                          	
-		                  when "110" => --apsk32
-            
-                          i_out   <= "000100100001";            -- 289
-                          q_out   <= "000100100001";            -- 289
-                          
-                          when "111" => --apsk64
-            
-                          i_out   <= "000011001111";            -- -1340
-                          q_out   <= "000011001111";            -- -1340 
-                          when others => 
-                          null ;
-                    end case ;
-                    symbol_counter := symbol_counter + 1 ;   
-                    data_out_valid <= '1';
-                    else    
-                             last_frame <= '1';
-                             data_out_last <= '1' ;
-                             data_out_valid <= '0';
-                    end if ;
-                end if ;
-     elsif  data_in_ready =  '1' and data_in_valid = '0' and buff_counter = 0  and   pilot_insertion = '1' then   
-              k := 0 ;
-              data_out_ready <= '0';   
-              data_out_valid <= '0';
-              data_out_last  <= '0' ;
-              symbol_counter := 0 ; 
+                  data_out_last  <= '0' ;               
+                  data_out_ready <= '1';   
+                  data_out_valid <= '0';
+                       
      else 
                     data_out_ready <= '0';
                     data_out_valid <= '0';
+                    data_out_last  <= '0' ;               
+
        end if ;
       end if;
 

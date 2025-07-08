@@ -18,6 +18,5 @@
 ./compile_FI.sh
 ./elaborate_FI.sh
 ./good_sim1.sh
-./fault_sim_parallel.sh
+./fault_sim.sh
 
-echo "All fault injection runs completed."

@@ -23,7 +23,7 @@ bin_path="/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin"
 xmsim_opts="-64bit -logfile simulate.log"
 
 # set fault injection parameters
-fi_opts="-fault_overwrite -fault_good_run -fault_type SEU -input strobe_points.tcl -fault_tw 50ns:350ns  -fault_work fault_db2"
+fi_opts="-fault_overwrite -fault_good_run -fault_type SET+100ps  -fault_tw 50ns:450ns -input strobe_list.tcl -fault_work fault_db2"
 #fi_opts="-fault_overwrite -fault_good_run -fault_type SET -fault_num_nodes 5 -fault_tw 100ns:300ns  -input strobe.tcl"
 
 # run simulation

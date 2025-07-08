@@ -15,9 +15,8 @@
 #
 # ****************************************************************************
 
-#./compile.sh
-#./elaborate_FI_2.sh
+./compile_FI.sh
+./elaborate_FI_2.sh
 ./good_sim2.sh
-./fault_sim_2.sh
-
+./fault_sim_parallel_SET.sh
 echo "All fault injection runs completed."

@@ -1,5 +1,5 @@
 xmelab(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
-TOOL:	xmelab(64)	20.09-s007: Started on Jun 05, 2025 at 18:27:50 CEST
+TOOL:	xmelab(64)	20.09-s007: Started on Jun 16, 2025 at 10:37:52 CEST
 xmelab
     -64bit
     -relax
@@ -20,6 +20,6 @@ xmelab: *W,CUDEFB: default binding occurred for component instance (:mapper_tb(b
 		Components:         3       2
 		Default bindings:   1       -
 		Processes:          3       3
-		Signals:           17      17
+		Signals:           18      18
 	Writing initial simulation snapshot: XIL_DEFAULTLIB.MAPPER_TB:BEHAVIOR
-TOOL:	xmelab(64)	20.09-s007: Exiting on Jun 05, 2025 at 18:27:50 CEST  (total: 00:00:00)
+TOOL:	xmelab(64)	20.09-s007: Exiting on Jun 16, 2025 at 10:37:53 CEST  (total: 00:00:01)

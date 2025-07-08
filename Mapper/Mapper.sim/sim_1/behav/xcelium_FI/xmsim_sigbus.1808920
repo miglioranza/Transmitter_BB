@@ -1,0 +1,3126 @@
+//
+// SIGBUS Diagnostics for Cadence Design Systems R&D
+//
+// This file contains potentially useful information in case of
+// ungraceful termination. Look at the output dumped after this for 
+// potential problems. If you notice any filenames ending with '(deleted)' they were
+// deleted after they had been loaded into program memory. This can cause
+// random crashes and/or unpredictable behaviour. Please prevent any writes to those files
+// while the program is running.
+
+Address of instruction where the signal was raised: 0x7fe37c9310c0
+Values from siginfo_t: si_addr=0x7fe39243b010 si_code=2
+
+// Contents of /proc/meminfo: {
+MemTotal:       131916760 kB
+MemFree:        64811692 kB
+MemAvailable:   94920104 kB
+Buffers:          899016 kB
+Cached:         31696400 kB
+SwapCached:      1737872 kB
+Active:         25715208 kB
+Inactive:       35421024 kB
+Active(anon):    9404848 kB
+Inactive(anon): 23633748 kB
+Active(file):   16310360 kB
+Inactive(file): 11787276 kB
+Unevictable:         208 kB
+Mlocked:             208 kB
+SwapTotal:      33554428 kB
+SwapFree:       24205420 kB
+Dirty:               188 kB
+Writeback:            32 kB
+AnonPages:      26528680 kB
+Mapped:          2342416 kB
+Shmem:           4497784 kB
+KReclaimable:    3450420 kB
+Slab:            4714336 kB
+SReclaimable:    3450420 kB
+SUnreclaim:      1263916 kB
+KernelStack:       90768 kB
+PageTables:       469428 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    99512808 kB
+Committed_AS:   101310584 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      243932 kB
+VmallocChunk:          0 kB
+Percpu:           383232 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:  18948096 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:     4105324 kB
+DirectMap2M:    120610816 kB
+DirectMap1G:    11534336 kB
+// }
+
+// Contents of /proc/1808920/maps: {
+0000f000-00010000 ---p 00000000 00:00 0 
+00400000-0294c000 r-xp 00000000 00:39 115710624                          /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/bin/64bit/xmsim
+02b4c000-02b86000 r--p 0254c000 00:39 115710624                          /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/bin/64bit/xmsim
+02b86000-02d45000 rw-p 02586000 00:39 115710624                          /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/bin/64bit/xmsim
+02d45000-03ee0000 rw-p 00000000 00:00 0 
+05e37000-06350000 rw-p 00000000 00:00 0                                  [heap]
+06350000-06368000 rwxp 00000000 00:00 0                                  [heap]
+06368000-063c0000 rw-p 00000000 00:00 0                                  [heap]
+063c0000-063e3000 rwxp 00000000 00:00 0                                  [heap]
+063e3000-064bf000 rw-p 00000000 00:00 0                                  [heap]
+064bf000-065ba000 rwxp 00000000 00:00 0                                  [heap]
+065ba000-06eb8000 rw-p 00000000 00:00 0                                  [heap]
+7fe37c900000-7fe37c975000 r-xp 00000000 00:39 71258069                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/simvision/lib/64bit/libdwapi.so
+7fe37c975000-7fe37cb74000 ---p 00075000 00:39 71258069                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/simvision/lib/64bit/libdwapi.so
+7fe37cb74000-7fe37cb77000 r--p 00074000 00:39 71258069                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/simvision/lib/64bit/libdwapi.so
+7fe37cb77000-7fe37cb78000 rw-p 00077000 00:39 71258069                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/simvision/lib/64bit/libdwapi.so
+7fe37cb78000-7fe37cb91000 r-xp 00000000 00:39 56969667                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libz_sh.so
+7fe37cb91000-7fe37cd90000 ---p 00019000 00:39 56969667                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libz_sh.so
+7fe37cd90000-7fe37cd91000 r--p 00018000 00:39 56969667                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libz_sh.so
+7fe37cd91000-7fe37cd92000 rw-p 00019000 00:39 56969667                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libz_sh.so
+7fe37cd92000-7fe37d2bc000 r-xp 00000000 00:39 76079391                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/ucd/lib/64bit/libucis.so
+7fe37d2bc000-7fe37d4bb000 ---p 0052a000 00:39 76079391                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/ucd/lib/64bit/libucis.so
+7fe37d4bb000-7fe37d525000 r--p 00529000 00:39 76079391                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/ucd/lib/64bit/libucis.so
+7fe37d525000-7fe37d526000 rw-p 00593000 00:39 76079391                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/ucd/lib/64bit/libucis.so
+7fe37d526000-7fe37d53d000 rw-p 00000000 00:00 0 
+7fe37d53d000-7fe37d694000 r-xp 00000000 00:39 70360563                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/lib/64bit/libcfault.so
+7fe37d694000-7fe37d894000 ---p 00157000 00:39 70360563                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/lib/64bit/libcfault.so
+7fe37d894000-7fe37d89d000 r--p 00157000 00:39 70360563                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/lib/64bit/libcfault.so
+7fe37d89d000-7fe37d8a0000 rw-p 00160000 00:39 70360563                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/lib/64bit/libcfault.so
+7fe37d8a0000-7fe37daa3000 rw-p 00000000 00:00 0 
+7fe37dc66000-7fe380e5a000 rw-p 00000000 00:00 0 
+7fe380e5a000-7fe381001000 rwxp 00000000 00:00 0 
+7fe381001000-7fe381b54000 rw-p 00000000 00:00 0 
+7fe381b54000-7fe381b75000 r-xp 00000000 00:39 15530883                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/methodology/UVM/CDNS-1.1d/ml/lib/64bit/libml_uvm.so
+7fe381b75000-7fe381d74000 ---p 00021000 00:39 15530883                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/methodology/UVM/CDNS-1.1d/ml/lib/64bit/libml_uvm.so
+7fe381d74000-7fe381d75000 r--p 00020000 00:39 15530883                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/methodology/UVM/CDNS-1.1d/ml/lib/64bit/libml_uvm.so
+7fe381d75000-7fe381d76000 rw-p 00021000 00:39 15530883                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/methodology/UVM/CDNS-1.1d/ml/lib/64bit/libml_uvm.so
+7fe381d76000-7fe381d78000 ---p 00000000 00:00 0 
+7fe381d78000-7fe382574000 rwxp 00000000 00:00 0 
+7fe382574000-7fe382576000 ---p 00000000 00:00 0 
+7fe382576000-7fe3826e3000 r-xp 00000000 00:39 123125848                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libStrapNC.so
+7fe3826e3000-7fe3828e2000 ---p 0016d000 00:39 123125848                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libStrapNC.so
+7fe3828e2000-7fe3828e4000 r--p 0016c000 00:39 123125848                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libStrapNC.so
+7fe3828e4000-7fe382919000 rw-p 0016e000 00:39 123125848                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libStrapNC.so
+7fe382919000-7fe382927000 rw-p 00000000 00:00 0 
+7fe382927000-7fe3829c9000 r-xp 00000000 00:39 71258072                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/simvision/lib/64bit/libdcapi.so
+7fe3829c9000-7fe382bc9000 ---p 000a2000 00:39 71258072                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/simvision/lib/64bit/libdcapi.so
+7fe382bc9000-7fe382bca000 r--p 000a2000 00:39 71258072                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/simvision/lib/64bit/libdcapi.so
+7fe382bca000-7fe382bd5000 rw-p 000a3000 00:39 71258072                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/simvision/lib/64bit/libdcapi.so
+7fe382bd5000-7fe382bd6000 rw-p 00000000 00:00 0 
+7fe382bd6000-7fe382bdb000 r-xp 00000000 fd:00 2364090                    /usr/lib64/libnss_dns-2.28.so
+7fe382bdb000-7fe382ddb000 ---p 00005000 fd:00 2364090                    /usr/lib64/libnss_dns-2.28.so
+7fe382ddb000-7fe382ddc000 r--p 00005000 fd:00 2364090                    /usr/lib64/libnss_dns-2.28.so
+7fe382ddc000-7fe382ddd000 rw-p 00006000 fd:00 2364090                    /usr/lib64/libnss_dns-2.28.so
+7fe382ddd000-7fe382df1000 r-xp 00000000 fd:00 2386881                    /usr/lib64/libresolv-2.28.so
+7fe382df1000-7fe382ff1000 ---p 00014000 fd:00 2386881                    /usr/lib64/libresolv-2.28.so
+7fe382ff1000-7fe382ff2000 r--p 00014000 fd:00 2386881                    /usr/lib64/libresolv-2.28.so
+7fe382ff2000-7fe382ff3000 rw-p 00015000 fd:00 2386881                    /usr/lib64/libresolv-2.28.so
+7fe382ff3000-7fe382ff5000 rw-p 00000000 00:00 0 
+7fe382ff5000-7fe382ff8000 r-xp 00000000 fd:00 2374408                    /usr/lib64/libnss_mdns4_minimal.so.2
+7fe382ff8000-7fe3831f8000 ---p 00003000 fd:00 2374408                    /usr/lib64/libnss_mdns4_minimal.so.2
+7fe3831f8000-7fe3831f9000 r--p 00003000 fd:00 2374408                    /usr/lib64/libnss_mdns4_minimal.so.2
+7fe3831f9000-7fe3831fa000 rw-p 00000000 00:00 0 
+7fe3831fa000-7fe383ace000 r--s 00000000 fd:03 2754531                    /var/lib/sss/mc/passwd
+7fe383ace000-7fe383ad8000 r-xp 00000000 fd:00 2376648                    /usr/lib64/libnss_sss.so.2
+7fe383ad8000-7fe383cd7000 ---p 0000a000 fd:00 2376648                    /usr/lib64/libnss_sss.so.2
+7fe383cd7000-7fe383cd8000 r--p 00009000 fd:00 2376648                    /usr/lib64/libnss_sss.so.2
+7fe383cd8000-7fe383cd9000 rw-p 0000a000 fd:00 2376648                    /usr/lib64/libnss_sss.so.2
+7fe383cd9000-7fe383ce4000 r-xp 00000000 fd:00 2364092                    /usr/lib64/libnss_files-2.28.so
+7fe383ce4000-7fe383ee4000 ---p 0000b000 fd:00 2364092                    /usr/lib64/libnss_files-2.28.so
+7fe383ee4000-7fe383ee5000 r--p 0000b000 fd:00 2364092                    /usr/lib64/libnss_files-2.28.so
+7fe383ee5000-7fe383ee6000 rw-p 0000c000 fd:00 2364092                    /usr/lib64/libnss_files-2.28.so
+7fe383ee6000-7fe383eec000 rw-p 00000000 00:00 0 
+7fe383eec000-7fe390ea2000 r--p 00000000 fd:00 2491133                    /usr/lib/locale/locale-archive
+7fe390ea2000-7fe390eff000 r-xp 00000000 00:39 119759428                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/lib/64bit/libcbreakpad.so
+7fe390eff000-7fe3910ff000 ---p 0005d000 00:39 119759428                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/lib/64bit/libcbreakpad.so
+7fe3910ff000-7fe391100000 r--p 0005d000 00:39 119759428                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/lib/64bit/libcbreakpad.so
+7fe391100000-7fe391103000 rw-p 0005e000 00:39 119759428                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/lib/64bit/libcbreakpad.so
+7fe391103000-7fe39110a000 rw-p 00000000 00:00 0 
+7fe39110a000-7fe3912d7000 r-xp 00000000 fd:00 2364080                    /usr/lib64/libc-2.28.so
+7fe3912d7000-7fe3914d6000 ---p 001cd000 fd:00 2364080                    /usr/lib64/libc-2.28.so
+7fe3914d6000-7fe3914da000 r--p 001cc000 fd:00 2364080                    /usr/lib64/libc-2.28.so
+7fe3914da000-7fe3914dc000 rw-p 001d0000 fd:00 2364080                    /usr/lib64/libc-2.28.so
+7fe3914dc000-7fe3914e0000 rw-p 00000000 00:00 0 
+7fe3914e0000-7fe3914f6000 r-xp 00000000 00:39 106553690                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libgcc_s.so.1
+7fe3914f6000-7fe3916f5000 ---p 00016000 00:39 106553690                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libgcc_s.so.1
+7fe3916f5000-7fe3916f6000 r--p 00015000 00:39 106553690                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libgcc_s.so.1
+7fe3916f6000-7fe3916f7000 rw-p 00016000 00:39 106553690                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libgcc_s.so.1
+7fe3916f7000-7fe391869000 r-xp 00000000 00:39 60681178                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libstdc++.so.6.0.22
+7fe391869000-7fe391a68000 ---p 00172000 00:39 60681178                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libstdc++.so.6.0.22
+7fe391a68000-7fe391a72000 r--p 00171000 00:39 60681178                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libstdc++.so.6.0.22
+7fe391a72000-7fe391a74000 rw-p 0017b000 00:39 60681178                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libstdc++.so.6.0.22
+7fe391a74000-7fe391a78000 rw-p 00000000 00:00 0 
+7fe391a78000-7fe391bf9000 r-xp 00000000 fd:00 2364084                    /usr/lib64/libm-2.28.so
+7fe391bf9000-7fe391df8000 ---p 00181000 fd:00 2364084                    /usr/lib64/libm-2.28.so
+7fe391df8000-7fe391df9000 r--p 00180000 fd:00 2364084                    /usr/lib64/libm-2.28.so
+7fe391df9000-7fe391dfa000 rw-p 00181000 fd:00 2364084                    /usr/lib64/libm-2.28.so
+7fe391dfa000-7fe391dfd000 r-xp 00000000 fd:00 2364082                    /usr/lib64/libdl-2.28.so
+7fe391dfd000-7fe391ffc000 ---p 00003000 fd:00 2364082                    /usr/lib64/libdl-2.28.so
+7fe391ffc000-7fe391ffd000 r--p 00002000 fd:00 2364082                    /usr/lib64/libdl-2.28.so
+7fe391ffd000-7fe391ffe000 rw-p 00003000 fd:00 2364082                    /usr/lib64/libdl-2.28.so
+7fe391ffe000-7fe392019000 r-xp 00000000 fd:00 2386879                    /usr/lib64/libpthread-2.28.so
+7fe392019000-7fe392218000 ---p 0001b000 fd:00 2386879                    /usr/lib64/libpthread-2.28.so
+7fe392218000-7fe392219000 r--p 0001a000 fd:00 2386879                    /usr/lib64/libpthread-2.28.so
+7fe392219000-7fe39221a000 rw-p 0001b000 fd:00 2386879                    /usr/lib64/libpthread-2.28.so
+7fe39221a000-7fe39221e000 rw-p 00000000 00:00 0 
+7fe39221e000-7fe39224d000 r-xp 00000000 fd:00 2364073                    /usr/lib64/ld-2.28.so
+7fe39224f000-7fe3923a0000 rw-p 00000000 00:00 0 
+7fe3923a0000-7fe3923a2000 ---p 00000000 00:00 0 
+7fe3923a2000-7fe3923e2000 rw-p 00000000 00:00 0 
+7fe3923e2000-7fe3923e4000 ---p 00000000 00:00 0 
+7fe3923e4000-7fe3923e6000 rw-p 00000000 00:00 0 
+7fe3923e6000-7fe3923e8000 ---p 00000000 00:00 0 
+7fe3923e8000-7fe392428000 rw-p 00000000 00:00 0 
+7fe392428000-7fe39242a000 ---p 00000000 00:00 0 
+7fe39242a000-7fe392433000 rw-p 00000000 00:00 0 
+7fe39243b000-7fe39244b000 rw-s 00000000 00:33 58923674                   /home/miglioranza/Mapper/Mapper.sim/sim_1/behav/xcelium_FI/waves.shm/waves.dsn (deleted)
+7fe39244b000-7fe39244d000 rw-p 00000000 00:00 0 
+7fe39244d000-7fe39244e000 r--p 0002f000 fd:00 2364073                    /usr/lib64/ld-2.28.so
+7fe39244e000-7fe392450000 rw-p 00030000 fd:00 2364073                    /usr/lib64/ld-2.28.so
+7ffe4188f000-7ffe41915000 rwxp 00000000 00:00 0                          [stack]
+7ffe419db000-7ffe419df000 r--p 00000000 00:00 0                          [vvar]
+7ffe419df000-7ffe419e1000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+// }
+
+// Contents of /proc/1808920/smaps: {
+0000f000-00010000 ---p 00000000 00:00 0 
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    1
+VmFlags: mr mw me lo sd 
+00400000-0294c000 r-xp 00000000 00:39 115710624                          /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/bin/64bit/xmsim
+Size:              38192 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:               18648 kB
+Pss:                 651 kB
+Shared_Clean:      18648 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:        18648 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex mr mw me dw sd 
+02b4c000-02b86000 r--p 0254c000 00:39 115710624                          /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/bin/64bit/xmsim
+Size:                232 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 216 kB
+Pss:                  18 kB
+Shared_Clean:        200 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        16 kB
+Referenced:          216 kB
+Anonymous:            16 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr mw me dw ac sd 
+02b86000-02d45000 rw-p 02586000 00:39 115710624                          /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/bin/64bit/xmsim
+Size:               1788 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 896 kB
+Pss:                 302 kB
+Shared_Clean:        612 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:       284 kB
+Referenced:          896 kB
+Anonymous:           284 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me dw ac sd 
+02d45000-03ee0000 rw-p 00000000 00:00 0 
+Size:              18028 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:               15232 kB
+Pss:               15232 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:     15232 kB
+Referenced:        15232 kB
+Anonymous:         15232 kB
+LazyFree:              0 kB
+AnonHugePages:     12288 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    1
+VmFlags: rd wr mr mw me ac sd 
+05e37000-06350000 rw-p 00000000 00:00 0                                  [heap]
+Size:               5220 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                4636 kB
+Pss:                4636 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:      4636 kB
+Referenced:         4636 kB
+Anonymous:          4636 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    1
+VmFlags: rd wr mr mw me ac sd 
+06350000-06368000 rwxp 00000000 00:00 0                                  [heap]
+Size:                 96 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  96 kB
+Pss:                  96 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        96 kB
+Referenced:           96 kB
+Anonymous:            96 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr ex mr mw me ac sd 
+06368000-063c0000 rw-p 00000000 00:00 0                                  [heap]
+Size:                352 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 352 kB
+Pss:                 352 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:       352 kB
+Referenced:          352 kB
+Anonymous:           352 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+063c0000-063e3000 rwxp 00000000 00:00 0                                  [heap]
+Size:                140 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 140 kB
+Pss:                 140 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:       140 kB
+Referenced:          140 kB
+Anonymous:           140 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr ex mr mw me ac sd 
+063e3000-064bf000 rw-p 00000000 00:00 0                                  [heap]
+Size:                880 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 880 kB
+Pss:                 880 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:       880 kB
+Referenced:          880 kB
+Anonymous:           880 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+064bf000-065ba000 rwxp 00000000 00:00 0                                  [heap]
+Size:               1004 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                1004 kB
+Pss:                1004 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:      1004 kB
+Referenced:         1004 kB
+Anonymous:          1004 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr ex mr mw me ac sd 
+065ba000-06eb8000 rw-p 00000000 00:00 0                                  [heap]
+Size:               9208 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                9172 kB
+Pss:                9172 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:      9172 kB
+Referenced:         9172 kB
+Anonymous:          9172 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    1
+VmFlags: rd wr mr mw me ac sd 
+7fe37c900000-7fe37c975000 r-xp 00000000 00:39 71258069                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/simvision/lib/64bit/libdwapi.so
+Size:                468 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 384 kB
+Pss:                  35 kB
+Shared_Clean:        384 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:          384 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex mr mw me sd 
+7fe37c975000-7fe37cb74000 ---p 00075000 00:39 71258069                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/simvision/lib/64bit/libdwapi.so
+Size:               2044 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me sd 
+7fe37cb74000-7fe37cb77000 r--p 00074000 00:39 71258069                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/simvision/lib/64bit/libdwapi.so
+Size:                 12 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  12 kB
+Pss:                  12 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        12 kB
+Referenced:           12 kB
+Anonymous:            12 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr mw me ac sd 
+7fe37cb77000-7fe37cb78000 rw-p 00077000 00:39 71258069                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/simvision/lib/64bit/libdwapi.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe37cb78000-7fe37cb91000 r-xp 00000000 00:39 56969667                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libz_sh.so
+Size:                100 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  64 kB
+Pss:                   5 kB
+Shared_Clean:         64 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           64 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex mr mw me sd 
+7fe37cb91000-7fe37cd90000 ---p 00019000 00:39 56969667                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libz_sh.so
+Size:               2044 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me sd 
+7fe37cd90000-7fe37cd91000 r--p 00018000 00:39 56969667                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libz_sh.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr mw me ac sd 
+7fe37cd91000-7fe37cd92000 rw-p 00019000 00:39 56969667                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libz_sh.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe37cd92000-7fe37d2bc000 r-xp 00000000 00:39 76079391                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/ucd/lib/64bit/libucis.so
+Size:               5288 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                4176 kB
+Pss:                 350 kB
+Shared_Clean:       4176 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:         4176 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex mr mw me sd 
+7fe37d2bc000-7fe37d4bb000 ---p 0052a000 00:39 76079391                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/ucd/lib/64bit/libucis.so
+Size:               2044 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me sd 
+7fe37d4bb000-7fe37d525000 r--p 00529000 00:39 76079391                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/ucd/lib/64bit/libucis.so
+Size:                424 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 424 kB
+Pss:                 424 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:       424 kB
+Referenced:          424 kB
+Anonymous:           424 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr mw me ac sd 
+7fe37d525000-7fe37d526000 rw-p 00593000 00:39 76079391                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/ucd/lib/64bit/libucis.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe37d526000-7fe37d53d000 rw-p 00000000 00:00 0 
+Size:                 92 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  88 kB
+Pss:                  88 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        88 kB
+Referenced:           88 kB
+Anonymous:            88 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe37d53d000-7fe37d694000 r-xp 00000000 00:39 70360563                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/lib/64bit/libcfault.so
+Size:               1372 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 644 kB
+Pss:                  52 kB
+Shared_Clean:        644 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:          644 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex mr mw me sd 
+7fe37d694000-7fe37d894000 ---p 00157000 00:39 70360563                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/lib/64bit/libcfault.so
+Size:               2048 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me sd 
+7fe37d894000-7fe37d89d000 r--p 00157000 00:39 70360563                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/lib/64bit/libcfault.so
+Size:                 36 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  36 kB
+Pss:                  36 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        36 kB
+Referenced:           36 kB
+Anonymous:            36 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr mw me ac sd 
+7fe37d89d000-7fe37d8a0000 rw-p 00160000 00:39 70360563                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/lib/64bit/libcfault.so
+Size:                 12 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  12 kB
+Pss:                  12 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        12 kB
+Referenced:           12 kB
+Anonymous:            12 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe37d8a0000-7fe37daa3000 rw-p 00000000 00:00 0 
+Size:               2060 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                2056 kB
+Pss:                2056 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:      2056 kB
+Referenced:         2056 kB
+Anonymous:          2056 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe37dc66000-7fe380e5a000 rw-p 00000000 00:00 0 
+Size:              51152 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:               51152 kB
+Pss:               51152 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:     51152 kB
+Referenced:        51152 kB
+Anonymous:         51152 kB
+LazyFree:              0 kB
+AnonHugePages:     38912 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    1
+VmFlags: rd wr mr mw me ac sd 
+7fe380e5a000-7fe381001000 rwxp 00000000 00:00 0 
+Size:               1692 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                1692 kB
+Pss:                1692 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:      1692 kB
+Referenced:         1692 kB
+Anonymous:          1692 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr ex mr mw me ac sd 
+7fe381001000-7fe381b54000 rw-p 00000000 00:00 0 
+Size:              11596 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:               11596 kB
+Pss:               11596 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:     11596 kB
+Referenced:        11596 kB
+Anonymous:         11596 kB
+LazyFree:              0 kB
+AnonHugePages:      6144 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    1
+VmFlags: rd wr mr mw me ac sd 
+7fe381b54000-7fe381b75000 r-xp 00000000 00:39 15530883                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/methodology/UVM/CDNS-1.1d/ml/lib/64bit/libml_uvm.so
+Size:                132 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  60 kB
+Pss:                   2 kB
+Shared_Clean:         60 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           60 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex mr mw me sd 
+7fe381b75000-7fe381d74000 ---p 00021000 00:39 15530883                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/methodology/UVM/CDNS-1.1d/ml/lib/64bit/libml_uvm.so
+Size:               2044 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me sd 
+7fe381d74000-7fe381d75000 r--p 00020000 00:39 15530883                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/methodology/UVM/CDNS-1.1d/ml/lib/64bit/libml_uvm.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr mw me ac sd 
+7fe381d75000-7fe381d76000 rw-p 00021000 00:39 15530883                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/methodology/UVM/CDNS-1.1d/ml/lib/64bit/libml_uvm.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe381d76000-7fe381d78000 ---p 00000000 00:00 0 
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me nr sd 
+7fe381d78000-7fe382574000 rwxp 00000000 00:00 0 
+Size:               8176 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    1
+VmFlags: rd wr ex mr mw me nr sd 
+7fe382574000-7fe382576000 ---p 00000000 00:00 0 
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me nr sd 
+7fe382576000-7fe3826e3000 r-xp 00000000 00:39 123125848                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libStrapNC.so
+Size:               1460 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 744 kB
+Pss:                  34 kB
+Shared_Clean:        740 kB
+Shared_Dirty:          0 kB
+Private_Clean:         4 kB
+Private_Dirty:         0 kB
+Referenced:          744 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex mr mw me sd 
+7fe3826e3000-7fe3828e2000 ---p 0016d000 00:39 123125848                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libStrapNC.so
+Size:               2044 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me sd 
+7fe3828e2000-7fe3828e4000 r--p 0016c000 00:39 123125848                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libStrapNC.so
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   8 kB
+Pss:                   8 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         8 kB
+Referenced:            8 kB
+Anonymous:             8 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr mw me ac sd 
+7fe3828e4000-7fe382919000 rw-p 0016e000 00:39 123125848                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libStrapNC.so
+Size:                212 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 144 kB
+Pss:                 120 kB
+Shared_Clean:         24 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:       120 kB
+Referenced:          144 kB
+Anonymous:           120 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe382919000-7fe382927000 rw-p 00000000 00:00 0 
+Size:                 56 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  12 kB
+Pss:                  12 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        12 kB
+Referenced:           12 kB
+Anonymous:            12 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe382927000-7fe3829c9000 r-xp 00000000 00:39 71258072                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/simvision/lib/64bit/libdcapi.so
+Size:                648 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 608 kB
+Pss:                  22 kB
+Shared_Clean:        608 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:          608 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex mr mw me sd 
+7fe3829c9000-7fe382bc9000 ---p 000a2000 00:39 71258072                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/simvision/lib/64bit/libdcapi.so
+Size:               2048 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me sd 
+7fe382bc9000-7fe382bca000 r--p 000a2000 00:39 71258072                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/simvision/lib/64bit/libdcapi.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr mw me ac sd 
+7fe382bca000-7fe382bd5000 rw-p 000a3000 00:39 71258072                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/simvision/lib/64bit/libdcapi.so
+Size:                 44 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  44 kB
+Pss:                  40 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        40 kB
+Referenced:           44 kB
+Anonymous:            40 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe382bd5000-7fe382bd6000 rw-p 00000000 00:00 0 
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe382bd6000-7fe382bdb000 r-xp 00000000 fd:00 2364090                    /usr/lib64/libnss_dns-2.28.so
+Size:                 20 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  20 kB
+Pss:                   0 kB
+Shared_Clean:         20 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           20 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex mr mw me sd 
+7fe382bdb000-7fe382ddb000 ---p 00005000 fd:00 2364090                    /usr/lib64/libnss_dns-2.28.so
+Size:               2048 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me sd 
+7fe382ddb000-7fe382ddc000 r--p 00005000 fd:00 2364090                    /usr/lib64/libnss_dns-2.28.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr mw me ac sd 
+7fe382ddc000-7fe382ddd000 rw-p 00006000 fd:00 2364090                    /usr/lib64/libnss_dns-2.28.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe382ddd000-7fe382df1000 r-xp 00000000 fd:00 2386881                    /usr/lib64/libresolv-2.28.so
+Size:                 80 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  76 kB
+Pss:                   0 kB
+Shared_Clean:         76 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           76 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex mr mw me sd 
+7fe382df1000-7fe382ff1000 ---p 00014000 fd:00 2386881                    /usr/lib64/libresolv-2.28.so
+Size:               2048 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me sd 
+7fe382ff1000-7fe382ff2000 r--p 00014000 fd:00 2386881                    /usr/lib64/libresolv-2.28.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr mw me ac sd 
+7fe382ff2000-7fe382ff3000 rw-p 00015000 fd:00 2386881                    /usr/lib64/libresolv-2.28.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe382ff3000-7fe382ff5000 rw-p 00000000 00:00 0 
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe382ff5000-7fe382ff8000 r-xp 00000000 fd:00 2374408                    /usr/lib64/libnss_mdns4_minimal.so.2
+Size:                 12 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  12 kB
+Pss:                   0 kB
+Shared_Clean:         12 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           12 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex mr mw me sd 
+7fe382ff8000-7fe3831f8000 ---p 00003000 fd:00 2374408                    /usr/lib64/libnss_mdns4_minimal.so.2
+Size:               2048 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me sd 
+7fe3831f8000-7fe3831f9000 r--p 00003000 fd:00 2374408                    /usr/lib64/libnss_mdns4_minimal.so.2
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr mw me ac sd 
+7fe3831f9000-7fe3831fa000 rw-p 00000000 00:00 0 
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe3831fa000-7fe383ace000 r--s 00000000 fd:03 2754531                    /var/lib/sss/mc/passwd
+Size:               9040 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  88 kB
+Pss:                   0 kB
+Shared_Clean:         88 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           88 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr me ms sd 
+7fe383ace000-7fe383ad8000 r-xp 00000000 fd:00 2376648                    /usr/lib64/libnss_sss.so.2
+Size:                 40 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  40 kB
+Pss:                   0 kB
+Shared_Clean:         40 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           40 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex mr mw me sd 
+7fe383ad8000-7fe383cd7000 ---p 0000a000 fd:00 2376648                    /usr/lib64/libnss_sss.so.2
+Size:               2044 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me sd 
+7fe383cd7000-7fe383cd8000 r--p 00009000 fd:00 2376648                    /usr/lib64/libnss_sss.so.2
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr mw me ac sd 
+7fe383cd8000-7fe383cd9000 rw-p 0000a000 fd:00 2376648                    /usr/lib64/libnss_sss.so.2
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe383cd9000-7fe383ce4000 r-xp 00000000 fd:00 2364092                    /usr/lib64/libnss_files-2.28.so
+Size:                 44 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  44 kB
+Pss:                   0 kB
+Shared_Clean:         44 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           44 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex mr mw me sd 
+7fe383ce4000-7fe383ee4000 ---p 0000b000 fd:00 2364092                    /usr/lib64/libnss_files-2.28.so
+Size:               2048 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me sd 
+7fe383ee4000-7fe383ee5000 r--p 0000b000 fd:00 2364092                    /usr/lib64/libnss_files-2.28.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr mw me ac sd 
+7fe383ee5000-7fe383ee6000 rw-p 0000c000 fd:00 2364092                    /usr/lib64/libnss_files-2.28.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe383ee6000-7fe383eec000 rw-p 00000000 00:00 0 
+Size:                 24 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe383eec000-7fe390ea2000 r--p 00000000 fd:00 2491133                    /usr/lib/locale/locale-archive
+Size:             212696 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 384 kB
+Pss:                   0 kB
+Shared_Clean:        384 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:          384 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr mw me sd 
+7fe390ea2000-7fe390eff000 r-xp 00000000 00:39 119759428                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/lib/64bit/libcbreakpad.so
+Size:                372 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 296 kB
+Pss:                   2 kB
+Shared_Clean:        296 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:          296 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex mr mw me sd 
+7fe390eff000-7fe3910ff000 ---p 0005d000 00:39 119759428                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/lib/64bit/libcbreakpad.so
+Size:               2048 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me sd 
+7fe3910ff000-7fe391100000 r--p 0005d000 00:39 119759428                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/lib/64bit/libcbreakpad.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr mw me ac sd 
+7fe391100000-7fe391103000 rw-p 0005e000 00:39 119759428                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/inca/lib/64bit/libcbreakpad.so
+Size:                 12 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  12 kB
+Pss:                  12 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        12 kB
+Referenced:           12 kB
+Anonymous:            12 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe391103000-7fe39110a000 rw-p 00000000 00:00 0 
+Size:                 28 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  16 kB
+Pss:                  16 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        16 kB
+Referenced:           16 kB
+Anonymous:            16 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe39110a000-7fe3912d7000 r-xp 00000000 fd:00 2364080                    /usr/lib64/libc-2.28.so
+Size:               1844 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                1624 kB
+Pss:                   1 kB
+Shared_Clean:       1624 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:         1624 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex mr mw me sd 
+7fe3912d7000-7fe3914d6000 ---p 001cd000 fd:00 2364080                    /usr/lib64/libc-2.28.so
+Size:               2044 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me sd 
+7fe3914d6000-7fe3914da000 r--p 001cc000 fd:00 2364080                    /usr/lib64/libc-2.28.so
+Size:                 16 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  16 kB
+Pss:                  16 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        16 kB
+Referenced:           16 kB
+Anonymous:            16 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr mw me ac sd 
+7fe3914da000-7fe3914dc000 rw-p 001d0000 fd:00 2364080                    /usr/lib64/libc-2.28.so
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   8 kB
+Pss:                   8 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         8 kB
+Referenced:            8 kB
+Anonymous:             8 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe3914dc000-7fe3914e0000 rw-p 00000000 00:00 0 
+Size:                 16 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  16 kB
+Pss:                  16 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        16 kB
+Referenced:           16 kB
+Anonymous:            16 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe3914e0000-7fe3914f6000 r-xp 00000000 00:39 106553690                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libgcc_s.so.1
+Size:                 88 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  88 kB
+Pss:                   0 kB
+Shared_Clean:         88 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           88 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex mr mw me sd 
+7fe3914f6000-7fe3916f5000 ---p 00016000 00:39 106553690                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libgcc_s.so.1
+Size:               2044 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me sd 
+7fe3916f5000-7fe3916f6000 r--p 00015000 00:39 106553690                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libgcc_s.so.1
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr mw me ac sd 
+7fe3916f6000-7fe3916f7000 rw-p 00016000 00:39 106553690                  /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libgcc_s.so.1
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe3916f7000-7fe391869000 r-xp 00000000 00:39 60681178                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libstdc++.so.6.0.22
+Size:               1480 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                1220 kB
+Pss:                   7 kB
+Shared_Clean:       1220 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:         1220 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex mr mw me sd 
+7fe391869000-7fe391a68000 ---p 00172000 00:39 60681178                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libstdc++.so.6.0.22
+Size:               2044 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me sd 
+7fe391a68000-7fe391a72000 r--p 00171000 00:39 60681178                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libstdc++.so.6.0.22
+Size:                 40 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  40 kB
+Pss:                  40 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        40 kB
+Referenced:           40 kB
+Anonymous:            40 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr mw me ac sd 
+7fe391a72000-7fe391a74000 rw-p 0017b000 00:39 60681178                   /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/lib/64bit/libstdc++.so.6.0.22
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   8 kB
+Pss:                   8 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         8 kB
+Referenced:            8 kB
+Anonymous:             8 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe391a74000-7fe391a78000 rw-p 00000000 00:00 0 
+Size:                 16 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  16 kB
+Pss:                  16 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        16 kB
+Referenced:           16 kB
+Anonymous:            16 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe391a78000-7fe391bf9000 r-xp 00000000 fd:00 2364084                    /usr/lib64/libm-2.28.so
+Size:               1540 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 384 kB
+Pss:                   1 kB
+Shared_Clean:        384 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:          384 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex mr mw me sd 
+7fe391bf9000-7fe391df8000 ---p 00181000 fd:00 2364084                    /usr/lib64/libm-2.28.so
+Size:               2044 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me sd 
+7fe391df8000-7fe391df9000 r--p 00180000 fd:00 2364084                    /usr/lib64/libm-2.28.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr mw me ac sd 
+7fe391df9000-7fe391dfa000 rw-p 00181000 fd:00 2364084                    /usr/lib64/libm-2.28.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe391dfa000-7fe391dfd000 r-xp 00000000 fd:00 2364082                    /usr/lib64/libdl-2.28.so
+Size:                 12 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  12 kB
+Pss:                   0 kB
+Shared_Clean:         12 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           12 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex mr mw me sd 
+7fe391dfd000-7fe391ffc000 ---p 00003000 fd:00 2364082                    /usr/lib64/libdl-2.28.so
+Size:               2044 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me sd 
+7fe391ffc000-7fe391ffd000 r--p 00002000 fd:00 2364082                    /usr/lib64/libdl-2.28.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr mw me ac sd 
+7fe391ffd000-7fe391ffe000 rw-p 00003000 fd:00 2364082                    /usr/lib64/libdl-2.28.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe391ffe000-7fe392019000 r-xp 00000000 fd:00 2386879                    /usr/lib64/libpthread-2.28.so
+Size:                108 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 108 kB
+Pss:                   0 kB
+Shared_Clean:        108 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:          108 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex mr mw me sd 
+7fe392019000-7fe392218000 ---p 0001b000 fd:00 2386879                    /usr/lib64/libpthread-2.28.so
+Size:               2044 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me sd 
+7fe392218000-7fe392219000 r--p 0001a000 fd:00 2386879                    /usr/lib64/libpthread-2.28.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr mw me ac sd 
+7fe392219000-7fe39221a000 rw-p 0001b000 fd:00 2386879                    /usr/lib64/libpthread-2.28.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe39221a000-7fe39221e000 rw-p 00000000 00:00 0 
+Size:                 16 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe39221e000-7fe39224d000 r-xp 00000000 fd:00 2364073                    /usr/lib64/ld-2.28.so
+Size:                188 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 188 kB
+Pss:                   0 kB
+Shared_Clean:        188 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:          188 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex mr mw me dw sd 
+7fe39224f000-7fe3923a0000 rw-p 00000000 00:00 0 
+Size:               1348 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                1096 kB
+Pss:                1096 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:      1096 kB
+Referenced:         1096 kB
+Anonymous:          1096 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe3923a0000-7fe3923a2000 ---p 00000000 00:00 0 
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me ac sd 
+7fe3923a2000-7fe3923e2000 rw-p 00000000 00:00 0 
+Size:                256 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe3923e2000-7fe3923e4000 ---p 00000000 00:00 0 
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me ac sd 
+7fe3923e4000-7fe3923e6000 rw-p 00000000 00:00 0 
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe3923e6000-7fe3923e8000 ---p 00000000 00:00 0 
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me ac sd 
+7fe3923e8000-7fe392428000 rw-p 00000000 00:00 0 
+Size:                256 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe392428000-7fe39242a000 ---p 00000000 00:00 0 
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: mr mw me ac sd 
+7fe39242a000-7fe392433000 rw-p 00000000 00:00 0 
+Size:                 36 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  28 kB
+Pss:                  28 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        28 kB
+Referenced:           28 kB
+Anonymous:            28 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe39243b000-7fe39244b000 rw-s 00000000 00:33 58923674                   /home/miglioranza/Mapper/Mapper.sim/sim_1/behav/xcelium_FI/waves.shm/waves.dsn (deleted)
+Size:                 64 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr sh mr mw me ms sd 
+7fe39244b000-7fe39244d000 rw-p 00000000 00:00 0 
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   8 kB
+Pss:                   8 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         8 kB
+Referenced:            8 kB
+Anonymous:             8 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me ac sd 
+7fe39244d000-7fe39244e000 r--p 0002f000 fd:00 2364073                    /usr/lib64/ld-2.28.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr mw me dw ac sd 
+7fe39244e000-7fe392450000 rw-p 00030000 fd:00 2364073                    /usr/lib64/ld-2.28.so
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   8 kB
+Pss:                   8 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         8 kB
+Referenced:            8 kB
+Anonymous:             8 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr mr mw me dw ac sd 
+7ffe4188f000-7ffe41915000 rwxp 00000000 00:00 0                          [stack]
+Size:                536 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 352 kB
+Pss:                 352 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:       352 kB
+Referenced:          352 kB
+Anonymous:           352 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd wr ex mr mw me gd ac 
+7ffe419db000-7ffe419df000 r--p 00000000 00:00 0                          [vvar]
+Size:                 16 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd mr pf io de dd sd 
+7ffe419df000-7ffe419e1000 r-xp 00000000 00:00 0                          [vdso]
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            4 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex mr mw me de sd 
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+THPeligible:    0
+VmFlags: rd ex 
+// }
+
+// Contents of /proc/1808920/limits: {
+Limit                     Soft Limit           Hard Limit           Units     
+Max cpu time              unlimited            unlimited            seconds   
+Max file size             unlimited            unlimited            bytes     
+Max data size             unlimited            unlimited            bytes     
+Max stack size            10485760             unlimited            bytes     
+Max core file size        0                    unlimited            bytes     
+Max resident set          unlimited            unlimited            bytes     
+Max processes             515068               515068               processes 
+Max open files            262144               262144               files     
+Max locked memory         65536                65536                bytes     
+Max address space         unlimited            unlimited            bytes     
+Max file locks            unlimited            unlimited            locks     
+Max pending signals       515068               515068               signals   
+Max msgqueue size         819200               819200               bytes     
+Max nice priority         0                    0                    
+Max realtime priority     0                    0                    
+Max realtime timeout      unlimited            unlimited            us        
+// }
+
+// Contents of /proc/1808920/status: {
+Name:	xmsim
+Umask:	0022
+State:	R (running)
+Tgid:	1808920
+Ngid:	0
+Pid:	1808920
+PPid:	1808914
+TracerPid:	0
+Uid:	1565	1565	1565	1565
+Gid:	20092	20092	20092	20092
+FDSize:	64
+Groups:	20009 20092 
+NStgid:	1808920
+NSpid:	1808920
+NSpgid:	1789718
+NSsid:	3203283
+VmPeak:	  429508 kB
+VmSize:	  429508 kB
+VmLck:	       4 kB
+VmPin:	       0 kB
+VmHWM:	  131028 kB
+VmRSS:	  131028 kB
+RssAnon:	  100784 kB
+RssFile:	   30244 kB
+RssShmem:	       0 kB
+VmData:	  113920 kB
+VmStk:	     536 kB
+VmExe:	   38192 kB
+VmLib:	   15304 kB
+VmPTE:	     436 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+CoreDumping:	0
+THP_enabled:	1
+Threads:	1
+SigQ:	162/515068
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000010006003
+SigIgn:	0000000000001000
+SigCgt:	0000000191884eef
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	000001ffffffffff
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	0
+Speculation_Store_Bypass:	thread vulnerable
+Cpus_allowed:	ffffffff,ffffffff,ffffffff
+Cpus_allowed_list:	0-95
+Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,0000000f
+Mems_allowed_list:	0-3
+voluntary_ctxt_switches:	2368
+nonvoluntary_ctxt_switches:	20
+// }
