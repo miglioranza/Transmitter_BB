@@ -102,7 +102,7 @@ port (
    mapper_din_data             : out std_logic_vector(5 downto 0) := (others => '0') ; --Preamble input data to mapper 
    mapper_din_valid            : out std_logic := '0' ;
 --   mapper_din_ready            : out std_logic := '0' ;
---   mapper_din_last             : out std_logic := '0';
+   mapper_din_last             : out std_logic := '0';
 --   mapper_pilot_insertion_en   : out std_logic := '0' ;  --signal for noticing the symbol mapper  if  pilot insertion has been completed or not 
    mapper_end_of_frame         : out std_logic := '0' ;   
 --   mapper_split_end            : out std_logic := '0'; 
@@ -246,7 +246,7 @@ port map(
     mapper_din_data             => mapper_din_data,
     mapper_din_valid            => mapper_din_valid,
 --    mapper_din_ready            => mapper_din_ready,
---    mapper_din_last             => mapper_din_last,
+    mapper_din_last             => mapper_din_last,
 --    mapper_pilot_insertion_en   => mapper_pilot_insertion_en,
     mapper_end_of_frame         => mapper_end_of_frame,
     encoder_code_rate           => encoder_code_rate,
@@ -311,9 +311,8 @@ wait for 100 ns ;
 mapper_dout_last <= '1';
 wait for clock_period ;
 mapper_dout_last <= '0';
-wait for clock_period ;--mapper_dout_last <= '0';
+wait for 500 ns ;--mapper_dout_last <= '0';
 
---wait until control_unit_dout_ready = '1' ;
 control_unit_din_valid <= '1';
 
 --if  control_unit_dout_ready = '1' then
@@ -333,7 +332,7 @@ interleaver_dout_data <= std_logic_vector(to_unsigned(j,32)) ;
 j:= j + 10 ;
 i := i + 1 ;
 interleaver_dout_valid <= '1';
-wait for clock_period  ;
+wait for clock_period *2 ;
 
 if i = 8 then 
 interleaver_dout_last <= '1';
@@ -343,12 +342,12 @@ interleaver_dout_last <= '0';
 end if ;
 --wait until mapper_split_end = '1' ;
 else 
---interleaver_dout_valid <= '0';
+interleaver_dout_valid <= '0';
 wait until clk'event and clk = '1';
 end if ;
 end loop ;
-wait until mapper_din_last = '1' ;
 interleaver_dout_valid <= '0';
+wait until  mapper_din_last = '1';
 interleaver_dout_last <= '0';
 i := 0 ; 
 wait for clock_period ;
@@ -365,7 +364,7 @@ interleaver_dout_data <= std_logic_vector(to_unsigned(j,32)) ;
 j:= j + 10 ;
 i := i + 1 ;
 interleaver_dout_valid <= '1';
-wait for clock_period ;
+wait for clock_period *2 ;
 
 if i = 50 then 
 interleaver_dout_last <= '1';
@@ -379,8 +378,8 @@ interleaver_dout_valid <= '0';
 wait until clk'event and clk = '1';
 end if ;
 end loop ;
-wait until mapper_din_last = '1' ;
 interleaver_dout_valid <= '0';
+wait until mapper_din_last = '1' ;
 interleaver_dout_last <= '0';
 i := 0 ; 
 
@@ -398,6 +397,7 @@ interleaver_dout_data <= std_logic_vector(to_unsigned(j,32)) ;
 j:= j + 10 ;
 i := i + 1 ;
 interleaver_dout_valid <= '1';
+wait for clock_period *2 ;
 
 if i = 50 then 
 interleaver_dout_last <= '1';
@@ -411,8 +411,8 @@ interleaver_dout_valid <= '0';
 wait until clk'event and clk = '1';
 end if ;
 end loop ;
-wait until mapper_din_last = '1' ;
 interleaver_dout_valid <= '0';
+wait until mapper_din_last = '1' ;
 interleaver_dout_last <= '0';
 i := 0 ; 
 --APSK16
@@ -426,6 +426,7 @@ interleaver_dout_data <= std_logic_vector(to_unsigned(j,32)) ;
 j:= j + 10 ;
 i := i + 1 ;
 interleaver_dout_valid <= '1';
+wait for clock_period * 2 ;
 
 if i = 50 then 
 interleaver_dout_last <= '1';
@@ -433,15 +434,14 @@ interleaver_dout_last <= '1';
 else 
 interleaver_dout_last <= '0';
 end if ;
-wait for clock_period * 2 ;
 --wait until mapper_split_end = '1' ;
 else 
 interleaver_dout_valid <= '0';
 wait until clk'event and clk = '1';
 end if ;
 end loop ;
-wait until mapper_din_last = '1' ;
 interleaver_dout_valid <= '0';
+wait until mapper_din_last = '1' ;
 interleaver_dout_last <= '0';
 i := 0 ; 
 --QAM32
@@ -461,6 +461,7 @@ interleaver_dout_data <= std_logic_vector(to_unsigned(j,32)) ;
 j:= j + 10 ;
 i := i + 1 ;
 interleaver_dout_valid <= '1';
+wait for clock_period * 2;
 
 if i = 50 then 
 interleaver_dout_last <= '1';
@@ -468,7 +469,6 @@ interleaver_dout_last <= '1';
 else 
 interleaver_dout_last <= '0';
 end if ;
-wait for clock_period * 2;
 
 --wait until mapper_split_end = '1' ;
 else 
@@ -476,8 +476,8 @@ interleaver_dout_valid <= '0';
 wait until clk'event and clk = '1';
 end if ;
 end loop ;
-wait until mapper_din_last = '1' ;
 interleaver_dout_valid <= '0';
+wait until mapper_din_last = '1' ;
 interleaver_dout_last <= '0';
 i := 0 ; 
 wait for 5 * clock_period ;

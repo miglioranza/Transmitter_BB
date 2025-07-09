@@ -94,7 +94,7 @@ entity Control_unit_top is
    mapper_din_last             : out std_logic := '0';
    mapper_end_of_frame         : out std_logic := '0' ; 
 
---   --DPD filter 
+  --DPD filter 
    
    dpd_dout_ready              :  in std_logic := '0';
    dpd_din_valid               :  out std_logic := '0';
@@ -633,12 +633,12 @@ elsif rising_edge(clk)  then
   if mapper_dout_last = '1' then 
      state <= PILOT ;
      signal_field_en <= '0';
-     control_unit_enable  <= '1';
+--     control_unit_enable  <= '0';
      n := 0 ;
   else 
        signal_field_en <= '1';
 --     pilot_insertion <= '0'; 
-     control_unit_enable <= '0';
+--       control_unit_enable <= '0';
   end if ;
  else 
   scrambler_din_valid     <= '0';
@@ -665,7 +665,6 @@ elsif rising_edge(clk)  then
 --            state <= PILOT ;
             end if ;       
         end if ;
-        --To be added an else statement  
      else 
  dpd_din_valid       <= '0';                              
     end if ;    
@@ -740,14 +739,11 @@ begin
       mapper_din_last <= '0';
    elsif rising_edge (clk) then    
 if mapper_dout_ready = '1' then 
-
-if temp = '0' and  interleaver_dout_valid = '1' then 
-splitter_data_in <= interleaver_dout_data ;
-interleaver_din_ready <= '0';
-data_process <= '1';
+mapper_selected_mod <= mod_cod_schemes(4 downto 2) ;
+if temp = '0' and data_process = '1' and  interleaver_dout_valid = '0'  then           
+mapper_din_last <= '0';     
 --mapper_din_last <= '0';   
 --    if interleaver_dout_valid = '1'  then
-    mapper_selected_mod <= mod_cod_schemes(4 downto 2) ;
      case mod_cod_schemes(4 downto 2) is    
             when "000" =>  --BPSK  
                 if index < (32 -1 ) then 
@@ -884,16 +880,16 @@ data_process <= '1';
 --            else 
 --             interleaver_din_ready <= '0';
 --            end if ; 
-                if  interleaver_dout_last = '1' then 
-                    mapper_din_last <= '1';
-                else
-                    mapper_din_last <= '0';     
-               end if ;    
+--                if  interleaver_dout_last = '1' then 
+--                    mapper_din_last <= '1';
+--                else
+--                    mapper_din_last <= '0';     
+--               end if ;    
                 --Control if padding for the last frame is necessary
                if signal_field_en = '0' then   
                      if  symbol_counter = 896 and interleaver_last_frame = '0' then 
                          symbol_counter := 0 ;
-                          padding := '0' ;
+                         padding := '0' ;
                      elsif symbol_counter <  896 and interleaver_last_frame = '1' then 
                            symbol_counter := symbol_counter + 1 ;
                            padding := '1' ;
@@ -905,13 +901,33 @@ data_process <= '1';
                    symbol_counter := 0 ;
                   
                end if ;
-elsif temp = '1' and interleaver_dout_valid = '0' then 
+elsif temp = '0' and   data_process = '0' and interleaver_dout_valid = '1' then 
+splitter_data_in <= interleaver_dout_data ;
+interleaver_din_ready <= '0';
+index := 0 ;   
+mapper_din_valid <= '0';   
+mapper_din_last <= '0';     
+data_process <= '1';
+elsif temp = '1'  and   data_process = '1' and interleaver_dout_valid = '0' then 
           interleaver_din_ready <= '1';
           temp <= '0';
-elsif start = 0 and interleaver_dout_valid = '0'  then   --starting state 
-          interleaver_din_ready <= '1';
-          start := 1 ;
+          data_process <= '0';
+          mapper_din_valid <= '0';   
+             if  interleaver_dout_last = '1' then 
+                    mapper_din_last <= '1';
+             else
+                    mapper_din_last <= '0';     
+             end if ; 
 
+elsif temp = '0' and data_process = '0' and interleaver_dout_valid = '0'  then   --starting state 
+          interleaver_din_ready <= '1';
+          mapper_din_valid <= '0';
+          mapper_din_last <= '0';        
+else
+            interleaver_din_ready <= '0';
+            mapper_din_valid <= '0'; 
+            mapper_din_last <= '0';       
+            
 end if ;
                   --Padding process
    if padding = '1' then 
@@ -924,8 +940,6 @@ end if ;
        else  
           mapper_din_valid <= '1';  
        end if ;  
-    else      
-             mapper_din_valid <= '0';
        end if ;
                
  else     
