@@ -1,0 +1,4 @@
+Running: xsim.dir/Symbol_mapper_tb_behav/xsimk -simmode gui -wdb Symbol_mapper_tb_behav.wdb -simrunnum 0 -socket 47899
+Design successfully loaded
+Design Loading Memory Usage: 43692 KB (Peak: 43812 KB)
+Design Loading CPU Usage: 90 ms
