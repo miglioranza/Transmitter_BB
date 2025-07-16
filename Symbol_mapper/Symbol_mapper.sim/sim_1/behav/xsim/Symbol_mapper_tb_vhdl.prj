@@ -1,7 +1,7 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
-"../../../../../../../ihp/departments/D-SYA/work/miglioranza/Symbol_mapper.vhd" \
-"../../../../../../../ihp/departments/D-SYA/work/miglioranza/Symbok_mapper_tb.vhd" \
+"../../../../Symbol_mapper.srcs/sources_1/new/Symbol_mapper.vhd" \
+"../../../../Symbol_mapper.srcs/sim_1/new/Symbol_mapper_tb.vhd" \
 
 # Do not sort compile order
 nosort

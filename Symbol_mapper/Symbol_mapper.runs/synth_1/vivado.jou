@@ -2,12 +2,12 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Mon Jul 14 15:49:25 2025
-# Process ID: 1809097
-# Current directory: /home/miglioranza/Symbol_mapper/Symbol_mapper.runs/synth_1
+# Start of session at: Wed Jul 16 11:36:20 2025
+# Process ID: 1126967
+# Current directory: /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.runs/synth_1
 # Command line: vivado -log Symbol_mapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Symbol_mapper.tcl
-# Log file: /home/miglioranza/Symbol_mapper/Symbol_mapper.runs/synth_1/Symbol_mapper.vds
-# Journal file: /home/miglioranza/Symbol_mapper/Symbol_mapper.runs/synth_1/vivado.jou
-# Running On: uxsrv005, OS: Linux, CPU Frequency: 3590.884 MHz, CPU Physical cores: 8, Host memory: 101335 MB
+# Log file: /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.runs/synth_1/Symbol_mapper.vds
+# Journal file: /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.runs/synth_1/vivado.jou
+# Running On: uxsrv034.ihp-ffo.de, OS: Linux, CPU Frequency: 3200.000 MHz, CPU Physical cores: 32, Host memory: 270349 MB
 #-----------------------------------------------------------
 source Symbol_mapper.tcl -notrace

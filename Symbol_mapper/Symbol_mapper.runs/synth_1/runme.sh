@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/miglioranza/Symbol_mapper/Symbol_mapper.runs/synth_1'
+HD_PWD='/ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

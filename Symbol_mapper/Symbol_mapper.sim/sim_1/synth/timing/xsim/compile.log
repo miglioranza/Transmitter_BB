@@ -1,0 +1,19 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/miglioranza/Symbol_mapper/Symbol_mapper.sim/sim_1/synth/timing/xsim/Symbol_mapper_tb_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IBUF_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module IBUF_HD27
+INFO: [VRFC 10-311] analyzing module IBUF_HD28
+INFO: [VRFC 10-311] analyzing module IBUF_HD29
+INFO: [VRFC 10-311] analyzing module IBUF_HD30
+INFO: [VRFC 10-311] analyzing module IBUF_HD31
+INFO: [VRFC 10-311] analyzing module IBUF_HD32
+INFO: [VRFC 10-311] analyzing module IBUF_HD33
+INFO: [VRFC 10-311] analyzing module IBUF_HD34
+INFO: [VRFC 10-311] analyzing module IBUF_HD35
+INFO: [VRFC 10-311] analyzing module IBUF_HD36
+INFO: [VRFC 10-311] analyzing module IBUF_HD37
+INFO: [VRFC 10-311] analyzing module IBUF_HD38
+INFO: [VRFC 10-311] analyzing module IBUF_HD39
+INFO: [VRFC 10-311] analyzing module Symbol_mapper
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "/ihp/departments/D-SYA/work/miglioranza/Symbol_mapper_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Symbol_mapper_tb'
