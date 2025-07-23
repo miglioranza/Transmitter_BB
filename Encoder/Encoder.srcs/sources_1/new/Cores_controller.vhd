@@ -80,7 +80,7 @@ port (
         s_axis_din_tlast        : IN STD_LOGIC;
         s_axis_din_tdata        : IN STD_LOGIC_VECTOR(127 DOWNTO 0);
         m_axis_status_aclk      : IN STD_LOGIC;
-        m_axis_status_tready    : IN STD_LOGIC;
+        m_axis_status_tready    : IN STD_LOGIC := '0';
         m_axis_status_tvalid    : OUT STD_LOGIC;
         m_axis_status_tdata     : OUT STD_LOGIC_VECTOR(31 DOWNTO 0) := (others => '0');
         m_axis_dout_aclk        : IN STD_LOGIC;
@@ -92,15 +92,26 @@ port (
 end component ;
 
 --LDPC cores signals 
-type sel_code_rate is array (N-1 downto 0) of std_logic_vector(3 downto 0);
-signal sel_cr : sel_code_rate := ("0001", "0100","1000", "1011"); 
+type sel_code_rate is array (N-1 downto 0) of std_logic_vector(DATA_WIDTH-1 downto 0);
+signal sel_cr : sel_code_rate := ("00000000000010000000000000000001", "00000000000010000000000000000100","00000000000010000000000000001000", "00000000000010000000000000001011"); 
 
-type data_in_128bits is array(N-1 downto 0) of std_logic_vector(CORE_DATA_WIDTH downto 0) ;
+type data_in_128bits is array(N-1 downto 0) of std_logic_vector(CORE_DATA_WIDTH-1 downto 0) ;
 signal input_data_128bits,output_data_128bits : data_in_128bits := (others => (others => '0')) ; 
 
 signal reset_core        : std_logic_vector(N-1 downto 0)  := (others => '0');
 signal din_last          : std_logic_vector(N-1 downto 0)  := (others => '0');
-
+signal ldpc_core_control : std_logic_vector(DATA_WIDTH-1 downto 0 ) := (others => '0') ;
+--Sequential Logic signals
+signal data_input0    : std_logic_vector(DATA_WIDTH-1 downto 0 ) := (others => '0') ;
+signal data_input1    : std_logic_vector(DATA_WIDTH-1 downto 0 ) := (others => '0') ;
+signal data_input2    : std_logic_vector(DATA_WIDTH-1 downto 0 ) := (others => '0') ;
+signal data_input3    : std_logic_vector(DATA_WIDTH-1 downto 0 ) := (others => '0') ;
+signal data_in_valid  : std_logic_vector(N-1 downto 0 ) := (others => '0') ;
+signal data_out_valid : std_logic_vector(N-1 downto 0 ) := (others => '0') ; 
+--Combinational logic signals
+signal padding_process : std_logic := '0';
+type fsm_input is (idle, encoding, padding) ;
+signal state                 : fsm_input := idle ;
 begin
 
 --Generate 4 instances of sd_fec_0 
@@ -120,7 +131,7 @@ LDCP_core_inst : for i in 0 to N-1 generate
     s_axis_din_tlast    => din_last(i),
     s_axis_din_tdata    => input_data_128bits(i), 
     m_axis_status_aclk  => clk,
-    m_axis_status_tready=> open,
+    m_axis_status_tready=> '1',
     m_axis_status_tvalid=> dout_valid(i),
     m_axis_status_tdata => open ,
     m_axis_dout_aclk    => clk,
@@ -131,4 +142,232 @@ LDCP_core_inst : for i in 0 to N-1 generate
     );
 end generate LDCP_core_inst ;  
 
+seq_logic : process(clk, reset)
+begin
+    if reset = '1' then 
+        data_input0      <= (others => '0') ;
+        data_input1      <= (others => '0') ;
+        data_input2      <= (others => '0') ;
+        data_input3      <= (others => '0') ;
+        data_in_valid    <= (others => '0') ;
+    elsif  rising_edge(clk) then 
+        data_input0 <= din_data_core0 ;
+        data_input1 <= din_data_core1 ;
+        data_input2 <= din_data_core2 ;
+        data_input3 <= din_data_core3 ;
+        data_in_valid <= din_valid;
+    end if ;    
+end process ;
+
+comb_logic_core0 : process( data_input0, data_in_valid(0), din_ready ,din_last) 
+variable codeword_counter : integer := 0;
+begin 
+
+case state is 
+
+ when idle => 
+    
+--default values 
+ input_data_128bits(0) <= (others => '0') ;
+  codeword_counter := codeword_counter + 1 ;   
+    if data_in_valid(0) = '1'  then  
+       input_data_128bits(0) <=  x"000000000000000000000000" & data_input0 ;
+       data_out_valid(0)     <= '1'; 
+       state <= encoding ;
+     else   
+      data_out_valid(0)     <= '0'; 
+      state <= idle ;
+     codeword_counter := codeword_counter - 1 ;    
+     end if ; 
+  when encoding => 
+  state <= encoding ;
+  input_data_128bits(0) <=  x"000000000000000000000000" & data_input0 ;
+  codeword_counter := codeword_counter + 1 ;   
+
+  if data_in_valid(0) = '1'  then      
+     data_out_valid(0)     <= '1'; 
+         if codeword_counter = 20 and din_last(0) = '1' then
+          codeword_counter := 0 ;
+          state <= idle ;
+         elsif codeword_counter < 20 and din_last(0) = '1' then 
+          state <= padding ;
+         elsif codeword_counter = 20 and din_last(0) = '0' then
+               codeword_counter := 0 ;
+         end if ; 
+     else     
+      data_out_valid(0)     <= '0';      
+      state <= idle ;
+     end if ;
+     
+   when padding => 
+        input_data_128bits(0) <= x"0000000000000000000000005A5A5A5A" ;
+        codeword_counter := codeword_counter + 1 ;
+        if codeword_counter = 20 then 
+           state <= idle ;
+           data_out_valid(0) <= '0';
+        else 
+            data_out_valid(0) <= '1';
+            state <= padding  ;
+        end if ;  
+     end case ;
+ end process ; 
+ 
+ 
+ comb_logic_core1 : process( data_input0, data_in_valid(1), din_ready ,din_last) 
+variable codeword_counter : integer := 0;
+begin 
+
+case state is 
+
+ when idle => 
+    
+--default values 
+ input_data_128bits(1) <= (others => '0') ;
+  codeword_counter := codeword_counter + 1 ;   
+    if data_in_valid(1) = '1'  then  
+       input_data_128bits(1) <=  x"000000000000000000000000" & data_input1 ;
+       data_out_valid(1)     <= '1'; 
+       state <= encoding ;
+     else   
+      data_out_valid(1)     <= '0'; 
+      state <= idle ;
+     codeword_counter := codeword_counter - 1 ;    
+     end if ; 
+  when encoding => 
+  state <= encoding ;
+  input_data_128bits(1) <=  x"000000000000000000000000" & data_input1 ;
+  codeword_counter := codeword_counter + 1 ;   
+
+  if data_in_valid(1) = '1'  then      
+     data_out_valid(1)     <= '1'; 
+         if codeword_counter = 26 and din_last(1) = '1' then
+          codeword_counter := 0 ;
+          state <= idle ;
+         elsif codeword_counter < 26 and din_last(1) = '1' then 
+          state <= padding ;
+         elsif codeword_counter = 26 and din_last(1) = '0' then
+               codeword_counter := 0 ;
+         end if ; 
+     else     
+      data_out_valid(1)     <= '0';      
+      state <= idle ;
+     end if ;
+     
+   when padding => 
+        input_data_128bits(1) <= x"0000000000000000000000005A5A5A5A" ;
+        codeword_counter := codeword_counter + 1 ;
+        if codeword_counter = 26 then 
+           state <= idle ;
+           data_out_valid(1) <= '0';
+        else 
+            data_out_valid(1) <= '1';
+            state <= padding  ;
+        end if ;  
+     end case ;
+ end process ; 
+   
+  comb_logic_core2 : process( data_input0, data_in_valid(2), din_ready ,din_last) 
+variable codeword_counter : integer := 0;
+begin 
+
+case state is 
+
+ when idle => 
+    
+--default values 
+ input_data_128bits(2) <= (others => '0') ;
+  codeword_counter := codeword_counter + 1 ;   
+    if data_in_valid(2) = '1'  then  
+       input_data_128bits(2) <=  x"000000000000000000000000" & data_input2 ;
+       data_out_valid(2)     <= '1'; 
+       state <= encoding ;
+     else   
+      data_out_valid(2)     <= '0'; 
+      state <= idle ;
+     codeword_counter := codeword_counter - 1 ;    
+     end if ; 
+  when encoding => 
+  state <= encoding ;
+  input_data_128bits(2) <=  x"000000000000000000000000" & data_input2 ;
+  codeword_counter := codeword_counter + 1 ;   
+
+  if data_in_valid(2) = '1'  then      
+     data_out_valid(2)     <= '1'; 
+         if codeword_counter = 45 and din_last(2) = '1' then
+          codeword_counter := 0 ;
+          state <= idle ;
+         elsif codeword_counter < 45 and din_last(2) = '1' then 
+          state <= padding ;
+         elsif codeword_counter = 45 and din_last(2) = '0' then
+               codeword_counter := 0 ;
+         end if ; 
+     else     
+      data_out_valid(2)     <= '0';      
+      state <= idle ;
+     end if ;
+     
+   when padding => 
+        input_data_128bits(2) <= x"0000000000000000000000005A5A5A5A" ;
+        codeword_counter := codeword_counter + 1 ;
+        if codeword_counter = 45 then 
+           state <= idle ;
+           data_out_valid(2) <= '0';
+        else 
+            data_out_valid(2) <= '1';
+            state <= padding  ;
+        end if ;  
+     end case ;
+ end process ;      
+ comb_logic_core3 : process( data_input0, data_in_valid(3), din_ready ,din_last) 
+variable codeword_counter : integer := 0;
+begin 
+
+case state is 
+
+ when idle => 
+    
+--default values 
+ input_data_128bits(3) <= (others => '0') ;
+  codeword_counter := codeword_counter + 1 ;   
+    if data_in_valid(3) = '1'  then  
+       input_data_128bits(3) <=  x"000000000000000000000000" & data_input3 ;
+       data_out_valid(3)     <= '1'; 
+       state <= encoding ;
+     else   
+      data_out_valid(3)     <= '0'; 
+      state <= idle ;
+     codeword_counter := codeword_counter - 1 ;    
+     end if ; 
+  when encoding => 
+  state <= encoding ;
+  input_data_128bits(3) <=  x"000000000000000000000000" & data_input3 ;
+  codeword_counter := codeword_counter + 1 ;   
+
+  if data_in_valid(3) = '1'  then      
+     data_out_valid(3)     <= '1'; 
+         if codeword_counter = 50 and din_last(3) = '1' then
+          codeword_counter := 0 ;
+          state <= idle ;
+         elsif codeword_counter < 50 and din_last(3) = '1' then 
+          state <= padding ;
+         elsif codeword_counter = 50 and din_last(3) = '0' then
+               codeword_counter := 0 ;
+         end if ; 
+     else     
+      data_out_valid(3)     <= '0';      
+      state <= idle ;
+     end if ;
+     
+   when padding => 
+        input_data_128bits(3) <= x"0000000000000000000000005A5A5A5A" ;
+        codeword_counter := codeword_counter + 1 ;
+        if codeword_counter = 50 then 
+           state <= idle ;
+           data_out_valid(3) <= '0';
+        else 
+            data_out_valid(3) <= '1';
+            state <= padding  ;
+        end if ;  
+     end case ;
+ end process ;      
 end Behavioral;

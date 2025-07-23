@@ -33,7 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity LDPC_encoder is
   generic (
-  DATA_WIDTH        : integer := 31 ;
+  DATA_WIDTH        : integer := 32 ;
   CORE_DATA_WIDTH  : integer := 127 ;
   N                 : integer := 4
   );
@@ -41,11 +41,14 @@ entity LDPC_encoder is
   clk            : in  std_logic ;
   reset          : in  std_logic ;
   ldpc_core_clk  : in  std_logic ;
-  data_in        : in  std_logic_vector(DATA_WIDTH downto 0) ;
+  data_in        : in  std_logic_vector(DATA_WIDTH-1 downto 0) ;
   data_in_valid  : in  std_logic ;
   sel_code_rate  : in  std_logic_vector(3 downto 0); 
   end_of_frame   : in  std_logic;
-  data_out       : out std_logic(DATA_WIDTH downto 0);
+  data_out0      : out std_logic_vector(DATA_WIDTH-1 downto 0);
+  data_out1      : out std_logic_vector(DATA_WIDTH-1 downto 0);
+  data_out2      : out std_logic_vector(DATA_WIDTH-1 downto 0);
+  data_out3      : out std_logic_vector(DATA_WIDTH-1 downto 0);
   data_out_ready : out std_logic ;
   data_out_valid : out std_logic ;
   data_out_last  : out std_logic ;
@@ -65,11 +68,12 @@ COMPONENT axis_data_fifo_0
     s_axis_aclk     : IN STD_LOGIC;
     s_axis_tvalid   : IN STD_LOGIC;
     s_axis_tready   : OUT STD_LOGIC;
-    s_axis_tdata    : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    s_axis_tdata    : IN STD_LOGIC_VECTOR(DATA_WIDTH-1 DOWNTO 0);
     s_axis_tlast    : IN STD_LOGIC;
     m_axis_tvalid   : OUT STD_LOGIC;
     m_axis_tready   : IN STD_LOGIC;
-    m_axis_tdata    : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+    m_axis_tdata    : OUT STD_LOGIC_VECTOR(DATA_WIDTH-1 DOWNTO 0);
+    m_axis_tlast    : OUT STD_LOGIC 
   );
 END COMPONENT;
 
@@ -102,7 +106,7 @@ component Cores_controller
 
 
 --Input FIFO signals
-type input_fifo_data is array(N-1 downto 0) of std_logic_vector(DATA_WIDTH downto 0) ;
+type input_fifo_data is array(N-1 downto 0) of std_logic_vector(DATA_WIDTH-1 downto 0) ;
 signal fifo_data_in,fifo_data_out : input_fifo_data := (others => (others => '0')) ;   
 
 signal fifo_valid_in     : std_logic_vector(3 downto 0)  := (others => '0');
@@ -111,7 +115,7 @@ signal fifo_valid_out    : std_logic_vector(3 downto 0)  := (others => '0');
 signal fifo_in_ready     : std_logic_vector(3 downto 0)  := (others => '0');
 
 --Output FIFOs signals
-type out_fifo_data_in is array(N-1 downto 0) of std_logic_vector(DATA_WIDTH downto 0) ;
+type out_fifo_data_in is array(N-1 downto 0) of std_logic_vector(DATA_WIDTH-1 downto 0) ;
 signal out_fifo_input_data, out_fifo_output_data : out_fifo_data_in := (others => (others => '0')) ;   
 
 signal out_fifo_valid_in : std_logic_vector(3 downto 0)  := (others => '0');
@@ -119,6 +123,7 @@ signal out_fifo_ready_out: std_logic_vector(3 downto 0)  := (others => '0');
 signal out_fifo_valid_out: std_logic_vector(3 downto 0)  := (others => '0');
 signal out_fifo_ready_in : std_logic_vector(3 downto 0)  := (others => '0');
 signal out_fifo_last_in  : std_logic_vector(3 downto 0)  := (others => '0');
+signal out_fifo_last_out : std_logic_vector(3 downto 0)  := (others => '0'); 
 begin
 
 --Generate 4 instances of input axis_data_fifo_0
@@ -130,10 +135,11 @@ input_fifo : axis_data_fifo_0
     s_axis_tvalid       => fifo_valid_in(i),
     s_axis_tready       => fifo_in_ready(i),
     s_axis_tdata        => fifo_data_in(i) ,
-    s_axis_tlast        => open,
+    s_axis_tlast        => '0',
     m_axis_tvalid       => fifo_valid_in(i) ,
     m_axis_tready       => fifo_in_ready(i) ,
-    m_axis_tdata        => fifo_data_out(i) 
+    m_axis_tdata        => fifo_data_out(i) ,
+    m_axis_tlast        => open
   ); 
  end generate Input_FIFO_inst ;
  
@@ -173,7 +179,13 @@ output_fifo : axis_data_fifo_0
     s_axis_tlast        => out_fifo_last_in(i),
     m_axis_tvalid       => out_fifo_valid_in(i),
     m_axis_tready       => out_fifo_ready_out(i),
-    m_axis_tdata        => out_fifo_output_data(i) 
+    m_axis_tdata        => out_fifo_output_data(i),
+    m_axis_tlast        => out_fifo_last_out(i)
   ); 
 end generate  Output_FIFO_inst;
+data_out0 <= out_fifo_output_data(0) ;
+data_out1 <= out_fifo_output_data(1) ;
+data_out2 <= out_fifo_output_data(2) ;
+data_out3 <= out_fifo_output_data(3) ;
+
 end Behavioral;
