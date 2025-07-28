@@ -76,6 +76,7 @@ set_param checkpoint.writeSynthRtdsInDcp 1
 set_param power.enableCarry8RouteBelPower 1
 set_param power.BramSDPPropagationFix 1
 set_param power.enableLutRouteBelPower 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 set_msg_config  -id {BD 41-759}  -new_severity {INFO} 
@@ -320,6 +321,9 @@ set_property used_in_implementation false [get_files -all /ihp/departments/D-SYA
 
 read_ip -quiet /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/ip/sd_fec_0/sd_fec_0.xci
 set_property used_in_implementation false [get_files -all /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0_ooc.xdc]
+
+read_ip -quiet /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1.xci
+set_property used_in_implementation false [get_files -all /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

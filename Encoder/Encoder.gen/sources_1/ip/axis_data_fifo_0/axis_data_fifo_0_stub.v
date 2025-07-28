@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-// Date        : Tue Jul 22 15:37:05 2025
+// Date        : Mon Jul 28 14:24:52 2025
 // Host        : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 // Command     : write_verilog -force -mode synth_stub
 //               /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0_stub.v
@@ -16,8 +16,8 @@
 (* X_CORE_INFO = "axis_data_fifo_v2_0_7_top,Vivado 2021.2" *)
 module axis_data_fifo_0(s_axis_aresetn, s_axis_aclk, s_axis_tvalid, 
   s_axis_tready, s_axis_tdata, s_axis_tlast, m_axis_tvalid, m_axis_tready, m_axis_tdata, 
-  m_axis_tlast)
-/* synthesis syn_black_box black_box_pad_pin="s_axis_aresetn,s_axis_aclk,s_axis_tvalid,s_axis_tready,s_axis_tdata[31:0],s_axis_tlast,m_axis_tvalid,m_axis_tready,m_axis_tdata[31:0],m_axis_tlast" */;
+  m_axis_tlast, axis_wr_data_count)
+/* synthesis syn_black_box black_box_pad_pin="s_axis_aresetn,s_axis_aclk,s_axis_tvalid,s_axis_tready,s_axis_tdata[31:0],s_axis_tlast,m_axis_tvalid,m_axis_tready,m_axis_tdata[31:0],m_axis_tlast,axis_wr_data_count[31:0]" */;
   input s_axis_aresetn;
   input s_axis_aclk;
   input s_axis_tvalid;
@@ -28,4 +28,5 @@ module axis_data_fifo_0(s_axis_aresetn, s_axis_aclk, s_axis_tvalid,
   input m_axis_tready;
   output [31:0]m_axis_tdata;
   output m_axis_tlast;
+  output [31:0]axis_wr_data_count;
 endmodule

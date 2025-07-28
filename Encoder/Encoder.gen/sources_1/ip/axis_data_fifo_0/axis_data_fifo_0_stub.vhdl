@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Tue Jul 22 15:37:06 2025
+-- Date        : Mon Jul 28 14:24:52 2025
 -- Host        : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 -- Command     : write_vhdl -force -mode synth_stub
 --               /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0_stub.vhdl
@@ -23,7 +23,8 @@ entity axis_data_fifo_0 is
     m_axis_tvalid : out STD_LOGIC;
     m_axis_tready : in STD_LOGIC;
     m_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_axis_tlast : out STD_LOGIC
+    m_axis_tlast : out STD_LOGIC;
+    axis_wr_data_count : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
 
 end axis_data_fifo_0;
@@ -32,7 +33,7 @@ architecture stub of axis_data_fifo_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "s_axis_aresetn,s_axis_aclk,s_axis_tvalid,s_axis_tready,s_axis_tdata[31:0],s_axis_tlast,m_axis_tvalid,m_axis_tready,m_axis_tdata[31:0],m_axis_tlast";
+attribute black_box_pad_pin of stub : architecture is "s_axis_aresetn,s_axis_aclk,s_axis_tvalid,s_axis_tready,s_axis_tdata[31:0],s_axis_tlast,m_axis_tvalid,m_axis_tready,m_axis_tdata[31:0],m_axis_tlast,axis_wr_data_count[31:0]";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "axis_data_fifo_v2_0_7_top,Vivado 2021.2";
 begin

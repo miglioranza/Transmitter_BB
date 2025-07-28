@@ -76,6 +76,7 @@ set_param checkpoint.writeSynthRtdsInDcp 1
 set_param power.enableCarry8RouteBelPower 1
 set_param power.BramSDPPropagationFix 1
 set_param power.enableLutRouteBelPower 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 set_msg_config  -id {BD 41-759}  -new_severity {INFO} 

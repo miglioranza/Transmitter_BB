@@ -2,12 +2,12 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Wed Jul 23 10:41:46 2025
-# Process ID: 2801875
+# Start of session at: Mon Jul 28 16:18:08 2025
+# Process ID: 2645578
 # Current directory: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/sd_fec_0_synth_1
 # Command line: vivado -log sd_fec_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sd_fec_0.tcl
 # Log file: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/sd_fec_0_synth_1/sd_fec_0.vds
 # Journal file: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/sd_fec_0_synth_1/vivado.jou
-# Running On: uxsrv005, OS: Linux, CPU Frequency: 3590.885 MHz, CPU Physical cores: 8, Host memory: 101335 MB
+# Running On: uxsrv005, OS: Linux, CPU Frequency: 3590.883 MHz, CPU Physical cores: 8, Host memory: 101335 MB
 #-----------------------------------------------------------
 source sd_fec_0.tcl -notrace

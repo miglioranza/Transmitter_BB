@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Jul 23 17:32:50 2025
+| Date         : Mon Jul 28 17:16:23 2025
 | Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 | Command      : report_utilization -file LDPC_encoder_utilization_synth.rpt -pb LDPC_encoder_utilization_synth.pb
 | Design       : LDPC_encoder
@@ -32,13 +32,13 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               |  292 |     0 |          0 |    425280 |  0.07 |
-|   LUT as Logic          |  292 |     0 |          0 |    425280 |  0.07 |
+| CLB LUTs*               |  663 |     0 |          0 |    425280 |  0.16 |
+|   LUT as Logic          |  663 |     0 |          0 |    425280 |  0.16 |
 |   LUT as Memory         |    0 |     0 |          0 |    213600 |  0.00 |
-| CLB Registers           |    4 |     0 |          0 |    850560 | <0.01 |
-|   Register as Flip Flop |    4 |     0 |          0 |    850560 | <0.01 |
+| CLB Registers           |  133 |     0 |          0 |    850560 |  0.02 |
+|   Register as Flip Flop |  133 |     0 |          0 |    850560 |  0.02 |
 |   Register as Latch     |    0 |     0 |          0 |    850560 |  0.00 |
-| CARRY8                  |   16 |     0 |          0 |     53160 |  0.03 |
+| CARRY8                  |   48 |     0 |          0 |     53160 |  0.09 |
 | F7 Muxes                |    0 |     0 |          0 |    212640 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |    106320 |  0.00 |
 | F9 Muxes                |    0 |     0 |          0 |     53160 |  0.00 |
@@ -59,7 +59,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 4     |          Yes |           - |        Reset |
+| 133   |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 0     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -95,7 +95,7 @@ Table of Contents
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| Bonded IOB |  138 |     0 |          0 |       347 | 39.77 |
+| Bonded IOB |  174 |     0 |          0 |       347 | 50.14 |
 | HS_ADC     |    0 |     0 |          4 |         4 |  0.00 |
 | HS_DAC     |    0 |     0 |          4 |         4 |  0.00 |
 +------------+------+-------+------------+-----------+-------+
@@ -162,15 +162,18 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |  152 |                 CLB |
-| OBUF     |  128 |                 I/O |
-| LUT5     |  128 |                 CLB |
-| CARRY8   |   16 |                 CLB |
-| LUT2     |   12 |                 CLB |
-| OBUFT    |    7 |                 I/O |
-| FDCE     |    4 |            Register |
-| INBUF    |    3 |                 I/O |
-| IBUFCTRL |    3 |              Others |
+| LUT3     |  361 |                 CLB |
+| LUT4     |  140 |                 CLB |
+| FDCE     |  133 |            Register |
+| OBUF     |  129 |                 I/O |
+| LUT2     |  108 |                 CLB |
+| LUT6     |   87 |                 CLB |
+| CARRY8   |   48 |                 CLB |
+| INBUF    |   39 |                 I/O |
+| IBUFCTRL |   39 |              Others |
+| LUT5     |   25 |                 CLB |
+| OBUFT    |    6 |                 I/O |
+| LUT1     |    4 |                 CLB |
 | BUFGCE   |    1 |               Clock |
 +----------+------+---------------------+
 
@@ -181,8 +184,9 @@ Table of Contents
 +------------------+------+
 |     Ref Name     | Used |
 +------------------+------+
-| axis_data_fifo_0 |    8 |
 | sd_fec_0         |    4 |
+| axis_data_fifo_1 |    4 |
+| axis_data_fifo_0 |    4 |
 +------------------+------+
 
 

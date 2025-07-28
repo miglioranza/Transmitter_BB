@@ -2,16 +2,16 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Wed Jul 23 17:30:50 2025
-# Process ID: 3010256
+# Start of session at: Mon Jul 28 17:14:21 2025
+# Process ID: 2676900
 # Current directory: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1
 # Command line: vivado -log LDPC_encoder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source LDPC_encoder.tcl
 # Log file: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/LDPC_encoder.vds
 # Journal file: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/vivado.jou
-# Running On: uxsrv005, OS: Linux, CPU Frequency: 3590.883 MHz, CPU Physical cores: 8, Host memory: 101335 MB
+# Running On: uxsrv005, OS: Linux, CPU Frequency: 3457.889 MHz, CPU Physical cores: 8, Host memory: 101335 MB
 #-----------------------------------------------------------
 source LDPC_encoder.tcl -notrace
-create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3066.770 ; gain = 2.016 ; free physical = 49498 ; free virtual = 104537
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3066.766 ; gain = 2.016 ; free physical = 49951 ; free virtual = 105335
 Command: read_checkpoint -auto_incremental -incremental /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/utils_1/imports/synth_1/LDPC_encoder.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/utils_1/imports/synth_1/LDPC_encoder.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -24,168 +24,74 @@ WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis b
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 3011187
+INFO: [Synth 8-7075] Helper process launched with PID 2677629
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3477.262 ; gain = 229.688 ; free physical = 47732 ; free virtual = 102772
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3477.258 ; gain = 228.688 ; free physical = 47851 ; free virtual = 103236
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'LDPC_encoder' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:61]
-WARNING: [Synth 8-5640] Port 'm_axis_tlast' is missing in component declaration [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:65]
-INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-3010256-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:129]
-INFO: [Synth 8-638] synthesizing module 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-3010256-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:21]
-WARNING: [Synth 8-5640] Port 'm_axis_tlast' is missing in component declaration [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:65]
-INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-3010256-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:129]
-WARNING: [Synth 8-5640] Port 'm_axis_tlast' is missing in component declaration [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:65]
-INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-3010256-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:129]
-WARNING: [Synth 8-5640] Port 'm_axis_tlast' is missing in component declaration [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:65]
-INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-3010256-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:129]
-INFO: [Synth 8-3491] module 'Cores_controller' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:34' bound to instance 'Cores_Contr' of component 'Cores_controller' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:144]
-INFO: [Synth 8-638] synthesizing module 'Cores_controller' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:67]
-INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-3010256-uxsrv005/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'inst' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:119]
-INFO: [Synth 8-638] synthesizing module 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-3010256-uxsrv005/realtime/sd_fec_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-3010256-uxsrv005/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'inst' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:119]
-INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-3010256-uxsrv005/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'inst' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:119]
-INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-3010256-uxsrv005/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'inst' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:119]
-WARNING: [Synth 8-614] signal 'state' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:162]
-WARNING: [Synth 8-614] signal 'state' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:216]
-WARNING: [Synth 8-614] signal 'data_input1' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:216]
-WARNING: [Synth 8-614] signal 'state' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:269]
-WARNING: [Synth 8-614] signal 'data_input2' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:269]
-WARNING: [Synth 8-614] signal 'state' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:321]
-WARNING: [Synth 8-614] signal 'data_input3' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:321]
-WARNING: [Synth 8-3848] Net dout_data0 in module/entity Cores_controller does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:57]
-WARNING: [Synth 8-3848] Net dout_data1 in module/entity Cores_controller does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:58]
-WARNING: [Synth 8-3848] Net dout_data2 in module/entity Cores_controller does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:59]
-WARNING: [Synth 8-3848] Net dout_data3 in module/entity Cores_controller does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:60]
-WARNING: [Synth 8-3848] Net last_frame in module/entity Cores_controller does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:62]
-INFO: [Synth 8-256] done synthesizing module 'Cores_controller' (1#1) [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:67]
-WARNING: [Synth 8-5640] Port 'm_axis_tlast' is missing in component declaration [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:65]
-INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-3010256-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:169]
-WARNING: [Synth 8-5640] Port 'm_axis_tlast' is missing in component declaration [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:65]
-INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-3010256-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:169]
-WARNING: [Synth 8-5640] Port 'm_axis_tlast' is missing in component declaration [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:65]
-INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-3010256-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:169]
-WARNING: [Synth 8-5640] Port 'm_axis_tlast' is missing in component declaration [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:65]
-INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-3010256-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:169]
-WARNING: [Synth 8-3848] Net data_out_ready in module/entity LDPC_encoder does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:52]
-WARNING: [Synth 8-3848] Net data_out_valid in module/entity LDPC_encoder does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:53]
-WARNING: [Synth 8-3848] Net data_out_last in module/entity LDPC_encoder does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:54]
-WARNING: [Synth 8-3848] Net current_cr in module/entity LDPC_encoder does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:55]
-WARNING: [Synth 8-3848] Net last_frame in module/entity LDPC_encoder does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:56]
-INFO: [Synth 8-256] done synthesizing module 'LDPC_encoder' (2#1) [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:61]
-WARNING: [Synth 8-7129] Port dout_data0[31] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[30] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[29] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[28] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[27] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[26] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[25] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[24] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[23] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[22] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[21] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[20] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[19] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[18] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[17] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[16] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[15] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[14] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[13] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[12] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[11] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[10] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[9] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[8] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[7] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[6] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[5] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[4] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[3] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[2] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[1] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data0[0] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[31] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[30] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[29] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[28] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[27] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[26] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[25] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[24] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[23] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[22] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[21] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[20] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[19] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[18] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[17] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[16] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[15] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[14] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[13] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[12] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[11] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[10] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[9] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[8] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[7] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[6] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[5] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[4] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[3] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[2] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[1] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data1[0] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[31] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[30] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[29] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[28] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[27] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[26] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[25] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[24] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[23] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[22] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[21] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[20] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[19] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[18] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[17] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[16] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[15] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[14] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[13] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[12] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[11] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[10] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[9] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[8] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[7] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[6] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[5] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[4] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[3] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[2] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[1] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data2[0] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data3[31] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data3[30] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data3[29] in module Cores_controller is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dout_data3[28] in module Cores_controller is either unconnected or has no load
-INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-638] synthesizing module 'LDPC_encoder' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:63]
+INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-2676900-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:148]
+INFO: [Synth 8-638] synthesizing module 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-2676900-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-2676900-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:148]
+INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-2676900-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:148]
+INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-2676900-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:148]
+INFO: [Synth 8-3491] module 'Cores_controller' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:34' bound to instance 'Cores_Contr' of component 'Cores_controller' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'Cores_controller' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:66]
+INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-2676900-uxsrv005/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'inst' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:120]
+INFO: [Synth 8-638] synthesizing module 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-2676900-uxsrv005/realtime/sd_fec_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-2676900-uxsrv005/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'inst' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:120]
+INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-2676900-uxsrv005/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'inst' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:120]
+INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-2676900-uxsrv005/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'inst' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:120]
+WARNING: [Synth 8-614] signal 'state0' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:165]
+WARNING: [Synth 8-614] signal 'state1' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:220]
+WARNING: [Synth 8-614] signal 'state2' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:279]
+WARNING: [Synth 8-614] signal 'state3' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:333]
+WARNING: [Synth 8-3848] Net last_frame in module/entity Cores_controller does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'Cores_controller' (1#1) [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:66]
+INFO: [Synth 8-3491] module 'axis_data_fifo_1' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-2676900-uxsrv005/realtime/axis_data_fifo_1_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:189]
+INFO: [Synth 8-638] synthesizing module 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-2676900-uxsrv005/realtime/axis_data_fifo_1_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'axis_data_fifo_1' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-2676900-uxsrv005/realtime/axis_data_fifo_1_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:189]
+INFO: [Synth 8-3491] module 'axis_data_fifo_1' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-2676900-uxsrv005/realtime/axis_data_fifo_1_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:189]
+INFO: [Synth 8-3491] module 'axis_data_fifo_1' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/.Xil/Vivado-2676900-uxsrv005/realtime/axis_data_fifo_1_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:189]
+WARNING: [Synth 8-3848] Net data_out_valid in module/entity LDPC_encoder does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:55]
+WARNING: [Synth 8-3848] Net data_out_last in module/entity LDPC_encoder does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:56]
+WARNING: [Synth 8-3848] Net current_cr in module/entity LDPC_encoder does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:57]
+WARNING: [Synth 8-3848] Net last_frame in module/entity LDPC_encoder does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:58]
+INFO: [Synth 8-256] done synthesizing module 'LDPC_encoder' (2#1) [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:63]
+WARNING: [Synth 8-7129] Port last_frame in module Cores_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out_valid in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out_last in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port current_cr[2] in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port current_cr[1] in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port current_cr[0] in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_frame in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_code_rate[3] in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_code_rate[2] in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_code_rate[1] in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_code_rate[0] in module LDPC_encoder is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3521.199 ; gain = 273.625 ; free physical = 48235 ; free virtual = 103275
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 3522.164 ; gain = 273.594 ; free physical = 48554 ; free virtual = 103940
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_ready with 1st driver pin 'Input_FIFO_inst[0].input_fifo/s_axis_tready' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:148]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_ready with 2nd driver pin 'Input_FIFO_inst[1].input_fifo/s_axis_tready' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:148]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_ready with 3rd driver pin 'Input_FIFO_inst[2].input_fifo/s_axis_tready' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:148]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_ready with 4th driver pin 'Input_FIFO_inst[3].input_fifo/s_axis_tready' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:148]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        1|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3539.012 ; gain = 291.438 ; free physical = 48229 ; free virtual = 103270
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 3539.977 ; gain = 291.406 ; free physical = 48620 ; free virtual = 104005
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3539.012 ; gain = 291.438 ; free physical = 48229 ; free virtual = 103270
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 3539.977 ; gain = 291.406 ; free physical = 48620 ; free virtual = 104005
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3539.012 ; gain = 0.000 ; free physical = 48223 ; free virtual = 103264
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3539.977 ; gain = 0.000 ; free physical = 48612 ; free virtual = 103997
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -198,14 +104,6 @@ Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/so
 Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'Input_FIFO_inst[2].input_fifo'
 Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'Input_FIFO_inst[3].input_fifo'
 Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'Input_FIFO_inst[3].input_fifo'
-Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'Output_FIFO_inst[0].output_fifo'
-Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'Output_FIFO_inst[0].output_fifo'
-Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'Output_FIFO_inst[1].output_fifo'
-Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'Output_FIFO_inst[1].output_fifo'
-Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'Output_FIFO_inst[2].output_fifo'
-Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'Output_FIFO_inst[2].output_fifo'
-Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'Output_FIFO_inst[3].output_fifo'
-Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'Output_FIFO_inst[3].output_fifo'
 Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'Cores_Contr/LDCP_core_inst[0].inst'
 Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'Cores_Contr/LDCP_core_inst[0].inst'
 Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'Cores_Contr/LDCP_core_inst[1].inst'
@@ -214,17 +112,25 @@ Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/so
 Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'Cores_Contr/LDCP_core_inst[2].inst'
 Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'Cores_Contr/LDCP_core_inst[3].inst'
 Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'Cores_Contr/LDCP_core_inst[3].inst'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[0].output_fifo'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[0].output_fifo'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[1].output_fifo'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[1].output_fifo'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[2].output_fifo'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[2].output_fifo'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[3].output_fifo'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[3].output_fifo'
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3699.824 ; gain = 0.000 ; free physical = 48075 ; free virtual = 103116
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3706.820 ; gain = 0.000 ; free physical = 48521 ; free virtual = 103906
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3699.824 ; gain = 0.000 ; free physical = 48075 ; free virtual = 103116
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3706.820 ; gain = 0.000 ; free physical = 48521 ; free virtual = 103906
 WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 3699.824 ; gain = 452.250 ; free physical = 48208 ; free virtual = 103250
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 3706.820 ; gain = 458.250 ; free physical = 48601 ; free virtual = 103987
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -232,7 +138,7 @@ Start Loading Part and Timing Information
 Loading part: xczu28dr-ffvg1517-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 3699.824 ; gain = 452.250 ; free physical = 48208 ; free virtual = 103250
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 3706.820 ; gain = 458.250 ; free physical = 48601 ; free virtual = 103987
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -241,19 +147,19 @@ Applied set_property KEEP_HIERARCHY = SOFT for \Input_FIFO_inst[0].input_fifo . 
 Applied set_property KEEP_HIERARCHY = SOFT for \Input_FIFO_inst[1].input_fifo . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for \Input_FIFO_inst[2].input_fifo . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for \Input_FIFO_inst[3].input_fifo . (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[0].output_fifo . (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[1].output_fifo . (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[2].output_fifo . (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[3].output_fifo . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Cores_Contr/\LDCP_core_inst[0].inst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Cores_Contr/\LDCP_core_inst[1].inst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Cores_Contr/\LDCP_core_inst[2].inst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Cores_Contr/\LDCP_core_inst[3].inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[0].output_fifo . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[1].output_fifo . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[2].output_fifo . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[3].output_fifo . (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 3699.824 ; gain = 452.250 ; free physical = 48208 ; free virtual = 103250
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 3706.820 ; gain = 458.250 ; free physical = 48601 ; free virtual = 103986
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 3699.824 ; gain = 452.250 ; free physical = 48199 ; free virtual = 103241
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 3706.820 ; gain = 458.250 ; free physical = 48593 ; free virtual = 103979
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -264,11 +170,12 @@ Detailed RTL Component Info :
 +---Registers : 
 	               32 Bit    Registers := 4     
 	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
 +---Muxes : 
 	   4 Input  128 Bit        Muxes := 4     
-	   2 Input   32 Bit        Muxes := 16    
-	   4 Input   32 Bit        Muxes := 4     
-	   5 Input    2 Bit        Muxes := 4     
+	   2 Input   32 Bit        Muxes := 12    
+	   4 Input   32 Bit        Muxes := 8     
+	   8 Input    2 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -285,26 +192,37 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port last_frame in module Cores_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out_valid in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out_last in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port current_cr[2] in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port current_cr[1] in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port current_cr[0] in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_frame in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_code_rate[3] in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_code_rate[2] in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_code_rate[1] in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_code_rate[0] in module LDPC_encoder is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 3699.824 ; gain = 452.250 ; free physical = 48188 ; free virtual = 103233
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 3706.820 ; gain = 458.250 ; free physical = 48578 ; free virtual = 103968
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 3965.508 ; gain = 717.934 ; free physical = 47712 ; free virtual = 102758
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 3964.496 ; gain = 715.926 ; free physical = 48080 ; free virtual = 103471
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 3965.508 ; gain = 717.934 ; free physical = 47711 ; free virtual = 102757
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 3965.496 ; gain = 716.926 ; free physical = 48080 ; free virtual = 103471
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 3984.539 ; gain = 736.965 ; free physical = 47710 ; free virtual = 102756
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 3984.527 ; gain = 735.957 ; free physical = 48075 ; free virtual = 103466
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -322,52 +240,60 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 3992.477 ; gain = 744.902 ; free physical = 47710 ; free virtual = 102756
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 3992.465 ; gain = 743.895 ; free physical = 48079 ; free virtual = 103470
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 3992.477 ; gain = 744.902 ; free physical = 47710 ; free virtual = 102756
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 3992.465 ; gain = 743.895 ; free physical = 48079 ; free virtual = 103470
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LDCP_core_inst[0].inst_i_177_n_0 with 1st driver pin 'LDCP_core_inst[0].inst_i_177/O' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LDCP_core_inst[0].inst_i_177_n_0 with 2nd driver pin 'LDCP_core_inst[0].inst_i_178/O' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LDCP_core_inst[0].inst_i_177_n_0 with 3rd driver pin 'LDCP_core_inst[0].inst_i_179/O' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LDCP_core_inst[0].inst_i_177_n_0 with 4th driver pin 'LDCP_core_inst[0].inst_i_180/O' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LDCP_core_inst[0].inst_i_1_n_0 with 1st driver pin 'LDCP_core_inst[0].inst_i_1/O' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LDCP_core_inst[0].inst_i_1_n_0 with 2nd driver pin 'LDCP_core_inst[0].inst_i_2/O' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LDCP_core_inst[0].inst_i_1_n_0 with 3rd driver pin 'LDCP_core_inst[0].inst_i_3/O' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LDCP_core_inst[0].inst_i_1_n_0 with 4th driver pin 'LDCP_core_inst[0].inst_i_4/O' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_valid[3] with 1st driver pin 'Output_FIFO_inst[3].output_fifo_i_1/O' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:421]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_valid[3] with 2nd driver pin 'Cores_Contr/LDCP_core_inst[3].inst/m_axis_status_tvalid' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:120]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_valid[3] with 3rd driver pin 'Output_FIFO_inst[3].output_fifo/m_axis_tvalid' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:189]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_valid[2] with 1st driver pin 'Output_FIFO_inst[2].output_fifo_i_1/O' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:411]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_valid[2] with 2nd driver pin 'Cores_Contr/LDCP_core_inst[2].inst/m_axis_status_tvalid' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:120]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_valid[2] with 3rd driver pin 'Output_FIFO_inst[2].output_fifo/m_axis_tvalid' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:189]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_valid[1] with 1st driver pin 'Output_FIFO_inst[1].output_fifo_i_1/O' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:401]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_valid[1] with 2nd driver pin 'Cores_Contr/LDCP_core_inst[1].inst/m_axis_status_tvalid' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:120]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_valid[1] with 3rd driver pin 'Output_FIFO_inst[1].output_fifo/m_axis_tvalid' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:189]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_valid[0] with 1st driver pin 'Output_FIFO_inst[0].output_fifo_i_1/O' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:391]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_valid[0] with 2nd driver pin 'Cores_Contr/LDCP_core_inst[0].inst/m_axis_status_tvalid' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:120]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_valid[0] with 3rd driver pin 'Output_FIFO_inst[0].output_fifo/m_axis_tvalid' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:189]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_ready_OBUF with 1st driver pin 'Input_FIFO_inst[0].input_fifo/s_axis_tready' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:148]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_ready_OBUF with 2nd driver pin 'Input_FIFO_inst[1].input_fifo/s_axis_tready' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:148]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_ready_OBUF with 3rd driver pin 'Input_FIFO_inst[2].input_fifo/s_axis_tready' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:148]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data_out_ready_OBUF with 4th driver pin 'Input_FIFO_inst[3].input_fifo/s_axis_tready' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:148]
 
 Report Check Netlist: 
 +------+------------------+-------+---------+-------+------------------+
 |      |Item              |Errors |Warnings |Status |Description       |
 +------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        2|Failed |Multi driven nets |
+|1     |multi_driven_nets |      0|        5|Failed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 3992.477 ; gain = 744.902 ; free physical = 47710 ; free virtual = 102756
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 3992.465 ; gain = 743.895 ; free physical = 48079 ; free virtual = 103470
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 3992.477 ; gain = 744.902 ; free physical = 47710 ; free virtual = 102756
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 3992.465 ; gain = 743.895 ; free physical = 48079 ; free virtual = 103470
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 3992.477 ; gain = 744.902 ; free physical = 47710 ; free virtual = 102756
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 3992.465 ; gain = 743.895 ; free physical = 48079 ; free virtual = 103470
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 3992.477 ; gain = 744.902 ; free physical = 47710 ; free virtual = 102756
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 3992.465 ; gain = 743.895 ; free physical = 48079 ; free virtual = 103470
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -377,50 +303,55 @@ Report BlackBoxes:
 +------+-----------------+----------+
 |      |BlackBox name    |Instances |
 +------+-----------------+----------+
-|1     |axis_data_fifo_0 |         8|
-|2     |sd_fec_0         |         4|
+|1     |axis_data_fifo_0 |         4|
+|2     |axis_data_fifo_1 |         4|
+|3     |sd_fec_0         |         4|
 +------+-----------------+----------+
 
 Report Cell Usage: 
 +------+----------------------+------+
 |      |Cell                  |Count |
 +------+----------------------+------+
-|1     |axis_data_fifo_0_bbox |     8|
+|1     |axis_data_fifo_0_bbox |     4|
+|5     |axis_data_fifo_1_bbox |     4|
 |9     |sd_fec_0_bbox         |     4|
 |13    |BUFG                  |     1|
-|14    |CARRY8                |    16|
-|15    |LUT2                  |    12|
-|16    |LUT5                  |   128|
-|17    |LUT6                  |   152|
-|18    |FDCE                  |     4|
-|19    |IBUF                  |     3|
-|20    |OBUF                  |   128|
-|21    |OBUFT                 |     7|
+|14    |CARRY8                |    48|
+|15    |LUT1                  |     4|
+|16    |LUT2                  |   108|
+|17    |LUT3                  |   361|
+|18    |LUT4                  |   140|
+|19    |LUT5                  |    25|
+|20    |LUT6                  |    87|
+|21    |FDCE                  |   133|
+|22    |IBUF                  |    39|
+|23    |OBUF                  |   129|
+|24    |OBUFT                 |     6|
 +------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 3992.477 ; gain = 744.902 ; free physical = 47710 ; free virtual = 102756
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 3992.465 ; gain = 743.895 ; free physical = 48079 ; free virtual = 103470
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 8 critical warnings and 46 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 3992.477 ; gain = 584.090 ; free physical = 47749 ; free virtual = 102795
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 3992.484 ; gain = 744.902 ; free physical = 47749 ; free virtual = 102795
+Synthesis finished with 0 errors, 16 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 3992.465 ; gain = 577.051 ; free physical = 48117 ; free virtual = 103508
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 3992.473 ; gain = 743.895 ; free physical = 48117 ; free virtual = 103508
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3998.414 ; gain = 0.000 ; free physical = 47843 ; free virtual = 102889
-INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4006.402 ; gain = 0.000 ; free physical = 48210 ; free virtual = 103601
+INFO: [Netlist 29-17] Analyzing 88 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4037.070 ; gain = 0.000 ; free physical = 47762 ; free virtual = 102808
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4090.141 ; gain = 0.000 ; free physical = 48126 ; free virtual = 103517
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 4 instances were transformed.
+  A total of 40 instances were transformed.
   BUFG => BUFGCE: 1 instance 
-  IBUF => IBUF (IBUFCTRL, INBUF): 3 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 39 instances
 
-Synth Design complete, checksum: 30d867d2
+Synth Design complete, checksum: a1eac606
 INFO: [Common 17-83] Releasing license: Synthesis
-39 Infos, 128 Warnings, 8 Critical Warnings and 0 Errors encountered.
+39 Infos, 34 Warnings, 20 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:01:29 . Memory (MB): peak = 4037.070 ; gain = 944.152 ; free physical = 47905 ; free virtual = 102950
+synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:31 . Memory (MB): peak = 4090.141 ; gain = 997.227 ; free physical = 48265 ; free virtual = 103656
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_1/LDPC_encoder.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file LDPC_encoder_utilization_synth.rpt -pb LDPC_encoder_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jul 23 17:32:51 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 28 17:16:23 2025...
