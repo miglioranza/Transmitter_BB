@@ -41,35 +41,16 @@ Time: 1 ps  Iteration: 0  Process: /LDPC_encoder_tb/uut/\Output_FIFO_inst(3)\/ou
 0010001000000111000111000100011 
 1001111110000001111000000111100 
 0011111111110000000000111110000 
-********************** HSIAO_H_MATRIX ******************************
-1101001101001000110100100010000 
-0101001001010100100010001000000 
-1001100100100010001000001010101 
-1000100010001000001100101100100 
-0010001000000111000111000100011 
-1001111110000001111000000111100 
-0011111111110000000000111110000 
-********************** HSIAO_H_MATRIX ******************************
-1101001101001000110100100010000 
-0101001001010100100010001000000 
-1001100100100010001000001010101 
-1000100010001000001100101100100 
-0010001000000111000111000100011 
-1001111110000001111000000111100 
-0011111111110000000000111110000 
-********************** HSIAO_H_MATRIX ******************************
-1101001101001000110100100010000 
-0101001001010100100010001000000 
-1001100100100010001000001010101 
-1000100010001000001100101100100 
-0010001000000111000111000100011 
-1001111110000001111000000111100 
-0011111111110000000000111110000 
-********************** HSIAO_H_MATRIX ******************************
-1101001101001000110100100010000 
-0101001001010100100010001000000 
-1001100100100010001000001010101 
-1000100010001000001100101100100 
-0010001000000111000111000100011 
-1001111110000001111000000111100 
-0011111111110000000000111110000 
+Note: End of simulation
+Time: 10482500 ps  Iteration: 0  Process: /LDPC_encoder_tb/stimuli_generation  File: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sim_1/new/LDPC_encoder_tb.vhd
+Stopped at time : 19977500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 218
+Stopped at time : 19982500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 218
+Stopped at time : 19987500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 218
+Stopped at time : 19992500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 218
+Stopped at time : 19997500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 218
+Note: Start of simulation
+Time: 0 ps  Iteration: 0  Process: /LDPC_encoder_tb/stimuli_generation  File: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sim_1/new/LDPC_encoder_tb.vhd
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. LDPC_encoder_tb.uut.\\Output_FIFO_inst(0)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /LDPC_encoder_tb/uut/\Output_FIFO_inst(0)\/output_fifo/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_35614  Scope: LDPC_encoder_tb.uut.\\Output_FIFO_inst(0)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. LDPC_encoder_tb.uut.\\Output_FIFO_inst(1)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /LDPC_encoder_tb/uut/\Output_FIFO_inst(1)\/output_fifo/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_35614  Scope: LDPC_encoder_tb.uut.\\Output_FIFO_inst(1)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491

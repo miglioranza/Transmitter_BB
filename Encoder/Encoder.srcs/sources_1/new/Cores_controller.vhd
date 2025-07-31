@@ -51,7 +51,7 @@ entity Cores_controller is
   din_data_core1    : in std_logic_vector(DATA_WIDTH-1 downto 0);
   din_data_core2    : in std_logic_vector(DATA_WIDTH-1 downto 0);
   din_data_core3    : in std_logic_vector(DATA_WIDTH-1 downto 0);
-  dout_valid        : out std_logic_vector(N-1 downto 0); 
+  dout_valid        : out std_logic_vector(N-1 downto 0) := (others => '0') ;
   dout_ready        : out std_logic_vector(N-1 downto 0); 
   dout_data0        : out std_logic_vector(DATA_WIDTH-1 downto 0); 
   dout_data1        : out std_logic_vector(DATA_WIDTH-1 downto 0); 
@@ -106,13 +106,15 @@ signal data_input2    : std_logic_vector(DATA_WIDTH-1 downto 0 ) := (others => '
 signal data_input3    : std_logic_vector(DATA_WIDTH-1 downto 0 ) := (others => '0') ;
 signal data_in_valid  : std_logic_vector(N-1 downto 0 ) := (others => '0') ;
 signal data_out_valid : std_logic_vector(N-1 downto 0 ) := (others => '0') ; 
+
 --Combinational logic signals
 signal padding_process : std_logic := '0';
 type fsm_input is (idle, encoding, padding) ;
-signal state0,state1,state2,state3                 : fsm_input := idle ;
+signal state0,state1,state2,state3 : fsm_input := idle ;
 --Output cores signals  
 signal core_dout_valid  : std_logic_vector(N-1 downto 0) := (others => '0') ;
 --signal core_dout_ready  : std_logic_vector(N-1 downto 0) := (others => '0') ;
+signal pad_enable       : std_logic  := '0'  ; 
 begin
 
 --Generate 4 instances of sd_fec_0 
@@ -124,16 +126,16 @@ LDCP_core_inst : for i in 0 to N-1 generate
     s_axi_aclk          => clk,
     s_axis_ctrl_aclk    => clk,
     s_axis_ctrl_tready  => open,
-    s_axis_ctrl_tvalid  => din_valid(i),
+    s_axis_ctrl_tvalid  => data_out_valid(i),
     s_axis_ctrl_tdata   => sel_cr(i),
     s_axis_din_aclk     => clk,
     s_axis_din_tready   => dout_ready(i),
-    s_axis_din_tvalid   => din_valid(i),
+    s_axis_din_tvalid   => data_out_valid(i),
     s_axis_din_tlast    => din_last(i),
     s_axis_din_tdata    => input_data_128bits(i), 
     m_axis_status_aclk  => clk,
     m_axis_status_tready=> '1',
-    m_axis_status_tvalid=> dout_valid(i),
+    m_axis_status_tvalid=> open,
     m_axis_status_tdata => open ,
     m_axis_dout_aclk    => clk,
     m_axis_dout_tready  => din_ready(i),
@@ -151,6 +153,7 @@ begin
         data_input2      <= (others => '0') ;
         data_input3      <= (others => '0') ;
         data_in_valid    <= (others => '0') ;
+        pad_enable       <= '0';
         reset_core       <= '0';
     elsif  rising_edge(clk) then 
         data_input0      <= din_data_core0 ;
@@ -159,10 +162,16 @@ begin
         data_input3      <= din_data_core3 ;
         data_in_valid    <= din_valid;
         reset_core       <= '1';
+        
+        if (state0 = padding) or (state1 = padding) or (state2 = padding) or (state3 = padding)   then 
+               pad_enable <= not pad_enable ;
+        else 
+               pad_enable <= '0';   
+        end if ;          
     end if ;     
 end process ;
 
-comb_logic_core0 : process( data_input0, data_in_valid, din_ready ,din_last) 
+comb_logic_core0 : process( data_input0, data_in_valid, din_ready ,din_last, pad_enable) 
 variable codeword_counter : integer := 0;
 begin 
 --Default value
@@ -212,12 +221,12 @@ case state0 is
         else 
             data_out_valid(0) <= '1';
             state0 <= padding  ;
-            
+            codeword_counter := 0 ;
         end if ;  
      end case ;
  end process ; 
  
-comb_logic_core1 : process( data_input1, data_in_valid, din_ready ,din_last) 
+comb_logic_core1 : process( data_input1, data_in_valid, din_ready ,din_last, pad_enable) 
 variable codeword_counter : integer := 0;
 begin 
 
@@ -271,12 +280,12 @@ case state1 is
         else 
             data_out_valid(1) <= '1';
             state1 <= padding  ;
-
+            codeword_counter := 0 ;
         end if ;  
      end case ;
  end process ; 
   
-comb_logic_core2 : process( data_input2, data_in_valid, din_ready ,din_last) 
+comb_logic_core2 : process( data_input2, data_in_valid, din_ready ,din_last, pad_enable) 
 variable codeword_counter : integer := 0;
 begin 
 --Default value
@@ -326,11 +335,12 @@ case state2 is
         else 
             data_out_valid(2) <= '1';
             state2 <= padding  ;
+            codeword_counter := 0 ;
         end if ;  
      end case ;
  end process ;      
 
-comb_logic_core3 : process( data_input3, data_in_valid, din_ready ,din_last) 
+comb_logic_core3 : process( data_input3, data_in_valid, din_ready ,din_last, pad_enable) 
 variable codeword_counter : integer := 0;
 begin 
 --Default value 
@@ -381,6 +391,7 @@ case state3 is
         else 
             data_out_valid(3) <= '1';
             state3 <= padding  ;
+            codeword_counter := 0 ;
         end if ;  
      end case ;
  end process ;      

@@ -56,37 +56,13 @@ port (
   data_out2      : out std_logic_vector(DATA_WIDTH-1 downto 0);
   data_out3      : out std_logic_vector(DATA_WIDTH-1 downto 0);
   data_out_ready : out std_logic ;
-  data_out_valid : out std_logic ;
+  data_out_valid : out std_logic_vector(N-1 downto 0);
   data_out_last  : out std_logic ;
-  current_cr     : out std_logic_vector(2 downto 0) ;
+--  current_cr     : out std_logic_vector(2 downto 0) ;
   last_frame     : out std_logic
 );
 end component ;
 
-component Cores_controller 
-  Port ( 
-  
-  clk               : in std_logic ;
-  reset             : in std_logic ;
-  ldpc_core_clk     : in std_logic ;
-  din_last          : in std_logic_vector(N-1 downto 0);
-  din_ready         : in std_logic_vector(N-1 downto 0);
-  din_valid         : in std_logic_vector(N-1 downto 0);
-  din_data_core0    : in std_logic_vector(DATA_WIDTH-1 downto 0);
-  din_data_core1    : in std_logic_vector(DATA_WIDTH-1 downto 0);
-  din_data_core2    : in std_logic_vector(DATA_WIDTH-1 downto 0);
-  din_data_core3    : in std_logic_vector(DATA_WIDTH-1 downto 0);
-  dout_valid        : out std_logic_vector(N-1 downto 0); 
-  dout_ready        : out std_logic_vector(N-1 downto 0); 
-  dout_data0        : out std_logic_vector(DATA_WIDTH-1 downto 0); 
-  dout_data1        : out std_logic_vector(DATA_WIDTH-1 downto 0); 
-  dout_data2        : out std_logic_vector(DATA_WIDTH-1 downto 0); 
-  dout_data3        : out std_logic_vector(DATA_WIDTH-1 downto 0); 
-  dout_last         : out std_logic_vector(N-1 downto 0);
-  last_frame        : out std_logic 
-        
-  );
-  end component ;
 -- Signal declarations for testbench
   signal clk_tb            : std_logic := '0';
   signal reset_tb          : std_logic := '0';
@@ -102,27 +78,12 @@ component Cores_controller
   signal data_out2_tb      : std_logic_vector(DATA_WIDTH-1 downto 0);
   signal data_out3_tb      : std_logic_vector(DATA_WIDTH-1 downto 0);
   signal data_out_ready_tb : std_logic;
-  signal data_out_valid_tb : std_logic;
+  signal data_out_valid_tb : std_logic_vector(N-1 downto 0);
   signal data_out_last_tb  : std_logic;
-  signal current_cr_tb     : std_logic_vector(2 downto 0);
+--  signal current_cr_tb     : std_logic_vector(2 downto 0);
   signal last_frame_tb     : std_logic;
   signal data_in_last_tb   : std_logic_vector(3 downto 0) := (others => '0');
-  
---Signals for the Cores_controller 
-  signal din_ready_tb     : std_logic_vector(N-1 downto 0) := (others => '0');
-  signal din_valid_tb     : std_logic_vector(N-1 downto 0) := (others => '0');
-  signal din_data_core0_tb: std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
-  signal din_data_core1_tb: std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
-  signal din_data_core2_tb: std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
-  signal din_data_core3_tb: std_logic_vector(DATA_WIDTH-1 downto 0) := (others => '0');
-  signal dout_valid_tb    : std_logic_vector(N-1 downto 0):= (others => '0');
-  signal dout_ready_tb    : std_logic_vector(N-1 downto 0):= (others => '0');
-  signal dout_data0_tb    : std_logic_vector(DATA_WIDTH-1 downto 0):= (others => '0');
-  signal dout_data1_tb    : std_logic_vector(DATA_WIDTH-1 downto 0):= (others => '0');
-  signal dout_data2_tb    : std_logic_vector(DATA_WIDTH-1 downto 0):= (others => '0');
-  signal dout_data3_tb    : std_logic_vector(DATA_WIDTH-1 downto 0):= (others => '0');
-  signal dout_last_tb     : std_logic_vector(N-1 downto 0) := (others => '0');
-  
+
 begin
 
 
@@ -161,31 +122,10 @@ end process ;
       data_out_ready => data_out_ready_tb,
       data_out_valid => data_out_valid_tb,
       data_out_last  => data_out_last_tb,
-      current_cr     => current_cr_tb,
+--      current_cr     => current_cr_tb,
       last_frame     => last_frame_tb
     );
-    -- Instantiate the Cores_controller
-  Cores_controller_uut: Cores_controller
-    port map (
-      clk           => clk_tb,
-      reset         => reset_tb,
-      ldpc_core_clk => ldpc_core_clk_tb,
-      din_last      => data_in_last_tb,
-      din_ready     => din_ready_tb,
-      din_valid     => din_valid_tb,
-      din_data_core0=> din_data_core0_tb,
-      din_data_core1=> din_data_core1_tb,
-      din_data_core2=> din_data_core2_tb,
-      din_data_core3=> din_data_core3_tb,
-      dout_valid    => dout_valid_tb,
-      dout_ready    => dout_ready_tb,
-      dout_data0    => dout_data0_tb,
-      dout_data1    => dout_data1_tb,
-      dout_data2    => dout_data2_tb,
-      dout_data3    => dout_data3_tb,
-      dout_last     => dout_last_tb,
-      last_frame    => last_frame_tb
-    );
+
 stimuli_generation : process 
 variable k : integer := 0 ;
 variable tmp : integer := 0 ;
@@ -199,16 +139,14 @@ end_of_frame_tb  <= '0';
 
 --Simulate the wait for Preambles insertion (896 symbols * 5 ns)
 wait for 4480ns  ;
-data_in_valid_tb <= '1';
-data_in_tb       <= std_logic_vector(to_unsigned(1,32)) ; 
-wait for clk_period ;
 --Data feeding in the  input FIFO 
-while tmp < 1200 loop 
+while tmp < 2000 loop 
 data_in_tb <= std_logic_vector(to_unsigned(k,32)) ; 
+data_in_valid_tb <= '1';
 k   := k + 10 ;
 tmp := tmp + 1 ;
 --data_in_valid_tb <= '1';
-wait until rising_edge (clk_tb );
+wait until rising_edge (clk_tb);
 end loop ;
 end_of_frame_tb <= '1';
 wait for clk_period ;
