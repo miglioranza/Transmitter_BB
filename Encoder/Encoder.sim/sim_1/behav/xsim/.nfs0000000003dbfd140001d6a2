@@ -1,0 +1,117 @@
+Time resolution is 1 ps
+Stopped at time : 0 fs : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 421
+Note: Start of simulation
+Time: 0 ps  Iteration: 0  Process: /LDPC_encoder_tb/stimuli_generation  File: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sim_1/new/LDPC_encoder_tb.vhd
+Stopped at time : 0 fs : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 421
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. LDPC_encoder_tb.uut.\\Output_FIFO_inst(0)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /LDPC_encoder_tb/uut/\Output_FIFO_inst(0)\/output_fifo/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_35614  Scope: LDPC_encoder_tb.uut.\\Output_FIFO_inst(0)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. LDPC_encoder_tb.uut.\\Output_FIFO_inst(1)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /LDPC_encoder_tb/uut/\Output_FIFO_inst(1)\/output_fifo/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_35614  Scope: LDPC_encoder_tb.uut.\\Output_FIFO_inst(1)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. LDPC_encoder_tb.uut.\\Output_FIFO_inst(2)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /LDPC_encoder_tb/uut/\Output_FIFO_inst(2)\/output_fifo/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_35614  Scope: LDPC_encoder_tb.uut.\\Output_FIFO_inst(2)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. LDPC_encoder_tb.uut.\\Output_FIFO_inst(3)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /LDPC_encoder_tb/uut/\Output_FIFO_inst(3)\/output_fifo/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_35614  Scope: LDPC_encoder_tb.uut.\\Output_FIFO_inst(3)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+********************** HSIAO_H_MATRIX ******************************
+1101001101001000110100100010000 
+0101001001010100100010001000000 
+1001100100100010001000001010101 
+1000100010001000001100101100100 
+0010001000000111000111000100011 
+1001111110000001111000000111100 
+0011111111110000000000111110000 
+********************** HSIAO_H_MATRIX ******************************
+1101001101001000110100100010000 
+0101001001010100100010001000000 
+1001100100100010001000001010101 
+1000100010001000001100101100100 
+0010001000000111000111000100011 
+1001111110000001111000000111100 
+0011111111110000000000111110000 
+********************** HSIAO_H_MATRIX ******************************
+1101001101001000110100100010000 
+0101001001010100100010001000000 
+1001100100100010001000001010101 
+1000100010001000001100101100100 
+0010001000000111000111000100011 
+1001111110000001111000000111100 
+0011111111110000000000111110000 
+********************** HSIAO_H_MATRIX ******************************
+1101001101001000110100100010000 
+0101001001010100100010001000000 
+1001100100100010001000001010101 
+1000100010001000001100101100100 
+0010001000000111000111000100011 
+1001111110000001111000000111100 
+0011111111110000000000111110000 
+Stopped at time : 13982500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 415
+Stopped at time : 13987500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 440
+Stopped at time : 13987500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 441
+Stopped at time : 13987500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 442
+Stopped at time : 13987500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 443
+Stopped at time : 13987500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 446
+Stopped at time : 13987500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 448
+Stopped at time : 13987500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 450
+Stopped at time : 13987500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 13992500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 440
+Stopped at time : 13992500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 13997500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 440
+Stopped at time : 13997500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 14002500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 440
+Stopped at time : 14002500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 14007500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 440
+Stopped at time : 14007500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 14012500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 440
+Stopped at time : 14012500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 14017500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 440
+Stopped at time : 14017500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 14022500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 440
+Stopped at time : 14022500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 14027500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 440
+Stopped at time : 14027500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 14032500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 440
+Stopped at time : 14032500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 14037500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 440
+Stopped at time : 14037500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 14042500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 440
+Stopped at time : 14042500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 14047500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 440
+Stopped at time : 14047500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 14052500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 14057500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 14062500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 14067500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 14072500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 14077500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 14082500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 14087500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 14092500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 14097500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 14102500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 451
+Stopped at time : 14107500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 448
+Stopped at time : 14112500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 448
+Stopped at time : 14117500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 448
+Stopped at time : 14122500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 448
+Stopped at time : 14127500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 448
+Stopped at time : 14132500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 448
+Stopped at time : 14137500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 448
+Stopped at time : 14142500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 448
+Stopped at time : 14147500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 448
+Stopped at time : 14152500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 448
+Stopped at time : 14157500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 448
+Stopped at time : 14162500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 448
+Stopped at time : 14167500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 448
+Stopped at time : 14172500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 448
+Stopped at time : 14177500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 448
+Stopped at time : 14182500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 448
+Stopped at time : 14187500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 441
+Stopped at time : 14187500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 448
+Stopped at time : 14192500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 441
+Stopped at time : 14192500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 448
+Stopped at time : 14197500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 441
+Stopped at time : 14197500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 448
+Stopped at time : 14202500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 441
+Stopped at time : 14202500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 448
+Stopped at time : 14207500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 441
+Stopped at time : 15202500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 456
+Stopped at time : 15512500 ps : File "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" Line 415
+INFO: xsimkernel Simulation Memory Usage: 292728 KB (Peak: 366464 KB), Simulation CPU Usage: 10850 ms

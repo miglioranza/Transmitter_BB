@@ -127,7 +127,7 @@ end process ;
     );
 
 stimuli_generation : process 
-variable k : integer := 0 ;
+variable k : integer := 1 ;
 variable tmp : integer := 0 ;
 begin 
 --reset signal 
@@ -137,7 +137,7 @@ report ("Start of simulation") ;
 data_in_ready_tb <= '1';
 end_of_frame_tb  <= '0';
 
---Simulate the wait for Preambles insertion (896 symbols * 5 ns)
+--Simulate the Preambles insertion (896 symbols * 5 ns)
 wait for 4480ns  ;
 --Data feeding in the  input FIFO 
 while tmp < 2000 loop 
@@ -152,7 +152,9 @@ end_of_frame_tb <= '1';
 wait for clk_period ;
 end_of_frame_tb <= '0';
 data_in_valid_tb <= '0';
-
+--wait for 4480ns  ;
+--while tmp < 4000
+wait ;
 report ("End of simulation");
 wait ;
 end process ;

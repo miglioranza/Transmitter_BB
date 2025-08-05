@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Jul 31 10:33:31 2025
+| Date         : Tue Aug  5 17:10:22 2025
 | Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 | Command      : report_utilization -file LDPC_encoder_utilization_synth.rpt -pb LDPC_encoder_utilization_synth.pb
 | Design       : LDPC_encoder
@@ -29,20 +29,22 @@ Table of Contents
 1. CLB Logic
 ------------
 
-+-------------------------+------+-------+------------+-----------+-------+
-|        Site Type        | Used | Fixed | Prohibited | Available | Util% |
-+-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               |  641 |     0 |          0 |    425280 |  0.15 |
-|   LUT as Logic          |  641 |     0 |          0 |    425280 |  0.15 |
-|   LUT as Memory         |    0 |     0 |          0 |    213600 |  0.00 |
-| CLB Registers           |  133 |     0 |          0 |    850560 |  0.02 |
-|   Register as Flip Flop |  133 |     0 |          0 |    850560 |  0.02 |
-|   Register as Latch     |    0 |     0 |          0 |    850560 |  0.00 |
-| CARRY8                  |   48 |     0 |          0 |     53160 |  0.09 |
-| F7 Muxes                |    0 |     0 |          0 |    212640 |  0.00 |
-| F8 Muxes                |    0 |     0 |          0 |    106320 |  0.00 |
-| F9 Muxes                |    0 |     0 |          0 |     53160 |  0.00 |
-+-------------------------+------+-------+------------+-----------+-------+
++----------------------------+------+-------+------------+-----------+-------+
+|          Site Type         | Used | Fixed | Prohibited | Available | Util% |
++----------------------------+------+-------+------------+-----------+-------+
+| CLB LUTs*                  |  679 |     0 |          0 |    425280 |  0.16 |
+|   LUT as Logic             |  659 |     0 |          0 |    425280 |  0.15 |
+|   LUT as Memory            |   20 |     0 |          0 |    213600 | <0.01 |
+|     LUT as Distributed RAM |   20 |     0 |            |           |       |
+|     LUT as Shift Register  |    0 |     0 |            |           |       |
+| CLB Registers              |  103 |     0 |          0 |    850560 |  0.01 |
+|   Register as Flip Flop    |  103 |     0 |          0 |    850560 |  0.01 |
+|   Register as Latch        |    0 |     0 |          0 |    850560 |  0.00 |
+| CARRY8                     |   53 |     0 |          0 |     53160 |  0.10 |
+| F7 Muxes                   |    0 |     0 |          0 |    212640 |  0.00 |
+| F8 Muxes                   |    0 |     0 |          0 |    106320 |  0.00 |
+| F9 Muxes                   |    0 |     0 |          0 |     53160 |  0.00 |
++----------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
 
@@ -59,9 +61,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 133   |          Yes |           - |        Reset |
+| 102   |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 0     |          Yes |       Reset |            - |
+| 1     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -162,18 +164,21 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT3     |  362 |                 CLB |
-| LUT2     |  159 |                 CLB |
-| LUT4     |  141 |                 CLB |
-| FDCE     |  133 |            Register |
-| OBUF     |  129 |                 I/O |
-| LUT6     |   50 |                 CLB |
-| CARRY8   |   48 |                 CLB |
+| LUT3     |  393 |                 CLB |
+| OBUF     |  133 |                 I/O |
+| LUT2     |  121 |                 CLB |
+| FDCE     |  102 |            Register |
+| LUT6     |   84 |                 CLB |
+| LUT5     |   61 |                 CLB |
+| LUT4     |   58 |                 CLB |
+| CARRY8   |   53 |                 CLB |
 | INBUF    |   39 |                 I/O |
 | IBUFCTRL |   39 |              Others |
-| LUT5     |   17 |                 CLB |
-| OBUFT    |    6 |                 I/O |
-| LUT1     |    4 |                 CLB |
+| RAMD32   |   34 |                 CLB |
+| RAMS32   |    6 |                 CLB |
+| LUT1     |    3 |                 CLB |
+| OBUFT    |    2 |                 I/O |
+| FDRE     |    1 |            Register |
 | BUFGCE   |    1 |               Clock |
 +----------+------+---------------------+
 
