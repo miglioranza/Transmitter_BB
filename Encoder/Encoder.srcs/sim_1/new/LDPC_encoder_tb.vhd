@@ -155,7 +155,7 @@ data_in_valid_tb <= '0';
 --wait for 4480ns  ;
 --while tmp < 4000
 wait ;
-report ("End of simulation");
-wait ;
+--report ("End of simulation");
+
 end process ;
 end Behavioral;
