@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Aug  5 17:10:22 2025
+| Date         : Mon Aug 11 17:35:42 2025
 | Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 | Command      : report_utilization -file LDPC_encoder_utilization_synth.rpt -pb LDPC_encoder_utilization_synth.pb
 | Design       : LDPC_encoder
@@ -32,15 +32,15 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*                  |  679 |     0 |          0 |    425280 |  0.16 |
-|   LUT as Logic             |  659 |     0 |          0 |    425280 |  0.15 |
-|   LUT as Memory            |   20 |     0 |          0 |    213600 | <0.01 |
-|     LUT as Distributed RAM |   20 |     0 |            |           |       |
+| CLB LUTs*                  | 1099 |     0 |          0 |    425280 |  0.26 |
+|   LUT as Logic             | 1039 |     0 |          0 |    425280 |  0.24 |
+|   LUT as Memory            |   60 |     0 |          0 |    213600 |  0.03 |
+|     LUT as Distributed RAM |   60 |     0 |            |           |       |
 |     LUT as Shift Register  |    0 |     0 |            |           |       |
-| CLB Registers              |  103 |     0 |          0 |    850560 |  0.01 |
-|   Register as Flip Flop    |  103 |     0 |          0 |    850560 |  0.01 |
+| CLB Registers              |  372 |     0 |          0 |    850560 |  0.04 |
+|   Register as Flip Flop    |  372 |     0 |          0 |    850560 |  0.04 |
 |   Register as Latch        |    0 |     0 |          0 |    850560 |  0.00 |
-| CARRY8                     |   53 |     0 |          0 |     53160 |  0.10 |
+| CARRY8                     |   83 |     0 |          0 |     53160 |  0.16 |
 | F7 Muxes                   |    0 |     0 |          0 |    212640 |  0.00 |
 | F8 Muxes                   |    0 |     0 |          0 |    106320 |  0.00 |
 | F9 Muxes                   |    0 |     0 |          0 |     53160 |  0.00 |
@@ -61,9 +61,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 102   |          Yes |           - |        Reset |
+| 368   |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 1     |          Yes |       Reset |            - |
+| 4     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -164,21 +164,21 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT3     |  393 |                 CLB |
-| OBUF     |  133 |                 I/O |
-| LUT2     |  121 |                 CLB |
-| FDCE     |  102 |            Register |
-| LUT6     |   84 |                 CLB |
-| LUT5     |   61 |                 CLB |
-| LUT4     |   58 |                 CLB |
-| CARRY8   |   53 |                 CLB |
+| LUT2     |  398 |                 CLB |
+| FDCE     |  368 |            Register |
+| LUT3     |  279 |                 CLB |
+| LUT6     |  215 |                 CLB |
+| LUT4     |  191 |                 CLB |
+| LUT5     |  168 |                 CLB |
+| OBUF     |  132 |                 I/O |
+| RAMD32   |  102 |                 CLB |
+| CARRY8   |   83 |                 CLB |
 | INBUF    |   39 |                 I/O |
 | IBUFCTRL |   39 |              Others |
-| RAMD32   |   34 |                 CLB |
-| RAMS32   |    6 |                 CLB |
-| LUT1     |    3 |                 CLB |
-| OBUFT    |    2 |                 I/O |
-| FDRE     |    1 |            Register |
+| RAMS32   |   18 |                 CLB |
+| LUT1     |   11 |                 CLB |
+| FDRE     |    4 |            Register |
+| OBUFT    |    3 |                 I/O |
 | BUFGCE   |    1 |               Clock |
 +----------+------+---------------------+
 

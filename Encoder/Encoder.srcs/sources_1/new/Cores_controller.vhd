@@ -112,7 +112,7 @@ signal din_last_cores : std_logic_vector(N-1 downto 0 ) := (others => '0') ;
 type counters is array(N-1 downto 0) of integer ;
 signal counter_value ,counter_value2  : counters := (others => 0);
 type input_buffer is array (2 downto 0) of std_logic_vector(DATA_WIDTH -1 downto 0);
-signal save_data      : input_buffer := (others => (others => '0'));
+signal save_data0,save_data1,save_data3      : input_buffer := (others => (others => '0'));
 signal start_encoding : std_logic := '0';
 signal data_in_valid  : std_logic_vector(N-1 downto 0 ) := (others => '0') ;
 signal data_out_valid : std_logic_vector(N-1 downto 0 ) := (others => '0') ; 
@@ -122,11 +122,12 @@ signal padding_process : std_logic := '0';
 type fsm_input is (idle, encoding, padding) ;
 signal state0,state1,state2,state3 : fsm_input := idle ;
 signal cw_counter0,cw_counter1,cw_counter2,cw_counter3 : integer := 0 ;
+signal end_of_encoding : std_logic_vector(N-1 downto 0) := (others => '0') ;
 --Output cores signals  
 signal core_dout_valid  : std_logic_vector(N-1 downto 0) := (others => '0') ;
 signal core_dout_ready  : std_logic_vector(N-1 downto 0) := (others => '0') ;
 --signal pad_cw_counter   : integer := 0;
-signal pad_enable       : std_logic  := '0'  ; 
+signal pad_enable       : std_logic_vector(N-1 downto 0) := (others => '0') ;
 begin
 
 --Generate 4 instances of sd_fec_0 
@@ -170,7 +171,7 @@ begin
         cw_counter1      <= 0;
         cw_counter2      <= 0;
         cw_counter3      <= 0;
-        pad_enable       <= '0';
+        pad_enable       <= (others => '0') ;
         reset_core       <= '0';
         data_in_last     <= (others => '0') ;
 --        codeword_counter <= 0 ;
@@ -178,20 +179,36 @@ begin
         counter_value    <= (others => 0) ;
         counter_value2   <= (others => 0) ; 
     elsif  rising_edge(clk) then 
---        data_input0      <= din_data_core0 ;
---        data_input1      <= din_data_core1;
---        data_input2      <= din_data_core2 ;       
-      
+
         reset_core       <= '1';
         data_in_last     <= din_last ;
         
        --Padding process  
-        if (state0 = padding) or (state1 = padding) or (state2 = padding) or (state3 = padding)   then 
-               pad_enable <= not pad_enable ;
+        if (state0 = padding) and core_dout_ready(0) = '1' then 
+              pad_enable(0)  <= not pad_enable(0) ;
         else 
-               pad_enable <= '0';   
-        end if ; 
-                --Data feeding in the core #0 ,padding needed since K = 40.5
+              pad_enable(0) <= '0';
+        end if ;
+        
+        if (state1 = padding) and core_dout_ready(1) = '1' then 
+              pad_enable(1)  <= not pad_enable(1) ;
+        else 
+              pad_enable(1)<= '0';
+        end if ;
+        
+        if (state2 = padding) and core_dout_ready(2) = '1'then 
+              pad_enable(2)  <= not pad_enable(2) ;
+        else 
+              pad_enable(2) <= '0';
+        end if ;
+        
+        if (state3 = padding) and core_dout_ready(3) = '1' then 
+              pad_enable(3)  <= not pad_enable(3) ;
+        else 
+              pad_enable(3)  <= '0';
+        end if ;
+     
+                --Data feeding in the core #0 ,padding needed since K = 50.62
          if din_valid(0) = '1' and core_dout_ready(0) = '1' then   
                   start_encoding <= '1';
                   counter_value(0)  <= counter_value(0) ;
@@ -201,7 +218,7 @@ begin
                   counter_value2(0) <= 0 ;
                   if cw_counter0 = 49 then
                       dout_ready(0)  <=  '0' ;
-                      data_input0    <= din_data_core3 ;   
+                      data_input0    <= din_data_core0 ;   
                       cw_counter0 <= cw_counter0 + 1 ;
                       data_in_valid(0)    <= '1';  
                   elsif cw_counter0 = 50  then
@@ -210,7 +227,7 @@ begin
                       cw_counter0 <= 0 ;
                       dout_ready(0)    <= core_dout_ready(0) ;
                    elsif  cw_counter0 < 50  then     
-                      data_input0    <= din_data_core3 ;
+                      data_input0    <= din_data_core0  ;
                       dout_ready(0)    <= core_dout_ready(0) ;
                       cw_counter0 <= cw_counter0 + 1 ;
                       data_in_valid(0)    <= '1';  
@@ -221,10 +238,10 @@ begin
                    end if ;
               else     
               
-                 dout_ready(3)  <=  '1' ;
+                 dout_ready(0)  <=  '1' ;
 
                   if cw_counter0 = 49 then
-                          data_input0     <=  save_data(counter_value2(0)) ;   
+                          data_input0     <=  save_data0(counter_value2(0)) ;   
                           cw_counter0 <= cw_counter0 + 1 ;
                           data_in_valid(0)    <= '1';  
                   elsif cw_counter0 = 50  then
@@ -232,7 +249,7 @@ begin
                           data_input0  <=  x"5A5A5A5A" ; 
                           cw_counter0 <= 0 ;
                   elsif  cw_counter0 < 50  then     
-                          data_input0     <= save_data(counter_value2(0))  ;
+                          data_input0     <= save_data0(counter_value2(0))  ;
                           cw_counter0 <= cw_counter0 + 1 ;
                           data_in_valid(0)    <= '1';  
                   else    
@@ -247,7 +264,7 @@ begin
         else
         
             if start_encoding = '1' and counter_value(0) < 2 then 
-               save_data(counter_value(0)) <= din_data_core0 ;
+               save_data0(counter_value(0)) <= din_data_core0 ;
                counter_value(0) <= counter_value(0) + 1 ;
             end if ;   
 --            clock_delay <= '1';
@@ -275,44 +292,44 @@ begin
             elsif cw_counter1 = 45  then
                 data_in_valid(1)    <= '1';  
                 data_input1   <=  x"5A5A5A5A" ; 
-                cw_counter1 <= 1 ;
+                cw_counter1 <= 0 ;
                 dout_ready(1)    <= core_dout_ready(1) ;
             elsif  cw_counter1 < 45  then     
-                data_input1    <= din_data_core3 ;
+                data_input1    <= din_data_core1 ;
                 dout_ready(1)    <= core_dout_ready(1) ;
                 cw_counter1 <= cw_counter1 + 1 ;
                 data_in_valid(1)    <= '1';  
             else    
                 dout_ready(1)    <= core_dout_ready(1) ;
                 data_in_valid(1)    <= '0';  
-                cw_counter1    <= 1;        
+                cw_counter1    <= 0;        
             end if ;
         else     
             dout_ready(1)  <=  '1' ;
     
             if cw_counter1 = 44 then
-                data_input1     <=  save_data(counter_value2(1)) ;   
+                data_input1     <=  save_data1(counter_value2(1)) ;   
                 cw_counter1 <= cw_counter1 + 1 ;
                 data_in_valid(1)    <= '1';  
             elsif cw_counter1 = 45  then
                 data_in_valid(1)    <= '1';  
                 data_input1  <=  x"5A5A5A5A" ; 
-                cw_counter1 <= 1 ;
+                cw_counter1 <= 0 ;
             elsif  cw_counter1 < 45  then     
-                data_input1     <= save_data(counter_value2(1))  ;
+                data_input1     <= save_data1(counter_value2(1))  ;
                 cw_counter1 <= cw_counter1 + 1 ;
                 data_in_valid(1)    <= '1';  
             else    
                 dout_ready(1)    <= core_dout_ready(1) ;
                 data_in_valid(1)    <= '0';  
-                cw_counter1    <= 1;        
+                cw_counter1    <= 0;        
             end if ;
             counter_value(1)        <= counter_value(1) - 1 ;
             counter_value2(1)       <= counter_value2(1) + 1  ;
         end if ;
     else
         if start_encoding = '1' and counter_value(1) < 2 then 
-            save_data(counter_value(1)) <= din_data_core1 ;
+            save_data1(counter_value(1)) <= din_data_core1 ;
             counter_value(1) <= counter_value(1) + 1 ;
         end if ;   
         cw_counter1 <= cw_counter1 ;
@@ -327,7 +344,7 @@ begin
              data_input2       <= din_data_core2 ;
              dout_ready(2)     <=  '1' ;
              data_in_valid(2)  <= '1';
-             if cw_counter2 < 27 then 
+             if cw_counter2 < 26 then 
                 cw_counter2 <= cw_counter2 + 1 ;  
              else 
                 cw_counter2 <= 0 ;   
@@ -371,7 +388,7 @@ begin
                  dout_ready(3)  <=  '1' ;
 
                   if cw_counter3 = 19 then
-                          data_input3      <=  save_data(counter_value2(3)) ;   
+                          data_input3      <=  save_data3(counter_value2(3)) ;   
                           cw_counter3 <= cw_counter3 + 1 ;
                           data_in_valid(3)    <= '1';  
                   elsif cw_counter3 = 20  then
@@ -379,7 +396,7 @@ begin
                           data_input3   <=  x"5A5A5A5A" ; 
                           cw_counter3 <= 0 ;
                   elsif  cw_counter3 < 20  then     
-                          data_input3      <= save_data(counter_value2(3))  ;
+                          data_input3      <= save_data3(counter_value2(3))  ;
                           cw_counter3 <= cw_counter3 + 1 ;
                           data_in_valid(3)    <= '1';  
                   else    
@@ -394,7 +411,7 @@ begin
         else
         
             if start_encoding = '1' and counter_value(3) < 2 then 
-               save_data(counter_value(3)) <= din_data_core3 ;
+               save_data3(counter_value(3)) <= din_data_core3 ;
                counter_value(3) <= counter_value(3) + 1 ;
             end if ;   
 --            clock_delay <= '1';
@@ -412,13 +429,13 @@ comb_logic_core0 : process( data_input0, data_in_valid(0), data_in_last(0), pad_
 variable counter_value0    : integer := 0;
 begin 
 --Default value 
-
+end_of_encoding(0) <= '0';
 case state0 is 
 
  when idle => 
  din_last_cores(0) <= '0';
  counter_value0  := 0 ;
-
+ 
 --default values 
           input_data_128bits(0) <= x"000000000000000000000000" & data_input0 ;
      if data_in_valid(0) = '1'  and core_dout_ready(0) = '1' then  
@@ -434,6 +451,7 @@ case state0 is
   input_data_128bits(0) <=  x"000000000000000000000000" & data_input0 ;
   din_last_cores(0) <= '0';
   counter_value0  := 0 ;
+--  data_out_valid(0)     <= '0'; 
 
     if data_in_valid(0) = '1'  and core_dout_ready(0) = '1' and data_in_last(0) = '0' then 
         data_out_valid(0)     <= '1'; 
@@ -450,18 +468,23 @@ case state0 is
          end if ;
     elsif data_in_valid(0) = '0'  and core_dout_ready(0) = '1' and data_in_last(0) = '0'  then 
           data_out_valid(0)     <= '1'; 
+    else 
+      data_out_valid(0)     <= '1'; 
+       
     end if ;
 
    when padding => 
         input_data_128bits(0) <= x"0000000000000000000000005A5A5A5A" ;
-        counter_value0 := counter_value(0) + 1 ;
-        data_out_valid(0) <= '1';
-        if counter_value(0)  = 51 then 
+        counter_value0 := counter_value0 + 1 ;
+        if counter_value0  = 52 then 
            state0 <= idle ;
            counter_value0 := 0 ;
            din_last_cores(0) <= '1';
+           data_out_valid(0) <= '0';
+           end_of_encoding(0) <= '1';
 
         else 
+            data_out_valid(0) <= '1';
             din_last_cores(0) <= '0';
             state0   <= padding  ;
            
@@ -471,6 +494,8 @@ case state0 is
                 din_last_cores(0)     <= '0';
                 state0               <= idle;
                 input_data_128bits(0) <= (others => '0') ;
+                counter_value0 := 0 ;
+
      end case ;
  end process ;      
 
@@ -479,6 +504,7 @@ comb_logic_core1 : process( data_input1, data_in_valid(1), data_in_last(1), pad_
 --variable codeword_counter : integer := 0;
 variable counter_value1    : integer := 0;
 begin 
+end_of_encoding(1) <= '0';
 
 case state1 is 
 
@@ -500,7 +526,8 @@ case state1 is
   state1   <= encoding ;
   input_data_128bits(1) <=  x"000000000000000000000000" & data_input1 ;
   din_last_cores(1) <= '0';
-  counter_value1  := 0 ;
+--  data_out_valid(1)     <= '0'; 
+ counter_value1  := 0 ;
 
     if data_in_valid(1) = '1'  and core_dout_ready(1) = '1' and data_in_last(1) = '0' then 
         data_out_valid(1)     <= '1'; 
@@ -517,21 +544,23 @@ case state1 is
          end if ;
     elsif data_in_valid(1) = '0'  and core_dout_ready(1) = '1' and data_in_last(1) = '0'  then 
           data_out_valid(1)     <= '1'; 
+    else 
+          data_out_valid(1)     <= '1'; 
+       
     end if ;
 
    when padding => 
         input_data_128bits(1) <= x"0000000000000000000000005A5A5A5A" ;
-        counter_value1 := counter_value(1) + 1 ;
---        pad_cw_counter  <= counter_value ;
-        data_out_valid(1) <= '1';
---        cw_counter3 <= cw_counter3 + 1 ;
-        if counter_value(1)  = 46 then 
+        counter_value1 := counter_value1 + 1 ;
+        if counter_value1  = 47 then 
            state1 <= idle ;
---           data_out_valid(3) <= '0';
+           data_out_valid(1) <= '0';
            counter_value1 := 0 ;
            din_last_cores(1) <= '1';
+           end_of_encoding(1) <= '1';
 
         else 
+            data_out_valid(1) <= '1';
             din_last_cores(1) <= '0';
             state1 <= padding  ;
            
@@ -540,7 +569,8 @@ case state1 is
      data_out_valid(1)     <= '0';   
      din_last_cores(1) <= '0';
      state1               <= idle;
-     input_data_128bits(1) <= (others => '0') ; 
+     input_data_128bits(1) <= (others => '0') ;
+      counter_value1  := 0 ; 
      end case ;
  end process ;  
   
@@ -549,6 +579,7 @@ comb_logic_core2 : process( data_input2, data_in_valid(2), data_in_last(2), pad_
 variable counter_value2    : integer := 0;
 begin 
 --Default value 
+end_of_encoding(2) <= '0';
 
 case state2 is 
 
@@ -571,6 +602,7 @@ case state2 is
   input_data_128bits(2) <=  x"000000000000000000000000" & data_input2 ;
   din_last_cores(2) <= '0';
   counter_value2  := 0 ;
+  data_out_valid(2)     <= '0'; 
 
     if data_in_valid(2) = '1'  and core_dout_ready(2) = '1' and data_in_last(2) = '0' then 
         data_out_valid(2)     <= '1'; 
@@ -591,15 +623,17 @@ case state2 is
 
    when padding => 
         input_data_128bits(2) <= x"0000000000000000000000005A5A5A5A" ;
-        counter_value2 := counter_value(2) + 1 ;
+        counter_value2 := counter_value2 + 1 ;
 --        pad_cw_counter  <= counter_value ;
-        data_out_valid(2) <= '1';
-        if counter_value(2) = 27 then 
+        if counter_value2 = 28 then 
            state2 <= idle ;
            counter_value2 := 0 ;
            din_last_cores(2) <= '1';
+           data_out_valid(2) <= '0';
+           end_of_encoding(2) <= '1';
 
         else 
+            data_out_valid(2) <= '1';
             din_last_cores(2) <= '0';
             state2 <= padding  ;
            
@@ -609,6 +643,7 @@ case state2 is
               din_last_cores(2) <= '0';
               state2               <= idle;
               input_data_128bits(2) <= (others => '0') ;
+              counter_value2 := 0;
      end case ;
  end process ;  
 comb_logic_core3 : process( data_input3, data_in_valid(3), data_in_last(3), pad_enable) 
@@ -622,12 +657,12 @@ case state3 is
  when idle => 
  din_last_cores(3) <= '0';
  counter_value3  := 0 ;
-
 --default values 
           input_data_128bits(3) <= x"000000000000000000000000" & data_input3 ;
      if data_in_valid(3) = '1'  and core_dout_ready(3) = '1' then  
           state3 <= encoding ;
-          data_out_valid(3)     <= '1'; 
+          data_out_valid(3)     <= '1';  
+             
      else  
           state3 <= idle ;
           data_out_valid(3)     <= '0'; 
@@ -638,7 +673,7 @@ case state3 is
   input_data_128bits(3) <=  x"000000000000000000000000" & data_input3 ;
   din_last_cores(3) <= '0';
   counter_value3  := 0 ;
-
+--  data_out_valid(3)     <= '0'; 
     if data_in_valid(3) = '1'  and core_dout_ready(3) = '1' and data_in_last(3) = '0' then 
         data_out_valid(3)     <= '1'; 
 
@@ -654,30 +689,36 @@ case state3 is
          end if ;
     elsif data_in_valid(3) = '0'  and core_dout_ready(3) = '1' and data_in_last(3) = '0'  then 
           data_out_valid(3)     <= '1'; 
+    else 
+          data_out_valid(3)     <= '1'; 
+          
     end if ;
 
    when padding => 
         input_data_128bits(3) <= x"0000000000000000000000005A5A5A5A" ;
-        counter_value3 := counter_value(3) + 1 ;
---        pad_cw_counter  <= counter_value ;
-        data_out_valid(3) <= '1';
---        cw_counter3 <= cw_counter3 + 1 ;
-        if counter_value(3)  = 21 then 
+        counter_value3 := counter_value3 + 1   ;
+        
+    
+        if counter_value3  = 23 then 
            state3 <= idle ;
+           data_out_valid(3) <= '0';
 --           data_out_valid(3) <= '0';
            counter_value3 := 0 ;
            din_last_cores(3) <= '1';
 
         else 
+            data_out_valid(3) <= '1';
             din_last_cores(3) <= '0';
             state3 <= padding  ;
            
         end if ; 
+      
    when others => 
           data_out_valid(3)     <= '0';
           din_last_cores(3)     <= '0';
           state3                <= idle;
           input_data_128bits(3) <= (others => '0') ;
+          counter_value3 := 0 ;
      end case ;
  end process ;      
 
@@ -686,6 +727,8 @@ begin
 dout_data0 <= output_data_128bits(0)(31 downto 0 ) ;
 if output_data_128bits(0) /= x"0000000000000000000000005A5A5A5A" and core_dout_valid(0) = '1' then 
    dout_valid(0) <= '1' ;
+elsif  output_data_128bits(0) = x"0000000000000000000000005A5A5A5A" and core_dout_valid(0) = '1' then   
+dout_valid(0) <= '0' ;
 else 
    dout_valid(0) <= '0' ;
 end if ;
@@ -696,6 +739,8 @@ begin
 dout_data1 <= output_data_128bits(1)(31 downto 0 ) ;
 if output_data_128bits(1) /= x"0000000000000000000000005A5A5A5A" and core_dout_valid(1) = '1' then 
    dout_valid(1) <= '1' ;
+elsif  output_data_128bits(1) = x"0000000000000000000000005A5A5A5A" and core_dout_valid(1) = '1' then   
+dout_valid(1) <= '0' ;   
 else 
    dout_valid(1) <= '0' ;
 end if ;
@@ -706,6 +751,8 @@ begin
 dout_data2 <= output_data_128bits(2)(31 downto 0 ) ;
 if output_data_128bits(2) /= x"0000000000000000000000005A5A5A5A" and core_dout_valid(2) = '1' then 
    dout_valid(2) <= '1' ;
+elsif  output_data_128bits(2) = x"0000000000000000000000005A5A5A5A" and core_dout_valid(2) = '1' then   
+dout_valid(2) <= '0' ;
 else 
    dout_valid(2) <= '0' ;
 end if ;

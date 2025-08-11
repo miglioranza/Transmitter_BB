@@ -149,7 +149,7 @@ input_fifo : axis_data_fifo_0
     s_axis_aresetn      => reset_fifos,
     s_axis_aclk         => clk,
     s_axis_tvalid       => data_in_valid,
-    s_axis_tready       => data_out_ready,
+    s_axis_tready       => open,
     s_axis_tdata        => data_in ,
     s_axis_tlast        => end_of_frame ,
     m_axis_tvalid       => fifo_valid_out(k) ,
