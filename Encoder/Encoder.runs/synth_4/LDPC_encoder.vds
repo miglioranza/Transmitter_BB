@@ -1,0 +1,633 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Aug 14 14:33:39 2025
+# Process ID: 1437123
+# Current directory: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_4
+# Command line: vivado -log LDPC_encoder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source LDPC_encoder.tcl
+# Log file: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_4/LDPC_encoder.vds
+# Journal file: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_4/vivado.jou
+# Running On: uxsrv005, OS: Linux, CPU Frequency: 3457.889 MHz, CPU Physical cores: 8, Host memory: 101335 MB
+#-----------------------------------------------------------
+source LDPC_encoder.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3075.676 ; gain = 2.016 ; free physical = 49666 ; free virtual = 107564
+Command: synth_design -top LDPC_encoder -part xczu28dr-ffvg1517-2-e -directive PerformanceOptimized -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -shreg_min_size 5
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu28dr'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu28dr'
+INFO: [Device 21-403] Loading part xczu28dr-ffvg1517-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1437789
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3474.199 ; gain = 229.688 ; free physical = 43745 ; free virtual = 101643
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'LDPC_encoder' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:63]
+INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_4/.Xil/Vivado-1437123-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo_0' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_4/.Xil/Vivado-1437123-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_4/.Xil/Vivado-1437123-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo_1' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:184]
+INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_4/.Xil/Vivado-1437123-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo_2' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:201]
+INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_4/.Xil/Vivado-1437123-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo_3' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:218]
+INFO: [Synth 8-3491] module 'Cores_controller' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:34' bound to instance 'Cores_Contr' of component 'Cores_controller' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:235]
+INFO: [Synth 8-638] synthesizing module 'Cores_controller' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:66]
+INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_4/.Xil/Vivado-1437123-uxsrv005/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'LDPC_core0' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_4/.Xil/Vivado-1437123-uxsrv005/realtime/sd_fec_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_4/.Xil/Vivado-1437123-uxsrv005/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'LDPC_core1' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:191]
+INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_4/.Xil/Vivado-1437123-uxsrv005/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'LDPC_core2' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:215]
+INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_4/.Xil/Vivado-1437123-uxsrv005/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'LDPC_core3' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:239]
+WARNING: [Synth 8-614] signal 'state0' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:549]
+WARNING: [Synth 8-614] signal 'core_dout_ready' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:549]
+WARNING: [Synth 8-614] signal 'cw_counter0' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:549]
+WARNING: [Synth 8-614] signal 'state1' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:626]
+WARNING: [Synth 8-614] signal 'core_dout_ready' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:626]
+WARNING: [Synth 8-614] signal 'cw_counter1' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:626]
+WARNING: [Synth 8-614] signal 'state2' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:701]
+WARNING: [Synth 8-614] signal 'core_dout_ready' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:701]
+WARNING: [Synth 8-614] signal 'cw_counter2' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:701]
+WARNING: [Synth 8-614] signal 'state3' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:776]
+WARNING: [Synth 8-614] signal 'core_dout_ready' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:776]
+WARNING: [Synth 8-614] signal 'cw_counter3' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:776]
+WARNING: [Synth 8-6014] Unused sequential element core_ctrl_valid_reg was removed.  [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:284]
+WARNING: [Synth 8-6014] Unused sequential element pad_enable_reg was removed.  [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:277]
+WARNING: [Synth 8-3848] Net last_frame in module/entity Cores_controller does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'Cores_controller' (1#1) [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:66]
+INFO: [Synth 8-3491] module 'axis_data_fifo_1' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_4/.Xil/Vivado-1437123-uxsrv005/realtime/axis_data_fifo_1_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:259]
+INFO: [Synth 8-638] synthesizing module 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_4/.Xil/Vivado-1437123-uxsrv005/realtime/axis_data_fifo_1_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'axis_data_fifo_1' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_4/.Xil/Vivado-1437123-uxsrv005/realtime/axis_data_fifo_1_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:259]
+INFO: [Synth 8-3491] module 'axis_data_fifo_1' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_4/.Xil/Vivado-1437123-uxsrv005/realtime/axis_data_fifo_1_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:259]
+INFO: [Synth 8-3491] module 'axis_data_fifo_1' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_4/.Xil/Vivado-1437123-uxsrv005/realtime/axis_data_fifo_1_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:259]
+WARNING: [Synth 8-3848] Net data_out_ready in module/entity LDPC_encoder does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:54]
+WARNING: [Synth 8-3848] Net data_out_last in module/entity LDPC_encoder does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:56]
+WARNING: [Synth 8-3848] Net last_frame in module/entity LDPC_encoder does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:58]
+INFO: [Synth 8-256] done synthesizing module 'LDPC_encoder' (2#1) [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:63]
+WARNING: [Synth 8-7129] Port last_frame in module Cores_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out_ready in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out_last in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_frame in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_code_rate[3] in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_code_rate[2] in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_code_rate[1] in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_code_rate[0] in module LDPC_encoder is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3522.137 ; gain = 277.625 ; free physical = 42304 ; free virtual = 100208
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3539.949 ; gain = 295.438 ; free physical = 44142 ; free virtual = 102043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3539.949 ; gain = 295.438 ; free physical = 44141 ; free virtual = 102043
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3539.949 ; gain = 0.000 ; free physical = 44199 ; free virtual = 102100
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'Cores_Contr/LDPC_core0'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'Cores_Contr/LDPC_core0'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'Cores_Contr/LDPC_core1'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'Cores_Contr/LDPC_core1'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'Cores_Contr/LDPC_core2'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'Cores_Contr/LDPC_core2'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'Cores_Contr/LDPC_core3'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'Cores_Contr/LDPC_core3'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'input_fifo_0'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'input_fifo_0'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'input_fifo_1'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'input_fifo_1'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'input_fifo_2'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'input_fifo_2'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'input_fifo_3'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'input_fifo_3'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[0].output_fifo'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[0].output_fifo'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[1].output_fifo'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[1].output_fifo'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[2].output_fifo'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[2].output_fifo'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[3].output_fifo'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[3].output_fifo'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/constrs_1/new/Encoder_constraints.xdc]
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3735.605 ; gain = 0.000 ; free physical = 44118 ; free virtual = 102019
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/constrs_1/new/Encoder_constraints.xdc]
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_4/dont_touch.xdc]
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_4/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3735.605 ; gain = 0.000 ; free physical = 44114 ; free virtual = 102016
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3735.605 ; gain = 0.000 ; free physical = 44109 ; free virtual = 102011
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 3735.605 ; gain = 491.094 ; free physical = 44223 ; free virtual = 102128
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu28dr-ffvg1517-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 3735.605 ; gain = 491.094 ; free physical = 44222 ; free virtual = 102128
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for Cores_Contr/LDPC_core0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Cores_Contr/LDPC_core1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Cores_Contr/LDPC_core2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Cores_Contr/LDPC_core3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for input_fifo_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for input_fifo_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for input_fifo_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for input_fifo_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[0].output_fifo . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[1].output_fifo . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[2].output_fifo . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[3].output_fifo . (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 3735.605 ; gain = 491.094 ; free physical = 44217 ; free virtual = 102126
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6904] The RAM "Cores_controller:/save_data0_reg" of size (depth=3 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "Cores_controller:/save_data1_reg" of size (depth=3 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "Cores_controller:/save_data3_reg" of size (depth=3 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 3735.605 ; gain = 491.094 ; free physical = 44173 ; free virtual = 102082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 14    
++---Registers : 
+	               32 Bit    Registers := 8     
+	                4 Bit    Registers := 5     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	               96 Bit	(3 X 32 bit)          RAMs := 3     
++---Muxes : 
+	   3 Input   32 Bit        Muxes := 8     
+	   2 Input   32 Bit        Muxes := 30    
+	   4 Input   32 Bit        Muxes := 8     
+	   2 Input    4 Bit        Muxes := 6     
+	   4 Input    4 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 12    
+	   4 Input    2 Bit        Muxes := 4     
+	   5 Input    2 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 6     
+	   2 Input    1 Bit        Muxes := 26    
+	   4 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 4272 (col length:192)
+BRAMs: 2160 (col length: RAMB18 192 RAMB36 96)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-6904] The RAM "Cores_Contr/save_data0_reg" of size (depth=3 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "Cores_Contr/save_data1_reg" of size (depth=3 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "Cores_Contr/save_data3_reg" of size (depth=3 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+WARNING: [Synth 8-7129] Port last_frame in module Cores_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out_ready in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out_last in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_frame in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_code_rate[3] in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_code_rate[2] in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_code_rate[1] in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_code_rate[0] in module LDPC_encoder is either unconnected or has no load
+INFO: [Synth 8-6904] The RAM "Cores_Contr/save_data0_reg" of size (depth=3 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "Cores_Contr/save_data1_reg" of size (depth=3 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "Cores_Contr/save_data3_reg" of size (depth=3 x width=32) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 3735.605 ; gain = 491.094 ; free physical = 43942 ; free virtual = 101873
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+----------------+-----------+----------------------+---------------+
+|Module Name | RTL Object     | Inference | Size (Depth x Width) | Primitives    | 
++------------+----------------+-----------+----------------------+---------------+
+|Cores_Contr | save_data0_reg | Implied   | 4 x 32               | RAM32M16 x 3  | 
+|Cores_Contr | save_data1_reg | Implied   | 4 x 32               | RAM32M16 x 3  | 
+|Cores_Contr | save_data3_reg | Implied   | 4 x 32               | RAM32M16 x 3  | 
++------------+----------------+-----------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 3969.375 ; gain = 724.863 ; free physical = 42162 ; free virtual = 100093
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_441/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_915/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_441/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_851/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_853/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_913/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_849/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_911/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_847/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_909/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_845/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_907/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_843/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_905/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_841/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_903/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_839/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_901/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_837/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_899/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_835/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_897/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_833/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_895/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_831/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_893/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_829/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_891/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_827/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_889/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_825/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_887/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_885/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_823/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_883/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_821/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_881/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_819/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_879/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_817/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_877/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_815/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_875/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_813/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_873/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_811/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_871/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_868/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_806/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_866/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_804/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_863/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_801/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_799/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_859/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Cores_Contr/i_4/i_797/O'
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 4004.406 ; gain = 759.895 ; free physical = 42118 ; free virtual = 100050
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+----------------+-----------+----------------------+---------------+
+|Module Name | RTL Object     | Inference | Size (Depth x Width) | Primitives    | 
++------------+----------------+-----------+----------------------+---------------+
+|Cores_Contr | save_data0_reg | Implied   | 4 x 32               | RAM32M16 x 3  | 
+|Cores_Contr | save_data1_reg | Implied   | 4 x 32               | RAM32M16 x 3  | 
+|Cores_Contr | save_data3_reg | Implied   | 4 x 32               | RAM32M16 x 3  | 
++------------+----------------+-----------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1138/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1124/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1799/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1802/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1807/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1810/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1811/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1814/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1819/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1822/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1823/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1826/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1831/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1834/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1835/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1838/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1843/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1846/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1175/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1175/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1847/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1850/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1855/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1858/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1859/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1862/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1867/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1870/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1871/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1874/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1879/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1882/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1883/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1886/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1891/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_1894/O'
+Found timing loop:
+     0: i_805/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     1: i_805/I1 (LUT2)
+     2: i_711/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     3: i_711/I1 (LUT2)
+     4: i_520/O (LUT3)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     5: i_520/I2 (LUT3)
+     6: i_805/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
+Inferred a: "set_disable_timing -from I1 -to O i_805"
+Found timing loop:
+     0: i_805/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     1: i_805/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
+Found timing loop:
+     0: i_966/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
+     1: i_966/I1 (LUT2)
+     2: i_467/O (LUT6)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     3: i_467/I3 (LUT6)
+     4: i_712/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     5: i_712/I1 (LUT2)
+     6: i_805/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     7: i_805/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
+Inferred a: "set_disable_timing -from I1 -to O i_966"
+Found timing loop:
+     0: i_806/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     1: i_806/I1 (LUT2)
+     2: i_805/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     3: i_805/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
+Inferred a: "set_disable_timing -from I1 -to O i_806"
+Found timing loop:
+     0: i_806/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     1: i_806/I0 (LUT2)
+     2: i_450/O (LUT3)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     3: i_450/I1 (LUT3)
+     4: i_806/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
+Inferred a: "set_disable_timing -from I0 -to O i_806"
+Found timing loop:
+     0: i_713/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     1: i_713/I1 (LUT2)
+     2: i_967/O (LUT4)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
+     3: i_967/I3 (LUT4)
+     4: i_713/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
+Inferred a: "set_disable_timing -from I1 -to O i_713"
+Found timing loop:
+     0: i_713/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     1: i_713/I0 (LUT2)
+     2: i_1228/O (LUT5)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
+     3: i_1228/I4 (LUT5)
+     4: i_713/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
+Inferred a: "set_disable_timing -from I0 -to O i_713"
+Found timing loop:
+     0: i_1228/O (LUT5)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
+     1: i_1228/I4 (LUT5)
+     2: i_713/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     3: i_713/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
+Inferred a: "set_disable_timing -from I4 -to O i_1228"
+Found timing loop:
+     0: i_552/O (LUT5)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     1: i_552/I1 (LUT5)
+     2: i_552/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
+Inferred a: "set_disable_timing -from I1 -to O i_552"
+Found timing loop:
+     0: i_970/O (LUT5)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
+     1: i_970/I4 (LUT5)
+     2: i_552/O (LUT5)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     3: i_552/I0 (LUT5)
+     4: i_923/O (LUT1)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     5: i_923/I0 (LUT1)
+     6: i_970/O (LUT5)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
+Inferred a: "set_disable_timing -from I4 -to O i_970"
+Found timing loop:
+     0: i_569/O (LUT5)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     1: i_569/I4 (LUT5)
+     2: i_569/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
+Inferred a: "set_disable_timing -from I4 -to O i_569"
+Found timing loop:
+     0: i_810/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     1: i_810/I1 (LUT2)
+     2: i_778/O (LUT4)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     3: i_778/I3 (LUT4)
+     4: i_810/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
+Inferred a: "set_disable_timing -from I1 -to O i_810"
+Found timing loop:
+     0: i_569/O (LUT5)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     1: i_569/I0 (LUT5)
+     2: i_810/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     3: i_810/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
+Inferred a: "set_disable_timing -from I0 -to O i_569"
+Found timing loop:
+     0: i_569/O (LUT5)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     1: i_569/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
+Found timing loop:
+     0: i_810/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     1: i_810/I0 (LUT2)
+     2: i_570/O (LUT5)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     3: i_570/I1 (LUT5)
+     4: i_569/O (LUT5)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd:322]
+     5: i_569/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:34]
+Inferred a: "set_disable_timing -from I0 -to O i_810"
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_809/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_815/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_815/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_2036/CO[7]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_2036/CO[7]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_2036/CO[6]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_2036/CO[6]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_2036/CO[5]'
+INFO: [Common 17-14] Message 'Synth 8-326' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 4012.414 ; gain = 767.902 ; free physical = 42108 ; free virtual = 100040
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 4025.289 ; gain = 780.777 ; free physical = 42238 ; free virtual = 100171
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 4025.289 ; gain = 780.777 ; free physical = 42238 ; free virtual = 100171
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 4025.289 ; gain = 780.777 ; free physical = 42242 ; free virtual = 100174
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 4025.289 ; gain = 780.777 ; free physical = 42243 ; free virtual = 100175
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 4025.289 ; gain = 780.777 ; free physical = 42245 ; free virtual = 100177
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 4025.289 ; gain = 780.777 ; free physical = 42254 ; free virtual = 100187
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------+----------+
+|      |BlackBox name    |Instances |
++------+-----------------+----------+
+|1     |axis_data_fifo_0 |         4|
+|2     |axis_data_fifo_1 |         4|
+|3     |sd_fec_0         |         4|
++------+-----------------+----------+
+
+Report Cell Usage: 
++------+----------------------+------+
+|      |Cell                  |Count |
++------+----------------------+------+
+|1     |axis_data_fifo_0_bbox |     4|
+|5     |axis_data_fifo_1_bbox |     4|
+|9     |sd_fec_0_bbox         |     4|
+|13    |BUFG                  |     1|
+|14    |CARRY8                |    76|
+|15    |LUT1                  |     8|
+|16    |LUT2                  |   369|
+|17    |LUT3                  |   261|
+|18    |LUT4                  |   211|
+|19    |LUT5                  |    77|
+|20    |LUT6                  |   260|
+|21    |RAM32M                |     3|
+|22    |RAM32M16              |     6|
+|23    |FDCE                  |   347|
+|24    |IBUF                  |    39|
+|25    |OBUF                  |   132|
+|26    |OBUFT                 |     3|
++------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 4025.289 ; gain = 780.777 ; free physical = 42316 ; free virtual = 100249
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 15 critical warnings and 181 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 4025.289 ; gain = 585.121 ; free physical = 42369 ; free virtual = 100302
+Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:50 . Memory (MB): peak = 4025.297 ; gain = 780.777 ; free physical = 42367 ; free virtual = 100299
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4039.227 ; gain = 0.000 ; free physical = 42443 ; free virtual = 100376
+INFO: [Netlist 29-17] Analyzing 125 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'LDPC_encoder' is not ideal for floorplanning, since the cellview 'Cores_controller' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4062.008 ; gain = 0.000 ; free physical = 42487 ; free virtual = 100421
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 49 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 39 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 3 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 6 instances
+
+Synth Design complete, checksum: 74213047
+INFO: [Common 17-83] Releasing license: Synthesis
+45 Infos, 138 Warnings, 15 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:01:33 . Memory (MB): peak = 4062.008 ; gain = 960.184 ; free physical = 42671 ; free virtual = 100606
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_4/LDPC_encoder.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file LDPC_encoder_utilization_synth.rpt -pb LDPC_encoder_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 14 14:35:37 2025...

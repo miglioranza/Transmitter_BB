@@ -1,0 +1,12 @@
+
+{ 
+    crc :  2910562057991547954  , 
+    ccp_crc :  0  , 
+    cmdline : " --incr --debug typical --relax --mt 8 --maxdelay -cc_db Encoder_code_coverage -cc_dir Encoder.sim -cc_type sbc -L xil_defaultlib -L simprims_ver -L secureip --snapshot LDPC_encoder_tb_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.LDPC_encoder_tb xil_defaultlib.glbl" , 
+    buildDate : "Oct 19 2021" , 
+    buildTime : "02:56:52" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/LDPC_encoder_tb_time_synth/xsimk\"   -Wl,--whole-archive \"xsim.dir/LDPC_encoder_tb_time_synth/obj/xsim.lnx64.a\" -Wl,--no-whole-archive  -L\"/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/lib/lnx64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 
