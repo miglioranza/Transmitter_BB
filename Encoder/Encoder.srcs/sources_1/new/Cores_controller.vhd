@@ -818,7 +818,7 @@ seq_logic_core3 : process (reset, clk)
 --            din_last_reg(3) <= din_last_cores(3);
              input_data_128bits_reg(3) <=  input_data_128bits(3);
 
-            -- Data feeding in the core #3, padding needed since K = 50.62
+            -- Data feeding in the core #3, padding needed since K = 20,...
             if din_valid(3) = '1' and core_dout_ready(3) = '1' then
                 start_encoding3 <= '1';
                 counter_value(3)  <= counter_value(3);
@@ -849,15 +849,15 @@ seq_logic_core3 : process (reset, clk)
                     end if;
                 else
                     dout_ready(3) <= '1';
-                    if cw_counter3 = 44 then
+                    if cw_counter3 = 19 then
                         data_input3    <= save_data3(counter_value2(3));
                         cw_counter3    <= cw_counter3 + 1;
                         data_in_valid(3) <= '1';
-                    elsif cw_counter3 = 45 then
+                    elsif cw_counter3 = 20 then
                         data_in_valid(3) <= '1';
                         data_input3   <= x"5A5A5A5A";
                         cw_counter3   <= 0;
-                    elsif cw_counter3 < 44 then
+                    elsif cw_counter3 < 19 then
                         data_input3    <= save_data3(counter_value2(3));
                         cw_counter3    <= cw_counter3 + 1;
                         data_in_valid(3) <= '1';

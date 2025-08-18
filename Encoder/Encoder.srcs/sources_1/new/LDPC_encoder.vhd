@@ -175,7 +175,7 @@ signal reset_cores_controller : std_logic := '0';
 signal dout_valid_controller  : std_logic_vector(N-1 downto 0) := (others => '0') ;
 signal din_ready_controller   : std_logic_vector(N-1 downto 0) := (others => '0') ;
 signal dout_last_controller   : std_logic_vector(N-1 downto 0) := (others => '0') ;
-signal dout_data_controller   : std_logic_vector(CORE_DATA_WIDTH-1 downto 0);
+signal dout_data_controller0 ,dout_data_controller1 ,dout_data_controller2 ,dout_data_controller3  : std_logic_vector(CORE_DATA_WIDTH-1 downto 0);
 type code_rate is array (N-1 downto 0) of std_logic_vector(DATA_WIDTH-1 downto 0);
 signal sel_cr : code_rate := (
 "00000000000010000000000000000001", --Code rate = 1/2 , N = 1296 
@@ -237,10 +237,10 @@ din_data_core2 =>fifo_data_out(2),
 din_data_core3 =>fifo_data_out(3),
 dout_valid     => dout_valid_controller,
 dout_ready     => fifo_in_ready,
-dout_data0     => dout_data_controller,
-dout_data1     => open,
-dout_data2     => open,
-dout_data3     => open,
+dout_data0     => dout_data_controller0,
+dout_data1     => dout_data_controller1,
+dout_data2     => dout_data_controller2,
+dout_data3     => dout_data_controller3,
 dout_last      => dout_last_controller,
 reset_cores    => reset_cores_controller,
 last_frame     => open 
@@ -260,7 +260,7 @@ LDPC_core0 : sd_fec_0
     s_axis_din_tready => din_ready_controller(0),
     s_axis_din_tvalid => dout_valid_controller(0),
     s_axis_din_tlast => dout_last_controller(0),
-    s_axis_din_tdata => dout_data_controller,
+    s_axis_din_tdata => dout_data_controller0,
     m_axis_status_aclk => clk,
     m_axis_status_tready => out_fifo_ready_out(0),
     m_axis_status_tvalid => open,

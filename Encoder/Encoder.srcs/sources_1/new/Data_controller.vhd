@@ -227,11 +227,15 @@ case state0 is
                       if cw_counter0 < 50  then 
                          next_input_128bits(0) <= x"000000000000000000000000" & din_data_core0 ;
                          next_counter0 <= cw_counter0  + 1; 
-                         state0 <= padding ;                                       
+                         state0 <= padding ;     
+                         next_dout_last(0)  <= '1';
+                                  
                       else
                          next_input_128bits(0) <= x"0000000000000000000000005A5A5A5A" ;
                          next_counter0 <= 0;
                          state0 <= idle ;
+                         next_dout_last(0)  <= '1';
+
                       end if ; 
               elsif din_valid(0) = '1' and din_ready(0) = '0' and din_last(0)= '0' then  
                    next_dout_ready(0) <= din_ready(0) ;       
@@ -317,11 +321,11 @@ case state1 is
                    state1 <= encoding  ;
                    next_dout_valid(1) <= '1'; 
 
-                    if cw_counter1 < 49 then 
+                    if cw_counter1 < 44 then 
                        next_counter1 <= cw_counter1  + 1; 
                        next_dout_ready(1) <= din_ready(1) ;
                        next_input_128bits(1) <= x"000000000000000000000000" & din_data_core1 ;
-                    elsif  cw_counter1 = 49 then 
+                    elsif  cw_counter1 = 45 then 
                        next_input_128bits(1) <= x"000000000000000000000000" & din_data_core1 ;
                        next_dout_ready(1) <= '0' ;
                        next_counter1 <= cw_counter1  + 1; 
@@ -333,14 +337,18 @@ case state1 is
               elsif din_valid(1) = '1' and din_ready(1) = '1' and din_last(1)= '1' then      
                     next_dout_ready(1) <= din_ready(1) ;
 
-                      if cw_counter1 < 50  then 
+                      if cw_counter1 < 45  then 
                          next_input_128bits(1) <= x"000000000000000000000000" & din_data_core1 ;
                          next_counter1 <= cw_counter1  + 1; 
-                         state0 <= padding ;                                       
+                         state0 <= padding ;   
+                         next_dout_last(1)  <= '0';
+                                    
                       else
                          next_input_128bits(1) <= x"0000000000000000000000005A5A5A5A" ;
                          next_counter1 <= 0;
                          state1 <= idle ;
+                         next_dout_last(1)  <= '1';
+
                       end if ; 
               elsif din_valid(1) = '1' and din_ready(1) = '0' and din_last(1)= '0' then  
                    next_dout_ready(1) <= din_ready(1) ;       
@@ -394,6 +402,221 @@ case state1 is
           state1 <= idle ;
           next_counter1 <= 0;
           next_dout_ready(1) <= '0';
+      end case ;    
+end process ;
+comb_logic_core2 : process(din_data_core2, din_ready(2), din_valid(2), din_last(2), pad_counter2)
+    begin
+        -- Default values
+        next_input_128bits(2) <= (others => '0');
+        next_dout_ready(2) <= din_ready(2); -- Pass ready signal from LDPC core
+        next_dout_valid(2) <= '0';
+        next_dout_last(2) <= '0';
+        next_counter2 <= cw_counter2;
+
+        case state2 is
+            when idle =>
+                next_dout_last(2) <= '0';
+                next_counter2 <= 0;
+                next_input_128bits <= x"000000000000000000000000" & din_data_core2;
+
+                if din_valid(2) = '1' and din_ready(2) = '1' then
+                    state2 <= encoding;
+                    next_dout_valid <= '1';
+                    next_counter2 <= cw_counter2 + 1;
+                else
+                    state2 <= idle;
+                    next_dout_valid(2) <= '0';
+                end if;
+
+            when encoding =>
+                if din_valid(2) = '1' and din_ready(2) = '1' and din_last(2) = '0' then
+                    state2 <= encoding;
+                    next_dout_valid(2) <= '1';
+                    next_input_128bits <= x"000000000000000000000000" & din_data_core2;
+                    next_dout_ready(2) <= din_ready(2);
+                    if cw_counter2 < 26 then
+                        next_counter2 <= cw_counter2 + 1;
+                    else
+                        next_counter2 <= 0;
+                    end if;
+                elsif din_valid(2) = '1' and din_ready(2) = '1' and din_last(2) = '1' then
+                    next_dout_ready(2) <= din_ready(2);
+                    next_input_128bits <= x"000000000000000000000000" & din_data_core2;
+                    next_dout_valid(2) <= '1';
+
+                    if cw_counter2 = 0 then                     
+                        next_counter2 <= 0;
+                        state2 <= idle;                       
+                         next_dout_last(2) <= '1';
+
+                        
+                    else                 
+                        next_counter2 <= cw_counter2 +1 ;
+                        state2 <= padding;
+                        next_dout_last(2) <= '0';
+
+                    end if;
+                elsif din_valid(2) = '1' and din_ready(2) = '0' and din_last(2) = '0' then
+                    next_dout_ready(2) <= din_ready(2);
+                    next_counter2 <= cw_counter2;
+                    next_dout_valid(2) <= '1';
+                    next_input_128bits <= x"000000000000000000000000" & din_data_core2;
+                    state2 <= encoding;
+                elsif din_valid(2) = '1' and din_ready(2) = '0' and din_last(2) = '1' then
+                    next_dout_ready(2) <= din_ready(2);
+                    next_input_128bits <= x"000000000000000000000000" & din_data_core2;
+                    next_dout_valid(2) <= '0';
+                    next_counter2 <= cw_counter2;
+
+                    if cw_counter2 = 0 then
+                        state2 <= encoding;
+                    else
+                        state2 <= padding;
+                    end if;
+                else
+                    next_input_128bits(2) <= (others => '0');
+                    state2 <= encoding;
+                    next_dout_valid(2) <= '0';
+                    next_counter2 <= cw_counter2;
+                    next_dout_ready(2) <= din_ready(2);
+                end if;
+
+            when padding =>
+                next_dout_ready(2) <= '0';
+                next_dout_valid(2) <= '1';
+                next_input_128bits(2) <= x"0000000000000000000000005A5A5A5A";
+                if din_ready(2) = '1' then
+                    next_counter2 <= cw_counter2 + 1;
+
+                    if cw_counter2 = 28 then
+                        state2 <= idle;
+                        next_dout_last(2) <= '1';
+                        next_counter2 <= 0;
+                    else
+                        state2 <= padding;
+                        next_dout_last(2) <= '0';
+                    end if;
+                else
+                    state2 <= padding;
+                    next_counter2 <= cw_counter2;
+                    next_dout_last(2) <= '0';
+                end if;
+
+            when others =>
+                next_dout_valid(2) <= '0';
+                next_input_128bits(2) <= (others => '0');
+                state2 <= idle;
+                next_counter2 <= 0;
+                next_dout_ready(2) <= '0';
+        end case;
+    end process;
+    comb_logic_core3 : process(din_data_core3 ,din_ready(3), din_valid(3), din_last(3),pad_counter3) 
+begin
+--Default value 
+next_input_128bits(3)  <= (others => '0');
+next_dout_ready(3)     <= din_ready(3) ; --din_ready is the signal coming from the LDPC core3 ,assign this value to next_dout_ready signal for informing the FIFO3 that the data_controller is ready to receive the data
+next_dout_valid(3)     <= '0'; 
+next_dout_last(3)      <= '0';
+next_counter3          <= cw_counter3 ;
+next_dout_last(3)      <= '0';
+
+case state3 is 
+    when idle => 
+        next_dout_last(3) <= '0';
+        next_counter3     <= 0;
+        next_input_128bits(3) <= x"000000000000000000000000" & din_data_core3 ;
+         
+       if din_valid(3) = '1' and din_ready(3) = '1' then 
+          state3              <= encoding ;
+          next_dout_valid(3)  <= '1';
+          next_counter3 <= cw_counter3  + 1; 
+       else  
+          state3 <= idle ;
+          next_dout_valid(3)  <= '0';
+       end if ;
+    when  encoding => 
+          
+             if din_valid(3) = '1' and din_ready(3) = '1' and din_last(3)= '0' then 
+                   state3 <= encoding  ;
+                   next_dout_valid(3) <= '1'; 
+
+                    if cw_counter3 < 19 then 
+                       next_counter3 <= cw_counter3  + 1; 
+                       next_dout_ready(3) <= din_ready(3) ;
+                       next_input_128bits(3) <= x"000000000000000000000000" & din_data_core3 ;
+                    elsif  cw_counter3 = 19 then 
+                       next_input_128bits(3) <= x"000000000000000000000000" & din_data_core3 ;
+                       next_dout_ready(3) <= '0' ;
+                       next_counter3 <= cw_counter3  + 1; 
+                    else
+                       next_input_128bits(3) <= x"0000000000000000000000005A5A5A5A" ;
+                       next_counter3 <= 0;
+                       next_dout_ready(3) <= din_ready(3) ;
+                    end if ;
+              elsif din_valid(3) = '1' and din_ready(3) = '1' and din_last(3)= '1' then      
+                    next_dout_ready(3) <= din_ready(3) ;
+
+                      if cw_counter3 < 20  then 
+                         next_input_128bits(3) <= x"000000000000000000000000" & din_data_core3 ;
+                         next_counter3 <= cw_counter3  + 1; 
+                         state3 <= padding ;                                       
+                      else
+                         next_input_128bits(3) <= x"0000000000000000000000005A5A5A5A" ;
+                         next_counter3 <= 0;
+                         state3 <= idle ;
+                      end if ; 
+              elsif din_valid(3) = '1' and din_ready(3) = '0' and din_last(3)= '0' then  
+                   next_dout_ready(3) <= din_ready(3) ;       
+                   next_counter3 <= cw_counter3 ;  
+                   next_dout_valid(3) <= '1'; 
+                   next_input_128bits(3) <= x"000000000000000000000000" & din_data_core3 ;
+                   state3 <= encoding  ;
+              elsif din_valid(3) = '1' and din_ready(3) = '0' and din_last(3)= '1' then  
+                   next_dout_ready(3) <= din_ready(3) ;
+                   next_counter3 <= cw_counter3; 
+                      if cw_counter3 < 20  then 
+                         next_input_128bits(3) <= x"000000000000000000000000" & din_data_core3 ;                      
+                         state3 <= padding  ;                                       
+                      else
+                         next_input_128bits(3) <= x"0000000000000000000000005A5A5A5A" ;
+                         state3 <= encoding ;
+                      end if ; 
+              else 
+                   next_input_128bits(3) <= (others => '0') ;                     
+                   state3 <= encoding ;
+                   next_dout_valid(3) <= '0'; 
+                   next_counter3 <= cw_counter3 ;
+                   next_dout_ready(3) <= din_ready(3) ;
+
+              end if ;    
+     when padding => 
+          next_dout_ready(3) <= din_ready(3) ;       
+          next_dout_valid(3) <= '1'; 
+          next_input_128bits(3) <=  x"0000000000000000000000005A5A5A5A" ;
+              if din_ready(3) = '1' then
+                 
+                 next_counter3 <= cw_counter3  + 1; 
+
+                 if cw_counter3 = 22 then 
+                    state3 <= idle ;        
+                    next_dout_last(3)  <= '1';
+                    next_counter3 <= 0 ;
+                 else    
+                    state3 <= padding ;                    
+                    next_dout_last(3)  <= '0';
+                 end if ;
+              else 
+                    state3 <= padding ;        
+                    next_counter3 <= cw_counter3 ;
+                    next_dout_last(3)  <= '0';
+
+              end if ;
+      when others => 
+          next_dout_valid(3) <= '0';     
+          next_input_128bits(3) <= ( others => '0') ;
+          state3 <= idle ;
+          next_counter3 <= 0;
+          next_dout_ready(3) <= '0';
       end case ;    
 end process ;
 
