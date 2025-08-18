@@ -57,7 +57,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="zcu111"/>
-    <Option Name="WTXSimLaunchSim" Val="267"/>
+    <Option Name="WTXSimLaunchSim" Val="269"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -94,7 +94,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/Cores_controller.vhd">
+      <File Path="$PSRCDIR/sources_1/new/Data_controller.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -102,6 +102,13 @@
       </File>
       <File Path="$PSRCDIR/sources_1/new/LDPC_encoder.vhd">
         <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/Cores_controller.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -140,7 +147,6 @@
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SelectedSimModel" Val="rtl"/>
-        <Option Name="SimMode" Val="post-synthesis"/>
         <Option Name="PamDesignTestbench" Val=""/>
         <Option Name="PamDutBypassFile" Val="xil_dut_bypass"/>
         <Option Name="PamSignalDriverFile" Val="xil_bypass_driver"/>
@@ -149,6 +155,7 @@
         <Option Name="xsim.elaborate.coverage.name" Val="Encoder_code_coverage"/>
         <Option Name="xsim.elaborate.coverage.dir" Val="Encoder.sim"/>
         <Option Name="xsim.elaborate.coverage.type" Val="all"/>
+        <Option Name="NLNetlistMode" Val="funcsim"/>
       </Config>
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">

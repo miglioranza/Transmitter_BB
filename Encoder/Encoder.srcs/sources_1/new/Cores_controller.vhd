@@ -120,13 +120,11 @@ signal data_out_valid : std_logic_vector(N-1 downto 0 ) := (others => '0') ;
 signal core_ctrl_valid: std_logic_vector(N-1 downto 0 ) := (others => '0') ; 
 signal din_last_reg   : std_logic_vector(N-1 downto 0 ) := (others => '0') ;
 signal pad_counter0,pad_counter1,pad_counter2,pad_counter3 : integer := 0 ;
---signal codeword_counter     : integer := 0 ;
 
 --Combinational logic signals
 signal padding_process : std_logic := '0';
 type fsm_input is (idle, encoding, padding) ;
 signal state0,state1,state2,state3 : fsm_input := idle ;
---signal state0_reg,state1_reg,state2_reg,state3_reg : fsm_input := idle ;
 signal din_last_cores : std_logic_vector(N-1 downto 0 ) := (others => '0') ;
 signal cw_counter0,cw_counter1,cw_counter2,cw_counter3 : integer := 0 ;
 signal end_of_encoding : std_logic_vector(N-1 downto 0) := (others => '0') ;
@@ -178,7 +176,7 @@ LDPC_core0 : sd_fec_0
     s_axis_din_tready   => core_dout_ready(0),
     s_axis_din_tvalid   => data_out_valid(0),
     s_axis_din_tlast    => din_last_cores(0),
-    s_axis_din_tdata    => input_data_128bits(0), 
+    s_axis_din_tdata    => input_data_128bits_reg(0), 
     m_axis_status_aclk  => clk,
     m_axis_status_tready=> '1',
     m_axis_status_tvalid=> open,
@@ -202,7 +200,7 @@ LDPC_core1 : sd_fec_0
     s_axis_din_tready   => core_dout_ready(1),
     s_axis_din_tvalid   => data_out_valid(1),
     s_axis_din_tlast    =>  din_last_cores(1),
-    s_axis_din_tdata    => input_data_128bits(1), 
+    s_axis_din_tdata    => input_data_128bits_reg(1), 
     m_axis_status_aclk  => clk,
     m_axis_status_tready=> '1',
     m_axis_status_tvalid=> open,
@@ -226,7 +224,7 @@ LDPC_core2 : sd_fec_0
     s_axis_din_tready   => core_dout_ready(2),
     s_axis_din_tvalid   => data_out_valid(2),
     s_axis_din_tlast    =>  din_last_cores(2),
-    s_axis_din_tdata    => input_data_128bits(2), 
+    s_axis_din_tdata    => input_data_128bits_reg(2), 
     m_axis_status_aclk  => clk,
     m_axis_status_tready=> '1',
     m_axis_status_tvalid=> open,
@@ -250,7 +248,7 @@ LDPC_core3 : sd_fec_0
     s_axis_din_tready   => core_dout_ready(3),
     s_axis_din_tvalid   => data_out_valid(3),
     s_axis_din_tlast    =>  din_last_cores(3),
-    s_axis_din_tdata    => input_data_128bits(3), 
+    s_axis_din_tdata    => input_data_128bits_reg(3), 
     m_axis_status_aclk  => clk,
     m_axis_status_tready=> '1',
     m_axis_status_tvalid=> open,
@@ -581,10 +579,16 @@ if reset = '1'then
     dout_ready(0)     <= '0';
     start_encoding0  <= '0';
     pad_counter0      <= 0 ;
+    input_data_128bits_reg(0)  <= (others => '0') ;
+     
 elsif rising_edge(clk) then
     reset_core      <= '1';
     data_in_last(0)     <= din_last(0) ;
 --    din_last_reg(0)    <= din_last_cores(0) ;
+
+     input_data_128bits_reg(0) <= input_data_128bits(0);
+    
+     
        if (state0 = padding) and core_dout_ready(0) = '1' then 
               pad_counter0 <= pad_counter0 + 1  ;
         else 
@@ -593,8 +597,8 @@ elsif rising_edge(clk) then
             --Data feeding in the core #0 ,padding needed since K = 50.62
          if din_valid(0) = '1' and core_dout_ready(0) = '1' then   
                   start_encoding0 <= '1';
-                  counter_value(0)  <= counter_value(0) ;
-                  counter_value2(0) <= counter_value2(0) ; 
+--                  counter_value(0)  <= counter_value(0) ;
+--                  counter_value2(0) <= counter_value2(0) ; 
                   
              if counter_value(0) = 0 then
                   counter_value2(0) <= 0 ;
@@ -642,7 +646,7 @@ elsif rising_edge(clk) then
                            data_input0    <= (others => '0') ;
       
                   end if ;
-                counter_value(0)        <= counter_value(0) -1 ;
+                counter_value(0)        <= counter_value(0)-1 ;
                 counter_value2(0)       <= counter_value2(0) + 1  ;
                    
               end if ; 
@@ -675,10 +679,12 @@ seq_logic_core1 : process (reset,clk)
 --            reset_core        <= '0';
             start_encoding1    <= '0';
             din_last_reg(1)   <= '0';
+            input_data_128bits_reg(1) <= (others => '0') ; 
         elsif rising_edge(clk) then
 --            reset_core      <= '1';
             data_in_last(1) <= din_last(1);
 --            din_last_reg(1) <= din_last_cores(1);
+                 input_data_128bits_reg(1) <= input_data_128bits(1);
 
             -- Pad_enable oscillator (counter-based)
             if (state0 = padding) and core_dout_ready(1) = '1' then
@@ -761,9 +767,13 @@ if reset = '1' then
 --            din_last_cores(2) <= '0';
 --            data_out_valid(2) <= '0';
             dout_ready(2)     <= '0';
+            input_data_128bits_reg(2) <= (others => '0') ; 
+
 elsif rising_edge(clk) then
               --Data feeding in the core #2 , No padding needed since K = 27 
         data_in_last(2)   <=    din_last(2)   ;
+         input_data_128bits_reg(2) <=   input_data_128bits(2);
+
 --        din_last_reg     <= din_last_cores ;
         if (state2 = padding) and core_dout_ready(2) = '1'then 
               pad_counter2  <= pad_counter2 + 1;
@@ -802,9 +812,11 @@ seq_logic_core3 : process (reset, clk)
             dout_ready(3)     <= '0';
             start_encoding3    <= '0';
             din_last_reg(3)   <= '0';
+            input_data_128bits_reg(3) <= (others => '0') ;
         elsif rising_edge(clk) then
             data_in_last(3) <= din_last(3);
 --            din_last_reg(3) <= din_last_cores(3);
+             input_data_128bits_reg(3) <=  input_data_128bits(3);
 
             -- Data feeding in the core #3, padding needed since K = 50.62
             if din_valid(3) = '1' and core_dout_ready(3) = '1' then
