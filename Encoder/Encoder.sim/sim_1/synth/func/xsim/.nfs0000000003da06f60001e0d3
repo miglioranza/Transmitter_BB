@@ -1,0 +1,8 @@
+Time resolution is 1 ps
+Note: Start of simulation
+Time: 0 ps  Iteration: 0  Process: /LDPC_encoder_tb/stimuli_generation  File: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sim_1/new/LDPC_encoder_tb.vhd
+Note: Start of simulation
+Time: 0 ps  Iteration: 0  Process: /LDPC_encoder_tb/stimuli_generation  File: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sim_1/new/LDPC_encoder_tb.vhd
+Note: Start of simulation
+Time: 0 ps  Iteration: 0  Process: /LDPC_encoder_tb/stimuli_generation  File: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sim_1/new/LDPC_encoder_tb.vhd
+INFO: xsimkernel Simulation Memory Usage: 605504 KB (Peak: 671040 KB), Simulation CPU Usage: 72260 ms

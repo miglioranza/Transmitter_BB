@@ -38,7 +38,7 @@ end LDPC_encoder_tb;
 architecture Behavioral of LDPC_encoder_tb is
 constant DATA_WIDTH : integer := 32  ;
 constant N          : integer := 4;  -- Number of cores or vector width
-constant clk_period : time := 5 ns ; --200MHz
+constant clk_period : time := 5 ns ; --100MHz
 constant ldpc_core_clk_period  : time := 3.3 ns ; --300MHz
 component LDPC_encoder 
 port (

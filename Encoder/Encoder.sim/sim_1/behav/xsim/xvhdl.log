@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Cores_controller.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Cores_controller'
+INFO: [VRFC 10-163] Analyzing VHDL file "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Data_controller'

@@ -1,0 +1,1142 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue Aug 19 14:03:25 2025
+# Process ID: 2090354
+# Current directory: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_3
+# Command line: vivado -log LDPC_encoder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source LDPC_encoder.tcl
+# Log file: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_3/LDPC_encoder.vds
+# Journal file: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_3/vivado.jou
+# Running On: uxsrv005, OS: Linux, CPU Frequency: 3457.889 MHz, CPU Physical cores: 8, Host memory: 101335 MB
+#-----------------------------------------------------------
+source LDPC_encoder.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3066.770 ; gain = 2.016 ; free physical = 45702 ; free virtual = 105011
+Command: read_checkpoint -auto_incremental -incremental /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/utils_1/imports/synth_3/LDPC_encoder.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/utils_1/imports/synth_3/LDPC_encoder.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top LDPC_encoder -part xczu28dr-ffvg1517-2-e -flatten_hierarchy none -directive RuntimeOptimized -fsm_extraction off
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu28dr'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu28dr'
+INFO: [Device 21-403] Loading part xczu28dr-ffvg1517-2-e
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2091179
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3476.262 ; gain = 229.688 ; free physical = 44395 ; free virtual = 103704
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'LDPC_encoder' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:63]
+INFO: [Synth 8-3491] module 'Data_controller' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34' bound to instance 'Data_controller_inst' of component 'Data_controller' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:227]
+INFO: [Synth 8-638] synthesizing module 'Data_controller' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:67]
+WARNING: [Synth 8-614] signal 'cw_counter0' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:185]
+WARNING: [Synth 8-614] signal 'state0' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:185]
+WARNING: [Synth 8-614] signal 'cw_counter1' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:311]
+WARNING: [Synth 8-614] signal 'state1' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:311]
+WARNING: [Synth 8-614] signal 'cw_counter2' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:438]
+WARNING: [Synth 8-614] signal 'state2' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:438]
+WARNING: [Synth 8-614] signal 'cw_counter3' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:550]
+WARNING: [Synth 8-614] signal 'state3' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:550]
+WARNING: [Synth 8-6014] Unused sequential element pad_counter0_reg was removed.  [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:151]
+WARNING: [Synth 8-6014] Unused sequential element pad_counter1_reg was removed.  [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:152]
+WARNING: [Synth 8-6014] Unused sequential element pad_counter2_reg was removed.  [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:153]
+WARNING: [Synth 8-6014] Unused sequential element pad_counter3_reg was removed.  [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:154]
+WARNING: [Synth 8-3848] Net last_frame in module/entity Data_controller does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'Data_controller' (1#1) [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:67]
+INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_3/.Xil/Vivado-2090354-uxsrv005/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'LDPC_core0' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:250]
+INFO: [Synth 8-638] synthesizing module 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_3/.Xil/Vivado-2090354-uxsrv005/realtime/sd_fec_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_3/.Xil/Vivado-2090354-uxsrv005/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'LDPC_core1' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:275]
+INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_3/.Xil/Vivado-2090354-uxsrv005/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'LDPC_core2' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:300]
+INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_3/.Xil/Vivado-2090354-uxsrv005/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'LDPC_core3' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:325]
+INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_3/.Xil/Vivado-2090354-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo_0' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:350]
+INFO: [Synth 8-638] synthesizing module 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_3/.Xil/Vivado-2090354-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_3/.Xil/Vivado-2090354-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo_1' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:367]
+INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_3/.Xil/Vivado-2090354-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo_2' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:384]
+INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_3/.Xil/Vivado-2090354-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo_3' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:401]
+INFO: [Synth 8-3491] module 'axis_data_fifo_1' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_3/.Xil/Vivado-2090354-uxsrv005/realtime/axis_data_fifo_1_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:442]
+INFO: [Synth 8-638] synthesizing module 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_3/.Xil/Vivado-2090354-uxsrv005/realtime/axis_data_fifo_1_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'axis_data_fifo_1' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_3/.Xil/Vivado-2090354-uxsrv005/realtime/axis_data_fifo_1_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:442]
+INFO: [Synth 8-3491] module 'axis_data_fifo_1' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_3/.Xil/Vivado-2090354-uxsrv005/realtime/axis_data_fifo_1_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:442]
+INFO: [Synth 8-3491] module 'axis_data_fifo_1' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_3/.Xil/Vivado-2090354-uxsrv005/realtime/axis_data_fifo_1_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:442]
+WARNING: [Synth 8-3848] Net data_out_ready in module/entity LDPC_encoder does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:54]
+WARNING: [Synth 8-3848] Net data_out_last in module/entity LDPC_encoder does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:56]
+WARNING: [Synth 8-3848] Net last_frame in module/entity LDPC_encoder does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:58]
+INFO: [Synth 8-256] done synthesizing module 'LDPC_encoder' (2#1) [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:63]
+WARNING: [Synth 8-7129] Port last_frame in module Data_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out_ready in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out_last in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port last_frame in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_code_rate[3] in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_code_rate[2] in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_code_rate[1] in module LDPC_encoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sel_code_rate[0] in module LDPC_encoder is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3524.199 ; gain = 277.625 ; free physical = 43425 ; free virtual = 102735
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3542.012 ; gain = 295.438 ; free physical = 44301 ; free virtual = 103611
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3542.012 ; gain = 295.438 ; free physical = 44297 ; free virtual = 103607
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3542.012 ; gain = 0.000 ; free physical = 44289 ; free virtual = 103599
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'LDPC_core0'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'LDPC_core0'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'LDPC_core1'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'LDPC_core1'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'LDPC_core2'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'LDPC_core2'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'LDPC_core3'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'LDPC_core3'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'input_fifo_0'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'input_fifo_0'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'input_fifo_1'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'input_fifo_1'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'input_fifo_2'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'input_fifo_2'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'input_fifo_3'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'input_fifo_3'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[0].output_fifo'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[0].output_fifo'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[1].output_fifo'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[1].output_fifo'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[2].output_fifo'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[2].output_fifo'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[3].output_fifo'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[3].output_fifo'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/constrs_1/new/Encoder_constraints.xdc]
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3738.668 ; gain = 23.812 ; free physical = 44171 ; free virtual = 103481
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/constrs_1/new/Encoder_constraints.xdc]
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_3/dont_touch.xdc]
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_3/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3738.668 ; gain = 0.000 ; free physical = 44171 ; free virtual = 103481
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3738.668 ; gain = 0.000 ; free physical = 44171 ; free virtual = 103481
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'Output_FIFO_inst[0].output_fifo' at clock pin 's_axis_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'Output_FIFO_inst[1].output_fifo' at clock pin 's_axis_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'Output_FIFO_inst[2].output_fifo' at clock pin 's_axis_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'Output_FIFO_inst[3].output_fifo' at clock pin 's_axis_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'input_fifo_0' at clock pin 's_axis_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'input_fifo_1' at clock pin 's_axis_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'input_fifo_2' at clock pin 's_axis_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'input_fifo_3' at clock pin 's_axis_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 3738.668 ; gain = 492.094 ; free physical = 44345 ; free virtual = 103656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu28dr-ffvg1517-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 3738.668 ; gain = 492.094 ; free physical = 44345 ; free virtual = 103656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for LDPC_core0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for LDPC_core1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for LDPC_core2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for LDPC_core3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for input_fifo_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for input_fifo_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for input_fifo_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for input_fifo_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[0].output_fifo . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[1].output_fifo . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[2].output_fifo . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[3].output_fifo . (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 3738.668 ; gain = 492.094 ; free physical = 44344 ; free virtual = 103655
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 3738.668 ; gain = 492.094 ; free physical = 44339 ; free virtual = 103650
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    6 Bit       Adders := 3     
+	   2 Input    5 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 4     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 6     
+	   4 Input   32 Bit        Muxes := 4     
+	   6 Input   32 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 8     
+	   4 Input    6 Bit        Muxes := 3     
+	   2 Input    5 Bit        Muxes := 4     
+	   4 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 9     
+	   4 Input    4 Bit        Muxes := 3     
+	   4 Input    2 Bit        Muxes := 1     
+	   6 Input    2 Bit        Muxes := 6     
+	   2 Input    2 Bit        Muxes := 3     
+	   5 Input    2 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 12    
+	   5 Input    1 Bit        Muxes := 7     
+	   2 Input    1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 4272 (col length:192)
+BRAMs: 2160 (col length: RAMB18 192 RAMB36 96)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 3738.668 ; gain = 492.094 ; free physical = 44317 ; free virtual = 103632
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 3967.469 ; gain = 720.895 ; free physical = 43830 ; free virtual = 103146
+---------------------------------------------------------------------------------
+Found timing loop:
+     0: Data_controller_inst/i_2/i_31/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     1: Data_controller_inst/i_2/i_31/I0 (GATE_2_14_OR)
+     2: Data_controller_inst/i_2/i_30/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     3: Data_controller_inst/i_2/i_30/I1 (GATE_2_8_AND)
+     4: Data_controller_inst/i_2/i_40/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     5: Data_controller_inst/i_2/i_40/I0 (GATE_2_14_OR)
+     6: Data_controller_inst/i_2/i_39/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     7: Data_controller_inst/i_2/i_39/I1 (GATE_2_8_AND)
+     8: Data_controller_inst/i_2/i_34/O (GATE_2_4)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     9: Data_controller_inst/i_2/i_34/I1 (GATE_2_4)
+    10: Data_controller_inst/i_2/i_22/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+    11: Data_controller_inst/i_2/i_22/I0 (GATE_2_14_OR)
+    12: Data_controller_inst/i_2/i_21/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+    13: Data_controller_inst/i_2/i_21/I0 (GATE_2_8_AND)
+    14: Data_controller_inst/i_2/i_20/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+    15: Data_controller_inst/i_2/i_20/I0 (GATE_2_8_AND)
+    16: Data_controller_inst/i_2/i_19/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+    17: Data_controller_inst/i_2/i_19/I0 (GATE_2_8_AND)
+    18: Data_controller_inst/i_2/i_32/O (INV)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+    19: Data_controller_inst/i_2/i_32/I (INV)
+    20: Data_controller_inst/i_2/i_31/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_2/i_31"
+Found timing loop:
+     0: Data_controller_inst/i_2/i_22/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     1: Data_controller_inst/i_2/i_22/I0 (GATE_2_14_OR)
+     2: Data_controller_inst/i_2/i_21/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     3: Data_controller_inst/i_2/i_21/I0 (GATE_2_8_AND)
+     4: Data_controller_inst/i_2/i_20/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     5: Data_controller_inst/i_2/i_20/I0 (GATE_2_8_AND)
+     6: Data_controller_inst/i_2/i_19/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     7: Data_controller_inst/i_2/i_19/I1 (GATE_2_8_AND)
+     8: Data_controller_inst/i_2/i_23/O (BUF)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     9: Data_controller_inst/i_2/i_23/I (BUF)
+    10: Data_controller_inst/i_2/i_22/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_2/i_22"
+Found timing loop:
+     0: Data_controller_inst/i_2/i_31/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     1: Data_controller_inst/i_2/i_31/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+Found timing loop:
+     0: Data_controller_inst/i_2/i_33/O (GATE_2_2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     1: Data_controller_inst/i_2/i_33/I0 (GATE_2_2)
+     2: Data_controller_inst/i_2/i_31/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     3: Data_controller_inst/i_2/i_31/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_2/i_33"
+Found timing loop:
+     0: Data_controller_inst/i_3/i_18/O (BUF)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_3/i_18/I (BUF)
+     2: Data_controller_inst/i_3/i_17/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     3: Data_controller_inst/i_3/i_17/I0 (GATE_2_14_OR)
+     4: Data_controller_inst/i_3/i_16/O (GATE_2_4)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     5: Data_controller_inst/i_3/i_16/I1 (GATE_2_4)
+     6: Data_controller_inst/i_3/i_27/O (GATE_2_11)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     7: Data_controller_inst/i_3/i_27/I0 (GATE_2_11)
+     8: Data_controller_inst/i_3/i_26/O (GATE_2_2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     9: Data_controller_inst/i_3/i_26/I0 (GATE_2_2)
+    10: Data_controller_inst/i_3/i_25/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+    11: Data_controller_inst/i_3/i_25/I0 (GATE_2_8_AND)
+    12: Data_controller_inst/i_3/i_24/O (GATE_2_11)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+    13: Data_controller_inst/i_3/i_24/I0 (GATE_2_11)
+    14: Data_controller_inst/i_3/i_23/O (GATE_2_2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+    15: Data_controller_inst/i_3/i_23/I0 (GATE_2_2)
+    16: Data_controller_inst/i_3/i_15/O (GATE_2_13)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+    17: Data_controller_inst/i_3/i_15/I0 (GATE_2_13)
+    18: Data_controller_inst/i_3/i_18/O (BUF)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+Inferred a: "set_disable_timing -from I -to O Data_controller_inst/i_3/i_18"
+Found timing loop:
+     0: Data_controller_inst/i_3/i_27/O (GATE_2_11)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_3/i_27/I0 (GATE_2_11)
+     2: Data_controller_inst/i_3/i_26/O (GATE_2_2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     3: Data_controller_inst/i_3/i_26/I0 (GATE_2_2)
+     4: Data_controller_inst/i_3/i_25/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     5: Data_controller_inst/i_3/i_25/I0 (GATE_2_8_AND)
+     6: Data_controller_inst/i_3/i_24/O (GATE_2_11)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     7: Data_controller_inst/i_3/i_24/I1 (GATE_2_11)
+     8: Data_controller_inst/i_3/i_27/O (GATE_2_11)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_3/i_27"
+Found timing loop:
+     0: Data_controller_inst/i_3/i_51/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_3/i_51/I0 (GATE_2_14_OR)
+     2: Data_controller_inst/i_3/i_50/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     3: Data_controller_inst/i_3/i_50/I0 (GATE_2_8_AND)
+     4: Data_controller_inst/i_3/i_49/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     5: Data_controller_inst/i_3/i_49/I0 (GATE_2_8_AND)
+     6: Data_controller_inst/i_3/i_48/O (GATE_2_4)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     7: Data_controller_inst/i_3/i_48/I0 (GATE_2_4)
+     8: Data_controller_inst/i_3/i_18/O (BUF)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     9: Data_controller_inst/i_3/i_18/O (BUF)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_3/i_51"
+Found timing loop:
+     0: Data_controller_inst/i_3/i_18/O (BUF)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_3/i_18/O (BUF)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+Found timing loop:
+     0: Data_controller_inst/i_3/i_18/O (BUF)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_3/i_18/O (BUF)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+Found timing loop:
+     0: Data_controller_inst/i_3/i_18/O (BUF)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_3/i_18/O (BUF)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+Found timing loop:
+     0: Data_controller_inst/i_3/i_46/O (GATE_2_4)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_3/i_46/I0 (GATE_2_4)
+     2: Data_controller_inst/i_3/i_51/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     3: Data_controller_inst/i_3/i_51/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_3/i_46"
+Found timing loop:
+     0: Data_controller_inst/i_3/i_51/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_3/i_51/I1 (GATE_2_14_OR)
+     2: Data_controller_inst/i_3/i_45/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     3: Data_controller_inst/i_3/i_45/I0 (GATE_2_14_OR)
+     4: Data_controller_inst/i_3/i_44/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     5: Data_controller_inst/i_3/i_44/I0 (GATE_2_8_AND)
+     6: Data_controller_inst/i_3/i_43/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     7: Data_controller_inst/i_3/i_43/I0 (GATE_2_8_AND)
+     8: Data_controller_inst/i_3/i_51/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+Inferred a: "set_disable_timing -from I1 -to O Data_controller_inst/i_3/i_51"
+Found timing loop:
+     0: Data_controller_inst/i_3/i_51/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_3/i_51/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+Found timing loop:
+     0: Data_controller_inst/i_1/i_28/O (GATE_2_11)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     1: Data_controller_inst/i_1/i_28/I0 (GATE_2_11)
+     2: Data_controller_inst/i_1/i_27/O (GATE_2_4)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     3: Data_controller_inst/i_1/i_27/I1 (GATE_2_4)
+     4: Data_controller_inst/i_1/i_23/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     5: Data_controller_inst/i_1/i_23/I1 (GATE_2_14_OR)
+     6: Data_controller_inst/i_1/i_21/O (GATE_2_11)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     7: Data_controller_inst/i_1/i_21/I0 (GATE_2_11)
+     8: Data_controller_inst/i_1/i_20/O (GATE_2_1_NOR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     9: Data_controller_inst/i_1/i_20/I0 (GATE_2_1_NOR)
+    10: Data_controller_inst/i_1/i_19/O (BUF)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+    11: Data_controller_inst/i_1/i_19/I (BUF)
+    12: Data_controller_inst/i_1/i_18/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+    13: Data_controller_inst/i_1/i_18/I0 (GATE_2_14_OR)
+    14: Data_controller_inst/i_1/i_17/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+    15: Data_controller_inst/i_1/i_17/I0 (GATE_2_14_OR)
+    16: Data_controller_inst/i_1/i_16/O (GATE_2_1_NOR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+    17: Data_controller_inst/i_1/i_16/I1 (GATE_2_1_NOR)
+    18: Data_controller_inst/i_1/i_7/O (GATE_2_7_NAND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+    19: Data_controller_inst/i_1/i_7/I0 (GATE_2_7_NAND)
+    20: Data_controller_inst/i_1/i_28/O (GATE_2_11)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_1/i_28"
+Found timing loop:
+     0: Data_controller_inst/i_1/i_19/O (BUF)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     1: Data_controller_inst/i_1/i_19/I (BUF)
+     2: Data_controller_inst/i_1/i_18/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     3: Data_controller_inst/i_1/i_18/I0 (GATE_2_14_OR)
+     4: Data_controller_inst/i_1/i_17/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     5: Data_controller_inst/i_1/i_17/I0 (GATE_2_14_OR)
+     6: Data_controller_inst/i_1/i_16/O (GATE_2_1_NOR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     7: Data_controller_inst/i_1/i_16/I1 (GATE_2_1_NOR)
+     8: Data_controller_inst/i_1/i_7/O (GATE_2_7_NAND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     9: Data_controller_inst/i_1/i_7/I0 (GATE_2_7_NAND)
+    10: Data_controller_inst/i_1/i_28/O (GATE_2_11)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+    11: Data_controller_inst/i_1/i_28/I1 (GATE_2_11)
+    12: Data_controller_inst/i_1/i_48/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+    13: Data_controller_inst/i_1/i_48/I0 (GATE_2_14_OR)
+    14: Data_controller_inst/i_1/i_47/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+    15: Data_controller_inst/i_1/i_47/I0 (GATE_2_8_AND)
+    16: Data_controller_inst/i_1/i_46/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+    17: Data_controller_inst/i_1/i_46/I0 (GATE_2_8_AND)
+    18: Data_controller_inst/i_1/i_45/O (GATE_2_2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+    19: Data_controller_inst/i_1/i_45/I0 (GATE_2_2)
+    20: Data_controller_inst/i_1/i_13/O (GATE_2_2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+    21: Data_controller_inst/i_1/i_13/I0 (GATE_2_2)
+    22: Data_controller_inst/i_1/i_28/O (GATE_2_11)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+Inferred a: "set_disable_timing -from I -to O Data_controller_inst/i_1/i_19"
+Found timing loop:
+     0: Data_controller_inst/i_1/i_13/O (GATE_2_2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     1: Data_controller_inst/i_1/i_13/I0 (GATE_2_2)
+     2: Data_controller_inst/i_1/i_28/O (GATE_2_11)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     3: Data_controller_inst/i_1/i_28/I1 (GATE_2_11)
+     4: Data_controller_inst/i_1/i_48/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     5: Data_controller_inst/i_1/i_48/I0 (GATE_2_14_OR)
+     6: Data_controller_inst/i_1/i_47/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     7: Data_controller_inst/i_1/i_47/I0 (GATE_2_8_AND)
+     8: Data_controller_inst/i_1/i_46/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     9: Data_controller_inst/i_1/i_46/I0 (GATE_2_8_AND)
+    10: Data_controller_inst/i_1/i_45/O (GATE_2_2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+    11: Data_controller_inst/i_1/i_45/I0 (GATE_2_2)
+    12: Data_controller_inst/i_1/i_13/O (GATE_2_2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_1/i_13"
+Found timing loop:
+     0: Data_controller_inst/i_1/i_28/O (GATE_2_11)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     1: Data_controller_inst/i_1/i_28/I1 (GATE_2_11)
+     2: Data_controller_inst/i_1/i_48/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     3: Data_controller_inst/i_1/i_48/I0 (GATE_2_14_OR)
+     4: Data_controller_inst/i_1/i_47/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     5: Data_controller_inst/i_1/i_47/I0 (GATE_2_8_AND)
+     6: Data_controller_inst/i_1/i_46/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     7: Data_controller_inst/i_1/i_46/I0 (GATE_2_8_AND)
+     8: Data_controller_inst/i_1/i_45/O (GATE_2_2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     9: Data_controller_inst/i_1/i_45/I0 (GATE_2_2)
+    10: Data_controller_inst/i_1/i_13/O (GATE_2_2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+    11: Data_controller_inst/i_1/i_13/O (GATE_2_2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+Inferred a: "set_disable_timing -from I1 -to O Data_controller_inst/i_1/i_28"
+Found timing loop:
+     0: Data_controller_inst/i_1/i_48/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     1: Data_controller_inst/i_1/i_48/I0 (GATE_2_14_OR)
+     2: Data_controller_inst/i_1/i_47/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     3: Data_controller_inst/i_1/i_47/I0 (GATE_2_8_AND)
+     4: Data_controller_inst/i_1/i_46/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     5: Data_controller_inst/i_1/i_46/I0 (GATE_2_8_AND)
+     6: Data_controller_inst/i_1/i_45/O (GATE_2_2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     7: Data_controller_inst/i_1/i_45/I0 (GATE_2_2)
+     8: Data_controller_inst/i_1/i_13/O (GATE_2_2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     9: Data_controller_inst/i_1/i_13/O (GATE_2_2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_1/i_48"
+Found timing loop:
+     0: Data_controller_inst/i_1/i_48/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     1: Data_controller_inst/i_1/i_48/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+Found timing loop:
+     0: Data_controller_inst/i_1/i_48/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     1: Data_controller_inst/i_1/i_48/I1 (GATE_2_14_OR)
+     2: Data_controller_inst/i_1/i_43/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     3: Data_controller_inst/i_1/i_43/I1 (GATE_2_8_AND)
+     4: Data_controller_inst/i_1/i_48/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+Inferred a: "set_disable_timing -from I1 -to O Data_controller_inst/i_1/i_48"
+Found timing loop:
+     0: Data_controller_inst/i_0/i_26/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     1: Data_controller_inst/i_0/i_26/I0 (GATE_2_14_OR)
+     2: Data_controller_inst/i_0/i_25/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     3: Data_controller_inst/i_0/i_25/I0 (GATE_2_8_AND)
+     4: Data_controller_inst/i_0/i_24/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     5: Data_controller_inst/i_0/i_24/I0 (GATE_2_14_OR)
+     6: Data_controller_inst/i_0/i_23/O (GATE_2_4)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     7: Data_controller_inst/i_0/i_23/I0 (GATE_2_4)
+     8: Data_controller_inst/i_0/i_22/O (GATE_2_11)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     9: Data_controller_inst/i_0/i_22/I0 (GATE_2_11)
+    10: Data_controller_inst/i_0/i_26/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_0/i_26"
+Found timing loop:
+     0: Data_controller_inst/i_0/i_24/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     1: Data_controller_inst/i_0/i_24/I0 (GATE_2_14_OR)
+     2: Data_controller_inst/i_0/i_23/O (GATE_2_4)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     3: Data_controller_inst/i_0/i_23/I0 (GATE_2_4)
+     4: Data_controller_inst/i_0/i_22/O (GATE_2_11)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     5: Data_controller_inst/i_0/i_22/I0 (GATE_2_11)
+     6: Data_controller_inst/i_0/i_26/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     7: Data_controller_inst/i_0/i_26/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_0/i_24"
+Found timing loop:
+     0: Data_controller_inst/i_0/i_26/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     1: Data_controller_inst/i_0/i_26/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+Found timing loop:
+     0: Data_controller_inst/i_0/i_40/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     1: Data_controller_inst/i_0/i_40/I0 (GATE_2_14_OR)
+     2: Data_controller_inst/i_0/i_39/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     3: Data_controller_inst/i_0/i_39/I0 (GATE_2_8_AND)
+     4: Data_controller_inst/i_0/i_38/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     5: Data_controller_inst/i_0/i_38/I0 (GATE_2_8_AND)
+     6: Data_controller_inst/i_0/i_37/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     7: Data_controller_inst/i_0/i_37/I0 (GATE_2_8_AND)
+     8: Data_controller_inst/i_0/i_36/O (GATE_2_1_NOR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     9: Data_controller_inst/i_0/i_36/I0 (GATE_2_1_NOR)
+    10: Data_controller_inst/i_0/i_26/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+    11: Data_controller_inst/i_0/i_26/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_0/i_40"
+Found timing loop:
+     0: Data_controller_inst/i_0/i_26/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     1: Data_controller_inst/i_0/i_26/I1 (GATE_2_14_OR)
+     2: Data_controller_inst/i_0/i_13/O (GATE_2_8_AND)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     3: Data_controller_inst/i_0/i_13/I0 (GATE_2_8_AND)
+     4: Data_controller_inst/i_0/i_12/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     5: Data_controller_inst/i_0/i_12/I1 (GATE_2_14_OR)
+     6: Data_controller_inst/i_0/i_4/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     7: Data_controller_inst/i_0/i_4/I1 (GATE_2_14_OR)
+     8: Data_controller_inst/i_0/i_1/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     9: Data_controller_inst/i_0/i_1/I1 (GATE_2_14_OR)
+    10: Data_controller_inst/i_0/i_26/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+Inferred a: "set_disable_timing -from I1 -to O Data_controller_inst/i_0/i_26"
+Found timing loop:
+     0: Data_controller_inst/i_0/i_26/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     1: Data_controller_inst/i_0/i_26/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+Found timing loop:
+     0: Data_controller_inst/i_0/i_40/O (GATE_2_14_OR)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     1: Data_controller_inst/i_0/i_40/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Data_controller_inst/i_0/i_27/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Data_controller_inst/i_2/i_2/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Data_controller_inst/i_2/i_25/O'
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Data_controller_inst/i_14/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Data_controller_inst/i_3/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Data_controller_inst/i_9/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Data_controller_inst/i_55/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Data_controller_inst/i_136/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Data_controller_inst/i_206/O'
+Found timing loop:
+     0: Data_controller_inst/i_47/O (LUT5)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     1: Data_controller_inst/i_47/I4 (LUT5)
+     2: Data_controller_inst/i_77/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     3: Data_controller_inst/i_77/I1 (LUT2)
+     4: Data_controller_inst/i_47/O (LUT5)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I4 -to O Data_controller_inst/i_47"
+Found timing loop:
+     0: Data_controller_inst/i_77/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     1: Data_controller_inst/i_77/I1 (LUT2)
+     2: Data_controller_inst/i_47/O (LUT5)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     3: Data_controller_inst/i_47/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I1 -to O Data_controller_inst/i_77"
+Found timing loop:
+     0: Data_controller_inst/i_77/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     1: Data_controller_inst/i_77/I0 (LUT2)
+     2: Data_controller_inst/i_67/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     3: Data_controller_inst/i_67/I1 (LUT2)
+     4: Data_controller_inst/i_78/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     5: Data_controller_inst/i_78/I1 (LUT2)
+     6: Data_controller_inst/i_62/O (LUT6)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     7: Data_controller_inst/i_62/I4 (LUT6)
+     8: Data_controller_inst/i_77/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_77"
+Found timing loop:
+     0: Data_controller_inst/i_74/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     1: Data_controller_inst/i_74/I0 (LUT2)
+     2: Data_controller_inst/i_76/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     3: Data_controller_inst/i_76/I1 (LUT2)
+     4: Data_controller_inst/i_58/O (LUT6)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     5: Data_controller_inst/i_58/I5 (LUT6)
+     6: Data_controller_inst/i_77/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     7: Data_controller_inst/i_77/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_74"
+Found timing loop:
+     0: Data_controller_inst/i_76/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     1: Data_controller_inst/i_76/I1 (LUT2)
+     2: Data_controller_inst/i_58/O (LUT6)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     3: Data_controller_inst/i_58/I5 (LUT6)
+     4: Data_controller_inst/i_77/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     5: Data_controller_inst/i_77/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I1 -to O Data_controller_inst/i_76"
+Found timing loop:
+     0: Data_controller_inst/i_77/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     1: Data_controller_inst/i_77/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Found timing loop:
+     0: Data_controller_inst/i_76/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     1: Data_controller_inst/i_76/I0 (LUT2)
+     2: Data_controller_inst/i_66/O (LUT5)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     3: Data_controller_inst/i_66/I4 (LUT5)
+     4: Data_controller_inst/i_77/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     5: Data_controller_inst/i_77/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_76"
+Found timing loop:
+     0: Data_controller_inst/i_77/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     1: Data_controller_inst/i_77/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Found timing loop:
+     0: Data_controller_inst/i_78/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     1: Data_controller_inst/i_78/I0 (LUT2)
+     2: Data_controller_inst/i_61/O (LUT5)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     3: Data_controller_inst/i_61/I2 (LUT5)
+     4: Data_controller_inst/i_77/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:195]
+     5: Data_controller_inst/i_77/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_78"
+Found timing loop:
+     0: Data_controller_inst/i_165/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     1: Data_controller_inst/i_165/I1 (LUT2)
+     2: Data_controller_inst/i_126/O (LUT6)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     3: Data_controller_inst/i_126/I5 (LUT6)
+     4: Data_controller_inst/i_165/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I1 -to O Data_controller_inst/i_165"
+Found timing loop:
+     0: Data_controller_inst/i_140/O (LUT3)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     1: Data_controller_inst/i_140/I2 (LUT3)
+     2: Data_controller_inst/i_164/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     3: Data_controller_inst/i_164/I1 (LUT2)
+     4: Data_controller_inst/i_165/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     5: Data_controller_inst/i_165/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I2 -to O Data_controller_inst/i_140"
+Found timing loop:
+     0: Data_controller_inst/i_148/O (LUT3)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     1: Data_controller_inst/i_148/I2 (LUT3)
+     2: Data_controller_inst/i_140/O (LUT3)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     3: Data_controller_inst/i_140/I1 (LUT3)
+     4: Data_controller_inst/i_148/O (LUT3)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I2 -to O Data_controller_inst/i_148"
+Found timing loop:
+     0: Data_controller_inst/i_164/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     1: Data_controller_inst/i_164/I1 (LUT2)
+     2: Data_controller_inst/i_165/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     3: Data_controller_inst/i_165/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I1 -to O Data_controller_inst/i_164"
+Found timing loop:
+     0: Data_controller_inst/i_164/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     1: Data_controller_inst/i_164/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Found timing loop:
+     0: Data_controller_inst/i_148/O (LUT3)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     1: Data_controller_inst/i_148/I0 (LUT3)
+     2: Data_controller_inst/i_139/O (LUT6)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     3: Data_controller_inst/i_139/I4 (LUT6)
+     4: Data_controller_inst/i_164/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     5: Data_controller_inst/i_164/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_148"
+Found timing loop:
+     0: Data_controller_inst/i_140/O (LUT3)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     1: Data_controller_inst/i_140/I1 (LUT3)
+     2: Data_controller_inst/i_148/O (LUT3)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     3: Data_controller_inst/i_148/O (LUT3)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I1 -to O Data_controller_inst/i_140"
+Found timing loop:
+     0: Data_controller_inst/i_164/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     1: Data_controller_inst/i_164/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Found timing loop:
+     0: Data_controller_inst/i_140/O (LUT3)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     1: Data_controller_inst/i_140/O (LUT3)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Found timing loop:
+     0: Data_controller_inst/i_164/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     1: Data_controller_inst/i_164/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Found timing loop:
+     0: Data_controller_inst/i_165/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     1: Data_controller_inst/i_165/I0 (LUT2)
+     2: Data_controller_inst/i_109/O (LUT6)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     3: Data_controller_inst/i_109/I1 (LUT6)
+     4: Data_controller_inst/i_165/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_165"
+Found timing loop:
+     0: Data_controller_inst/i_164/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     1: Data_controller_inst/i_164/I0 (LUT2)
+     2: Data_controller_inst/i_136/O (LUT6)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     3: Data_controller_inst/i_136/I2 (LUT6)
+     4: Data_controller_inst/i_164/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_164"
+Found timing loop:
+     0: Data_controller_inst/i_148/O (LUT3)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     1: Data_controller_inst/i_148/O (LUT3)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Found timing loop:
+     0: Data_controller_inst/i_148/O (LUT3)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:321]
+     1: Data_controller_inst/i_148/O (LUT3)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Found timing loop:
+     0: Data_controller_inst/i_219/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     1: Data_controller_inst/i_219/I1 (LUT2)
+     2: Data_controller_inst/i_218/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     3: Data_controller_inst/i_218/I0 (LUT2)
+     4: Data_controller_inst/i_306/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+     5: Data_controller_inst/i_306/I1 (LUT2)
+     6: Data_controller_inst/i_219/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I1 -to O Data_controller_inst/i_219"
+Found timing loop:
+     0: Data_controller_inst/i_221/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     1: Data_controller_inst/i_221/I1 (LUT2)
+     2: Data_controller_inst/i_220/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     3: Data_controller_inst/i_220/I1 (LUT2)
+     4: Data_controller_inst/i_209/O (LUT6)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     5: Data_controller_inst/i_209/I5 (LUT6)
+     6: Data_controller_inst/i_222/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     7: Data_controller_inst/i_222/I1 (LUT2)
+     8: Data_controller_inst/i_219/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     9: Data_controller_inst/i_219/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I1 -to O Data_controller_inst/i_221"
+Found timing loop:
+     0: Data_controller_inst/i_221/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     1: Data_controller_inst/i_221/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Found timing loop:
+     0: Data_controller_inst/i_219/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     1: Data_controller_inst/i_219/I0 (LUT2)
+     2: Data_controller_inst/i_211/O (LUT6)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     3: Data_controller_inst/i_211/I1 (LUT6)
+     4: Data_controller_inst/i_221/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     5: Data_controller_inst/i_221/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_219"
+Found timing loop:
+     0: Data_controller_inst/i_221/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     1: Data_controller_inst/i_221/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Found timing loop:
+     0: Data_controller_inst/i_221/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:447]
+     1: Data_controller_inst/i_221/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Found timing loop:
+     0: Data_controller_inst/i_304/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_304/I1 (LUT2)
+     2: Data_controller_inst/i_253/O (LUT5)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     3: Data_controller_inst/i_253/I4 (LUT5)
+     4: Data_controller_inst/i_274/O (LUT6)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     5: Data_controller_inst/i_274/I5 (LUT6)
+     6: Data_controller_inst/i_304/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I1 -to O Data_controller_inst/i_304"
+Found timing loop:
+     0: Data_controller_inst/i_302/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_302/I1 (LUT2)
+     2: Data_controller_inst/i_304/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     3: Data_controller_inst/i_304/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I1 -to O Data_controller_inst/i_302"
+Found timing loop:
+     0: Data_controller_inst/i_285/O (LUT6)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_285/I5 (LUT6)
+     2: Data_controller_inst/i_233/O (LUT5)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     3: Data_controller_inst/i_233/I4 (LUT5)
+     4: Data_controller_inst/i_302/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     5: Data_controller_inst/i_302/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I5 -to O Data_controller_inst/i_285"
+Found timing loop:
+     0: Data_controller_inst/i_302/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_302/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Found timing loop:
+     0: Data_controller_inst/i_285/O (LUT6)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_285/I4 (LUT6)
+     2: Data_controller_inst/i_302/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     3: Data_controller_inst/i_302/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I4 -to O Data_controller_inst/i_285"
+Found timing loop:
+     0: Data_controller_inst/i_285/O (LUT6)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_285/I2 (LUT6)
+     2: Data_controller_inst/i_285/O (LUT6)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I2 -to O Data_controller_inst/i_285"
+Found timing loop:
+     0: Data_controller_inst/i_304/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_304/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Found timing loop:
+     0: Data_controller_inst/i_285/O (LUT6)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_285/O (LUT6)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Found timing loop:
+     0: Data_controller_inst/i_302/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_302/O (LUT2)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Found timing loop:
+     0: Data_controller_inst/i_304/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_304/I0 (LUT2)
+     2: Data_controller_inst/i_234/O (LUT5)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     3: Data_controller_inst/i_234/I3 (LUT5)
+     4: Data_controller_inst/i_285/O (LUT6)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     5: Data_controller_inst/i_285/O (LUT6)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_304"
+Found timing loop:
+     0: Data_controller_inst/i_302/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_302/I0 (LUT2)
+     2: Data_controller_inst/i_279/O (LUT6)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     3: Data_controller_inst/i_279/I4 (LUT6)
+     4: Data_controller_inst/i_302/O (LUT2)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_302"
+Found timing loop:
+     0: Data_controller_inst/i_285/O (LUT6)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_285/O (LUT6)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Found timing loop:
+     0: Data_controller_inst/i_285/O (LUT6)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_285/O (LUT6)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Found timing loop:
+     0: Data_controller_inst/i_285/O (LUT6)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_285/O (LUT6)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Found timing loop:
+     0: Data_controller_inst/i_285/O (LUT6)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     1: Data_controller_inst/i_285/I0 (LUT6)
+     2: Data_controller_inst/i_276/O (LUT3)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+     3: Data_controller_inst/i_276/I1 (LUT3)
+     4: Data_controller_inst/i_285/O (LUT6)
+      [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:560]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd:34]
+Inferred a: "set_disable_timing -from I0 -to O Data_controller_inst/i_285"
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Data_controller_inst/i_307/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through Data_controller_inst/i_209/O'
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:39 . Memory (MB): peak = 3986.500 ; gain = 739.926 ; free physical = 43825 ; free virtual = 103141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 3995.406 ; gain = 748.832 ; free physical = 43820 ; free virtual = 103136
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 3995.406 ; gain = 748.832 ; free physical = 43820 ; free virtual = 103136
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 3995.406 ; gain = 748.832 ; free physical = 43820 ; free virtual = 103136
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------+----------+
+|      |BlackBox name    |Instances |
++------+-----------------+----------+
+|1     |sd_fec_0         |         4|
+|2     |axis_data_fifo_0 |         4|
+|3     |axis_data_fifo_1 |         4|
++------+-----------------+----------+
+
+Report Cell Usage: 
++------+----------------------+------+
+|      |Cell                  |Count |
++------+----------------------+------+
+|1     |axis_data_fifo_0_bbox |     4|
+|5     |axis_data_fifo_1_bbox |     4|
+|9     |sd_fec_0_bbox         |     4|
+|13    |BUFG                  |     1|
+|14    |LUT1                  |     1|
+|15    |LUT2                  |    84|
+|16    |LUT3                  |    47|
+|17    |LUT4                  |    28|
+|18    |LUT5                  |    35|
+|19    |LUT6                  |   109|
+|20    |FDCE                  |   161|
+|21    |IBUF                  |    39|
+|22    |OBUF                  |   132|
+|23    |OBUFT                 |     3|
++------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 3995.406 ; gain = 748.832 ; free physical = 43819 ; free virtual = 103135
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 71 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 3995.406 ; gain = 552.176 ; free physical = 43860 ; free virtual = 103176
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 3995.414 ; gain = 748.832 ; free physical = 43860 ; free virtual = 103176
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4009.344 ; gain = 0.000 ; free physical = 43956 ; free virtual = 103272
+INFO: [Netlist 29-17] Analyzing 40 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4089.113 ; gain = 0.000 ; free physical = 43873 ; free virtual = 103190
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 40 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 39 instances
+
+Synth Design complete, checksum: d082f7c
+INFO: [Common 17-83] Releasing license: Synthesis
+39 Infos, 46 Warnings, 71 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:01:24 . Memory (MB): peak = 4089.113 ; gain = 996.195 ; free physical = 44013 ; free virtual = 103329
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_3/LDPC_encoder.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file LDPC_encoder_utilization_synth.rpt -pb LDPC_encoder_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Aug 19 14:05:14 2025...

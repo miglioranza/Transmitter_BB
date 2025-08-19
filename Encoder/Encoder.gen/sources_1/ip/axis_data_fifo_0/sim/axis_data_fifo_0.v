@@ -64,7 +64,8 @@ module axis_data_fifo_0 (
   m_axis_tready,
   m_axis_tdata,
   m_axis_tlast,
-  axis_wr_data_count
+  axis_wr_data_count,
+  almost_full
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_RSTIF, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -92,6 +93,7 @@ output wire [31 : 0] m_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *)
 output wire m_axis_tlast;
 output wire [31 : 0] axis_wr_data_count;
+output wire almost_full;
 
   axis_data_fifo_v2_0_7_top #(
     .C_FAMILY("zynquplus"),
@@ -107,7 +109,7 @@ output wire [31 : 0] axis_wr_data_count;
     .C_ACLKEN_CONV_MODE(0),
     .C_ECC_MODE(0),
     .C_FIFO_MEMORY_TYPE("block"),
-    .C_USE_ADV_FEATURES(825241652),
+    .C_USE_ADV_FEATURES(825241667),
     .C_PROG_EMPTY_THRESH(5),
     .C_PROG_FULL_THRESH(11)
   ) inst (
@@ -138,7 +140,7 @@ output wire [31 : 0] axis_wr_data_count;
     .axis_rd_data_count(),
     .almost_empty(),
     .prog_empty(),
-    .almost_full(),
+    .almost_full(almost_full),
     .prog_full(),
     .sbiterr(),
     .dbiterr(),

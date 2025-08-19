@@ -53,7 +53,7 @@
 (* X_CORE_INFO = "axis_data_fifo_v2_0_7_top,Vivado 2021.2" *)
 (* CHECK_LICENSE_TYPE = "axis_data_fifo_0,axis_data_fifo_v2_0_7_top,{}" *)
 (* CORE_GENERATION_INFO = "axis_data_fifo_0,axis_data_fifo_v2_0_7_top,{x_ipProduct=Vivado 2021.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axis_data_fifo,x_ipVersion=2.0,x_ipCoreRevision=7,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynquplus,C_AXIS_TDATA_WIDTH=32,C_AXIS_TID_WIDTH=1,C_AXIS_TDEST_WIDTH=1,C_AXIS_TUSER_WIDTH=1,C_AXIS_SIGNAL_SET=0b00000000000000000000000000010011,C_FIFO_DEPTH=4096,C_FIFO_MODE=1,C_IS_ACLK_ASYNC=0,C_SYNCHRONIZER_STAGE=3,C_ACLKEN_CONV_MODE=0,C_ECC_MODE=0,C_FIFO_MEMORY_TYPE=block,C_USE_A\
-DV_FEATURES=825241652,C_PROG_EMPTY_THRESH=5,C_PROG_FULL_THRESH=11}" *)
+DV_FEATURES=825241667,C_PROG_EMPTY_THRESH=5,C_PROG_FULL_THRESH=11}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module axis_data_fifo_0 (
   s_axis_aresetn,
@@ -66,7 +66,8 @@ module axis_data_fifo_0 (
   m_axis_tready,
   m_axis_tdata,
   m_axis_tlast,
-  axis_wr_data_count
+  axis_wr_data_count,
+  almost_full
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_RSTIF, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -94,6 +95,7 @@ output wire [31 : 0] m_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *)
 output wire m_axis_tlast;
 output wire [31 : 0] axis_wr_data_count;
+output wire almost_full;
 
   axis_data_fifo_v2_0_7_top #(
     .C_FAMILY("zynquplus"),
@@ -109,7 +111,7 @@ output wire [31 : 0] axis_wr_data_count;
     .C_ACLKEN_CONV_MODE(0),
     .C_ECC_MODE(0),
     .C_FIFO_MEMORY_TYPE("block"),
-    .C_USE_ADV_FEATURES(825241652),
+    .C_USE_ADV_FEATURES(825241667),
     .C_PROG_EMPTY_THRESH(5),
     .C_PROG_FULL_THRESH(11)
   ) inst (
@@ -140,7 +142,7 @@ output wire [31 : 0] axis_wr_data_count;
     .axis_rd_data_count(),
     .almost_empty(),
     .prog_empty(),
-    .almost_full(),
+    .almost_full(almost_full),
     .prog_full(),
     .sbiterr(),
     .dbiterr(),
