@@ -58,7 +58,6 @@ port (
   data_out_ready : out std_logic ;
   data_out_valid : out std_logic_vector(N-1 downto 0);
   data_out_last  : out std_logic ;
---  current_cr     : out std_logic_vector(2 downto 0) ;
   last_frame     : out std_logic
 );
 end component ;
@@ -134,11 +133,12 @@ begin
 reset_tb       <= '1', '0' after 50 ns ;
 reset_fifos_tb <= '0', '1' after 50 ns ;
 report ("Start of simulation") ;
-data_in_ready_tb <= '1';
+data_in_ready_tb <= '0';
 end_of_frame_tb  <= '0';
-
 --Simulate the Preambles insertion (896 symbols * 5 ns)
 wait for 4480ns  ;
+data_in_ready_tb <= '1';
+
 --Data feeding in the  input FIFO 
 while tmp < 2000 loop 
 data_in_tb <= std_logic_vector(to_unsigned(k,32)) ; 
@@ -152,8 +152,6 @@ end_of_frame_tb <= '1';
 wait for clk_period ;
 end_of_frame_tb <= '0';
 data_in_valid_tb <= '0';
---wait for 4480ns  ;
---while tmp < 4000
 wait ;
 --report ("End of simulation");
 

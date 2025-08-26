@@ -45,16 +45,16 @@ entity Data_controller is
   din_last          : in std_logic_vector(N-1 downto 0);
   din_ready         : in std_logic_vector(N-1 downto 0);
   din_valid         : in std_logic_vector(N-1 downto 0);
-  din_data_core0    : in std_logic_vector(DATA_WIDTH-1 downto 0):= (others => '0') ;
-  din_data_core1    : in std_logic_vector(DATA_WIDTH-1 downto 0):= (others => '0') ;
-  din_data_core2    : in std_logic_vector(DATA_WIDTH-1 downto 0):= (others => '0') ;
-  din_data_core3    : in std_logic_vector(DATA_WIDTH-1 downto 0):= (others => '0') ;
+  din_data_core0    : in std_logic_vector(DATA_WIDTH-1 downto 0) ;
+  din_data_core1    : in std_logic_vector(DATA_WIDTH-1 downto 0) ;
+  din_data_core2    : in std_logic_vector(DATA_WIDTH-1 downto 0);
+  din_data_core3    : in std_logic_vector(DATA_WIDTH-1 downto 0) ;
   dout_valid        : out std_logic_vector(N-1 downto 0) := (others => '0') ;
   dout_ready        : out std_logic_vector(N-1 downto 0):= (others => '0') ; 
-  dout_data0        : out std_logic_vector(CORE_DATA_WIDTH-1 downto 0); 
-  dout_data1        : out std_logic_vector(CORE_DATA_WIDTH-1 downto 0); 
-  dout_data2        : out std_logic_vector(CORE_DATA_WIDTH-1 downto 0); 
-  dout_data3        : out std_logic_vector(CORE_DATA_WIDTH-1 downto 0); 
+  dout_data0        : out std_logic_vector(CORE_DATA_WIDTH-1 downto 0):=(others => '0'); 
+  dout_data1        : out std_logic_vector(CORE_DATA_WIDTH-1 downto 0):= (others => '0'); 
+  dout_data2        : out std_logic_vector(CORE_DATA_WIDTH-1 downto 0):= (others => '0'); 
+  dout_data3        : out std_logic_vector(CORE_DATA_WIDTH-1 downto 0):= (others => '0'); 
   dout_last         : out std_logic_vector(N-1 downto 0);
   reset_cores       : out std_logic;       
   last_frame        : out std_logic 
@@ -75,7 +75,6 @@ signal sel_cr : sel_code_rate := (
 "00000000000010000000000000001011");--Code Rate = 5/6 , N = 1944 
 type data_in_128bits is array(N-1 downto 0) of std_logic_vector(CORE_DATA_WIDTH-1 downto 0) ;
 signal input_data_128bits,output_data_128bits : data_in_128bits := (others => (others => '0')) ; 
-signal next_input_128bits : data_in_128bits := (others => (others => '0')) ; 
 --Sequential Logic signals
 signal data_input0    : std_logic_vector(DATA_WIDTH-1 downto 0 ) := (others => '0') ;
 signal data_input1    : std_logic_vector(DATA_WIDTH-1 downto 0 ) := (others => '0') ;
@@ -86,16 +85,23 @@ signal core_in_ready  : std_logic_vector(N-1 downto 0 ) := (others => '0') ;
 signal data_in_valid  : std_logic_vector(N-1 downto 0 ) := (others => '0') ;
 signal data_out_valid : std_logic_vector(N-1 downto 0 ) := (others => '0') ; 
 signal pad_counter0,pad_counter1,pad_counter2,pad_counter3 : integer range 0 to 50:= 0 ;
+
+attribute dont_touch : string ;
+attribute dont_touch  of pad_counter0  : signal is "true" ;
+attribute dont_touch  of pad_counter1  : signal is "true" ;
+attribute dont_touch  of pad_counter2  : signal is "true" ;
+attribute dont_touch  of pad_counter3  : signal is "true" ;
+
 signal reset_core     : std_logic := '0';
 signal cw_counter0    : integer range  0 to 50 := 0 ;
 signal cw_counter1    : integer range  0 to 50 := 0 ;
 signal cw_counter2    : integer range  0 to 30 := 0 ;
 signal cw_counter3    : integer range  0 to 50 := 0 ;
-
+signal buff_count0, buff_count1, buff_count2, buff_count3  : integer range 0 to 3:= 0 ;
 
 --Combinational logic signals
 signal padding_process : std_logic := '0';
-type fsm_input is (idle, encoding, padding) ;
+type fsm_input is (idle, encoding, buffering , padding) ;
 signal state0,state1,state2,state3 : fsm_input := idle ;
 signal next_counter0  : integer range  0 to 50 := 0 ;
 signal next_counter1  : integer range  0 to 50 := 0 ;
@@ -104,7 +110,11 @@ signal next_counter3  : integer range  0 to 50 := 0 ;
 signal next_dout_ready: std_logic_vector(N-1 downto 0 ) := (others => '0') ;
 signal next_dout_valid: std_logic_vector(N-1 downto 0 ) := (others => '0') ;
 signal next_din_valid : std_logic_vector(N-1 downto 0 ) := (others => '0') ;
-signal next_dout_last  : std_logic_vector(N-1 downto 0 ) := (others => '0') ;
+signal next_dout_last : std_logic_vector(N-1 downto 0 ) := (others => '0') ;
+ 
+type save_data is array( N-1 downto 0) of std_logic_vector(DATA_WIDTH-1 downto 0) ;
+signal saved_data0, saved_data1, saved_data2, saved_data3 : save_data := (others => (others => '0')) ;
+signal buffer_data0, buffer_data1, buffer_data2, buffer_data3  : std_logic_vector(31 downto 0)  := (others => '0') ;
 
 begin
 
@@ -116,15 +126,11 @@ if reset = '1' then
         cw_counter1      <= 0;
         cw_counter2      <= 0;
         cw_counter3      <= 0;
-        dout_data0       <= (others => '0') ;
-        dout_data1       <= (others => '0') ;
-        dout_data2       <= (others => '0') ;
-        dout_data3       <= (others => '0') ;
-        reset_cores       <= '0';
+        reset_cores      <= '0';
         data_in_last     <= (others => '0') ;
         dout_ready       <= (others => '0') ;
-        dout_valid       <= (others => '0') ;
         dout_last        <= (others => '0') ;
+  
  elsif rising_edge (clk) then 
  
          reset_cores    <= '1';
@@ -133,13 +139,8 @@ if reset = '1' then
          cw_counter2   <= next_counter2;
          cw_counter3   <= next_counter3;
          dout_ready    <= next_dout_ready ;           
-         dout_data0    <= next_input_128bits(0) ;
-         dout_data1    <= next_input_128bits(1) ;
-         dout_data2    <= next_input_128bits(2) ;
-         dout_data3    <= next_input_128bits(3) ;
          dout_last     <= next_dout_last;
-         dout_valid    <= next_dout_valid;
-                 
+      
  end if ;
 
 end process ;
@@ -154,6 +155,7 @@ if reset = '1'then
         pad_counter3     <= 0 ;
         
 elsif rising_edge (clk) then          
+            
             if state0 = padding and next_dout_ready(0) = '1' then 
                   pad_counter0 <= pad_counter0 + 1  ;
             else 
@@ -179,49 +181,108 @@ elsif rising_edge (clk) then
             end if ;
 end if ;               
 end process; 
+buffering_process : process (clk, reset) 
 
-
+begin 
+if reset = '1'then 
+        saved_data0     <= (others => (others => '0')) ;  
+        saved_data1     <= (others => (others => '0')) ;  
+        saved_data2     <= (others => (others => '0')) ;  
+        saved_data3     <= (others => (others => '0')) ; 
+        buff_count0      <= 0 ;   
+        buff_count1      <= 0 ;   
+        buff_count2      <= 0 ;   
+        buff_count3      <= 0 ;   
+elsif rising_edge (clk) then 
+     if state0 = buffering  then
+        if buff_count0 < 2 then
+         saved_data0(buff_count0) <= buffer_data0;
+         buff_count0   <= buff_count0 +1 ;            
+        end if ;       
+     else 
+        buff_count0 <= 0 ;  
+     end if ; 
+     
+    if state1 = buffering  then
+        if buff_count1 < 2 then
+         saved_data1 (buff_count1) <= buffer_data1  ;
+         buff_count1   <= buff_count1 +1 ;            
+        end if ;       
+     else 
+        buff_count1 <= 0 ;  
+     end if ; 
+      if state2 = buffering  then
+        if buff_count2 < 2 then
+         saved_data2(buff_count2) <= buffer_data2   ;
+         buff_count2   <= buff_count2 +1 ;            
+        end if ;       
+     else 
+        buff_count2 <= 0 ;  
+     end if ; 
+     
+      if state3 = buffering  then
+        if buff_count3 < 2  then
+         saved_data3(buff_count3) <= buffer_data3   ;
+         buff_count3   <= buff_count3 +1 ;            
+        end if ;       
+     else 
+        buff_count3 <= 0 ;  
+     end if ; 
+     
+   
+   end if ;        
+end process ;
 --Combinational process with 3 states : Idle ( starting state) , encoding  and padding when the last stream of data does not complete an entire block of size K (info bits)
-comb_logic_core0 : process(din_data_core0 ,din_ready(0), din_valid(0), din_last(0), pad_counter0,cw_counter0) 
+comb_logic_core0 : process(din_data_core0 ,din_ready(0), din_valid(0), din_last(0), pad_counter0,cw_counter0 ,state0) 
+variable counter  : integer range 0 to 2 := 0 ;
+
 begin
 --Default values 
-next_input_128bits(0)  <= (others => '0');
+dout_data0  <= x"000000000000000000000000" & din_data_core0 ;
 next_dout_ready(0)     <= din_ready(0) ; --din_ready is the signal coming from the LDPC core0 ,assign this value to next_dout_ready signal for informing the FIFO0 that the data_controller is ready to receive the data
-next_dout_valid(0)     <= '0'; 
+dout_valid(0)     <= '0'; 
 next_dout_last(0)      <= '0';
 next_counter0          <= cw_counter0 ; --It is fundamental to count the input words since depending from the size of K ,the LDPC encoder truncates the last word , so the last word of the input block is padded 
 next_dout_last(0)      <= '0';
 
 case state0 is
     when idle => 
+        buffer_data0 <= (others => '0');
+        counter  := 0 ;
         next_dout_last(0) <= '0';
         next_counter0     <= 0;
-        next_input_128bits(0) <= x"000000000000000000000000" & din_data_core0 ;
-         
+        dout_data0 <= (others => '0')  ; 
+        dout_valid(0)  <= '1';
+
        if din_valid(0) = '1' and din_ready(0) = '1' then 
           state0              <= encoding ;
-          next_dout_valid(0)  <= '1';
-          next_counter0 <= cw_counter0  + 1; 
+          dout_data0 <= x"000000000000000000000000" & din_data_core0 ;
+            next_counter0     <= 0;
        else  
           state0 <= idle ;
-          next_dout_valid(0)  <= '0';
+          dout_valid(0)  <= '0';
        end if ;
     when  encoding => 
+         
           --Normal encoding case 
+             counter  := 0 ;
+             buffer_data0 <=  (others => '0') ; 
+             dout_data0 <= x"000000000000000000000000" & din_data_core0 ;
+             
              if din_valid(0) = '1' and din_ready(0) = '1' and din_last(0)= '0' then 
                    state0 <= encoding  ;
-                   next_dout_valid(0) <= '1'; 
+                   dout_valid(0) <= '1'; 
 
                     if cw_counter0 < 49 then 
                        next_counter0 <= cw_counter0  + 1; 
                        next_dout_ready(0) <= din_ready(0) ;
-                       next_input_128bits(0) <= x"000000000000000000000000" & din_data_core0 ;
+                       dout_data0 <= x"000000000000000000000000" & din_data_core0 ;
                     elsif  cw_counter0 = 49 then 
-                       next_input_128bits(0) <= x"000000000000000000000000" & din_data_core0 ;
+                       dout_data0 <= x"000000000000000000000000" & din_data_core0 ;
                        next_dout_ready(0) <= '0' ;
                        next_counter0 <= cw_counter0  + 1; 
                     else
-                       next_input_128bits(0) <= x"0000000000000000000000005A5A5A5A" ;
+                       dout_data0 <= x"0000000000000000000000005A5A5A5A" ;
                        next_counter0 <= 0;
                        next_dout_ready(0) <= din_ready(0) ;
                      
@@ -232,58 +293,84 @@ case state0 is
               elsif din_valid(0) = '1' and din_ready(0) = '1' and din_last(0)= '1' then      
                     next_dout_ready(0) <= din_ready(0) ;
                     if cw_counter0 < 50 then 
-                       next_input_128bits(0) <= x"000000000000000000000000" & din_data_core0 ;
+                       dout_data0 <= x"000000000000000000000000" & din_data_core0 ;
                        next_counter0 <= cw_counter0  + 1; 
                        state0 <= padding ;     
                     else  
-                       next_input_128bits(0)  <= x"0000000000000000000000005A5A5A5A" ;   
+                       dout_data0  <= x"0000000000000000000000005A5A5A5A" ;   
                        next_counter0 <= 0 ;
                        state0 <= encoding ;       
                     end if ;   
            --Case when the internal FIFO of the LDPC encoder is full      
               elsif din_valid(0) = '1' and din_ready(0) = '0' and din_last(0)= '0' then  
                    next_dout_ready(0) <= din_ready(0) ;       
-                   next_counter0 <= cw_counter0 + 1 ;  
-                   next_dout_valid(0) <= '1'; 
-                   next_input_128bits(0) <= x"000000000000000000000000" & din_data_core0 ;
-                   state0 <= encoding  ;
+                   next_counter0 <= cw_counter0  ;  
+                   dout_valid(0) <= '1'; 
+                   dout_data0 <= x"000000000000000000000000" & din_data_core0 ;
+                   buffer_data0 <= din_data_core0 ;
+                   counter := counter + 1 ;
+                   state0 <= buffering  ;
            --Case when the internal FIFO of the LDPC encoder is full and the input data is the end of frame  
 
               elsif din_valid(0) = '1' and din_ready(0) = '0' and din_last(0)= '1' then  
                    next_dout_ready(0) <= din_ready(0) ;
-                   next_dout_valid(0) <= '1'; 
+                   dout_valid(0) <= '1'; 
 
                       if cw_counter0 < 50  then 
-                         next_input_128bits(0) <= x"000000000000000000000000" & din_data_core0 ;                      
+                         dout_data0 <= x"000000000000000000000000" & din_data_core0 ;                      
                          next_counter0 <= cw_counter0 + 1 ; 
                          state0 <= padding  ;   
                                                              
                       else
-                         next_input_128bits(0) <= x"0000000000000000000000005A5A5A5A" ;
+                         dout_data0 <= x"0000000000000000000000005A5A5A5A" ;
                          state0 <= encoding ;
                          next_counter0 <= 0 ;
                       end if ; 
             --Case when  input data is the end of frame and the FIFO is rady again 
          
               elsif din_valid(0) = '0' and din_ready(0) = '1' and din_last(0)= '1' then   
-                         next_input_128bits(0) <= x"000000000000000000000000" & din_data_core0 ;       
+                         dout_data0 <= x"000000000000000000000000" & din_data_core0 ;       
                          next_counter0    <= cw_counter0 + 1 ; 
                          state0 <= padding  ;       
-                         next_dout_valid(0) <= '1'; 
+                         dout_valid(0) <= '1'; 
 
                            
               else 
-                   next_input_128bits(0) <= (others => '0') ;                     
+                   dout_data0 <= (others => '0') ;                     
                    state0 <= encoding ;
-                   next_dout_valid(0) <= '0'; 
+                   dout_valid(0) <= '0'; 
                    next_counter0 <= cw_counter0 ;
                    next_dout_ready(0) <= din_ready(0) ;
-
-              end if ;    
+                    
+              end if ;
+     when buffering => 
+         buffer_data0 <= din_data_core0  ;
+         dout_valid(0) <= '1'; 
+         if din_ready(0)  =  '1' and counter /= 0 then
+               dout_data0 <= x"000000000000000000000000" & saved_data0(0) ;
+               next_counter0    <= cw_counter0 + 1 ; 
+               state0 <= buffering ;
+               counter := 0 ;
+               next_dout_ready(0) <= '1' ; 
+         elsif din_ready(0)  = '1' and counter = 0 then 
+               counter  := 0 ;
+               dout_data0 <=x"000000000000000000000000" &  saved_data0(1)  ;  
+               next_counter0    <= cw_counter0 + 1 ;
+               next_dout_ready(0) <= '1' ; 
+               state0             <= encoding ;
+         else 
+--              buffer_data0(counter) <= din_data_core0  ;
+              counter  := counter + 1 ;
+              next_dout_ready(0) <= '0' ; 
+              next_counter0      <= cw_counter0 ;
+              state0             <= buffering ;
+          end if ;    
      when padding => 
+          counter  := 0 ;
+          buffer_data0 <= (others => '0')  ;
           next_dout_ready(0) <= din_ready(0) ;       
-          next_dout_valid(0) <= '1'; 
-          next_input_128bits(0) <=  x"0000000000000000000000005A5A5A5A" ;
+          dout_valid(0) <= '1'; 
+          dout_data0 <=  x"0000000000000000000000005A5A5A5A" ;
               if din_ready(0) = '1' then
                  
                  next_counter0 <= cw_counter0  + 1; 
@@ -303,53 +390,61 @@ case state0 is
 
               end if ;
       when others => 
-          next_dout_valid(0) <= '0';     
-          next_input_128bits(0) <= ( others => '0') ;
+          counter  := 0 ;
+          dout_valid(0) <= '0';   
+          buffer_data0 <= (others => '0');  
+          dout_data0 <= ( others => '0') ;
           state0 <= idle ;
           next_counter0 <= 0;
           next_dout_ready(0) <= '0';
       end case ;    
 end process ;
+
 comb_logic_core1 : process(din_data_core1 ,din_ready(1), din_valid(1), din_last(1), pad_counter1,cw_counter1) 
+variable counter : integer range 0 to 2 := 0 ;
 begin
 --Default values 
-next_input_128bits(1)  <= (others => '0');
+--dout_data0 <= (others => '0')  ;
 next_dout_ready(1)     <= din_ready(1) ; --din_ready is the signal coming from the LDPC core1 ,assign this value to next_dout_ready signal for informing the FIFO1 that the data_controller is ready to receive the data
-next_dout_valid(1)     <= '0'; 
+dout_valid(1)     <= '0'; 
 next_dout_last(1)      <= '0';
 next_counter1          <= cw_counter1 ; --It is fundamental to count the input words since depending from the size of K ,the LDPC encoder truncates the last word , so the last word of the input block is padded 
 next_dout_last(1)      <= '0';
-
+dout_data1 <= (others => '0')  ;
 case state1 is
     when idle => 
+        counter  := 0 ;
         next_dout_last(1) <= '0';
         next_counter1     <= 0;
-        next_input_128bits(1) <= x"000000000000000000000000" & din_data_core1 ;
-         
+        dout_data1 <= (others => '0')  ;
+        buffer_data1 <= (others => '0')  ; 
        if din_valid(1) = '1' and din_ready(1) = '1' then 
           state1              <= encoding ;
-          next_dout_valid(1)  <= '1';
+          dout_valid(1)  <= '1';
+          dout_data1 <= x"000000000000000000000000" & din_data_core1 ;
           next_counter1 <= cw_counter1  + 1; 
        else  
           state1 <= idle ;
-          next_dout_valid(1)  <= '0';
+          dout_valid(1)  <= '0';
        end if ;
     when  encoding => 
           --Normal encoding case 
+             counter  := 0 ;
+             buffer_data1 <= (others => '0');
              if din_valid(1) = '1' and din_ready(1) = '1' and din_last(1)= '0' then 
                    state1 <= encoding  ;
-                   next_dout_valid(1) <= '1'; 
+                   dout_valid(1) <= '1'; 
 
                     if cw_counter1 < 44 then 
                        next_counter1 <= cw_counter1  + 1; 
                        next_dout_ready(1) <= din_ready(1) ;
-                       next_input_128bits(1) <= x"000000000000000000000000" & din_data_core1 ;
+                       dout_data1 <= x"000000000000000000000000" & din_data_core1 ;
                     elsif  cw_counter1 = 44 then 
-                       next_input_128bits(1) <= x"000000000000000000000000" & din_data_core1 ;
+                       dout_data1 <= x"000000000000000000000000" & din_data_core1 ;
                        next_dout_ready(1) <= '0' ;
                        next_counter1 <= cw_counter1  + 1; 
                     else
-                       next_input_128bits(1) <= x"0000000000000000000000005A5A5A5A" ;
+                       dout_data1 <= x"0000000000000000000000005A5A5A5A" ;
                        next_counter1 <= 0;
                        next_dout_ready(1) <= din_ready(1) ;
                     end if ;
@@ -358,59 +453,89 @@ case state1 is
               elsif din_valid(1) = '1' and din_ready(1) = '1' and din_last(1)= '1' then      
                     next_dout_ready(1) <= din_ready(1) ;
                     if cw_counter1 < 45 then 
-                       next_input_128bits(1) <= x"000000000000000000000000" & din_data_core1 ;
+                       dout_data1 <= x"000000000000000000000000" & din_data_core1 ;
                        next_counter1 <= cw_counter1  + 1; 
                        state1 <= padding ;     
                     else  
-                       next_input_128bits(1)  <= x"0000000000000000000000005A5A5A5A" ;   
+                       dout_data1  <= x"0000000000000000000000005A5A5A5A" ;   
                        next_counter1 <= 0 ;
                        state1 <= encoding ;       
                     end if ;   
            --Case when the internal FIFO of the LDPC encoder is full      
               elsif din_valid(1) = '1' and din_ready(1) = '0' and din_last(1)= '0' then  
                    next_dout_ready(1) <= din_ready(1) ;       
-                   next_counter1 <= cw_counter1 + 1 ;  
-                   next_dout_valid(1) <= '1'; 
-                   next_input_128bits(1) <= x"000000000000000000000000" & din_data_core1 ;
-                   state1 <= encoding  ;
+--                   next_counter1 <= cw_counter1 + 1 ; 
+                    next_counter1 <= cw_counter1 ;  
+  
+                   dout_valid(1) <= '1'; 
+                   dout_data1 <= x"000000000000000000000000" & din_data_core1 ;
+                   buffer_data1 <= din_data_core1 ;
+                   counter := counter + 1 ;
+                   state1 <= buffering  ;
            --Case when the internal FIFO of the LDPC encoder is full and the input data is the end of frame  
 
               elsif din_valid(1) = '1' and din_ready(1) = '0' and din_last(1)= '1' then  
                    next_dout_ready(1) <= din_ready(1) ;
-                   next_dout_valid(1) <= '1'; 
+                   dout_valid(1) <= '1'; 
 
                       if cw_counter1 < 45  then 
-                         next_input_128bits(1) <= x"000000000000000000000000" & din_data_core1 ;                      
+                         dout_data1 <= x"000000000000000000000000" & din_data_core1 ;                      
                          next_counter1 <= cw_counter1 + 1 ; 
                          state1 <= padding  ;   
                                                              
                       else
-                         next_input_128bits(1) <= x"0000000000000000000000005A5A5A5A" ;
+                         dout_data1 <= x"0000000000000000000000005A5A5A5A" ;
                          state1 <= encoding ;
                          next_counter1 <= 0 ;
                       end if ; 
             --Case when  input data is the end of frame and the FIFO is rady again 
          
               elsif din_valid(1) = '0' and din_ready(1) = '1' and din_last(1)= '1' then   
-                         next_input_128bits(1) <= x"000000000000000000000000" & din_data_core1 ;       
+                         dout_data1 <= x"000000000000000000000000" & din_data_core1 ;       
                          next_counter1    <= cw_counter1 + 1 ; 
                          state1 <= padding  ;       
-                         next_dout_valid(1) <= '1'; 
+                         dout_valid(1) <= '1'; 
 
                            
               else 
-                   next_input_128bits(1) <= (others => '0') ;                     
+                   dout_data1 <= (others => '0') ;                     
                    state1 <= encoding ;
-                   next_dout_valid(1) <= '0'; 
+                   dout_valid(1) <= '0'; 
                    next_counter1 <= cw_counter1 ;
                    next_dout_ready(1) <= din_ready(1) ;
 
-              end if ;    
+              end if ; 
+       when buffering => 
+         buffer_data1 <= din_data_core1 ;
+         dout_valid(1) <= '1'; 
+
+         if din_ready(1)  =  '1' and counter /= 0 then
+               dout_data1 <= x"000000000000000000000000" & saved_data1(0) ;
+               next_counter1    <= cw_counter1 + 1 ; 
+               state1 <= buffering ;
+               counter  := 0 ;
+               next_dout_ready(1) <= '1' ; 
+         elsif din_ready(1)  = '1' and counter = 0 then 
+               counter  := 0 ;
+               dout_data1 <= x"000000000000000000000000" & saved_data1(1)  ;  
+               next_counter1    <= cw_counter1 + 1 ;
+               next_dout_ready(1) <= '1' ; 
+               state1             <= encoding ;
+
+         else 
+              counter := counter + 1 ;
+              next_dout_ready(1) <= '0' ; 
+              next_counter1      <= cw_counter1 ;
+              state1             <= buffering ;           
+              dout_data1 <= x"000000000000000000000000" &  din_data_core1 ;
+          end if ;              
      when padding => 
           next_dout_ready(1) <= din_ready(1) ;       
-          next_dout_valid(1) <= '1'; 
-          next_input_128bits(1) <=  x"0000000000000000000000005A5A5A5A" ;
-           
+          dout_valid(1) <= '1'; 
+          counter  := 0 ;
+          dout_data1 <=  x"0000000000000000000000005A5A5A5A" ;
+          buffer_data1 <= (others => '0');
+   
               if din_ready(1) = '1' then                
                  next_counter1 <= cw_counter1  + 1; 
 
@@ -430,42 +555,54 @@ case state1 is
 
               end if ;
       when others => 
-          next_dout_valid(1) <= '0';     
-          next_input_128bits(1) <= ( others => '0') ;
+          counter  := 0 ;
+          dout_valid(1) <= '0';     
+          dout_data1 <= ( others => '0') ;
+          buffer_data1 <=  (others => '0') ;
           state1 <= idle ;
           next_counter1 <= 0;
           next_dout_ready(1) <= '0';
       end case ;    
 end process ;
-comb_logic_core2 : process(din_data_core2, din_ready(2), din_valid(2), din_last(2), pad_counter2,cw_counter2)
+comb_logic_core2 : process(din_data_core2, din_ready(2), din_valid(2), din_last(2), pad_counter2,cw_counter2, state2)
+    variable counter : integer range 0 to 2 := 0 ;
     begin
         -- Default values
-        next_input_128bits(2) <= (others => '0');
+        dout_data2 <= (others => '0') ;
         next_dout_ready(2) <= din_ready(2); -- Pass ready signal from LDPC core
-        next_dout_valid(2) <= '0';
+        dout_valid(2) <= '0';
         next_dout_last(2) <= '0';
         next_counter2 <= cw_counter2;
+--       dout_data2 <= x"000000000000000000000000" & din_data_core2;
 
         case state2 is
             when idle =>
+                counter  := 0 ;
                 next_dout_last(2) <= '0';
                 next_counter2 <= 0;
-                next_input_128bits(2) <= x"000000000000000000000000" & din_data_core2;
-
+                buffer_data2 <= (others => '0') ;
+--               dout_data2 <= (others => '0') ;
                 if din_valid(2) = '1' and din_ready(2) = '1' then
                     state2 <= encoding;
-                    next_dout_valid(2) <= '1';
+                    dout_valid(2) <= '1';
                     next_counter2 <= cw_counter2 + 1;
+                   dout_data2 <= x"000000000000000000000000" & din_data_core2;
+
                 else
                     state2 <= idle;
-                    next_dout_valid(2) <= '0';
+                    dout_valid(2) <= '0';   
+                    dout_data2 <= (others => '0') ;
+
+                    
                 end if;
 
             when encoding =>
+                counter  := 0 ;           
+                buffer_data2 <= (others => '0') ;
                 if din_valid(2) = '1' and din_ready(2) = '1' and din_last(2) = '0' then
                     state2 <= encoding;
-                    next_dout_valid(2) <= '1';
-                    next_input_128bits(2) <= x"000000000000000000000000" & din_data_core2;
+                    dout_valid(2) <= '1';
+                   dout_data2 <= x"000000000000000000000000" & din_data_core2;
                     next_dout_ready(2) <= din_ready(2);
                     if cw_counter2 < 26 then
                         next_counter2 <= cw_counter2 + 1;
@@ -474,8 +611,8 @@ comb_logic_core2 : process(din_data_core2, din_ready(2), din_valid(2), din_last(
                     end if;
                 elsif din_valid(2) = '1' and din_ready(2) = '1' and din_last(2) = '1' then
                     next_dout_ready(2) <= din_ready(2);
-                    next_input_128bits(2) <= x"000000000000000000000000" & din_data_core2;
-                    next_dout_valid(2) <= '1';
+                   dout_data2 <= x"000000000000000000000000" & din_data_core2;
+                    dout_valid(2) <= '1';
 
                     if cw_counter2 < 26 then                     
                        
@@ -492,13 +629,15 @@ comb_logic_core2 : process(din_data_core2, din_ready(2), din_valid(2), din_last(
                 elsif din_valid(2) = '1' and din_ready(2) = '0' and din_last(2) = '0' then
                     next_dout_ready(2) <= din_ready(2);
                     next_counter2 <= cw_counter2;
-                    next_dout_valid(2) <= '1';
-                    next_input_128bits(2) <= x"000000000000000000000000" & din_data_core2;
-                    state2 <= encoding;
+                    dout_valid(2) <= '1';
+                    dout_data2 <= x"000000000000000000000000" & din_data_core2;
+                    buffer_data2 <= din_data_core2 ;
+                    counter := counter + 1 ;
+                    state2 <= buffering;                   
                 elsif din_valid(2) = '1' and din_ready(2) = '0' and din_last(2) = '1' then
                     next_dout_ready(2) <= din_ready(2);
-                    next_input_128bits(2) <= x"000000000000000000000000" & din_data_core2;
-                    next_dout_valid(2) <= '1';
+                    dout_data2 <= x"000000000000000000000000" & din_data_core2;
+                    dout_valid(2) <= '1';
                     next_counter2 <= cw_counter2;
                     
 
@@ -509,21 +648,47 @@ comb_logic_core2 : process(din_data_core2, din_ready(2), din_valid(2), din_last(
                     end if;
                 elsif din_valid(2) = '0' and din_ready(2) = '1' and din_last(2) = '1' then  
                       next_counter2 <= 0 ;
-                      next_dout_valid(2) <= '1';
+                      dout_valid(2) <= '1';
                       state2 <= idle ;
-                      next_input_128bits(2) <= x"000000000000000000000000" & din_data_core2;
+                     dout_data2 <= x"000000000000000000000000" & din_data_core2;
                 else
-                    next_input_128bits(2) <= (others => '0');
+                    dout_data2 <= (others => '0');
                     state2 <= encoding;
-                    next_dout_valid(2) <= '0';
+                    dout_valid(2) <= '0';
                     next_counter2 <= cw_counter2;
                     next_dout_ready(2) <= din_ready(2);
                 end if;
+           when buffering => 
+                buffer_data2 <= din_data_core2 ;
+                dout_valid(2) <= '1'; 
+                dout_data2  <= x"000000000000000000000000" & din_data_core2 ;
 
+                 if din_ready(2)  =  '1' and counter /= 0 then
+                       dout_data2 <= x"000000000000000000000000" & saved_data2(0) ;
+                       next_counter2    <= cw_counter2 + 1 ; 
+                       state2 <= buffering ;
+                       counter  := 0 ;
+                       next_dout_ready(2) <= '1' ;
+                 elsif din_ready(2)  = '1' and counter = 0 then 
+                       counter  := 0 ;
+                       dout_data2 <= x"000000000000000000000000" &  saved_data2(1)  ;  
+                       next_counter2    <= cw_counter2 + 1 ;
+                       next_dout_ready(2) <= '1' ; 
+                       state2             <= encoding ;
+                 else 
+                      counter  := counter + 1 ;
+                      next_dout_ready(2) <= '0' ; 
+--                      dout_valid(2) <= '0'; 
+                      next_counter2      <= cw_counter2 ;
+                      state2             <= buffering ;
+
+                 end if ;  
             when padding =>
+                counter  := 0 ;            
+                buffer_data2 <=  (others => '0') ;              
                 next_dout_ready(2) <= '0';
-                next_dout_valid(2) <= '1';
-                next_input_128bits(2) <= x"0000000000000000000000005A5A5A5A";
+                dout_valid(2) <= '1';
+                dout_data2 <= x"0000000000000000000000005A5A5A5A";
                 if din_ready(2) = '1' then
                     next_counter2 <= cw_counter2 + 1;
 
@@ -540,55 +705,63 @@ comb_logic_core2 : process(din_data_core2, din_ready(2), din_valid(2), din_last(
                     next_counter2 <= cw_counter2;
                     next_dout_last(2) <= '0';
                 end if;
-
-            when others =>
-                next_dout_valid(2) <= '0';
-                next_input_128bits(2) <= (others => '0');
+        when others => 
+                dout_valid(2) <= '0';
+                dout_data2 <= (others => '0');
                 state2 <= idle;
                 next_counter2 <= 0;
                 next_dout_ready(2) <= '0';
         end case;
     end process;
-comb_logic_core3 : process(din_data_core3 ,din_ready(3), din_valid(3), din_last(3), pad_counter3,cw_counter3) 
+comb_logic_core3 : process(din_data_core3 ,din_ready(3), din_valid(3), din_last(3), pad_counter3,cw_counter3,state3) 
+variable counter : integer range 0 to 2 := 0;
 begin
 --Default values 
-next_input_128bits(3)  <= (others => '0');
 next_dout_ready(3)     <= din_ready(3) ; --din_ready is the signal coming from the LDPC core3 ,assign this value to next_dout_ready signal for informing the FIFO3 that the data_controller is ready to receive the data
-next_dout_valid(3)     <= '0'; 
+dout_valid(3)     <= '0'; 
 next_dout_last(3)      <= '0';
 next_counter3          <= cw_counter3 ; --It is fundamental to count the input words since depending from the size of K ,the LDPC encoder truncates the last word , so the last word of the input block is padded 
 next_dout_last(3)      <= '0';
+dout_data3 <= (others => '0') ;  
 
 case state3 is
     when idle => 
+        counter  := 0 ;
         next_dout_last(3) <= '0';
         next_counter3     <= 0;
-        next_input_128bits(3) <= x"000000000000000000000000" & din_data_core3 ;
-         
+        buffer_data3 <=(others => '0');
+
+--        dout_data3 <= (others => '0') ;  
        if din_valid(3) = '1' and din_ready(3) = '1' then 
           state3              <= encoding ;
-          next_dout_valid(3)  <= '1';
+          dout_valid(3)  <= '1';
           next_counter3 <= cw_counter3  + 1; 
+          dout_data3 <= x"000000000000000000000000" & din_data_core3 ;
+          dout_data3 <= (others => '0') ;  
+
        else  
           state3 <= idle ;
-          next_dout_valid(3)  <= '0';
+          dout_valid(3)  <= '0';
        end if ;
     when  encoding => 
           --Normal encoding case 
+             counter  := 0 ;
+             buffer_data3 <= (others => '0') ;
+
              if din_valid(3) = '1' and din_ready(3) = '1' and din_last(3)= '0' then 
                    state3 <= encoding  ;
-                   next_dout_valid(3) <= '1'; 
-
+                   dout_valid(3) <= '1'; 
+                   
                     if cw_counter3 < 19 then 
                        next_counter3 <= cw_counter3  + 1; 
                        next_dout_ready(3) <= din_ready(3) ;
-                       next_input_128bits(3) <= x"000000000000000000000000" & din_data_core3 ;
+                       dout_data3 <= x"000000000000000000000000" & din_data_core3 ;
                     elsif  cw_counter3 = 19 then 
-                       next_input_128bits(3) <= x"000000000000000000000000" & din_data_core3 ;
+                       dout_data3 <= x"000000000000000000000000" & din_data_core3 ;
                        next_dout_ready(3) <= '0' ;
                        next_counter3 <= cw_counter3  + 1; 
                     else
-                       next_input_128bits(3) <= x"0000000000000000000000005A5A5A5A" ;
+                       dout_data3 <= x"0000000000000000000000005A5A5A5A" ;
                        next_counter3 <= 0;
                        next_dout_ready(3) <= din_ready(3) ;
                     end if ;
@@ -597,58 +770,86 @@ case state3 is
               elsif din_valid(3) = '1' and din_ready(3) = '1' and din_last(3)= '1' then      
                     next_dout_ready(3) <= din_ready(3) ;
                     if cw_counter3 < 20 then 
-                       next_input_128bits(3) <= x"000000000000000000000000" & din_data_core3 ;
+                       dout_data3 <= x"000000000000000000000000" & din_data_core3 ;
                        next_counter3 <= cw_counter3  + 1; 
                        state3 <= padding ;     
                     else  
-                       next_input_128bits(3)  <= x"0000000000000000000000005A5A5A5A" ;   
+                       dout_data3  <= x"0000000000000000000000005A5A5A5A" ;   
                        next_counter3 <= 0 ;
                        state3 <= encoding ;       
                     end if ;   
            --Case when the internal FIFO of the LDPC encoder is full      
               elsif din_valid(3) = '1' and din_ready(3) = '0' and din_last(3)= '0' then  
                    next_dout_ready(3) <= din_ready(3) ;       
-                   next_counter3 <= cw_counter3 + 1 ;  
-                   next_dout_valid(3) <= '1'; 
-                   next_input_128bits(3) <= x"000000000000000000000000" & din_data_core3 ;
-                   state3 <= encoding  ;
-           --Case when the internal FIFO of the LDPC encoder is full and the input data is the end of frame  
+--                   next_counter3 <= cw_counter3 + 1 ;  
+                   dout_valid(3) <= '1'; 
+                   dout_data3 <= x"000000000000000000000000" & din_data_core3 ;
+                   buffer_data3       <= din_data_core3 ;
+--                   counter := counter + 1 ;
+                   state3 <= buffering;                 
+        --Case when the internal FIFO of the LDPC encoder is full and the input data is the end of frame  
 
               elsif din_valid(3) = '1' and din_ready(3) = '0' and din_last(3)= '1' then  
                    next_dout_ready(3) <= din_ready(3) ;
-                   next_dout_valid(3) <= '1'; 
-
+                   dout_valid(3) <= '1'; 
+                   
                       if cw_counter3 < 20  then 
-                         next_input_128bits(3) <= x"000000000000000000000000" & din_data_core3 ;                      
+                         dout_data3 <= x"000000000000000000000000" & din_data_core3 ;                      
                          next_counter3 <= cw_counter3 + 1 ; 
                          state3 <= padding  ;   
                                                              
                       else
-                         next_input_128bits(3) <= x"0000000000000000000000005A5A5A5A" ;
+                         dout_data3 <= x"0000000000000000000000005A5A5A5A" ;
                          state3 <= encoding ;
                          next_counter3 <= 0 ;
                       end if ; 
             --Case when  input data is the end of frame and the FIFO is rady again 
          
               elsif din_valid(3) = '0' and din_ready(3) = '1' and din_last(3)= '1' then   
-                         next_input_128bits(3) <= x"000000000000000000000000" & din_data_core3 ;       
+                         dout_data3 <= x"000000000000000000000000" & din_data_core3 ;       
                          next_counter3    <= cw_counter3 + 1 ; 
                          state3 <= padding  ;       
-                         next_dout_valid(3) <= '1'; 
-
+                         dout_valid(3) <= '1'; 
+    
                            
               else 
-                   next_input_128bits(3) <= (others => '0') ;                     
+                   dout_data3 <= (others => '0') ;                     
                    state3 <= encoding ;
-                   next_dout_valid(3) <= '0'; 
+                   dout_valid(3) <= '0'; 
                    next_counter3 <= cw_counter3 ;
                    next_dout_ready(3) <= din_ready(3) ;
 
-              end if ;    
+              end if ;
+       when buffering => 
+         buffer_data3       <= din_data_core3 ;
+         dout_valid(3) <= '1'; 
+         if din_ready(3)  =  '1' and counter /= 0 then
+               dout_data3 <= x"000000000000000000000000" & saved_data3(0) ;
+               next_counter3    <= cw_counter3 + 1 ; 
+               state3 <= buffering ;
+               counter := 0 ;
+               next_dout_ready(3) <= '1' ; 
+
+         elsif din_ready(3)  = '1' and counter = 0 then 
+               counter  := 0 ; 
+               dout_data3 <= x"000000000000000000000000" & saved_data3(1)  ;  
+               next_counter3    <= cw_counter3 + 1 ;
+               next_dout_ready(3) <= '1' ; 
+               state3             <= encoding ;
+         else 
+              dout_data3  <= x"000000000000000000000000" & din_data_core3 ;
+              counter := counter + 1 ;
+              next_dout_ready(3) <= '0' ; 
+              state3             <= buffering ;
+--              dout_valid(3) <= '0'; 
+
+          end if ;               
      when padding => 
+          counter  := 0 ;
+          buffer_data3 <= (others => '0');
           next_dout_ready(3) <= din_ready(3) ;       
-          next_dout_valid(3) <= '1'; 
-          next_input_128bits(3) <=  x"0000000000000000000000005A5A5A5A" ;
+          dout_valid(3) <= '1'; 
+          dout_data3 <=  x"0000000000000000000000005A5A5A5A" ;
            
               if din_ready(3) = '1' then                
                  next_counter3 <= cw_counter3  + 1; 
@@ -669,8 +870,10 @@ case state3 is
 
               end if ;
       when others => 
-          next_dout_valid(3) <= '0';     
-          next_input_128bits(3) <= ( others => '0') ;
+          counter  := 0 ;
+          buffer_data3 <= (others => '0') ;
+          dout_valid(3) <= '0';     
+          dout_data3 <= ( others => '0') ;
           state3 <= idle ;
           next_counter3 <= 0;
           next_dout_ready(3) <= '0';

@@ -3,5 +3,8 @@
 
 # XDC: new/Encoder_constraints.xdc
 
+# IP: ip/axis_data_fifo_0/axis_data_fifo_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==axis_data_fifo_0 || ORIG_REF_NAME==axis_data_fifo_0} -quiet] -quiet
+
 # IP: ip/sd_fec_0/sd_fec_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==sd_fec_0 || ORIG_REF_NAME==sd_fec_0} -quiet] -quiet

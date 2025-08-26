@@ -1,0 +1,4 @@
+Running: xsim.dir/LDPC_encoder_tb_func_impl/xsimk -maxdeltaid 200000 -simmode gui -wdb LDPC_encoder_tb_func_impl.wdb -simrunnum 0 -socket 51789
+Design successfully loaded
+Design Loading Memory Usage: 189952 KB (Peak: 189952 KB)
+Design Loading CPU Usage: 510 ms

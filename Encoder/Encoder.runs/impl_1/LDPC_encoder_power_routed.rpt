@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date             : Tue Aug 19 16:01:05 2025
+| Date             : Tue Aug 26 17:42:11 2025
 | Host             : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 | Command          : report_power -file LDPC_encoder_power_routed.rpt -pb LDPC_encoder_power_summary_routed.pb -rpx LDPC_encoder_power_routed.rpx
 | Design           : LDPC_encoder
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.339        |
+| Total On-Chip Power (W)  | 1.318        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.251        |
+| Dynamic (W)              | 0.231        |
 | Device Static (W)        | 1.087        |
 | Effective TJA (C/W)      | 0.8          |
 | Max Ambient (C)          | 98.9         |
@@ -52,20 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.029 |        3 |       --- |             --- |
-| CLB Logic                |     0.022 |     6543 |       --- |             --- |
-|   LUT as Logic           |     0.015 |     2445 |    425280 |            0.57 |
+| Clocks                   |     0.027 |        3 |       --- |             --- |
+| CLB Logic                |     0.021 |     6315 |       --- |             --- |
+|   LUT as Logic           |     0.015 |     2399 |    425280 |            0.56 |
 |   LUT as Distributed RAM |     0.003 |      128 |    213600 |            0.06 |
 |   LUT as Shift Register  |     0.002 |       64 |    213600 |            0.03 |
-|   Register               |     0.001 |     2719 |    850560 |            0.32 |
-|   CARRY8                 |    <0.001 |       64 |     53160 |            0.12 |
-|   Others                 |     0.000 |      248 |       --- |             --- |
-| Signals                  |     0.023 |     5180 |       --- |             --- |
-| Block RAM                |     0.084 |       62 |      1080 |            5.74 |
-| I/O                      |     0.048 |      174 |       347 |           50.14 |
+|   Register               |    <0.001 |     2641 |    850560 |            0.31 |
+|   CARRY8                 |    <0.001 |       40 |     53160 |            0.08 |
+|   Others                 |     0.000 |      237 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |        9 |    425280 |           <0.01 |
+| Signals                  |     0.023 |     5268 |       --- |             --- |
+| Block RAM                |     0.072 |       62 |      1080 |            5.74 |
+| I/O                      |     0.043 |      174 |       347 |           50.14 |
 | FE                       |     0.046 |        4 |         8 |           50.00 |
 | Static Power             |     1.087 |          |           |                 |
-| Total                    |     1.339 |          |           |                 |
+| Total                    |     1.318 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,14 +76,14 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint          |       0.850 |     0.455 |       0.178 |      0.277 |       NA    | Unspecified | NA         |
+| Vccint          |       0.850 |     0.441 |       0.164 |      0.277 |       NA    | Unspecified | NA         |
 | Vccint_io       |       0.850 |     0.071 |       0.001 |      0.070 |       NA    | Unspecified | NA         |
-| Vccbram         |       0.850 |     0.011 |       0.007 |      0.004 |       NA    | Unspecified | NA         |
+| Vccbram         |       0.850 |     0.008 |       0.004 |      0.004 |       NA    | Unspecified | NA         |
 | Vccaux          |       1.800 |     0.281 |       0.000 |      0.281 |       NA    | Unspecified | NA         |
-| Vccaux_io       |       1.800 |     0.080 |       0.022 |      0.058 |       NA    | Unspecified | NA         |
+| Vccaux_io       |       1.800 |     0.079 |       0.022 |      0.058 |       NA    | Unspecified | NA         |
 | Vcco33          |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vcco18          |       1.800 |     0.004 |       0.004 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18          |       1.800 |     0.002 |       0.002 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15          |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135         |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12          |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -169,8 +170,8 @@ Table of Contents
 +-----------------------------------+-----------+
 | Name                              | Power (W) |
 +-----------------------------------+-----------+
-| LDPC_encoder                      |     0.251 |
-|   Data_controller_inst            |     0.005 |
+| LDPC_encoder                      |     0.231 |
+|   Data_controller_inst            |     0.009 |
 |   LDPC_core0                      |     0.030 |
 |     inst                          |     0.030 |
 |       STD_OTHER_G.STD_OTHER_I     |     0.024 |
@@ -182,31 +183,31 @@ Table of Contents
 |       STD_OTHER_G.STD_OTHER_I     |     0.024 |
 |   LDPC_core3                      |     0.030 |
 |     inst                          |     0.030 |
-|       STD_OTHER_G.STD_OTHER_I     |     0.025 |
-|   Output_FIFO_inst[0].output_fifo |     0.012 |
-|     inst                          |     0.012 |
-|       gen_fifo.xpm_fifo_axis_inst |     0.012 |
-|   Output_FIFO_inst[1].output_fifo |     0.012 |
-|     inst                          |     0.012 |
-|       gen_fifo.xpm_fifo_axis_inst |     0.012 |
-|   Output_FIFO_inst[2].output_fifo |     0.012 |
-|     inst                          |     0.012 |
-|       gen_fifo.xpm_fifo_axis_inst |     0.012 |
-|   Output_FIFO_inst[3].output_fifo |     0.012 |
-|     inst                          |     0.012 |
-|       gen_fifo.xpm_fifo_axis_inst |     0.012 |
-|   input_fifo_0                    |     0.007 |
-|     inst                          |     0.007 |
-|       gen_fifo.xpm_fifo_axis_inst |     0.007 |
-|   input_fifo_1                    |     0.007 |
-|     inst                          |     0.007 |
-|       gen_fifo.xpm_fifo_axis_inst |     0.007 |
-|   input_fifo_2                    |     0.007 |
-|     inst                          |     0.007 |
-|       gen_fifo.xpm_fifo_axis_inst |     0.007 |
-|   input_fifo_3                    |     0.007 |
-|     inst                          |     0.007 |
-|       gen_fifo.xpm_fifo_axis_inst |     0.007 |
+|       STD_OTHER_G.STD_OTHER_I     |     0.024 |
+|   Output_FIFO_inst[0].output_fifo |     0.009 |
+|     inst                          |     0.009 |
+|       gen_fifo.xpm_fifo_axis_inst |     0.009 |
+|   Output_FIFO_inst[1].output_fifo |     0.009 |
+|     inst                          |     0.009 |
+|       gen_fifo.xpm_fifo_axis_inst |     0.009 |
+|   Output_FIFO_inst[2].output_fifo |     0.009 |
+|     inst                          |     0.009 |
+|       gen_fifo.xpm_fifo_axis_inst |     0.009 |
+|   Output_FIFO_inst[3].output_fifo |     0.009 |
+|     inst                          |     0.009 |
+|       gen_fifo.xpm_fifo_axis_inst |     0.009 |
+|   input_fifo_0                    |     0.006 |
+|     inst                          |     0.006 |
+|       gen_fifo.xpm_fifo_axis_inst |     0.006 |
+|   input_fifo_1                    |     0.006 |
+|     inst                          |     0.006 |
+|       gen_fifo.xpm_fifo_axis_inst |     0.006 |
+|   input_fifo_2                    |     0.006 |
+|     inst                          |     0.006 |
+|       gen_fifo.xpm_fifo_axis_inst |     0.006 |
+|   input_fifo_3                    |     0.006 |
+|     inst                          |     0.006 |
+|       gen_fifo.xpm_fifo_axis_inst |     0.006 |
 +-----------------------------------+-----------+
 
 

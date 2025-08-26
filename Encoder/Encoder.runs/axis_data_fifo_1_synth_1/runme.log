@@ -9,7 +9,7 @@
     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
 source axis_data_fifo_1.tcl -notrace
-create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3066.770 ; gain = 2.016 ; free physical = 49195 ; free virtual = 104295
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3063.797 ; gain = 2.016 ; free physical = 43908 ; free virtual = 105340
 Command: synth_design -top axis_data_fifo_1 -part xczu28dr-ffvg1517-2-e -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xczu28dr'
@@ -17,9 +17,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu28d
 INFO: [Device 21-403] Loading part xczu28dr-ffvg1517-2-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 91984
+INFO: [Synth 8-7075] Helper process launched with PID 3287840
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3463.258 ; gain = 228.688 ; free physical = 47162 ; free virtual = 102263
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3463.285 ; gain = 228.688 ; free physical = 42600 ; free virtual = 104033
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/synth/axis_data_fifo_1.v:58]
 INFO: [Synth 8-6157] synthesizing module 'axis_data_fifo_v2_0_7_top' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/hdl/axis_data_fifo_v2_0_vl_rfs.v:54]
@@ -33,29 +33,26 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_axis' [/ihpusr/xilinx/vivado2
 INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (4#1) [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
 INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
-INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (5#1) [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
-INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (5#1) [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:491]
 WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3015]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (6#1) [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (5#1) [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 INFO: [Synth 8-226] default block is never used [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
 INFO: [Synth 8-226] default block is never used [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
 INFO: [Synth 8-226] default block is never used [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
 INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1906]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (7#1) [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1906]
-INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (7#1) [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (6#1) [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1906]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (7#1) [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
 INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1618]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (8#1) [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1618]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (8#1) [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (8#1) [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
 INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (8#1) [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
-INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized3' [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized3' (8#1) [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
 WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:537]
-WARNING: [Synth 8-6014] Unused sequential element gen_pntr_flags_cc.gae_cc_std.ram_aempty_i_reg was removed.  [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:968]
 WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1390]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (9#1) [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_axis' (10#1) [/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2343]
@@ -121,24 +118,24 @@ WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base is either 
 WARNING: [Synth 8-7129] Port m_aclk in module xpm_fifo_axis is either unconnected or has no load
 WARNING: [Synth 8-7129] Port m_axis_aclk in module axis_data_fifo_v2_0_7_top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3519.695 ; gain = 285.125 ; free physical = 47942 ; free virtual = 103044
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3519.723 ; gain = 285.125 ; free physical = 42575 ; free virtual = 104008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3528.602 ; gain = 294.031 ; free physical = 47940 ; free virtual = 103042
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3528.629 ; gain = 294.031 ; free physical = 42576 ; free virtual = 104009
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3528.602 ; gain = 294.031 ; free physical = 47940 ; free virtual = 103042
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3528.629 ; gain = 294.031 ; free physical = 42576 ; free virtual = 104009
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3528.602 ; gain = 0.000 ; free physical = 47932 ; free virtual = 103033
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3528.629 ; gain = 0.000 ; free physical = 42568 ; free virtual = 104001
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1_ooc.xdc] for cell 'inst'
-create_clock: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 3723.227 ; gain = 0.000 ; free physical = 47787 ; free virtual = 102889
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3724.285 ; gain = 0.000 ; free physical = 42459 ; free virtual = 103892
 Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1_ooc.xdc] for cell 'inst'
 Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/axis_data_fifo_1_synth_1/dont_touch.xdc]
 Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/axis_data_fifo_1_synth_1/dont_touch.xdc]
@@ -147,13 +144,13 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/axis_data_fi
 INFO: [Project 1-1714] 2 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3723.227 ; gain = 0.000 ; free physical = 47782 ; free virtual = 102884
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3724.285 ; gain = 0.000 ; free physical = 42453 ; free virtual = 103886
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3729.164 ; gain = 5.938 ; free physical = 47781 ; free virtual = 102884
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3728.254 ; gain = 3.969 ; free physical = 42453 ; free virtual = 103886
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 3729.164 ; gain = 494.594 ; free physical = 47906 ; free virtual = 103008
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 3728.254 ; gain = 493.656 ; free physical = 42559 ; free virtual = 103993
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -161,7 +158,7 @@ Start Loading Part and Timing Information
 Loading part: xczu28dr-ffvg1517-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 3729.164 ; gain = 494.594 ; free physical = 47906 ; free virtual = 103008
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 3728.254 ; gain = 493.656 ; free physical = 42559 ; free virtual = 103993
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -170,7 +167,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /ihp/depa
 Applied set_property KEEP_HIERARCHY = SOFT for inst/\gen_fifo.xpm_fifo_axis_inst /\gaxis_rst_sync.xpm_cdc_sync_rst_inst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for inst/\gen_fifo.xpm_fifo_axis_inst . (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 3729.164 ; gain = 494.594 ; free physical = 47906 ; free virtual = 103008
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 3728.254 ; gain = 493.656 ; free physical = 42559 ; free virtual = 103993
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base'
 INFO: [Synth 8-6793] RAM ("xpm_memory_base:/gen_wr_a.gen_word_narrow.mem_reg") is implemented using BRAM instead of URAM due to insufficient pipeline registers. Available pipeline stages = 0, Minimum required pipeline stages = 1 
@@ -187,7 +184,7 @@ INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 2 and width 8
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 3729.164 ; gain = 494.594 ; free physical = 47898 ; free virtual = 103001
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 3728.254 ; gain = 493.656 ; free physical = 42549 ; free virtual = 103983
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -195,24 +192,23 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   4 Input   14 Bit       Adders := 2     
-	   4 Input   13 Bit       Adders := 5     
+	   4 Input   13 Bit       Adders := 3     
 	   4 Input    2 Bit       Adders := 1     
 +---Registers : 
 	               44 Bit    Registers := 2     
 	               14 Bit    Registers := 2     
-	               13 Bit    Registers := 5     
+	               13 Bit    Registers := 3     
 	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 14    
+	                1 Bit    Registers := 10    
 +---RAMs : 
 	             352K Bit	(8192 X 44 bit)          RAMs := 1     
 +---Muxes : 
 	   2 Input    2 Bit        Muxes := 31    
 	   4 Input    2 Bit        Muxes := 7     
 	   4 Input    1 Bit        Muxes := 2     
-	   2 Input    1 Bit        Muxes := 7     
-	   3 Input    1 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -278,7 +274,7 @@ INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 2 and width 9
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 4 for RAM "inst/\gen_fifo.xpm_fifo_axis_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst /gen_wr_a.gen_word_narrow.mem_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 2 for RAM "inst/\gen_fifo.xpm_fifo_axis_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst /gen_wr_a.gen_word_narrow.mem_reg"
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 3729.164 ; gain = 494.594 ; free physical = 47885 ; free virtual = 102992
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 3728.254 ; gain = 493.656 ; free physical = 42531 ; free virtual = 103969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -299,7 +295,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:54 . Memory (MB): peak = 3968.082 ; gain = 733.512 ; free physical = 47372 ; free virtual = 102480
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 3967.203 ; gain = 732.605 ; free physical = 42033 ; free virtual = 103472
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -312,7 +308,7 @@ INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 2 and width 9
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 4 for RAM "inst/\gen_fifo.xpm_fifo_axis_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst /gen_wr_a.gen_word_narrow.mem_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 2 for RAM "inst/\gen_fifo.xpm_fifo_axis_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst /gen_wr_a.gen_word_narrow.mem_reg"
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 4002.121 ; gain = 767.551 ; free physical = 47344 ; free virtual = 102452
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 3999.234 ; gain = 764.637 ; free physical = 42004 ; free virtual = 103443
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -332,7 +328,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:00:57 . Memory (MB): peak = 4018.137 ; gain = 783.566 ; free physical = 47339 ; free virtual = 102447
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 4015.250 ; gain = 780.652 ; free physical = 41999 ; free virtual = 103438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -350,37 +346,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:01:01 . Memory (MB): peak = 4024.074 ; gain = 789.504 ; free physical = 47342 ; free virtual = 102450
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 4022.188 ; gain = 787.590 ; free physical = 41999 ; free virtual = 103438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:01:01 . Memory (MB): peak = 4024.074 ; gain = 789.504 ; free physical = 47342 ; free virtual = 102450
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 4022.188 ; gain = 787.590 ; free physical = 41999 ; free virtual = 103438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:01:02 . Memory (MB): peak = 4024.074 ; gain = 789.504 ; free physical = 47342 ; free virtual = 102450
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 4022.188 ; gain = 787.590 ; free physical = 41999 ; free virtual = 103438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:01:02 . Memory (MB): peak = 4024.074 ; gain = 789.504 ; free physical = 47342 ; free virtual = 102450
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 4022.188 ; gain = 787.590 ; free physical = 41999 ; free virtual = 103438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:01:02 . Memory (MB): peak = 4024.074 ; gain = 789.504 ; free physical = 47342 ; free virtual = 102450
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 4022.188 ; gain = 787.590 ; free physical = 41999 ; free virtual = 103438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:01:02 . Memory (MB): peak = 4024.074 ; gain = 789.504 ; free physical = 47342 ; free virtual = 102450
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 4022.188 ; gain = 787.590 ; free physical = 41999 ; free virtual = 103438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -396,42 +392,39 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |CARRY8   |     6|
-|2     |LUT1     |     7|
-|3     |LUT2     |    48|
-|4     |LUT3     |    16|
-|5     |LUT4     |    26|
-|6     |LUT5     |    28|
-|7     |LUT6     |    94|
-|8     |RAMB18E2 |     1|
-|9     |RAMB36E2 |     7|
-|15    |FDRE     |   107|
-|16    |FDSE     |    11|
+|1     |LUT1     |     5|
+|2     |LUT2     |    15|
+|3     |LUT3     |    14|
+|4     |LUT4     |    20|
+|5     |LUT5     |    19|
+|6     |LUT6     |    45|
+|7     |RAMB18E2 |     1|
+|8     |RAMB36E2 |     7|
+|14    |FDRE     |    61|
+|15    |FDSE     |     8|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:01:02 . Memory (MB): peak = 4024.074 ; gain = 789.504 ; free physical = 47342 ; free virtual = 102450
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 4022.188 ; gain = 787.590 ; free physical = 41999 ; free virtual = 103438
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 67 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 4024.074 ; gain = 588.941 ; free physical = 47382 ; free virtual = 102490
-Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:01:02 . Memory (MB): peak = 4024.082 ; gain = 789.504 ; free physical = 47382 ; free virtual = 102490
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 4022.188 ; gain = 587.965 ; free physical = 42038 ; free virtual = 103477
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 4022.195 ; gain = 787.590 ; free physical = 42038 ; free virtual = 103477
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4035.043 ; gain = 0.000 ; free physical = 47473 ; free virtual = 102581
-INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4036.125 ; gain = 0.000 ; free physical = 42134 ; free virtual = 103573
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4112.812 ; gain = 0.000 ; free physical = 47393 ; free virtual = 102501
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4109.926 ; gain = 0.000 ; free physical = 42057 ; free virtual = 103496
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 2e02bdd3
+Synth Design complete, checksum: 16702e6f
 INFO: [Common 17-83] Releasing license: Synthesis
-73 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
+69 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:14 ; elapsed = 00:01:49 . Memory (MB): peak = 4112.812 ; gain = 1046.043 ; free physical = 47556 ; free virtual = 102664
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:01:21 . Memory (MB): peak = 4109.926 ; gain = 1046.129 ; free physical = 42217 ; free virtual = 103656
 INFO: [Common 17-1381] The checkpoint '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/axis_data_fifo_1_synth_1/axis_data_fifo_1.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP axis_data_fifo_1, cache-ID = f643396ec3de3f02
-INFO: [Coretcl 2-1174] Renamed 12 cell refs.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP axis_data_fifo_1, cache-ID = 706385a498d82492
+INFO: [Coretcl 2-1174] Renamed 11 cell refs.
 INFO: [Common 17-1381] The checkpoint '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/axis_data_fifo_1_synth_1/axis_data_fifo_1.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file axis_data_fifo_1_utilization_synth.rpt -pb axis_data_fifo_1_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jul 25 10:40:54 2025...
+INFO: [Common 17-206] Exiting Vivado at Tue Aug 26 12:08:18 2025...

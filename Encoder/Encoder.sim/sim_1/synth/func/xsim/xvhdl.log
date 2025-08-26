@@ -1,4 +1,5 @@
 INFO: [VRFC 10-163] Analyzing VHDL file "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.sim/sim_1/synth/func/xsim/LDPC_encoder_tb_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Data_controller'
 INFO: [VRFC 10-3107] analyzing entity 'axis_data_fifo_0_xpm_cdc_sync_rst'
 INFO: [VRFC 10-3107] analyzing entity '\axis_data_fifo_0_xpm_counter_updn__parameterized0\'
 INFO: [VRFC 10-3107] analyzing entity '\axis_data_fifo_0_xpm_counter_updn__parameterized1\'
@@ -63,5 +64,4 @@ INFO: [VRFC 10-3107] analyzing entity 'sd_fec_0_sd_fec_v1_1_8_non_5g_code_genera
 INFO: [VRFC 10-3107] analyzing entity 'sd_fec_0_sd_fec_v1_1_8_non_5g'
 INFO: [VRFC 10-3107] analyzing entity 'sd_fec_0_sd_fec_v1_1_8'
 INFO: [VRFC 10-3107] analyzing entity 'sd_fec_0'
-INFO: [VRFC 10-3107] analyzing entity 'Cores_controller'
 INFO: [VRFC 10-3107] analyzing entity 'LDPC_encoder'

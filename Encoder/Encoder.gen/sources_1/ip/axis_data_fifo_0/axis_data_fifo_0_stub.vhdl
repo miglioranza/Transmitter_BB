@@ -1,10 +1,10 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Wed Aug 13 12:09:56 2025
+-- Date        : Wed Aug 13 12:09:55 2025
 -- Host        : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
--- Command     : write_vhdl -force -mode synth_stub
---               /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top axis_data_fifo_0 -prefix
+--               axis_data_fifo_0_ axis_data_fifo_0_stub.vhdl
 -- Design      : axis_data_fifo_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xczu28dr-ffvg1517-2-e

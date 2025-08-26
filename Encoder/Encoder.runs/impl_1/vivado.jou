@@ -2,12 +2,12 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Tue Aug 19 15:54:58 2025
-# Process ID: 2207385
+# Start of session at: Tue Aug 26 17:36:13 2025
+# Process ID: 3425874
 # Current directory: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/impl_1
 # Command line: vivado -log LDPC_encoder.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source LDPC_encoder.tcl -notrace
 # Log file: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/impl_1/LDPC_encoder.vdi
 # Journal file: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/impl_1/vivado.jou
-# Running On: uxsrv005, OS: Linux, CPU Frequency: 3457.889 MHz, CPU Physical cores: 8, Host memory: 101335 MB
+# Running On: uxsrv005, OS: Linux, CPU Frequency: 3590.884 MHz, CPU Physical cores: 8, Host memory: 101335 MB
 #-----------------------------------------------------------
 source LDPC_encoder.tcl -notrace

@@ -105,10 +105,10 @@ port (
   din_last          : in std_logic_vector(N-1 downto 0);
   din_ready         : in std_logic_vector(N-1 downto 0);
   din_valid         : in std_logic_vector(N-1 downto 0);
-  din_data_core0    : in std_logic_vector(DATA_WIDTH-1 downto 0):= (others => '0') ;
-  din_data_core1    : in std_logic_vector(DATA_WIDTH-1 downto 0):= (others => '0') ;
-  din_data_core2    : in std_logic_vector(DATA_WIDTH-1 downto 0):= (others => '0') ;
-  din_data_core3    : in std_logic_vector(DATA_WIDTH-1 downto 0):= (others => '0') ;
+  din_data_core0    : in std_logic_vector(DATA_WIDTH-1 downto 0) ;
+  din_data_core1    : in std_logic_vector(DATA_WIDTH-1 downto 0);
+  din_data_core2    : in std_logic_vector(DATA_WIDTH-1 downto 0) ;
+  din_data_core3    : in std_logic_vector(DATA_WIDTH-1 downto 0) ;
   dout_valid        : out std_logic_vector(N-1 downto 0) := (others => '0') ;
   dout_ready        : out std_logic_vector(N-1 downto 0):= (others => '0') ; 
   dout_data0        : out std_logic_vector(CORE_DATA_WIDTH-1 downto 0); 
@@ -204,6 +204,9 @@ signal out_fifo_valid_out: std_logic_vector(3 downto 0)  := (others => '0');
 signal out_fifo_ready_in : std_logic_vector(3 downto 0)  := (others => '0');
 signal out_fifo_last_in  : std_logic_vector(3 downto 0)  := (others => '0');
 signal out_fifo_last_out : std_logic_vector(3 downto 0)  := (others => '0'); 
+
+attribute dont_touch : string ;
+attribute dont_touch of Data_controller : component is "yes" ;
 --sequential signals for pipelines
 signal input_data_register0, input_data_register1, input_data_register2, input_data_register3 : std_logic_vector(DATA_WIDTH -1 downto 0) := (others => '0') ;
 begin
@@ -228,11 +231,11 @@ begin
 -- end generate ;
 Data_controller_inst : Data_controller 
 port map (
-clk => clk,
-reset => reset ,
-din_last =>  fifo_data_out_last,
-din_ready => din_ready_controller,
-din_valid => fifo_valid_out,
+clk            => clk,
+reset          => reset ,
+din_last       =>  fifo_data_out_last,
+din_ready      => din_ready_controller,
+din_valid      => fifo_valid_out,
 din_data_core0 =>fifo_data_out(0),
 din_data_core1 =>fifo_data_out(1),
 din_data_core2 =>fifo_data_out(2),
@@ -416,28 +419,7 @@ input_fifo_3 : axis_data_fifo_0
     almost_full         => open
   );
 
- --Controller instantiation 
--- Cores_Contr : Cores_controller 
--- port map (
---     clk                => clk ,
---     reset              => reset,
---     ldpc_core_clk      => ldpc_core_clk,
---     din_last           => fifo_data_out_last,
---     din_ready          => out_fifo_ready_out,
---     din_valid          => fifo_valid_out,
---     din_data_core0     => fifo_data_out(0) ,
---     din_data_core1     => fifo_data_out(1) ,
---     din_data_core2     => fifo_data_out(2) ,
---     din_data_core3     => fifo_data_out(3) ,
---     dout_valid         => out_fifo_valid_in,
---     dout_ready         => fifo_in_ready,
---     dout_data0         => out_fifo_input_data(0),
---     dout_data1         => out_fifo_input_data(1),
---     dout_data2         => out_fifo_input_data(2),
---     dout_data3         => out_fifo_input_data(3),
---     dout_last          => out_fifo_last_in
- 
--- );
+
  
 --Generate 4 instances of output axis_data_fifo_0
 Output_FIFO_inst : for i in 0 to N-1 generate 

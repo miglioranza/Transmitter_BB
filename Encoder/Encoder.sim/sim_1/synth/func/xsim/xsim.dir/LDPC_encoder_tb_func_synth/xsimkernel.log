@@ -1,4 +1,7 @@
-Running: xsim.dir/LDPC_encoder_tb_func_synth/xsimk -simmode gui -wdb LDPC_encoder_tb_func_synth.wdb -simrunnum 0 -socket 38803
+Running: xsim.dir/LDPC_encoder_tb_func_synth/xsimk -simmode gui -wdb LDPC_encoder_tb_func_synth.wdb -simrunnum 0 -socket 41607
 Design successfully loaded
-Design Loading Memory Usage: 195084 KB (Peak: 195084 KB)
-Design Loading CPU Usage: 550 ms
+Design Loading Memory Usage: 191148 KB (Peak: 191148 KB)
+Design Loading CPU Usage: 510 ms
+Simulation completed
+Simulation Memory Usage: 349660 KB (Peak: 415196 KB)
+Simulation CPU Usage: 24050 ms

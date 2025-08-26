@@ -2,12 +2,12 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Fri Jul 25 10:38:29 2025
-# Process ID: 91348
+# Start of session at: Tue Aug 26 12:06:30 2025
+# Process ID: 3287436
 # Current directory: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/axis_data_fifo_1_synth_1
 # Command line: vivado -log axis_data_fifo_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source axis_data_fifo_1.tcl
 # Log file: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/axis_data_fifo_1_synth_1/axis_data_fifo_1.vds
 # Journal file: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/axis_data_fifo_1_synth_1/vivado.jou
-# Running On: uxsrv005, OS: Linux, CPU Frequency: 3590.882 MHz, CPU Physical cores: 8, Host memory: 101335 MB
+# Running On: uxsrv005, OS: Linux, CPU Frequency: 3457.889 MHz, CPU Physical cores: 8, Host memory: 101335 MB
 #-----------------------------------------------------------
 source axis_data_fifo_1.tcl -notrace
