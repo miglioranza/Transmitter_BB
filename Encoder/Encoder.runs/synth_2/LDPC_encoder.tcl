@@ -309,7 +309,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Data_controller.vhd
+  /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd
   /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd
 }
 read_ip -quiet /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0.xci

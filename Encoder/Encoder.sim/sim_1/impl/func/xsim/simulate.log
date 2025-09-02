@@ -1,0 +1,14 @@
+Time resolution is 1 ps
+Note: Start of simulation
+Time: 0 ps  Iteration: 0  Process: /LDPC_encoder_tb/stimuli_generation  File: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sim_1/new/LDPC_encoder_tb.vhd
+FATAL_ERROR: Iteration limit 200000 is reached. Possible zero delay oscillation detected where simulation time can not advance. Please check your source code. Note that the iteration limit can be changed using switch -maxdeltaid.
+Time: 15192600 ps  Iteration: 200000
+Note: Start of simulation
+Time: 0 ps  Iteration: 0  Process: /LDPC_encoder_tb/stimuli_generation  File: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sim_1/new/LDPC_encoder_tb.vhd
+FATAL_ERROR: Iteration limit 200000 is reached. Possible zero delay oscillation detected where simulation time can not advance. Please check your source code. Note that the iteration limit can be changed using switch -maxdeltaid.
+Time: 15192600 ps  Iteration: 200000
+Note: Start of simulation
+Time: 0 ps  Iteration: 0  Process: /LDPC_encoder_tb/stimuli_generation  File: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sim_1/new/LDPC_encoder_tb.vhd
+FATAL_ERROR: Iteration limit 200000 is reached. Possible zero delay oscillation detected where simulation time can not advance. Please check your source code. Note that the iteration limit can be changed using switch -maxdeltaid.
+Time: 15192600 ps  Iteration: 200000
+INFO: xsimkernel Simulation Memory Usage: 760092 KB (Peak: 792856 KB), Simulation CPU Usage: 78580 ms

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_2" LaunchPart="xczu28dr-ffvg1517-2-e" LaunchTime="1756222433" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_2/LDPC_encoder.dcp">
+<GenRun Id="synth_2" LaunchPart="xczu28dr-ffvg1517-2-e" LaunchTime="1756827660" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_2/LDPC_encoder.dcp">
   <File Type="VDS-TIMING-PB" Name="LDPC_encoder_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="LDPC_encoder_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="LDPC_encoder.dcp"/>
@@ -25,7 +25,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/Data_controller.vhd">
+    <File Path="$PSRCDIR/sources_1/new/Input_controller.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -33,6 +33,13 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/LDPC_encoder.vhd">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Data_controller.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -70,9 +77,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Flow_AreaOptimized_medium" Flow="Vivado Synthesis 2021">
-      <Desc>Performs general area optimizations including changing the threshold for control set optimizations, forcing ternary adder implementation, lowering multiplier threshold of inference into DSP blocks, moving  shift register into BRAM, applying lower thresholds for use of carry chain in comparators and also area optimized mux optimizations</Desc>
-    </StratHandle>
+    <StratHandle Name="Flow_AreaOptimized_medium" Flow="Vivado Synthesis 2021"/>
     <Step Id="synth_design">
       <Option Id="Directive">2</Option>
       <Option Id="ControlSetOptThreshold">1</Option>

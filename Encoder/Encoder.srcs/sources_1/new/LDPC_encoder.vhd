@@ -98,7 +98,7 @@ COMPONENT axis_data_fifo_1
   );
 END COMPONENT;
 
-component Data_controller 
+component Input_controller 
 port (
   clk               : in std_logic ;
   reset             : in std_logic ;
@@ -116,8 +116,8 @@ port (
   dout_data2        : out std_logic_vector(CORE_DATA_WIDTH-1 downto 0); 
   dout_data3        : out std_logic_vector(CORE_DATA_WIDTH-1 downto 0); 
   dout_last         : out std_logic_vector(N-1 downto 0);  
-  reset_cores       : out std_logic;       
-  last_frame        : out std_logic 
+  reset_cores       : out std_logic       
+--  last_frame        : out std_logic 
         
 );
 end component ;
@@ -205,8 +205,8 @@ signal out_fifo_ready_in : std_logic_vector(3 downto 0)  := (others => '0');
 signal out_fifo_last_in  : std_logic_vector(3 downto 0)  := (others => '0');
 signal out_fifo_last_out : std_logic_vector(3 downto 0)  := (others => '0'); 
 
-attribute dont_touch : string ;
-attribute dont_touch of Data_controller : component is "yes" ;
+--attribute dont_touch : string ;
+--attribute dont_touch of Data_controller : component is "yes" ;
 --sequential signals for pipelines
 signal input_data_register0, input_data_register1, input_data_register2, input_data_register3 : std_logic_vector(DATA_WIDTH -1 downto 0) := (others => '0') ;
 begin
@@ -229,7 +229,7 @@ begin
 
 --  ); 
 -- end generate ;
-Data_controller_inst : Data_controller 
+Data_controller_inst : Input_controller 
 port map (
 clk            => clk,
 reset          => reset ,
@@ -247,8 +247,8 @@ dout_data1     => dout_data_controller1,
 dout_data2     => dout_data_controller2,
 dout_data3     => dout_data_controller3,
 dout_last      => dout_last_controller,
-reset_cores    => reset_cores_controller,
-last_frame     => open 
+reset_cores    => reset_cores_controller
+--last_frame     => open 
 
 );
 -- Instance 0
@@ -301,7 +301,7 @@ LDPC_core1 : sd_fec_0
     m_axis_dout_tlast => out_fifo_last_in(1),
     m_axis_dout_tdata => out_fifo_input_data(1)
   );
-  -- Instance 0
+--  -- Instance 0
 LDPC_core2 : sd_fec_0
   PORT MAP (
     reset_n => reset_cores_controller,
@@ -326,7 +326,7 @@ LDPC_core2 : sd_fec_0
     m_axis_dout_tlast => out_fifo_last_in(2),
     m_axis_dout_tdata => out_fifo_input_data(2)
   );
-  -- Instance 0
+--  -- Instance 0
 LDPC_core3 : sd_fec_0
   PORT MAP (
     reset_n => reset_cores_controller,
@@ -422,7 +422,7 @@ input_fifo_3 : axis_data_fifo_0
 
  
 --Generate 4 instances of output axis_data_fifo_0
-Output_FIFO_inst : for i in 0 to N-1 generate 
+Output_FIFO_inst : for i in 0 to 3 generate 
 output_fifo : axis_data_fifo_1
   PORT MAP (
     s_axis_aresetn      => reset_fifos,
