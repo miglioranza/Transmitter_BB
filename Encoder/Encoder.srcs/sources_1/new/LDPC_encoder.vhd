@@ -229,7 +229,7 @@ begin
 
 --  ); 
 -- end generate ;
-Data_controller_inst : Input_controller 
+Input_controller_inst : Input_controller 
 port map (
 clk            => clk,
 reset          => reset ,
@@ -441,10 +441,10 @@ end generate  Output_FIFO_inst;
 
 output_logic_core0 : process (out_fifo_output_data(0) ,out_fifo_valid_out(0)) 
 begin
- data_out0 <= out_fifo_output_data(0) ;
-if out_fifo_output_data(0) /= x"0000000000000000000000005A5A5A5A" and out_fifo_valid_out(0) = '1' then
+data_out0 <= out_fifo_output_data(0) ;
+if out_fifo_output_data(0) /= x"5A5A5A5A" and out_fifo_valid_out(0) = '1' then
 data_out_valid(0) <= '1' ;     
-elsif out_fifo_output_data(0) = x"0000000000000000000000005A5A5A5A" and out_fifo_valid_out(0) = '1' then
+elsif out_fifo_output_data(0) = x"5A5A5A5A" and out_fifo_valid_out(0) = '1' then
 data_out_valid(0) <= '0' ;
 else 
 data_out_valid(0) <= '0' ;
@@ -453,9 +453,9 @@ end process ;
 output_logic_core1 : process (out_fifo_output_data(1) ,out_fifo_valid_out(1)) 
 begin
  data_out1 <= out_fifo_output_data(1) ;
-if out_fifo_output_data(1) /= x"0000000000000000000000005A5A5A5A" and out_fifo_valid_out(1) = '1' then
+if out_fifo_output_data(1) /= x"5A5A5A5A" and out_fifo_valid_out(1) = '1' then
 data_out_valid(1) <= '1' ;     
-elsif out_fifo_output_data(1) = x"0000000000000000000000005A5A5A5A" and out_fifo_valid_out(1) = '1' then
+elsif out_fifo_output_data(1) = x"5A5A5A5A" and out_fifo_valid_out(1) = '1' then
 data_out_valid(1) <= '0' ;
 else 
 data_out_valid(1) <= '0' ;
@@ -464,9 +464,9 @@ end process ;
 output_logic_core2 : process (out_fifo_output_data(2) ,out_fifo_valid_out(2)) 
 begin
  data_out2 <= out_fifo_output_data(2) ;
-if out_fifo_output_data(2) /= x"0000000000000000000000005A5A5A5A" and out_fifo_valid_out(2) = '1' then
+if out_fifo_output_data(2) /= x"5A5A5A5A" and out_fifo_valid_out(2) = '1' then
 data_out_valid(2) <= '1' ;     
-elsif out_fifo_output_data(2) = x"0000000000000000000000005A5A5A5A" and out_fifo_valid_out(2) = '1' then
+elsif out_fifo_output_data(2) = x"5A5A5A5A" and out_fifo_valid_out(2) = '1' then
 data_out_valid(2) <= '0' ;
 else 
 data_out_valid(2) <= '0' ;
@@ -475,9 +475,9 @@ end process ;
 output_logic_core3 : process (out_fifo_output_data(3) ,out_fifo_valid_out(3)) 
 begin
  data_out3 <= out_fifo_output_data(3) ;
-if out_fifo_output_data(3) /= x"0000000000000000000000005A5A5A5A" and out_fifo_valid_out(3) = '1' then
+if out_fifo_output_data(3) /= x"5A5A5A5A" and out_fifo_valid_out(3) = '1' then
 data_out_valid(3) <= '1' ;     
-elsif out_fifo_output_data(3) = x"0000000000000000000000005A5A5A5A" and out_fifo_valid_out(3) = '1' then
+elsif out_fifo_output_data(3) = x"5A5A5A5A" and out_fifo_valid_out(3) = '1' then
 data_out_valid(3) <= '0' ;
 else 
 data_out_valid(3) <= '0' ;

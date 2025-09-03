@@ -129,7 +129,7 @@ case state0 is
                        dout_ready(0) <= '0' ;
                        cw_counter0 <= cw_counter0  + 1; 
                     else
-                      
+--                       dout_data0 <= x"0000000000000000000000005A5A5A5A" ;
                        cw_counter0 <= 0;
                        dout_ready(0) <= din_ready(0) ;
                      
@@ -147,8 +147,12 @@ case state0 is
                     
              --Case when the internal FIFO of the LDPC encoder is full      
            elsif din_valid(0) = '1' and din_ready(0) = '0' and din_last(0)= '0' then  
-                   dout_ready(0) <= din_ready(0) ;       
-                   cw_counter0  <= cw_counter0  ;  
+                   dout_ready(0) <= din_ready(0) ;    
+                   if cw_counter0 = 49 then 
+                    cw_counter0 <= cw_counter0 + 1 ; 
+                   else     
+                    cw_counter0  <= cw_counter0  ;  
+                   end if ;
                    dout_valid(0) <= '1'; 
                    dout_data0 <= x"000000000000000000000000" & din_data_core0  ;
                    buffer_data0(1) <= din_data_core0  ;           
@@ -184,23 +188,28 @@ case state0 is
                  buffer_data0 <= buffer_data0;
              
                  
-                 if din_ready(0) = '1' and counter < 2 then 
-                    dout_data0 <=    x"000000000000000000000000" & buffer_data0(counter);
+                 if din_ready(0) = '1' and counter < 1 then 
+                    dout_data0 <=    x"000000000000000000000000" & buffer_data0(1);
                     state0 <= buffering ;
                     counter := counter + 1 ;
                     dout_valid(0) <= '1'; 
                     cw_counter0     <= cw_counter0 + 1 ; 
                     dout_ready(0)   <= (not din_ready(0)) ;
-                 elsif  din_ready(0) = '1' and counter = 2 then   
+                 elsif  din_ready(0) = '1' and counter = 1 then   
                       dout_data0  <= x"000000000000000000000000" &  din_data_core0 ;
-                      cw_counter0     <= cw_counter0 + 1 ; 
+                      cw_counter0     <= cw_counter0 ; 
                       state0 <= encoding ;
                       counter := 0 ;
-                       dout_valid(0) <= '1';
+                      if cw_counter0 = 50 then
+                        dout_ready(0) <= ( not din_ready(0)) ;
+                      else 
+                        dout_ready(0) <= din_ready(0) ;
+                      end if ;  
+--                      dout_valid(0) <= '1';
                  else 
-                    dout_valid(0) <= '0';
+                    dout_valid(0) <= '1';
                     cw_counter0   <= cw_counter0 ;
-                    dout_data0 <= x"000000000000000000000000" & din_data_core0;
+                    dout_data0 <= x"000000000000000000000000" & buffer_data0(0) ;
                     state0  <= buffering ;
                     counter := 0 ;
                  end if ;   
@@ -211,11 +220,11 @@ case state0 is
                  dout_data0 <=  x"0000000000000000000000005A5A5A5A" ;
                  buffer_data0 <= (others => (others => '0'));  
 
-               if din_ready(0) = '1' then
+--              if din_ready(0) = '1' then
                  
                  cw_counter0  <= cw_counter0  + 1; 
 
-                 if cw_counter0 = 52 then 
+                 if cw_counter0 = 54 then 
                     state0  <= idle ;        
                     dout_last(0)  <= '1';
                     cw_counter0  <= 0 ;
@@ -223,11 +232,11 @@ case state0 is
                     state0  <= padding ;                    
                     dout_last(0)  <= '0';
                  end if ;
-              else 
-                    state0  <= padding ;        
-                    cw_counter0  <= cw_counter0 ;
-                    dout_last(0)  <= '0';
-              end if ;
+--              else 
+--                    state0  <= padding ;        
+--                    cw_counter0  <= cw_counter0 ;
+--                    dout_last(0)  <= '0';
+--              end if ;
           when others => 
           counter := 0 ;
           dout_valid(0) <= '0';   
@@ -293,7 +302,7 @@ case state1 is
                        dout_ready(1) <= '0' ;
                        cw_counter1 <= cw_counter1  + 1; 
                     else
-                      
+--                       dout_data1 <= x"0000000000000000000000005A5A5A5A" ;
                        cw_counter1 <= 0;
                        dout_ready(1) <= din_ready(1) ;
                      
@@ -309,7 +318,13 @@ case state1 is
                     
            elsif din_valid(1) = '1' and din_ready(1) = '0' and din_last(1)= '0' then  
                    dout_ready(1) <= din_ready(1) ;       
-                   cw_counter1  <= cw_counter1  ;  
+
+                    if cw_counter1 = 44 then 
+                        cw_counter1 <= cw_counter1 -1 ;
+                   else     
+                        cw_counter1  <= cw_counter1;  
+                   end if ;
+
                    dout_valid(1) <= '1'; 
                    buffer_data1(0) <= buffer_data1(0) ;               
                    buffer_data1(1) <= din_data_core1  ;               
@@ -341,22 +356,29 @@ case state1 is
           when buffering => 
                  buffer_data1 <= buffer_data1;
                  
-                if din_ready(1) = '1' and counter < 2 then 
-                    dout_data1 <=    x"000000000000000000000000" & buffer_data1(counter);
+                if din_ready(1) = '1' and counter < 1 then 
+                    dout_data1 <=    x"000000000000000000000000" & buffer_data1(1);
                     state1 <= buffering ;
                     counter := counter + 1 ;
                     dout_valid(1) <= '1'; 
                     cw_counter1     <= cw_counter1 + 1 ; 
                     dout_ready(1)   <= (not din_ready(1)) ;
-                 elsif  din_ready(1) = '1' and counter = 2 then   
+                 elsif  din_ready(1) = '1' and counter = 1 then   
                       dout_data1  <= x"000000000000000000000000" & din_data_core1 ;
-                      cw_counter1     <= cw_counter1 + 1 ; 
+                      cw_counter1     <= cw_counter1 ; 
+                       if cw_counter1 = 45 then 
+                         dout_ready(1)   <= (not din_ready(1)) ; 
+                      else 
+                         dout_ready(1) <= din_ready(1) ;
+                      end if ;       
                       state1 <= encoding ;
                       counter := 0 ;
                  else 
                     cw_counter1   <= cw_counter1 ;
-                    dout_data1 <= x"000000000000000000000000" & din_data_core1 ;
-                    dout_valid(1) <= '0';
+                    
+                    dout_data1 <= x"000000000000000000000000" & buffer_data1(0) ;
+                     dout_valid(1) <= '1'; 
+--                    dout_data1 <= x"000000000000000000000000" & din_data_core1 ;
                     state1  <= buffering ;
                     counter := 0 ;
                  end if ;   
@@ -366,7 +388,6 @@ case state1 is
                  dout_ready(1) <= din_ready(1) ;       
                  dout_valid(1) <= '1'; 
                  dout_data1 <=  x"0000000000000000000000005A5A5A5A" ;
-                 buffer_data1 <= (others =>  (others => '0'));  
 
                if din_ready(1) = '1' then
                  
@@ -490,22 +511,22 @@ case state2 is
           when buffering => 
                  buffer_data2 <= buffer_data2;
                  
-                if din_ready(2) = '1' and counter < 2 then 
-                    dout_data2 <=    x"000000000000000000000000" & buffer_data2(counter);
+                if din_ready(2) = '1' and counter < 1 then 
+                    dout_data2 <=    x"000000000000000000000000" & buffer_data2(1);
                     state2 <= buffering ;
                     counter := counter + 1 ;
                     dout_valid(2) <= '1'; 
                     cw_counter2     <= cw_counter2 + 1 ; 
                     dout_ready(2)   <= (not din_ready(2)) ;
-                 elsif  din_ready(2) = '1' and counter = 2 then   
+                 elsif  din_ready(2) = '1' and counter = 1 then   
                       dout_data2  <= x"000000000000000000000000" & din_data_core2 ;
-                      cw_counter2     <= cw_counter2 + 1 ; 
+                      cw_counter2     <= cw_counter2  ; 
                       state2 <= encoding ;
                       counter := 0 ;
                  else 
                     cw_counter2   <= cw_counter2 ;
-                    dout_data2 <= x"000000000000000000000000" & din_data_core2 ;
-                    dout_valid(2) <= '0';
+                    dout_data2 <= x"000000000000000000000000" & buffer_data2(0) ;
+                    dout_valid(2) <= '1';
                     state2  <= buffering ;
                     counter := 0 ;
                  end if ;   
@@ -602,7 +623,7 @@ case state3 is
                        dout_ready(3) <= '0' ;
                        cw_counter3 <= cw_counter3  + 1; 
                     else
-                      
+--                       dout_data3 <= x"0000000000000000000000005A5A5A5A" ;
                        cw_counter3 <= 0;
                        dout_ready(3) <= din_ready(3) ;
                      
@@ -617,8 +638,12 @@ case state3 is
                     state3  <= padding ;     
                  
            elsif din_valid(3) = '1' and din_ready(3) = '0' and din_last(3)= '0' then  
-                   dout_ready(3) <= din_ready(3) ;       
-                   cw_counter3  <= cw_counter3  ;  
+                   dout_ready(3) <= din_ready(3) ;   
+                   if cw_counter3 = 19 then 
+                        cw_counter3 <= cw_counter3 -1 ;
+                   else     
+                        cw_counter3  <= cw_counter3;  
+                   end if ;
                    dout_valid(3) <= '1'; 
                    buffer_data3(0) <= buffer_data3(0) ;               
                    buffer_data3(1) <= din_data_core3  ;               
@@ -650,22 +675,27 @@ case state3 is
           when buffering => 
                  buffer_data3 <= buffer_data3;
                  
-                if din_ready(3) = '1' and counter < 2 then 
-                    dout_data3 <=    x"000000000000000000000000" & buffer_data3(counter);
-                    state3 <= buffering ;
-                    counter := counter + 1 ;
-                    dout_valid(3) <= '1'; 
+                if din_ready(3) = '1' and counter < 1 then 
+                    dout_data3 <=    x"000000000000000000000000" & buffer_data3(1);
+                    state3 <= buffering ;            
+                    dout_valid(3) <= '1';                    
+                    dout_ready(3)   <= (not din_ready(3)) ;                
                     cw_counter3     <= cw_counter3 + 1 ; 
-                    dout_ready(3)   <= (not din_ready(3)) ;
-                 elsif  din_ready(3) = '1' and counter = 2 then   
+                    counter := counter + 1 ;
+                elsif  din_ready(3) = '1' and counter = 1 then   
                       dout_data3  <= x"000000000000000000000000" & din_data_core3 ;
-                      cw_counter3     <= cw_counter3 + 1 ; 
+                      cw_counter3     <= cw_counter3 ; 
                       state3 <= encoding ;
                       counter := 0 ;
-                 else 
+                      if cw_counter3 = 20 then 
+                         dout_ready(3)   <= (not din_ready(3)) ; 
+                      else 
+                         dout_ready(3) <= din_ready(3) ;
+                      end if ;       
+                else 
                     cw_counter3   <= cw_counter3 ;
-                    dout_data3 <= x"000000000000000000000000" & din_data_core3 ;
-                    dout_valid(3) <= '0';
+                    dout_data3 <=    x"000000000000000000000000" & buffer_data3(0);                 
+                   dout_valid(3) <= '1';
                     state3  <= buffering ;
                     counter := 0 ;
                  end if ;   

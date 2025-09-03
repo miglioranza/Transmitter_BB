@@ -72,6 +72,7 @@ proc create_report { reportName command } {
 OPTRACE "synth_2" START { ROLLUP_AUTO }
 set_param simulator.xceliumInstallPath /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin
 set_param power.enableUnconnectedCarry8PinPower 1
+set_param chipscope.maxJobs 4
 set_param power.enableCarry8RouteBelPower 1
 set_param power.BramSDPPropagationFix 1
 set_param power.enableLutRouteBelPower 1

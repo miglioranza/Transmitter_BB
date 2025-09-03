@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_2" LaunchPart="xczu28dr-ffvg1517-2-e" LaunchTime="1756827660" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_2/LDPC_encoder.dcp">
+<GenRun Id="synth_2" LaunchPart="xczu28dr-ffvg1517-2-e" LaunchTime="1756908557" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_2/LDPC_encoder.dcp">
   <File Type="VDS-TIMING-PB" Name="LDPC_encoder_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="LDPC_encoder_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="LDPC_encoder.dcp"/>
@@ -33,13 +33,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/LDPC_encoder.vhd">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/Data_controller.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
