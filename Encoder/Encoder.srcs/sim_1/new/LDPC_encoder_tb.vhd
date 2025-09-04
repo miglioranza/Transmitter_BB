@@ -79,7 +79,6 @@ end component ;
   signal data_out_ready_tb : std_logic;
   signal data_out_valid_tb : std_logic_vector(N-1 downto 0);
   signal data_out_last_tb  : std_logic;
---  signal current_cr_tb     : std_logic_vector(2 downto 0);
   signal last_frame_tb     : std_logic;
   signal data_in_last_tb   : std_logic_vector(3 downto 0) := (others => '0');
 
@@ -138,6 +137,19 @@ end_of_frame_tb  <= '0';
 --Simulate the Preambles insertion (896 symbols * 5 ns)
 wait for 4480ns  ;
 data_in_ready_tb <= '1';
+--Simulate the Signal Field insertion
+while tmp < 8 loop 
+data_in_tb <= std_logic_vector(to_unsigned(k,32)) ; 
+data_in_valid_tb <= '1';
+K := k + 10 ;
+tmp := tmp + 1 ;
+wait until rising_edge (clk_tb) ;
+end loop ;
+data_in_valid_tb <= '0';
+data_in_last_tb <= (others => '0') ;
+k := 0 ;
+tmp := 0 ;
+wait for 50 ns ;
 
 --Data feeding in the  input FIFO 
 while tmp < 2000 loop 
@@ -149,8 +161,8 @@ tmp := tmp + 1 ;
 wait until rising_edge (clk_tb);
 end loop ;
 end_of_frame_tb <= '1';
-wait for clk_period ;
-end_of_frame_tb <= '0';
+--wait for clk_period ;
+--end_of_frame_tb <= '0';
 data_in_valid_tb <= '0';
 wait ;
 --report ("End of simulation");

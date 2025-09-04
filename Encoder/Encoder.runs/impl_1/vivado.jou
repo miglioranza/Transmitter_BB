@@ -2,8 +2,8 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Wed Sep  3 16:11:44 2025
-# Process ID: 70494
+# Start of session at: Thu Sep  4 14:02:58 2025
+# Process ID: 975865
 # Current directory: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/impl_1
 # Command line: vivado -log LDPC_encoder.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source LDPC_encoder.tcl -notrace
 # Log file: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/impl_1/LDPC_encoder.vdi

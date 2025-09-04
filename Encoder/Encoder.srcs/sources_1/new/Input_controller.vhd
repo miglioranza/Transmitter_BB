@@ -65,7 +65,7 @@ architecture Behavioral of Input_controller is
 
 type fsm_input is (idle, encoding ,buffering ,padding) ;
 signal state0,state1,state2,state3 : fsm_input := idle ;
-signal cw_counter0    : integer range  0 to 50 := 0 ;
+signal cw_counter0    : integer range  0 to 55 := 0 ;
 signal cw_counter1    : integer range  0 to 50 := 0 ;
 signal cw_counter2    : integer range  0 to 30 := 0 ;
 signal cw_counter3    : integer range  0 to 50 := 0 ;
@@ -159,7 +159,6 @@ case state0 is
                    buffer_data0(0) <= buffer_data0(0)  ;
                    counter := 0 ;
                    state0 <= buffering ;
-           --Case when the internal FIFO of the LDPC encoder is full and the input data is the end of frame  
          --Case when the internal FIFO of the LDPC encoder is full and the input data is the end of frame  
 
              elsif din_valid(0) = '1' and din_ready(0) = '0' and din_last(0)= '1' then  
@@ -220,23 +219,23 @@ case state0 is
                  dout_data0 <=  x"0000000000000000000000005A5A5A5A" ;
                  buffer_data0 <= (others => (others => '0'));  
 
---              if din_ready(0) = '1' then
+              if din_ready(0) = '1' then
                  
                  cw_counter0  <= cw_counter0  + 1; 
 
-                 if cw_counter0 = 54 then 
+                 if cw_counter0 > 53 then 
                     state0  <= idle ;        
                     dout_last(0)  <= '1';
-                    cw_counter0  <= 0 ;
+                    dout_valid(0) <= '1'; 
                  else    
                     state0  <= padding ;                    
                     dout_last(0)  <= '0';
                  end if ;
---              else 
---                    state0  <= padding ;        
---                    cw_counter0  <= cw_counter0 ;
---                    dout_last(0)  <= '0';
---              end if ;
+              else 
+                    state0  <= padding ;        
+                    cw_counter0  <= cw_counter0 ;
+                    dout_last(0)  <= '0';
+              end if ;
           when others => 
           counter := 0 ;
           dout_valid(0) <= '0';   
@@ -378,7 +377,6 @@ case state1 is
                     
                     dout_data1 <= x"000000000000000000000000" & buffer_data1(0) ;
                      dout_valid(1) <= '1'; 
---                    dout_data1 <= x"000000000000000000000000" & din_data_core1 ;
                     state1  <= buffering ;
                     counter := 0 ;
                  end if ;   

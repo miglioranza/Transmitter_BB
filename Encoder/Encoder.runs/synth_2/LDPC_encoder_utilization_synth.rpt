@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Sep  3 16:11:19 2025
+| Date         : Thu Sep  4 14:02:44 2025
 | Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 | Command      : report_utilization -file LDPC_encoder_utilization_synth.rpt -pb LDPC_encoder_utilization_synth.pb
 | Design       : LDPC_encoder
@@ -32,11 +32,11 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               |  319 |     0 |          0 |    425280 |  0.08 |
-|   LUT as Logic          |  319 |     0 |          0 |    425280 |  0.08 |
+| CLB LUTs*               |  331 |     0 |          0 |    425280 |  0.08 |
+|   LUT as Logic          |  331 |     0 |          0 |    425280 |  0.08 |
 |   LUT as Memory         |    0 |     0 |          0 |    213600 |  0.00 |
-| CLB Registers           |  431 |     0 |          0 |    850560 |  0.05 |
-|   Register as Flip Flop |  431 |     0 |          0 |    850560 |  0.05 |
+| CLB Registers           |  436 |     0 |          0 |    850560 |  0.05 |
+|   Register as Flip Flop |  436 |     0 |          0 |    850560 |  0.05 |
 |   Register as Latch     |    0 |     0 |          0 |    850560 |  0.00 |
 | CARRY8                  |    0 |     0 |          0 |     53160 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |    212640 |  0.00 |
@@ -59,9 +59,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 163   |          Yes |           - |        Reset |
+| 164   |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 268   |          Yes |       Reset |            - |
+| 272   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -162,18 +162,18 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  268 |            Register |
-| FDCE     |  163 |            Register |
-| LUT6     |  151 |                 CLB |
+| FDRE     |  272 |            Register |
+| LUT6     |  186 |                 CLB |
+| FDCE     |  164 |            Register |
 | OBUF     |  132 |                 I/O |
-| LUT5     |  131 |                 CLB |
+| LUT5     |  105 |                 CLB |
+| LUT4     |   50 |                 CLB |
 | INBUF    |   39 |                 I/O |
 | IBUFCTRL |   39 |              Others |
-| LUT4     |   31 |                 CLB |
-| LUT3     |   29 |                 CLB |
-| LUT2     |    7 |                 CLB |
-| LUT1     |    5 |                 CLB |
+| LUT3     |   18 |                 CLB |
+| LUT2     |   14 |                 CLB |
 | OBUFT    |    3 |                 I/O |
+| LUT1     |    1 |                 CLB |
 | BUFGCE   |    1 |               Clock |
 +----------+------+---------------------+
 
