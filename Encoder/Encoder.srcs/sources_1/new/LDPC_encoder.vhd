@@ -44,17 +44,21 @@ entity LDPC_encoder is
   ldpc_core_clk  : in  std_logic ;
   data_in        : in  std_logic_vector(DATA_WIDTH-1 downto 0) ;
   data_in_valid  : in  std_logic ;
+  data_in_last   : in  std_logic ;
   data_in_ready  : in  std_logic ;
-  sel_code_rate  : in  std_logic_vector(N-1 downto 0); 
+  sel_code_rate  : in  std_logic_vector(1 downto 0); 
   end_of_frame   : in  std_logic;
-  data_out0      : out std_logic_vector(DATA_WIDTH-1 downto 0);
-  data_out1      : out std_logic_vector(DATA_WIDTH-1 downto 0);
-  data_out2      : out std_logic_vector(DATA_WIDTH-1 downto 0);
-  data_out3      : out std_logic_vector(DATA_WIDTH-1 downto 0);
-  data_out_ready : out std_logic ;
-  data_out_valid : out std_logic_vector(N-1 downto 0) ;
+--  data_out_5_6   : out std_logic_vector(DATA_WIDTH-1 downto 0);
+--  data_out_3_4      : out std_logic_vector(DATA_WIDTH-1 downto 0);
+--  data_out_2_3      : out std_logic_vector(DATA_WIDTH-1 downto 0);
+  data_out      : out std_logic_vector(DATA_WIDTH-1 downto 0);
+--  data_out_ready : out std_logic ;
+  data_out_valid : out std_logic ;
+--  data_out_valid_2_3 : out std_logic ;
+--  data_out_valid_3_4 : out std_logic ;
+--  data_out_valid_5_6 : out std_logic ;
   data_out_last  : out std_logic ;
---  current_cr     : out std_logic_vector(2 downto 0) ;
+  current_cr     : out std_logic_vector(1 downto 0) ;
   last_frame     : out std_logic 
   
   );
@@ -185,12 +189,13 @@ signal sel_cr : code_rate := (
 
 --Input FIFO signals
 type data_out_fifo is array(N-1 downto 0) of std_logic_vector(DATA_WIDTH-1 downto 0) ;
-signal fifo_data_out, fifo_data_count    : data_out_fifo := (others => (others => '0')) ;
+signal fifo_data_out, fifo_data_count,fifo_data_in    : data_out_fifo := (others => (others => '0')) ;
 
-signal fifo_data_in      : std_logic_vector(DATA_WIDTH-1 downto 0) ;
+--signal fifo_data_in      : std_logic_vector(DATA_WIDTH-1 downto 0) ;
 signal fifo_data_in_last : std_logic  := '0'; 
 signal fifo_out_ready    : std_logic_vector(N-1 downto 0) ;
 signal fifo_valid_out    : std_logic_vector(N-1 downto 0) ;
+signal fifo_valid_in     : std_logic_vector(N-1 downto 0) ;
 signal fifo_in_ready     : std_logic_vector(N-1 downto 0) ;
 signal fifo_data_out_last: std_logic_vector(N-1 downto 0 );
 --Output FIFOs signals
@@ -356,10 +361,10 @@ input_fifo_0 : axis_data_fifo_0
   PORT MAP (
     s_axis_aresetn      => reset_fifos,
     s_axis_aclk         => clk,
-    s_axis_tvalid       => data_in_valid,
+    s_axis_tvalid       => fifo_valid_in(0),
     s_axis_tready       => open,
-    s_axis_tdata        => data_in,
-    s_axis_tlast        => end_of_frame,
+    s_axis_tdata        => fifo_data_in(0),
+    s_axis_tlast        => data_in_last,
     m_axis_tvalid       => fifo_valid_out(0),
     m_axis_tready       => fifo_in_ready(0),
     m_axis_tdata        => fifo_data_out(0),
@@ -373,10 +378,10 @@ input_fifo_1 : axis_data_fifo_0
   PORT MAP (
     s_axis_aresetn      => reset_fifos,
     s_axis_aclk         => clk,
-    s_axis_tvalid       => data_in_valid,
+    s_axis_tvalid       => fifo_valid_in(1),
     s_axis_tready       => open,
-    s_axis_tdata        => data_in,
-    s_axis_tlast        => end_of_frame,
+    s_axis_tdata        => fifo_data_in(1),
+    s_axis_tlast        => data_in_last,
     m_axis_tvalid       => fifo_valid_out(1),
     m_axis_tready       => fifo_in_ready(1),
     m_axis_tdata        => fifo_data_out(1),
@@ -390,10 +395,10 @@ input_fifo_2 : axis_data_fifo_0
   PORT MAP (
     s_axis_aresetn      => reset_fifos,
     s_axis_aclk         => clk,
-    s_axis_tvalid       => data_in_valid,
+    s_axis_tvalid       => fifo_valid_in(2),
     s_axis_tready       => open,
-    s_axis_tdata        => data_in,
-    s_axis_tlast        => end_of_frame,
+    s_axis_tdata        => fifo_data_in(2),
+    s_axis_tlast        => data_in_last,
     m_axis_tvalid       => fifo_valid_out(2),
     m_axis_tready       => fifo_in_ready(2),
     m_axis_tdata        => fifo_data_out(2),
@@ -407,10 +412,10 @@ input_fifo_3 : axis_data_fifo_0
   PORT MAP (
     s_axis_aresetn      => reset_fifos,
     s_axis_aclk         => clk,
-    s_axis_tvalid       => data_in_valid,
+    s_axis_tvalid       => fifo_valid_in(3),
     s_axis_tready       => open,
-    s_axis_tdata        => data_in,
-    s_axis_tlast        => end_of_frame,
+    s_axis_tdata        => fifo_data_in(3),
+    s_axis_tlast        => data_in_last,
     m_axis_tvalid       => fifo_valid_out(3),
     m_axis_tready       => fifo_in_ready(3),
     m_axis_tdata        => fifo_data_out(3),
@@ -438,50 +443,98 @@ output_fifo : axis_data_fifo_1
   ); 
 end generate  Output_FIFO_inst;
 
+input_logic_core : process (data_in_valid, data_in, sel_code_rate) 
+begin
+--default values
+fifo_data_in  <= (others => (others => '0')) ;
+fifo_valid_in <= (others => '0') ;
+case sel_code_rate is 
+    when "00" => 
+        fifo_data_in(3) <= data_in ;
+        fifo_valid_in(3) <= data_in_valid ;
+    when "01" => 
+        fifo_data_in(2) <= data_in ;
+        fifo_valid_in(2) <= data_in_valid ;
+    when "10" => 
+        fifo_data_in(1) <= data_in ;
+        fifo_valid_in(1) <= data_in_valid ;
+    when "11" => 
+        fifo_data_in(0) <= data_in ;
+        fifo_valid_in(0) <= data_in_valid ;
+    when others => 
+        fifo_data_in  <= (others => (others => '0')) ;
+        fifo_valid_in <= (others => '0') ;
+end case ;    
+end process ;
+output_logic_core : process (out_fifo_output_data ,out_fifo_valid_out) 
+begin
+current_cr <= sel_code_rate ;
+case sel_code_rate is
 
-output_logic_core0 : process (out_fifo_output_data(0) ,out_fifo_valid_out(0)) 
-begin
-data_out0 <= out_fifo_output_data(0) ;
-if out_fifo_output_data(0) /= x"5A5A5A5A" and out_fifo_valid_out(0) = '1' then
-data_out_valid(0) <= '1' ;     
-elsif out_fifo_output_data(0) = x"5A5A5A5A" and out_fifo_valid_out(0) = '1' then
-data_out_valid(0) <= '0' ;
-else 
-data_out_valid(0) <= '0' ;
-end if ;     
-end process ;
-output_logic_core1 : process (out_fifo_output_data(1) ,out_fifo_valid_out(1)) 
-begin
- data_out1 <= out_fifo_output_data(1) ;
-if out_fifo_output_data(1) /= x"5A5A5A5A" and out_fifo_valid_out(1) = '1' then
-data_out_valid(1) <= '1' ;     
-elsif out_fifo_output_data(1) = x"5A5A5A5A" and out_fifo_valid_out(1) = '1' then
-data_out_valid(1) <= '0' ;
-else 
-data_out_valid(1) <= '0' ;
-end if ;     
-end process ;
-output_logic_core2 : process (out_fifo_output_data(2) ,out_fifo_valid_out(2)) 
-begin
- data_out2 <= out_fifo_output_data(2) ;
-if out_fifo_output_data(2) /= x"5A5A5A5A" and out_fifo_valid_out(2) = '1' then
-data_out_valid(2) <= '1' ;     
-elsif out_fifo_output_data(2) = x"5A5A5A5A" and out_fifo_valid_out(2) = '1' then
-data_out_valid(2) <= '0' ;
-else 
-data_out_valid(2) <= '0' ;
-end if ;     
-end process ;
-output_logic_core3 : process (out_fifo_output_data(3) ,out_fifo_valid_out(3)) 
-begin
- data_out3 <= out_fifo_output_data(3) ;
+when "00" => 
+data_out <= out_fifo_output_data(3) ;
 if out_fifo_output_data(3) /= x"5A5A5A5A" and out_fifo_valid_out(3) = '1' then
-data_out_valid(3) <= '1' ;     
+    data_out_valid  <= '1' ;  
+    last_frame <= '0';   
 elsif out_fifo_output_data(3) = x"5A5A5A5A" and out_fifo_valid_out(3) = '1' then
-data_out_valid(3) <= '0' ;
+    data_out_valid <= '0' ;
+    last_frame <= end_of_frame ;
+
 else 
-data_out_valid(3) <= '0' ;
+    data_out_valid <= '0' ;
+    last_frame <= '0';
 end if ;     
+
+when "01" => 
+data_out <= out_fifo_output_data(2) ;
+if out_fifo_output_data(2) /= x"5A5A5A5A" and out_fifo_valid_out(2) = '1' then
+    data_out_valid  <= '1' ;   
+     last_frame <= '0';   
+  
+elsif out_fifo_output_data(2) = x"5A5A5A5A" and out_fifo_valid_out(2) = '1' then
+    data_out_valid <= '0' ;
+    last_frame <= end_of_frame ;
+
+else 
+    data_out_valid <= '0' ;
+    last_frame <= '0';   
+
+end if ; 
+
+when "10" => 
+data_out <= out_fifo_output_data(1) ;
+if out_fifo_output_data(1) /= x"5A5A5A5A" and out_fifo_valid_out(1) = '1' then
+    data_out_valid  <= '1' ;
+    last_frame <= '0';     
+elsif out_fifo_output_data(1) = x"5A5A5A5A" and out_fifo_valid_out(1) = '1' then
+    data_out_valid <= '0' ;
+    last_frame <= end_of_frame ;
+
+else 
+    data_out_valid <= '0' ;
+    last_frame <= '0';   
+
+end if ; 
+
+ when "11" => 
+data_out <= out_fifo_output_data(0) ;
+if out_fifo_output_data(1) /= x"5A5A5A5A" and out_fifo_valid_out(0) = '1' then
+    data_out_valid  <= '1' ; 
+    last_frame <= '0';    
+elsif out_fifo_output_data(0) = x"5A5A5A5A" and out_fifo_valid_out(0) = '1' then
+    data_out_valid <= '0' ;
+    last_frame <= end_of_frame ;
+
+else 
+    data_out_valid <= '0' ;
+    last_frame <= '0';
+end if ; 
+
+ when others => 
+    data_out <= (others => '0') ;
+    data_out_valid <= '0' ;
+    last_frame <= '0';
+end case ;
 end process ;
 
  

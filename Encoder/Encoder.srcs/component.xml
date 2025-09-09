@@ -90,7 +90,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>73b6c756</spirit:value>
+            <spirit:value>61784e1d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -112,7 +112,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>96f9bf2a</spirit:value>
+            <spirit:value>0a805f7a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -127,7 +127,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>44e506d4</spirit:value>
+            <spirit:value>f67e7f58</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -230,6 +230,19 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+        <spirit:name>data_in_last</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
         <spirit:name>data_in_ready</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
@@ -247,7 +260,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.N&apos;)) - 1)">3</spirit:left>
+            <spirit:left spirit:format="long">1</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -273,7 +286,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>data_out0</spirit:name>
+        <spirit:name>data_out</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
@@ -283,70 +296,6 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>data_out1</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.DATA_WIDTH&apos;)) - 1)">31</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>data_out2</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.DATA_WIDTH&apos;)) - 1)">31</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>data_out3</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.DATA_WIDTH&apos;)) - 1)">31</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>data_out_ready</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
               <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
@@ -357,13 +306,9 @@
         <spirit:name>data_out_valid</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.N&apos;)) - 1)">3</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:typeName>std_logic</spirit:typeName>
               <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
@@ -377,6 +322,23 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>current_cr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
               <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
@@ -429,12 +391,12 @@
       <spirit:file>
         <spirit:name>sources_1/ip/axis_data_fifo_0/axis_data_fifo_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_input_fifo_0/axis_data_fifo_0</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_input_fifo_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>sources_1/ip/sd_fec_0/sd_fec_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_LDPC_core0/sd_fec_0</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_LDPC_core0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>sources_1/new/Input_controller.vhd</spirit:name>
@@ -443,7 +405,7 @@
       <spirit:file>
         <spirit:name>sources_1/new/LDPC_encoder.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_5e6c9bd7</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_c0e80a5d</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -475,12 +437,12 @@
       <spirit:file>
         <spirit:name>sources_1/ip/axis_data_fifo_0/axis_data_fifo_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_input_fifo_0/axis_data_fifo_0</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_input_fifo_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>sources_1/ip/sd_fec_0/sd_fec_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_LDPC_core0/sd_fec_0</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_LDPC_core0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>sources_1/new/Input_controller.vhd</spirit:name>
@@ -567,21 +529,144 @@
         <xilinx:xpmLibrary>XPM_FIFO</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-09-04T12:52:04Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>11</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-09-07T17:17:40Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.df@69568eb_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@1c04d7bc_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@340aa3ca_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@6354a4cb_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@402ffd96_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2fc88bb3_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4c103a6b_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4aa4ef5b_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@52781588_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1b8118aa_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@362b41c8_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4b5b84e6_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@54bf350a_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5535511f_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@f9e51d5_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@32cf077a_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@69c784f1_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4edc1346_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@34d66860_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5da4d461_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2c852c91_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6233b5ca_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4a03e14_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@724ea98c_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2e2f3632_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5f8cce89_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@55a5457d_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3779c1a8_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3a962ee3_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@506a6960_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2d12d7ad_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@25873e67_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7fd1c2a9_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5f0c1231_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@10d0f303_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2f459244_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@59913976_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2e005de7_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@53ab4675_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@43032c8e_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4588c53_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@902793a_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3e92d76a_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@17c56638_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@76014eca_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7d3eb193_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@18d0032_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7fdbcef0_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@691516bb_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5d56982_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7d628268_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@69ce2ae0_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@428de739_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6d8f09d5_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@38163d0a_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@42cd31be_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@27bb636a_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4919a309_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@33cce1d2_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@182aa17f_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3dce18fe_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4f33bc64_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@56cf8a6_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6b8a665d_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7760aa21_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@aa51049_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6b2646a9_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5bd5bdc9_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2c35d321_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@11f45a81_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7a7159d7_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@32d4fbe9_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@69126aca_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4ac596e5_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@216f00e_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1f028532_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@398c5eba_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@39c94317_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3e8e2fa7_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@30085e3d_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@cb5f9bf_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2b01e5ec_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1983c2c0_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1f0116e0_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@20c203e_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3abb84e2_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@19d9511a_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@16ec6b96_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@296376fe_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@61bb235_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@206f50ad_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5e48297b_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@34c8606d_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@576c5204_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@a9e6bcb_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@156d2025_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3075653d_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@23b5a557_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1b4e5796_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@720a2c69_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@32a9e91b_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3a875d45_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2bb9b3eb_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@c6f0a2e_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2620ff22_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4b51141_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2ff6d1b4_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3b0f3c8a_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4f309995_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4c9b8776_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@d7da302_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@36b48b08_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@36b80065_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@49314146_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1305d56d_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4e4c2aa2_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4c6c0287_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@528a6f30_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@18d4dbae_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@ca2bd97_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4ffd119a_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@9dd68ee_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@12a00fe_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3f2afe51_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@63af6d17_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6e920edd_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3f20d386_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@58294459_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2021.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="c3d41215"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="4b6f6cf5"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="947de6f3"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="161d3363"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="0187ff42"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="577ab023"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="9b323fda"/>
     </xilinx:packagingInfo>

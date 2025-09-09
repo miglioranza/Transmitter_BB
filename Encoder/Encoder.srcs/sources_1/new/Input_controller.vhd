@@ -85,7 +85,7 @@ if reset = '1' then
         dout_last(0)    <= '0';
         dout_ready(0)   <= '0';
 elsif rising_edge(clk) then 
-        reset_cores     <= '1';    
+reset_cores     <= '1';    
 --default values         
 dout_data0  <= x"000000000000000000000000" & din_data_core0  ;
 dout_ready(0)     <= din_ready(0) ; --din_ready is the signal coming from the LDPC core0 ,assign this value to dout_ready signal for informing the FIFO0 that the data_controller is ready to receive the data
