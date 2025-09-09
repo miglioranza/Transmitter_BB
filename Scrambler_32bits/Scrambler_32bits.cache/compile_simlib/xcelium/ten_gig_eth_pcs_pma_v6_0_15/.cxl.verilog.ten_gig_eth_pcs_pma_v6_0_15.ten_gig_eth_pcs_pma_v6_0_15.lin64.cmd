@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -work ten_gig_eth_pcs_pma_v6_0_15 -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/ten_gig_eth_pcs_pma_v6_0_15/.cxl.verilog.ten_gig_eth_pcs_pma_v6_0_15.ten_gig_eth_pcs_pma_v6_0_15.lin64.cmf

@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -sv -work clk_vip_v1_0_2 -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/clk_vip_v1_0_2/.cxl.systemverilog.clk_vip_v1_0_2.clk_vip_v1_0_2.lin64.cmf

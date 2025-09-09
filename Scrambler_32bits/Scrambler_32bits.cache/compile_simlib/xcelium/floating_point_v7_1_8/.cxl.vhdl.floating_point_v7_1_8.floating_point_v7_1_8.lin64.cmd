@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work floating_point_v7_1_8 -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/floating_point_v7_1_8/.cxl.vhdl.floating_point_v7_1_8.floating_point_v7_1_8.lin64.cmf

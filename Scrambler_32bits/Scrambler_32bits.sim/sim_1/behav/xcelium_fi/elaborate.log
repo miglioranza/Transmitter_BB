@@ -1,0 +1,49 @@
+xmelab(64): 22.03-s002: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xmelab(64)	22.03-s002: Started on Jul 26, 2024 at 16:10:01 CEST
+xmelab
+    -64bit
+    -relax
+    -access +rwc
+    -namemap_mixgen
+    -messages
+    -logfile elaborate.log
+    -fault_dbg
+    -fault_top Scrambler_32bits_TB
+    -fault_overwrite
+    -fault_file ./fault_list
+    -libname xil_defaultlib
+    -libname secureip
+    xil_defaultlib.Scrambler_32bits_TB
+
+xmelab: *N,FLTOVR: [FLT] An existing fault directory (fault_db) has been overwritten.
+xmelab: *N,SPUNSP: -sparsearray is not supported with Fault Simulation. Disabling the default -sparsearray=100000 option.
+xmelab: *W,ARCMRA: Elaborating the XIL_DEFAULTLIB.SCRAMBLER_32BITS_TB:TB, MRA (most recently analyzed) architecture.
+	Elaborating the design hierarchy:
+xmelab: *W,CUDEFB: default binding occurred for component instance (:Scrambler_32bits_TB(tb):uut) with design unit (XIL_DEFAULTLIB.SCRAMBLER_32BITS:BEHAVIORAL).
+	Building instance specific data structures.
+	Design hierarchy summary:
+		           Instances  Unique
+		Components:        3       2
+		Default bindings:  1       -
+		Processes:         3       3
+		Signals:           8       8
+	Writing initial simulation snapshot: XIL_DEFAULTLIB.SCRAMBLER_32BITS_TB:TB
+
+
+####   Fault Instrumentation Information  ####
+
+   Total number of faults instrumented: 136
+   Number of fault nodes excluded: 0
+   Number of fault nodes ignored: 0
+   Number of faultable nodes: 136
+   Number of Untestable faults: 0
+       Number of SA0 faults: 136 [Prime: 136]
+       Number of SA1 faults: 0 [Prime: 0]
+       Number of SET faults: 0 [Prime: 0]
+       Number of SEU faults: 0 [Prime: 0]
+
+#### End of Fault Instrumentation Information ####
+
+
+xmelab: *N,FTUMPT: [FLT] Fault database model file is generated at /home/miglioranza/Scrambler_32bits/Scrambler_32bits.sim/sim_1/behav/xcelium_fi/fault_db/db_scope/xfs_38d877e5.ucm.
+TOOL:	xmelab(64)	22.03-s002: Exiting on Jul 26, 2024 at 16:10:02 CEST  (total: 00:00:01)

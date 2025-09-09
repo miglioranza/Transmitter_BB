@@ -1,0 +1,3 @@
+xfr(64): 22.03-s002: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+xfr: *W,NOUFD: Fault simulation data is not found in specified fault work directory (fault_db).
+xfr: *E,NOTRE: No single data model or data file found. Fault report cannot be generated.

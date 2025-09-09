@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -work flexo_100g_rs_fec_v1_0_10 -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/flexo_100g_rs_fec_v1_0_10/.cxl.verilog.flexo_100g_rs_fec_v1_0_10.flexo_100g_rs_fec_v1_0_10.lin64.cmf

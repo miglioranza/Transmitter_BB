@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -sv -work i2s_transmitter_v1_0_3 -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/i2s_transmitter_v1_0_3/.cxl.systemverilog.i2s_transmitter_v1_0_3.i2s_transmitter_v1_0_3.lin64.cmf

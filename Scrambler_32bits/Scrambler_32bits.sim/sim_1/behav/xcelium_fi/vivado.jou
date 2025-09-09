@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Jul 17 15:45:31 2024
+# Process ID: 59825
+# Current directory: /home/miglioranza/Scrambler_32bits/Scrambler_32bits.sim/sim_1/behav/xcelium_fi
+# Command line: vivado
+# Log file: /home/miglioranza/Scrambler_32bits/Scrambler_32bits.sim/sim_1/behav/xcelium_fi/vivado.log
+# Journal file: /home/miglioranza/Scrambler_32bits/Scrambler_32bits.sim/sim_1/behav/xcelium_fi/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/miglioranza/Scrambler_32bits/Scrambler_32bits.xpr
+update_compile_order -fileset sources_1
+launch_simulation -install_path /ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/bin

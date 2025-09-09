@@ -1,0 +1,136 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:47:09 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 59825
+License: Customer
+
+Current time: 	Wed Jul 17 15:46:15 CEST 2024
+Time zone: 	Central European Standard Time (Europe/Berlin)
+
+OS: Red Hat Enterprise Linux Server release 7.9 (Maipo)
+OS Version: 3.10.0-1160.62.1.el7.x86_64
+OS Architecture: amd64
+Available processors (cores): 32
+
+Display: :1014
+Screen size: 1920x1009
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 19 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/tps/lnx64/jre9.0.4
+Java executable location: 	/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	miglioranza
+User home directory: /home/miglioranza
+User working directory: /home/miglioranza/Scrambler_32bits/Scrambler_32bits.sim/sim_1/behav/xcelium_fi
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /ihp/ihpusr/xilinx/vivado20191/Vivado
+HDI_APPROOT: /ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1
+RDI_DATADIR: /ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/data
+RDI_BINDIR: /ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/bin
+
+Vivado preferences file location: /home/miglioranza/.Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: /home/miglioranza/.Xilinx/Vivado/2019.1/
+Vivado layouts directory: /home/miglioranza/.Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	/home/miglioranza/Scrambler_32bits/Scrambler_32bits.sim/sim_1/behav/xcelium_fi/vivado.log
+Vivado journal file location: 	/home/miglioranza/Scrambler_32bits/Scrambler_32bits.sim/sim_1/behav/xcelium_fi/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-59825-uxsrv003
+
+Xilinx Environment Variables
+----------------------------
+SDK: /ihp/ihpusr/xilinx/vivado20191/SDK/2019.1
+VIVADO: /ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1
+XILINX: /ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: /ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/ids_lite/ISE
+XILINX_HOME: /ihp/ihpusr/xilinx/latest
+XILINX_PLANAHEAD: /ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1
+XILINX_SDK: /ihp/ihpusr/xilinx/vivado20191/SDK/2019.1
+XILINX_VIVADO: /ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1
+XILINX_VIVADO_HLS: /ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1
+
+
+GUI allocated memory:	157 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 5,197 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// HMemoryUtils.trashcanNow. Engine heap size: 5,197 MB. GUI used memory: 41 MB. Current time: 7/17/24, 3:46:16 PM CEST
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/miglioranza/Scrambler_32bits/Scrambler_32bits.xpr", 0); // q (O, cl)
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/miglioranza/Scrambler_32bits/Scrambler_32bits.xpr", 0, false, false, false, false, true); // q (O, cl) - Double Click
+// [GUI Memory]: 93 MB (+94818kb) [00:00:17]
+// [Engine Memory]: 5,205 MB (+5306284kb) [00:00:17]
+// Opening Vivado Project: /home/miglioranza/Scrambler_32bits/Scrambler_32bits.xpr. Version: Vivado v2019.1 
+// by (cl):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project /home/miglioranza/Scrambler_32bits/Scrambler_32bits.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project /home/miglioranza/Scrambler_32bits/Scrambler_32bits.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// HMemoryUtils.trashcanNow. Engine heap size: 5,222 MB. GUI used memory: 42 MB. Current time: 7/17/24, 3:46:41 PM CEST
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 149 MB (+54567kb) [00:00:50]
+// [GUI Memory]: 167 MB (+10529kb) [00:00:51]
+// [GUI Memory]: 188 MB (+13717kb) [00:00:53]
+// WARNING: HEventQueue.dispatchEvent() is taking  9511 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2153 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1934 ms.
+// Tcl Message: open_project: Time (s): cpu = 00:00:52 ; elapsed = 00:00:38 . Memory (MB): peak = 6735.238 ; gain = 108.191 ; free physical = 1963 ; free virtual = 113390 
+// Project name: Scrambler_32bits; location: /home/miglioranza/Scrambler_32bits; part: xczu28dr-ffvg1517-2-e
+// Elapsed time: 43 seconds
+dismissDialog("Open Project"); // by (cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 5,341 MB. GUI used memory: 140 MB. Current time: 7/17/24, 3:47:06 PM CEST
+// Tcl Message: update_compile_order -fileset sources_1 
+// WARNING: HEventQueue.dispatchEvent() is taking  1403 ms.
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cl)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ah (an, cl)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cl):  Run Simulation : addNotify
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation -install_path /ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/bin 
+// Tcl Message: INFO: [USF-Xcelium-2] Xcelium::Compile design INFO: [USF-Xcelium-63] Executing 'COMPILE and ANALYZE' step in '/home/miglioranza/Scrambler_32bits/Scrambler_32bits.sim/sim_1/behav/xcelium' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-Xcelium-69] 'compile' step finished in '5' seconds INFO: [USF-Xcelium-3] Xcelium::Elaborate design INFO: [USF-Xcelium-63] Executing 'ELABORATE' step in '/home/miglioranza/Scrambler_32bits/Scrambler_32bits.sim/sim_1/behav/xcelium' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-Xcelium-69] 'elaborate' step finished in '2' seconds INFO: [USF-Xcelium-4] Xcelium::Simulate design INFO: [USF-Xcelium-63] Executing 'SIMULATE' step in '/home/miglioranza/Scrambler_32bits/Scrambler_32bits.sim/sim_1/behav/xcelium' 
+// Tcl Message: Program launched (PID=61149) 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 6767.125 ; gain = 0.000 ; free physical = 1927 ; free virtual = 113359 
+// 'd' command handler elapsed time: 8 seconds
+dismissDialog("Run Simulation"); // e (cl)

@@ -1,0 +1,2 @@
+INCLUDE /ihp/ihpusr/cadence/xcelium/22.03/tools/inca/files/cds.lib
+DEFINE xil_defaultlib xcelium_lib/xil_defaultlib

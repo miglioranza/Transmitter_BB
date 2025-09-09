@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work g975_efec_i4_v1_0_17 -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/g975_efec_i4_v1_0_17/.cxl.vhdl.g975_efec_i4_v1_0_17.g975_efec_i4_v1_0_17.lin64.cmf

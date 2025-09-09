@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work rs_toolbox_v9_0_7 -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/rs_toolbox_v9_0_7/.cxl.vhdl.rs_toolbox_v9_0_7.rs_toolbox_v9_0_7.lin64.cmf

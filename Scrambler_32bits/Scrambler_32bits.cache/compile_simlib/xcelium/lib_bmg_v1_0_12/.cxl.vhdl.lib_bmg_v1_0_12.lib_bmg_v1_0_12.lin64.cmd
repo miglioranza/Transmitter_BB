@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work lib_bmg_v1_0_12 -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/lib_bmg_v1_0_12/.cxl.vhdl.lib_bmg_v1_0_12.lib_bmg_v1_0_12.lin64.cmf

@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work tri_mode_ethernet_mac_v9_0_14 -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/tri_mode_ethernet_mac_v9_0_14/.cxl.vhdl.tri_mode_ethernet_mac_v9_0_14.tri_mode_ethernet_mac_v9_0_14.lin64.cmf

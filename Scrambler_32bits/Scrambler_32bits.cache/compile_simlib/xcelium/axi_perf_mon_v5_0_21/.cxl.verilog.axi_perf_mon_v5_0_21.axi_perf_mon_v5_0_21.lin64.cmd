@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -work axi_perf_mon_v5_0_21 -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/axi_perf_mon_v5_0_21/.cxl.verilog.axi_perf_mon_v5_0_21.axi_perf_mon_v5_0_21.lin64.cmf

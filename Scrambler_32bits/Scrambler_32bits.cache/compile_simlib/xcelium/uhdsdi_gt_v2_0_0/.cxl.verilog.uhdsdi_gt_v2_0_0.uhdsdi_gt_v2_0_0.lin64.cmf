@@ -1,0 +1,10 @@
+/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/data/ip/xilinx/uhdsdi_gt_v2_0/hdl/drp_ctrl/uhdsdi_drp_control.v
+/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/data/ip/xilinx/uhdsdi_gt_v2_0/hdl/drp_ctrl/uhdsdi_rate_detect.v
+/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/data/ip/xilinx/uhdsdi_gt_v2_0/hdl/drp_ctrl/uhdsdi_control.v
+/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/data/ip/xilinx/uhdsdi_gt_v2_0/hdl/drp_ctrl/uhdsdi_rx_control.v
+/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/data/ip/xilinx/uhdsdi_gt_v2_0/hdl/drp_ctrl/uhdsdi_tx_control.v
+/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/data/ip/xilinx/uhdsdi_gt_v2_0/hdl/drp_ctrl/uhdsdi_gt_sync_block.v
+/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/data/ip/xilinx/uhdsdi_gt_v2_0/hdl/drp_ctrl/uhdsdi_drp_control_fsm.v
+/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/data/ip/xilinx/uhdsdi_gt_v2_0/hdl/gt_common/uhdsdi_gthe4_common.v
+/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/data/ip/xilinx/uhdsdi_gt_v2_0/hdl/gt_common/gtwizard_ultrascale_v1_7_gtye4_common.v
+/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/data/ip/xilinx/uhdsdi_gt_v2_0/hdl/uhdsdi_multigt_wrapper.v

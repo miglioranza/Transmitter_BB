@@ -1,0 +1,19 @@
+xmvlog(64): 22.03-s002: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+file: /ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/data/ip/xilinx/sync_ip_v1_0/hdl/sync_ip_v1_0_rfs.v
+		errors: 0, warnings: 0
+xmvlog: *W,INTOVF (/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/data/ip/xilinx/sync_ip_v1_0/hdl/sync_ip_v1_0_rfs.v): warning within protected source code.
+		errors: 0, warnings: 1
+		errors: 0, warnings: 0
+		errors: 0, warnings: 0
+		errors: 0, warnings: 0
+		errors: 0, warnings: 0
+		errors: 0, warnings: 0
+		errors: 0, warnings: 0
+xmvlog: *E,NONOWD (/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/data/ip/xilinx/sync_ip_v1_0/hdl/sync_ip_v1_0_rfs.v): error within protected source code.
+xmvlog: *E,NONOWD (/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/data/ip/xilinx/sync_ip_v1_0/hdl/sync_ip_v1_0_rfs.v): error within protected source code.
+xmvlog: *E,NONOWD (/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/data/ip/xilinx/sync_ip_v1_0/hdl/sync_ip_v1_0_rfs.v): error within protected source code.
+xmvlog: *E,NONOWD (/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/data/ip/xilinx/sync_ip_v1_0/hdl/sync_ip_v1_0_rfs.v): error within protected source code.
+xmvlog: *E,NONOWD (/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/data/ip/xilinx/sync_ip_v1_0/hdl/sync_ip_v1_0_rfs.v): error within protected source code.
+xmvlog: *E,NONOWD (/ihp/ihpusr/xilinx/vivado20191/Vivado/2019.1/data/ip/xilinx/sync_ip_v1_0/hdl/sync_ip_v1_0_rfs.v): error within protected source code.
+		errors: 6, warnings: 0
+		errors: 0, warnings: 0

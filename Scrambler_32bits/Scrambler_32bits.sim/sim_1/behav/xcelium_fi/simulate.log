@@ -1,0 +1,25 @@
+xmsim(64): 22.03-s002: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+xmsim: *N,FLTSF: [FLT] Fault Id : 4, Fault Seed: 0, Selected fault points: :UUT:DATA_OUT(19).
+xcelium> set pack_assert_off {numeric_std std_logic_arith}
+numeric_std std_logic_arith
+xcelium> 
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm -all -variables -depth 1 -waveform
+Created probe 1
+xcelium> 
+xcelium> run 1000ns
+xmsim: *N,FLTINJ: [FLT] Injecting SA0 fault on :UUT:DATA_OUT(19) at time 226 NS : old value = '0', new value = '0'.
+Ran until 1 US + 0
+xcelium> xfr -fault_work fault_db -logfile ./result.log
+xmsim: *E,TCLERR: xfr(64): 22.03-s002: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+xfr: *W,NOUFD: Fault simulation data is not found in specified fault work directory (fault_db).
+xfr: *E,NOTRE: No single data model or data file found. Fault report cannot be generated.
+child process exited abnormally.
+    while executing
+"exec /ihp/ihpusr/cadence/xcelium/22.03/tools/bin/64bit/xfr -fault_work fault_db -logfile ./result.log"
+    invoked from within
+"xfr -fault_work fault_db -logfile ./result.log"
+xcelium> 
+xmsim: *W,CMUSEX: Control-D in interactive input - one more to exit.
+exit

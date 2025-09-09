@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -work v_frmbuf_rd_v2_1_2 -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/v_frmbuf_rd_v2_1_2/.cxl.verilog.v_frmbuf_rd_v2_1_2.v_frmbuf_rd_v2_1_2.lin64.cmf

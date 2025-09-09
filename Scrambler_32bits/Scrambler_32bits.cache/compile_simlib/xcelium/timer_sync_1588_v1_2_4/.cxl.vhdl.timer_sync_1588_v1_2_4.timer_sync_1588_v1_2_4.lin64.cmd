@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work timer_sync_1588_v1_2_4 -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/timer_sync_1588_v1_2_4/.cxl.vhdl.timer_sync_1588_v1_2_4.timer_sync_1588_v1_2_4.lin64.cmf

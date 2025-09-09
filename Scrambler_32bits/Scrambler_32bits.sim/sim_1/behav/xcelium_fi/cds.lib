@@ -1,0 +1,2 @@
+INCLUDE /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/cds.lib
+DEFINE xil_defaultlib xcelium_lib/xil_defaultlib

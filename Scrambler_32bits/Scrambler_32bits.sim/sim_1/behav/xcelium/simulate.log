@@ -1,0 +1,18 @@
+xmsim(64): 22.03-s002: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> set pack_assert_off {numeric_std std_logic_arith}
+numeric_std std_logic_arith
+xcelium> 
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm -all -variables -depth 1 -waveform
+xmsim: *W,PRWFD: Only the signals/variables having immediate scope ':' will be added to the waveform viewer.
+Created probe 1
+xcelium> 
+xcelium> run 1000ns
+Ran until 1 US + 0
+xcelium> 
+xcelium> 

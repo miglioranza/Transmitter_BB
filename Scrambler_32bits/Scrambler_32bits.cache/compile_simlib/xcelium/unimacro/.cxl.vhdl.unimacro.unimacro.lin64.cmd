@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvhdl -MESSAGES -v93 -RELAX -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -work unimacro -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/unimacro/.cxl.vhdl.unimacro.unimacro.lin64.cmf

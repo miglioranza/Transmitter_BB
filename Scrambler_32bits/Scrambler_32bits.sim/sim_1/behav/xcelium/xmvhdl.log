@@ -1,0 +1,30 @@
+
+---
+
+xmvhdl(64): 22.03-s002: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xmvhdl(64)	22.03-s002: Started on Jul 26, 2024 at 16:05:54 CEST
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/64bit/xmvhdl
+    -V93
+    -64bit
+    -messages
+    -relax
+    -logfile xmvhdl.log
+    -append_log
+    -update
+    -work xil_defaultlib
+    ./../../../../Scrambler_32bits.srcs/sources_1/new/Scrambler_32bits.vhd
+    ./../../../../Scrambler_32bits.srcs/sim_1/new/Scrambler_32bits_TB.vhd
+
+./../../../../Scrambler_32bits.srcs/sources_1/new/Scrambler_32bits.vhd:
+	errors: 0, warnings: 0
+./../../../../Scrambler_32bits.srcs/sim_1/new/Scrambler_32bits_TB.vhd:
+	errors: 0, warnings: 0
+XIL_DEFAULTLIB.SCRAMBLER_32BITS (entity):
+	streams: 16, words: 1535
+XIL_DEFAULTLIB.SCRAMBLER_32BITS:BEHAVIORAL (architecture):
+	streams: 1, words: 267
+XIL_DEFAULTLIB.SCRAMBLER_32BITS_TB (entity):
+	streams: 1, words: 63
+XIL_DEFAULTLIB.SCRAMBLER_32BITS_TB:TB (architecture):
+	streams: 1, words: 1679
+TOOL:	xmvhdl(64)	22.03-s002: Exiting on Jul 26, 2024 at 16:05:59 CEST  (total: 00:00:05)

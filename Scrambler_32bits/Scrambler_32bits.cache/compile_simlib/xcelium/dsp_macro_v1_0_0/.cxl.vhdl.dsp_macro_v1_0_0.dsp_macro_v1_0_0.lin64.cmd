@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work dsp_macro_v1_0_0 -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/dsp_macro_v1_0_0/.cxl.vhdl.dsp_macro_v1_0_0.dsp_macro_v1_0_0.lin64.cmf

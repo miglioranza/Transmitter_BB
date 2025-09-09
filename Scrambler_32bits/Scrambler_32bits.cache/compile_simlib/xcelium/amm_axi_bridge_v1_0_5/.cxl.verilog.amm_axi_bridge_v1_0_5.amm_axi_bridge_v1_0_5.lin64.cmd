@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -work amm_axi_bridge_v1_0_5 -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/amm_axi_bridge_v1_0_5/.cxl.verilog.amm_axi_bridge_v1_0_5.amm_axi_bridge_v1_0_5.lin64.cmf

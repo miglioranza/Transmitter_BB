@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work axi_ahblite_bridge_v3_0_16 -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/axi_ahblite_bridge_v3_0_16/.cxl.vhdl.axi_ahblite_bridge_v3_0_16.axi_ahblite_bridge_v3_0_16.lin64.cmf

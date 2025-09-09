@@ -1,0 +1,25 @@
+xmelab(64): 22.03-s002: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xmelab(64)	22.03-s002: Started on Jul 26, 2024 at 16:05:59 CEST
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/64bit/xmelab
+    -64bit
+    -relax
+    -access +rwc
+    -namemap_mixgen
+    -messages
+    -logfile elaborate.log
+    -libname xil_defaultlib
+    -libname secureip
+    xil_defaultlib.Scrambler_32bits_TB
+
+xmelab: *W,ARCMRA: Elaborating the XIL_DEFAULTLIB.SCRAMBLER_32BITS_TB:TB, MRA (most recently analyzed) architecture.
+	Elaborating the design hierarchy:
+xmelab: *W,CUDEFB: default binding occurred for component instance (:Scrambler_32bits_TB(tb):uut) with design unit (XIL_DEFAULTLIB.SCRAMBLER_32BITS:BEHAVIORAL).
+	Building instance specific data structures.
+	Design hierarchy summary:
+		           Instances  Unique
+		Components:        3       2
+		Default bindings:  1       -
+		Processes:         3       3
+		Signals:           8       8
+	Writing initial simulation snapshot: XIL_DEFAULTLIB.SCRAMBLER_32BITS_TB:TB
+TOOL:	xmelab(64)	22.03-s002: Exiting on Jul 26, 2024 at 16:06:00 CEST  (total: 00:00:01)

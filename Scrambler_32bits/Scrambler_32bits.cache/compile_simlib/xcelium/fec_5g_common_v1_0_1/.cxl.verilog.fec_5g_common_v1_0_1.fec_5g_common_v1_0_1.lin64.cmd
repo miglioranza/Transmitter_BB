@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -sv -work fec_5g_common_v1_0_1 -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/fec_5g_common_v1_0_1/.cxl.systemverilog.fec_5g_common_v1_0_1.fec_5g_common_v1_0_1.lin64.cmf

@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work tcc_encoder_3gpp_v5_0_15 -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/tcc_encoder_3gpp_v5_0_15/.cxl.vhdl.tcc_encoder_3gpp_v5_0_15.tcc_encoder_3gpp_v5_0_15.lin64.cmf

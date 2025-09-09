@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work uhdsdi_gt_v1_0_3 -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/uhdsdi_gt_v1_0_3/.cxl.vhdl.uhdsdi_gt_v1_0_3.uhdsdi_gt_v1_0_3.lin64.cmf

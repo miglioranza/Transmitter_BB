@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work quadsgmii_v3_4_6 -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/quadsgmii_v3_4_6/.cxl.vhdl.quadsgmii_v3_4_6.quadsgmii_v3_4_6.lin64.cmf

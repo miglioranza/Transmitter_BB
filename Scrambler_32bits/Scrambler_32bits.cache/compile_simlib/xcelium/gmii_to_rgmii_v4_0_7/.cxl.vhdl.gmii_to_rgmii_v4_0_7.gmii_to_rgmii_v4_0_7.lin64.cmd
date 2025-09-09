@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work gmii_to_rgmii_v4_0_7 -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/gmii_to_rgmii_v4_0_7/.cxl.vhdl.gmii_to_rgmii_v4_0_7.gmii_to_rgmii_v4_0_7.lin64.cmf

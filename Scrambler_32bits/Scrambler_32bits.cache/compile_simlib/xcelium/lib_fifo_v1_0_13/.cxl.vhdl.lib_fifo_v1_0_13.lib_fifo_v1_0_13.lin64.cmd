@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work lib_fifo_v1_0_13 -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/lib_fifo_v1_0_13/.cxl.vhdl.lib_fifo_v1_0_13.lib_fifo_v1_0_13.lin64.cmf

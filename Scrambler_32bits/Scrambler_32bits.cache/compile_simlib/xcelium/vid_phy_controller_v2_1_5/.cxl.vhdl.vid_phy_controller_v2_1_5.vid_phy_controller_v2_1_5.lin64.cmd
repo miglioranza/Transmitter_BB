@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work vid_phy_controller_v2_1_5 -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/vid_phy_controller_v2_1_5/.cxl.vhdl.vid_phy_controller_v2_1_5.vid_phy_controller_v2_1_5.lin64.cmf

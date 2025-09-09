@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/22.03/tools.lnx86/inca/bin/xmvlog -MESSAGES -NOLOG -DEFINE XIL_TIMING -CDSLIB cds.lib -HDLVAR hdl.var -64bit -work simprims_ver -f /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/compile_simlib/xcelium/simprims_ver/.cxl.verilog.simprim.simprims_ver.lin64.cmf
