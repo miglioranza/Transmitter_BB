@@ -71,7 +71,7 @@ entity Control_unit_top is
 --    --Interleaver ports 
     interleaver_dout_valid      : in std_logic := '0';
     interleaver_dout_data       : in std_logic_vector(31 downto 0) := (others => '0'); 
-    interleaver_dout_last       : in std_logic := '0';
+--    interleaver_dout_last       : in std_logic := '0';
     interleaver_last_frame      : in std_logic := '0';   
     interleaver_din_ready       : out std_logic := '0';
      
@@ -89,7 +89,7 @@ entity Control_unit_top is
 
   --DPD filter 
    
-   dpd_dout_ready              :  in std_logic := '0';
+--   dpd_dout_ready              :  in std_logic := '0';
    dpd_din_valid               :  out std_logic := '0';
    dpd_din_data_I              :  out std_logic_vector(11 downto 0)  := (others => '0') ;
    dpd_din_data_Q              :  out std_logic_vector(11 downto 0)  := (others => '0') ;
@@ -465,7 +465,7 @@ signal pilot_counter, pilot_symbols   : integer := 0 ;
 signal padding_value_I : std_logic_vector(11 downto 0)  := (others => '0' ) ;
 signal padding_value_Q : std_logic_vector(11 downto 0)  := (others => '0' ) ;
 signal padding_payload : std_logic := '0';
-type control_unit is (IDLE ,PREAMBLE_A, PREAMBLE_B, SIGNAL_FIELD, PAYLOAD, PILOT) ; --, ERROR_DETECTION)
+type control_unit is (IDLE ,PREAMBLE_A, PREAMBLE_B, SIGNAL_FIELD, PAYLOAD) ; --, ERROR_DETECTION)
 signal state : control_unit := IDLE ;
 
 --Splitter signal 
@@ -587,24 +587,19 @@ elsif rising_edge(clk)  then
      encoder_code_rate          <=  mod_cod_schemes(1 downto 0) ;
      signal_field_en <= '1';     --start sending the signal field to the encoder 
   
-       if control_unit_din_valid = '1' and n < 8   then 
+       if  n < 8   then 
           scrambler_din_valid     <= '1';
           scrambler_din_data      <= signal_field_bits(((n+1)*32)-1  downto n*32); --256-bits --> 32-bits vectors  x 8 
           n := n + 1 ;
           state <= SIGNAL_FIELD ;
-      else 
+      
+      else    
           state <= PAYLOAD ;
           scrambler_din_valid     <= '0';
           scrambler_din_last      <= '1';
+          signal_field_en <= '0';
           n := 0 ;
       end if ;
---   when PAYLOAD =>  
-
---    if mapper_dout_last = '1' then  
---        state <= PILOT ;
---    else     
---        state <= PAYLOAD ;
---    end if ;
 
   when PAYLOAD => 
  --default values 
@@ -833,6 +828,10 @@ else
             interleaver_din_ready <= '1';
             mapper_din_valid <= '0'; 
 end if ;
+                  
+                  
+                  
+                  
                   --Padding process
 --   if padding = '1' then 
 --       mapper_din_data <=  (others => '0') ;
@@ -853,6 +852,7 @@ end if ;
                
 end if ;   
 end process ;             
+end Behavioral;
 
 --data_splitter: process(clk,reset) 
 --variable index          : integer := 0 ;
@@ -1037,5 +1037,4 @@ end process ;
 ----   end if ;  
 --end if ;   
 --end process ;             
-end Behavioral;
          
