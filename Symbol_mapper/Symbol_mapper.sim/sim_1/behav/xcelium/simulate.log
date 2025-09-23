@@ -1,0 +1,24 @@
+xmsim(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> set pack_assert_off {numeric_std std_logic_arith}
+numeric_std std_logic_arith
+xcelium> 
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> catch {probe -create -shm -all -variables -depth 1 -waveform} msg
+0
+xcelium> 
+xcelium> run 1000ns
+REPORT/NOTE (time 20 NS) from process :stimuli_process (architecture xil_defaultlib.Symbol_mapper_tb:Behavioral)
+Start of simulation
+Ran until 1 US + 0
+xcelium> 
+xcelium> run
+REPORT/NOTE (time 1275390 PS) from process :stimuli_process (architecture xil_defaultlib.Symbol_mapper_tb:Behavioral)
+End of Simulation
+std.env.finish invoked from Symbol_mapper_tb.vhd, line: 577, pos: 13
+Simulation complete via std.env.finish(1) at time 1275390 PS + 0
+xcelium> ^C
+xcelium> exit

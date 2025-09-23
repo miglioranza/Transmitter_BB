@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -work vfb_v1_0_19 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/vfb_v1_0_19/.cxl.verilog.vfb_v1_0_19.vfb_v1_0_19.lin64.cmf

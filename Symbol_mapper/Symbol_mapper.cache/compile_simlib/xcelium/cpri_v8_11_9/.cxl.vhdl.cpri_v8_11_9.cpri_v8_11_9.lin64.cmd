@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work cpri_v8_11_9 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/cpri_v8_11_9/.cxl.vhdl.cpri_v8_11_9.cpri_v8_11_9.lin64.cmf

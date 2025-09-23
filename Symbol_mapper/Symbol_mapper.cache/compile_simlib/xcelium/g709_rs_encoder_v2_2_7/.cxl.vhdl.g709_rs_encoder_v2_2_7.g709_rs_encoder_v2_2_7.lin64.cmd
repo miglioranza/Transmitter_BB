@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work g709_rs_encoder_v2_2_7 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/g709_rs_encoder_v2_2_7/.cxl.vhdl.g709_rs_encoder_v2_2_7.g709_rs_encoder_v2_2_7.lin64.cmf

@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work mutex_v2_1_11 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/mutex_v2_1_11/.cxl.vhdl.mutex_v2_1_11.mutex_v2_1_11.lin64.cmf

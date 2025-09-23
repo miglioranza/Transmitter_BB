@@ -1,0 +1,183 @@
+xmvlog(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+DEFINE v_hdmi_tx1_v1_0_2  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_hdmi_tx1_v1_0_2
+|
+xmvlog: *W,DLCPTH (./cds.lib,2): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_hdmi_tx1_v1_0_2' (cds.lib command ignored).
+DEFINE dfx_bitstream_monitor_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dfx_bitstream_monitor_v1_0_1
+|
+xmvlog: *W,DLCPTH (./cds.lib,3): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dfx_bitstream_monitor_v1_0_1' (cds.lib command ignored).
+DEFINE cic_compiler_v4_0_15  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/cic_compiler_v4_0_15
+|
+xmvlog: *W,DLCPTH (./cds.lib,4): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/cic_compiler_v4_0_15' (cds.lib command ignored).
+DEFINE lte_3gpp_mimo_decoder_v3_0_17  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_3gpp_mimo_decoder_v3_0_17
+|
+xmvlog: *W,DLCPTH (./cds.lib,5): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_3gpp_mimo_decoder_v3_0_17' (cds.lib command ignored).
+DEFINE v_dual_splitter_v1_0_9  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_dual_splitter_v1_0_9
+|
+xmvlog: *W,DLCPTH (./cds.lib,6): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_dual_splitter_v1_0_9' (cds.lib command ignored).
+DEFINE lte_dl_channel_encoder_v4_0_3  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_dl_channel_encoder_v4_0_3
+|
+xmvlog: *W,DLCPTH (./cds.lib,7): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_dl_channel_encoder_v4_0_3' (cds.lib command ignored).
+DEFINE dft_v4_2_2  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dft_v4_2_2
+|
+xmvlog: *W,DLCPTH (./cds.lib,8): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dft_v4_2_2' (cds.lib command ignored).
+DEFINE mdm_v3_2_22  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/mdm_v3_2_22
+|
+xmvlog: *W,DLCPTH (./cds.lib,9): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/mdm_v3_2_22' (cds.lib command ignored).
+DEFINE bs_switch_v1_0_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/bs_switch_v1_0_0
+|
+xmvlog: *W,DLCPTH (./cds.lib,10): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/bs_switch_v1_0_0' (cds.lib command ignored).
+DEFINE axi4svideo_bridge_v1_0_13  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi4svideo_bridge_v1_0_13
+|
+xmvlog: *W,DLCPTH (./cds.lib,11): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi4svideo_bridge_v1_0_13' (cds.lib command ignored).
+DEFINE axis_interconnect_v1_1_19  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_interconnect_v1_1_19
+|
+xmvlog: *W,DLCPTH (./cds.lib,12): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_interconnect_v1_1_19' (cds.lib command ignored).
+DEFINE xdfe_fft_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_fft_v1_0_1
+|
+xmvlog: *W,DLCPTH (./cds.lib,13): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_fft_v1_0_1' (cds.lib command ignored).
+DEFINE xdfe_nr_prach_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_nr_prach_v1_0_1
+|
+xmvlog: *W,DLCPTH (./cds.lib,14): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_nr_prach_v1_0_1' (cds.lib command ignored).
+DEFINE axis_data_fifo_v1_1_26  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_data_fifo_v1_1_26
+|
+xmvlog: *W,DLCPTH (./cds.lib,15): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_data_fifo_v1_1_26' (cds.lib command ignored).
+DEFINE axis_ila_intf_v1_0_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_ila_intf_v1_0_0
+|
+xmvlog: *W,DLCPTH (./cds.lib,16): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_ila_intf_v1_0_0' (cds.lib command ignored).
+DEFINE tmr_sem_v1_0_20  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tmr_sem_v1_0_20
+|
+xmvlog: *W,DLCPTH (./cds.lib,17): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tmr_sem_v1_0_20' (cds.lib command ignored).
+DEFINE videoaxi4s_bridge_v1_0_5  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/videoaxi4s_bridge_v1_0_5
+|
+xmvlog: *W,DLCPTH (./cds.lib,18): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/videoaxi4s_bridge_v1_0_5' (cds.lib command ignored).
+DEFINE v_hdmi_rx1_v1_0_2  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_hdmi_rx1_v1_0_2
+|
+xmvlog: *W,DLCPTH (./cds.lib,19): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_hdmi_rx1_v1_0_2' (cds.lib command ignored).
+DEFINE dbg_intf  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dbg_intf
+|
+xmvlog: *W,DLCPTH (./cds.lib,20): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dbg_intf' (cds.lib command ignored).
+file: /ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_interconnect_v1_7/hdl/axi_interconnect_v1_7_vl_rfs.v
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_a_axi3_conv
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_addr_arbiter_sasd
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_addr_arbiter
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_addr_decoder
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_a_downsizer
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_arbiter_resp
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_a_upsizer
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_axi3_conv
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_axic_fifo
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_axi_clock_converter
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_axic_register_slice
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_axic_reg_srl_fifo
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_axi_crossbar
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_axic_srl_fifo
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_axi_data_fifo
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_axi_downsizer
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_axilite_conv
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_axi_protocol_converter
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_axi_register_slice
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_axi_upsizer
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_b_downsizer
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_carry_and
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_carry_latch_and
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_carry_latch_or
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_carry_or
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_carry
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_command_fifo
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_comparator_mask_static
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_comparator_mask
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_comparator_sel_mask_static
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_comparator_sel_mask
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_comparator_sel_static
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_comparator_sel
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_comparator_static
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_comparator
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_converter_bank
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_crossbar_sasd
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_crossbar
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_data_fifo_bank
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_decerr_slave
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_fifo_gen
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_mux_enc
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_mux
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_ndeep_srl
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_nto1_mux
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_protocol_conv_bank
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_r_axi3_conv
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_r_downsizer
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_register_slice_bank
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_r_upsizer
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_si_transactor
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_splitter
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_w_axi3_conv
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_wdata_mux
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_wdata_router
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_w_downsizer
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_w_upsizer
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_axic_sample_cycle_ratio
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_axic_sync_clock_converter
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_axi_interconnect
+		errors: 0, warnings: 0
+	module axi_interconnect_v1_7_19.axi_interconnect_v1_7_19_top
+		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 19

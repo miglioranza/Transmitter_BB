@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -work jtag_axi -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/jtag_axi/.cxl.verilog.jtag_axi.jtag_axi.lin64.cmf

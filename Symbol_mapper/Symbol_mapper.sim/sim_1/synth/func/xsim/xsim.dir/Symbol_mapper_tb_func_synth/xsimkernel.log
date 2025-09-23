@@ -1,4 +1,7 @@
-Running: xsim.dir/Symbol_mapper_tb_func_synth/xsimk -simmode gui -wdb Symbol_mapper_tb_func_synth.wdb -simrunnum 0 -socket 43515
+Running: xsim.dir/Symbol_mapper_tb_func_synth/xsimk -simmode gui -wdb Symbol_mapper_tb_func_synth.wdb -simrunnum 0 -socket 45021
 Design successfully loaded
-Design Loading Memory Usage: 44440 KB (Peak: 44448 KB)
-Design Loading CPU Usage: 80 ms
+Design Loading Memory Usage: 44432 KB (Peak: 44440 KB)
+Design Loading CPU Usage: 90 ms
+Simulation completed
+Simulation Memory Usage: 128736 KB (Peak: 185748 KB)
+Simulation CPU Usage: 110 ms

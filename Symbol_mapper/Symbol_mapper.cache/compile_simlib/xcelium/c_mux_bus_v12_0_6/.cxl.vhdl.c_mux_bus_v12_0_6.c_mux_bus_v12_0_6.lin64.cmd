@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work c_mux_bus_v12_0_6 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/c_mux_bus_v12_0_6/.cxl.vhdl.c_mux_bus_v12_0_6.c_mux_bus_v12_0_6.lin64.cmf

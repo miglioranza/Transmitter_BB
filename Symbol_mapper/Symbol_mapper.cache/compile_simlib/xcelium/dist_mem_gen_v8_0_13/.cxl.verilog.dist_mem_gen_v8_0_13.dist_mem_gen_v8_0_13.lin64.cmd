@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -work dist_mem_gen_v8_0_13 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/dist_mem_gen_v8_0_13/.cxl.verilog.dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13.lin64.cmf

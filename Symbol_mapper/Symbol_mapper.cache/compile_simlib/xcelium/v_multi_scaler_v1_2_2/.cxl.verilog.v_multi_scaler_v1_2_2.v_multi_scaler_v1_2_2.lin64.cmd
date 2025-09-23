@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -work v_multi_scaler_v1_2_2 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/v_multi_scaler_v1_2_2/.cxl.verilog.v_multi_scaler_v1_2_2.v_multi_scaler_v1_2_2.lin64.cmf

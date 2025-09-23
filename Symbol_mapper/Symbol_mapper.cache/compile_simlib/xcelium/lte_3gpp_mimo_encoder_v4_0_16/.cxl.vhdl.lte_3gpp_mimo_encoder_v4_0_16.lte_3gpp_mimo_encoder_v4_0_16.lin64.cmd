@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work lte_3gpp_mimo_encoder_v4_0_16 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/lte_3gpp_mimo_encoder_v4_0_16/.cxl.vhdl.lte_3gpp_mimo_encoder_v4_0_16.lte_3gpp_mimo_encoder_v4_0_16.lin64.cmf

@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work axi_uartlite_v2_0_29 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/axi_uartlite_v2_0_29/.cxl.vhdl.axi_uartlite_v2_0_29.axi_uartlite_v2_0_29.lin64.cmf

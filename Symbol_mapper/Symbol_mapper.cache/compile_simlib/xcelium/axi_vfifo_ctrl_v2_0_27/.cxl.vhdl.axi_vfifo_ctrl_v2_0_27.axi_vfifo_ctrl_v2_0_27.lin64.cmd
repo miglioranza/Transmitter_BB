@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work axi_vfifo_ctrl_v2_0_27 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/axi_vfifo_ctrl_v2_0_27/.cxl.vhdl.axi_vfifo_ctrl_v2_0_27.axi_vfifo_ctrl_v2_0_27.lin64.cmf

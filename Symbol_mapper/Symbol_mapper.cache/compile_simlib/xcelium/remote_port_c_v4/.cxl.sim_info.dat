@@ -1,0 +1,19 @@
+<SIMMODEL_NAME>:remote_port_c
+<LIBRARY_NAME>:remote_port_c_v4
+<LIBRARY_TYPE>:C
+<OUTPUT_FORMAT>:library
+<C_SOURCES>:systemc/simlibs/remote_port_c/remote_port_c_v4/src/remote_port_proto.c
+<C_SOURCES>:systemc/simlibs/remote_port_c/remote_port_c_v4/src/remote_port_sk.c
+<C_SOURCES>:systemc/simlibs/remote_port_c/remote_port_c_v4/src/safeio.c
+<C_INCLUDE_DIRS>:simlibs/remote_port_c_v4/include/
+<SYSTEMC_COMPILE_OPTION>:-64bit -noedg -cFlags " -O3 -fPIC -c -o
+<CPP_COMPILE_OPTION>:-O3
+<C_COMPILE_OPTION>:-O3
+<G++_COMPILE_FLAGS>:-fPIC -DREMOTEPORT_C_DLL
+<G++_LDFLAGS_OPTION>:
+<GCC_LDFLAGS_OPTION>:
+<LDLIBS_WIN64>:-lws2_32
+<G++_LDLIBS_OPTION>:
+<GCC_LDLIBS_OPTION>:
+<SHARED_LIBRARY>:remote_port_c_v4
+<SIMULATOR_PLATFORM>:all

@@ -1,0 +1,5 @@
+Name:aie_xtlm_v1_0_0
+Type:SystemC
+Link_SYSTEMC:xtlm
+Link_CPP:common_cpp_v1_0
+Link_C:empty

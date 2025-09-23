@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work tmr_inject_v1_0_4 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/tmr_inject_v1_0_4/.cxl.vhdl.tmr_inject_v1_0_4.tmr_inject_v1_0_4.lin64.cmf

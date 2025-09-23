@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -work mipi_csi2_rx_ctrl_v1_0_8 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/mipi_csi2_rx_ctrl_v1_0_8/.cxl.verilog.mipi_csi2_rx_ctrl_v1_0_8.mipi_csi2_rx_ctrl_v1_0_8.lin64.cmf

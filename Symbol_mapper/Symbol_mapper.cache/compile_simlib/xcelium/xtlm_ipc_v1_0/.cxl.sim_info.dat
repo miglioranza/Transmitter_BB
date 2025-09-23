@@ -1,0 +1,32 @@
+<SIMMODEL_NAME>:xtlm_ipc
+<LIBRARY_NAME>:xtlm_ipc_v1_0
+<LIBRARY_TYPE>:SystemC
+<OUTPUT_FORMAT>:library
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm_ipc/xtlm_ipc_v1_0/src/ipc_socket.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm_ipc/xtlm_ipc_v1_0/src/ipc_port.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm_ipc/xtlm_ipc_v1_0/src/parser.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm_ipc/xtlm_ipc_v1_0/src/xtlm_ipc.pb.cc
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm_ipc/xtlm_ipc_v1_0/src/axi2ipc_socket.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm_ipc/xtlm_ipc_v1_0/src/ipc2axi_socket.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm_ipc/xtlm_ipc_v1_0/src/ipc2axis_socket.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm_ipc/xtlm_ipc_v1_0/src/axis2ipc_socket.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm_ipc/xtlm_ipc_v1_0/src/ipc2aximm_socket.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/xtlm_ipc/xtlm_ipc_v1_0/src/aximm2ipc_socket.cpp
+<SYSTEMC_INCLUDE_DIRS>:simlibs/xtlm_ipc_v1_0/include,simlibs/xtlm/include,simlibs/common_cpp_v1_0/include,$xv_ext_lib_path/protobuf/include,/tps/boost_1_72_0
+<SYSTEMC_INCLUDE_DIRS_XCELIUM>:simlibs/xtlm_ipc_v1_0/include,simlibs/xtlm/include,simlibs/common_cpp_v1_0/include,$xv_ext_lib_path/utils/protobuf/include,/tps/boost_1_72_0
+<OSCI_INCLUDE_DIRS>:/data/osci_systemc/include
+<SYSTEMC_COMPILE_OPTION>:-64bit -noedg -cFlags " -O3 -fPIC -c -o
+<CPP_COMPILE_OPTION>:-O3
+<C_COMPILE_OPTION>:-O3
+<G++_COMPILE_FLAGS>:-Wall -fPIC
+<G++_COMPILE_FLAGS_XCELIUM>:-fPIC -std=c++11 -DCADENCE -D_GLIBCXX_USE_CXX11_ABI=0
+<G++_COMPILE_DEBUG_FLAGS>:-g -O0
+<SCCOM_COMPILE_FLAGS>:-std=c++11
+<LDFLAGS_XCELIUM>:-Wl,--whole-archive /ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/simmodels/xcelium/20.09.006/lnx64/6.3/ext/utils/protobuf/libprotobuf.a -Wl,--no-whole-archive
+<G++_LDFLAGS_OPTION>:
+<GCC_LDFLAGS_OPTION>:
+<LDLIBS>:-Lxcelium_lib/xtlm,-Lxcelium_lib/common_cpp_v1_0,-lxtlm -lcommon_cpp_v1_0
+<G++_LDLIBS_OPTION>:
+<GCC_LDLIBS_OPTION>:
+<SHARED_LIBRARY>:xtlm_ipc_v1_0
+<SIMULATOR_PLATFORM>:linux

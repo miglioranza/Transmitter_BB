@@ -1,1 +1,1 @@
---incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "Symbol_mapper_tb_behav" "xil_defaultlib.Symbol_mapper_tb" -log "elaborate.log" 
+--incr --debug "typical" --relax --mt "8" -cc_db "Test_coverage" -cc_dir "/ihp/departments/D-SYA/work/miglioranza" -cc_type "c" -L "xil_defaultlib" -L "secureip" --snapshot "Symbol_mapper_tb_behav" "xil_defaultlib.Symbol_mapper_tb" -log "elaborate.log" 

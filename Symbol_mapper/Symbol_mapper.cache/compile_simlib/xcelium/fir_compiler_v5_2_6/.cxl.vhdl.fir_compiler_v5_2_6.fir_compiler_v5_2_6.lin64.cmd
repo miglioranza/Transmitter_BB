@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work fir_compiler_v5_2_6 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/fir_compiler_v5_2_6/.cxl.vhdl.fir_compiler_v5_2_6.fir_compiler_v5_2_6.lin64.cmf

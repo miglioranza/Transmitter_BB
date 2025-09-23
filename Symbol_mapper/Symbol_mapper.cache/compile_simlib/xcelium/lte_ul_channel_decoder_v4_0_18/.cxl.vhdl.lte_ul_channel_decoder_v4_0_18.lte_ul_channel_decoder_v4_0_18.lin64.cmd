@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work lte_ul_channel_decoder_v4_0_18 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/lte_ul_channel_decoder_v4_0_18/.cxl.vhdl.lte_ul_channel_decoder_v4_0_18.lte_ul_channel_decoder_v4_0_18.lin64.cmf

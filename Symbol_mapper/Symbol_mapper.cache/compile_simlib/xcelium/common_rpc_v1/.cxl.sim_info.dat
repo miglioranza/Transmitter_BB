@@ -1,0 +1,30 @@
+<SIMMODEL_NAME>:common_rpc
+<LIBRARY_NAME>:common_rpc_v1
+<LIBRARY_TYPE>:CPP
+<OUTPUT_FORMAT>:library
+<CPP_SOURCES>:systemc/simlibs/common_rpc/common_rpc_v1/src/debug_manager.cpp
+<CPP_SOURCES>:systemc/simlibs/common_rpc/common_rpc_v1/src/rpc_messages.pb.cpp
+<CPP_SOURCES>:systemc/simlibs/common_rpc/common_rpc_v1/src/xaxi_accel_profiler.cpp
+<CPP_SOURCES>:systemc/simlibs/common_rpc/common_rpc_v1/src/xaxi_accel_profiler_instmgr.cpp
+<CPP_SOURCES>:systemc/simlibs/common_rpc/common_rpc_v1/src/xaxi_profiler.cpp
+<CPP_SOURCES>:systemc/simlibs/common_rpc/common_rpc_v1/src/xaxi_profiler_instmgr.cpp
+<CPP_SOURCES>:systemc/simlibs/common_rpc/common_rpc_v1/src/xaxi_stream_profiler.cpp
+<CPP_SOURCES>:systemc/simlibs/common_rpc/common_rpc_v1/src/xaxi_stream_profiler_instmgr.cpp
+<CPP_SOURCES>:systemc/simlibs/common_rpc/common_rpc_v1/src/debug_manager_if.cxx
+<CPP_SOURCES>:systemc/simlibs/common_rpc/common_rpc_v1/src/msg_handler.cxx
+<CPP_SOURCES>:systemc/simlibs/common_rpc/common_rpc_v1/src/msg_handler_impl.cxx
+<CPP_SOURCES>:systemc/simlibs/common_rpc/common_rpc_v1/src/sk_client.cxx
+<CPP_SOURCES>:systemc/simlibs/common_rpc/common_rpc_v1/src/unix_socket.cxx
+<CPP_INCLUDE_DIRS>:$xv_ext_lib_path/protobuf/include,simlibs/common_rpc_v1/include/,/tps/boost_1_72_0
+<SYSTEMC_COMPILE_OPTION>:-64bit -noedg -cFlags " -O3 -fPIC -c -o
+<CPP_COMPILE_OPTION>:-O3
+<C_COMPILE_OPTION>:-O3
+<G++_COMPILE_FLAGS>:-fPIC -std=c++11
+<G++_COMPILE_FLAGS_XCELIUM>:-fPIC -std=c++11 -DCADENCE
+<LDFLAGS_XCELIUM>:-Wl,--whole-archive /ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/simmodels/xcelium/20.09.006/lnx64/6.3/ext/utils/protobuf/libprotobuf.a -Wl,--no-whole-archive
+<G++_LDFLAGS_OPTION>:
+<GCC_LDFLAGS_OPTION>:
+<G++_LDLIBS_OPTION>:
+<GCC_LDLIBS_OPTION>:
+<SHARED_LIBRARY>:common_rpc_v1
+<SIMULATOR_PLATFORM>:linux

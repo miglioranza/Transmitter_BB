@@ -1,0 +1,8 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+./../../../../Symbol_mapper.srcs/sources_1/new/Symbol_mapper.vhd:
+                  q_Quick Accessout   <= "100101011101";            -- -1699 
+                          |
+xmvhdl_p: *E,UNRKST (./../../../../Symbol_mapper.srcs/sources_1/new/Symbol_mapper.vhd,587|26): expecting a signal or variable assignment statement [8].
+	errors: 1, warnings: 0
+./../../../../Symbol_mapper.srcs/sim_1/new/Symbol_mapper_tb.vhd:
+	errors: 0, warnings: 0

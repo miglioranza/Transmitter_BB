@@ -1,0 +1,6 @@
+Time resolution is 1 ps
+Note: Start of simulation
+Time: 20 ns  Iteration: 0  Process: /Symbol_mapper_tb/stimuli_process  File: /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.srcs/sim_1/new/Symbol_mapper_tb.vhd
+Note: End of Simulation
+Time: 1985100 ps  Iteration: 0  Process: /Symbol_mapper_tb/stimuli_process  File: /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.srcs/sim_1/new/Symbol_mapper_tb.vhd
+$finish called at time : 1985100 ps : File "/ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.srcs/sim_1/new/Symbol_mapper_tb.vhd" Line 577

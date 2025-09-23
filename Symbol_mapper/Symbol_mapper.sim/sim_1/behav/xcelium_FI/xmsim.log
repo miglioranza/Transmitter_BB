@@ -1,0 +1,24 @@
+xmsim(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+xmsim: *N,FLTSF: [FLT] Fault Id : 1203, Fault Seed: 0, Selected fault points: :UUT:\q_out_reg[6]_i_1\:O.
+xcelium> set pack_assert_off {numeric_std std_logic_arith}
+numeric_std std_logic_arith
+xcelium> 
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> catch {probe -create -shm -all -variables -depth 1 -waveform} msg
+0
+xcelium> 
+xcelium> run 2000ns
+REPORT/NOTE (time 20 NS) from process :stimuli_process (architecture xil_defaultlib.Symbol_mapper_tb:Behavioral)
+Start of simulation
+xmsim: *N,FLTINJ: [FLT] Injecting SET fault on :UUT:\q_out_reg[9]_i_2\:O at time 866 NS : old value = '1', new value = '0'.
+xmsim: *N,FLTREL: [FLT] Released SET fault on :UUT:\q_out_reg[9]_i_2\:O at time 867 NS.
+REPORT/NOTE (time 962600 PS) from process :stimuli_process (architecture xil_defaultlib.Symbol_mapper_tb:Behavioral)
+End of Simulation
+xmsim: *N,FTUDPT: [FLT] Fault database data file is generated at /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.sim/sim_1/behav/xcelium_FI/fault_db/db_scope/test_uxsrv026.ihp-ffo.de_21977991757938047805/xfs_126da621.ucd.
+std.env.finish invoked from Symbol_mapper_tb.vhd, line: 574, pos: 10
+Simulation complete via std.env.finish(1) at time 962600 PS + 0
+xcelium> exit
+xmsim: *W,INTEMGR: Failed to open the VMANAGER Library: /linux64/vm/libngen64.so: cannot open shared object file: No such file or directory.
+ry: /linux64/vm/libngen64.so: cannot open shared object file: No such file or directory.
+y.

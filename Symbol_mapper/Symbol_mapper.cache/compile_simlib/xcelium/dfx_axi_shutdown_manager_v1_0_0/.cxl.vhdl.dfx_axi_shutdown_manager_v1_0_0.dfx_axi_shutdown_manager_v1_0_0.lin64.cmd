@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work dfx_axi_shutdown_manager_v1_0_0 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/dfx_axi_shutdown_manager_v1_0_0/.cxl.vhdl.dfx_axi_shutdown_manager_v1_0_0.dfx_axi_shutdown_manager_v1_0_0.lin64.cmf

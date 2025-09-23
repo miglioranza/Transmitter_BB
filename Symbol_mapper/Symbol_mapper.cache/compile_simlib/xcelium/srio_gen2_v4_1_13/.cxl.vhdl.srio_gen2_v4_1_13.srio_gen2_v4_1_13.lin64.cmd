@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work srio_gen2_v4_1_13 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/srio_gen2_v4_1_13/.cxl.vhdl.srio_gen2_v4_1_13.srio_gen2_v4_1_13.lin64.cmf

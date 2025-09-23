@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work tmr_voter_v1_0_3 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/tmr_voter_v1_0_3/.cxl.vhdl.tmr_voter_v1_0_3.tmr_voter_v1_0_3.lin64.cmf

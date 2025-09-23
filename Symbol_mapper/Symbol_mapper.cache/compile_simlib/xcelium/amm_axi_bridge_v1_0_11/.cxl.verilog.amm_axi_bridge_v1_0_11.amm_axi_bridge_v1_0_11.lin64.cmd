@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -work amm_axi_bridge_v1_0_11 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/amm_axi_bridge_v1_0_11/.cxl.verilog.amm_axi_bridge_v1_0_11.amm_axi_bridge_v1_0_11.lin64.cmf

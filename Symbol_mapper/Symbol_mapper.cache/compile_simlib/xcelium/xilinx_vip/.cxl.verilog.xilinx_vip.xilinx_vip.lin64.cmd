@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvlog -MESSAGES -NOLOG -sv -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/xilinx_vip/include -work xilinx_vip -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/xilinx_vip/.cxl.systemverilog.xilinx_vip.xilinx_vip.lin64.cmf

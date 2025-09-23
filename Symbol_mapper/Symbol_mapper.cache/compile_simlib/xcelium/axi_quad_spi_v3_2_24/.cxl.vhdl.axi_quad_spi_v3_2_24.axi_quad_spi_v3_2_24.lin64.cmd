@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work axi_quad_spi_v3_2_24 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/axi_quad_spi_v3_2_24/.cxl.vhdl.axi_quad_spi_v3_2_24.axi_quad_spi_v3_2_24.lin64.cmf

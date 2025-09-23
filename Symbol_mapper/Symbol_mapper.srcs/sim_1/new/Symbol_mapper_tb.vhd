@@ -69,7 +69,7 @@ architecture Behavioral of Symbol_mapper_tb is
     signal data_out_ready  : std_logic;
     signal data_out_valid  : std_logic;
     
-    constant clock_period : time := 5ns ;
+    constant clock_period : time := 5 ns ;
     
 begin
 
@@ -104,287 +104,171 @@ begin
     stimuli_process : process 
     begin 
     
-    --Reset generation 
+    --Reset generation
   
     reset <= '1';
     wait for 20 ns;	
     reset <= '0';
 
         report "Start of simulation" ;
-        --BPSK 
-        mod_type <= "000"  ;
+        mod_type <= "111"  ;
         data_in_last  <= '0';
         data_in_ready <= '1';
         wait until data_out_ready = '1' ;
         data_in_valid <= '1'; 
-        
-         --Input data
-        data_in <= "000000"; wait for clock_period; 
-        data_in <= "000001"; wait for clock_period; 
-        data_in <= "000000"; wait for clock_period; 
-        data_in <= "000001"; wait for clock_period; 
-        data_in <= "000000"; wait for clock_period; 
-        data_in <= "000001"; wait for clock_period; 
-        data_in <= "000000"; wait for clock_period; 
-        data_in <= "000001"; wait for clock_period; 
-        data_in <= "000000"; wait for clock_period; 
-        data_in <= "000001"; wait for clock_period; 
-        data_in <= "000000"; wait for clock_period; 
-        data_in <= "000001"; wait for clock_period; 
-        data_in <= "000000"; wait for clock_period; 
-        data_in <= "000001"; wait for clock_period;
-        data_in <= "000000"; wait for clock_period; 
-        data_in <= "000000"; wait for clock_period;
-        data_in <= "000001"; wait for clock_period;
-        data_in <= "000000"; wait for clock_period; 
-        data_in <= "000001"; wait for clock_period; 
-        data_in <= "000000"; wait for clock_period; 
-        data_in <= "000001"; wait for clock_period; 
-        data_in <= "000000"; wait for clock_period; 
-        data_in <= "000001"; wait for clock_period; 
-        data_in <= "000000"; wait for clock_period; 
-        data_in <= "000001"; wait for clock_period; 
-        data_in <= "000000"; wait for clock_period; 
-        data_in <= "000001"; wait for clock_period; 
-        data_in <= "000000"; wait for clock_period; 
-        data_in <= "000001"; wait for clock_period;
-        
-        data_in_valid <= '0';
-        --QPSK 
-
-        wait for 50 ns ;
-        mod_type <= "001";
-        data_in_valid <= '1';
-        
-        data_in <= "000010"; wait for clock_period;
-        data_in <= "000011"; wait for clock_period;
-        data_in <= "000000"; wait for clock_period;
-        data_in <= "000010"; wait for clock_period;
-        data_in <= "000011"; wait for clock_period;
-        data_in <= "000001"; wait for clock_period;
-        data_in <= "000000"; wait for clock_period;
-        data_in <= "000010"; wait for clock_period;
-        data_in <= "000011"; wait for clock_period;
-        data_in <= "000000"; wait for clock_period;
-        data_in <= "000010"; wait for clock_period;
-        data_in <= "000001"; wait for clock_period;
-        data_in <= "000000"; wait for clock_period;
-        data_in <= "000011"; wait for clock_period;
-        data_in <= "000010"; wait for clock_period;
-        data_in <= "000001"; wait for clock_period;
-        data_in <= "000011"; wait for clock_period;
-        data_in <= "000000"; wait for clock_period;
-        data_in <= "000010"; wait for clock_period;
-        data_in <= "000001"; wait for clock_period;
-        data_in <= "000011"; wait for clock_period;
-        data_in <= "000010"; wait for clock_period;
-        data_in <= "000000"; wait for clock_period;
-        data_in <= "000001"; wait for clock_period;
-        data_in <= "000010"; wait for clock_period;
-        data_in <= "000000"; wait for clock_period;
-        data_in <= "000011"; wait for clock_period;
-        data_in <= "000001"; wait for clock_period;
-        data_in <= "000000"; wait for clock_period;
-        data_in <= "000010"; wait for clock_period;
-        
-        data_in_valid <= '0';
-        --16-QAM
-           
-        wait for 50 ns ;
-        mod_type <= "010";
-        data_in_valid <= '1';
-        
-        data_in <= "000110"; wait for clock_period;
-        data_in <= "001001"; wait for clock_period;
-        data_in <= "000000"; wait for clock_period;
-        data_in <= "000111"; wait for clock_period;
-        data_in <= "000011"; wait for clock_period;
-        data_in <= "001011"; wait for clock_period;
-        data_in <= "000101"; wait for clock_period;
-        data_in <= "000010"; wait for clock_period;
-        data_in <= "000001"; wait for clock_period;
-        data_in <= "000110"; wait for clock_period;
-        data_in <= "001010"; wait for clock_period;
-        data_in <= "000100"; wait for clock_period;
-        data_in <= "001100"; wait for clock_period;
-        data_in <= "000011"; wait for clock_period;
-        data_in <= "001000"; wait for clock_period;
-        data_in <= "000111"; wait for clock_period;
-        data_in <= "000001"; wait for clock_period;
-        data_in <= "000101"; wait for clock_period;
-        data_in <= "000010"; wait for clock_period;
-        data_in <= "001110"; wait for clock_period;
-        data_in <= "001001"; wait for clock_period;
-        data_in <= "000000"; wait for clock_period;
-        data_in <= "001101"; wait for clock_period;
-        data_in <= "001111"; wait for clock_period;
-        data_in <= "000100"; wait for clock_period;
-        data_in <= "001011"; wait for clock_period;
-        data_in <= "001000"; wait for clock_period;
-        data_in <= "001010"; wait for clock_period;
-        data_in <= "000110"; wait for clock_period;
-        data_in <= "000001"; wait for clock_period;
-                
-        data_in_valid <= '0';
-        --32-QAM
-           
-        wait for 50 ns ;
-        mod_type <= "011";
-        data_in_valid <= '1';
-        
-        data_in <= "010011"; wait for clock_period;
-        data_in <= "000101"; wait for clock_period;
-        data_in <= "001111"; wait for clock_period;
-        data_in <= "000000"; wait for clock_period;
-        data_in <= "001010"; wait for clock_period;
-        data_in <= "011100"; wait for clock_period;
-        data_in <= "000011"; wait for clock_period;
-        data_in <= "010101"; wait for clock_period;
-        data_in <= "000111"; wait for clock_period;
-        data_in <= "001100"; wait for clock_period;
-        data_in <= "011001"; wait for clock_period;
-        data_in <= "001110"; wait for clock_period;
-        data_in <= "010000"; wait for clock_period;
-        data_in <= "011111"; wait for clock_period;
-        data_in <= "010110"; wait for clock_period;
-        data_in <= "001011"; wait for clock_period;
-        data_in <= "000100"; wait for clock_period;
+        data_in <= "101101"; wait for clock_period;
         data_in <= "011010"; wait for clock_period;
-        data_in <= "001001"; wait for clock_period;
-        data_in <= "000010"; wait for clock_period;
-        data_in <= "010001"; wait for clock_period;
-        data_in <= "011011"; wait for clock_period;
-        data_in <= "001101"; wait for clock_period;
-        data_in <= "010111"; wait for clock_period;
-        data_in <= "011000"; wait for clock_period;
-        data_in <= "000110"; wait for clock_period;
-        data_in <= "000001"; wait for clock_period;
-        data_in <= "011110"; wait for clock_period;
-        data_in <= "010010"; wait for clock_period;
-        data_in <= "000001"; wait for clock_period;
-        
-          data_in_valid <= '0';
-        --64-QAM
-           
-        wait for 50 ns ;
-        mod_type <= "100";
-        data_in_valid <= '1';
-        
-        data_in <= "000101"; wait for clock_period;
-        data_in <= "111000"; wait for clock_period;
-        data_in <= "010110"; wait for clock_period;
-        data_in <= "001001"; wait for clock_period;
-        data_in <= "101111"; wait for clock_period;
-        data_in <= "011100"; wait for clock_period;
-        data_in <= "000000"; wait for clock_period;
+        data_in <= "110011"; wait for clock_period;
+        data_in <= "001110"; wait for clock_period;
         data_in <= "100101"; wait for clock_period;
-        data_in <= "001111"; wait for clock_period;
-        data_in <= "110010"; wait for clock_period;
-        data_in <= "011111"; wait for clock_period;
-        data_in <= "100000"; wait for clock_period;
-        data_in <= "110101"; wait for clock_period;
-        data_in <= "010011"; wait for clock_period;
-        data_in <= "111011"; wait for clock_period;
-        data_in <= "000111"; wait for clock_period;
-        data_in <= "101000"; wait for clock_period;
-        data_in <= "011001"; wait for clock_period;
+        data_in <= "010111"; wait for clock_period;
+        data_in <= "111001"; wait for clock_period;
+        data_in <= "000011"; wait for clock_period;
+        data_in <= "101110"; wait for clock_period;
+        data_in <= "011101"; wait for clock_period;
+        data_in <= "110100"; wait for clock_period;
+        data_in <= "001011"; wait for clock_period;
+        data_in <= "100010"; wait for clock_period;
+        data_in <= "010001"; wait for clock_period;
+        data_in <= "111110"; wait for clock_period;
+        data_in <= "000100"; wait for clock_period;
+        data_in <= "101011"; wait for clock_period;
+        data_in <= "011100"; wait for clock_period;
         data_in <= "110001"; wait for clock_period;
+        data_in <= "001010"; wait for clock_period;
+        data_in <= "100111"; wait for clock_period;
+        data_in <= "010110"; wait for clock_period;
+        data_in <= "111101"; wait for clock_period;
+        data_in <= "000010"; wait for clock_period;
+        data_in <= "101001"; wait for clock_period;
+        data_in <= "011110"; wait for clock_period;
+        data_in <= "110101"; wait for clock_period;
+        data_in <= "001100"; wait for clock_period;
+        data_in <= "100011"; wait for clock_period;
+        data_in <= "010100"; wait for clock_period;
+        data_in <= "111011"; wait for clock_period;
+        data_in <= "000110"; wait for clock_period;
+        data_in <= "101100"; wait for clock_period;
+        data_in <= "011011"; wait for clock_period;
+        data_in <= "110110"; wait for clock_period;
+        data_in <= "001101"; wait for clock_period;
+        data_in <= "100100"; wait for clock_period;
+        data_in <= "010011"; wait for clock_period;
+        data_in <= "111000"; wait for clock_period;
+        data_in <= "000001"; wait for clock_period;
+        data_in <= "101010"; wait for clock_period;
+        data_in <= "011001"; wait for clock_period;
+        data_in <= "110010"; wait for clock_period;
+        data_in <= "001111"; wait for clock_period;
         data_in <= "100110"; wait for clock_period;
         data_in <= "010101"; wait for clock_period;
-        data_in <= "001010"; wait for clock_period;
         data_in <= "111100"; wait for clock_period;
-        data_in <= "101101"; wait for clock_period;
-        data_in <= "000010"; wait for clock_period;
-        data_in <= "011011"; wait for clock_period;
-        data_in <= "110111"; wait for clock_period;
-        data_in <= "100011"; wait for clock_period;
-        data_in <= "001110"; wait for clock_period;
-        data_in <= "111111"; wait for clock_period;
-        
-        data_in_valid <= '0';
-        --16-APSK
-           
-        wait for 50 ns ;
-        mod_type <= "101";
-        data_in_valid <= '1';
-        
-        data_in <= "000110"; wait for clock_period;
-        data_in <= "001001"; wait for clock_period;
-        data_in <= "000000"; wait for clock_period;
         data_in <= "000111"; wait for clock_period;
-        data_in <= "000011"; wait for clock_period;
-        data_in <= "001011"; wait for clock_period;
-        data_in <= "000101"; wait for clock_period;
-        data_in <= "000010"; wait for clock_period;
-        data_in <= "000001"; wait for clock_period;
-        data_in <= "000110"; wait for clock_period;
-        data_in <= "001010"; wait for clock_period;
-        data_in <= "000100"; wait for clock_period;
-        data_in <= "001100"; wait for clock_period;
-        data_in <= "000011"; wait for clock_period;
-        data_in <= "001000"; wait for clock_period;
-        data_in <= "000111"; wait for clock_period;
-        data_in <= "000001"; wait for clock_period;
-        data_in <= "000101"; wait for clock_period;
-        data_in <= "000010"; wait for clock_period;
-        data_in <= "001110"; wait for clock_period;
-        data_in <= "001001"; wait for clock_period;
-        data_in <= "000000"; wait for clock_period;
-        data_in <= "001101"; wait for clock_period;
-        data_in <= "001111"; wait for clock_period;
-        data_in <= "000100"; wait for clock_period;
-        data_in <= "001011"; wait for clock_period;
-        data_in <= "001000"; wait for clock_period;
-        data_in <= "001010"; wait for clock_period;
-        data_in <= "000110"; wait for clock_period;
-        data_in <= "000001"; wait for clock_period;
-                
-        data_in_valid <= '0';
-        --32-APSK
-           
-        wait for 50 ns ;
-        mod_type <= "110";
-        data_in_valid <= '1';
-        
-        data_in <= "010011"; wait for clock_period;
-        data_in <= "000101"; wait for clock_period;
-        data_in <= "001111"; wait for clock_period;
-        data_in <= "000000"; wait for clock_period;
-        data_in <= "001010"; wait for clock_period;
-        data_in <= "011100"; wait for clock_period;
-        data_in <= "000011"; wait for clock_period;
-        data_in <= "010101"; wait for clock_period;
-        data_in <= "000111"; wait for clock_period;
-        data_in <= "001100"; wait for clock_period;
-        data_in <= "011001"; wait for clock_period;
-        data_in <= "001110"; wait for clock_period;
-        data_in <= "010000"; wait for clock_period;
+        data_in <= "101000"; wait for clock_period;
         data_in <= "011111"; wait for clock_period;
-        data_in <= "010110"; wait for clock_period;
-        data_in <= "001011"; wait for clock_period;
-        data_in <= "000100"; wait for clock_period;
-        data_in <= "011010"; wait for clock_period;
+        data_in <= "110000"; wait for clock_period;
         data_in <= "001001"; wait for clock_period;
-        data_in <= "000010"; wait for clock_period;
-        data_in <= "010001"; wait for clock_period;
-        data_in <= "011011"; wait for clock_period;
-        data_in <= "001101"; wait for clock_period;
-        data_in <= "010111"; wait for clock_period;
-        data_in <= "011000"; wait for clock_period;
-        data_in <= "000110"; wait for clock_period;
-        data_in <= "000001"; wait for clock_period;
-        data_in <= "011110"; wait for clock_period;
+        data_in <= "100000"; wait for clock_period;
         data_in <= "010010"; wait for clock_period;
+        data_in <= "111111"; wait for clock_period;
+        data_in <= "000000"; wait for clock_period;
+        data_in <= "101111"; wait for clock_period;
+        data_in <= "011000"; wait for clock_period;
+        data_in <= "110111"; wait for clock_period;
+        data_in <= "001000"; wait for clock_period;
+        data_in <= "100001"; wait for clock_period;
+        data_in <= "010000"; wait for clock_period;
+        data_in <= "111010"; wait for clock_period;
+        data_in <= "000101"; wait for clock_period;
+        data_in <= "101101"; wait for clock_period;
+        data_in <= "011010"; wait for clock_period;
+        data_in <= "110011"; wait for clock_period;
+        data_in <= "001110"; wait for clock_period;
+        data_in <= "100101"; wait for clock_period;
+        data_in <= "010111"; wait for clock_period;
+        data_in <= "111001"; wait for clock_period;
+        data_in <= "000011"; wait for clock_period;
+        data_in <= "101110"; wait for clock_period;
+        data_in <= "011101"; wait for clock_period;
+        data_in <= "110100"; wait for clock_period;
+        data_in <= "001011"; wait for clock_period;
+        data_in <= "100010"; wait for clock_period;
+        data_in <= "010001"; wait for clock_period;
+        data_in <= "111110"; wait for clock_period;
+        data_in <= "000100"; wait for clock_period;
+        data_in <= "101011"; wait for clock_period;
+        data_in <= "011100"; wait for clock_period;
+        data_in <= "110001"; wait for clock_period;
+        data_in <= "001010"; wait for clock_period;
+        data_in <= "100111"; wait for clock_period;
+        data_in <= "010110"; wait for clock_period;
+        data_in <= "111101"; wait for clock_period;
+        data_in <= "000010"; wait for clock_period;
+        data_in <= "101001"; wait for clock_period;
+        data_in <= "011110"; wait for clock_period;
+        data_in <= "110101"; wait for clock_period;
+        data_in <= "001100"; wait for clock_period;
+        data_in <= "100011"; wait for clock_period;
+        data_in <= "010100"; wait for clock_period;
+        data_in <= "111011"; wait for clock_period;
+        data_in <= "000110"; wait for clock_period;
+        data_in <= "101100"; wait for clock_period;
+        data_in <= "011011"; wait for clock_period;
+        data_in <= "110110"; wait for clock_period;
+        data_in <= "001101"; wait for clock_period;
+        data_in <= "100100"; wait for clock_period;
+        data_in <= "010011"; wait for clock_period;
+        data_in <= "111000"; wait for clock_period;
         data_in <= "000001"; wait for clock_period;
-        
-          data_in_valid <= '0';
-        --64-APSK
-           
-        wait for 50 ns ;
-        mod_type <= "111";
-      
-        data_in_valid <= '1';
-
+        data_in <= "101010"; wait for clock_period;
+        data_in <= "011001"; wait for clock_period;
+        data_in <= "110010"; wait for clock_period;
+        data_in <= "001111"; wait for clock_period;
+        data_in <= "100110"; wait for clock_period;
+        data_in <= "010101"; wait for clock_period;
+        data_in <= "111100"; wait for clock_period;
+        data_in <= "000111"; wait for clock_period;
+        data_in <= "101000"; wait for clock_period;
+        data_in <= "011111"; wait for clock_period;
+        data_in <= "110000"; wait for clock_period;
+        data_in <= "001001"; wait for clock_period;
+        data_in <= "100000"; wait for clock_period;
+        data_in <= "010010"; wait for clock_period;
+        data_in <= "111111"; wait for clock_period;
+        data_in <= "000000"; wait for clock_period;
+        data_in <= "101111"; wait for clock_period;
+        data_in <= "011000"; wait for clock_period;
+        data_in <= "110111"; wait for clock_period;
+        data_in <= "001000"; wait for clock_period;
+        data_in <= "100001"; wait for clock_period;
+        data_in <= "010000"; wait for clock_period;
+        data_in <= "111010"; wait for clock_period;
+        data_in <= "000101"; wait for clock_period;
+        data_in <= "101101"; wait for clock_period;
+        data_in <= "011010"; wait for clock_period;
+        data_in <= "110011"; wait for clock_period;
+        data_in <= "001110"; wait for clock_period;
+        data_in <= "100101"; wait for clock_period;
+        data_in <= "010111"; wait for clock_period;
+        data_in <= "111001"; wait for clock_period;
+        data_in <= "000011"; wait for clock_period;
+        data_in <= "101110"; wait for clock_period;
+        data_in <= "011101"; wait for clock_period;
+        data_in <= "110100"; wait for clock_period;
+        data_in <= "001011"; wait for clock_period;
+        data_in <= "100010"; wait for clock_period;
+        data_in <= "010001"; wait for clock_period;
+        data_in <= "111110"; wait for clock_period;
+        data_in <= "000100"; wait for clock_period;
+        data_in <= "101011"; wait for clock_period;
+        data_in <= "011100"; wait for clock_period;
+        data_in <= "110001"; wait for clock_period;
+        data_in <= "001010"; wait for clock_period;
+        data_in <= "100111"; wait for clock_period;
+        data_in <= "010110"; wait for clock_period;
+        data_in <= "111101"; wait for clock_period;
+        data_in <= "000010"; wait for clock_period;
+        data_in <= "101001"; wait for clock_period;        
         data_in <= "000101"; wait for clock_period;
         data_in <= "111000"; wait for clock_period;
         data_in <= "010110"; wait for clock_period;
@@ -417,12 +301,279 @@ begin
         data_in <= "111111"; 
         data_in_last <= '1' ;
         wait for clock_period;
-        
         data_in_valid <= '0';
         data_in_last <= '0' ;
         wait for clock_period * 5 ;
         report "End of Simulation" ;
-        finish ;
+--        data_in <= "000000"; wait for clock_period; 
+--        data_in <= "000001"; wait for clock_period; 
+--        data_in <= "000000"; wait for clock_period; 
+--        data_in <= "000001"; wait for clock_period; 
+--        data_in <= "000000"; wait for clock_period; 
+--        data_in <= "000001"; wait for clock_period; 
+--        data_in <= "000000"; wait for clock_period; 
+--        data_in <= "000001"; wait for clock_period; 
+--        data_in <= "000000"; wait for clock_period; 
+--        data_in <= "000001"; wait for clock_period; 
+--        data_in <= "000000"; wait for clock_period; 
+--        data_in <= "000001"; wait for clock_period; 
+--        data_in <= "000000"; wait for clock_period; 
+--        data_in <= "000001"; wait for clock_period;
+--        data_in <= "000000"; wait for clock_period; 
+--        data_in <= "000000"; wait for clock_period;
+--        data_in <= "000001"; wait for clock_period;
+--        data_in <= "000000"; wait for clock_period; 
+--        data_in <= "000001"; wait for clock_period; 
+--        data_in <= "000000"; wait for clock_period; 
+--        data_in <= "000001"; wait for clock_period; 
+--        data_in <= "000000"; wait for clock_period; 
+--        data_in <= "000001"; wait for clock_period; 
+--        data_in <= "000000"; wait for clock_period; 
+--        data_in <= "000001"; wait for clock_period; 
+--        data_in <= "000000"; wait for clock_period; 
+--        data_in <= "000001"; wait for clock_period; 
+--        data_in <= "000000"; wait for clock_period; 
+--        data_in <= "000001"; wait for clock_period;
+        
+--        data_in_valid <= '0';
+--        --QPSK 
+
+--        wait for 50 ns ;
+--        mod_type <= "001";
+--        data_in_valid <= '1';
+        
+--        data_in <= "000010"; wait for clock_period;
+--        data_in <= "000011"; wait for clock_period;
+--        data_in <= "000000"; wait for clock_period;
+--        data_in <= "000010"; wait for clock_period;
+--        data_in <= "000011"; wait for clock_period;
+--        data_in <= "000001"; wait for clock_period;
+--        data_in <= "000000"; wait for clock_period;
+--        data_in <= "000010"; wait for clock_period;
+--        data_in <= "000011"; wait for clock_period;
+--        data_in <= "000000"; wait for clock_period;
+--        data_in <= "000010"; wait for clock_period;
+--        data_in <= "000001"; wait for clock_period;
+--        data_in <= "000000"; wait for clock_period;
+--        data_in <= "000011"; wait for clock_period;
+--        data_in <= "000010"; wait for clock_period;
+--        data_in <= "000001"; wait for clock_period;
+--        data_in <= "000011"; wait for clock_period;
+--        data_in <= "000000"; wait for clock_period;
+--        data_in <= "000010"; wait for clock_period;
+--        data_in <= "000001"; wait for clock_period;
+--        data_in <= "000011"; wait for clock_period;
+--        data_in <= "000010"; wait for clock_period;
+--        data_in <= "000000"; wait for clock_period;
+--        data_in <= "000001"; wait for clock_period;
+--        data_in <= "000010"; wait for clock_period;
+--        data_in <= "000000"; wait for clock_period;
+--        data_in <= "000011"; wait for clock_period;
+--        data_in <= "000001"; wait for clock_period;
+--        data_in <= "000000"; wait for clock_period;
+--        data_in <= "000010"; wait for clock_period;
+        
+--        data_in_valid <= '0';
+--        --16-QAM
+           
+--        wait for 50 ns ;
+--        mod_type <= "010";
+--        data_in_valid <= '1';
+        
+--        data_in <= "000110"; wait for clock_period;
+--        data_in <= "001001"; wait for clock_period;
+--        data_in <= "000000"; wait for clock_period;
+--        data_in <= "000111"; wait for clock_period;
+--        data_in <= "000011"; wait for clock_period;
+--        data_in <= "001011"; wait for clock_period;
+--        data_in <= "000101"; wait for clock_period;
+--        data_in <= "000010"; wait for clock_period;
+--        data_in <= "000001"; wait for clock_period;
+--        data_in <= "000110"; wait for clock_period;
+--        data_in <= "001010"; wait for clock_period;
+--        data_in <= "000100"; wait for clock_period;
+--        data_in <= "001100"; wait for clock_period;
+--        data_in <= "000011"; wait for clock_period;
+--        data_in <= "001000"; wait for clock_period;
+--        data_in <= "000111"; wait for clock_period;
+--        data_in <= "000001"; wait for clock_period;
+--        data_in <= "000101"; wait for clock_period;
+--        data_in <= "000010"; wait for clock_period;
+--        data_in <= "001110"; wait for clock_period;
+--        data_in <= "001001"; wait for clock_period;
+--        data_in <= "000000"; wait for clock_period;
+--        data_in <= "001101"; wait for clock_period;
+--        data_in <= "001111"; wait for clock_period;
+--        data_in <= "000100"; wait for clock_period;
+--        data_in <= "001011"; wait for clock_period;
+--        data_in <= "001000"; wait for clock_period;
+--        data_in <= "001010"; wait for clock_period;
+--        data_in <= "000110"; wait for clock_period;
+--        data_in <= "000001"; wait for clock_period;
+                
+----        data_in_valid <= '0';
+----        --32-QAM
+           
+----        wait for 50 ns ;
+----        mod_type <= "011";
+----        data_in_valid <= '1';
+        
+--        data_in <= "010011"; wait for clock_period;
+--        data_in <= "000101"; wait for clock_period;
+--        data_in <= "001111"; wait for clock_period;
+--        data_in <= "000000"; wait for clock_period;
+--        data_in <= "001010"; wait for clock_period;
+--        data_in <= "011100"; wait for clock_period;
+--        data_in <= "000011"; wait for clock_period;
+--        data_in <= "010101"; wait for clock_period;
+--        data_in <= "000111"; wait for clock_period;
+--        data_in <= "001100"; wait for clock_period;
+--        data_in <= "011001"; wait for clock_period;
+--        data_in <= "001110"; wait for clock_period;
+--        data_in <= "010000"; wait for clock_period;
+--        data_in <= "011111"; wait for clock_period;
+--        data_in <= "010110"; wait for clock_period;
+--        data_in <= "001011"; wait for clock_period;
+--        data_in <= "000100"; wait for clock_period;
+--        data_in <= "011010"; wait for clock_period;
+--        data_in <= "001001"; wait for clock_period;
+--        data_in <= "000010"; wait for clock_period;
+--        data_in <= "010001"; wait for clock_period;
+--        data_in <= "011011"; wait for clock_period;
+--        data_in <= "001101"; wait for clock_period;
+--        data_in <= "010111"; wait for clock_period;
+--        data_in <= "011000"; wait for clock_period;
+--        data_in <= "000110"; wait for clock_period;
+--        data_in <= "000001"; wait for clock_period;
+--        data_in <= "011110"; wait for clock_period;
+--        data_in <= "010010"; wait for clock_period;
+--        data_in <= "000001"; wait for clock_period;
+        
+----          data_in_valid <= '0';
+----        --64-QAM
+           
+----        wait for 50 ns ;
+----        mod_type <= "100";
+----        data_in_valid <= '1';
+        
+--        data_in <= "000101"; wait for clock_period;
+--        data_in <= "111000"; wait for clock_period;
+--        data_in <= "010110"; wait for clock_period;
+--        data_in <= "001001"; wait for clock_period;
+--        data_in <= "101111"; wait for clock_period;
+--        data_in <= "011100"; wait for clock_period;
+--        data_in <= "000000"; wait for clock_period;
+--        data_in <= "100101"; wait for clock_period;
+--        data_in <= "001111"; wait for clock_period;
+--        data_in <= "110010"; wait for clock_period;
+--        data_in <= "011111"; wait for clock_period;
+--        data_in <= "100000"; wait for clock_period;
+--        data_in <= "110101"; wait for clock_period;
+--        data_in <= "010011"; wait for clock_period;
+--        data_in <= "111011"; wait for clock_period;
+--        data_in <= "000111"; wait for clock_period;
+--        data_in <= "101000"; wait for clock_period;
+--        data_in <= "011001"; wait for clock_period;
+--        data_in <= "110001"; wait for clock_period;
+--        data_in <= "100110"; wait for clock_period;
+--        data_in <= "010101"; wait for clock_period;
+--        data_in <= "001010"; wait for clock_period;
+--        data_in <= "111100"; wait for clock_period;
+--        data_in <= "101101"; wait for clock_period;
+--        data_in <= "000010"; wait for clock_period;
+--        data_in <= "011011"; wait for clock_period;
+--        data_in <= "110111"; wait for clock_period;
+--        data_in <= "100011"; wait for clock_period;
+--        data_in <= "001110"; wait for clock_period;
+--        data_in <= "111111"; wait for clock_period;
+        
+----        data_in_valid <= '0';
+----        --16-APSK
+           
+----        wait for 50 ns ;
+----        mod_type <= "101";
+----        data_in_valid <= '1';
+        
+--        data_in <= "000110"; wait for clock_period;
+--        data_in <= "001001"; wait for clock_period;
+--        data_in <= "000000"; wait for clock_period;
+--        data_in <= "000111"; wait for clock_period;
+--        data_in <= "000011"; wait for clock_period;
+--        data_in <= "001011"; wait for clock_period;
+--        data_in <= "000101"; wait for clock_period;
+--        data_in <= "000010"; wait for clock_period;
+--        data_in <= "000001"; wait for clock_period;
+--        data_in <= "000110"; wait for clock_period;
+--        data_in <= "001010"; wait for clock_period;
+--        data_in <= "000100"; wait for clock_period;
+--        data_in <= "001100"; wait for clock_period;
+--        data_in <= "000011"; wait for clock_period;
+--        data_in <= "001000"; wait for clock_period;
+--        data_in <= "000111"; wait for clock_period;
+--        data_in <= "000001"; wait for clock_period;
+--        data_in <= "000101"; wait for clock_period;
+--        data_in <= "000010"; wait for clock_period;
+--        data_in <= "001110"; wait for clock_period;
+--        data_in <= "001001"; wait for clock_period;
+--        data_in <= "000000"; wait for clock_period;
+--        data_in <= "001101"; wait for clock_period;
+--        data_in <= "001111"; wait for clock_period;
+--        data_in <= "000100"; wait for clock_period;
+--        data_in <= "001011"; wait for clock_period;
+--        data_in <= "001000"; wait for clock_period;
+--        data_in <= "001010"; wait for clock_period;
+--        data_in <= "000110"; wait for clock_period;
+--        data_in <= "000001"; wait for clock_period;
+                
+----        data_in_valid <= '0';
+----        --32-APSK
+           
+----        wait for 50 ns ;
+----        mod_type <= "110";
+----        data_in_valid <= '1';
+        
+--        data_in <= "010011"; wait for clock_period;
+--        data_in <= "000101"; wait for clock_period;
+--        data_in <= "001111"; wait for clock_period;
+--        data_in <= "000000"; wait for clock_period;
+--        data_in <= "001010"; wait for clock_period;
+--        data_in <= "011100"; wait for clock_period;
+--        data_in <= "000011"; wait for clock_period;
+--        data_in <= "010101"; wait for clock_period;
+--        data_in <= "000111"; wait for clock_period;
+--        data_in <= "001100"; wait for clock_period;
+--        data_in <= "011001"; wait for clock_period;
+--        data_in <= "001110"; wait for clock_period;
+--        data_in <= "010000"; wait for clock_period;
+--        data_in <= "011111"; wait for clock_period;
+--        data_in <= "010110"; wait for clock_period;
+--        data_in <= "001011"; wait for clock_period;
+--        data_in <= "000100"; wait for clock_period;
+--        data_in <= "011010"; wait for clock_period;
+--        data_in <= "001001"; wait for clock_period;
+--        data_in <= "000010"; wait for clock_period;
+--        data_in <= "010001"; wait for clock_period;
+--        data_in <= "011011"; wait for clock_period;
+--        data_in <= "001101"; wait for clock_period;
+--        data_in <= "010111"; wait for clock_period;
+--        data_in <= "011000"; wait for clock_period;
+--        data_in <= "000110"; wait for clock_period;
+--        data_in <= "000001"; wait for clock_period;
+--        data_in <= "011110"; wait for clock_period;
+--        data_in <= "010010"; wait for clock_period;
+--        data_in <= "000001"; wait for clock_period;
+        
+--          data_in_valid <= '0';
+--        --64-APSK
+           
+--        wait for 50 ns ;
+--        mod_type <= "111";
+      
+--        data_in_valid <= '1';
+
+     finish ;
+        
+       
     end process ;
 
 end Behavioral;

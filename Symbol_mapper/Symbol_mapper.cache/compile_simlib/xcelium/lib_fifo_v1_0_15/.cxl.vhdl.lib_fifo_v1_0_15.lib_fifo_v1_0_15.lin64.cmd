@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work lib_fifo_v1_0_15 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/lib_fifo_v1_0_15/.cxl.vhdl.lib_fifo_v1_0_15.lib_fifo_v1_0_15.lin64.cmf

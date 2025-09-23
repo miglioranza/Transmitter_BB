@@ -1,0 +1,5 @@
+Name:common_cpp_v1_0
+Type:CPP
+Link_SYSTEMC:empty
+Link_CPP:empty
+Link_C:empty

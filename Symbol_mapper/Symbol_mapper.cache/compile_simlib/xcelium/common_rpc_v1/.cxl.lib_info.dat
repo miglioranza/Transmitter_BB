@@ -1,0 +1,5 @@
+Name:common_rpc_v1
+Type:CPP
+Link_SYSTEMC:empty
+Link_CPP:protobuf
+Link_C:empty

@@ -54,6 +54,7 @@ entity Symbol_mapper is
           data_in_valid     : in  std_logic                       := '0';               
           data_in_ready     : in  std_logic                       := '0';
           data_in_last      : in  std_logic                       := '0'; -- end of each block 
+          
           -- Output ports      
           i_out             : out std_logic_vector(11 downto 0)   := (others => '0'); -- i output (input for DPD filter )
           q_out             : out std_logic_vector(11 downto 0)   := (others => '0'); -- q output (input for DPD filter)  
@@ -80,9 +81,9 @@ begin
      data_out_ready  <= '0';
      data_out_last   <= '0'; 
     elsif rising_edge (clk)  then
-         if data_in_ready =  '1'  and data_in_valid = '1'  then 
-         
-            data_out_ready   <= '1';	 
+--         if data_in_ready =  '1'  and data_in_valid = '1'  then 
+         if data_in_valid = '1' then
+--            data_out_ready   <= '1';	 
             
             case mod_type is 
         
@@ -584,7 +585,7 @@ begin
                   q_out   <= "100101011101";            -- -1699 
                 elsif data_in(4 downto 0) = "10111" then --24
                   i_out   <= "101110000110";            -- -1146
-                  q_out   <= "100101011101";            -- -1699 
+                  q_out    <= "100101011101";            -- -1699 
                 elsif data_in(4 downto 0) = "11000" then --25
                   i_out   <= "011111010110";            -- 2006
                   q_out   <= "000110001111";            -- 399
@@ -813,18 +814,14 @@ begin
                 
             end case;
                  data_out_valid <= '1';
-                
-                 if data_in_last = '1' then 
-                    data_out_last  <= '1' ;      
-                 else      
-                    data_out_last  <= '0' ;  
-                 end if ; 
+                 data_out_last <= data_in_last ;
+             
     
-         elsif  data_in_ready =  '1' and data_in_valid = '0' then   
+--         elsif  data_in_ready =  '1' and data_in_valid = '0' then   
                  
-                      data_out_ready <= '1';   
-                      data_out_valid <= '0';   
-                      data_out_last  <= '0' ;               
+--                      data_out_ready <= '1';   
+--                      data_out_valid <= '0';   
+--                      data_out_last  <= '0' ;               
     
          else  
                                   

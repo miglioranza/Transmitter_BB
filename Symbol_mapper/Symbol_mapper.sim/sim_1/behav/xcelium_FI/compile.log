@@ -1,0 +1,11 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+./../../../../Symbol_mapper.srcs/sources_1/new/Symbol_mapper.vhd:
+	errors: 0, warnings: 0
+./../../../../Symbol_mapper.srcs/sim_1/new/Symbol_mapper_tb.vhd:
+	errors: 0, warnings: 0
+./../../../../Symbol_mapper.sim/sim_1/behav/xcelium_FI/Mapper_netlist.vhd:
+	errors: 0, warnings: 0
+XIL_DEFAULTLIB.SYMBOL_MAPPER (entity):
+	streams: 17, words: 1235
+XIL_DEFAULTLIB.SYMBOL_MAPPER:STRUCTURE (architecture):
+	streams: 1, words: 26948

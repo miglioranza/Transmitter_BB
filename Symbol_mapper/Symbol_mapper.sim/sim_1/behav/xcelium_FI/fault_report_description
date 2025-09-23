@@ -1,0 +1,3 @@
+To run the fault simulation, execute the run_all.sh script. The fault parameters (e.g., pulse width) can be modified in the fault_sim and good_sim scripts.
+The current fault results were obtained by varying the pulse width and frequency, with a total of 91 faults injected. This number was determined from the analysis of the LUTs that define the outcome of the symbol mapping procedure.
+To retrieve the fault ID of a specific LUT, for SET injection, run the Python script LUT_finder.py and adjust the search parameters.

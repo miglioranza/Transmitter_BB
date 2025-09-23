@@ -1,0 +1,18 @@
+xmvlog(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+DEFINE v_hdmi_rx1_v1_0_2  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_hdmi_rx1_v1_0_2
+|
+xmvlog: *W,DLCPTH (./cds.lib,2): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_hdmi_rx1_v1_0_2' (cds.lib command ignored).
+DEFINE dbg_intf  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dbg_intf
+|
+xmvlog: *W,DLCPTH (./cds.lib,3): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dbg_intf' (cds.lib command ignored).
+file: /ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/videoaxi4s_bridge_v1_0/hdl/videoaxi4s_bridge_v1_0_rfs.v
+	module videoaxi4s_bridge_v1_0_5.videoaxi4s_bridge_v1_0_5
+		errors: 0, warnings: 0
+	module videoaxi4s_bridge_v1_0_5.videoaxi4s_bridge_v1_0_5_axis
+		errors: 0, warnings: 0
+	module videoaxi4s_bridge_v1_0_5.videoaxi4s_bridge_v1_0_5_sub
+		errors: 0, warnings: 0
+	module videoaxi4s_bridge_v1_0_5.videoaxi4s_bridge_v1_0_5_dsc_fifo
+		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 2

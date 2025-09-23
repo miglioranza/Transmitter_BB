@@ -1,0 +1,713 @@
+xmvhdl(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+DEFINE axi_dwidth_converter_v2_1_25  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_dwidth_converter_v2_1_25
+|
+xmvhdl: *W,DLCPTH (./cds.lib,2): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_dwidth_converter_v2_1_25' (cds.lib command ignored).
+DEFINE axi_mmu_v2_1_23  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_mmu_v2_1_23
+|
+xmvhdl: *W,DLCPTH (./cds.lib,3): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_mmu_v2_1_23' (cds.lib command ignored).
+DEFINE xfft_v9_1_7  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xfft_v9_1_7
+|
+xmvhdl: *W,DLCPTH (./cds.lib,4): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xfft_v9_1_7' (cds.lib command ignored).
+DEFINE c_accum_v12_0_14  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/c_accum_v12_0_14
+|
+xmvhdl: *W,DLCPTH (./cds.lib,5): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/c_accum_v12_0_14' (cds.lib command ignored).
+DEFINE tcc_encoder_3gpp_v5_0_17  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tcc_encoder_3gpp_v5_0_17
+|
+xmvhdl: *W,DLCPTH (./cds.lib,6): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tcc_encoder_3gpp_v5_0_17' (cds.lib command ignored).
+DEFINE polar_v1_0_9  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/polar_v1_0_9
+|
+xmvhdl: *W,DLCPTH (./cds.lib,7): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/polar_v1_0_9' (cds.lib command ignored).
+DEFINE xdfe_common_v1_0_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_common_v1_0_0
+|
+xmvhdl: *W,DLCPTH (./cds.lib,8): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_common_v1_0_0' (cds.lib command ignored).
+DEFINE xdfe_equalizer_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_equalizer_v1_0_1
+|
+xmvhdl: *W,DLCPTH (./cds.lib,9): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_equalizer_v1_0_1' (cds.lib command ignored).
+DEFINE ieee802d3_rs_fec_v2_0_14  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ieee802d3_rs_fec_v2_0_14
+|
+xmvhdl: *W,DLCPTH (./cds.lib,10): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ieee802d3_rs_fec_v2_0_14' (cds.lib command ignored).
+DEFINE etrnic_v1_1_4  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/etrnic_v1_1_4
+|
+xmvhdl: *W,DLCPTH (./cds.lib,11): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/etrnic_v1_1_4' (cds.lib command ignored).
+DEFINE rs_encoder_v9_0_16  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/rs_encoder_v9_0_16
+|
+xmvhdl: *W,DLCPTH (./cds.lib,12): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/rs_encoder_v9_0_16' (cds.lib command ignored).
+DEFINE viterbi_v9_1_12  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/viterbi_v9_1_12
+|
+xmvhdl: *W,DLCPTH (./cds.lib,13): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/viterbi_v9_1_12' (cds.lib command ignored).
+DEFINE shell_utils_addr_remap_v1_0_4  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/shell_utils_addr_remap_v1_0_4
+|
+xmvhdl: *W,DLCPTH (./cds.lib,14): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/shell_utils_addr_remap_v1_0_4' (cds.lib command ignored).
+DEFINE xdfe_cc_mixer_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_cc_mixer_v1_0_1
+|
+xmvhdl: *W,DLCPTH (./cds.lib,15): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_cc_mixer_v1_0_1' (cds.lib command ignored).
+DEFINE ieee802d3_50g_rs_fec_v1_0_18  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ieee802d3_50g_rs_fec_v1_0_18
+|
+xmvhdl: *W,DLCPTH (./cds.lib,16): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ieee802d3_50g_rs_fec_v1_0_18' (cds.lib command ignored).
+DEFINE flexo_100g_rs_fec_v1_0_20  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/flexo_100g_rs_fec_v1_0_20
+|
+xmvhdl: *W,DLCPTH (./cds.lib,17): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/flexo_100g_rs_fec_v1_0_20' (cds.lib command ignored).
+DEFINE vby1hs_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/vby1hs_v1_0_1
+|
+xmvhdl: *W,DLCPTH (./cds.lib,18): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/vby1hs_v1_0_1' (cds.lib command ignored).
+DEFINE axi_usb2_device_v5_0_26  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_usb2_device_v5_0_26
+|
+xmvhdl: *W,DLCPTH (./cds.lib,19): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_usb2_device_v5_0_26' (cds.lib command ignored).
+DEFINE axis_data_fifo_v2_0_7  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_data_fifo_v2_0_7
+|
+xmvhdl: *W,DLCPTH (./cds.lib,20): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_data_fifo_v2_0_7' (cds.lib command ignored).
+DEFINE axis_combiner_v1_1_23  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_combiner_v1_1_23
+|
+xmvhdl: *W,DLCPTH (./cds.lib,21): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_combiner_v1_1_23' (cds.lib command ignored).
+DEFINE convolution_v9_0_15  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/convolution_v9_0_15
+|
+xmvhdl: *W,DLCPTH (./cds.lib,22): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/convolution_v9_0_15' (cds.lib command ignored).
+DEFINE lte_fft_v2_1_5  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_fft_v2_1_5
+|
+xmvhdl: *W,DLCPTH (./cds.lib,23): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_fft_v2_1_5' (cds.lib command ignored).
+DEFINE v_frmbuf_rd_v2_3_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_frmbuf_rd_v2_3_0
+|
+xmvhdl: *W,DLCPTH (./cds.lib,24): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_frmbuf_rd_v2_3_0' (cds.lib command ignored).
+DEFINE axi_uart16550_v2_0_27  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_uart16550_v2_0_27
+|
+xmvhdl: *W,DLCPTH (./cds.lib,25): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_uart16550_v2_0_27' (cds.lib command ignored).
+DEFINE dsp_macro_v1_0_2  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dsp_macro_v1_0_2
+|
+xmvhdl: *W,DLCPTH (./cds.lib,26): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dsp_macro_v1_0_2' (cds.lib command ignored).
+DEFINE tmr_comparator_v1_0_4  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tmr_comparator_v1_0_4
+|
+xmvhdl: *W,DLCPTH (./cds.lib,27): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tmr_comparator_v1_0_4' (cds.lib command ignored).
+DEFINE axi_bram_ctrl_v4_0_14  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_bram_ctrl_v4_0_14
+|
+xmvhdl: *W,DLCPTH (./cds.lib,28): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_bram_ctrl_v4_0_14' (cds.lib command ignored).
+DEFINE dfx_axi_shutdown_manager_v1_0_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dfx_axi_shutdown_manager_v1_0_0
+|
+xmvhdl: *W,DLCPTH (./cds.lib,29): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dfx_axi_shutdown_manager_v1_0_0' (cds.lib command ignored).
+DEFINE axis_clock_converter_v1_1_26  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_clock_converter_v1_1_26
+|
+xmvhdl: *W,DLCPTH (./cds.lib,30): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_clock_converter_v1_1_26' (cds.lib command ignored).
+DEFINE axi_sideband_util_v1_0_9  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_sideband_util_v1_0_9
+|
+xmvhdl: *W,DLCPTH (./cds.lib,31): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_sideband_util_v1_0_9' (cds.lib command ignored).
+DEFINE axi_firewall_v1_2_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_firewall_v1_2_0
+|
+xmvhdl: *W,DLCPTH (./cds.lib,32): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_firewall_v1_2_0' (cds.lib command ignored).
+DEFINE axi_master_burst_v2_0_7  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_master_burst_v2_0_7
+|
+xmvhdl: *W,DLCPTH (./cds.lib,33): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_master_burst_v2_0_7' (cds.lib command ignored).
+DEFINE axi_tft_v2_0_24  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_tft_v2_0_24
+|
+xmvhdl: *W,DLCPTH (./cds.lib,34): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_tft_v2_0_24' (cds.lib command ignored).
+DEFINE ernic_v3_1_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ernic_v3_1_1
+|
+xmvhdl: *W,DLCPTH (./cds.lib,35): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ernic_v3_1_1' (cds.lib command ignored).
+DEFINE axi_gpio_v2_0_27  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_gpio_v2_0_27
+|
+xmvhdl: *W,DLCPTH (./cds.lib,36): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_gpio_v2_0_27' (cds.lib command ignored).
+DEFINE xsdbs_v1_0_2  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xsdbs_v1_0_2
+|
+xmvhdl: *W,DLCPTH (./cds.lib,37): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xsdbs_v1_0_2' (cds.lib command ignored).
+DEFINE tcc_encoder_3gpplte_v4_0_16  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tcc_encoder_3gpplte_v4_0_16
+|
+xmvhdl: *W,DLCPTH (./cds.lib,38): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tcc_encoder_3gpplte_v4_0_16' (cds.lib command ignored).
+DEFINE mailbox_v2_1_15  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/mailbox_v2_1_15
+|
+xmvhdl: *W,DLCPTH (./cds.lib,39): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/mailbox_v2_1_15' (cds.lib command ignored).
+DEFINE ats_switch_v1_0_4  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ats_switch_v1_0_4
+|
+xmvhdl: *W,DLCPTH (./cds.lib,40): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ats_switch_v1_0_4' (cds.lib command ignored).
+DEFINE lte_3gpp_mimo_encoder_v4_0_16  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_3gpp_mimo_encoder_v4_0_16
+|
+xmvhdl: *W,DLCPTH (./cds.lib,41): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_3gpp_mimo_encoder_v4_0_16' (cds.lib command ignored).
+DEFINE axi_memory_init_v1_0_6  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_memory_init_v1_0_6
+|
+xmvhdl: *W,DLCPTH (./cds.lib,42): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_memory_init_v1_0_6' (cds.lib command ignored).
+DEFINE xdfe_cc_filter_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_cc_filter_v1_0_1
+|
+xmvhdl: *W,DLCPTH (./cds.lib,43): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_cc_filter_v1_0_1' (cds.lib command ignored).
+DEFINE axi_uartlite_v2_0_29  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_uartlite_v2_0_29
+|
+xmvhdl: *W,DLCPTH (./cds.lib,44): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_uartlite_v2_0_29' (cds.lib command ignored).
+DEFINE v_vid_sdi_tx_bridge_v2_0_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_vid_sdi_tx_bridge_v2_0_0
+|
+xmvhdl: *W,DLCPTH (./cds.lib,45): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_vid_sdi_tx_bridge_v2_0_0' (cds.lib command ignored).
+DEFINE canfd_v3_0_4  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/canfd_v3_0_4
+|
+xmvhdl: *W,DLCPTH (./cds.lib,46): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/canfd_v3_0_4' (cds.lib command ignored).
+DEFINE ieee802d3_200g_rs_fec_v2_0_4  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ieee802d3_200g_rs_fec_v2_0_4
+|
+xmvhdl: *W,DLCPTH (./cds.lib,47): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ieee802d3_200g_rs_fec_v2_0_4' (cds.lib command ignored).
+DEFINE pr_decoupler_v1_0_10  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/pr_decoupler_v1_0_10
+|
+xmvhdl: *W,DLCPTH (./cds.lib,48): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/pr_decoupler_v1_0_10' (cds.lib command ignored).
+DEFINE axi_interconnect_v1_7_19  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_interconnect_v1_7_19
+|
+xmvhdl: *W,DLCPTH (./cds.lib,49): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_interconnect_v1_7_19' (cds.lib command ignored).
+DEFINE v_hdmi_tx1_v1_0_2  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_hdmi_tx1_v1_0_2
+|
+xmvhdl: *W,DLCPTH (./cds.lib,50): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_hdmi_tx1_v1_0_2' (cds.lib command ignored).
+DEFINE dfx_bitstream_monitor_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dfx_bitstream_monitor_v1_0_1
+|
+xmvhdl: *W,DLCPTH (./cds.lib,51): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dfx_bitstream_monitor_v1_0_1' (cds.lib command ignored).
+DEFINE cic_compiler_v4_0_15  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/cic_compiler_v4_0_15
+|
+xmvhdl: *W,DLCPTH (./cds.lib,52): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/cic_compiler_v4_0_15' (cds.lib command ignored).
+DEFINE lte_3gpp_mimo_decoder_v3_0_17  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_3gpp_mimo_decoder_v3_0_17
+|
+xmvhdl: *W,DLCPTH (./cds.lib,53): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_3gpp_mimo_decoder_v3_0_17' (cds.lib command ignored).
+DEFINE v_dual_splitter_v1_0_9  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_dual_splitter_v1_0_9
+|
+xmvhdl: *W,DLCPTH (./cds.lib,54): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_dual_splitter_v1_0_9' (cds.lib command ignored).
+DEFINE lte_dl_channel_encoder_v4_0_3  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_dl_channel_encoder_v4_0_3
+|
+xmvhdl: *W,DLCPTH (./cds.lib,55): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_dl_channel_encoder_v4_0_3' (cds.lib command ignored).
+DEFINE dft_v4_2_2  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dft_v4_2_2
+|
+xmvhdl: *W,DLCPTH (./cds.lib,56): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dft_v4_2_2' (cds.lib command ignored).
+DEFINE mdm_v3_2_22  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/mdm_v3_2_22
+|
+xmvhdl: *W,DLCPTH (./cds.lib,57): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/mdm_v3_2_22' (cds.lib command ignored).
+DEFINE bs_switch_v1_0_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/bs_switch_v1_0_0
+|
+xmvhdl: *W,DLCPTH (./cds.lib,58): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/bs_switch_v1_0_0' (cds.lib command ignored).
+DEFINE axi4svideo_bridge_v1_0_13  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi4svideo_bridge_v1_0_13
+|
+xmvhdl: *W,DLCPTH (./cds.lib,59): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi4svideo_bridge_v1_0_13' (cds.lib command ignored).
+DEFINE axis_interconnect_v1_1_19  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_interconnect_v1_1_19
+|
+xmvhdl: *W,DLCPTH (./cds.lib,60): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_interconnect_v1_1_19' (cds.lib command ignored).
+DEFINE xdfe_fft_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_fft_v1_0_1
+|
+xmvhdl: *W,DLCPTH (./cds.lib,61): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_fft_v1_0_1' (cds.lib command ignored).
+DEFINE xdfe_nr_prach_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_nr_prach_v1_0_1
+|
+xmvhdl: *W,DLCPTH (./cds.lib,62): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_nr_prach_v1_0_1' (cds.lib command ignored).
+DEFINE axis_data_fifo_v1_1_26  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_data_fifo_v1_1_26
+|
+xmvhdl: *W,DLCPTH (./cds.lib,63): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_data_fifo_v1_1_26' (cds.lib command ignored).
+DEFINE axis_ila_intf_v1_0_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_ila_intf_v1_0_0
+|
+xmvhdl: *W,DLCPTH (./cds.lib,64): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_ila_intf_v1_0_0' (cds.lib command ignored).
+DEFINE tmr_sem_v1_0_20  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tmr_sem_v1_0_20
+|
+xmvhdl: *W,DLCPTH (./cds.lib,65): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tmr_sem_v1_0_20' (cds.lib command ignored).
+DEFINE videoaxi4s_bridge_v1_0_5  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/videoaxi4s_bridge_v1_0_5
+|
+xmvhdl: *W,DLCPTH (./cds.lib,66): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/videoaxi4s_bridge_v1_0_5' (cds.lib command ignored).
+DEFINE v_hdmi_rx1_v1_0_2  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_hdmi_rx1_v1_0_2
+|
+xmvhdl: *W,DLCPTH (./cds.lib,67): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_hdmi_rx1_v1_0_2' (cds.lib command ignored).
+DEFINE dbg_intf  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dbg_intf
+|
+xmvhdl: *W,DLCPTH (./cds.lib,68): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dbg_intf' (cds.lib command ignored).
+DEFINE axi_dwidth_converter_v2_1_25  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_dwidth_converter_v2_1_25
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,2): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_dwidth_converter_v2_1_25' (cds.lib command ignored).
+DEFINE axi_mmu_v2_1_23  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_mmu_v2_1_23
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,3): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_mmu_v2_1_23' (cds.lib command ignored).
+DEFINE xfft_v9_1_7  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xfft_v9_1_7
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,4): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xfft_v9_1_7' (cds.lib command ignored).
+DEFINE c_accum_v12_0_14  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/c_accum_v12_0_14
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,5): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/c_accum_v12_0_14' (cds.lib command ignored).
+DEFINE tcc_encoder_3gpp_v5_0_17  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tcc_encoder_3gpp_v5_0_17
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,6): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tcc_encoder_3gpp_v5_0_17' (cds.lib command ignored).
+DEFINE polar_v1_0_9  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/polar_v1_0_9
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,7): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/polar_v1_0_9' (cds.lib command ignored).
+DEFINE xdfe_common_v1_0_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_common_v1_0_0
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,8): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_common_v1_0_0' (cds.lib command ignored).
+DEFINE xdfe_equalizer_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_equalizer_v1_0_1
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,9): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_equalizer_v1_0_1' (cds.lib command ignored).
+DEFINE ieee802d3_rs_fec_v2_0_14  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ieee802d3_rs_fec_v2_0_14
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,10): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ieee802d3_rs_fec_v2_0_14' (cds.lib command ignored).
+DEFINE etrnic_v1_1_4  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/etrnic_v1_1_4
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,11): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/etrnic_v1_1_4' (cds.lib command ignored).
+DEFINE rs_encoder_v9_0_16  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/rs_encoder_v9_0_16
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,12): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/rs_encoder_v9_0_16' (cds.lib command ignored).
+DEFINE viterbi_v9_1_12  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/viterbi_v9_1_12
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,13): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/viterbi_v9_1_12' (cds.lib command ignored).
+DEFINE shell_utils_addr_remap_v1_0_4  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/shell_utils_addr_remap_v1_0_4
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,14): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/shell_utils_addr_remap_v1_0_4' (cds.lib command ignored).
+DEFINE xdfe_cc_mixer_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_cc_mixer_v1_0_1
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,15): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_cc_mixer_v1_0_1' (cds.lib command ignored).
+DEFINE ieee802d3_50g_rs_fec_v1_0_18  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ieee802d3_50g_rs_fec_v1_0_18
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,16): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ieee802d3_50g_rs_fec_v1_0_18' (cds.lib command ignored).
+DEFINE flexo_100g_rs_fec_v1_0_20  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/flexo_100g_rs_fec_v1_0_20
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,17): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/flexo_100g_rs_fec_v1_0_20' (cds.lib command ignored).
+DEFINE vby1hs_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/vby1hs_v1_0_1
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,18): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/vby1hs_v1_0_1' (cds.lib command ignored).
+DEFINE axi_usb2_device_v5_0_26  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_usb2_device_v5_0_26
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,19): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_usb2_device_v5_0_26' (cds.lib command ignored).
+DEFINE axis_data_fifo_v2_0_7  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_data_fifo_v2_0_7
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,20): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_data_fifo_v2_0_7' (cds.lib command ignored).
+DEFINE axis_combiner_v1_1_23  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_combiner_v1_1_23
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,21): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_combiner_v1_1_23' (cds.lib command ignored).
+DEFINE convolution_v9_0_15  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/convolution_v9_0_15
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,22): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/convolution_v9_0_15' (cds.lib command ignored).
+DEFINE lte_fft_v2_1_5  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_fft_v2_1_5
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,23): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_fft_v2_1_5' (cds.lib command ignored).
+DEFINE v_frmbuf_rd_v2_3_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_frmbuf_rd_v2_3_0
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,24): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_frmbuf_rd_v2_3_0' (cds.lib command ignored).
+DEFINE axi_uart16550_v2_0_27  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_uart16550_v2_0_27
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,25): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_uart16550_v2_0_27' (cds.lib command ignored).
+DEFINE dsp_macro_v1_0_2  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dsp_macro_v1_0_2
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,26): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dsp_macro_v1_0_2' (cds.lib command ignored).
+DEFINE tmr_comparator_v1_0_4  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tmr_comparator_v1_0_4
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,27): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tmr_comparator_v1_0_4' (cds.lib command ignored).
+DEFINE axi_bram_ctrl_v4_0_14  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_bram_ctrl_v4_0_14
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,28): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_bram_ctrl_v4_0_14' (cds.lib command ignored).
+DEFINE dfx_axi_shutdown_manager_v1_0_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dfx_axi_shutdown_manager_v1_0_0
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,29): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dfx_axi_shutdown_manager_v1_0_0' (cds.lib command ignored).
+DEFINE axis_clock_converter_v1_1_26  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_clock_converter_v1_1_26
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,30): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_clock_converter_v1_1_26' (cds.lib command ignored).
+DEFINE axi_sideband_util_v1_0_9  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_sideband_util_v1_0_9
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,31): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_sideband_util_v1_0_9' (cds.lib command ignored).
+DEFINE axi_firewall_v1_2_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_firewall_v1_2_0
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,32): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_firewall_v1_2_0' (cds.lib command ignored).
+DEFINE axi_master_burst_v2_0_7  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_master_burst_v2_0_7
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,33): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_master_burst_v2_0_7' (cds.lib command ignored).
+DEFINE axi_tft_v2_0_24  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_tft_v2_0_24
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,34): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_tft_v2_0_24' (cds.lib command ignored).
+DEFINE ernic_v3_1_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ernic_v3_1_1
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,35): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ernic_v3_1_1' (cds.lib command ignored).
+DEFINE axi_gpio_v2_0_27  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_gpio_v2_0_27
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,36): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_gpio_v2_0_27' (cds.lib command ignored).
+DEFINE xsdbs_v1_0_2  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xsdbs_v1_0_2
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,37): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xsdbs_v1_0_2' (cds.lib command ignored).
+DEFINE tcc_encoder_3gpplte_v4_0_16  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tcc_encoder_3gpplte_v4_0_16
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,38): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tcc_encoder_3gpplte_v4_0_16' (cds.lib command ignored).
+DEFINE mailbox_v2_1_15  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/mailbox_v2_1_15
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,39): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/mailbox_v2_1_15' (cds.lib command ignored).
+DEFINE ats_switch_v1_0_4  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ats_switch_v1_0_4
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,40): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ats_switch_v1_0_4' (cds.lib command ignored).
+DEFINE lte_3gpp_mimo_encoder_v4_0_16  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_3gpp_mimo_encoder_v4_0_16
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,41): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_3gpp_mimo_encoder_v4_0_16' (cds.lib command ignored).
+DEFINE axi_memory_init_v1_0_6  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_memory_init_v1_0_6
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,42): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_memory_init_v1_0_6' (cds.lib command ignored).
+DEFINE xdfe_cc_filter_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_cc_filter_v1_0_1
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,43): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_cc_filter_v1_0_1' (cds.lib command ignored).
+DEFINE axi_uartlite_v2_0_29  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_uartlite_v2_0_29
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,44): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_uartlite_v2_0_29' (cds.lib command ignored).
+DEFINE v_vid_sdi_tx_bridge_v2_0_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_vid_sdi_tx_bridge_v2_0_0
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,45): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_vid_sdi_tx_bridge_v2_0_0' (cds.lib command ignored).
+DEFINE canfd_v3_0_4  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/canfd_v3_0_4
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,46): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/canfd_v3_0_4' (cds.lib command ignored).
+DEFINE ieee802d3_200g_rs_fec_v2_0_4  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ieee802d3_200g_rs_fec_v2_0_4
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,47): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ieee802d3_200g_rs_fec_v2_0_4' (cds.lib command ignored).
+DEFINE pr_decoupler_v1_0_10  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/pr_decoupler_v1_0_10
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,48): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/pr_decoupler_v1_0_10' (cds.lib command ignored).
+DEFINE axi_interconnect_v1_7_19  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_interconnect_v1_7_19
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,49): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_interconnect_v1_7_19' (cds.lib command ignored).
+DEFINE v_hdmi_tx1_v1_0_2  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_hdmi_tx1_v1_0_2
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,50): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_hdmi_tx1_v1_0_2' (cds.lib command ignored).
+DEFINE dfx_bitstream_monitor_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dfx_bitstream_monitor_v1_0_1
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,51): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dfx_bitstream_monitor_v1_0_1' (cds.lib command ignored).
+DEFINE cic_compiler_v4_0_15  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/cic_compiler_v4_0_15
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,52): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/cic_compiler_v4_0_15' (cds.lib command ignored).
+DEFINE lte_3gpp_mimo_decoder_v3_0_17  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_3gpp_mimo_decoder_v3_0_17
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,53): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_3gpp_mimo_decoder_v3_0_17' (cds.lib command ignored).
+DEFINE v_dual_splitter_v1_0_9  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_dual_splitter_v1_0_9
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,54): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_dual_splitter_v1_0_9' (cds.lib command ignored).
+DEFINE lte_dl_channel_encoder_v4_0_3  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_dl_channel_encoder_v4_0_3
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,55): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_dl_channel_encoder_v4_0_3' (cds.lib command ignored).
+DEFINE dft_v4_2_2  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dft_v4_2_2
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,56): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dft_v4_2_2' (cds.lib command ignored).
+DEFINE mdm_v3_2_22  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/mdm_v3_2_22
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,57): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/mdm_v3_2_22' (cds.lib command ignored).
+DEFINE bs_switch_v1_0_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/bs_switch_v1_0_0
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,58): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/bs_switch_v1_0_0' (cds.lib command ignored).
+DEFINE axi4svideo_bridge_v1_0_13  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi4svideo_bridge_v1_0_13
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,59): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi4svideo_bridge_v1_0_13' (cds.lib command ignored).
+DEFINE axis_interconnect_v1_1_19  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_interconnect_v1_1_19
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,60): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_interconnect_v1_1_19' (cds.lib command ignored).
+DEFINE xdfe_fft_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_fft_v1_0_1
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,61): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_fft_v1_0_1' (cds.lib command ignored).
+DEFINE xdfe_nr_prach_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_nr_prach_v1_0_1
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,62): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_nr_prach_v1_0_1' (cds.lib command ignored).
+DEFINE axis_data_fifo_v1_1_26  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_data_fifo_v1_1_26
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,63): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_data_fifo_v1_1_26' (cds.lib command ignored).
+DEFINE axis_ila_intf_v1_0_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_ila_intf_v1_0_0
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,64): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_ila_intf_v1_0_0' (cds.lib command ignored).
+DEFINE tmr_sem_v1_0_20  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tmr_sem_v1_0_20
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,65): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tmr_sem_v1_0_20' (cds.lib command ignored).
+DEFINE videoaxi4s_bridge_v1_0_5  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/videoaxi4s_bridge_v1_0_5
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,66): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/videoaxi4s_bridge_v1_0_5' (cds.lib command ignored).
+DEFINE v_hdmi_rx1_v1_0_2  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_hdmi_rx1_v1_0_2
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,67): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_hdmi_rx1_v1_0_2' (cds.lib command ignored).
+DEFINE dbg_intf  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dbg_intf
+|
+xmvhdl_p: *W,DLCPTH (./cds.lib,68): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dbg_intf' (cds.lib command ignored).
+/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_ethernetlite_v3_0/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd:
+attribute keep of Phy_col : signal is "true";
+                        |
+xmvhdl_p: *W,ASILDR (/ihp/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip/xilinx/axi_ethernetlite_v3_0/hdl/axi_ethernetlite_v3_0_vh_rfs.vhd,7779|24): illegal entity designator [5.1].
+	errors: 0, warnings: 1
+DEFINE axi_dwidth_converter_v2_1_25  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_dwidth_converter_v2_1_25
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,2): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_dwidth_converter_v2_1_25' (cds.lib command ignored).
+DEFINE axi_mmu_v2_1_23  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_mmu_v2_1_23
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,3): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_mmu_v2_1_23' (cds.lib command ignored).
+DEFINE xfft_v9_1_7  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xfft_v9_1_7
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,4): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xfft_v9_1_7' (cds.lib command ignored).
+DEFINE c_accum_v12_0_14  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/c_accum_v12_0_14
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,5): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/c_accum_v12_0_14' (cds.lib command ignored).
+DEFINE tcc_encoder_3gpp_v5_0_17  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tcc_encoder_3gpp_v5_0_17
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,6): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tcc_encoder_3gpp_v5_0_17' (cds.lib command ignored).
+DEFINE polar_v1_0_9  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/polar_v1_0_9
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,7): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/polar_v1_0_9' (cds.lib command ignored).
+DEFINE xdfe_common_v1_0_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_common_v1_0_0
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,8): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_common_v1_0_0' (cds.lib command ignored).
+DEFINE xdfe_equalizer_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_equalizer_v1_0_1
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,9): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_equalizer_v1_0_1' (cds.lib command ignored).
+DEFINE ieee802d3_rs_fec_v2_0_14  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ieee802d3_rs_fec_v2_0_14
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,10): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ieee802d3_rs_fec_v2_0_14' (cds.lib command ignored).
+DEFINE etrnic_v1_1_4  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/etrnic_v1_1_4
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,11): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/etrnic_v1_1_4' (cds.lib command ignored).
+DEFINE rs_encoder_v9_0_16  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/rs_encoder_v9_0_16
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,12): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/rs_encoder_v9_0_16' (cds.lib command ignored).
+DEFINE viterbi_v9_1_12  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/viterbi_v9_1_12
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,13): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/viterbi_v9_1_12' (cds.lib command ignored).
+DEFINE shell_utils_addr_remap_v1_0_4  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/shell_utils_addr_remap_v1_0_4
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,14): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/shell_utils_addr_remap_v1_0_4' (cds.lib command ignored).
+DEFINE xdfe_cc_mixer_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_cc_mixer_v1_0_1
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,15): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_cc_mixer_v1_0_1' (cds.lib command ignored).
+DEFINE ieee802d3_50g_rs_fec_v1_0_18  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ieee802d3_50g_rs_fec_v1_0_18
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,16): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ieee802d3_50g_rs_fec_v1_0_18' (cds.lib command ignored).
+DEFINE flexo_100g_rs_fec_v1_0_20  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/flexo_100g_rs_fec_v1_0_20
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,17): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/flexo_100g_rs_fec_v1_0_20' (cds.lib command ignored).
+DEFINE vby1hs_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/vby1hs_v1_0_1
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,18): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/vby1hs_v1_0_1' (cds.lib command ignored).
+DEFINE axi_usb2_device_v5_0_26  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_usb2_device_v5_0_26
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,19): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_usb2_device_v5_0_26' (cds.lib command ignored).
+DEFINE axis_data_fifo_v2_0_7  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_data_fifo_v2_0_7
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,20): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_data_fifo_v2_0_7' (cds.lib command ignored).
+DEFINE axis_combiner_v1_1_23  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_combiner_v1_1_23
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,21): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_combiner_v1_1_23' (cds.lib command ignored).
+DEFINE convolution_v9_0_15  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/convolution_v9_0_15
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,22): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/convolution_v9_0_15' (cds.lib command ignored).
+DEFINE lte_fft_v2_1_5  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_fft_v2_1_5
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,23): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_fft_v2_1_5' (cds.lib command ignored).
+DEFINE v_frmbuf_rd_v2_3_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_frmbuf_rd_v2_3_0
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,24): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_frmbuf_rd_v2_3_0' (cds.lib command ignored).
+DEFINE axi_uart16550_v2_0_27  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_uart16550_v2_0_27
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,25): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_uart16550_v2_0_27' (cds.lib command ignored).
+DEFINE dsp_macro_v1_0_2  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dsp_macro_v1_0_2
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,26): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dsp_macro_v1_0_2' (cds.lib command ignored).
+DEFINE tmr_comparator_v1_0_4  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tmr_comparator_v1_0_4
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,27): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tmr_comparator_v1_0_4' (cds.lib command ignored).
+DEFINE axi_bram_ctrl_v4_0_14  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_bram_ctrl_v4_0_14
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,28): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_bram_ctrl_v4_0_14' (cds.lib command ignored).
+DEFINE dfx_axi_shutdown_manager_v1_0_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dfx_axi_shutdown_manager_v1_0_0
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,29): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dfx_axi_shutdown_manager_v1_0_0' (cds.lib command ignored).
+DEFINE axis_clock_converter_v1_1_26  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_clock_converter_v1_1_26
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,30): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_clock_converter_v1_1_26' (cds.lib command ignored).
+DEFINE axi_sideband_util_v1_0_9  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_sideband_util_v1_0_9
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,31): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_sideband_util_v1_0_9' (cds.lib command ignored).
+DEFINE axi_firewall_v1_2_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_firewall_v1_2_0
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,32): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_firewall_v1_2_0' (cds.lib command ignored).
+DEFINE axi_master_burst_v2_0_7  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_master_burst_v2_0_7
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,33): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_master_burst_v2_0_7' (cds.lib command ignored).
+DEFINE axi_tft_v2_0_24  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_tft_v2_0_24
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,34): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_tft_v2_0_24' (cds.lib command ignored).
+DEFINE ernic_v3_1_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ernic_v3_1_1
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,35): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ernic_v3_1_1' (cds.lib command ignored).
+DEFINE axi_gpio_v2_0_27  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_gpio_v2_0_27
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,36): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_gpio_v2_0_27' (cds.lib command ignored).
+DEFINE xsdbs_v1_0_2  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xsdbs_v1_0_2
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,37): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xsdbs_v1_0_2' (cds.lib command ignored).
+DEFINE tcc_encoder_3gpplte_v4_0_16  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tcc_encoder_3gpplte_v4_0_16
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,38): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tcc_encoder_3gpplte_v4_0_16' (cds.lib command ignored).
+DEFINE mailbox_v2_1_15  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/mailbox_v2_1_15
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,39): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/mailbox_v2_1_15' (cds.lib command ignored).
+DEFINE ats_switch_v1_0_4  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ats_switch_v1_0_4
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,40): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ats_switch_v1_0_4' (cds.lib command ignored).
+DEFINE lte_3gpp_mimo_encoder_v4_0_16  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_3gpp_mimo_encoder_v4_0_16
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,41): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_3gpp_mimo_encoder_v4_0_16' (cds.lib command ignored).
+DEFINE axi_memory_init_v1_0_6  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_memory_init_v1_0_6
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,42): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_memory_init_v1_0_6' (cds.lib command ignored).
+DEFINE xdfe_cc_filter_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_cc_filter_v1_0_1
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,43): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_cc_filter_v1_0_1' (cds.lib command ignored).
+DEFINE axi_uartlite_v2_0_29  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_uartlite_v2_0_29
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,44): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_uartlite_v2_0_29' (cds.lib command ignored).
+DEFINE v_vid_sdi_tx_bridge_v2_0_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_vid_sdi_tx_bridge_v2_0_0
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,45): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_vid_sdi_tx_bridge_v2_0_0' (cds.lib command ignored).
+DEFINE canfd_v3_0_4  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/canfd_v3_0_4
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,46): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/canfd_v3_0_4' (cds.lib command ignored).
+DEFINE ieee802d3_200g_rs_fec_v2_0_4  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ieee802d3_200g_rs_fec_v2_0_4
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,47): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/ieee802d3_200g_rs_fec_v2_0_4' (cds.lib command ignored).
+DEFINE pr_decoupler_v1_0_10  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/pr_decoupler_v1_0_10
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,48): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/pr_decoupler_v1_0_10' (cds.lib command ignored).
+DEFINE axi_interconnect_v1_7_19  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_interconnect_v1_7_19
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,49): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi_interconnect_v1_7_19' (cds.lib command ignored).
+DEFINE v_hdmi_tx1_v1_0_2  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_hdmi_tx1_v1_0_2
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,50): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_hdmi_tx1_v1_0_2' (cds.lib command ignored).
+DEFINE dfx_bitstream_monitor_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dfx_bitstream_monitor_v1_0_1
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,51): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dfx_bitstream_monitor_v1_0_1' (cds.lib command ignored).
+DEFINE cic_compiler_v4_0_15  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/cic_compiler_v4_0_15
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,52): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/cic_compiler_v4_0_15' (cds.lib command ignored).
+DEFINE lte_3gpp_mimo_decoder_v3_0_17  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_3gpp_mimo_decoder_v3_0_17
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,53): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_3gpp_mimo_decoder_v3_0_17' (cds.lib command ignored).
+DEFINE v_dual_splitter_v1_0_9  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_dual_splitter_v1_0_9
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,54): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_dual_splitter_v1_0_9' (cds.lib command ignored).
+DEFINE lte_dl_channel_encoder_v4_0_3  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_dl_channel_encoder_v4_0_3
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,55): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/lte_dl_channel_encoder_v4_0_3' (cds.lib command ignored).
+DEFINE dft_v4_2_2  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dft_v4_2_2
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,56): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dft_v4_2_2' (cds.lib command ignored).
+DEFINE mdm_v3_2_22  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/mdm_v3_2_22
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,57): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/mdm_v3_2_22' (cds.lib command ignored).
+DEFINE bs_switch_v1_0_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/bs_switch_v1_0_0
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,58): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/bs_switch_v1_0_0' (cds.lib command ignored).
+DEFINE axi4svideo_bridge_v1_0_13  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi4svideo_bridge_v1_0_13
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,59): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axi4svideo_bridge_v1_0_13' (cds.lib command ignored).
+DEFINE axis_interconnect_v1_1_19  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_interconnect_v1_1_19
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,60): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_interconnect_v1_1_19' (cds.lib command ignored).
+DEFINE xdfe_fft_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_fft_v1_0_1
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,61): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_fft_v1_0_1' (cds.lib command ignored).
+DEFINE xdfe_nr_prach_v1_0_1  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_nr_prach_v1_0_1
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,62): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/xdfe_nr_prach_v1_0_1' (cds.lib command ignored).
+DEFINE axis_data_fifo_v1_1_26  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_data_fifo_v1_1_26
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,63): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_data_fifo_v1_1_26' (cds.lib command ignored).
+DEFINE axis_ila_intf_v1_0_0  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_ila_intf_v1_0_0
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,64): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/axis_ila_intf_v1_0_0' (cds.lib command ignored).
+DEFINE tmr_sem_v1_0_20  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tmr_sem_v1_0_20
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,65): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/tmr_sem_v1_0_20' (cds.lib command ignored).
+DEFINE videoaxi4s_bridge_v1_0_5  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/videoaxi4s_bridge_v1_0_5
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,66): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/videoaxi4s_bridge_v1_0_5' (cds.lib command ignored).
+DEFINE v_hdmi_rx1_v1_0_2  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_hdmi_rx1_v1_0_2
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,67): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/v_hdmi_rx1_v1_0_2' (cds.lib command ignored).
+DEFINE dbg_intf  /home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dbg_intf
+|
+xmvhdl_cg: *W,DLCPTH (./cds.lib,68): cds.lib Invalid path '/home/miglioranza/project_1.xpr/project_1/project_1.cache/compile_simlib/xcelium/dbg_intf' (cds.lib command ignored).
+AXI_ETHERNETLITE_V3_0_24.LD_ARITH_REG (entity):
+	streams: 17, words: 3221
+AXI_ETHERNETLITE_V3_0_24.LD_ARITH_REG:IMP (architecture):
+	streams: 2, words: 9480
+AXI_ETHERNETLITE_V3_0_24.MUX_ONEHOT_F (entity):
+	streams: 10, words: 3537
+AXI_ETHERNETLITE_V3_0_24.MUX_ONEHOT_F:IMP (architecture):
+	streams: 5, words: 10209
+AXI_ETHERNETLITE_V3_0_24.MAC_PKG (package):
+	streams: 10, words: 5186
+AXI_ETHERNETLITE_V3_0_24.MAC_PKG:BODY (package body):
+	streams: 21, words: 22773
+AXI_ETHERNETLITE_V3_0_24.LFSR16 (entity):
+	streams: 6, words: 103
+AXI_ETHERNETLITE_V3_0_24.LFSR16:IMP (architecture):
+	streams: 1, words: 654
+AXI_ETHERNETLITE_V3_0_24.DEFER_STATE (entity):
+	streams: 13, words: 159
+AXI_ETHERNETLITE_V3_0_24.DEFER_STATE:IMPLEMENTATION (architecture):
+	streams: 1, words: 419
+AXI_ETHERNETLITE_V3_0_24.CRCNIBSHIFTREG (entity):
+	streams: 10, words: 677
+AXI_ETHERNETLITE_V3_0_24.CRCNIBSHIFTREG:IMPLEMENTATION (architecture):
+	streams: 1, words: 649
+AXI_ETHERNETLITE_V3_0_24.CNTR5BIT (entity):
+	streams: 10, words: 661
+AXI_ETHERNETLITE_V3_0_24.CNTR5BIT:IMPLEMENTATION (architecture):
+	streams: 1, words: 641
+AXI_ETHERNETLITE_V3_0_24.TX_STATEMACHINE (entity):
+	streams: 59, words: 2671
+AXI_ETHERNETLITE_V3_0_24.TX_STATEMACHINE:IMPLEMENTATION (architecture):
+	streams: 2, words: 1369
+AXI_ETHERNETLITE_V3_0_24.TX_INTRFCE (entity):
+	streams: 15, words: 851
+AXI_ETHERNETLITE_V3_0_24.TX_INTRFCE:IMPLEMENTATION (architecture):
+	streams: 3, words: 7079
+AXI_ETHERNETLITE_V3_0_24.RX_STATEMACHINE (entity):
+	streams: 35, words: 1956
+AXI_ETHERNETLITE_V3_0_24.RX_STATEMACHINE:IMP (architecture):
+	streams: 1, words: 1543
+AXI_ETHERNETLITE_V3_0_24.RX_INTRFCE (entity):
+	streams: 17, words: 867
+AXI_ETHERNETLITE_V3_0_24.RX_INTRFCE:IMPLEMENTATION (architecture):
+	streams: 3, words: 7177
+AXI_ETHERNETLITE_V3_0_24.RAM16X4 (entity):
+	streams: 17, words: 1408
+AXI_ETHERNETLITE_V3_0_24.RAM16X4:IMP (architecture):
+	streams: 1, words: 3703
+AXI_ETHERNETLITE_V3_0_24.MSH_CNT (entity):
+	streams: 14, words: 2913
+AXI_ETHERNETLITE_V3_0_24.MSH_CNT:IMP (architecture):
+	streams: 2, words: 8743
+AXI_ETHERNETLITE_V3_0_24.DEFERRAL (entity):
+	streams: 14, words: 693
+AXI_ETHERNETLITE_V3_0_24.DEFERRAL:IMPLEMENTATION (architecture):
+	streams: 4, words: 2552
+AXI_ETHERNETLITE_V3_0_24.CRCGENTX (entity):
+	streams: 10, words: 645
+AXI_ETHERNETLITE_V3_0_24.CRCGENTX:ARCH1 (architecture):
+	streams: 5, words: 13693
+AXI_ETHERNETLITE_V3_0_24.CRCGENRX (entity):
+	streams: 7, words: 366
+AXI_ETHERNETLITE_V3_0_24.CRCGENRX:ARCH1 (architecture):
+	streams: 2, words: 10332
+AXI_ETHERNETLITE_V3_0_24.BOCNTR (entity):
+	streams: 8, words: 382
+AXI_ETHERNETLITE_V3_0_24.BOCNTR:IMPLEMENTATION (architecture):
+	streams: 2, words: 1915
+AXI_ETHERNETLITE_V3_0_24.TRANSMIT (entity):
+	streams: 33, words: 2103
+AXI_ETHERNETLITE_V3_0_24.TRANSMIT:IMP (architecture):
+	streams: 15, words: 33260
+AXI_ETHERNETLITE_V3_0_24.RECEIVE (entity):
+	streams: 27, words: 1784
+AXI_ETHERNETLITE_V3_0_24.RECEIVE:IMP (architecture):
+	streams: 4, words: 4318
+AXI_ETHERNETLITE_V3_0_24.MACADDRRAM (entity):
+	streams: 13, words: 1150
+AXI_ETHERNETLITE_V3_0_24.MACADDRRAM:IMP (architecture):
+	streams: 2, words: 2220
+AXI_ETHERNETLITE_V3_0_24.MDIO_IF (entity):
+	streams: 20, words: 1283
+AXI_ETHERNETLITE_V3_0_24.MDIO_IF:IMP (architecture):
+	streams: 2, words: 2625
+AXI_ETHERNETLITE_V3_0_24.EMAC_DPRAM (entity):
+	streams: 21, words: 2097
+AXI_ETHERNETLITE_V3_0_24.EMAC_DPRAM:IMP (architecture):
+	streams: 2, words: 21169
+AXI_ETHERNETLITE_V3_0_24.EMAC (entity):
+	streams: 44, words: 3133
+AXI_ETHERNETLITE_V3_0_24.EMAC:IMP (architecture):
+	streams: 5, words: 9621
+AXI_ETHERNETLITE_V3_0_24.XEMAC (entity):
+	streams: 42, words: 4711
+AXI_ETHERNETLITE_V3_0_24.XEMAC:IMP (architecture):
+	streams: 10, words: 26830
+AXI_ETHERNETLITE_V3_0_24.AXI_INTERFACE (entity):
+	streams: 71, words: 15254
+AXI_ETHERNETLITE_V3_0_24.AXI_INTERFACE:RTL (architecture):
+	streams: 1, words: 5264
+AXI_ETHERNETLITE_V3_0_24.AXI_ETHERNETLITE (entity):
+	streams: 88, words: 10022
+AXI_ETHERNETLITE_V3_0_24.AXI_ETHERNETLITE:IMP (architecture):
+	streams: 11, words: 42656

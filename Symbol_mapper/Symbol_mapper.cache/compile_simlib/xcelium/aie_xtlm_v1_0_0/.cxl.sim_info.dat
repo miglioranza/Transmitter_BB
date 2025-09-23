@@ -1,0 +1,29 @@
+<SIMMODEL_NAME>:aie_xtlm
+<LIBRARY_NAME>:aie_xtlm_v1_0_0
+<LIBRARY_TYPE>:SystemC
+<OUTPUT_FORMAT>:library
+<SYSTEMC_SOURCES>:systemc/simlibs/aie_xtlm/aie_xtlm_v1_0_0/src/aie_axis_bridges.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/aie_xtlm/aie_xtlm_v1_0_0/src/aie_config.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/aie_xtlm/aie_xtlm_v1_0_0/src/aie_handle_sim_config.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/aie_xtlm/aie_xtlm_v1_0_0/src/aie_logger.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/aie_xtlm/aie_xtlm_v1_0_0/src/aie_logical.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/aie_xtlm/aie_xtlm_v1_0_0/src/aie_shim_sol_parser.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/aie_xtlm/aie_xtlm_v1_0_0/src/aie_xtlm.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/aie_xtlm/aie_xtlm_v1_0_0/src/math_engine_globals.cpp
+<SYSTEMC_INCLUDE_DIRS>:simlibs/aie_xtlm_v1_0_0/include,$xv_cpt_lib_path/aie_cluster_v1_0_0/include,simlibs/xtlm/include,simlibs/common_cpp_v1_0/include,/tps/boost_1_72_0
+<OSCI_INCLUDE_DIRS>:/data/osci_systemc/include
+<SYSTEMC_COMPILE_OPTION>:-64bit -noedg -cFlags " -O3 -fPIC -c -o
+<CPP_COMPILE_OPTION>:-O3
+<C_COMPILE_OPTION>:-O3
+<G++_COMPILE_FLAGS>:-Wall -fPIC -std=gnu++14,-Wno-reorder -Wno-sign-compare -Wno-deprecated-declarations,-DUSE_FST  -DNO_TCL,-DSC_INCLUDE_DYNAMIC_PROCESSES
+<G++_COMPILE_OPTIMIZE_FLAGS>:-DNDEBUG
+<G++_COMPILE_DEBUG_FLAGS>:-g -O0
+<SCCOM_COMPILE_FLAGS>:-DBOOST_SYSTEM_NO_DEPRECATED
+<G++_LDFLAGS_OPTION>:
+<GCC_LDFLAGS_OPTION>:
+<LDLIBS>:-L$xv_cpt_lib_path/aie_cluster_v1_0_0,-Lxcelium_lib/xtlm,-Lxcelium_lib/common_cpp_v1_0,-lxtlm -lcommon_cpp_v1_0
+<MORE_XSC_OPTIONS>:-v -mt auto -cppversion 14
+<G++_LDLIBS_OPTION>:
+<GCC_LDLIBS_OPTION>:
+<SHARED_LIBRARY>:aie_xtlm_v1_0_0
+<SIMULATOR_PLATFORM>:linux

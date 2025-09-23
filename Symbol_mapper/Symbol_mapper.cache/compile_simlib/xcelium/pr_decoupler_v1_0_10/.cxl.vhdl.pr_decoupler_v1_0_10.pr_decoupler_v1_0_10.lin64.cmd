@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work pr_decoupler_v1_0_10 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/pr_decoupler_v1_0_10/.cxl.vhdl.pr_decoupler_v1_0_10.pr_decoupler_v1_0_10.lin64.cmf

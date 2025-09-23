@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvlog -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit +incdir+/home/miglioranza/.cxl.ip/incl -work ethernet_1_10_25g_v2_7_2 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/ethernet_1_10_25g_v2_7_2/.cxl.verilog.ethernet_1_10_25g_v2_7_2.ethernet_1_10_25g_v2_7_2.lin64.cmf

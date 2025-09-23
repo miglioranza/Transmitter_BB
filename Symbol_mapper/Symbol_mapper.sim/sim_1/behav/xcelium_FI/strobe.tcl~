@@ -1,0 +1,3 @@
+fs_strobe {Symbol_mapper.q_out_reg[0]} -stop_on none 
+
+

@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work tcc_encoder_3gpp_v5_0_17 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/tcc_encoder_3gpp_v5_0_17/.cxl.vhdl.tcc_encoder_3gpp_v5_0_17.tcc_encoder_3gpp_v5_0_17.lin64.cmf

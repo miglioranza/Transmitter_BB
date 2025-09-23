@@ -1,0 +1,2 @@
+INCLUDE /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/cds.lib
+DEFINE xil_defaultlib xcelium_lib/xil_defaultlib

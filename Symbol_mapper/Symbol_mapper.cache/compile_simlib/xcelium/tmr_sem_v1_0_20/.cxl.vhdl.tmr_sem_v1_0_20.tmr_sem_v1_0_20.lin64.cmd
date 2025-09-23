@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work tmr_sem_v1_0_20 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/tmr_sem_v1_0_20/.cxl.vhdl.tmr_sem_v1_0_20.tmr_sem_v1_0_20.lin64.cmf

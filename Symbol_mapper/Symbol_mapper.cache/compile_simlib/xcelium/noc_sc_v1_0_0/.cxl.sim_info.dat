@@ -1,0 +1,30 @@
+<SIMMODEL_NAME>:noc_sc
+<LIBRARY_NAME>:noc_sc_v1_0_0
+<LIBRARY_TYPE>:SystemC
+<OUTPUT_FORMAT>:library
+<SYSTEMC_SOURCES>:systemc/simlibs/noc_sc/noc_sc_v1_0_0/src/NOCCoreTlm.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/noc_sc/noc_sc_v1_0_0/src/NOCCoreXtlm.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/noc_sc/noc_sc_v1_0_0/src/NOCDbgScTrace.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/noc_sc/noc_sc_v1_0_0/src/NOCDdrMcXtlm.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/noc_sc/noc_sc_v1_0_0/src/NOCDDRTlm.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/noc_sc/noc_sc_v1_0_0/src/NOCMasterUnitTlm.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/noc_sc/noc_sc_v1_0_0/src/NOCMasterUnitXtlm.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/noc_sc/noc_sc_v1_0_0/src/NOCPktTransportTypes.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/noc_sc/noc_sc_v1_0_0/src/NOCSlaveUnitTlm.cxx
+<SYSTEMC_SOURCES>:systemc/simlibs/noc_sc/noc_sc_v1_0_0/src/NOCSlaveUnitXtlm.cxx
+<SYSTEMC_INCLUDE_DIRS>:simlibs/noc_sc_v1_0_0/include,$xv_cpt_lib_path/noc_v1_0_0/include,simlibs/xtlm/include,simlibs/common_cpp_v1_0/include,/tps/boost_1_72_0
+<OSCI_INCLUDE_DIRS>:/data/osci_systemc/include
+<SYSTEMC_COMPILE_OPTION>:-64bit -noedg -cFlags " -O3 -fPIC -c -o
+<CPP_COMPILE_OPTION>:-O3
+<C_COMPILE_OPTION>:-O3
+<G++_COMPILE_FLAGS>:-Wall -fPIC -std=gnu++14,-Wno-reorder -Wno-deprecated-declarations -Wno-unused-function,-DSC_INCLUDE_DYNAMIC_PROCESSES -DBOOST_SYSTEM_NO_DEPRECATED
+<G++_COMPILE_OPTIMIZE_FLAGS>:-DNDEBUG -O3
+<G++_COMPILE_DEBUG_FLAGS>:-g3 -O0
+<G++_LDFLAGS_OPTION>:
+<GCC_LDFLAGS_OPTION>:
+<LDLIBS>:-L$xv_cpt_lib_path/noc_v1_0_0,-Lxcelium_lib/axi_tlm_ext_v1_0,-Lxcelium_lib/xtlm,-Lxcelium_lib/common_cpp_v1_0,-lnoc_v1_0_0 -laxi_tlm_ext_v1_0 -lnocbase_v1_0_0,-lxtlm -lcommon_cpp_v1_0
+<MORE_XSC_OPTIONS>:-v -cppversion 14
+<G++_LDLIBS_OPTION>:
+<GCC_LDLIBS_OPTION>:
+<SHARED_LIBRARY>:noc_sc_v1_0_0
+<SIMULATOR_PLATFORM>:all

@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work quadsgmii_v3_5_5 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/quadsgmii_v3_5_5/.cxl.vhdl.quadsgmii_v3_5_5.quadsgmii_v3_5_5.lin64.cmf

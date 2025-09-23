@@ -1,0 +1,26 @@
+<SIMMODEL_NAME>:pl_fileio
+<LIBRARY_NAME>:pl_fileio_v1_0_0
+<LIBRARY_TYPE>:SystemC
+<OUTPUT_FORMAT>:library
+<SYSTEMC_SOURCES>:systemc/simlibs/pl_fileio/pl_fileio_v1_0_0/src/pl_packetizer.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/pl_fileio/pl_fileio_v1_0_0/src/pl_packetizer_128bit.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/pl_fileio/pl_fileio_v1_0_0/src/pl_receiver.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/pl_fileio/pl_fileio_v1_0_0/src/pl_receiver_128bit.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/pl_fileio/pl_fileio_v1_0_0/src/pl_sender.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/pl_fileio/pl_fileio_v1_0_0/src/pl_sender_128bit.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/pl_fileio/pl_fileio_v1_0_0/src/uint128.cpp
+<SYSTEMC_SOURCES>:systemc/simlibs/pl_fileio/pl_fileio_v1_0_0/src/wrapper.cpp
+<SYSTEMC_INCLUDE_DIRS>:simlibs/pl_fileio_v1_0_0/include,/tps/boost_1_72_0
+<SYSTEMC_COMPILE_OPTION>:-64bit -noedg -cFlags " -O3 -fPIC -c -o
+<CPP_COMPILE_OPTION>:-O3
+<C_COMPILE_OPTION>:-O3
+<G++_COMPILE_FLAGS>:-Wall -fPIC
+<G++_COMPILE_DEBUG_FLAGS>:-g -O0
+<SCCOM_COMPILE_FLAGS>:-std=c++11
+<G++_LDFLAGS_OPTION>:
+<GCC_LDFLAGS_OPTION>:
+<MORE_XSC_OPTIONS>:-v
+<G++_LDLIBS_OPTION>:
+<GCC_LDLIBS_OPTION>:
+<SHARED_LIBRARY>:pl_fileio_v1_0_0
+<SIMULATOR_PLATFORM>:linux

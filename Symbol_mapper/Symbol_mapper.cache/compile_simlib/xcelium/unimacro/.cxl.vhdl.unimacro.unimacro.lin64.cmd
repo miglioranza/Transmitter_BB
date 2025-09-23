@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -v93 -RELAX -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -work unimacro -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/unimacro/.cxl.vhdl.unimacro.unimacro.lin64.cmf

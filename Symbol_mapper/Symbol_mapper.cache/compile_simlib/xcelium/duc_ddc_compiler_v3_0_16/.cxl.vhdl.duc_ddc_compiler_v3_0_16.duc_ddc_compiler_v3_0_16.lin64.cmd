@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work duc_ddc_compiler_v3_0_16 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/duc_ddc_compiler_v3_0_16/.cxl.vhdl.duc_ddc_compiler_v3_0_16.duc_ddc_compiler_v3_0_16.lin64.cmf

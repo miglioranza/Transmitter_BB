@@ -1,0 +1,20 @@
+<SIMMODEL_NAME>:sim_xdma_cpp
+<LIBRARY_NAME>:sim_xdma_cpp_v1
+<LIBRARY_TYPE>:CPP
+<OUTPUT_FORMAT>:library
+<CPP_SOURCES>:systemc/simlibs/sim_xdma_cpp/sim_xdma_cpp_v1/src/sim_xdma_helper.cxx
+<CPP_SOURCES>:systemc/simlibs/sim_xdma_cpp/sim_xdma_cpp_v1/src/xcl_api.cxx
+<CPP_SOURCES>:systemc/simlibs/sim_xdma_cpp/sim_xdma_cpp_v1/src/xcl_api_resp.cxx
+<CPP_INCLUDE_DIRS>:simlibs/sim_xdma_cpp_v1/include/,simlibs/common_rpc_v1/include,$xv_ext_lib_path/protobuf/include,simlibs/xtlm/include,simlibs/common_cpp_v1_0/include
+<SYSTEMC_COMPILE_OPTION>:-64bit -noedg -cFlags " -O3 -fPIC -c -o
+<CPP_COMPILE_OPTION>:-O3
+<C_COMPILE_OPTION>:-O3
+<G++_COMPILE_FLAGS>:-fPIC -std=c++11
+<G++_COMPILE_FLAGS_XCELIUM>:-fPIC -std=c++11 -DCADENCE
+<LDFLAGS_XCELIUM>:-Wl,--whole-archive /ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/simmodels/xcelium/20.09.006/lnx64/6.3/ext/utils/protobuf/libprotobuf.a -Wl,--no-whole-archive
+<G++_LDFLAGS_OPTION>:
+<GCC_LDFLAGS_OPTION>:
+<G++_LDLIBS_OPTION>:
+<GCC_LDLIBS_OPTION>:
+<SHARED_LIBRARY>:sim_xdma_cpp_v1
+<SIMULATOR_PLATFORM>:linux

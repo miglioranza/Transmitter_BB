@@ -1,0 +1,1 @@
+/ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin/xmvhdl -MESSAGES -NOLOG -CDSLIB cds.lib -HDLVAR hdl.var -64bit -V93 -work switch_core_top_v1_0_10 -f /ihp/departments/D-SYA/work/miglioranza/Symbol_mapper/Symbol_mapper.cache/compile_simlib/xcelium/switch_core_top_v1_0_10/.cxl.vhdl.switch_core_top_v1_0_10.switch_core_top_v1_0_10.lin64.cmf
