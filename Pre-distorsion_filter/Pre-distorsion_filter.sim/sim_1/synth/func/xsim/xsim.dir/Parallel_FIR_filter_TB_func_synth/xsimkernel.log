@@ -1,7 +1,7 @@
-Running: xsim.dir/Parallel_FIR_filter_TB_func_synth/xsimk -simmode gui -wdb Parallel_FIR_filter_TB_func_synth.wdb -simrunnum 0 -socket 34125
+Running: xsim.dir/Parallel_FIR_filter_TB_func_synth/xsimk -simmode gui -wdb Parallel_FIR_filter_TB_func_synth.wdb -simrunnum 0 -socket 50543
 Design successfully loaded
-Design Loading Memory Usage: 51640 KB (Peak: 51640 KB)
-Design Loading CPU Usage: 120 ms
+Design Loading Memory Usage: 52876 KB (Peak: 52876 KB)
+Design Loading CPU Usage: 110 ms
 Simulation completed
-Simulation Memory Usage: 143548 KB (Peak: 192956 KB)
-Simulation CPU Usage: 160 ms
+Simulation Memory Usage: 144860 KB (Peak: 194192 KB)
+Simulation CPU Usage: 230 ms

@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "8" -cc_db "cov-report" -cc_dir "cov_test" -cc_libs -cc_type "s" -L "xil_defaultlib" -L "secureip" --snapshot "Parallel_FIR_filter_TB_func_impl" "xil_defaultlib.Parallel_FIR_filter_TB" -log "elaborate.log" 

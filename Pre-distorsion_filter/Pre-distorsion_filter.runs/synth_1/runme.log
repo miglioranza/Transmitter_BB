@@ -9,7 +9,7 @@
     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
 source Parallel_FIR_filter.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3066.770 ; gain = 2.016 ; free physical = 49365 ; free virtual = 112104
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3060.832 ; gain = 2.016 ; free physical = 46605 ; free virtual = 108642
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/Pre-distorsion_filter'.
 WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/miglioranza/Pre-distorsion_filter' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.runs/synth_1'.)
@@ -19,44 +19,78 @@ Command: synth_design -top Parallel_FIR_filter -part xczu28dr-ffvg1517-2-e
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xczu28dr'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu28dr'
+INFO: [Device 21-403] Loading part xczu28dr-ffvg1517-2-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 2161291
+INFO: [Synth 8-7075] Helper process launched with PID 3768717
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3096.977 ; gain = 0.000 ; free physical = 49027 ; free virtual = 111767
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3462.320 ; gain = 228.688 ; free physical = 45298 ; free virtual = 107335
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Parallel_FIR_filter' [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:57]
-WARNING: [Synth 8-6014] Unused sequential element mul_reg_I_reg was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:104]
-WARNING: [Synth 8-6014] Unused sequential element mul_reg_Q_reg was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:105]
+WARNING: [Synth 8-6014] Unused sequential element acc_stage.temp_acc_I_reg was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:146]
+WARNING: [Synth 8-6014] Unused sequential element acc_stage.temp_acc_Q_reg was removed.  [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:147]
 INFO: [Synth 8-256] done synthesizing module 'Parallel_FIR_filter' (1#1) [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd:57]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3096.977 ; gain = 0.000 ; free physical = 48098 ; free virtual = 110839
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3503.289 ; gain = 269.656 ; free physical = 44320 ; free virtual = 106357
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3096.977 ; gain = 0.000 ; free physical = 48062 ; free virtual = 110802
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3521.102 ; gain = 287.469 ; free physical = 44317 ; free virtual = 106355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3521.102 ; gain = 287.469 ; free physical = 44317 ; free virtual = 106355
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3521.102 ; gain = 0.000 ; free physical = 44309 ; free virtual = 106346
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/constrs_1/new/Filter_constraints.xdc]
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3718.727 ; gain = 0.000 ; free physical = 45131 ; free virtual = 107169
+Finished Parsing XDC File [/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/constrs_1/new/Filter_constraints.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3718.727 ; gain = 0.000 ; free physical = 45131 ; free virtual = 107169
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3718.727 ; gain = 0.000 ; free physical = 45131 ; free virtual = 107168
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 3718.727 ; gain = 485.094 ; free physical = 45234 ; free virtual = 107272
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xczu28dr-ffvg1517-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
-INFO: [Device 21-403] Loading part xczu28dr-ffvg1517-2-e
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3106.980 ; gain = 10.004 ; free physical = 48061 ; free virtual = 110801
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 3718.727 ; gain = 485.094 ; free physical = 45234 ; free virtual = 107272
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3106.980 ; gain = 10.004 ; free physical = 47989 ; free virtual = 110729
+Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-No constraint files found.
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 3718.727 ; gain = 485.094 ; free physical = 45234 ; free virtual = 107272
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 3718.727 ; gain = 485.094 ; free physical = 45228 ; free virtual = 107266
+---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
++---Adders : 
+	  16 Input   16 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 2     
+	               28 Bit    Registers := 32    
 	               16 Bit    Registers := 2     
-	               12 Bit    Registers := 6     
-	                1 Bit    Registers := 2     
+	               12 Bit    Registers := 32    
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input   28 Bit        Muxes := 32    
+	   2 Input   12 Bit        Muxes := 32    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -69,184 +103,217 @@ BRAMs: 2160 (col length: RAMB18 192 RAMB36 96)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-DSP Report: Generating DSP temp_reg_Q2, operation Mode is: (A:0x5555)*B''.
-DSP Report: register Q_shift_reg_reg[13] is absorbed into DSP temp_reg_Q2.
-DSP Report: register Q_shift_reg_reg[14] is absorbed into DSP temp_reg_Q2.
-DSP Report: operator temp_reg_Q2 is absorbed into DSP temp_reg_Q2.
-DSP Report: Generating DSP temp_reg_Q0, operation Mode is: PCIN+(A:0x6aaa)*BCIN2.
-DSP Report: register Q_shift_reg_reg[15] is absorbed into DSP temp_reg_Q0.
-DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
-DSP Report: operator temp_reg_Q1 is absorbed into DSP temp_reg_Q0.
-DSP Report: Generating DSP temp_reg_Q0, operation Mode is: PCIN+(A:0x2666)*B''.
-DSP Report: register Q_shift_reg_reg[12] is absorbed into DSP temp_reg_Q0.
-DSP Report: register Q_shift_reg_reg[13] is absorbed into DSP temp_reg_Q0.
-DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
-DSP Report: operator temp_reg_Q3 is absorbed into DSP temp_reg_Q0.
-DSP Report: Generating DSP temp_reg_Q0, operation Mode is: C+(A:0x1999)*B''.
-DSP Report: register Q_shift_reg_reg[10] is absorbed into DSP temp_reg_Q0.
-DSP Report: register Q_shift_reg_reg[11] is absorbed into DSP temp_reg_Q0.
-DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
-DSP Report: operator temp_reg_Q5 is absorbed into DSP temp_reg_Q0.
-DSP Report: Generating DSP temp_reg_Q0, operation Mode is: PCIN+(A:0x1333)*B''.
-DSP Report: register Q_shift_reg_reg[9] is absorbed into DSP temp_reg_Q0.
-DSP Report: register Q_shift_reg_reg[10] is absorbed into DSP temp_reg_Q0.
-DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
-DSP Report: operator temp_reg_Q6 is absorbed into DSP temp_reg_Q0.
-DSP Report: Generating DSP temp_reg_Q0, operation Mode is: PCIN+(A:0xccd)*B.
-DSP Report: register Q_shift_reg_reg[8] is absorbed into DSP temp_reg_Q0.
-DSP Report: register Q_shift_reg_reg[9] is absorbed into DSP temp_reg_Q0.
-DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
-DSP Report: operator temp_reg_Q7 is absorbed into DSP temp_reg_Q0.
-DSP Report: Generating DSP temp_reg_Q0, operation Mode is: C+(A:0xccd)*B''.
-DSP Report: register Q_shift_reg_reg[5] is absorbed into DSP temp_reg_Q0.
-DSP Report: register Q_shift_reg_reg[6] is absorbed into DSP temp_reg_Q0.
-DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
-DSP Report: operator temp_reg_Q10 is absorbed into DSP temp_reg_Q0.
-DSP Report: Generating DSP temp_reg_Q0, operation Mode is: PCIN+(A:0x1333)*B''.
-DSP Report: register Q_shift_reg_reg[4] is absorbed into DSP temp_reg_Q0.
-DSP Report: register Q_shift_reg_reg[5] is absorbed into DSP temp_reg_Q0.
-DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
-DSP Report: operator temp_reg_Q11 is absorbed into DSP temp_reg_Q0.
-DSP Report: Generating DSP temp_reg_Q0, operation Mode is: PCIN+(A:0x1999)*B.
-DSP Report: register Q_shift_reg_reg[3] is absorbed into DSP temp_reg_Q0.
-DSP Report: register Q_shift_reg_reg[4] is absorbed into DSP temp_reg_Q0.
-DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
-DSP Report: operator temp_reg_Q12 is absorbed into DSP temp_reg_Q0.
-DSP Report: Generating DSP temp_reg_Q0, operation Mode is: C+(A:0x2666)*B''.
-DSP Report: register Q_shift_reg_reg[1] is absorbed into DSP temp_reg_Q0.
-DSP Report: register Q_shift_reg_reg[2] is absorbed into DSP temp_reg_Q0.
-DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
-DSP Report: operator temp_reg_Q14 is absorbed into DSP temp_reg_Q0.
-DSP Report: Generating DSP temp_reg_Q0, operation Mode is: PCIN+(A:0x5555)*B''.
-DSP Report: register Q_shift_reg_reg[0] is absorbed into DSP temp_reg_Q0.
-DSP Report: register Q_shift_reg_reg[1] is absorbed into DSP temp_reg_Q0.
-DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
-DSP Report: operator temp_reg_Q15 is absorbed into DSP temp_reg_Q0.
-DSP Report: Generating DSP temp_reg_Q0, operation Mode is: PCIN+(A:0x6aaa)*B2.
-DSP Report: register Q_shift_reg_reg[0] is absorbed into DSP temp_reg_Q0.
-DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
-DSP Report: operator temp_reg_Q16 is absorbed into DSP temp_reg_Q0.
-DSP Report: Generating DSP temp_reg_Q0, operation Mode is: PCIN+A:B.
-DSP Report: operator temp_reg_Q0 is absorbed into DSP temp_reg_Q0.
-DSP Report: Generating DSP temp_reg_I2, operation Mode is: (A:0x5555)*B''.
-DSP Report: register I_shift_reg_reg[13] is absorbed into DSP temp_reg_I2.
-DSP Report: register I_shift_reg_reg[14] is absorbed into DSP temp_reg_I2.
-DSP Report: operator temp_reg_I2 is absorbed into DSP temp_reg_I2.
-DSP Report: Generating DSP temp_reg_I0, operation Mode is: PCIN+(A:0x6aaa)*BCIN2.
-DSP Report: register I_shift_reg_reg[15] is absorbed into DSP temp_reg_I0.
-DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
-DSP Report: operator temp_reg_I1 is absorbed into DSP temp_reg_I0.
-DSP Report: Generating DSP temp_reg_I0, operation Mode is: PCIN+(A:0x2666)*B''.
-DSP Report: register I_shift_reg_reg[12] is absorbed into DSP temp_reg_I0.
-DSP Report: register I_shift_reg_reg[13] is absorbed into DSP temp_reg_I0.
-DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
-DSP Report: operator temp_reg_I3 is absorbed into DSP temp_reg_I0.
-DSP Report: Generating DSP temp_reg_I0, operation Mode is: C+(A:0x1999)*B''.
-DSP Report: register I_shift_reg_reg[10] is absorbed into DSP temp_reg_I0.
-DSP Report: register I_shift_reg_reg[11] is absorbed into DSP temp_reg_I0.
-DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
-DSP Report: operator temp_reg_I5 is absorbed into DSP temp_reg_I0.
-DSP Report: Generating DSP temp_reg_I0, operation Mode is: PCIN+(A:0x1333)*B''.
-DSP Report: register I_shift_reg_reg[9] is absorbed into DSP temp_reg_I0.
-DSP Report: register I_shift_reg_reg[10] is absorbed into DSP temp_reg_I0.
-DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
-DSP Report: operator temp_reg_I6 is absorbed into DSP temp_reg_I0.
-DSP Report: Generating DSP temp_reg_I0, operation Mode is: PCIN+(A:0xccd)*B.
-DSP Report: register I_shift_reg_reg[8] is absorbed into DSP temp_reg_I0.
-DSP Report: register I_shift_reg_reg[9] is absorbed into DSP temp_reg_I0.
-DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
-DSP Report: operator temp_reg_I7 is absorbed into DSP temp_reg_I0.
-DSP Report: Generating DSP temp_reg_I0, operation Mode is: C+(A:0xccd)*B''.
-DSP Report: register I_shift_reg_reg[5] is absorbed into DSP temp_reg_I0.
-DSP Report: register I_shift_reg_reg[6] is absorbed into DSP temp_reg_I0.
-DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
-DSP Report: operator temp_reg_I10 is absorbed into DSP temp_reg_I0.
-DSP Report: Generating DSP temp_reg_I0, operation Mode is: PCIN+(A:0x1333)*B''.
-DSP Report: register I_shift_reg_reg[4] is absorbed into DSP temp_reg_I0.
-DSP Report: register I_shift_reg_reg[5] is absorbed into DSP temp_reg_I0.
-DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
-DSP Report: operator temp_reg_I11 is absorbed into DSP temp_reg_I0.
-DSP Report: Generating DSP temp_reg_I0, operation Mode is: PCIN+(A:0x1999)*B.
-DSP Report: register I_shift_reg_reg[3] is absorbed into DSP temp_reg_I0.
-DSP Report: register I_shift_reg_reg[4] is absorbed into DSP temp_reg_I0.
-DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
-DSP Report: operator temp_reg_I12 is absorbed into DSP temp_reg_I0.
-DSP Report: Generating DSP temp_reg_I0, operation Mode is: C+(A:0x2666)*B''.
-DSP Report: register I_shift_reg_reg[1] is absorbed into DSP temp_reg_I0.
-DSP Report: register I_shift_reg_reg[2] is absorbed into DSP temp_reg_I0.
-DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
-DSP Report: operator temp_reg_I14 is absorbed into DSP temp_reg_I0.
-DSP Report: Generating DSP temp_reg_I0, operation Mode is: PCIN+(A:0x5555)*B''.
-DSP Report: register I_shift_reg_reg[0] is absorbed into DSP temp_reg_I0.
-DSP Report: register I_shift_reg_reg[1] is absorbed into DSP temp_reg_I0.
-DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
-DSP Report: operator temp_reg_I15 is absorbed into DSP temp_reg_I0.
-DSP Report: Generating DSP temp_reg_I0, operation Mode is: PCIN+(A:0x6aaa)*B2.
-DSP Report: register I_shift_reg_reg[0] is absorbed into DSP temp_reg_I0.
-DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
-DSP Report: operator temp_reg_I16 is absorbed into DSP temp_reg_I0.
-DSP Report: Generating DSP temp_reg_I0, operation Mode is: PCIN+A:B.
-DSP Report: operator temp_reg_I0 is absorbed into DSP temp_reg_I0.
+DSP Report: Generating DSP mul_reg_Q[1]0, operation Mode is: ((A:0x5555)*B or 0).
+DSP Report: operator mul_reg_Q[1]0 is absorbed into DSP mul_reg_Q[1]0.
+DSP Report: Generating DSP mul_reg_Q[2]0, operation Mode is: ((A:0x2666)*B or 0).
+DSP Report: operator mul_reg_Q[2]0 is absorbed into DSP mul_reg_Q[2]0.
+DSP Report: Generating DSP mul_reg_Q[4]0, operation Mode is: ((A:0x1999)*B or 0).
+DSP Report: operator mul_reg_Q[4]0 is absorbed into DSP mul_reg_Q[4]0.
+DSP Report: Generating DSP mul_reg_Q[5]0, operation Mode is: ((A:0x1333)*B or 0).
+DSP Report: operator mul_reg_Q[5]0 is absorbed into DSP mul_reg_Q[5]0.
+DSP Report: Generating DSP mul_reg_Q[6]0, operation Mode is: ((A:0xccd)*B or 0).
+DSP Report: operator mul_reg_Q[6]0 is absorbed into DSP mul_reg_Q[6]0.
+DSP Report: Generating DSP mul_reg_Q[9]0, operation Mode is: ((A:0xccd)*B or 0).
+DSP Report: operator mul_reg_Q[9]0 is absorbed into DSP mul_reg_Q[9]0.
+DSP Report: Generating DSP mul_reg_Q[10]0, operation Mode is: ((A:0x1333)*B or 0).
+DSP Report: operator mul_reg_Q[10]0 is absorbed into DSP mul_reg_Q[10]0.
+DSP Report: Generating DSP mul_reg_Q[11]0, operation Mode is: ((A:0x1999)*B or 0).
+DSP Report: operator mul_reg_Q[11]0 is absorbed into DSP mul_reg_Q[11]0.
+DSP Report: Generating DSP mul_reg_Q[13]0, operation Mode is: ((A:0x2666)*B or 0).
+DSP Report: operator mul_reg_Q[13]0 is absorbed into DSP mul_reg_Q[13]0.
+DSP Report: Generating DSP mul_reg_Q[14]0, operation Mode is: ((A:0x5555)*B or 0).
+DSP Report: operator mul_reg_Q[14]0 is absorbed into DSP mul_reg_Q[14]0.
+DSP Report: Generating DSP mul_reg_Q[15]0, operation Mode is: ((A:0x6aaa)*B or 0).
+DSP Report: operator mul_reg_Q[15]0 is absorbed into DSP mul_reg_Q[15]0.
+DSP Report: Generating DSP mul_reg_Q[0]0, operation Mode is: ((A:0x6aaa)*B or 0).
+DSP Report: operator mul_reg_Q[0]0 is absorbed into DSP mul_reg_Q[0]0.
+DSP Report: Generating DSP mul_reg_I[1]0, operation Mode is: ((A:0x5555)*B or 0).
+DSP Report: operator mul_reg_I[1]0 is absorbed into DSP mul_reg_I[1]0.
+DSP Report: Generating DSP mul_reg_I[2]0, operation Mode is: ((A:0x2666)*B or 0).
+DSP Report: operator mul_reg_I[2]0 is absorbed into DSP mul_reg_I[2]0.
+DSP Report: Generating DSP mul_reg_I[4]0, operation Mode is: ((A:0x1999)*B or 0).
+DSP Report: operator mul_reg_I[4]0 is absorbed into DSP mul_reg_I[4]0.
+DSP Report: Generating DSP mul_reg_I[5]0, operation Mode is: ((A:0x1333)*B or 0).
+DSP Report: operator mul_reg_I[5]0 is absorbed into DSP mul_reg_I[5]0.
+DSP Report: Generating DSP mul_reg_I[6]0, operation Mode is: ((A:0xccd)*B or 0).
+DSP Report: operator mul_reg_I[6]0 is absorbed into DSP mul_reg_I[6]0.
+DSP Report: Generating DSP mul_reg_I[9]0, operation Mode is: ((A:0xccd)*B or 0).
+DSP Report: operator mul_reg_I[9]0 is absorbed into DSP mul_reg_I[9]0.
+DSP Report: Generating DSP mul_reg_I[10]0, operation Mode is: ((A:0x1333)*B or 0).
+DSP Report: operator mul_reg_I[10]0 is absorbed into DSP mul_reg_I[10]0.
+DSP Report: Generating DSP mul_reg_I[11]0, operation Mode is: ((A:0x1999)*B or 0).
+DSP Report: operator mul_reg_I[11]0 is absorbed into DSP mul_reg_I[11]0.
+DSP Report: Generating DSP mul_reg_I[13]0, operation Mode is: ((A:0x2666)*B or 0).
+DSP Report: operator mul_reg_I[13]0 is absorbed into DSP mul_reg_I[13]0.
+DSP Report: Generating DSP mul_reg_I[14]0, operation Mode is: ((A:0x5555)*B or 0).
+DSP Report: operator mul_reg_I[14]0 is absorbed into DSP mul_reg_I[14]0.
+DSP Report: Generating DSP mul_reg_I[15]0, operation Mode is: ((A:0x6aaa)*B or 0).
+DSP Report: operator mul_reg_I[15]0 is absorbed into DSP mul_reg_I[15]0.
+DSP Report: Generating DSP mul_reg_I[0]0, operation Mode is: ((A:0x6aaa)*B or 0).
+DSP Report: operator mul_reg_I[0]0 is absorbed into DSP mul_reg_I[0]0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 3441.621 ; gain = 344.645 ; free physical = 48055 ; free virtual = 110799
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3718.727 ; gain = 485.094 ; free physical = 45210 ; free virtual = 107253
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
-+--------------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name         | DSP Mapping           | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+--------------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Parallel_FIR_filter | (A:0x5555)*B''        | 16     | 12     | -      | -      | 28     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+(A:0x6aaa)*BCIN2 | 16     | 12     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+(A:0x2666)*B''   | 15     | 12     | -      | -      | 32     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | C+(A:0x1999)*B''      | 12     | 14     | 32     | -      | 32     | 2    | 0    | 0    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+(A:0x1333)*B''   | 14     | 12     | -      | -      | 32     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+(A:0xccd)*B      | 13     | 12     | -      | -      | 32     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | C+(A:0xccd)*B''       | 12     | 13     | 32     | -      | 32     | 2    | 0    | 0    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+(A:0x1333)*B''   | 14     | 12     | -      | -      | 32     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+(A:0x1999)*B     | 14     | 12     | -      | -      | 32     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | C+(A:0x2666)*B''      | 12     | 15     | 32     | -      | 32     | 2    | 0    | 0    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+(A:0x5555)*B''   | 16     | 12     | -      | -      | 32     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+(A:0x6aaa)*B2    | 16     | 12     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+A:B              | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | (A:0x5555)*B''        | 16     | 12     | -      | -      | 28     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+(A:0x6aaa)*BCIN2 | 16     | 12     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+(A:0x2666)*B''   | 15     | 12     | -      | -      | 32     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | C+(A:0x1999)*B''      | 12     | 14     | 32     | -      | 32     | 2    | 0    | 0    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+(A:0x1333)*B''   | 14     | 12     | -      | -      | 32     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+(A:0xccd)*B      | 13     | 12     | -      | -      | 32     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | C+(A:0xccd)*B''       | 12     | 13     | 32     | -      | 32     | 2    | 0    | 0    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+(A:0x1333)*B''   | 14     | 12     | -      | -      | 32     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+(A:0x1999)*B     | 14     | 12     | -      | -      | 32     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | C+(A:0x2666)*B''      | 12     | 15     | 32     | -      | 32     | 2    | 0    | 0    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+(A:0x5555)*B''   | 16     | 12     | -      | -      | 32     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+(A:0x6aaa)*B2    | 16     | 12     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|Parallel_FIR_filter | PCIN+A:B              | 14     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-+--------------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++--------------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name         | DSP Mapping         | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Parallel_FIR_filter | ((A:0x5555)*B or 0) | 16     | 12     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0x2666)*B or 0) | 15     | 12     | -      | -      | 27     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0x1999)*B or 0) | 14     | 12     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0x1333)*B or 0) | 14     | 12     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0xccd)*B or 0)  | 13     | 12     | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0xccd)*B or 0)  | 13     | 12     | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0x1333)*B or 0) | 14     | 12     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0x1999)*B or 0) | 14     | 12     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0x2666)*B or 0) | 15     | 12     | -      | -      | 27     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0x5555)*B or 0) | 16     | 12     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0x6aaa)*B or 0) | 16     | 12     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0x6aaa)*B or 0) | 16     | 12     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0x5555)*B or 0) | 16     | 12     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0x2666)*B or 0) | 15     | 12     | -      | -      | 27     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0x1999)*B or 0) | 14     | 12     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0x1333)*B or 0) | 14     | 12     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0xccd)*B or 0)  | 13     | 12     | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0xccd)*B or 0)  | 13     | 12     | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0x1333)*B or 0) | 14     | 12     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0x1999)*B or 0) | 14     | 12     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0x2666)*B or 0) | 15     | 12     | -      | -      | 27     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0x5555)*B or 0) | 16     | 12     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0x6aaa)*B or 0) | 16     | 12     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Parallel_FIR_filter | ((A:0x6aaa)*B or 0) | 16     | 12     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++--------------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
-No constraint files found.
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 3976.215 ; gain = 742.582 ; free physical = 44708 ; free virtual = 106752
+---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
+INFO: [Common 17-14] Message 'Synth 8-6779' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 3445.590 ; gain = 348.613 ; free physical = 48053 ; free virtual = 110798
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 3976.215 ; gain = 742.582 ; free physical = 44700 ; free virtual = 106743
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 3453.598 ; gain = 356.621 ; free physical = 48052 ; free virtual = 110797
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 4000.238 ; gain = 766.605 ; free physical = 44678 ; free virtual = 106722
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -264,52 +331,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 3453.598 ; gain = 356.621 ; free physical = 48052 ; free virtual = 110796
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 4015.113 ; gain = 781.480 ; free physical = 44677 ; free virtual = 106721
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 3453.598 ; gain = 356.621 ; free physical = 48052 ; free virtual = 110796
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 4015.113 ; gain = 781.480 ; free physical = 44677 ; free virtual = 106721
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 3453.598 ; gain = 356.621 ; free physical = 48052 ; free virtual = 110796
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 4015.113 ; gain = 781.480 ; free physical = 44668 ; free virtual = 106712
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 3453.598 ; gain = 356.621 ; free physical = 48052 ; free virtual = 110796
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 4015.113 ; gain = 781.480 ; free physical = 44668 ; free virtual = 106712
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 3453.598 ; gain = 356.621 ; free physical = 48052 ; free virtual = 110796
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 4015.113 ; gain = 781.480 ; free physical = 44668 ; free virtual = 106712
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 3453.598 ; gain = 356.621 ; free physical = 48052 ; free virtual = 110796
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-Static Shift Register Report:
-+--------------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name         | RTL Name               | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+--------------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Parallel_FIR_filter | Q_shift_reg_reg[7][11] | 3      | 12    | NO           | NO                 | YES               | 12     | 0       | 
-|Parallel_FIR_filter | I_shift_reg_reg[7][11] | 3      | 12    | NO           | NO                 | YES               | 12     | 0       | 
-+--------------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 4015.113 ; gain = 781.480 ; free physical = 44668 ; free virtual = 106712
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -322,51 +374,55 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+--------+------+
-|      |Cell    |Count |
-+------+--------+------+
-|1     |BUFG    |     1|
-|2     |CARRY8  |    24|
-|3     |DSP48E2 |    24|
-|4     |LUT1    |     9|
-|5     |LUT2    |   149|
-|6     |LUT3    |     1|
-|7     |SRL16E  |    24|
-|8     |FDRE    |   266|
-|9     |IBUF    |    28|
-|10    |OBUF    |    34|
-+------+--------+------+
-
-Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |   560|
-+------+---------+-------+------+
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |BUFG            |     1|
+|2     |CARRY8          |    28|
+|3     |DSP_ALU         |    24|
+|4     |DSP_A_B_DATA    |    24|
+|5     |DSP_C_DATA      |    24|
+|6     |DSP_MULTIPLIER  |    24|
+|7     |DSP_M_DATA      |    24|
+|8     |DSP_OUTPUT      |    24|
+|9     |DSP_PREADD      |    24|
+|10    |DSP_PREADD_DATA |    24|
+|11    |LUT1            |     1|
+|12    |LUT2            |   405|
+|13    |LUT3            |   169|
+|14    |LUT4            |    84|
+|15    |LUT5            |   206|
+|16    |LUT6            |    28|
+|17    |FDCE            |   406|
+|18    |FDRE            |    35|
+|19    |IBUF            |    27|
+|20    |OBUF            |    33|
++------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 3453.598 ; gain = 356.621 ; free physical = 48052 ; free virtual = 110796
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 4015.113 ; gain = 781.480 ; free physical = 44668 ; free virtual = 106712
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 3453.598 ; gain = 356.621 ; free physical = 48053 ; free virtual = 110797
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 3453.605 ; gain = 356.621 ; free physical = 48053 ; free virtual = 110797
+Synthesis finished with 0 errors, 0 critical warnings and 4169 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 4015.113 ; gain = 583.855 ; free physical = 44705 ; free virtual = 106749
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 4015.121 ; gain = 781.480 ; free physical = 44705 ; free virtual = 106749
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3467.535 ; gain = 0.000 ; free physical = 48150 ; free virtual = 110894
-INFO: [Netlist 29-17] Analyzing 77 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4026.020 ; gain = 0.000 ; free physical = 44803 ; free virtual = 106847
+INFO: [Netlist 29-17] Analyzing 80 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'Parallel_FIR_filter' is not ideal for floorplanning, since the cellview 'Parallel_FIR_filter' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3548.762 ; gain = 0.000 ; free physical = 48043 ; free virtual = 110787
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4125.664 ; gain = 0.000 ; free physical = 44708 ; free virtual = 106752
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 53 instances were transformed.
+  A total of 52 instances were transformed.
   BUFG => BUFGCE: 1 instance 
   DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 24 instances
-  IBUF => IBUF (IBUFCTRL, INBUF): 28 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 27 instances
 
-Synth Design complete, checksum: 9ba80a6c
+Synth Design complete, checksum: 2224e4b3
 INFO: [Common 17-83] Releasing license: Synthesis
-18 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+21 Infos, 106 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:53 . Memory (MB): peak = 3548.762 ; gain = 481.992 ; free physical = 48142 ; free virtual = 110887
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:01:25 . Memory (MB): peak = 4125.664 ; gain = 1064.832 ; free physical = 44871 ; free virtual = 106915
 INFO: [Common 17-1381] The checkpoint '/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.runs/synth_1/Parallel_FIR_filter.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Parallel_FIR_filter_utilization_synth.rpt -pb Parallel_FIR_filter_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed May 28 14:27:46 2025...
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 23 14:30:16 2025...

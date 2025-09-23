@@ -1,0 +1,32 @@
+
+ Options Set are : 
+
+   Command Line               : xcrg -cc_db cov-report -cc_dir cov_test/xsim.codeCov/cov-report/ -cc_report Cov_report -report_format html
+   Report Directory           : ./xcrg_report
+   Report Format              : html
+   Code Coverage DB Path      : cov-report
+   Code Coverage Dir Path     : cov_test/xsim.codeCov/cov-report/
+   Code Coverage Report Path  : Cov_report
+   Log File                   : xcrg.log
+
+
+                  Code Coverage Report 
+
+ INFO-RESTORE : Code Coverage Database found at cov_test/xsim.codeCov/cov-report//xsim.CCInfo
+
+ INFO-RESTORE : Code Coverage Info Restored Succesfull
+
+ XILINX VIVADO is set as              : /ihpusr/xilinx/vivado2021.2/Vivado/2021.2
+
+ Created Coverage Report Directory    : Cov_report
+
+  Generating Code Coverage Report 
+
+                      HTML Report 
+
+  Code Coverage HTML Report dir : Cov_report
+
+  Line Coverage Score 0
+
+  Code Coverage Report Generation done 
+

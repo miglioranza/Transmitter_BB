@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"Parallel_FIR_filter_TB_func_impl.vhd" \
+"../../../../../Pre-distorsion_filter.srcs/sim_1/new/Parallel_FIR_filter_TB.vhd" \
+
+# Do not sort compile order
+nosort

@@ -54,19 +54,22 @@
 #endif
 typedef void (*funcp)(char *, char *);
 extern int main(int, char**);
-IKI_DLLESPEC extern void execute_34(char*, char *);
-IKI_DLLESPEC extern void execute_35(char*, char *);
-IKI_DLLESPEC extern void execute_33(char*, char *);
+IKI_DLLESPEC extern void execute_44(char*, char *);
+IKI_DLLESPEC extern void execute_45(char*, char *);
+IKI_DLLESPEC extern void execute_46(char*, char *);
+IKI_DLLESPEC extern void execute_41(char*, char *);
+IKI_DLLESPEC extern void execute_42(char*, char *);
+IKI_DLLESPEC extern void execute_43(char*, char *);
 IKI_DLLESPEC extern void transaction_0(char*, char*, unsigned, unsigned, unsigned);
 IKI_DLLESPEC extern void vhdl_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
-funcp funcTab[5] = {(funcp)execute_34, (funcp)execute_35, (funcp)execute_33, (funcp)transaction_0, (funcp)vhdl_transfunc_eventcallback};
-const int NumRelocateId= 5;
+funcp funcTab[8] = {(funcp)execute_44, (funcp)execute_45, (funcp)execute_46, (funcp)execute_41, (funcp)execute_42, (funcp)execute_43, (funcp)transaction_0, (funcp)vhdl_transfunc_eventcallback};
+const int NumRelocateId= 8;
 
 void relocate(char *dp)
 {
-	iki_relocate(dp, "xsim.dir/Parallel_FIR_filter_TB_behav/xsim.reloc",  (void **)funcTab, 5);
-	iki_vhdl_file_variable_register(dp + 6288);
-	iki_vhdl_file_variable_register(dp + 6344);
+	iki_relocate(dp, "xsim.dir/Parallel_FIR_filter_TB_behav/xsim.reloc",  (void **)funcTab, 8);
+	iki_vhdl_file_variable_register(dp + 12696);
+	iki_vhdl_file_variable_register(dp + 12752);
 
 
 	/*Populate the transaction function pointer field in the whole net structure */
@@ -104,7 +107,10 @@ int main(int argc, char **argv)
     iki_set_sv_type_file_path_name("xsim.dir/Parallel_FIR_filter_TB_behav/xsim.svtype");
     iki_set_crvs_dump_file_path_name("xsim.dir/Parallel_FIR_filter_TB_behav/xsim.crvsdump");
     void* design_handle = iki_create_design("xsim.dir/Parallel_FIR_filter_TB_behav/xsim.mem", (void *)relocate, (void *)sensitize, (void *)simulate, (void*)0, 0, isimBridge_getWdbWriter(), 0, argc, argv);
-     iki_set_rc_trial_count(100);
+         iki_set_sv_code_coverage_dir("cov_test");
+    iki_set_sv_code_coverage_db("cov-report");
+    iki_set_sv_code_coverage_type("s");
+iki_set_rc_trial_count(100);
     (void) design_handle;
     return iki_simulate_design();
 }

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue Sep 23 14:30:29 2025
+# Process ID: 3769628
+# Current directory: /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.runs/impl_1
+# Command line: vivado -log Parallel_FIR_filter.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Parallel_FIR_filter.tcl -notrace
+# Log file: /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.runs/impl_1/Parallel_FIR_filter.vdi
+# Journal file: /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.runs/impl_1/vivado.jou
+# Running On: uxsrv005, OS: Linux, CPU Frequency: 3457.889 MHz, CPU Physical cores: 8, Host memory: 101335 MB
+#-----------------------------------------------------------
+source Parallel_FIR_filter.tcl -notrace

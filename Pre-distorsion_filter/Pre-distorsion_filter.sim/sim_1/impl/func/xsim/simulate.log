@@ -1,0 +1,4 @@
+Time resolution is 1 ps
+Note: End of simulation
+Time: 280 ns  Iteration: 0  Process: /Parallel_FIR_filter_TB/stimulus_process  File: /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sim_1/new/Parallel_FIR_filter_TB.vhd
+$finish called at time : 300 ns : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sim_1/new/Parallel_FIR_filter_TB.vhd" Line 129

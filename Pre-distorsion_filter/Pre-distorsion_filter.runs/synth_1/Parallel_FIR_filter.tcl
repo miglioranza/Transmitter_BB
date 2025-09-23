@@ -71,6 +71,11 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param simulator.xceliumInstallPath /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin
+set_param power.enableUnconnectedCarry8PinPower 1
+set_param chipscope.maxJobs 4
+set_param power.enableCarry8RouteBelPower 1
+set_param power.BramSDPPropagationFix 1
+set_param power.enableLutRouteBelPower 1
 set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config  -id {BD 41-759}  -new_severity {INFO} 
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMODT' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 
@@ -222,6 +227,7 @@ set_msg_config  -id {Timing 38-277}  -string {{WARNING: [Timing 38-277] The inst
 set_msg_config  -id {Timing 38-277}  -string {{WARNING: [Timing 38-277] The instance 'inst/i_xxv_ethernet_0_gt_1/inst/gen_gtwizard_gtye4_top.xxv_ethernet_0_gt_1_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST' has RXOUTCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks}}  -suppress 
 set_msg_config  -id {Timing 38-277}  -string {{WARNING: [Timing 38-277] The instance 'inst/i_xxv_ethernet_0_gt_1/inst/gen_gtwizard_gtye4_top.xxv_ethernet_0_gt_1_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST' has TXOUTCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[35] to constant 0}}  -suppress 
+set_msg_config  -id {Vivado 12-508}  -string {{WARNING: [Vivado 12-508] No pins matched 'pll_clk_gen/inst/BUFGCE_DIV_CLK3_inst/O'. [C:/1_no_backup/vivado_project/6G_hub_10G_ETH_for_zcu111/10G_ETH_for_zcu111.srcs/constrs_1/new/target_file.xdc:6]}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[34] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[33] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[32] to constant 0}}  -suppress 
@@ -232,6 +238,7 @@ set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undr
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[27] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[26] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[25] to constant 0}}  -suppress 
+set_msg_config  -id {Vivado 12-508}  -string {{WARNING: [Vivado 12-508] No pins matched 'pll_clk_gen/inst/BUFGCE_DIV_CLK3_inst/O'. [C:/1_no_backup/vivado_project/6G_hub_10G_ETH_for_zcu111/10G_ETH_for_zcu111.srcs/constrs_1/new/target_file.xdc:7]}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[24] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[23] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[22] to constant 0}}  -suppress 
@@ -242,6 +249,7 @@ set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undr
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[17] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[16] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[15] to constant 0}}  -suppress 
+set_msg_config  -id {Vivado 12-508}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[14] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[13] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[12] to constant 0}}  -suppress 
@@ -252,6 +260,7 @@ set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undr
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[7] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[6] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[5] to constant 0}}  -suppress 
+set_msg_config  -id {Project 1-498}  -string {{WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/1_no_backup/vivado_project/6G_hub_10G_ETH_for_zcu111/10G_ETH_for_zcu111.srcs/constrs_1/new/target_file.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[4] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[3] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[2] to constant 0}}  -suppress 
@@ -262,6 +271,8 @@ set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN2OUT' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN3OUT' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP0OUT' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 
+set_msg_config  -id {Vivado 12-1017}  -string {{WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/1_no_backup/vivado_project/6G_hub_10G_ETH_for_zcu111/10G_ETH_for_zcu111.runs/synth_1}}  -suppress 
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP1OUT' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP2OUT' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP3OUT' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 
@@ -312,6 +323,9 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/constrs_1/new/Filter_constraints.xdc
+set_property used_in_implementation false [get_files /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/constrs_1/new/Filter_constraints.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

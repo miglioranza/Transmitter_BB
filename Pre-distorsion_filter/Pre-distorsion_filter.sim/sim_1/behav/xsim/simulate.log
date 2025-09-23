@@ -1,4 +1,71 @@
 Time resolution is 1 ps
 Note: End of simulation
-Time: 275 ns  Iteration: 0  Process: /Parallel_FIR_filter_TB/stimulus_process  File: /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sim_1/new/Parallel_FIR_filter_TB.vhd
-$finish called at time : 275 ns : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sim_1/new/Parallel_FIR_filter_TB.vhd" Line 187
+Time: 280 ns  Iteration: 0  Process: /Parallel_FIR_filter_TB/stimulus_process  File: /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sim_1/new/Parallel_FIR_filter_TB.vhd
+$finish called at time : 300 ns : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sim_1/new/Parallel_FIR_filter_TB.vhd" Line 129
+ INFO-CC : Writing code coverage database at path : cov_test/xsim.codeCov/cov-report/xsim.CCInfo
+
+ Options Set are : 
+
+   Command Line               : xcrg -cc_db cov-report -cc_dir cov_test/xsim.codeCov/cov-report/ -cc_report Cov_report -report_format html
+   Report Directory           : ./xcrg_report
+   Report Format              : html
+   Code Coverage DB Path      : cov-report
+   Code Coverage Dir Path     : cov_test/xsim.codeCov/cov-report/
+   Code Coverage Report Path  : Cov_report
+   Log File                   : xcrg.log
+
+
+                  Code Coverage Report 
+
+ INFO-RESTORE : Code Coverage Database found at cov_test/xsim.codeCov/cov-report//xsim.CCInfo
+
+ INFO-RESTORE : Code Coverage Info Restored Succesfull
+
+                   Terminal Report 
+ XILINX VIVADO is set as              : /ihpusr/xilinx/vivado2021.2/Vivado/2021.2
+
+ Created Coverage Report Directory    : Cov_report
+
+  Generating Code Coverage Report 
+
+                      HTML Report 
+
+  Code Coverage HTML Report dir : Cov_report
+
+  Line Coverage Score 0
+
+  Code Coverage Report Generation done 
+
+[ERROR viaduct::backend::ffi] Missing HTTP status
+[ERROR viaduct::backend::ffi] Missing HTTP status
+Note: End of simulation
+Time: 280 ns  Iteration: 0  Process: /Parallel_FIR_filter_TB/stimulus_process  File: /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sim_1/new/Parallel_FIR_filter_TB.vhd
+$finish called at time : 300 ns : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sim_1/new/Parallel_FIR_filter_TB.vhd" Line 129
+Stopped at time : 35 ns : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" Line 124
+Stopped at time : 40 ns : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" Line 123
+Stopped at time : 40 ns : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" Line 158
+Note: End of simulation
+Time: 280 ns  Iteration: 0  Process: /Parallel_FIR_filter_TB/stimulus_process  File: /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sim_1/new/Parallel_FIR_filter_TB.vhd
+$finish called at time : 300 ns : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sim_1/new/Parallel_FIR_filter_TB.vhd" Line 129
+Stopped at time : 40 ns : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" Line 158
+Stopped at time : 45 ns : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" Line 157
+Stopped at time : 45 ns : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" Line 162
+Stopped at time : 0 fs : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" Line 92
+Stopped at time : 2500 ps : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" Line 92
+Stopped at time : 5 ns : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" Line 92
+Stopped at time : 30 ns : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" Line 98
+Note: End of simulation
+Time: 280 ns  Iteration: 0  Process: /Parallel_FIR_filter_TB/stimulus_process  File: /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sim_1/new/Parallel_FIR_filter_TB.vhd
+Stopped at time : 280 ns : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" Line 105
+Stopped at time : 0 fs : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" Line 118
+Stopped at time : 2500 ps : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" Line 118
+Stopped at time : 5 ns : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" Line 118
+Stopped at time : 30 ns : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" Line 129
+Stopped at time : 35 ns : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" Line 123
+Stopped at time : 40 ns : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" Line 123
+Stopped at time : 0 fs : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" Line 144
+Stopped at time : 2500 ps : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" Line 144
+Stopped at time : 40 ns : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" Line 154
+Note: End of simulation
+Time: 280 ns  Iteration: 0  Process: /Parallel_FIR_filter_TB/stimulus_process  File: /home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sim_1/new/Parallel_FIR_filter_TB.vhd
+Stopped at time : 290 ns : File "/home/miglioranza/Pre-distorsion_filter/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" Line 171
