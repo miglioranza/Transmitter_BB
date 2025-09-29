@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Wed Sep 24 15:39:33 2025
+# Process ID: 286588
+# Current directory: /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.runs/axis_data_fifo_0_synth_1
+# Command line: vivado -log axis_data_fifo_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source axis_data_fifo_0.tcl
+# Log file: /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.runs/axis_data_fifo_0_synth_1/axis_data_fifo_0.vds
+# Journal file: /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.runs/axis_data_fifo_0_synth_1/vivado.jou
+# Running On: uxsrv005, OS: Linux, CPU Frequency: 3457.889 MHz, CPU Physical cores: 8, Host memory: 101335 MB
+#-----------------------------------------------------------
+source axis_data_fifo_0.tcl -notrace

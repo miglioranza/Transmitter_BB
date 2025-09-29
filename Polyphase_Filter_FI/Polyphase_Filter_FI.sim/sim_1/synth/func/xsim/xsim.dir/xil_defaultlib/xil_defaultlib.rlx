@@ -1,0 +1,7 @@
+0.7
+2020.2
+Oct 19 2021
+02:56:52
+/home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.sim/sim_1/synth/func/xsim/Polyphase_filter_tb_func_synth.vhd,1759148741,vhdl,,,,\axis_data_fifo_0_xpm_counter_updn__parameterized0\;\axis_data_fifo_0_xpm_counter_updn__parameterized2\;\axis_data_fifo_0_xpm_counter_updn__parameterized2_0\;\axis_data_fifo_0_xpm_counter_updn__parameterized3\;\axis_data_fifo_0_xpm_counter_updn__parameterized3_1\;axis_data_fifo_0;axis_data_fifo_0_axis_data_fifo_v2_0_7_top;axis_data_fifo_0_xpm_cdc_sync_rst;axis_data_fifo_0_xpm_fifo_axis;axis_data_fifo_0_xpm_fifo_base;axis_data_fifo_0_xpm_fifo_reg_bit;axis_data_fifo_0_xpm_fifo_rst;axis_data_fifo_0_xpm_memory_base;polyphase_filter,,,,,,,,
+/home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.sim/sim_1/synth/func/xsim/glbl.v,1634335545,verilog,,,,glbl,,,,,,,,
+/home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.srcs/sim_1/new/Poly_Filter_TB.vhd,1759145192,vhdl,,,,polyphase_filter_tb,,,,,,,,

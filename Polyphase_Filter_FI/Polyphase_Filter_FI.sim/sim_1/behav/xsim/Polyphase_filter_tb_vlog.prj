@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../Polyphase_Filter_FI.ip_user_files/ipstatic/hdl" \
+"../../../../Polyphase_Filter_FI.gen/sources_1/ip/axis_data_fifo_0/sim/axis_data_fifo_0.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

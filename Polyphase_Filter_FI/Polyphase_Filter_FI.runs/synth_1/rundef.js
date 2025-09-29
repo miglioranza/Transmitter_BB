@@ -27,7 +27,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log Pipelined_Polyphase_Filter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Pipelined_Polyphase_Filter.tcl" );
+         "-log Polyphase_filter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Polyphase_filter.tcl" );
 
 
 
