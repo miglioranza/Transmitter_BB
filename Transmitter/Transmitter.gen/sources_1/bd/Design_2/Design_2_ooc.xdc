@@ -8,6 +8,5 @@
 ################################################################################
 create_clock -name clk -period 10 [get_ports clk]
 create_clock -name ldpc_core_clk -period 10 [get_ports ldpc_core_clk]
-create_clock -name clk_50MHz -period 20 [get_ports clk_50MHz]
 
 ################################################################################

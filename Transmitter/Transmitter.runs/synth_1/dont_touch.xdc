@@ -4,28 +4,28 @@
 # Block Designs: bd/Design_2/Design_2.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Design_2 || ORIG_REF_NAME==Design_2} -quiet] -quiet
 
-# IP: bd/Design_2/ip/Design_2_mapper_0_0/Design_2_mapper_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Design_2_mapper_0_0 || ORIG_REF_NAME==Design_2_mapper_0_0} -quiet] -quiet
+# IP: bd/Design_2/ip/Design_2_block_interleaver_0_0/Design_2_block_interleaver_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Design_2_block_interleaver_0_0 || ORIG_REF_NAME==Design_2_block_interleaver_0_0} -quiet] -quiet
+
+# IP: bd/Design_2/ip/Design_2_Scrambler_32bits_0_1/Design_2_Scrambler_32bits_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Design_2_Scrambler_32bits_0_1 || ORIG_REF_NAME==Design_2_Scrambler_32bits_0_1} -quiet] -quiet
+
+# IP: bd/Design_2/ip/Design_2_LDPC_encoder_0_2/Design_2_LDPC_encoder_0_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Design_2_LDPC_encoder_0_2 || ORIG_REF_NAME==Design_2_LDPC_encoder_0_2} -quiet] -quiet
 
 # IP: bd/Design_2/ip/Design_2_Pre_Distortion_Filter_0_0/Design_2_Pre_Distortion_Filter_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Design_2_Pre_Distortion_Filter_0_0 || ORIG_REF_NAME==Design_2_Pre_Distortion_Filter_0_0} -quiet] -quiet
 
-# IP: bd/Design_2/ip/Design_2_Scrambler_32bits_0_0/Design_2_Scrambler_32bits_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Design_2_Scrambler_32bits_0_0 || ORIG_REF_NAME==Design_2_Scrambler_32bits_0_0} -quiet] -quiet
-
-# IP: bd/Design_2/ip/Design_2_Encoder_0_0/Design_2_Encoder_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Design_2_Encoder_0_0 || ORIG_REF_NAME==Design_2_Encoder_0_0} -quiet] -quiet
-
-# IP: bd/Design_2/ip/Design_2_block_interleaver_0_0/Design_2_block_interleaver_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Design_2_block_interleaver_0_0 || ORIG_REF_NAME==Design_2_block_interleaver_0_0} -quiet] -quiet
-
-# IP: bd/Design_2/ip/Design_2_Pipelined_Polyphase_0_2/Design_2_Pipelined_Polyphase_0_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Design_2_Pipelined_Polyphase_0_2 || ORIG_REF_NAME==Design_2_Pipelined_Polyphase_0_2} -quiet] -quiet
+# IP: bd/Design_2/ip/Design_2_Control_unit_top_0_0/Design_2_Control_unit_top_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Design_2_Control_unit_top_0_0 || ORIG_REF_NAME==Design_2_Control_unit_top_0_0} -quiet] -quiet
 
 # IP: bd/Design_2/ip/Design_2_MUX_0_2/Design_2_MUX_0_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Design_2_MUX_0_2 || ORIG_REF_NAME==Design_2_MUX_0_2} -quiet] -quiet
 
-# IP: bd/Design_2/ip/Design_2_Control_unit_top_0_0/Design_2_Control_unit_top_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Design_2_Control_unit_top_0_0 || ORIG_REF_NAME==Design_2_Control_unit_top_0_0} -quiet] -quiet
+# IP: bd/Design_2/ip/Design_2_Symbol_mapper_0_0/Design_2_Symbol_mapper_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Design_2_Symbol_mapper_0_0 || ORIG_REF_NAME==Design_2_Symbol_mapper_0_0} -quiet] -quiet
+
+# IP: bd/Design_2/ip/Design_2_Polyphase_filter_0_0/Design_2_Polyphase_filter_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Design_2_Polyphase_filter_0_0 || ORIG_REF_NAME==Design_2_Polyphase_filter_0_0} -quiet] -quiet
 
 # XDC: /home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/Design_2_ooc.xdc

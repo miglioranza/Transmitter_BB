@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "axis_infrastructure_v1_1_0" -L "axis_data_fifo_v2_0_7" -L "ecc_v2_0_13" -L "fec_5g_common_v1_1_1" -L "sd_fec_v1_1_8" -L "uvm" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "tb_Design_2_wrapper_behav" "xil_defaultlib.tb_Design_2_wrapper" "xil_defaultlib.glbl" -log "elaborate.log" 

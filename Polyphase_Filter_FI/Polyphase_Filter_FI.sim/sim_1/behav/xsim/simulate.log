@@ -1,0 +1,4 @@
+Time resolution is 1 ps
+Note: End of simulation
+Time: 40145 ns  Iteration: 0  Process: /Polyphase_filter_tb/output_checker  File: /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.srcs/sim_1/new/Poly_Filter_TB.vhd
+$finish called at time : 40145 ns : File "/home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.srcs/sim_1/new/Poly_Filter_TB.vhd" Line 192

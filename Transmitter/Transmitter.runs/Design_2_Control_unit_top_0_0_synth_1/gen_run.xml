@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="Design_2_Control_unit_top_0_0_synth_1" LaunchPart="xczu28dr-ffvg1517-2-e" LaunchTime="1748873332">
+<GenRun Id="Design_2_Control_unit_top_0_0_synth_1" LaunchPart="xczu28dr-ffvg1517-2-e" LaunchTime="1759225263">
   <File Type="VDS-TIMING-PB" Name="Design_2_Control_unit_top_0_0_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="Design_2_Control_unit_top_0_0_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="Design_2_Control_unit_top_0_0.dcp"/>

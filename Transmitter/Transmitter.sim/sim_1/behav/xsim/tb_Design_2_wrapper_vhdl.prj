@@ -1,0 +1,25 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Transmitter.srcs/sources_1/new/MUX.vhd" \
+"../../../../Transmitter.ip_user_files/bd/Design_2/ipshared/9262/sources_1/new/Interleaver.vhd" \
+"../../../../Transmitter.ip_user_files/bd/Design_2/ip/Design_2_block_interleaver_0_0/sim/Design_2_block_interleaver_0_0.vhd" \
+"../../../../Transmitter.ip_user_files/bd/Design_2/ipshared/299a/sources_1/new/Scrambler_32bits.vhd" \
+"../../../../Transmitter.ip_user_files/bd/Design_2/ip/Design_2_Scrambler_32bits_0_1/sim/Design_2_Scrambler_32bits_0_1.vhd" \
+"../../../../Transmitter.ip_user_files/bd/Design_2/ipshared/37b8/sources_1/new/Input_controller.vhd" \
+"../../../../Transmitter.ip_user_files/bd/Design_2/ipshared/37b8/sources_1/new/LDPC_encoder.vhd" \
+"../../../../Transmitter.ip_user_files/bd/Design_2/ip/Design_2_LDPC_encoder_0_2/sim/Design_2_LDPC_encoder_0_2.vhd" \
+"../../../../Transmitter.ip_user_files/bd/Design_2/ipshared/db2d/Pre-distorsion_filter.srcs/sources_1/new/Parallel_FIR_filter.vhd" \
+"../../../../Transmitter.ip_user_files/bd/Design_2/ip/Design_2_Pre_Distortion_Filter_0_0/sim/Design_2_Pre_Distortion_Filter_0_0.vhd" \
+"../../../../Transmitter.ip_user_files/bd/Design_2/ipshared/00f1/sources_1/new/Control_unit_top.vhd" \
+"../../../../Transmitter.ip_user_files/bd/Design_2/ip/Design_2_Control_unit_top_0_0/sim/Design_2_Control_unit_top_0_0.vhd" \
+"../../../../Transmitter.ip_user_files/bd/Design_2/ip/Design_2_MUX_0_2/sim/Design_2_MUX_0_2.vhd" \
+"../../../../Transmitter.ip_user_files/bd/Design_2/ipshared/614a/sources_1/new/Symbol_mapper.vhd" \
+"../../../../Transmitter.ip_user_files/bd/Design_2/ip/Design_2_Symbol_mapper_0_0/sim/Design_2_Symbol_mapper_0_0.vhd" \
+"../../../../Transmitter.ip_user_files/bd/Design_2/ipshared/0e7d/Polyphase_Filter_FI.srcs/sources_1/new/Polyphase_filter.vhd" \
+"../../../../Transmitter.ip_user_files/bd/Design_2/ip/Design_2_Polyphase_filter_0_0/sim/Design_2_Polyphase_filter_0_0.vhd" \
+"../../../../Transmitter.ip_user_files/bd/Design_2/sim/Design_2.vhd" \
+"../../../../Transmitter.gen/sources_1/bd/Design_2/hdl/Design_2_wrapper.vhd" \
+"../../../../Transmitter.srcs/sim_1/new/tb_design_1_wrapper.vhd" \
+
+# Do not sort compile order
+nosort

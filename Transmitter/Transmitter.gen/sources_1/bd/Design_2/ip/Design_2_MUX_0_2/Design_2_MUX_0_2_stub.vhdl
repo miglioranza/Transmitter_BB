@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Mon Jun  2 15:51:19 2025
+-- Date        : Tue Sep 23 16:31:15 2025
 -- Host        : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top Design_2_MUX_0_2 -prefix
 --               Design_2_MUX_0_2_ Design_2_MUX_0_2_stub.vhdl
@@ -17,13 +17,10 @@ entity Design_2_MUX_0_2 is
     I_out : in STD_LOGIC_VECTOR ( 11 downto 0 );
     Q_out : in STD_LOGIC_VECTOR ( 11 downto 0 );
     data_out_valid : in STD_LOGIC;
-    ready_out_CU : out STD_LOGIC;
     dpd_I_OUT : in STD_LOGIC_VECTOR ( 11 downto 0 );
     dpd_Q_OUT : in STD_LOGIC_VECTOR ( 11 downto 0 );
     dpd_valid : in STD_LOGIC;
-    ready_out_mapper : out STD_LOGIC;
     select_signal : in STD_LOGIC;
-    ready_in : in STD_LOGIC;
     mux_I : out STD_LOGIC_VECTOR ( 11 downto 0 );
     mux_Q : out STD_LOGIC_VECTOR ( 11 downto 0 );
     mux_valid : out STD_LOGIC
@@ -35,7 +32,7 @@ architecture stub of Design_2_MUX_0_2 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "I_out[11:0],Q_out[11:0],data_out_valid,ready_out_CU,dpd_I_OUT[11:0],dpd_Q_OUT[11:0],dpd_valid,ready_out_mapper,select_signal,ready_in,mux_I[11:0],mux_Q[11:0],mux_valid";
+attribute black_box_pad_pin of stub : architecture is "I_out[11:0],Q_out[11:0],data_out_valid,dpd_I_OUT[11:0],dpd_Q_OUT[11:0],dpd_valid,select_signal,mux_I[11:0],mux_Q[11:0],mux_valid";
 attribute x_core_info : string;
 attribute x_core_info of stub : architecture is "MUX,Vivado 2021.2";
 begin

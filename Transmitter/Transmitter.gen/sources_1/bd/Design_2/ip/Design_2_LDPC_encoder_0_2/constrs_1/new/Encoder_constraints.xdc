@@ -1,0 +1,7 @@
+create_clock -name clk -period 5 [get_ports clk]
+set_false_path -from [get_ports {data_in[*]}]
+set_false_path -from [get_ports {reset}]
+set_false_path -from [get_ports {reset_fifos}] 
+set_false_path -from [get_ports {end_of_frame}] 
+set_false_path -from [get_ports {data_in_ready}] 
+set_false_path -from [get_ports {data_in_valid}] 

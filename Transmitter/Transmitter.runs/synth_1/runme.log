@@ -9,26 +9,22 @@
     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
 source Design_2_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3065.770 ; gain = 2.016 ; free physical = 51571 ; free virtual = 115754
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3064.996 ; gain = 2.016 ; free physical = 40838 ; free virtual = 107443
 INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/ihp/departments/D-SYA/work/miglioranza/Encoder'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/ihp/departments/D-SYA/work/miglioranza/Symbol_mapper'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/Scrambler_32bits'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/Control_unit_transmitter'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/Mapper'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/Interleaver_BB'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/Polyphase_Filter_FI'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/Pre-distorsion_filter'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/Polyphase_Filter_FI'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/Mapper_Tx'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/IP_repository'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/Data_splitter'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/miglioranza/FEC'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip'.
 WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:Control_unit_top:1.0'. The one found in IP location '/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs' will take precedence over the same IP in location /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new
-WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:mapper:1.0'. The one found in IP location '/home/miglioranza/Mapper' will take precedence over the same IP in location /home/miglioranza/Mapper/Mapper_1
-WARNING: [BD 41-1661] One or more IPs have been locked in the design 'Design_2.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
-List of locked IPs:
-Design_2_Control_unit_top_0_0
-
-add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3241.977 ; gain = 176.207 ; free physical = 51568 ; free virtual = 115751
+update_ip_catalog: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 3064.996 ; gain = 0.000 ; free physical = 40831 ; free virtual = 107436
+add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3241.207 ; gain = 176.211 ; free physical = 40819 ; free virtual = 107424
 Command: read_checkpoint -auto_incremental -incremental /home/miglioranza/Transmitter/Transmitter.srcs/utils_1/imports/synth_1/Design_2_wrapper.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /home/miglioranza/Transmitter/Transmitter.srcs/utils_1/imports/synth_1/Design_2_wrapper.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -41,85 +37,82 @@ WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis b
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1193607
+INFO: [Synth 8-7075] Helper process launched with PID 3614080
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3511.273 ; gain = 229.688 ; free physical = 50259 ; free virtual = 114443
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3515.469 ; gain = 231.656 ; free physical = 39589 ; free virtual = 106195
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Design_2_wrapper' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/hdl/Design_2_wrapper.vhd:46]
-INFO: [Synth 8-3491] module 'Design_2' declared at '/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/synth/Design_2.vhd:14' bound to instance 'Design_2_i' of component 'Design_2' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/hdl/Design_2_wrapper.vhd:79]
-INFO: [Synth 8-638] synthesizing module 'Design_2' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/synth/Design_2.vhd:50]
-INFO: [Synth 8-3491] module 'Design_2_Control_unit_top_0_0' declared at '/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-1193139-uxsrv005/realtime/Design_2_Control_unit_top_0_0_stub.vhdl:5' bound to instance 'Control_unit_top_0' of component 'Design_2_Control_unit_top_0_0' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/synth/Design_2.vhd:326]
-INFO: [Synth 8-638] synthesizing module 'Design_2_Control_unit_top_0_0' [/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-1193139-uxsrv005/realtime/Design_2_Control_unit_top_0_0_stub.vhdl:50]
-INFO: [Synth 8-3491] module 'Design_2_Encoder_0_0' declared at '/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-1193139-uxsrv005/realtime/Design_2_Encoder_0_0_stub.vhdl:5' bound to instance 'Encoder_0' of component 'Design_2_Encoder_0_0' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/synth/Design_2.vhd:368]
-INFO: [Synth 8-638] synthesizing module 'Design_2_Encoder_0_0' [/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-1193139-uxsrv005/realtime/Design_2_Encoder_0_0_stub.vhdl:29]
-INFO: [Synth 8-3491] module 'Design_2_MUX_0_2' declared at '/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-1193139-uxsrv005/realtime/Design_2_MUX_0_2_stub.vhdl:5' bound to instance 'MUX_0' of component 'Design_2_MUX_0_2' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/synth/Design_2.vhd:389]
-INFO: [Synth 8-638] synthesizing module 'Design_2_MUX_0_2' [/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-1193139-uxsrv005/realtime/Design_2_MUX_0_2_stub.vhdl:24]
-INFO: [Synth 8-3491] module 'Design_2_Pipelined_Polyphase_0_2' declared at '/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-1193139-uxsrv005/realtime/Design_2_Pipelined_Polyphase_0_2_stub.vhdl:5' bound to instance 'Pipelined_Polyphase_0' of component 'Design_2_Pipelined_Polyphase_0_2' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/synth/Design_2.vhd:405]
-INFO: [Synth 8-638] synthesizing module 'Design_2_Pipelined_Polyphase_0_2' [/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-1193139-uxsrv005/realtime/Design_2_Pipelined_Polyphase_0_2_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'Design_2_Pre_Distortion_Filter_0_0' declared at '/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-1193139-uxsrv005/realtime/Design_2_Pre_Distortion_Filter_0_0_stub.vhdl:5' bound to instance 'Pre_Distortion_Filter_0' of component 'Design_2_Pre_Distortion_Filter_0_0' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/synth/Design_2.vhd:418]
-INFO: [Synth 8-638] synthesizing module 'Design_2_Pre_Distortion_Filter_0_0' [/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-1193139-uxsrv005/realtime/Design_2_Pre_Distortion_Filter_0_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'Design_2_Scrambler_32bits_0_0' declared at '/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-1193139-uxsrv005/realtime/Design_2_Scrambler_32bits_0_0_stub.vhdl:5' bound to instance 'Scrambler_32bits_0' of component 'Design_2_Scrambler_32bits_0_0' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/synth/Design_2.vhd:431]
-INFO: [Synth 8-638] synthesizing module 'Design_2_Scrambler_32bits_0_0' [/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-1193139-uxsrv005/realtime/Design_2_Scrambler_32bits_0_0_stub.vhdl:25]
-INFO: [Synth 8-3491] module 'Design_2_block_interleaver_0_0' declared at '/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-1193139-uxsrv005/realtime/Design_2_block_interleaver_0_0_stub.vhdl:5' bound to instance 'block_interleaver_0' of component 'Design_2_block_interleaver_0_0' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/synth/Design_2.vhd:448]
-INFO: [Synth 8-638] synthesizing module 'Design_2_block_interleaver_0_0' [/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-1193139-uxsrv005/realtime/Design_2_block_interleaver_0_0_stub.vhdl:24]
-INFO: [Synth 8-3491] module 'Design_2_mapper_0_0' declared at '/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-1193139-uxsrv005/realtime/Design_2_mapper_0_0_stub.vhdl:5' bound to instance 'mapper_0' of component 'Design_2_mapper_0_0' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/synth/Design_2.vhd:464]
-INFO: [Synth 8-638] synthesizing module 'Design_2_mapper_0_0' [/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-1193139-uxsrv005/realtime/Design_2_mapper_0_0_stub.vhdl:26]
-INFO: [Synth 8-256] done synthesizing module 'Design_2' (1#1) [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/synth/Design_2.vhd:50]
-INFO: [Synth 8-256] done synthesizing module 'Design_2_wrapper' (2#1) [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/hdl/Design_2_wrapper.vhd:46]
-WARNING: [Synth 8-7129] Port data_in_ready_0 in module Design_2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port mod_cod_schemes_0[3] in module Design_2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port mod_cod_schemes_0[2] in module Design_2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port mod_cod_schemes_0[1] in module Design_2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port mod_cod_schemes_0[0] in module Design_2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port mod_type_0[2] in module Design_2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port mod_type_0[1] in module Design_2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port mod_type_0[0] in module Design_2 is either unconnected or has no load
+INFO: [Synth 8-638] synthesizing module 'Design_2_wrapper' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/hdl/Design_2_wrapper.vhd:37]
+INFO: [Synth 8-3491] module 'Design_2' declared at '/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/synth/Design_2.vhd:14' bound to instance 'Design_2_i' of component 'Design_2' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/hdl/Design_2_wrapper.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'Design_2' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/synth/Design_2.vhd:41]
+INFO: [Synth 8-3491] module 'Design_2_Control_unit_top_0_0' declared at '/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-3613565-uxsrv005/realtime/Design_2_Control_unit_top_0_0_stub.vhdl:5' bound to instance 'Control_unit_top_0' of component 'Design_2_Control_unit_top_0_0' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/synth/Design_2.vhd:272]
+INFO: [Synth 8-638] synthesizing module 'Design_2_Control_unit_top_0_0' [/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-3613565-uxsrv005/realtime/Design_2_Control_unit_top_0_0_stub.vhdl:46]
+INFO: [Synth 8-3491] module 'Design_2_LDPC_encoder_0_2' declared at '/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-3613565-uxsrv005/realtime/Design_2_LDPC_encoder_0_2_stub.vhdl:5' bound to instance 'LDPC_encoder_0' of component 'Design_2_LDPC_encoder_0_2' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/synth/Design_2.vhd:310]
+INFO: [Synth 8-638] synthesizing module 'Design_2_LDPC_encoder_0_2' [/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-3613565-uxsrv005/realtime/Design_2_LDPC_encoder_0_2_stub.vhdl:26]
+INFO: [Synth 8-3491] module 'Design_2_MUX_0_2' declared at '/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-3613565-uxsrv005/realtime/Design_2_MUX_0_2_stub.vhdl:5' bound to instance 'MUX_0' of component 'Design_2_MUX_0_2' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/synth/Design_2.vhd:328]
+INFO: [Synth 8-638] synthesizing module 'Design_2_MUX_0_2' [/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-3613565-uxsrv005/realtime/Design_2_MUX_0_2_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'Design_2_Polyphase_filter_0_0' declared at '/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-3613565-uxsrv005/realtime/Design_2_Polyphase_filter_0_0_stub.vhdl:5' bound to instance 'Polyphase_filter_0' of component 'Design_2_Polyphase_filter_0_0' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/synth/Design_2.vhd:341]
+INFO: [Synth 8-638] synthesizing module 'Design_2_Polyphase_filter_0_0' [/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-3613565-uxsrv005/realtime/Design_2_Polyphase_filter_0_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'Design_2_Pre_Distortion_Filter_0_0' declared at '/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-3613565-uxsrv005/realtime/Design_2_Pre_Distortion_Filter_0_0_stub.vhdl:5' bound to instance 'Pre_Distortion_Filter_0' of component 'Design_2_Pre_Distortion_Filter_0_0' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/synth/Design_2.vhd:353]
+INFO: [Synth 8-638] synthesizing module 'Design_2_Pre_Distortion_Filter_0_0' [/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-3613565-uxsrv005/realtime/Design_2_Pre_Distortion_Filter_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'Design_2_Scrambler_32bits_0_1' declared at '/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-3613565-uxsrv005/realtime/Design_2_Scrambler_32bits_0_1_stub.vhdl:5' bound to instance 'Scrambler_32bits_0' of component 'Design_2_Scrambler_32bits_0_1' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/synth/Design_2.vhd:364]
+INFO: [Synth 8-638] synthesizing module 'Design_2_Scrambler_32bits_0_1' [/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-3613565-uxsrv005/realtime/Design_2_Scrambler_32bits_0_1_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'Design_2_Symbol_mapper_0_0' declared at '/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-3613565-uxsrv005/realtime/Design_2_Symbol_mapper_0_0_stub.vhdl:5' bound to instance 'Symbol_mapper_0' of component 'Design_2_Symbol_mapper_0_0' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/synth/Design_2.vhd:379]
+INFO: [Synth 8-638] synthesizing module 'Design_2_Symbol_mapper_0_0' [/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-3613565-uxsrv005/realtime/Design_2_Symbol_mapper_0_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'Design_2_block_interleaver_0_0' declared at '/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-3613565-uxsrv005/realtime/Design_2_block_interleaver_0_0_stub.vhdl:5' bound to instance 'block_interleaver_0' of component 'Design_2_block_interleaver_0_0' [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/synth/Design_2.vhd:392]
+INFO: [Synth 8-638] synthesizing module 'Design_2_block_interleaver_0_0' [/home/miglioranza/Transmitter/Transmitter.runs/synth_1/.Xil/Vivado-3613565-uxsrv005/realtime/Design_2_block_interleaver_0_0_stub.vhdl:24]
+INFO: [Synth 8-256] done synthesizing module 'Design_2' (1#1) [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/synth/Design_2.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'Design_2_wrapper' (2#1) [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/hdl/Design_2_wrapper.vhd:37]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3554.180 ; gain = 272.594 ; free physical = 49300 ; free virtual = 113484
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3557.406 ; gain = 273.594 ; free physical = 38619 ; free virtual = 105226
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3571.992 ; gain = 290.406 ; free physical = 49294 ; free virtual = 113478
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3575.219 ; gain = 291.406 ; free physical = 38613 ; free virtual = 105220
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3571.992 ; gain = 290.406 ; free physical = 49294 ; free virtual = 113478
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3575.219 ; gain = 291.406 ; free physical = 38613 ; free virtual = 105220
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3571.992 ; gain = 0.000 ; free physical = 49286 ; free virtual = 113470
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3575.219 ; gain = 0.000 ; free physical = 38605 ; free virtual = 105212
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_mapper_0_0/Design_2_mapper_0_0/Design_2_mapper_0_0_in_context.xdc] for cell 'Design_2_i/mapper_0'
-Finished Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_mapper_0_0/Design_2_mapper_0_0/Design_2_mapper_0_0_in_context.xdc] for cell 'Design_2_i/mapper_0'
-Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Pre_Distortion_Filter_0_0/Design_2_Pre_Distortion_Filter_0_0/Design_2_Pre_Distortion_Filter_0_0_in_context.xdc] for cell 'Design_2_i/Pre_Distortion_Filter_0'
-Finished Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Pre_Distortion_Filter_0_0/Design_2_Pre_Distortion_Filter_0_0/Design_2_Pre_Distortion_Filter_0_0_in_context.xdc] for cell 'Design_2_i/Pre_Distortion_Filter_0'
-Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Scrambler_32bits_0_0/Design_2_Scrambler_32bits_0_0/Design_2_Scrambler_32bits_0_0_in_context.xdc] for cell 'Design_2_i/Scrambler_32bits_0'
-Finished Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Scrambler_32bits_0_0/Design_2_Scrambler_32bits_0_0/Design_2_Scrambler_32bits_0_0_in_context.xdc] for cell 'Design_2_i/Scrambler_32bits_0'
-Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Encoder_0_0/Design_2_Encoder_0_0/Design_2_Encoder_0_0_in_context.xdc] for cell 'Design_2_i/Encoder_0'
-Finished Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Encoder_0_0/Design_2_Encoder_0_0/Design_2_Encoder_0_0_in_context.xdc] for cell 'Design_2_i/Encoder_0'
 Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_block_interleaver_0_0/Design_2_block_interleaver_0_0/Design_2_block_interleaver_0_0_in_context.xdc] for cell 'Design_2_i/block_interleaver_0'
 Finished Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_block_interleaver_0_0/Design_2_block_interleaver_0_0/Design_2_block_interleaver_0_0_in_context.xdc] for cell 'Design_2_i/block_interleaver_0'
-Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Pipelined_Polyphase_0_2/Design_2_Pipelined_Polyphase_0_2/Design_2_Pipelined_Polyphase_0_2_in_context.xdc] for cell 'Design_2_i/Pipelined_Polyphase_0'
-Finished Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Pipelined_Polyphase_0_2/Design_2_Pipelined_Polyphase_0_2/Design_2_Pipelined_Polyphase_0_2_in_context.xdc] for cell 'Design_2_i/Pipelined_Polyphase_0'
+Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Scrambler_32bits_0_1/Design_2_Scrambler_32bits_0_1/Design_2_Scrambler_32bits_0_1_in_context.xdc] for cell 'Design_2_i/Scrambler_32bits_0'
+Finished Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Scrambler_32bits_0_1/Design_2_Scrambler_32bits_0_1/Design_2_Scrambler_32bits_0_1_in_context.xdc] for cell 'Design_2_i/Scrambler_32bits_0'
+Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_LDPC_encoder_0_2/Design_2_LDPC_encoder_0_2/Design_2_LDPC_encoder_0_2_in_context.xdc] for cell 'Design_2_i/LDPC_encoder_0'
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3664.863 ; gain = 15.844 ; free physical = 39443 ; free virtual = 106049
+Finished Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_LDPC_encoder_0_2/Design_2_LDPC_encoder_0_2/Design_2_LDPC_encoder_0_2_in_context.xdc] for cell 'Design_2_i/LDPC_encoder_0'
+Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Pre_Distortion_Filter_0_0/Design_2_Pre_Distortion_Filter_0_0/Design_2_Pre_Distortion_Filter_0_0_in_context.xdc] for cell 'Design_2_i/Pre_Distortion_Filter_0'
+WARNING: [Constraints 18-619] A clock with name 'clk' already exists, overwriting the previous clock with the same name. [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Pre_Distortion_Filter_0_0/Design_2_Pre_Distortion_Filter_0_0/Design_2_Pre_Distortion_Filter_0_0_in_context.xdc:1]
+Finished Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Pre_Distortion_Filter_0_0/Design_2_Pre_Distortion_Filter_0_0/Design_2_Pre_Distortion_Filter_0_0_in_context.xdc] for cell 'Design_2_i/Pre_Distortion_Filter_0'
 Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_MUX_0_2/Design_2_MUX_0_2/Design_2_MUX_0_2_in_context.xdc] for cell 'Design_2_i/MUX_0'
 Finished Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_MUX_0_2/Design_2_MUX_0_2/Design_2_MUX_0_2_in_context.xdc] for cell 'Design_2_i/MUX_0'
+Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Symbol_mapper_0_0/Design_2_Symbol_mapper_0_0/Design_2_Symbol_mapper_0_0_in_context.xdc] for cell 'Design_2_i/Symbol_mapper_0'
+WARNING: [Constraints 18-619] A clock with name 'clk' already exists, overwriting the previous clock with the same name. [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Symbol_mapper_0_0/Design_2_Symbol_mapper_0_0/Design_2_Symbol_mapper_0_0_in_context.xdc:1]
+Finished Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Symbol_mapper_0_0/Design_2_Symbol_mapper_0_0/Design_2_Symbol_mapper_0_0_in_context.xdc] for cell 'Design_2_i/Symbol_mapper_0'
+Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Polyphase_filter_0_0/Design_2_Polyphase_filter_0_0/Design_2_Polyphase_filter_0_0_in_context.xdc] for cell 'Design_2_i/Polyphase_filter_0'
+WARNING: [Constraints 18-619] A clock with name 'clk' already exists, overwriting the previous clock with the same name. [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Polyphase_filter_0_0/Design_2_Polyphase_filter_0_0/Design_2_Polyphase_filter_0_0_in_context.xdc:1]
+Finished Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Polyphase_filter_0_0/Design_2_Polyphase_filter_0_0/Design_2_Polyphase_filter_0_0_in_context.xdc] for cell 'Design_2_i/Polyphase_filter_0'
 Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Control_unit_top_0_0/Design_2_Control_unit_top_0_0/Design_2_Control_unit_top_0_0_in_context.xdc] for cell 'Design_2_i/Control_unit_top_0'
+WARNING: [Constraints 18-619] A clock with name 'clk' already exists, overwriting the previous clock with the same name. [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Control_unit_top_0_0/Design_2_Control_unit_top_0_0/Design_2_Control_unit_top_0_0_in_context.xdc:1]
 Finished Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Control_unit_top_0_0/Design_2_Control_unit_top_0_0/Design_2_Control_unit_top_0_0_in_context.xdc] for cell 'Design_2_i/Control_unit_top_0'
 Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [/home/miglioranza/Transmitter/Transmitter.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3640.824 ; gain = 0.000 ; free physical = 50143 ; free virtual = 114328
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3664.863 ; gain = 0.000 ; free physical = 39440 ; free virtual = 106047
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3640.824 ; gain = 0.000 ; free physical = 50143 ; free virtual = 114328
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3664.863 ; gain = 0.000 ; free physical = 39440 ; free virtual = 106047
 WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 3640.824 ; gain = 359.238 ; free physical = 50211 ; free virtual = 114396
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 3664.863 ; gain = 381.051 ; free physical = 39531 ; free virtual = 106137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -127,25 +120,25 @@ Start Loading Part and Timing Information
 Loading part: xczu28dr-ffvg1517-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 3640.824 ; gain = 359.238 ; free physical = 50211 ; free virtual = 114396
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 3664.863 ; gain = 381.051 ; free physical = 39531 ; free virtual = 106137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for Design_2_i. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for Design_2_i/mapper_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for Design_2_i/Pre_Distortion_Filter_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for Design_2_i/Scrambler_32bits_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for Design_2_i/Encoder_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Design_2_i/block_interleaver_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for Design_2_i/Pipelined_Polyphase_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Design_2_i/Scrambler_32bits_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Design_2_i/LDPC_encoder_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Design_2_i/Pre_Distortion_Filter_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Design_2_i/MUX_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Design_2_i/Symbol_mapper_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Design_2_i/Polyphase_filter_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Design_2_i/Control_unit_top_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 3640.824 ; gain = 359.238 ; free physical = 50211 ; free virtual = 114396
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 3664.863 ; gain = 381.051 ; free physical = 39531 ; free virtual = 106137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 3640.824 ; gain = 359.238 ; free physical = 50211 ; free virtual = 114396
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 3664.863 ; gain = 381.051 ; free physical = 39531 ; free virtual = 106137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -167,34 +160,30 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7129] Port data_in_ready_0 in module Design_2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port mod_cod_schemes_0[3] in module Design_2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port mod_cod_schemes_0[2] in module Design_2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port mod_cod_schemes_0[1] in module Design_2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port mod_cod_schemes_0[0] in module Design_2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port mod_type_0[2] in module Design_2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port mod_type_0[1] in module Design_2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port mod_type_0[0] in module Design_2 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 3640.824 ; gain = 359.238 ; free physical = 50203 ; free virtual = 114392
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 3664.863 ; gain = 381.051 ; free physical = 39527 ; free virtual = 106137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'clk'
+WARNING: [Synth 8-565] redefining clock 'clk'
+WARNING: [Synth 8-565] redefining clock 'clk'
+WARNING: [Synth 8-565] redefining clock 'clk'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 3949.547 ; gain = 667.961 ; free physical = 49714 ; free virtual = 113903
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 3953.547 ; gain = 669.734 ; free physical = 38999 ; free virtual = 105645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 3949.547 ; gain = 667.961 ; free physical = 49714 ; free virtual = 113903
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 3953.547 ; gain = 669.734 ; free physical = 38998 ; free virtual = 105644
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 3968.578 ; gain = 686.992 ; free physical = 49713 ; free virtual = 113902
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 3973.586 ; gain = 689.773 ; free physical = 39056 ; free virtual = 105666
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -212,37 +201,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 3974.516 ; gain = 692.930 ; free physical = 49713 ; free virtual = 113902
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 3979.523 ; gain = 695.711 ; free physical = 39056 ; free virtual = 105666
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 3974.516 ; gain = 692.930 ; free physical = 49713 ; free virtual = 113902
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 3979.523 ; gain = 695.711 ; free physical = 39056 ; free virtual = 105666
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 3974.516 ; gain = 692.930 ; free physical = 49713 ; free virtual = 113902
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 3979.523 ; gain = 695.711 ; free physical = 39056 ; free virtual = 105666
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 3974.516 ; gain = 692.930 ; free physical = 49713 ; free virtual = 113902
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 3979.523 ; gain = 695.711 ; free physical = 39056 ; free virtual = 105666
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 3974.516 ; gain = 692.930 ; free physical = 49713 ; free virtual = 113902
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 3979.523 ; gain = 695.711 ; free physical = 39056 ; free virtual = 105666
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 3974.516 ; gain = 692.930 ; free physical = 49713 ; free virtual = 113902
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 3979.523 ; gain = 695.711 ; free physical = 39056 ; free virtual = 105666
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -253,13 +242,13 @@ Report BlackBoxes:
 |      |BlackBox name                      |Instances |
 +------+-----------------------------------+----------+
 |1     |Design_2_Control_unit_top_0_0      |         1|
-|2     |Design_2_Encoder_0_0               |         1|
+|2     |Design_2_LDPC_encoder_0_2          |         1|
 |3     |Design_2_MUX_0_2                   |         1|
-|4     |Design_2_Pipelined_Polyphase_0_2   |         1|
+|4     |Design_2_Polyphase_filter_0_0      |         1|
 |5     |Design_2_Pre_Distortion_Filter_0_0 |         1|
-|6     |Design_2_Scrambler_32bits_0_0      |         1|
-|7     |Design_2_block_interleaver_0_0     |         1|
-|8     |Design_2_mapper_0_0                |         1|
+|6     |Design_2_Scrambler_32bits_0_1      |         1|
+|7     |Design_2_Symbol_mapper_0_0         |         1|
+|8     |Design_2_block_interleaver_0_0     |         1|
 +------+-----------------------------------+----------+
 
 Report Cell Usage: 
@@ -267,38 +256,38 @@ Report Cell Usage:
 |      |Cell                                    |Count |
 +------+----------------------------------------+------+
 |1     |Design_2_Control_unit_top_0_0_bbox      |     1|
-|2     |Design_2_Encoder_0_0_bbox               |     1|
+|2     |Design_2_LDPC_encoder_0_2_bbox          |     1|
 |3     |Design_2_MUX_0_2_bbox                   |     1|
-|4     |Design_2_Pipelined_Polyphase_0_2_bbox   |     1|
+|4     |Design_2_Polyphase_filter_0_0_bbox      |     1|
 |5     |Design_2_Pre_Distortion_Filter_0_0_bbox |     1|
-|6     |Design_2_Scrambler_32bits_0_0_bbox      |     1|
-|7     |Design_2_block_interleaver_0_0_bbox     |     1|
-|8     |Design_2_mapper_0_0_bbox                |     1|
-|9     |IBUF                                    |   118|
-|10    |OBUF                                    |    48|
+|6     |Design_2_Scrambler_32bits_0_1_bbox      |     1|
+|7     |Design_2_Symbol_mapper_0_0_bbox         |     1|
+|8     |Design_2_block_interleaver_0_0_bbox     |     1|
+|9     |IBUF                                    |   113|
+|10    |OBUF                                    |    34|
 +------+----------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 3974.516 ; gain = 692.930 ; free physical = 49713 ; free virtual = 113902
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 3979.523 ; gain = 695.711 ; free physical = 39056 ; free virtual = 105666
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 3974.516 ; gain = 624.098 ; free physical = 49753 ; free virtual = 113942
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 3974.523 ; gain = 692.930 ; free physical = 49753 ; free virtual = 113942
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 3979.523 ; gain = 606.066 ; free physical = 39096 ; free virtual = 105707
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 3979.531 ; gain = 695.711 ; free physical = 39096 ; free virtual = 105707
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3981.453 ; gain = 0.000 ; free physical = 49850 ; free virtual = 114039
-INFO: [Netlist 29-17] Analyzing 118 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3985.461 ; gain = 0.000 ; free physical = 39193 ; free virtual = 105803
+INFO: [Netlist 29-17] Analyzing 113 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4020.109 ; gain = 0.000 ; free physical = 49769 ; free virtual = 113958
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4025.117 ; gain = 0.000 ; free physical = 39112 ; free virtual = 105722
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 118 instances were transformed.
-  IBUF => IBUF (IBUFCTRL, INBUF): 118 instances
+  A total of 113 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 113 instances
 
-Synth Design complete, checksum: 21490e7c
+Synth Design complete, checksum: 8dda5b8
 INFO: [Common 17-83] Releasing license: Synthesis
-52 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
+52 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:01:05 . Memory (MB): peak = 4020.109 ; gain = 778.133 ; free physical = 49906 ; free virtual = 114095
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:01:12 . Memory (MB): peak = 4025.117 ; gain = 783.910 ; free physical = 39247 ; free virtual = 105858
 INFO: [Common 17-1381] The checkpoint '/home/miglioranza/Transmitter/Transmitter.runs/synth_1/Design_2_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Design_2_wrapper_utilization_synth.rpt -pb Design_2_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Jun  2 16:06:08 2025...
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 30 11:45:06 2025...

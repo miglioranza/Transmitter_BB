@@ -1,4 +1,12 @@
 Time resolution is 1 ps
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_Design_2_wrapper.uut.Design_2_i.LDPC_encoder_0.U0.\\Output_FIFO_inst(0)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_Design_2_wrapper/uut/Design_2_i/LDPC_encoder_0/U0/\Output_FIFO_inst(0)\/output_fifo/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_35620  Scope: tb_Design_2_wrapper.uut.Design_2_i.LDPC_encoder_0.U0.\\Output_FIFO_inst(0)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_Design_2_wrapper.uut.Design_2_i.LDPC_encoder_0.U0.\\Output_FIFO_inst(1)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_Design_2_wrapper/uut/Design_2_i/LDPC_encoder_0/U0/\Output_FIFO_inst(1)\/output_fifo/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_35620  Scope: tb_Design_2_wrapper.uut.Design_2_i.LDPC_encoder_0.U0.\\Output_FIFO_inst(1)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_Design_2_wrapper.uut.Design_2_i.LDPC_encoder_0.U0.\\Output_FIFO_inst(2)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_Design_2_wrapper/uut/Design_2_i/LDPC_encoder_0/U0/\Output_FIFO_inst(2)\/output_fifo/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_35620  Scope: tb_Design_2_wrapper.uut.Design_2_i.LDPC_encoder_0.U0.\\Output_FIFO_inst(2)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_Design_2_wrapper.uut.Design_2_i.LDPC_encoder_0.U0.\\Output_FIFO_inst(3)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_Design_2_wrapper/uut/Design_2_i/LDPC_encoder_0/U0/\Output_FIFO_inst(3)\/output_fifo/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_35620  Scope: tb_Design_2_wrapper.uut.Design_2_i.LDPC_encoder_0.U0.\\Output_FIFO_inst(3)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
 ********************** HSIAO_H_MATRIX ******************************
 1101001101001000110100100010000 
 0101001001010100100010001000000 
@@ -31,6 +39,21 @@ Time resolution is 1 ps
 0010001000000111000111000100011 
 1001111110000001111000000111100 
 0011111111110000000000111110000 
+Stopped at time : 175 ns : File "/home/miglioranza/Transmitter/Transmitter.srcs/sim_1/new/tb_design_1_wrapper.vhd" Line 148
+Stopped at time : 175 ns : File "/home/miglioranza/Transmitter/Transmitter.srcs/sim_1/new/tb_design_1_wrapper.vhd" Line 155
+Stopped at time : 180 ns : File "/home/miglioranza/Transmitter/Transmitter.srcs/sim_1/new/tb_design_1_wrapper.vhd" Line 155
+Stopped at time : 185 ns : File "/home/miglioranza/Transmitter/Transmitter.srcs/sim_1/new/tb_design_1_wrapper.vhd" Line 155
+Stopped at time : 190 ns : File "/home/miglioranza/Transmitter/Transmitter.srcs/sim_1/new/tb_design_1_wrapper.vhd" Line 155
+Stopped at time : 195 ns : File "/home/miglioranza/Transmitter/Transmitter.srcs/sim_1/new/tb_design_1_wrapper.vhd" Line 155
+Stopped at time : 5295 ns : File "/home/miglioranza/Transmitter/Transmitter.srcs/sim_1/new/tb_design_1_wrapper.vhd" Line 162
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_Design_2_wrapper.uut.Design_2_i.LDPC_encoder_0.U0.\\Output_FIFO_inst(0)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_Design_2_wrapper/uut/Design_2_i/LDPC_encoder_0/U0/\Output_FIFO_inst(0)\/output_fifo/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_35620  Scope: tb_Design_2_wrapper.uut.Design_2_i.LDPC_encoder_0.U0.\\Output_FIFO_inst(0)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_Design_2_wrapper.uut.Design_2_i.LDPC_encoder_0.U0.\\Output_FIFO_inst(1)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_Design_2_wrapper/uut/Design_2_i/LDPC_encoder_0/U0/\Output_FIFO_inst(1)\/output_fifo/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_35620  Scope: tb_Design_2_wrapper.uut.Design_2_i.LDPC_encoder_0.U0.\\Output_FIFO_inst(1)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_Design_2_wrapper.uut.Design_2_i.LDPC_encoder_0.U0.\\Output_FIFO_inst(2)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_Design_2_wrapper/uut/Design_2_i/LDPC_encoder_0/U0/\Output_FIFO_inst(2)\/output_fifo/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_35620  Scope: tb_Design_2_wrapper.uut.Design_2_i.LDPC_encoder_0.U0.\\Output_FIFO_inst(2)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_Design_2_wrapper.uut.Design_2_i.LDPC_encoder_0.U0.\\Output_FIFO_inst(3)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_Design_2_wrapper/uut/Design_2_i/LDPC_encoder_0/U0/\Output_FIFO_inst(3)\/output_fifo/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_35620  Scope: tb_Design_2_wrapper.uut.Design_2_i.LDPC_encoder_0.U0.\\Output_FIFO_inst(3)\ .output_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
 ********************** HSIAO_H_MATRIX ******************************
 1101001101001000110100100010000 
 0101001001010100100010001000000 
@@ -63,144 +86,4 @@ Time resolution is 1 ps
 0010001000000111000111000100011 
 1001111110000001111000000111100 
 0011111111110000000000111110000 
-********************** HSIAO_H_MATRIX ******************************
-1101001101001000110100100010000 
-0101001001010100100010001000000 
-1001100100100010001000001010101 
-1000100010001000001100101100100 
-0010001000000111000111000100011 
-1001111110000001111000000111100 
-0011111111110000000000111110000 
-********************** HSIAO_H_MATRIX ******************************
-1101001101001000110100100010000 
-0101001001010100100010001000000 
-1001100100100010001000001010101 
-1000100010001000001100101100100 
-0010001000000111000111000100011 
-1001111110000001111000000111100 
-0011111111110000000000111110000 
-********************** HSIAO_H_MATRIX ******************************
-1101001101001000110100100010000 
-0101001001010100100010001000000 
-1001100100100010001000001010101 
-1000100010001000001100101100100 
-0010001000000111000111000100011 
-1001111110000001111000000111100 
-0011111111110000000000111110000 
-********************** HSIAO_H_MATRIX ******************************
-1101001101001000110100100010000 
-0101001001010100100010001000000 
-1001100100100010001000001010101 
-1000100010001000001100101100100 
-0010001000000111000111000100011 
-1001111110000001111000000111100 
-0011111111110000000000111110000 
-********************** HSIAO_H_MATRIX ******************************
-1101001101001000110100100010000 
-0101001001010100100010001000000 
-1001100100100010001000001010101 
-1000100010001000001100101100100 
-0010001000000111000111000100011 
-1001111110000001111000000111100 
-0011111111110000000000111110000 
-********************** HSIAO_H_MATRIX ******************************
-1101001101001000110100100010000 
-0101001001010100100010001000000 
-1001100100100010001000001010101 
-1000100010001000001100101100100 
-0010001000000111000111000100011 
-1001111110000001111000000111100 
-0011111111110000000000111110000 
-********************** HSIAO_H_MATRIX ******************************
-1101001101001000110100100010000 
-0101001001010100100010001000000 
-1001100100100010001000001010101 
-1000100010001000001100101100100 
-0010001000000111000111000100011 
-1001111110000001111000000111100 
-0011111111110000000000111110000 
-********************** HSIAO_H_MATRIX ******************************
-1101001101001000110100100010000 
-0101001001010100100010001000000 
-1001100100100010001000001010101 
-1000100010001000001100101100100 
-0010001000000111000111000100011 
-1001111110000001111000000111100 
-0011111111110000000000111110000 
-Stopped at time : 100 ns : File "/home/miglioranza/Transmitter/Transmitter.srcs/sim_1/new/tb_design_1_wrapper.vhd" Line 162
-Stopped at time : 14722500 ps : File "/home/miglioranza/Transmitter/Transmitter.srcs/sim_1/new/tb_design_1_wrapper.vhd" Line 194
-Stopped at time : 71312600 ps : File "/home/miglioranza/Transmitter/Transmitter.srcs/sim_1/new/tb_design_1_wrapper.vhd" Line 206
-********************** HSIAO_H_MATRIX ******************************
-1101001101001000110100100010000 
-0101001001010100100010001000000 
-1001100100100010001000001010101 
-1000100010001000001100101100100 
-0010001000000111000111000100011 
-1001111110000001111000000111100 
-0011111111110000000000111110000 
-********************** HSIAO_H_MATRIX ******************************
-1101001101001000110100100010000 
-0101001001010100100010001000000 
-1001100100100010001000001010101 
-1000100010001000001100101100100 
-0010001000000111000111000100011 
-1001111110000001111000000111100 
-0011111111110000000000111110000 
-********************** HSIAO_H_MATRIX ******************************
-1101001101001000110100100010000 
-0101001001010100100010001000000 
-1001100100100010001000001010101 
-1000100010001000001100101100100 
-0010001000000111000111000100011 
-1001111110000001111000000111100 
-0011111111110000000000111110000 
-********************** HSIAO_H_MATRIX ******************************
-1101001101001000110100100010000 
-0101001001010100100010001000000 
-1001100100100010001000001010101 
-1000100010001000001100101100100 
-0010001000000111000111000100011 
-1001111110000001111000000111100 
-0011111111110000000000111110000 
-Stopped at time : 100 ns : File "/home/miglioranza/Transmitter/Transmitter.srcs/sim_1/new/tb_design_1_wrapper.vhd" Line 162
-Stopped at time : 14722500 ps : File "/home/miglioranza/Transmitter/Transmitter.srcs/sim_1/new/tb_design_1_wrapper.vhd" Line 194
-Stopped at time : 71312600 ps : File "/home/miglioranza/Transmitter/Transmitter.srcs/sim_1/new/tb_design_1_wrapper.vhd" Line 206
-Stopped at time : 71312600 ps : File "/home/miglioranza/Transmitter/Transmitter.srcs/sim_1/new/tb_design_1_wrapper.vhd" Line 219
-Stopped at time : 72492500 ps : File "/home/miglioranza/Transmitter/Transmitter.srcs/sim_1/new/tb_design_1_wrapper.vhd" Line 228
-Stopped at time : 122667500 ps : File "/home/miglioranza/Transmitter/Transmitter.srcs/sim_1/new/tb_design_1_wrapper.vhd" Line 259
-Stopped at time : 136457600 ps : File "/home/miglioranza/Transmitter/Transmitter.srcs/sim_1/new/tb_design_1_wrapper.vhd" Line 263
-********************** HSIAO_H_MATRIX ******************************
-1101001101001000110100100010000 
-0101001001010100100010001000000 
-1001100100100010001000001010101 
-1000100010001000001100101100100 
-0010001000000111000111000100011 
-1001111110000001111000000111100 
-0011111111110000000000111110000 
-********************** HSIAO_H_MATRIX ******************************
-1101001101001000110100100010000 
-0101001001010100100010001000000 
-1001100100100010001000001010101 
-1000100010001000001100101100100 
-0010001000000111000111000100011 
-1001111110000001111000000111100 
-0011111111110000000000111110000 
-********************** HSIAO_H_MATRIX ******************************
-1101001101001000110100100010000 
-0101001001010100100010001000000 
-1001100100100010001000001010101 
-1000100010001000001100101100100 
-0010001000000111000111000100011 
-1001111110000001111000000111100 
-0011111111110000000000111110000 
-********************** HSIAO_H_MATRIX ******************************
-1101001101001000110100100010000 
-0101001001010100100010001000000 
-1001100100100010001000001010101 
-1000100010001000001100101100100 
-0010001000000111000111000100011 
-1001111110000001111000000111100 
-0011111111110000000000111110000 
-Stopped at time : 100 ns : File "/home/miglioranza/Transmitter/Transmitter.srcs/sim_1/new/tb_design_1_wrapper.vhd" Line 162
-Stopped at time : 136457600 ps : File "/home/miglioranza/Transmitter/Transmitter.srcs/sim_1/new/tb_design_1_wrapper.vhd" Line 263
-INFO: xsimkernel Simulation Memory Usage: 2454328 KB (Peak: 2454328 KB), Simulation CPU Usage: 278560 ms
+Stopped at time : 5295 ns : File "/home/miglioranza/Transmitter/Transmitter.srcs/sim_1/new/tb_design_1_wrapper.vhd" Line 162

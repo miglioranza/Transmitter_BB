@@ -1,79 +1,49 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jun  2 16:08:46 2025" VIVADOVERSION="2021.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Sep 30 15:20:47 2025" VIVADOVERSION="2021.2">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="xilinx.com:zcu111:part0:1.4" DEVICE="xczu28dr" NAME="Design_2" PACKAGE="ffvg1517" SPEEDGRADE="-2"/>
 
   <EXTERNALPORTS>
-    <PORT DIR="I" NAME="aresetn_0" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_aresetn_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="Encoder_0" PORT="aresetn"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="mapper_0" PORT="clk"/>
+        <CONNECTION INSTANCE="block_interleaver_0" PORT="clk"/>
         <CONNECTION INSTANCE="Scrambler_32bits_0" PORT="clk"/>
         <CONNECTION INSTANCE="Pre_Distortion_Filter_0" PORT="clk"/>
-        <CONNECTION INSTANCE="Encoder_0" PORT="clk"/>
-        <CONNECTION INSTANCE="block_interleaver_0" PORT="clk"/>
+        <CONNECTION INSTANCE="Symbol_mapper_0" PORT="clk"/>
         <CONNECTION INSTANCE="Control_unit_top_0" PORT="clk"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="core_finish_0" SIGIS="undef" SIGNAME="Encoder_0_core_finish">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="Encoder_0" PORT="core_finish"/>
+        <CONNECTION INSTANCE="LDPC_encoder_0" PORT="clk"/>
+        <CONNECTION INSTANCE="Polyphase_filter_0" PORT="clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="ldpc_core_clk" SIGIS="clk" SIGNAME="External_Ports_ldpc_core_clk">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="Encoder_0" PORT="ldpc_core_clk"/>
+        <CONNECTION INSTANCE="LDPC_encoder_0" PORT="ldpc_core_clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="mapper_0" PORT="reset"/>
-        <CONNECTION INSTANCE="Pre_Distortion_Filter_0" PORT="reset"/>
-        <CONNECTION INSTANCE="Scrambler_32bits_0" PORT="rst"/>
-        <CONNECTION INSTANCE="Encoder_0" PORT="reset"/>
         <CONNECTION INSTANCE="block_interleaver_0" PORT="rst"/>
+        <CONNECTION INSTANCE="Scrambler_32bits_0" PORT="rst"/>
+        <CONNECTION INSTANCE="Pre_Distortion_Filter_0" PORT="reset"/>
+        <CONNECTION INSTANCE="Symbol_mapper_0" PORT="reset"/>
         <CONNECTION INSTANCE="Control_unit_top_0" PORT="reset"/>
+        <CONNECTION INSTANCE="LDPC_encoder_0" PORT="reset"/>
+        <CONNECTION INSTANCE="Polyphase_filter_0" PORT="reset"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="1" NAME="sel_FEC_code_rate_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sel_FEC_code_rate_0">
+    <PORT DIR="O" NAME="data_out_valid_0" SIGIS="undef" SIGNAME="Polyphase_filter_0_data_out_valid">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="Encoder_0" PORT="sel_FEC_code_rate"/>
+        <CONNECTION INSTANCE="Polyphase_filter_0" PORT="data_out_valid"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="2" NAME="mod_type_0" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="I" NAME="data_in_ready_0" SIGIS="undef"/>
-    <PORT DIR="O" NAME="data_out_valid_0" SIGIS="undef" SIGNAME="Pipelined_Polyphase_0_data_out_valid">
+    <PORT DIR="O" LEFT="15" NAME="data_out_I_0" RIGHT="0" SIGIS="undef" SIGNAME="Polyphase_filter_0_data_out_I">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="Pipelined_Polyphase_0" PORT="data_out_valid"/>
+        <CONNECTION INSTANCE="Polyphase_filter_0" PORT="data_out_I"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="15" NAME="data_out_I_0" RIGHT="0" SIGIS="undef" SIGNAME="Pipelined_Polyphase_0_data_out_I">
+    <PORT DIR="O" LEFT="15" NAME="data_out_Q_0" RIGHT="0" SIGIS="undef" SIGNAME="Polyphase_filter_0_data_out_Q">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="Pipelined_Polyphase_0" PORT="data_out_I"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="15" NAME="data_out_Q_0" RIGHT="0" SIGIS="undef" SIGNAME="Pipelined_Polyphase_0_data_out_Q">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="Pipelined_Polyphase_0" PORT="data_out_Q"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk_50MHz" SIGIS="clk" SIGNAME="External_Ports_clk_50MHz">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="Pipelined_Polyphase_0" PORT="clk"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="12" NAME="axis_data_count_0" RIGHT="0" SIGIS="undef" SIGNAME="Encoder_0_axis_data_count">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="Encoder_0" PORT="axis_data_count"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="reset_0" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="Pipelined_Polyphase_0" PORT="reset"/>
+        <CONNECTION INSTANCE="Polyphase_filter_0" PORT="data_out_Q"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="control_unit_dout_ready_0" SIGIS="undef" SIGNAME="Control_unit_top_0_control_unit_dout_ready">
@@ -111,7 +81,6 @@
         <CONNECTION INSTANCE="Control_unit_top_0" PORT="num_streams"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="3" NAME="mod_cod_schemes_0" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="I" LEFT="15" NAME="num_words_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_num_words_0">
       <CONNECTIONS>
         <CONNECTION INSTANCE="Control_unit_top_0" PORT="num_words"/>
@@ -142,7 +111,7 @@
   <EXTERNALINTERFACES/>
 
   <MODULES>
-    <MODULE COREREVISION="17" FULLNAME="/Control_unit_top_0" HWVERSION="1.0" INSTANCE="Control_unit_top_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Control_unit_top" VLNV="user.org:user:Control_unit_top:1.0">
+    <MODULE COREREVISION="37" FULLNAME="/Control_unit_top_0" HWVERSION="1.0" INSTANCE="Control_unit_top_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Control_unit_top" VLNV="user.org:user:Control_unit_top:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="Design_2_Control_unit_top_0_0"/>
@@ -179,9 +148,9 @@
             <CONNECTION INSTANCE="External_Ports" PORT="control_unit_dout_ready_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="control_unit_last_frame" SIGIS="undef" SIGNAME="Control_unit_top_0_control_unit_last_frame">
+        <PORT DIR="O" NAME="control_unit_enable" SIGIS="undef" SIGNAME="Control_unit_top_0_control_unit_enable">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Scrambler_32bits_0" PORT="end_of_frame"/>
+            <CONNECTION INSTANCE="MUX_0" PORT="select_signal"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="4" NAME="mod_cod_schemes" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_mod_cod_schemes_1">
@@ -224,11 +193,6 @@
             <CONNECTION INSTANCE="External_Ports" PORT="phy_dest_address_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="scrambler_dout_ready" SIGIS="undef" SIGNAME="Scrambler_32bits_0_data_out_ready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Scrambler_32bits_0" PORT="data_out_ready"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" LEFT="31" NAME="scrambler_din_data" RIGHT="0" SIGIS="undef" SIGNAME="Control_unit_top_0_scrambler_din_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Scrambler_32bits_0" PORT="data_in"/>
@@ -254,6 +218,22 @@
             <CONNECTION INSTANCE="Scrambler_32bits_0" PORT="control_enable"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" NAME="scrambler_last_frame" SIGIS="undef" SIGNAME="Control_unit_top_0_scrambler_last_frame">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Scrambler_32bits_0" PORT="end_of_frame"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="encoder_code_rate" RIGHT="0" SIGIS="undef" SIGNAME="Control_unit_top_0_encoder_code_rate">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="LDPC_encoder_0" PORT="sel_code_rate"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="encoder_reset_fifos" SIGIS="undef" SIGNAME="Control_unit_top_0_encoder_reset_fifos">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="LDPC_encoder_0" PORT="reset_fifos"/>
+            <CONNECTION INSTANCE="Polyphase_filter_0" PORT="FIFO_reset"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="interleaver_dout_valid" SIGIS="undef" SIGNAME="block_interleaver_0_read_valid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="block_interleaver_0" PORT="read_valid"/>
@@ -262,11 +242,6 @@
         <PORT DIR="I" LEFT="31" NAME="interleaver_dout_data" RIGHT="0" SIGIS="undef" SIGNAME="block_interleaver_0_data_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="block_interleaver_0" PORT="data_out"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="interleaver_dout_last" SIGIS="undef" SIGNAME="block_interleaver_0_data_out_last">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="block_interleaver_0" PORT="data_out_last"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="interleaver_last_frame" SIGIS="undef" SIGNAME="block_interleaver_0_last_frame_to_cu">
@@ -279,55 +254,29 @@
             <CONNECTION INSTANCE="block_interleaver_0" PORT="data_in_ready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="mapper_dout_ready" SIGIS="undef" SIGNAME="mapper_0_data_out_ready">
+        <PORT DIR="I" NAME="mapper_dout_last" SIGIS="undef" SIGNAME="Symbol_mapper_0_data_out_last">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="mapper_0" PORT="data_out_ready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="mapper_dout_last" SIGIS="undef" SIGNAME="mapper_0_data_out_last">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="mapper_0" PORT="data_out_last"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="mapper_last_frame" SIGIS="undef" SIGNAME="mapper_0_last_frame">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="mapper_0" PORT="last_frame"/>
+            <CONNECTION INSTANCE="Symbol_mapper_0" PORT="data_out_last"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="2" NAME="mapper_selected_mod" RIGHT="0" SIGIS="undef" SIGNAME="Control_unit_top_0_mapper_selected_mod">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="mapper_0" PORT="mod_type"/>
+            <CONNECTION INSTANCE="Symbol_mapper_0" PORT="mod_type"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="5" NAME="mapper_din_data" RIGHT="0" SIGIS="undef" SIGNAME="Control_unit_top_0_mapper_din_data">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="mapper_0" PORT="data_in"/>
+            <CONNECTION INSTANCE="Symbol_mapper_0" PORT="data_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="mapper_din_valid" SIGIS="undef" SIGNAME="Control_unit_top_0_mapper_din_valid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="mapper_0" PORT="data_in_valid"/>
+            <CONNECTION INSTANCE="Symbol_mapper_0" PORT="data_in_valid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="mapper_signal_field_enable" SIGIS="undef" SIGNAME="Control_unit_top_0_mapper_signal_field_enable">
+        <PORT DIR="O" NAME="mapper_din_last" SIGIS="undef" SIGNAME="Control_unit_top_0_mapper_din_last">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="mapper_0" PORT="signal_field_en"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="mapper_pilot_insertion_en" SIGIS="undef" SIGNAME="Control_unit_top_0_mapper_pilot_insertion_en">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="mapper_0" PORT="pilot_insertion"/>
-            <CONNECTION INSTANCE="MUX_0" PORT="select_signal"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="mapper_end_of_frame" SIGIS="undef" SIGNAME="Control_unit_top_0_mapper_end_of_frame">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="mapper_0" PORT="end_of_frame"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="dpd_dout_ready" SIGIS="undef" SIGNAME="MUX_0_ready_out_CU">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="MUX_0" PORT="ready_out_CU"/>
+            <CONNECTION INSTANCE="Symbol_mapper_0" PORT="data_in_last"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="dpd_din_valid" SIGIS="undef" SIGNAME="Control_unit_top_0_dpd_din_valid">
@@ -348,18 +297,16 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="9" FULLNAME="/Encoder_0" HWVERSION="1.0" INSTANCE="Encoder_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Encoder" VLNV="user.org:user:Encoder:1.0">
+    <MODULE COREREVISION="15" FULLNAME="/LDPC_encoder_0" HWVERSION="1.0" INSTANCE="LDPC_encoder_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="LDPC_encoder" VLNV="user.org:user:LDPC_encoder:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="Design_2_Encoder_0_0"/>
+        <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="CORE_DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="N" VALUE="4"/>
+        <PARAMETER NAME="Component_Name" VALUE="Design_2_LDPC_encoder_0_2"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="ldpc_core_clk" SIGIS="clk" SIGNAME="External_Ports_ldpc_core_clk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="ldpc_core_clk"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
@@ -370,9 +317,14 @@
             <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_aresetn_0">
+        <PORT DIR="I" NAME="reset_fifos" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="Control_unit_top_0_encoder_reset_fifos">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aresetn_0"/>
+            <CONNECTION INSTANCE="Control_unit_top_0" PORT="encoder_reset_fifos"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="ldpc_core_clk" SIGIS="clk" SIGNAME="External_Ports_ldpc_core_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ldpc_core_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="Scrambler_32bits_0_data_out">
@@ -385,14 +337,19 @@
             <CONNECTION INSTANCE="Scrambler_32bits_0" PORT="data_out_valid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="din_ready_ifsm2enc" SIGIS="undef" SIGNAME="block_interleaver_0_data_out_ready">
+        <PORT DIR="I" NAME="data_in_last" SIGIS="undef" SIGNAME="Scrambler_32bits_0_data_out_last">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Scrambler_32bits_0" PORT="data_out_last"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="data_in_ready" SIGIS="undef" SIGNAME="block_interleaver_0_data_out_ready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="block_interleaver_0" PORT="data_out_ready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="data_in_last" SIGIS="undef" SIGNAME="Scrambler_32bits_0_data_out_last">
+        <PORT DIR="I" LEFT="1" NAME="sel_code_rate" RIGHT="0" SIGIS="undef" SIGNAME="Control_unit_top_0_encoder_code_rate">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Scrambler_32bits_0" PORT="data_out_last"/>
+            <CONNECTION INSTANCE="Control_unit_top_0" PORT="encoder_code_rate"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="end_of_frame" SIGIS="undef" SIGNAME="Scrambler_32bits_0_last_frame">
@@ -400,49 +357,29 @@
             <CONNECTION INSTANCE="Scrambler_32bits_0" PORT="last_frame"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="sel_FEC_code_rate" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sel_FEC_code_rate_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="sel_FEC_code_rate_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="data_out_ready" SIGIS="undef" SIGNAME="Encoder_0_data_out_ready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Scrambler_32bits_0" PORT="data_in_ready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="Encoder_0_data_out">
+        <PORT DIR="O" LEFT="31" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="LDPC_encoder_0_data_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="block_interleaver_0" PORT="data_in"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="data_out_valid" SIGIS="undef" SIGNAME="Encoder_0_data_out_valid">
+        <PORT DIR="O" NAME="data_out_valid" SIGIS="undef" SIGNAME="LDPC_encoder_0_data_out_valid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="block_interleaver_0" PORT="write_en"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="core_finish" SIGIS="undef" SIGNAME="Encoder_0_core_finish">
+        <PORT DIR="O" NAME="data_out_last" SIGIS="undef" SIGNAME="LDPC_encoder_0_data_out_last">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="core_finish_0"/>
+            <CONNECTION INSTANCE="block_interleaver_0" PORT="data_in_last"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="last_frame" SIGIS="undef" SIGNAME="Encoder_0_last_frame">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="block_interleaver_0" PORT="end_of_frame"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="12" NAME="axis_data_count" RIGHT="0" SIGIS="undef" SIGNAME="Encoder_0_axis_data_count">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="axis_data_count_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="current_code_rate" RIGHT="0" SIGIS="undef" SIGNAME="Encoder_0_current_code_rate">
+        <PORT DIR="O" LEFT="1" NAME="current_cr" RIGHT="0" SIGIS="undef" SIGNAME="LDPC_encoder_0_current_cr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="block_interleaver_0" PORT="code_rate"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="data_out_last" SIGIS="undef" SIGNAME="Encoder_0_data_out_last">
+        <PORT DIR="O" NAME="last_frame" SIGIS="undef" SIGNAME="LDPC_encoder_0_last_frame">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="block_interleaver_0" PORT="data_in_last"/>
+            <CONNECTION INSTANCE="block_interleaver_0" PORT="end_of_frame"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -455,24 +392,19 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="11" NAME="I_out" RIGHT="0" SIGIS="undef" SIGNAME="mapper_0_i_out">
+        <PORT DIR="I" LEFT="11" NAME="I_out" RIGHT="0" SIGIS="undef" SIGNAME="Symbol_mapper_0_i_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="mapper_0" PORT="i_out"/>
+            <CONNECTION INSTANCE="Symbol_mapper_0" PORT="i_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="11" NAME="Q_out" RIGHT="0" SIGIS="undef" SIGNAME="mapper_0_q_out">
+        <PORT DIR="I" LEFT="11" NAME="Q_out" RIGHT="0" SIGIS="undef" SIGNAME="Symbol_mapper_0_q_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="mapper_0" PORT="q_out"/>
+            <CONNECTION INSTANCE="Symbol_mapper_0" PORT="q_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="data_out_valid" SIGIS="undef" SIGNAME="mapper_0_data_out_valid">
+        <PORT DIR="I" NAME="data_out_valid" SIGIS="undef" SIGNAME="Symbol_mapper_0_data_out_valid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="mapper_0" PORT="data_out_valid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="ready_out_CU" SIGIS="undef" SIGNAME="MUX_0_ready_out_CU">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Control_unit_top_0" PORT="dpd_dout_ready"/>
+            <CONNECTION INSTANCE="Symbol_mapper_0" PORT="data_out_valid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="11" NAME="dpd_I_OUT" RIGHT="0" SIGIS="undef" SIGNAME="Control_unit_top_0_dpd_din_data_I">
@@ -490,19 +422,9 @@
             <CONNECTION INSTANCE="Control_unit_top_0" PORT="dpd_din_valid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="ready_out_mapper" SIGIS="undef" SIGNAME="MUX_0_ready_out_mapper">
+        <PORT DIR="I" NAME="select_signal" SIGIS="undef" SIGNAME="Control_unit_top_0_control_unit_enable">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="mapper_0" PORT="data_in_ready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="select_signal" SIGIS="undef" SIGNAME="Control_unit_top_0_mapper_pilot_insertion_en">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Control_unit_top_0" PORT="mapper_pilot_insertion_en"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="ready_in" SIGIS="undef" SIGNAME="Pre_Distortion_Filter_0_data_out_ready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Pre_Distortion_Filter_0" PORT="data_out_ready"/>
+            <CONNECTION INSTANCE="Control_unit_top_0" PORT="control_unit_enable"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="11" NAME="mux_I" RIGHT="0" SIGIS="undef" SIGNAME="MUX_0_mux_I">
@@ -523,25 +445,30 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="9" FULLNAME="/Pipelined_Polyphase_0" HWVERSION="1.0" INSTANCE="Pipelined_Polyphase_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Pipelined_Polyphase_Filter" VLNV="user.org:user:Pipelined_Polyphase_Filter:1.0">
+    <MODULE COREREVISION="5" FULLNAME="/Polyphase_filter_0" HWVERSION="1.0" INSTANCE="Polyphase_filter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Polyphase_filter" VLNV="user.org:user:Polyphase_filter:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DATA_WIDTH" VALUE="16"/>
         <PARAMETER NAME="CONVERSION_FACTOR" VALUE="4"/>
         <PARAMETER NAME="FILTER_TAPS" VALUE="16"/>
         <PARAMETER NAME="DECIMATION_FILTER" VALUE="false"/>
-        <PARAMETER NAME="Component_Name" VALUE="Design_2_Pipelined_Polyphase_0_2"/>
+        <PARAMETER NAME="Component_Name" VALUE="Design_2_Polyphase_filter_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk_50MHz">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="clk_50MHz"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset_0">
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="reset_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="FIFO_reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="Control_unit_top_0_encoder_reset_fifos">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Control_unit_top_0" PORT="encoder_reset_fifos"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="15" NAME="input_I" RIGHT="0" SIGIS="undef" SIGNAME="Pre_Distortion_Filter_0_I_output">
@@ -554,28 +481,22 @@
             <CONNECTION INSTANCE="Pre_Distortion_Filter_0" PORT="Q_output"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="data_in_ready" SIGIS="undef"/>
         <PORT DIR="I" NAME="data_in_valid" SIGIS="undef" SIGNAME="Pre_Distortion_Filter_0_data_out_valid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Pre_Distortion_Filter_0" PORT="data_out_valid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="data_out_ready" SIGIS="undef" SIGNAME="Pipelined_Polyphase_0_data_out_ready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Pre_Distortion_Filter_0" PORT="data_in_ready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="data_out_valid" SIGIS="undef" SIGNAME="Pipelined_Polyphase_0_data_out_valid">
+        <PORT DIR="O" NAME="data_out_valid" SIGIS="undef" SIGNAME="Polyphase_filter_0_data_out_valid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="data_out_valid_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="data_out_I" RIGHT="0" SIGIS="undef" SIGNAME="Pipelined_Polyphase_0_data_out_I">
+        <PORT DIR="O" LEFT="15" NAME="data_out_I" RIGHT="0" SIGIS="undef" SIGNAME="Polyphase_filter_0_data_out_I">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="data_out_I_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="data_out_Q" RIGHT="0" SIGIS="undef" SIGNAME="Pipelined_Polyphase_0_data_out_Q">
+        <PORT DIR="O" LEFT="15" NAME="data_out_Q" RIGHT="0" SIGIS="undef" SIGNAME="Polyphase_filter_0_data_out_Q">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="data_out_Q_0"/>
           </CONNECTIONS>
@@ -583,7 +504,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="9" FULLNAME="/Pre_Distortion_Filter_0" HWVERSION="1.0" INSTANCE="Pre_Distortion_Filter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Pre_Distortion_Filter" VLNV="user.org:user:Pre_Distortion_Filter:1.0">
+    <MODULE COREREVISION="11" FULLNAME="/Pre_Distortion_Filter_0" HWVERSION="1.0" INSTANCE="Pre_Distortion_Filter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Pre_Distortion_Filter" VLNV="user.org:user:Pre_Distortion_Filter:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="FILTER_TAPS" VALUE="16"/>
@@ -613,11 +534,6 @@
             <CONNECTION INSTANCE="MUX_0" PORT="mux_Q"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="data_in_ready" SIGIS="undef" SIGNAME="Pipelined_Polyphase_0_data_out_ready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Pipelined_Polyphase_0" PORT="data_out_ready"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" NAME="data_in_valid" SIGIS="undef" SIGNAME="MUX_0_mux_valid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="MUX_0" PORT="mux_valid"/>
@@ -625,34 +541,29 @@
         </PORT>
         <PORT DIR="O" NAME="data_out_valid" SIGIS="undef" SIGNAME="Pre_Distortion_Filter_0_data_out_valid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Pipelined_Polyphase_0" PORT="data_in_valid"/>
+            <CONNECTION INSTANCE="Polyphase_filter_0" PORT="data_in_valid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="15" NAME="Q_output" RIGHT="0" SIGIS="undef" SIGNAME="Pre_Distortion_Filter_0_Q_output">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Pipelined_Polyphase_0" PORT="input_Q"/>
+            <CONNECTION INSTANCE="Polyphase_filter_0" PORT="input_Q"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="15" NAME="I_output" RIGHT="0" SIGIS="undef" SIGNAME="Pre_Distortion_Filter_0_I_output">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Pipelined_Polyphase_0" PORT="input_I"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="data_out_ready" SIGIS="undef" SIGNAME="Pre_Distortion_Filter_0_data_out_ready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="MUX_0" PORT="ready_in"/>
+            <CONNECTION INSTANCE="Polyphase_filter_0" PORT="input_I"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="9" FULLNAME="/Scrambler_32bits_0" HWVERSION="1.0" INSTANCE="Scrambler_32bits_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Scrambler_32bits" VLNV="user.org:user:Scrambler_32bits:1.0">
+    <MODULE COREREVISION="14" FULLNAME="/Scrambler_32bits_0" HWVERSION="1.0" INSTANCE="Scrambler_32bits_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Scrambler_32bits" VLNV="user.org:user:Scrambler_32bits:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="POLY_DEG" VALUE="32"/>
         <PARAMETER NAME="DATA_DIM" VALUE="32"/>
         <PARAMETER NAME="poly" VALUE="0x90000001"/>
-        <PARAMETER NAME="Component_Name" VALUE="Design_2_Scrambler_32bits_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="Design_2_Scrambler_32bits_0_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -676,19 +587,14 @@
             <CONNECTION INSTANCE="Control_unit_top_0" PORT="scrambler_din_valid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="data_in_ready" SIGIS="undef" SIGNAME="Encoder_0_data_out_ready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Encoder_0" PORT="data_out_ready"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" NAME="data_in_last" SIGIS="undef" SIGNAME="Control_unit_top_0_scrambler_din_last">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Control_unit_top_0" PORT="scrambler_din_last"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="end_of_frame" SIGIS="undef" SIGNAME="Control_unit_top_0_control_unit_last_frame">
+        <PORT DIR="I" NAME="end_of_frame" SIGIS="undef" SIGNAME="Control_unit_top_0_scrambler_last_frame">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Control_unit_top_0" PORT="control_unit_last_frame"/>
+            <CONNECTION INSTANCE="Control_unit_top_0" PORT="scrambler_last_frame"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="30" NAME="seed" RIGHT="0" SIGIS="undef" SIGNAME="Control_unit_top_0_scrambler_seed">
@@ -703,27 +609,22 @@
         </PORT>
         <PORT DIR="O" LEFT="32" NAME="data_out" RIGHT="1" SIGIS="undef" SIGNAME="Scrambler_32bits_0_data_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Encoder_0" PORT="data_in"/>
+            <CONNECTION INSTANCE="LDPC_encoder_0" PORT="data_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="data_out_valid" SIGIS="undef" SIGNAME="Scrambler_32bits_0_data_out_valid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Encoder_0" PORT="data_in_valid"/>
+            <CONNECTION INSTANCE="LDPC_encoder_0" PORT="data_in_valid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="data_out_last" SIGIS="undef" SIGNAME="Scrambler_32bits_0_data_out_last">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Encoder_0" PORT="data_in_last"/>
+            <CONNECTION INSTANCE="LDPC_encoder_0" PORT="data_in_last"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="last_frame" SIGIS="undef" SIGNAME="Scrambler_32bits_0_last_frame">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Encoder_0" PORT="end_of_frame"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="data_out_ready" SIGIS="undef" SIGNAME="Scrambler_32bits_0_data_out_ready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Control_unit_top_0" PORT="scrambler_dout_ready"/>
+            <CONNECTION INSTANCE="LDPC_encoder_0" PORT="end_of_frame"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -733,10 +634,10 @@
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
-          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="Design_2_clk"/>
@@ -744,9 +645,7 @@
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PORTMAPS>
             <PORTMAP LOGICAL="TDATA" PHYSICAL="data_out"/>
-            <PORTMAP LOGICAL="TLAST" PHYSICAL="data_out_last"/>
             <PORTMAP LOGICAL="TVALID" PHYSICAL="data_out_valid"/>
-            <PORTMAP LOGICAL="TREADY" PHYSICAL="data_in_ready"/>
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="__NOC__" NAME="S_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
@@ -756,10 +655,10 @@
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
-          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="Design_2_clk"/>
@@ -768,93 +667,14 @@
           <PORTMAPS>
             <PORTMAP LOGICAL="TVALID" PHYSICAL="data_in_valid"/>
             <PORTMAP LOGICAL="TDATA" PHYSICAL="data_in"/>
-            <PORTMAP LOGICAL="TLAST" PHYSICAL="data_in_last"/>
-            <PORTMAP LOGICAL="TREADY" PHYSICAL="data_out_ready"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="25" FULLNAME="/block_interleaver_0" HWVERSION="1.0" INSTANCE="block_interleaver_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="block_interleaver" VLNV="user.org:user:block_interleaver:1.0">
+    <MODULE COREREVISION="10" FULLNAME="/Symbol_mapper_0" HWVERSION="1.0" INSTANCE="Symbol_mapper_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Symbol_mapper" VLNV="user.org:user:Symbol_mapper:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="NUM_COLS" VALUE="7"/>
-        <PARAMETER NAME="Component_Name" VALUE="Design_2_block_interleaver_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="Encoder_0_data_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Encoder_0" PORT="data_out"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="data_in_ready" SIGIS="undef" SIGNAME="Control_unit_top_0_interleaver_din_ready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Control_unit_top_0" PORT="interleaver_din_ready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="data_in_last" SIGIS="undef" SIGNAME="Encoder_0_data_out_last">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Encoder_0" PORT="data_out_last"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="end_of_frame" SIGIS="undef" SIGNAME="Encoder_0_last_frame">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Encoder_0" PORT="last_frame"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="write_en" SIGIS="undef" SIGNAME="Encoder_0_data_out_valid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Encoder_0" PORT="data_out_valid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="code_rate" RIGHT="0" SIGIS="undef" SIGNAME="Encoder_0_current_code_rate">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Encoder_0" PORT="current_code_rate"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="block_interleaver_0_data_out">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Control_unit_top_0" PORT="interleaver_dout_data"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="data_out_ready" SIGIS="undef" SIGNAME="block_interleaver_0_data_out_ready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Encoder_0" PORT="din_ready_ifsm2enc"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="data_out_last" SIGIS="undef" SIGNAME="block_interleaver_0_data_out_last">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Control_unit_top_0" PORT="interleaver_dout_last"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="last_frame_to_cu" SIGIS="undef" SIGNAME="block_interleaver_0_last_frame_to_cu">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Control_unit_top_0" PORT="interleaver_last_frame"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="read_valid" SIGIS="undef" SIGNAME="block_interleaver_0_read_valid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Control_unit_top_0" PORT="interleaver_dout_valid"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="5" FULLNAME="/mapper_0" HWVERSION="1.0" INSTANCE="mapper_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="mapper" VLNV="user.org:user:mapper:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="Design_2_mapper_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="Design_2_Symbol_mapper_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -883,54 +703,102 @@
             <CONNECTION INSTANCE="Control_unit_top_0" PORT="mapper_din_valid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="data_in_ready" SIGIS="undef" SIGNAME="MUX_0_ready_out_mapper">
+        <PORT DIR="I" NAME="data_in_last" SIGIS="undef" SIGNAME="Control_unit_top_0_mapper_din_last">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="MUX_0" PORT="ready_out_mapper"/>
+            <CONNECTION INSTANCE="Control_unit_top_0" PORT="mapper_din_last"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="end_of_frame" SIGIS="undef" SIGNAME="Control_unit_top_0_mapper_end_of_frame">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Control_unit_top_0" PORT="mapper_end_of_frame"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="signal_field_en" SIGIS="undef" SIGNAME="Control_unit_top_0_mapper_signal_field_enable">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Control_unit_top_0" PORT="mapper_signal_field_enable"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="pilot_insertion" SIGIS="undef" SIGNAME="Control_unit_top_0_mapper_pilot_insertion_en">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Control_unit_top_0" PORT="mapper_pilot_insertion_en"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="11" NAME="i_out" RIGHT="0" SIGIS="undef" SIGNAME="mapper_0_i_out">
+        <PORT DIR="O" LEFT="11" NAME="i_out" RIGHT="0" SIGIS="undef" SIGNAME="Symbol_mapper_0_i_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="MUX_0" PORT="I_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="11" NAME="q_out" RIGHT="0" SIGIS="undef" SIGNAME="mapper_0_q_out">
+        <PORT DIR="O" LEFT="11" NAME="q_out" RIGHT="0" SIGIS="undef" SIGNAME="Symbol_mapper_0_q_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="MUX_0" PORT="Q_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="data_out_last" SIGIS="undef" SIGNAME="mapper_0_data_out_last">
+        <PORT DIR="O" NAME="data_out_last" SIGIS="undef" SIGNAME="Symbol_mapper_0_data_out_last">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Control_unit_top_0" PORT="mapper_dout_last"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="last_frame" SIGIS="undef" SIGNAME="mapper_0_last_frame">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Control_unit_top_0" PORT="mapper_last_frame"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="data_out_ready" SIGIS="undef" SIGNAME="mapper_0_data_out_ready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Control_unit_top_0" PORT="mapper_dout_ready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="data_out_valid" SIGIS="undef" SIGNAME="mapper_0_data_out_valid">
+        <PORT DIR="O" NAME="data_out_valid" SIGIS="undef" SIGNAME="Symbol_mapper_0_data_out_valid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="MUX_0" PORT="data_out_valid"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="25" FULLNAME="/block_interleaver_0" HWVERSION="1.0" INSTANCE="block_interleaver_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="block_interleaver" VLNV="user.org:user:block_interleaver:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="NUM_COLS" VALUE="7"/>
+        <PARAMETER NAME="Component_Name" VALUE="Design_2_block_interleaver_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="LDPC_encoder_0_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="LDPC_encoder_0" PORT="data_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="data_in_ready" SIGIS="undef" SIGNAME="Control_unit_top_0_interleaver_din_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Control_unit_top_0" PORT="interleaver_din_ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="data_in_last" SIGIS="undef" SIGNAME="LDPC_encoder_0_data_out_last">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="LDPC_encoder_0" PORT="data_out_last"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="end_of_frame" SIGIS="undef" SIGNAME="LDPC_encoder_0_last_frame">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="LDPC_encoder_0" PORT="last_frame"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="write_en" SIGIS="undef" SIGNAME="LDPC_encoder_0_data_out_valid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="LDPC_encoder_0" PORT="data_out_valid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="code_rate" RIGHT="0" SIGIS="undef" SIGNAME="LDPC_encoder_0_current_cr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="LDPC_encoder_0" PORT="current_cr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="block_interleaver_0_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Control_unit_top_0" PORT="interleaver_dout_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="data_out_ready" SIGIS="undef" SIGNAME="block_interleaver_0_data_out_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="LDPC_encoder_0" PORT="data_in_ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="data_out_last" SIGIS="undef"/>
+        <PORT DIR="O" NAME="last_frame_to_cu" SIGIS="undef" SIGNAME="block_interleaver_0_last_frame_to_cu">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Control_unit_top_0" PORT="interleaver_last_frame"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="read_valid" SIGIS="undef" SIGNAME="block_interleaver_0_read_valid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Control_unit_top_0" PORT="interleaver_dout_valid"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

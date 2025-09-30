@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_LDPC_encoder_0_2/sources_1/ip/axis_data_fifo_1/hdl" --include "../../../../Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_LDPC_encoder_0_2/sources_1/ip/axis_data_fifo_0/hdl" --include "../../../../Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_LDPC_encoder_0_2/sources_1/ip/sd_fec_0/hdl" --include "../../../../Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Polyphase_filter_0_0/Polyphase_Filter_FI.srcs/sources_1/ip/axis_data_fifo_poly_filter/hdl" --include "/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/xilinx_vip/include" \
+"../../../../Transmitter.ip_user_files/bd/Design_2/ip/Design_2_LDPC_encoder_0_2/sources_1/ip/axis_data_fifo_1/sim/axis_data_fifo_1.v" \
+"../../../../Transmitter.ip_user_files/bd/Design_2/ip/Design_2_LDPC_encoder_0_2/sources_1/ip/axis_data_fifo_0/sim/axis_data_fifo_0.v" \
+
+sv xil_defaultlib  --include "../../../../Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_LDPC_encoder_0_2/sources_1/ip/axis_data_fifo_1/hdl" --include "../../../../Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_LDPC_encoder_0_2/sources_1/ip/axis_data_fifo_0/hdl" --include "../../../../Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_LDPC_encoder_0_2/sources_1/ip/sd_fec_0/hdl" --include "../../../../Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Polyphase_filter_0_0/Polyphase_Filter_FI.srcs/sources_1/ip/axis_data_fifo_poly_filter/hdl" --include "/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/xilinx_vip/include" \
+"../../../../Transmitter.ip_user_files/bd/Design_2/ip/Design_2_LDPC_encoder_0_2/sources_1/ip/sd_fec_0/sim/sd_fec_0.sv" \
+
+verilog xil_defaultlib  --include "../../../../Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_LDPC_encoder_0_2/sources_1/ip/axis_data_fifo_1/hdl" --include "../../../../Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_LDPC_encoder_0_2/sources_1/ip/axis_data_fifo_0/hdl" --include "../../../../Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_LDPC_encoder_0_2/sources_1/ip/sd_fec_0/hdl" --include "../../../../Transmitter.gen/sources_1/bd/Design_2/ip/Design_2_Polyphase_filter_0_0/Polyphase_Filter_FI.srcs/sources_1/ip/axis_data_fifo_poly_filter/hdl" --include "/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/xilinx_vip/include" \
+"../../../../Transmitter.ip_user_files/bd/Design_2/ip/Design_2_Polyphase_filter_0_0/Polyphase_Filter_FI.srcs/sources_1/ip/axis_data_fifo_poly_filter/sim/axis_data_fifo_poly_filter.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

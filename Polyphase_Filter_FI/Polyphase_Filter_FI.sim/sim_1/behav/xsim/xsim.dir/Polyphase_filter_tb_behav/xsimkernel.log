@@ -1,4 +1,7 @@
-Running: xsim.dir/Polyphase_filter_tb_behav/xsimk -simmode gui -wdb Polyphase_filter_tb_behav.wdb -simrunnum 0 -socket 33713
+Running: xsim.dir/Polyphase_filter_tb_behav/xsimk -simmode gui -wdb Polyphase_filter_tb_behav.wdb -simrunnum 0 -socket 33285
 Design successfully loaded
-Design Loading Memory Usage: 44124 KB (Peak: 44132 KB)
-Design Loading CPU Usage: 110 ms
+Design Loading Memory Usage: 44120 KB (Peak: 44128 KB)
+Design Loading CPU Usage: 90 ms
+Simulation completed
+Simulation Memory Usage: 136528 KB (Peak: 185436 KB)
+Simulation CPU Usage: 560 ms

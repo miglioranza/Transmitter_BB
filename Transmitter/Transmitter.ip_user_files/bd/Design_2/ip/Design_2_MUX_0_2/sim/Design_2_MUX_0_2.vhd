@@ -58,13 +58,10 @@ ENTITY Design_2_MUX_0_2 IS
     I_out : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
     Q_out : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
     data_out_valid : IN STD_LOGIC;
-    ready_out_CU : OUT STD_LOGIC;
     dpd_I_OUT : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
     dpd_Q_OUT : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
     dpd_valid : IN STD_LOGIC;
-    ready_out_mapper : OUT STD_LOGIC;
     select_signal : IN STD_LOGIC;
-    ready_in : IN STD_LOGIC;
     mux_I : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
     mux_Q : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
     mux_valid : OUT STD_LOGIC
@@ -79,13 +76,10 @@ ARCHITECTURE Design_2_MUX_0_2_arch OF Design_2_MUX_0_2 IS
       I_out : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
       Q_out : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
       data_out_valid : IN STD_LOGIC;
-      ready_out_CU : OUT STD_LOGIC;
       dpd_I_OUT : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
       dpd_Q_OUT : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
       dpd_valid : IN STD_LOGIC;
-      ready_out_mapper : OUT STD_LOGIC;
       select_signal : IN STD_LOGIC;
-      ready_in : IN STD_LOGIC;
       mux_I : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
       mux_Q : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
       mux_valid : OUT STD_LOGIC
@@ -99,13 +93,10 @@ BEGIN
       I_out => I_out,
       Q_out => Q_out,
       data_out_valid => data_out_valid,
-      ready_out_CU => ready_out_CU,
       dpd_I_OUT => dpd_I_OUT,
       dpd_Q_OUT => dpd_Q_OUT,
       dpd_valid => dpd_valid,
-      ready_out_mapper => ready_out_mapper,
       select_signal => select_signal,
-      ready_in => ready_in,
       mux_I => mux_I,
       mux_Q => mux_Q,
       mux_valid => mux_valid

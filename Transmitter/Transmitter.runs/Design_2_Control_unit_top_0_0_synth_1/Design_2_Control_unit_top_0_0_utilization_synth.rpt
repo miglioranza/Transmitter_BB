@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Mon Jun  2 16:10:33 2025
+| Date         : Tue Sep 30 11:43:00 2025
 | Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 | Command      : report_utilization -file Design_2_Control_unit_top_0_0_utilization_synth.rpt -pb Design_2_Control_unit_top_0_0_utilization_synth.pb
 | Design       : Design_2_Control_unit_top_0_0
@@ -32,14 +32,14 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               |  453 |     0 |          0 |    425280 |  0.11 |
-|   LUT as Logic          |  453 |     0 |          0 |    425280 |  0.11 |
+| CLB LUTs*               |  266 |     0 |          0 |    425280 |  0.06 |
+|   LUT as Logic          |  266 |     0 |          0 |    425280 |  0.06 |
 |   LUT as Memory         |    0 |     0 |          0 |    213600 |  0.00 |
-| CLB Registers           |  251 |     0 |          0 |    850560 |  0.03 |
-|   Register as Flip Flop |  251 |     0 |          0 |    850560 |  0.03 |
+| CLB Registers           |  187 |     0 |          0 |    850560 |  0.02 |
+|   Register as Flip Flop |  187 |     0 |          0 |    850560 |  0.02 |
 |   Register as Latch     |    0 |     0 |          0 |    850560 |  0.00 |
-| CARRY8                  |   44 |     0 |          0 |     53160 |  0.08 |
-| F7 Muxes                |    9 |     0 |          0 |    212640 | <0.01 |
+| CARRY8                  |    6 |     0 |          0 |     53160 |  0.01 |
+| F7 Muxes                |    4 |     0 |          0 |    212640 | <0.01 |
 | F8 Muxes                |    0 |     0 |          0 |    106320 |  0.00 |
 | F9 Muxes                |    0 |     0 |          0 |     53160 |  0.00 |
 +-------------------------+------+-------+------------+-----------+-------+
@@ -58,10 +58,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 0     |          Yes |           - |          Set |
-| 73    |          Yes |           - |        Reset |
-| 0     |          Yes |         Set |            - |
-| 178   |          Yes |       Reset |            - |
+| 1     |          Yes |           - |          Set |
+| 65    |          Yes |           - |        Reset |
+| 1     |          Yes |         Set |            - |
+| 120   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -162,16 +162,18 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  178 |            Register |
-| LUT6     |  138 |                 CLB |
-| LUT2     |  137 |                 CLB |
-| LUT5     |  134 |                 CLB |
-| LUT4     |   73 |                 CLB |
-| FDCE     |   73 |            Register |
-| CARRY8   |   44 |                 CLB |
-| LUT3     |   15 |                 CLB |
-| MUXF7    |    9 |                 CLB |
-| LUT1     |    7 |                 CLB |
+| LUT6     |  157 |                 CLB |
+| FDRE     |  120 |            Register |
+| FDCE     |   65 |            Register |
+| LUT2     |   60 |                 CLB |
+| LUT5     |   44 |                 CLB |
+| LUT3     |   32 |                 CLB |
+| LUT4     |   16 |                 CLB |
+| CARRY8   |    6 |                 CLB |
+| MUXF7    |    4 |                 CLB |
+| LUT1     |    2 |                 CLB |
+| FDSE     |    1 |            Register |
+| FDPE     |    1 |            Register |
 +----------+------+---------------------+
 
 

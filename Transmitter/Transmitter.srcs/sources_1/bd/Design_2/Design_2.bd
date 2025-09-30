@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x4153B352919424D4",
+      "boundary_crc": "0xA378EAC35C4EFA74",
       "device": "xczu28dr-ffvg1517-2-e",
       "gen_directory": "../../../../Transmitter.gen/sources_1/bd/Design_2",
       "name": "Design_2",
@@ -11,30 +11,16 @@
       "validated": "true"
     },
     "design_tree": {
-      "mapper_0": "",
-      "Pre_Distortion_Filter_0": "",
-      "Scrambler_32bits_0": "",
-      "Encoder_0": "",
       "block_interleaver_0": "",
-      "Pipelined_Polyphase_0": "",
+      "Scrambler_32bits_0": "",
+      "Pre_Distortion_Filter_0": "",
       "MUX_0": "",
-      "Control_unit_top_0": ""
+      "Symbol_mapper_0": "",
+      "Control_unit_top_0": "",
+      "LDPC_encoder_0": "",
+      "Polyphase_filter_0": ""
     },
     "ports": {
-      "aresetn_0": {
-        "type": "rst",
-        "direction": "I",
-        "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "POLARITY": {
-            "value": "ACTIVE_LOW",
-            "value_src": "default"
-          }
-        }
-      },
       "clk": {
         "type": "clk",
         "direction": "I",
@@ -63,9 +49,6 @@
             "value_src": "default"
           }
         }
-      },
-      "core_finish_0": {
-        "direction": "O"
       },
       "ldpc_core_clk": {
         "type": "clk",
@@ -107,19 +90,6 @@
           }
         }
       },
-      "sel_FEC_code_rate_0": {
-        "direction": "I",
-        "left": "1",
-        "right": "0"
-      },
-      "mod_type_0": {
-        "direction": "I",
-        "left": "2",
-        "right": "0"
-      },
-      "data_in_ready_0": {
-        "direction": "I"
-      },
       "data_out_valid_0": {
         "direction": "O"
       },
@@ -132,54 +102,6 @@
         "direction": "O",
         "left": "15",
         "right": "0"
-      },
-      "clk_50MHz": {
-        "type": "clk",
-        "direction": "I",
-        "parameters": {
-          "ASSOCIATED_RESET": {
-            "value": "reset_0",
-            "value_src": "default"
-          },
-          "CLK_DOMAIN": {
-            "value": "Design_2_clk_50MHz",
-            "value_src": "default"
-          },
-          "FREQ_HZ": {
-            "value": "50000000"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.0",
-            "value_src": "default"
-          }
-        }
-      },
-      "axis_data_count_0": {
-        "direction": "O",
-        "left": "12",
-        "right": "0"
-      },
-      "reset_0": {
-        "type": "rst",
-        "direction": "I",
-        "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "POLARITY": {
-            "value": "ACTIVE_LOW",
-            "value_src": "default"
-          }
-        }
       },
       "control_unit_dout_ready_0": {
         "direction": "O"
@@ -210,11 +132,6 @@
         "left": "4",
         "right": "0"
       },
-      "mod_cod_schemes_0": {
-        "direction": "I",
-        "left": "3",
-        "right": "0"
-      },
       "num_words_0": {
         "direction": "I",
         "left": "15",
@@ -240,46 +157,23 @@
       }
     },
     "components": {
-      "mapper_0": {
-        "vlnv": "user.org:user:mapper:1.0",
-        "xci_name": "Design_2_mapper_0_0",
-        "xci_path": "ip/Design_2_mapper_0_0/Design_2_mapper_0_0.xci",
-        "inst_hier_path": "mapper_0"
-      },
-      "Pre_Distortion_Filter_0": {
-        "vlnv": "user.org:user:Pre_Distortion_Filter:1.0",
-        "xci_name": "Design_2_Pre_Distortion_Filter_0_0",
-        "xci_path": "ip/Design_2_Pre_Distortion_Filter_0_0/Design_2_Pre_Distortion_Filter_0_0.xci",
-        "inst_hier_path": "Pre_Distortion_Filter_0"
-      },
-      "Scrambler_32bits_0": {
-        "vlnv": "user.org:user:Scrambler_32bits:1.0",
-        "xci_name": "Design_2_Scrambler_32bits_0_0",
-        "xci_path": "ip/Design_2_Scrambler_32bits_0_0/Design_2_Scrambler_32bits_0_0.xci",
-        "inst_hier_path": "Scrambler_32bits_0"
-      },
-      "Encoder_0": {
-        "vlnv": "user.org:user:Encoder:1.0",
-        "xci_name": "Design_2_Encoder_0_0",
-        "xci_path": "ip/Design_2_Encoder_0_0/Design_2_Encoder_0_0.xci",
-        "inst_hier_path": "Encoder_0"
-      },
       "block_interleaver_0": {
         "vlnv": "user.org:user:block_interleaver:1.0",
         "xci_name": "Design_2_block_interleaver_0_0",
         "xci_path": "ip/Design_2_block_interleaver_0_0/Design_2_block_interleaver_0_0.xci",
         "inst_hier_path": "block_interleaver_0"
       },
-      "Pipelined_Polyphase_0": {
-        "vlnv": "user.org:user:Pipelined_Polyphase_Filter:1.0",
-        "xci_name": "Design_2_Pipelined_Polyphase_0_2",
-        "xci_path": "ip/Design_2_Pipelined_Polyphase_0_2/Design_2_Pipelined_Polyphase_0_2.xci",
-        "inst_hier_path": "Pipelined_Polyphase_0",
-        "parameters": {
-          "DATA_WIDTH": {
-            "value": "16"
-          }
-        }
+      "Scrambler_32bits_0": {
+        "vlnv": "user.org:user:Scrambler_32bits:1.0",
+        "xci_name": "Design_2_Scrambler_32bits_0_1",
+        "xci_path": "ip/Design_2_Scrambler_32bits_0_1/Design_2_Scrambler_32bits_0_1.xci",
+        "inst_hier_path": "Scrambler_32bits_0"
+      },
+      "Pre_Distortion_Filter_0": {
+        "vlnv": "user.org:user:Pre_Distortion_Filter:1.0",
+        "xci_name": "Design_2_Pre_Distortion_Filter_0_0",
+        "xci_path": "ip/Design_2_Pre_Distortion_Filter_0_0/Design_2_Pre_Distortion_Filter_0_0.xci",
+        "inst_hier_path": "Pre_Distortion_Filter_0"
       },
       "MUX_0": {
         "vlnv": "xilinx.com:module_ref:MUX:1.0",
@@ -305,9 +199,6 @@
           "data_out_valid": {
             "direction": "I"
           },
-          "ready_out_CU": {
-            "direction": "O"
-          },
           "dpd_I_OUT": {
             "direction": "I",
             "left": "11",
@@ -321,13 +212,7 @@
           "dpd_valid": {
             "direction": "I"
           },
-          "ready_out_mapper": {
-            "direction": "O"
-          },
           "select_signal": {
-            "direction": "I"
-          },
-          "ready_in": {
             "direction": "I"
           },
           "mux_I": {
@@ -345,11 +230,29 @@
           }
         }
       },
+      "Symbol_mapper_0": {
+        "vlnv": "user.org:user:Symbol_mapper:1.0",
+        "xci_name": "Design_2_Symbol_mapper_0_0",
+        "xci_path": "ip/Design_2_Symbol_mapper_0_0/Design_2_Symbol_mapper_0_0.xci",
+        "inst_hier_path": "Symbol_mapper_0"
+      },
       "Control_unit_top_0": {
         "vlnv": "user.org:user:Control_unit_top:1.0",
         "xci_name": "Design_2_Control_unit_top_0_0",
         "xci_path": "ip/Design_2_Control_unit_top_0_0/Design_2_Control_unit_top_0_0.xci",
         "inst_hier_path": "Control_unit_top_0"
+      },
+      "LDPC_encoder_0": {
+        "vlnv": "user.org:user:LDPC_encoder:1.0",
+        "xci_name": "Design_2_LDPC_encoder_0_2",
+        "xci_path": "ip/Design_2_LDPC_encoder_0_2/Design_2_LDPC_encoder_0_2.xci",
+        "inst_hier_path": "LDPC_encoder_0"
+      },
+      "Polyphase_filter_0": {
+        "vlnv": "user.org:user:Polyphase_filter:1.0",
+        "xci_name": "Design_2_Polyphase_filter_0_0",
+        "xci_path": "ip/Design_2_Polyphase_filter_0_0/Design_2_Polyphase_filter_0_0.xci",
+        "inst_hier_path": "Polyphase_filter_0"
       }
     },
     "nets": {
@@ -361,7 +264,7 @@
       },
       "Control_unit_top_0_control_unit_last_frame": {
         "ports": [
-          "Control_unit_top_0/control_unit_last_frame",
+          "Control_unit_top_0/scrambler_last_frame",
           "Scrambler_32bits_0/end_of_frame"
         ]
       },
@@ -383,6 +286,19 @@
           "MUX_0/dpd_valid"
         ]
       },
+      "Control_unit_top_0_encoder_code_rate": {
+        "ports": [
+          "Control_unit_top_0/encoder_code_rate",
+          "LDPC_encoder_0/sel_code_rate"
+        ]
+      },
+      "Control_unit_top_0_encoder_reset_fifos": {
+        "ports": [
+          "Control_unit_top_0/encoder_reset_fifos",
+          "LDPC_encoder_0/reset_fifos",
+          "Polyphase_filter_0/FIFO_reset"
+        ]
+      },
       "Control_unit_top_0_interleaver_din_ready": {
         "ports": [
           "Control_unit_top_0/interleaver_din_ready",
@@ -392,38 +308,31 @@
       "Control_unit_top_0_mapper_din_data": {
         "ports": [
           "Control_unit_top_0/mapper_din_data",
-          "mapper_0/data_in"
+          "Symbol_mapper_0/data_in"
+        ]
+      },
+      "Control_unit_top_0_mapper_din_last": {
+        "ports": [
+          "Control_unit_top_0/mapper_din_last",
+          "Symbol_mapper_0/data_in_last"
         ]
       },
       "Control_unit_top_0_mapper_din_valid": {
         "ports": [
           "Control_unit_top_0/mapper_din_valid",
-          "mapper_0/data_in_valid"
-        ]
-      },
-      "Control_unit_top_0_mapper_end_of_frame": {
-        "ports": [
-          "Control_unit_top_0/mapper_end_of_frame",
-          "mapper_0/end_of_frame"
+          "Symbol_mapper_0/data_in_valid"
         ]
       },
       "Control_unit_top_0_mapper_pilot_insertion_en": {
         "ports": [
-          "Control_unit_top_0/mapper_pilot_insertion_en",
-          "mapper_0/pilot_insertion",
+          "Control_unit_top_0/control_unit_enable",
           "MUX_0/select_signal"
         ]
       },
       "Control_unit_top_0_mapper_selected_mod": {
         "ports": [
           "Control_unit_top_0/mapper_selected_mod",
-          "mapper_0/mod_type"
-        ]
-      },
-      "Control_unit_top_0_mapper_signal_field_enable": {
-        "ports": [
-          "Control_unit_top_0/mapper_signal_field_enable",
-          "mapper_0/signal_field_en"
+          "Symbol_mapper_0/mod_type"
         ]
       },
       "Control_unit_top_0_scrambler_control_enable": {
@@ -456,51 +365,33 @@
           "Scrambler_32bits_0/seed"
         ]
       },
-      "Encoder_0_axis_data_count": {
+      "LDPC_encoder_0_current_cr": {
         "ports": [
-          "Encoder_0/axis_data_count",
-          "axis_data_count_0"
-        ]
-      },
-      "Encoder_0_core_finish": {
-        "ports": [
-          "Encoder_0/core_finish",
-          "core_finish_0"
-        ]
-      },
-      "Encoder_0_current_code_rate": {
-        "ports": [
-          "Encoder_0/current_code_rate",
+          "LDPC_encoder_0/current_cr",
           "block_interleaver_0/code_rate"
         ]
       },
-      "Encoder_0_data_out": {
+      "LDPC_encoder_0_data_out_1_2": {
         "ports": [
-          "Encoder_0/data_out",
+          "LDPC_encoder_0/data_out",
           "block_interleaver_0/data_in"
         ]
       },
-      "Encoder_0_data_out_last": {
+      "LDPC_encoder_0_data_out_last": {
         "ports": [
-          "Encoder_0/data_out_last",
+          "LDPC_encoder_0/data_out_last",
           "block_interleaver_0/data_in_last"
         ]
       },
-      "Encoder_0_data_out_ready": {
+      "LDPC_encoder_0_data_out_valid": {
         "ports": [
-          "Encoder_0/data_out_ready",
-          "Scrambler_32bits_0/data_in_ready"
-        ]
-      },
-      "Encoder_0_data_out_valid": {
-        "ports": [
-          "Encoder_0/data_out_valid",
+          "LDPC_encoder_0/data_out_valid",
           "block_interleaver_0/write_en"
         ]
       },
-      "Encoder_0_last_frame": {
+      "LDPC_encoder_0_last_frame": {
         "ports": [
-          "Encoder_0/last_frame",
+          "LDPC_encoder_0/last_frame",
           "block_interleaver_0/end_of_frame"
         ]
       },
@@ -522,100 +413,88 @@
           "Pre_Distortion_Filter_0/data_in_valid"
         ]
       },
-      "MUX_0_ready_out_CU": {
+      "Polyphase_filter_0_data_out_I": {
         "ports": [
-          "MUX_0/ready_out_CU",
-          "Control_unit_top_0/dpd_dout_ready"
-        ]
-      },
-      "MUX_0_ready_out_mapper": {
-        "ports": [
-          "MUX_0/ready_out_mapper",
-          "mapper_0/data_in_ready"
-        ]
-      },
-      "Pipelined_Polyphase_0_data_out_I": {
-        "ports": [
-          "Pipelined_Polyphase_0/data_out_I",
+          "Polyphase_filter_0/data_out_I",
           "data_out_I_0"
         ]
       },
-      "Pipelined_Polyphase_0_data_out_Q": {
+      "Polyphase_filter_0_data_out_Q": {
         "ports": [
-          "Pipelined_Polyphase_0/data_out_Q",
+          "Polyphase_filter_0/data_out_Q",
           "data_out_Q_0"
         ]
       },
-      "Pipelined_Polyphase_0_data_out_ready": {
+      "Polyphase_filter_0_data_out_valid": {
         "ports": [
-          "Pipelined_Polyphase_0/data_out_ready",
-          "Pre_Distortion_Filter_0/data_in_ready"
-        ]
-      },
-      "Pipelined_Polyphase_0_data_out_valid": {
-        "ports": [
-          "Pipelined_Polyphase_0/data_out_valid",
+          "Polyphase_filter_0/data_out_valid",
           "data_out_valid_0"
         ]
       },
       "Pre_Distortion_Filter_0_I_output": {
         "ports": [
           "Pre_Distortion_Filter_0/I_output",
-          "Pipelined_Polyphase_0/input_I"
+          "Polyphase_filter_0/input_I"
         ]
       },
       "Pre_Distortion_Filter_0_Q_output": {
         "ports": [
           "Pre_Distortion_Filter_0/Q_output",
-          "Pipelined_Polyphase_0/input_Q"
-        ]
-      },
-      "Pre_Distortion_Filter_0_data_out_ready": {
-        "ports": [
-          "Pre_Distortion_Filter_0/data_out_ready",
-          "MUX_0/ready_in"
+          "Polyphase_filter_0/input_Q"
         ]
       },
       "Pre_Distortion_Filter_0_data_out_valid": {
         "ports": [
           "Pre_Distortion_Filter_0/data_out_valid",
-          "Pipelined_Polyphase_0/data_in_valid"
+          "Polyphase_filter_0/data_in_valid"
         ]
       },
       "Scrambler_32bits_0_data_out": {
         "ports": [
           "Scrambler_32bits_0/data_out",
-          "Encoder_0/data_in"
+          "LDPC_encoder_0/data_in"
         ]
       },
       "Scrambler_32bits_0_data_out_last": {
         "ports": [
           "Scrambler_32bits_0/data_out_last",
-          "Encoder_0/data_in_last"
-        ]
-      },
-      "Scrambler_32bits_0_data_out_ready": {
-        "ports": [
-          "Scrambler_32bits_0/data_out_ready",
-          "Control_unit_top_0/scrambler_dout_ready"
+          "LDPC_encoder_0/data_in_last"
         ]
       },
       "Scrambler_32bits_0_data_out_valid": {
         "ports": [
           "Scrambler_32bits_0/data_out_valid",
-          "Encoder_0/data_in_valid"
+          "LDPC_encoder_0/data_in_valid"
         ]
       },
       "Scrambler_32bits_0_last_frame": {
         "ports": [
           "Scrambler_32bits_0/last_frame",
-          "Encoder_0/end_of_frame"
+          "LDPC_encoder_0/end_of_frame"
         ]
       },
-      "aresetn_0_1": {
+      "Symbol_mapper_0_data_out_last": {
         "ports": [
-          "aresetn_0",
-          "Encoder_0/aresetn"
+          "Symbol_mapper_0/data_out_last",
+          "Control_unit_top_0/mapper_dout_last"
+        ]
+      },
+      "Symbol_mapper_0_data_out_valid": {
+        "ports": [
+          "Symbol_mapper_0/data_out_valid",
+          "MUX_0/data_out_valid"
+        ]
+      },
+      "Symbol_mapper_0_i_out": {
+        "ports": [
+          "Symbol_mapper_0/i_out",
+          "MUX_0/I_out"
+        ]
+      },
+      "Symbol_mapper_0_q_out": {
+        "ports": [
+          "Symbol_mapper_0/q_out",
+          "MUX_0/Q_out"
         ]
       },
       "block_interleaver_0_data_out": {
@@ -626,14 +505,13 @@
       },
       "block_interleaver_0_data_out_last": {
         "ports": [
-          "block_interleaver_0/data_out_last",
-          "Control_unit_top_0/interleaver_dout_last"
+          "block_interleaver_0/data_out_last"
         ]
       },
       "block_interleaver_0_data_out_ready": {
         "ports": [
           "block_interleaver_0/data_out_ready",
-          "Encoder_0/din_ready_ifsm2enc"
+          "LDPC_encoder_0/data_in_ready"
         ]
       },
       "block_interleaver_0_last_frame_to_cu": {
@@ -651,18 +529,13 @@
       "clk_1": {
         "ports": [
           "clk",
-          "mapper_0/clk",
+          "block_interleaver_0/clk",
           "Scrambler_32bits_0/clk",
           "Pre_Distortion_Filter_0/clk",
-          "Encoder_0/clk",
-          "block_interleaver_0/clk",
-          "Control_unit_top_0/clk"
-        ]
-      },
-      "clk_50MHz_1": {
-        "ports": [
-          "clk_50MHz",
-          "Pipelined_Polyphase_0/clk"
+          "Symbol_mapper_0/clk",
+          "Control_unit_top_0/clk",
+          "LDPC_encoder_0/clk",
+          "Polyphase_filter_0/clk"
         ]
       },
       "control_unit_din_data_0_1": {
@@ -683,46 +556,10 @@
           "Control_unit_top_0/control_unit_end_of_frame"
         ]
       },
-      "ldpc_core_clk_0_1": {
+      "ldpc_core_clk_1": {
         "ports": [
           "ldpc_core_clk",
-          "Encoder_0/ldpc_core_clk"
-        ]
-      },
-      "mapper_0_data_out_last": {
-        "ports": [
-          "mapper_0/data_out_last",
-          "Control_unit_top_0/mapper_dout_last"
-        ]
-      },
-      "mapper_0_data_out_ready": {
-        "ports": [
-          "mapper_0/data_out_ready",
-          "Control_unit_top_0/mapper_dout_ready"
-        ]
-      },
-      "mapper_0_data_out_valid": {
-        "ports": [
-          "mapper_0/data_out_valid",
-          "MUX_0/data_out_valid"
-        ]
-      },
-      "mapper_0_i_out": {
-        "ports": [
-          "mapper_0/i_out",
-          "MUX_0/I_out"
-        ]
-      },
-      "mapper_0_last_frame": {
-        "ports": [
-          "mapper_0/last_frame",
-          "Control_unit_top_0/mapper_last_frame"
-        ]
-      },
-      "mapper_0_q_out": {
-        "ports": [
-          "mapper_0/q_out",
-          "MUX_0/Q_out"
+          "LDPC_encoder_0/ldpc_core_clk"
         ]
       },
       "mod_cod_schemes_1_1": {
@@ -761,33 +598,22 @@
           "Control_unit_top_0/ref_distance"
         ]
       },
-      "reset_0_1": {
-        "ports": [
-          "reset_0",
-          "Pipelined_Polyphase_0/reset"
-        ]
-      },
       "reset_1": {
         "ports": [
           "reset",
-          "mapper_0/reset",
-          "Pre_Distortion_Filter_0/reset",
-          "Scrambler_32bits_0/rst",
-          "Encoder_0/reset",
           "block_interleaver_0/rst",
-          "Control_unit_top_0/reset"
+          "Scrambler_32bits_0/rst",
+          "Pre_Distortion_Filter_0/reset",
+          "Symbol_mapper_0/reset",
+          "Control_unit_top_0/reset",
+          "LDPC_encoder_0/reset",
+          "Polyphase_filter_0/reset"
         ]
       },
       "scrambler_init_0_1": {
         "ports": [
           "scrambler_init_0",
           "Control_unit_top_0/scrambler_init"
-        ]
-      },
-      "sel_FEC_code_rate_0_1": {
-        "ports": [
-          "sel_FEC_code_rate_0",
-          "Encoder_0/sel_FEC_code_rate"
         ]
       },
       "start_tx_0_1": {

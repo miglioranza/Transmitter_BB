@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Mon Jun  2 15:51:19 2025
+-- Date        : Tue Sep 23 16:31:16 2025
 -- Host        : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 -- Command     : write_vhdl -force -mode funcsim -rename_top Design_2_MUX_0_2 -prefix
 --               Design_2_MUX_0_2_ Design_2_MUX_0_2_sim_netlist.vhdl
@@ -18,11 +18,11 @@ entity Design_2_MUX_0_2_MUX is
   port (
     mux_I : out STD_LOGIC_VECTOR ( 11 downto 0 );
     mux_Q : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    dpd_I_OUT : in STD_LOGIC_VECTOR ( 11 downto 0 );
     I_out : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    dpd_I_OUT : in STD_LOGIC_VECTOR ( 11 downto 0 );
     select_signal : in STD_LOGIC;
-    dpd_Q_OUT : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    Q_out : in STD_LOGIC_VECTOR ( 11 downto 0 )
+    Q_out : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    dpd_Q_OUT : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
 end Design_2_MUX_0_2_MUX;
 
@@ -58,8 +58,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_I_OUT(0),
-      I1 => I_out(0),
+      I0 => I_out(0),
+      I1 => dpd_I_OUT(0),
       I2 => select_signal,
       O => mux_I(0)
     );
@@ -68,8 +68,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_I_OUT(10),
-      I1 => I_out(10),
+      I0 => I_out(10),
+      I1 => dpd_I_OUT(10),
       I2 => select_signal,
       O => mux_I(10)
     );
@@ -78,8 +78,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_I_OUT(11),
-      I1 => I_out(11),
+      I0 => I_out(11),
+      I1 => dpd_I_OUT(11),
       I2 => select_signal,
       O => mux_I(11)
     );
@@ -88,8 +88,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_I_OUT(1),
-      I1 => I_out(1),
+      I0 => I_out(1),
+      I1 => dpd_I_OUT(1),
       I2 => select_signal,
       O => mux_I(1)
     );
@@ -98,8 +98,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_I_OUT(2),
-      I1 => I_out(2),
+      I0 => I_out(2),
+      I1 => dpd_I_OUT(2),
       I2 => select_signal,
       O => mux_I(2)
     );
@@ -108,8 +108,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_I_OUT(3),
-      I1 => I_out(3),
+      I0 => I_out(3),
+      I1 => dpd_I_OUT(3),
       I2 => select_signal,
       O => mux_I(3)
     );
@@ -118,8 +118,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_I_OUT(4),
-      I1 => I_out(4),
+      I0 => I_out(4),
+      I1 => dpd_I_OUT(4),
       I2 => select_signal,
       O => mux_I(4)
     );
@@ -128,8 +128,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_I_OUT(5),
-      I1 => I_out(5),
+      I0 => I_out(5),
+      I1 => dpd_I_OUT(5),
       I2 => select_signal,
       O => mux_I(5)
     );
@@ -138,8 +138,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_I_OUT(6),
-      I1 => I_out(6),
+      I0 => I_out(6),
+      I1 => dpd_I_OUT(6),
       I2 => select_signal,
       O => mux_I(6)
     );
@@ -148,8 +148,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_I_OUT(7),
-      I1 => I_out(7),
+      I0 => I_out(7),
+      I1 => dpd_I_OUT(7),
       I2 => select_signal,
       O => mux_I(7)
     );
@@ -158,8 +158,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_I_OUT(8),
-      I1 => I_out(8),
+      I0 => I_out(8),
+      I1 => dpd_I_OUT(8),
       I2 => select_signal,
       O => mux_I(8)
     );
@@ -168,8 +168,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_I_OUT(9),
-      I1 => I_out(9),
+      I0 => I_out(9),
+      I1 => dpd_I_OUT(9),
       I2 => select_signal,
       O => mux_I(9)
     );
@@ -178,8 +178,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_Q_OUT(0),
-      I1 => Q_out(0),
+      I0 => Q_out(0),
+      I1 => dpd_Q_OUT(0),
       I2 => select_signal,
       O => mux_Q(0)
     );
@@ -188,8 +188,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_Q_OUT(10),
-      I1 => Q_out(10),
+      I0 => Q_out(10),
+      I1 => dpd_Q_OUT(10),
       I2 => select_signal,
       O => mux_Q(10)
     );
@@ -198,8 +198,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_Q_OUT(11),
-      I1 => Q_out(11),
+      I0 => Q_out(11),
+      I1 => dpd_Q_OUT(11),
       I2 => select_signal,
       O => mux_Q(11)
     );
@@ -208,8 +208,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_Q_OUT(1),
-      I1 => Q_out(1),
+      I0 => Q_out(1),
+      I1 => dpd_Q_OUT(1),
       I2 => select_signal,
       O => mux_Q(1)
     );
@@ -218,8 +218,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_Q_OUT(2),
-      I1 => Q_out(2),
+      I0 => Q_out(2),
+      I1 => dpd_Q_OUT(2),
       I2 => select_signal,
       O => mux_Q(2)
     );
@@ -228,8 +228,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_Q_OUT(3),
-      I1 => Q_out(3),
+      I0 => Q_out(3),
+      I1 => dpd_Q_OUT(3),
       I2 => select_signal,
       O => mux_Q(3)
     );
@@ -238,8 +238,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_Q_OUT(4),
-      I1 => Q_out(4),
+      I0 => Q_out(4),
+      I1 => dpd_Q_OUT(4),
       I2 => select_signal,
       O => mux_Q(4)
     );
@@ -248,8 +248,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_Q_OUT(5),
-      I1 => Q_out(5),
+      I0 => Q_out(5),
+      I1 => dpd_Q_OUT(5),
       I2 => select_signal,
       O => mux_Q(5)
     );
@@ -258,8 +258,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_Q_OUT(6),
-      I1 => Q_out(6),
+      I0 => Q_out(6),
+      I1 => dpd_Q_OUT(6),
       I2 => select_signal,
       O => mux_Q(6)
     );
@@ -268,8 +268,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_Q_OUT(7),
-      I1 => Q_out(7),
+      I0 => Q_out(7),
+      I1 => dpd_Q_OUT(7),
       I2 => select_signal,
       O => mux_Q(7)
     );
@@ -278,8 +278,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_Q_OUT(8),
-      I1 => Q_out(8),
+      I0 => Q_out(8),
+      I1 => dpd_Q_OUT(8),
       I2 => select_signal,
       O => mux_Q(8)
     );
@@ -288,8 +288,8 @@ begin
       INIT => X"AC"
     )
         port map (
-      I0 => dpd_Q_OUT(9),
-      I1 => Q_out(9),
+      I0 => Q_out(9),
+      I1 => dpd_Q_OUT(9),
       I2 => select_signal,
       O => mux_Q(9)
     );
@@ -303,13 +303,10 @@ entity Design_2_MUX_0_2 is
     I_out : in STD_LOGIC_VECTOR ( 11 downto 0 );
     Q_out : in STD_LOGIC_VECTOR ( 11 downto 0 );
     data_out_valid : in STD_LOGIC;
-    ready_out_CU : out STD_LOGIC;
     dpd_I_OUT : in STD_LOGIC_VECTOR ( 11 downto 0 );
     dpd_Q_OUT : in STD_LOGIC_VECTOR ( 11 downto 0 );
     dpd_valid : in STD_LOGIC;
-    ready_out_mapper : out STD_LOGIC;
     select_signal : in STD_LOGIC;
-    ready_in : in STD_LOGIC;
     mux_I : out STD_LOGIC_VECTOR ( 11 downto 0 );
     mux_Q : out STD_LOGIC_VECTOR ( 11 downto 0 );
     mux_valid : out STD_LOGIC
@@ -343,27 +340,9 @@ mux_valid_INST_0: unisim.vcomponents.LUT3
       INIT => X"B8"
     )
         port map (
-      I0 => dpd_valid,
+      I0 => data_out_valid,
       I1 => select_signal,
-      I2 => data_out_valid,
+      I2 => dpd_valid,
       O => mux_valid
-    );
-ready_out_CU_INST_0: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"2"
-    )
-        port map (
-      I0 => ready_in,
-      I1 => select_signal,
-      O => ready_out_CU
-    );
-ready_out_mapper_INST_0: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => select_signal,
-      I1 => ready_in,
-      O => ready_out_mapper
     );
 end STRUCTURE;

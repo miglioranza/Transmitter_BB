@@ -312,8 +312,8 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.srcs/sources_1/new/Polyphase_filter.vhd
-read_ip -quiet /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.srcs/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0.xci
-set_property used_in_implementation false [get_files -all /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0_ooc.xdc]
+read_ip -quiet /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.srcs/sources_1/ip/axis_data_fifo_poly_filter/axis_data_fifo_poly_filter.xci
+set_property used_in_implementation false [get_files -all /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.gen/sources_1/ip/axis_data_fifo_poly_filter/axis_data_fifo_poly_filter_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -327,6 +327,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.srcs/constrs_1/new/Polyphase_filter.xdc
 set_property used_in_implementation false [get_files /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.srcs/constrs_1/new/Polyphase_filter.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental /home/miglioranza/Polyphase_Filter_FI/Polyphase_Filter_FI.srcs/utils_1/imports/synth_1/Pipelined_Polyphase_Filter.dcp

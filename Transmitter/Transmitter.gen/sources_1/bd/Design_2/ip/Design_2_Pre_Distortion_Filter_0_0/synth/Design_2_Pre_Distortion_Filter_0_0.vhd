@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:Pre_Distortion_Filter:1.0
--- IP Revision: 9
+-- IP Revision: 11
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -59,12 +59,10 @@ ENTITY Design_2_Pre_Distortion_Filter_0_0 IS
     reset : IN STD_LOGIC;
     I_input : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
     Q_input : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-    data_in_ready : IN STD_LOGIC;
     data_in_valid : IN STD_LOGIC;
     data_out_valid : OUT STD_LOGIC;
     Q_output : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-    I_output : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-    data_out_ready : OUT STD_LOGIC
+    I_output : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
   );
 END Design_2_Pre_Distortion_Filter_0_0;
 
@@ -82,12 +80,10 @@ ARCHITECTURE Design_2_Pre_Distortion_Filter_0_0_arch OF Design_2_Pre_Distortion_
       reset : IN STD_LOGIC;
       I_input : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
       Q_input : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
-      data_in_ready : IN STD_LOGIC;
       data_in_valid : IN STD_LOGIC;
       data_out_valid : OUT STD_LOGIC;
       Q_output : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-      I_output : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-      data_out_ready : OUT STD_LOGIC
+      I_output : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
     );
   END COMPONENT Parallel_FIR_filter;
   ATTRIBUTE X_CORE_INFO : STRING;
@@ -114,11 +110,9 @@ BEGIN
       reset => reset,
       I_input => I_input,
       Q_input => Q_input,
-      data_in_ready => data_in_ready,
       data_in_valid => data_in_valid,
       data_out_valid => data_out_valid,
       Q_output => Q_output,
-      I_output => I_output,
-      data_out_ready => data_out_ready
+      I_output => I_output
     );
 END Design_2_Pre_Distortion_Filter_0_0_arch;

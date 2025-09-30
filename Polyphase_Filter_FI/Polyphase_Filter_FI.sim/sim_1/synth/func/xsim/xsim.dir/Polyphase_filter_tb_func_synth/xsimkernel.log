@@ -2,3 +2,6 @@ Running: xsim.dir/Polyphase_filter_tb_func_synth/xsimk -simmode gui -wdb Polypha
 Design successfully loaded
 Design Loading Memory Usage: 52592 KB (Peak: 52592 KB)
 Design Loading CPU Usage: 130 ms
+Simulation completed
+Simulation Memory Usage: 144536 KB (Peak: 193908 KB)
+Simulation CPU Usage: 420 ms

@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:Control_unit_top:1.0
--- IP Revision: 17
+-- IP Revision: 37
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -61,7 +61,7 @@ ENTITY Design_2_Control_unit_top_0_0 IS
     control_unit_din_valid : IN STD_LOGIC;
     control_unit_end_of_frame : IN STD_LOGIC;
     control_unit_dout_ready : OUT STD_LOGIC;
-    control_unit_last_frame : OUT STD_LOGIC;
+    control_unit_enable : OUT STD_LOGIC;
     mod_cod_schemes : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
     num_streams : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
     ref_distance : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -70,27 +70,23 @@ ENTITY Design_2_Control_unit_top_0_0 IS
     start_tx : IN STD_LOGIC;
     phy_src_address : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
     phy_dest_address : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-    scrambler_dout_ready : IN STD_LOGIC;
     scrambler_din_data : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     scrambler_seed : OUT STD_LOGIC_VECTOR(31 DOWNTO 1);
     scrambler_din_valid : OUT STD_LOGIC;
     scrambler_din_last : OUT STD_LOGIC;
     scrambler_control_enable : OUT STD_LOGIC;
+    scrambler_last_frame : OUT STD_LOGIC;
+    encoder_code_rate : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    encoder_reset_fifos : OUT STD_LOGIC;
     interleaver_dout_valid : IN STD_LOGIC;
     interleaver_dout_data : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    interleaver_dout_last : IN STD_LOGIC;
     interleaver_last_frame : IN STD_LOGIC;
     interleaver_din_ready : OUT STD_LOGIC;
-    mapper_dout_ready : IN STD_LOGIC;
     mapper_dout_last : IN STD_LOGIC;
-    mapper_last_frame : IN STD_LOGIC;
     mapper_selected_mod : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
     mapper_din_data : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
     mapper_din_valid : OUT STD_LOGIC;
-    mapper_signal_field_enable : OUT STD_LOGIC;
-    mapper_pilot_insertion_en : OUT STD_LOGIC;
-    mapper_end_of_frame : OUT STD_LOGIC;
-    dpd_dout_ready : IN STD_LOGIC;
+    mapper_din_last : OUT STD_LOGIC;
     dpd_din_valid : OUT STD_LOGIC;
     dpd_din_data_I : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
     dpd_din_data_Q : OUT STD_LOGIC_VECTOR(11 DOWNTO 0)
@@ -108,7 +104,7 @@ ARCHITECTURE Design_2_Control_unit_top_0_0_arch OF Design_2_Control_unit_top_0_0
       control_unit_din_valid : IN STD_LOGIC;
       control_unit_end_of_frame : IN STD_LOGIC;
       control_unit_dout_ready : OUT STD_LOGIC;
-      control_unit_last_frame : OUT STD_LOGIC;
+      control_unit_enable : OUT STD_LOGIC;
       mod_cod_schemes : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
       num_streams : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
       ref_distance : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -117,27 +113,23 @@ ARCHITECTURE Design_2_Control_unit_top_0_0_arch OF Design_2_Control_unit_top_0_0
       start_tx : IN STD_LOGIC;
       phy_src_address : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
       phy_dest_address : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-      scrambler_dout_ready : IN STD_LOGIC;
       scrambler_din_data : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       scrambler_seed : OUT STD_LOGIC_VECTOR(31 DOWNTO 1);
       scrambler_din_valid : OUT STD_LOGIC;
       scrambler_din_last : OUT STD_LOGIC;
       scrambler_control_enable : OUT STD_LOGIC;
+      scrambler_last_frame : OUT STD_LOGIC;
+      encoder_code_rate : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+      encoder_reset_fifos : OUT STD_LOGIC;
       interleaver_dout_valid : IN STD_LOGIC;
       interleaver_dout_data : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-      interleaver_dout_last : IN STD_LOGIC;
       interleaver_last_frame : IN STD_LOGIC;
       interleaver_din_ready : OUT STD_LOGIC;
-      mapper_dout_ready : IN STD_LOGIC;
       mapper_dout_last : IN STD_LOGIC;
-      mapper_last_frame : IN STD_LOGIC;
       mapper_selected_mod : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
       mapper_din_data : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
       mapper_din_valid : OUT STD_LOGIC;
-      mapper_signal_field_enable : OUT STD_LOGIC;
-      mapper_pilot_insertion_en : OUT STD_LOGIC;
-      mapper_end_of_frame : OUT STD_LOGIC;
-      dpd_dout_ready : IN STD_LOGIC;
+      mapper_din_last : OUT STD_LOGIC;
       dpd_din_valid : OUT STD_LOGIC;
       dpd_din_data_I : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
       dpd_din_data_Q : OUT STD_LOGIC_VECTOR(11 DOWNTO 0)
@@ -160,7 +152,7 @@ BEGIN
       control_unit_din_valid => control_unit_din_valid,
       control_unit_end_of_frame => control_unit_end_of_frame,
       control_unit_dout_ready => control_unit_dout_ready,
-      control_unit_last_frame => control_unit_last_frame,
+      control_unit_enable => control_unit_enable,
       mod_cod_schemes => mod_cod_schemes,
       num_streams => num_streams,
       ref_distance => ref_distance,
@@ -169,27 +161,23 @@ BEGIN
       start_tx => start_tx,
       phy_src_address => phy_src_address,
       phy_dest_address => phy_dest_address,
-      scrambler_dout_ready => scrambler_dout_ready,
       scrambler_din_data => scrambler_din_data,
       scrambler_seed => scrambler_seed,
       scrambler_din_valid => scrambler_din_valid,
       scrambler_din_last => scrambler_din_last,
       scrambler_control_enable => scrambler_control_enable,
+      scrambler_last_frame => scrambler_last_frame,
+      encoder_code_rate => encoder_code_rate,
+      encoder_reset_fifos => encoder_reset_fifos,
       interleaver_dout_valid => interleaver_dout_valid,
       interleaver_dout_data => interleaver_dout_data,
-      interleaver_dout_last => interleaver_dout_last,
       interleaver_last_frame => interleaver_last_frame,
       interleaver_din_ready => interleaver_din_ready,
-      mapper_dout_ready => mapper_dout_ready,
       mapper_dout_last => mapper_dout_last,
-      mapper_last_frame => mapper_last_frame,
       mapper_selected_mod => mapper_selected_mod,
       mapper_din_data => mapper_din_data,
       mapper_din_valid => mapper_din_valid,
-      mapper_signal_field_enable => mapper_signal_field_enable,
-      mapper_pilot_insertion_en => mapper_pilot_insertion_en,
-      mapper_end_of_frame => mapper_end_of_frame,
-      dpd_dout_ready => dpd_dout_ready,
+      mapper_din_last => mapper_din_last,
       dpd_din_valid => dpd_din_valid,
       dpd_din_data_I => dpd_din_data_I,
       dpd_din_data_Q => dpd_din_data_Q
