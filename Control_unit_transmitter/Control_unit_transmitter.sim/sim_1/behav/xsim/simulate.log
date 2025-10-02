@@ -1,0 +1,9 @@
+Time resolution is 1 ps
+Note: Starting Transmission
+Time: 50 ns  Iteration: 0  Process: /Control_unit_tb/stimuli_process  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Feeding Interleaver Data with BPSK mod
+Time: 4620 ns  Iteration: 1  Process: /Control_unit_tb/interleaver_stimuli  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: End  of Simulation
+Time: 9685 ns  Iteration: 0  Process: /Control_unit_tb/stimuli_process  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: End of interleaver simulation
+Time: 91955 ns  Iteration: 0  Process: /Control_unit_tb/interleaver_stimuli  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd

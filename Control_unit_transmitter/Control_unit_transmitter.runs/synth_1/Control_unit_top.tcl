@@ -71,6 +71,11 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param simulator.xceliumInstallPath /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin
+set_param power.enableUnconnectedCarry8PinPower 1
+set_param power.enableCarry8RouteBelPower 1
+set_param power.BramSDPPropagationFix 1
+set_param power.enableLutRouteBelPower 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config  -id {BD 41-759}  -new_severity {INFO} 
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMODT' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMPARITY' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 
@@ -298,10 +303,7 @@ set_property parent.project_path /home/miglioranza/Control_unit_transmitter/Cont
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part xilinx.com:zcu111:part0:1.4 [current_project]
-set_property ip_repo_paths {
-  /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs
-  /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new
-} [current_project]
+set_property ip_repo_paths /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs [current_project]
 update_ip_catalog
 set_property ip_output_repo /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]

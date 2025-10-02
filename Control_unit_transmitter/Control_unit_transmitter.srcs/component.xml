@@ -58,7 +58,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>6d40021a</spirit:value>
+            <spirit:value>91662f37</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -74,7 +74,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4aa6b6a4</spirit:value>
+            <spirit:value>5f800b13</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -89,7 +89,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>0b959a59</spirit:value>
+            <spirit:value>205481f3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -195,22 +195,6 @@
       </spirit:port>
       <spirit:port>
         <spirit:name>control_unit_dout_ready</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
-          </spirit:driver>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>control_unit_last_frame</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -522,6 +506,19 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+        <spirit:name>encoder_reset_fifos</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
         <spirit:name>interleaver_dout_valid</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
@@ -590,39 +587,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>mapper_dout_ready</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
-          </spirit:driver>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
         <spirit:name>mapper_dout_last</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
-          </spirit:driver>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>mapper_last_frame</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -710,22 +675,6 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>mapper_end_of_frame</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
-          </spirit:driver>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
         <spirit:name>dpd_din_valid</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
@@ -781,22 +730,6 @@
           </spirit:driver>
         </spirit:wire>
       </spirit:port>
-      <spirit:port>
-        <spirit:name>multi_din_ready</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
-          </spirit:driver>
-        </spirit:wire>
-      </spirit:port>
     </spirit:ports>
   </spirit:model>
   <spirit:fileSets>
@@ -809,7 +742,7 @@
       <spirit:file>
         <spirit:name>sources_1/new/Control_unit_top.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_4aa6b6a4</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_5f800b13</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -879,8 +812,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Control_unit_top_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>23</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-09-11T15:05:50Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>39</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-10-01T15:16:52Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.df@4bb899b_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@36be26c5_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
@@ -1151,13 +1084,181 @@
         <xilinx:tag xilinx:name="ui.data.coregen.df@21d1f900_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@66511fda_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@3de8f8c5_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@e738b22_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@79615b80_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@18be666e_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@539c21fc_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2aaa9332_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@59587a21_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2a26f9da_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@370c09_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6c478221_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@78791173_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7cc3b767_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4c594e5d_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@783b469f_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@210d6b6f_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7f15fc4d_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2ff3b3fc_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@41da4404_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3fbd7f06_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@329b4bf_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@12e30fff_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@293d326a_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@428c1ec1_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@25a3907_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@73d6bee9_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6d4614fe_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@47f03a66_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@83afed5_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@199dc47d_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@9c95c06_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2255a152_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@669025f0_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@bc4c988_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3d3aafd7_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@d679772_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5505a1ba_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@52cc0527_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1147cf15_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@9ad15ad_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@956fd0b_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2b86881a_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@457d1dc9_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@f405d77_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@69805930_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2c9a9e4a_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@690d6bca_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@55b26008_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@65989a06_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7ada2aec_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@28610bfe_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1d0c8b1_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@488e657e_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5d9bfbf6_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@70bfcd58_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@34e00865_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@83721c2_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2589297e_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3d405c14_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@29d3df4_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4b214590_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@629d434c_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@27df7022_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1798ab74_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4db2de9a_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@620106f7_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6babc179_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5912b14a_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@620b7516_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@f02d0fe_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@42811e32_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2f46eed0_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@44a93629_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3809a51e_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5f08444a_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5ec26294_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@ccf93bb_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7262a482_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4069cef8_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7f30cde5_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7220218_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7f9320bb_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@25302e1d_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@71c72415_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@14fedaed_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6a0ec3ca_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6e8888ba_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6137ebf9_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2a0858f9_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@228c1380_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6db62ed6_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@796b097_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@73c9f877_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3ae420be_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@34ab4417_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2be9e68b_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@68738b1d_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5ca9c8a7_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@27e493a0_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@50bcb807_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@640e6dcb_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@52b6bb6a_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5027797b_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@26130ff3_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4a221eec_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6bb0c50f_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@708ee2cf_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2cb3d90b_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@26fb5381_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3fad2d98_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2c2eb52f_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@729ce7f6_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@80e868_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@55bb95c8_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@33227dcf_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@46ece770_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5118c3d9_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@34890f62_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@599b2ec0_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@72e48b0c_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4846e91a_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4061a3e6_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6db6b780_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6cdb2580_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7c7ce8b8_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@77b4f070_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@64a0898e_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6a585cd7_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7a9641b2_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@78304a54_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@718a94ed_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@487c7133_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@57cb9c66_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@158fdb47_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@448233aa_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@38961e08_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6d3d7bed_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@9fe9b3_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@f986e72_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@12eb8ada_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@287dc6e7_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@52d2197e_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6fe443dd_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@79be2638_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@32958e36_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@15a1c5cf_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@61da7c72_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@154ca638_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3982b080_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@61dbeaf4_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@66b93b0e_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7d1b42_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2080f22c_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6d14f993_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@e50a34_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1c7aff3_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5afa4757_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6e222ed7_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@491594c_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@47cd1b4a_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7e814373_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2c632682_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@50703206_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4ad6c781_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@72044b9_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@702a7493_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5bc9d8ca_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@380ea247_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2baf94ea_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@361a2ced_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2021.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="50102c5c"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="2d087f71"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="bcb44c8f"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="96267568"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="c281090a"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="697673c5"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>

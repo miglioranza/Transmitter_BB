@@ -48,7 +48,7 @@ architecture Behavioral of Control_unit_tb is
   signal control_unit_din_valid     : std_logic;
   signal control_unit_end_of_frame  : std_logic;
   signal control_unit_dout_ready    : std_logic;
-  signal control_unit_last_frame    : std_logic;
+--  signal control_unit_last_frame    : std_logic;
   signal control_unit_enable        : std_logic;
   signal mod_cod_schemes            : std_logic_vector(4 downto 0);
   signal num_streams                : std_logic_vector(4 downto 0);
@@ -69,6 +69,7 @@ architecture Behavioral of Control_unit_tb is
 
   -- Encoder interface
   signal encoder_code_rate          : std_logic_vector(1 downto 0);
+  signal encoder_reset_fifos        : std_logic ;
 
   -- Interleaver interface
   signal interleaver_dout_valid     : std_logic;
@@ -78,21 +79,21 @@ architecture Behavioral of Control_unit_tb is
   signal interleaver_din_ready      : std_logic;
 
   -- Mapper interface
-  signal mapper_dout_ready          : std_logic;
+--  signal mapper_dout_ready          : std_logic;
   signal mapper_dout_last           : std_logic;
-  signal mapper_last_frame          : std_logic;
+--  signal mapper_last_frame          : std_logic;
   signal mapper_selected_mod        : std_logic_vector(2 downto 0);
   signal mapper_din_data            : std_logic_vector(5 downto 0);
   signal mapper_din_valid           : std_logic;
   signal mapper_din_last            : std_logic;
-  signal mapper_end_of_frame        : std_logic;
+--  signal mapper_end_of_frame        : std_logic;
 
   -- DPD interface
 --  signal dpd_dout_ready             : std_logic;
   signal dpd_din_valid              : std_logic;
   signal dpd_din_data_I             : std_logic_vector(11 downto 0);
   signal dpd_din_data_Q             : std_logic_vector(11 downto 0);
-  signal multi_din_ready            : std_logic;
+--  signal multi_din_ready            : std_logic;
   
   constant clock_period            : time := 5 ns ;
   signal start_payload             : std_logic := '0' ;
@@ -109,7 +110,8 @@ port map(
     control_unit_din_valid      => control_unit_din_valid,
     control_unit_end_of_frame   => control_unit_end_of_frame,
     control_unit_dout_ready     => control_unit_dout_ready,
-    control_unit_last_frame     => control_unit_last_frame,
+--    control_unit_last_frame     => control_unit_last_frame,
+    encoder_reset_fifos         => encoder_reset_fifos,
     mod_cod_schemes             => mod_cod_schemes,
     num_streams                 => num_streams,
     ref_distance                => ref_distance,
@@ -128,20 +130,20 @@ port map(
 --    interleaver_dout_last       => interleaver_dout_last,
     interleaver_last_frame      => interleaver_last_frame,
     interleaver_din_ready       => interleaver_din_ready,
-    mapper_dout_ready           => mapper_dout_ready,
+--    mapper_dout_ready           => mapper_dout_ready,
     mapper_dout_last            => mapper_dout_last,
-    mapper_last_frame           => mapper_last_frame,
+--    mapper_last_frame           => mapper_last_frame,
     mapper_selected_mod         => mapper_selected_mod,
     mapper_din_data             => mapper_din_data,
     mapper_din_valid            => mapper_din_valid,
     mapper_din_last             => mapper_din_last,
-    mapper_end_of_frame         => mapper_end_of_frame,
+--    mapper_end_of_frame         => mapper_end_of_frame,
     encoder_code_rate           => encoder_code_rate,
 --    dpd_dout_ready              => dpd_dout_ready,
     dpd_din_valid               => dpd_din_valid,
     dpd_din_data_I              => dpd_din_data_I,
-    dpd_din_data_Q              => dpd_din_data_Q,
-    multi_din_ready             => multi_din_ready
+    dpd_din_data_Q              => dpd_din_data_Q
+--    multi_din_ready             => multi_din_ready
 --    dpd_din_ready               => dpd_din_ready
 
 );
@@ -192,7 +194,8 @@ report  "Starting Transmission";
 start_tx <= '1';
 wait for 20 ns;
 start_tx <= '0';
-mapper_dout_ready <= '1';
+--mapper_dout_ready <= '1';
+--Wait for Preambles insertion
 wait for 4500 ns  ;
 
 ------------------------------------------------------------------------
