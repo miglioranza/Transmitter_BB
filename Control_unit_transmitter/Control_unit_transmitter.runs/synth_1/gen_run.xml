@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu28dr-ffvg1517-2-e" LaunchTime="1759312693" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Control_unit_top.dcp">
-  <File Type="VDS-TIMING-PB" Name="Control_unit_top_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Control_unit_top_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="Control_unit_top.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="Control_unit_top_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="Control_unit_top_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="Control_unit_top_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="Control_unit_top.vds"/>
-  <File Type="REPORTS-TCL" Name="Control_unit_top_reports.tcl"/>
-  <File Type="PA-TCL" Name="Control_unit_top.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xczu28dr-ffvg1517-2-e" LaunchTime="1759930679" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Control_unit_top.dcp">
+  <File Type="VDS-TIMING-PB" Name="CU_top_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="CU_top_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="CU_top.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="CU_top_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="CU_top_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="CU_top_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="CU_top.vds"/>
+  <File Type="REPORTS-TCL" Name="CU_top_reports.tcl"/>
+  <File Type="PA-TCL" Name="CU_top.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/CU_top.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/Control_unit_top.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -22,8 +29,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="Control_unit_top"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="CU_top"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

@@ -101,7 +101,7 @@ architecture Behavioral of Control_unit_tb is
 begin
 --! DUT Instantiation
 
-DUT : entity work.Control_unit_top 
+DUT : entity work.CU_top 
 port map( 
 
     clk                         => clk,
@@ -171,11 +171,16 @@ stimuli_process : process
 
 
 begin
-
---start_tx <= '1';
+start_tx <= '0';
 control_unit_din_data <= (others => '0');
 control_unit_din_valid      <= '0';
 control_unit_end_of_frame   <= '0';
+start_payload               <= '0' ;
+
+wait for 50 ns ;
+report  "Starting Transmission";
+start_tx <= '1';
+--Start feeding the Signal Field
 mod_cod_schemes             <= "00000";
 num_streams                 <= "10000" ; 
 ref_distance                <= "10000000" ;
@@ -183,20 +188,10 @@ scrambler_init              <= "1001001000101001000100101111101"; --Scrambler se
 phy_src_address             <= "10000";
 phy_dest_address            <= "01000";
 num_words                   <= "0000000110000000" ;
-start_payload               <= '0' ;
-wait for 50 ns ;
-
- ------------------------------------------------------------------------
-    -- START TRANSMISSION - Trigger PREAMBLES
-    ------------------------------------------------------------------------
-
-report  "Starting Transmission";
-start_tx <= '1';
-wait for 20 ns;
-start_tx <= '0';
---mapper_dout_ready <= '1';
---Wait for Preambles insertion
-wait for 4500 ns  ;
+wait for clock_period ;
+control_unit_din_valid      <= '1';
+wait for clock_period *8  ;
+control_unit_din_valid      <= '0';
 
 ------------------------------------------------------------------------
     -- FEED CONTROL DATA (simulate signal field)
@@ -276,8 +271,9 @@ if interleaver_din_ready = '1' then
 else 
     interleaver_dout_valid <= '0';
        if mapper_din_last = '1' then 
-          wait for 10 ns ;
           mapper_dout_last <= '1';
+       else          
+           mapper_dout_last <= '0';   
        end if ;   
     wait until rising_edge (clk) ;
     

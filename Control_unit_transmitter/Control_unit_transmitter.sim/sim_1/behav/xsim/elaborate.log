@@ -15,6 +15,6 @@ Compiling package std.env
 Compiling package ieee.numeric_std
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.Control_unit_top [control_unit_top_default]
+Compiling architecture behavioral of entity xil_defaultlib.CU_top [cu_top_default]
 Compiling architecture behavioral of entity xil_defaultlib.control_unit_tb
 Built simulation snapshot Control_unit_tb_behav

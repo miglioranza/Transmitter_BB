@@ -467,7 +467,11 @@ signal padding_value_Q : std_logic_vector(11 downto 0)  := (others => '0' ) ;
 signal padding_payload : std_logic := '0';
 type control_unit is (IDLE ,PREAMBLE_A, PREAMBLE_B, SIGNAL_FIELD, PAYLOAD) ; --, ERROR_DETECTION)
 signal state : control_unit := IDLE ;
+--type preamble is (IDLE ,PREAMBLE_A, PREAMBLE_B) ; --, ERROR_DETECTION)
+--signal state : preamble := IDLE ;
 
+--type packet_data is (IDLE ,SIGNAL_FIELD, PAYLOAD) ; --, ERROR_DETECTION)
+--signal state_data : packet_data := IDLE ;
 --Splitter signal 
 signal last_value         : std_logic := '0' ;
 signal symbol_counter     : integer range 0 to 898 := 0 ;
@@ -481,6 +485,7 @@ begin
     signal_field_bits(65)            <= start_tx;  -- Single bit
     signal_field_bits(70 downto 66)  <= phy_src_address;
     signal_field_bits(75 downto 71)  <= phy_dest_address;
+    
     -- The remaining bits are reserved 
 
 
@@ -641,7 +646,6 @@ elsif rising_edge(clk)  then
 --    multi_din_ready          <= '0';
     scrambler_last_frame     <= '0'; 
     state                 <= IDLE ;
-    control_unit_dout_ready <= '0';
     dpd_din_valid       <= '0';
     dpd_din_data_Q      <= (others => '0') ;
     dpd_din_data_Q      <= (others => '0') ; 
@@ -660,7 +664,6 @@ begin
       mapper_din_valid <= '0';   
       index := 0 ;
       temp  <= '0' ; 
---      padding := '0';
       mapper_din_last <= '0';
       mapper_din_data  <= (others => '0') ;
  elsif rising_edge (clk) then    
@@ -668,170 +671,176 @@ begin
 mapper_selected_mod <= mod_cod_schemes(4 downto 2) ;
 symbol_counter      <= symbol_counter ;
 mapper_din_last     <= '0';      
-
-if temp = '0' and data_process = '1' and  interleaver_dout_valid = '0'  then           
-     case mod_cod_schemes(4 downto 2) is    
-            when "000" =>  --BPSK  
-                if index < (32 -1 ) then 
-                     mapper_din_data <=  "00000" &  splitter_data_in(index) ; --Correct way for adding zeros 
-                     temp <=  '0' ;
---                     mapper_din_last  <= '0';
-                elsif index=  (32 -1 )  then 
-                      temp <=  '1'  ;     
---                      mapper_din_last <= last_value ;
-                end if ;
-                index:= index+ 1 ;
-            when "001" => --QPSK 
-                if index< (32 /2) - 1   then
-                     mapper_din_data <=  "0000" & splitter_data_in((index+1)*2-1  downto index*2)  ;
-                     temp <=  '0' ;
---                     mapper_din_last <= '0';
-                 elsif index= (32 /2) - 1   then
-                     mapper_din_data <=  "0000" & splitter_data_in((index+1)*2-1  downto index*2)  ;
-                     temp <=  '1'  ;     
---                     mapper_din_last <= last_value ;
-                end if  ;
+if preambles_finish  = '1' then 
+    
+    if temp = '0' and data_process = '1' and  interleaver_dout_valid = '0'  then           
+         case mod_cod_schemes(4 downto 2) is    
+                when "000" =>  --BPSK  
+                    if index < (32 -1 ) then 
+                         mapper_din_data <=  "00000" &  splitter_data_in(index) ; --Correct way for adding zeros 
+                         temp <=  '0' ;
+    --                     mapper_din_last  <= '0';
+                    elsif index=  (32 -1 )  then 
+                          temp <=  '1'  ;     
+    --                      mapper_din_last <= last_value ;
+                    end if ;
+                    index:= index+ 1 ;
+                when "001" => --QPSK 
+                    if index< (32 /2) - 1   then
+                         mapper_din_data <=  "0000" & splitter_data_in((index+1)*2-1  downto index*2)  ;
+                         temp <=  '0' ;
+    --                     mapper_din_last <= '0';
+                     elsif index= (32 /2) - 1   then
+                         mapper_din_data <=  "0000" & splitter_data_in((index+1)*2-1  downto index*2)  ;
+                         temp <=  '1'  ;     
+    --                     mapper_din_last <= last_value ;
+                    end if  ;
+                      index:= index+ 1 ;
+                
+                when "101"  => -- 16-APSK
+                    if index<((32 /4) - 1) then
+                        mapper_din_data <=  "00" & splitter_data_in((index+1)*4-1  downto index*4)  ;
+                        temp <=  '0' ;
+    --                    mapper_din_last <= '0';
+                     elsif index= ((32 /4) - 1)  then 
+                         mapper_din_data <=  "00" & splitter_data_in((index+1)*4-1  downto index*4)  ;
+                         temp <=  '1'  ;
+    --                     mapper_din_last <= last_value ;
+    
+                    end if ;
+                    index:= index+ 1 ;
+                when "010" => -- 16-QAM 
+                    if index<((32 /4) - 1) then
+                        mapper_din_data <=  "00" & splitter_data_in((index+1)*4-1  downto index*4)  ;
+                        temp <=  '0' ;
+    --                    mapper_din_last <= '0';
+                     elsif index= ((32 /4) - 1)  then 
+                         mapper_din_data <=  "00" & splitter_data_in((index+1)*4-1  downto index*4)  ;
+                         temp <=  '1'  ;
+    --                     mapper_din_last <= last_value ;
+    
+                    end if ;
                   index:= index+ 1 ;
-            
-            when "101"  => -- 16-APSK
-                if index<((32 /4) - 1) then
-                    mapper_din_data <=  "00" & splitter_data_in((index+1)*4-1  downto index*4)  ;
-                    temp <=  '0' ;
---                    mapper_din_last <= '0';
-                 elsif index= ((32 /4) - 1)  then 
-                     mapper_din_data <=  "00" & splitter_data_in((index+1)*4-1  downto index*4)  ;
-                     temp <=  '1'  ;
---                     mapper_din_last <= last_value ;
-
-                end if ;
-                index:= index+ 1 ;
-            when "010" => -- 16-QAM 
-                if index<((32 /4) - 1) then
-                    mapper_din_data <=  "00" & splitter_data_in((index+1)*4-1  downto index*4)  ;
-                    temp <=  '0' ;
---                    mapper_din_last <= '0';
-                 elsif index= ((32 /4) - 1)  then 
-                     mapper_din_data <=  "00" & splitter_data_in((index+1)*4-1  downto index*4)  ;
-                     temp <=  '1'  ;
---                     mapper_din_last <= last_value ;
-
-                end if ;
-              index:= index+ 1 ;
-            
-            when "110"  => -- 32-APSK
-
-                if index<= 5 then 
-                    mapper_din_data <= "0" & splitter_data_in((index+1)*5-1  downto index*5) ;
-                    temp <=  '0' ;
---                    mapper_din_last <= '0';
-                elsif index=6  then  
-                    mapper_din_data <=   "0000" & splitter_data_in(31 downto 30); 
-                    temp <=  '1'  ;  
---                    mapper_din_last <= last_value ;
-                end if ;
-                index:= index+ 1 ;
-            when "011" => -- 32-QAM 
-
-                if index<= 5 then 
-                    mapper_din_data <= "0" & splitter_data_in((index+1)*5-1  downto index*5) ;
-                    temp <=  '0' ;
---                    mapper_din_last <= '0';
-                elsif index=6  then  
-                    mapper_din_data <=   "0000" & splitter_data_in(31 downto 30); 
-                    temp <=  '1'  ;  
---                    mapper_din_last <= last_value ;
-
-                end if ;
-                index:= index+ 1 ; 
-            when "111"  => -- 64-APSK
                 
-                if index <= 4 then 
-                    mapper_din_data <= splitter_data_in((index+1)*6-1  downto index*6) ;
+                when "110"  => -- 32-APSK
+    
+                    if index<= 5 then 
+                        mapper_din_data <= "0" & splitter_data_in((index+1)*5-1  downto index*5) ;
+                        temp <=  '0' ;
+    --                    mapper_din_last <= '0';
+                    elsif index=6  then  
+                        mapper_din_data <=   "0000" & splitter_data_in(31 downto 30); 
+                        temp <=  '1'  ;  
+    --                    mapper_din_last <= last_value ;
+                    end if ;
+                    index:= index+ 1 ;
+                when "011" => -- 32-QAM 
+    
+                    if index<= 5 then 
+                        mapper_din_data <= "0" & splitter_data_in((index+1)*5-1  downto index*5) ;
+                        temp <=  '0' ;
+    --                    mapper_din_last <= '0';
+                    elsif index=6  then  
+                        mapper_din_data <=   "0000" & splitter_data_in(31 downto 30); 
+                        temp <=  '1'  ;  
+    --                    mapper_din_last <= last_value ;
+    
+                    end if ;
+                    index:= index+ 1 ; 
+                when "111"  => -- 64-APSK
+                    
+                    if index <= 4 then 
+                        mapper_din_data <= splitter_data_in((index+1)*6-1  downto index*6) ;
+                        temp <=  '0' ;
+    --                    mapper_din_last <= '0';
+                    elsif index=5 then 
+                        mapper_din_data <=   "0000" & splitter_data_in(31 downto 30);
+                        temp <=  '1'  ;
+    --                    mapper_din_last <= last_value ;
+    
+                    end if ;
+                    index := index + 1 ;
+                when "100" => -- 64-QAM 
+                    
+                    if index <= 4 then 
+                        mapper_din_data <= splitter_data_in((index+1)*6-1  downto index*6) ;
+                        temp <=  '0' ;
+    --                    mapper_din_last <= '0';
+                    elsif index=5 then 
+                        mapper_din_data <=   "0000" & splitter_data_in(31 downto 30);
+                        temp <=  '1'  ;
+    --                    mapper_din_last <= last_value ;
+    
+                    end if ;
+                    index := index + 1 ;
+                when others =>
+                    mapper_din_data <= (others => '0');
                     temp <=  '0' ;
---                    mapper_din_last <= '0';
-                elsif index=5 then 
-                    mapper_din_data <=   "0000" & splitter_data_in(31 downto 30);
-                    temp <=  '1'  ;
---                    mapper_din_last <= last_value ;
-
-                end if ;
-                index := index + 1 ;
-            when "100" => -- 64-QAM 
-                
-                if index <= 4 then 
-                    mapper_din_data <= splitter_data_in((index+1)*6-1  downto index*6) ;
-                    temp <=  '0' ;
---                    mapper_din_last <= '0';
-                elsif index=5 then 
-                    mapper_din_data <=   "0000" & splitter_data_in(31 downto 30);
-                    temp <=  '1'  ;
---                    mapper_din_last <= last_value ;
-
-                end if ;
-                index := index + 1 ;
-            when others =>
-                mapper_din_data <= (others => '0');
-                temp <=  '0' ;
---                mapper_din_last <=  '0';
-            end case ;
-                 mapper_din_valid <= '1';      
-                --Control if padding for the last frame is necessary
-               if signal_field_en = '0' then   
-                     if  symbol_counter < 896  then 
-                           symbol_counter <= symbol_counter + 1 ;
-                     else 
-                           symbol_counter <= 0 ;                        
-                           mapper_din_last <= '1';
-                     end if ;       
-
-               else 
-               --Control if all signal field words has been fed to the mapper, if so, start feeding the pilot symbols
-                   symbol_counter <= 0 ;                 
-               end if ;
-elsif temp = '0' and   data_process = '0' and interleaver_dout_valid = '1' then 
-splitter_data_in <= interleaver_dout_data ;
-interleaver_din_ready <= '0';
-index := 0 ;  
-mapper_din_data <=  (others => '0') ; 
-mapper_din_valid <= '0';   
---last_value  <= interleaver_dout_last ;  --This signal is needed because when the interleaver sends the last value , after one clock cycle it goes to 0 but splitter takes several clock cylces for processing 1 input of 32-bit
-data_process <= '1';
-elsif temp = '1'  and   data_process = '1' and interleaver_dout_valid = '0' then 
-     mapper_din_data  <=  (others => '0') ; 
-     mapper_din_valid <= '0';   
-     temp <= '0';
-     data_process <= '0';  
---     last_value <= '0';
-       --Check if an entire block is completed, if so, wait the Pilot insertion to be completed 
-         if symbol_counter < 896  and interleaver_last_frame = '0' then 
-              interleaver_din_ready <= '1';
-             
-        elsif  symbol_counter < 896  and interleaver_last_frame = '1' then 
-                mapper_din_data <=  (others => '0') ;
-                mapper_din_valid <= '1';   
-                interleaver_din_ready <= '0';  
-                symbol_counter <= symbol_counter + 1 ;
-                temp <= '1';
-                data_process <= '1';      
-         else   
-               
-               mapper_din_last <= '1';      
-              
-             if pilot_symbols < 128 then              
-                interleaver_din_ready <= '0';
-                temp <= '1';
-                data_process <= '1';           
-             else                          
-                interleaver_din_ready <= '1';
-              
-             end if ;    
-          end if ;    
-   
-else
-            interleaver_din_ready <= '1';
-            mapper_din_valid <= '0'; 
-end if ;
+    --                mapper_din_last <=  '0';
+                end case ;
+                     mapper_din_valid <= '1';      
+                    --Control if padding for the last frame is necessary
+    --               if signal_field_en = '0' then   
+                         if  symbol_counter < 896  then 
+                               symbol_counter <= symbol_counter + 1 ;
+                         else 
+                               symbol_counter <= 0 ;                        
+                               mapper_din_last <= '1';
+                         end if ;       
+    
+    --               else 
+    --               --Control if all signal field words has been fed to the mapper, if so, start feeding the pilot symbols
+    --                   symbol_counter <= 0 ;                 
+    --               end if ;
+    elsif temp = '0' and   data_process = '0' and interleaver_dout_valid = '1' then 
+    splitter_data_in <= interleaver_dout_data ;
+    interleaver_din_ready <= '0';
+    index := 0 ;  
+    mapper_din_data <=  (others => '0') ; 
+    mapper_din_valid <= '0';   
+    --last_value  <= interleaver_dout_last ;  --This signal is needed because when the interleaver sends the last value , after one clock cycle it goes to 0 but splitter takes several clock cylces for processing 1 input of 32-bit
+    data_process <= '1';
+    elsif temp = '1'  and   data_process = '1' and interleaver_dout_valid = '0' then 
+         mapper_din_data  <=  (others => '0') ; 
+         mapper_din_valid <= '0';   
+         temp <= '0';
+         data_process <= '0';  
+    --     last_value <= '0';
+           --Check if an entire block is completed, if so, wait the Pilot insertion to be completed 
+             if symbol_counter < 896  and interleaver_last_frame = '0' then 
+                  interleaver_din_ready <= '1';
+                 
+            elsif  symbol_counter < 896  and interleaver_last_frame = '1' then 
+                    mapper_din_data <=  (others => '0') ;
+                    mapper_din_valid <= '1';   
+                    interleaver_din_ready <= '0';  
+                    symbol_counter <= symbol_counter + 1 ;
+                    temp <= '1';
+                    data_process <= '1';      
+             else   
+                   
+                   mapper_din_last <= '1';      
                   
+                 if pilot_symbols < 128 then              
+                    interleaver_din_ready <= '0';
+                    temp <= '1';
+                    data_process <= '1';           
+                 else                          
+                    interleaver_din_ready <= '1';
+                  
+                 end if ;    
+              end if ;    
+       
+    else
+                interleaver_din_ready <= '1';
+                mapper_din_valid <= '0'; 
+    end if ;
+else 
+        interleaver_din_ready <= '0';
+        mapper_din_last       <= '0';
+        mapper_din_data       <= (others => '0') ;   
+        mapper_din_valid      <= '0' ;
+ end if ;              
 end if ;   
 end process ;             
 end Behavioral;
