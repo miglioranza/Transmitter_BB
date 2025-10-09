@@ -1,0 +1,2 @@
+tx_data_fifo.v,verilog,xil_defaultlib,../../../../Control_unit_transmitter.gen/sources_1/ip/tx_data_fifo/sim/tx_data_fifo.v,incdir="$ref_dir/../../../ipstatic/hdl"incdir="../../../ipstatic/hdl"
+glbl.v,Verilog,xil_defaultlib,glbl.v

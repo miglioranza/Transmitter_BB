@@ -1,0 +1,1 @@
+vopt -64 +acc=npr -l elaborate.log -L xil_defaultlib -L xpm -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_7 -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.tx_data_fifo xil_defaultlib.glbl -o tx_data_fifo_opt

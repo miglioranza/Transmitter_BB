@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../Control_unit_transmitter.ip_user_files/ipstatic/hdl" \
+"../../../../Control_unit_transmitter.gen/sources_1/ip/tx_data_fifo/sim/tx_data_fifo.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
