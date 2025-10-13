@@ -1,10 +1,10 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Thu Oct  9 16:44:32 2025
+-- Date        : Thu Oct  9 16:44:31 2025
 -- Host        : uxsrv026.ihp-ffo.de running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
--- Command     : write_vhdl -force -mode synth_stub
---               /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.gen/sources_1/ip/tx_data_fifo/tx_data_fifo_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top tx_data_fifo -prefix
+--               tx_data_fifo_ tx_data_fifo_stub.vhdl
 -- Design      : tx_data_fifo
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xczu28dr-ffvg1517-2-e

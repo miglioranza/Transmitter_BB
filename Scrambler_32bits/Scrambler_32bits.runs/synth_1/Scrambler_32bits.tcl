@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/miglioranza/Scrambler_32bits/Scrambler_32bits.runs/synth_1/Scrambler_32bits.tcl"
+  variable script "/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.runs/synth_1/Scrambler_32bits.tcl"
   variable category "vivado_synth"
 }
 
@@ -71,11 +71,6 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param simulator.xceliumInstallPath /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin
-set_param power.enableUnconnectedCarry8PinPower 1
-set_param power.enableCarry8RouteBelPower 1
-set_param power.BramSDPPropagationFix 1
-set_param power.enableLutRouteBelPower 1
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config  -id {BD 41-759}  -new_severity {INFO} 
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMODT' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMPARITY' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 
@@ -226,6 +221,7 @@ set_msg_config  -id {Timing 38-277}  -string {{WARNING: [Timing 38-277] The inst
 set_msg_config  -id {Timing 38-277}  -string {{WARNING: [Timing 38-277] The instance 'inst/i_xxv_ethernet_0_gt_1/inst/gen_gtwizard_gtye4_top.xxv_ethernet_0_gt_1_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST' has RXOUTCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks}}  -suppress 
 set_msg_config  -id {Timing 38-277}  -string {{WARNING: [Timing 38-277] The instance 'inst/i_xxv_ethernet_0_gt_1/inst/gen_gtwizard_gtye4_top.xxv_ethernet_0_gt_1_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[2].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST' has TXOUTCLKSEL pins that are not constant, so the corresponding mux will select the input(s) having the worst case (highest frequency) clock(s) for automatic derivation of generated clocks}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[35] to constant 0}}  -suppress 
+set_msg_config  -id {Vivado 12-508}  -string {{WARNING: [Vivado 12-508] No pins matched 'pll_clk_gen/inst/BUFGCE_DIV_CLK3_inst/O'. [C:/1_no_backup/vivado_project/6G_hub_10G_ETH_for_zcu111/10G_ETH_for_zcu111.srcs/constrs_1/new/target_file.xdc:6]}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[34] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[33] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[32] to constant 0}}  -suppress 
@@ -236,6 +232,7 @@ set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undr
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[27] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[26] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[25] to constant 0}}  -suppress 
+set_msg_config  -id {Vivado 12-508}  -string {{WARNING: [Vivado 12-508] No pins matched 'pll_clk_gen/inst/BUFGCE_DIV_CLK3_inst/O'. [C:/1_no_backup/vivado_project/6G_hub_10G_ETH_for_zcu111/10G_ETH_for_zcu111.srcs/constrs_1/new/target_file.xdc:7]}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[24] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[23] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[22] to constant 0}}  -suppress 
@@ -246,6 +243,7 @@ set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undr
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[17] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[16] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[15] to constant 0}}  -suppress 
+set_msg_config  -id {Vivado 12-508}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[14] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[13] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[12] to constant 0}}  -suppress 
@@ -256,6 +254,7 @@ set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undr
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[7] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[6] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[5] to constant 0}}  -suppress 
+set_msg_config  -id {Project 1-498}  -string {{WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/1_no_backup/vivado_project/6G_hub_10G_ETH_for_zcu111/10G_ETH_for_zcu111.srcs/constrs_1/new/target_file.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[4] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[3] to constant 0}}  -suppress 
 set_msg_config  -id {Synth 8-3295}  -string {{WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[2] to constant 0}}  -suppress 
@@ -266,6 +265,8 @@ set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN2OUT' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN3OUT' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP0OUT' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 
+set_msg_config  -id {Vivado 12-1017}  -string {{WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/1_no_backup/vivado_project/6G_hub_10G_ETH_for_zcu111/10G_ETH_for_zcu111.runs/synth_1}}  -suppress 
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP1OUT' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP2OUT' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP3OUT' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 
@@ -292,18 +293,18 @@ create_project -in_memory -part xczu28dr-ffvg1517-2-e
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/wt [current_project]
-set_property parent.project_path /home/miglioranza/Scrambler_32bits/Scrambler_32bits.xpr [current_project]
+set_property webtalk.parent_dir /ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/wt [current_project]
+set_property parent.project_path /ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:zcu111:part0:1.2 [current_project]
-set_property ip_repo_paths /home/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs [current_project]
+set_property ip_repo_paths /ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs [current_project]
 update_ip_catalog
-set_property ip_output_repo /home/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/ip [current_project]
+set_property ip_output_repo /ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib /home/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs/sources_1/new/Scrambler_32bits.vhd
+read_vhdl -library xil_defaultlib /ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs/sources_1/new/Scrambler_32bits.vhd
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

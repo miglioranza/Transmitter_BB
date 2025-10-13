@@ -4,359 +4,23 @@ Time: 1 ps  Iteration: 0  Process: /Control_unit_tb/DUT/Input_data_fifo/inst/gen
 Note: Starting Transmission
 Time: 50 ns  Iteration: 0  Process: /Control_unit_tb/stimuli_process  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
 Note: Feeding Interleaver Data with BPSK mod
-Time: 105 ns  Iteration: 1  Process: /Control_unit_tb/interleaver_stimuli  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 140000 ps
-Time: 140 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 145000 ps
-Time: 145 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 150000 ps
-Time: 150 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 155000 ps
-Time: 155 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 160000 ps
-Time: 160 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 165000 ps
-Time: 165 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 170000 ps
-Time: 170 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 175000 ps
-Time: 175 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 180000 ps
-Time: 180 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 185000 ps
-Time: 185 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 190000 ps
-Time: 190 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 195000 ps
-Time: 195 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 200000 ps
-Time: 200 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 205000 ps
-Time: 205 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 210000 ps
-Time: 210 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 215000 ps
-Time: 215 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 220000 ps
-Time: 220 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 225000 ps
-Time: 225 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 230000 ps
-Time: 230 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 235000 ps
-Time: 235 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 240000 ps
-Time: 240 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 245000 ps
-Time: 245 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 250000 ps
-Time: 250 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 255000 ps
-Time: 255 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 260000 ps
-Time: 260 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 265000 ps
-Time: 265 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 270000 ps
-Time: 270 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 275000 ps
-Time: 275 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 280000 ps
-Time: 280 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 285000 ps
-Time: 285 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 290000 ps
-Time: 290 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 295000 ps
-Time: 295 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 300000 ps
-Time: 300 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 305000 ps
-Time: 305 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 310000 ps
-Time: 310 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 315000 ps
-Time: 315 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 320000 ps
-Time: 320 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 325000 ps
-Time: 325 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 330000 ps
-Time: 330 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 335000 ps
-Time: 335 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 340000 ps
-Time: 340 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 345000 ps
-Time: 345 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 350000 ps
-Time: 350 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 355000 ps
-Time: 355 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 360000 ps
-Time: 360 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 365000 ps
-Time: 365 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 370000 ps
-Time: 370 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 375000 ps
-Time: 375 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 380000 ps
-Time: 380 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 385000 ps
-Time: 385 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 390000 ps
-Time: 390 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 395000 ps
-Time: 395 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 400000 ps
-Time: 400 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 405000 ps
-Time: 405 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 410000 ps
-Time: 410 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 415000 ps
-Time: 415 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 420000 ps
-Time: 420 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 425000 ps
-Time: 425 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 430000 ps
-Time: 430 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 435000 ps
-Time: 435 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 440000 ps
-Time: 440 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 445000 ps
-Time: 445 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 450000 ps
-Time: 450 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 455000 ps
-Time: 455 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 460000 ps
-Time: 460 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 465000 ps
-Time: 465 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 470000 ps
-Time: 470 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 475000 ps
-Time: 475 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 480000 ps
-Time: 480 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 485000 ps
-Time: 485 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 490000 ps
-Time: 490 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 495000 ps
-Time: 495 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 500000 ps
-Time: 500 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 505000 ps
-Time: 505 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 510000 ps
-Time: 510 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 515000 ps
-Time: 515 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 520000 ps
-Time: 520 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 525000 ps
-Time: 525 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 530000 ps
-Time: 530 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 535000 ps
-Time: 535 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 540000 ps
-Time: 540 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 545000 ps
-Time: 545 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 550000 ps
-Time: 550 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 555000 ps
-Time: 555 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 560000 ps
-Time: 560 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 565000 ps
-Time: 565 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 570000 ps
-Time: 570 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 575000 ps
-Time: 575 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 580000 ps
-Time: 580 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 585000 ps
-Time: 585 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 590000 ps
-Time: 590 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 595000 ps
-Time: 595 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 600000 ps
-Time: 600 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 605000 ps
-Time: 605 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 610000 ps
-Time: 610 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 615000 ps
-Time: 615 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 620000 ps
-Time: 620 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 625000 ps
-Time: 625 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 630000 ps
-Time: 630 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 635000 ps
-Time: 635 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 640000 ps
-Time: 640 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 645000 ps
-Time: 645 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 650000 ps
-Time: 650 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 655000 ps
-Time: 655 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 660000 ps
-Time: 660 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 665000 ps
-Time: 665 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 670000 ps
-Time: 670 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 675000 ps
-Time: 675 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 680000 ps
-Time: 680 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 685000 ps
-Time: 685 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 690000 ps
-Time: 690 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 695000 ps
-Time: 695 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 700000 ps
-Time: 700 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 705000 ps
-Time: 705 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 710000 ps
-Time: 710 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 715000 ps
-Time: 715 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 720000 ps
-Time: 720 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 725000 ps
-Time: 725 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 730000 ps
-Time: 730 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 735000 ps
-Time: 735 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 740000 ps
-Time: 740 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 745000 ps
-Time: 745 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 750000 ps
-Time: 750 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 755000 ps
-Time: 755 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 760000 ps
-Time: 760 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 765000 ps
-Time: 765 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 770000 ps
-Time: 770 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 775000 ps
-Time: 775 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 780000 ps
-Time: 780 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 785000 ps
-Time: 785 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 790000 ps
-Time: 790 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 795000 ps
-Time: 795 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 800000 ps
-Time: 800 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 805000 ps
-Time: 805 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 810000 ps
-Time: 810 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 815000 ps
-Time: 815 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 820000 ps
-Time: 820 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 825000 ps
-Time: 825 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 830000 ps
-Time: 830 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 835000 ps
-Time: 835 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 840000 ps
-Time: 840 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 845000 ps
-Time: 845 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 850000 ps
-Time: 850 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 855000 ps
-Time: 855 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 860000 ps
-Time: 860 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 865000 ps
-Time: 865 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 870000 ps
-Time: 870 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 875000 ps
-Time: 875 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 880000 ps
-Time: 880 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 885000 ps
-Time: 885 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 890000 ps
-Time: 890 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 895000 ps
-Time: 895 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 900000 ps
-Time: 900 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 905000 ps
-Time: 905 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 910000 ps
-Time: 910 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 915000 ps
-Time: 915 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 920000 ps
-Time: 920 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 925000 ps
-Time: 925 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 930000 ps
-Time: 930 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 935000 ps
-Time: 935 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 940000 ps
-Time: 940 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 945000 ps
-Time: 945 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 950000 ps
-Time: 950 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 955000 ps
-Time: 955 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 960000 ps
-Time: 960 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 965000 ps
-Time: 965 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 970000 ps
-Time: 970 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 975000 ps
-Time: 975 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 980000 ps
-Time: 980 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 985000 ps
-Time: 985 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 990000 ps
-Time: 990 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 995000 ps
-Time: 995 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Control Unit Enabled at 1000000 ps
-Time: 1 us  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. Control_unit_tb.DUT.Input_data_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
-Time: 1 ps  Iteration: 0  Process: /Control_unit_tb/DUT/Input_data_fifo/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial297_29  Scope: Control_unit_tb.DUT.Input_data_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2021.2/sw/continuous/8687/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 491
-Note: Starting Transmission
-Time: 50 ns  Iteration: 0  Process: /Control_unit_tb/stimuli_process  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
-Note: Feeding Interleaver Data with BPSK mod
-Time: 105 ns  Iteration: 1  Process: /Control_unit_tb/interleaver_stimuli  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Time: 100 ns  Iteration: 1  Process: /Control_unit_tb/interleaver_stimuli  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 105000 ps
+Time: 105 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Start of data stream
+Time: 110 ns  Iteration: 0  Process: /Control_unit_tb/stimuli_process  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 110000 ps
+Time: 110 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 115000 ps
+Time: 115 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 120000 ps
+Time: 120 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 125000 ps
+Time: 125 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 130000 ps
+Time: 130 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 135000 ps
+Time: 135 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
 Note: Control Unit Enabled at 140000 ps
 Time: 140 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
 Note: Control Unit Enabled at 145000 ps
@@ -1369,6 +1033,8 @@ Note: Control Unit Enabled at 2660000 ps
 Time: 2660 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
 Note: Control Unit Enabled at 2665000 ps
 Time: 2665 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: End of data stream
+Time: 2670 ns  Iteration: 0  Process: /Control_unit_tb/stimuli_process  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
 Note: Control Unit Enabled at 2670000 ps
 Time: 2670 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
 Note: Control Unit Enabled at 2675000 ps
@@ -1625,3 +1291,733 @@ Note: Control Unit Enabled at 3300000 ps
 Time: 3300 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
 Note: Control Unit Enabled at 3305000 ps
 Time: 3305 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3310000 ps
+Time: 3310 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3315000 ps
+Time: 3315 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3320000 ps
+Time: 3320 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3325000 ps
+Time: 3325 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3330000 ps
+Time: 3330 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3335000 ps
+Time: 3335 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3340000 ps
+Time: 3340 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3345000 ps
+Time: 3345 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3350000 ps
+Time: 3350 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3355000 ps
+Time: 3355 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3360000 ps
+Time: 3360 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3365000 ps
+Time: 3365 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3370000 ps
+Time: 3370 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3375000 ps
+Time: 3375 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3380000 ps
+Time: 3380 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3385000 ps
+Time: 3385 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3390000 ps
+Time: 3390 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3395000 ps
+Time: 3395 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3400000 ps
+Time: 3400 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3405000 ps
+Time: 3405 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3410000 ps
+Time: 3410 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3415000 ps
+Time: 3415 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3420000 ps
+Time: 3420 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3425000 ps
+Time: 3425 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3430000 ps
+Time: 3430 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3435000 ps
+Time: 3435 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3440000 ps
+Time: 3440 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3445000 ps
+Time: 3445 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3450000 ps
+Time: 3450 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3455000 ps
+Time: 3455 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3460000 ps
+Time: 3460 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3465000 ps
+Time: 3465 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3470000 ps
+Time: 3470 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3475000 ps
+Time: 3475 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3480000 ps
+Time: 3480 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3485000 ps
+Time: 3485 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3490000 ps
+Time: 3490 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3495000 ps
+Time: 3495 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3500000 ps
+Time: 3500 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3505000 ps
+Time: 3505 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3510000 ps
+Time: 3510 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3515000 ps
+Time: 3515 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3520000 ps
+Time: 3520 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3525000 ps
+Time: 3525 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3530000 ps
+Time: 3530 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3535000 ps
+Time: 3535 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3540000 ps
+Time: 3540 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3545000 ps
+Time: 3545 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3550000 ps
+Time: 3550 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3555000 ps
+Time: 3555 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3560000 ps
+Time: 3560 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3565000 ps
+Time: 3565 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3570000 ps
+Time: 3570 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3575000 ps
+Time: 3575 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3580000 ps
+Time: 3580 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3585000 ps
+Time: 3585 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3590000 ps
+Time: 3590 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3595000 ps
+Time: 3595 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3600000 ps
+Time: 3600 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3605000 ps
+Time: 3605 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3610000 ps
+Time: 3610 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3615000 ps
+Time: 3615 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3620000 ps
+Time: 3620 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3625000 ps
+Time: 3625 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3630000 ps
+Time: 3630 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3635000 ps
+Time: 3635 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3640000 ps
+Time: 3640 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3645000 ps
+Time: 3645 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3650000 ps
+Time: 3650 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3655000 ps
+Time: 3655 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3660000 ps
+Time: 3660 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3665000 ps
+Time: 3665 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3670000 ps
+Time: 3670 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3675000 ps
+Time: 3675 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3680000 ps
+Time: 3680 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3685000 ps
+Time: 3685 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3690000 ps
+Time: 3690 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3695000 ps
+Time: 3695 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3700000 ps
+Time: 3700 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3705000 ps
+Time: 3705 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3710000 ps
+Time: 3710 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3715000 ps
+Time: 3715 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3720000 ps
+Time: 3720 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3725000 ps
+Time: 3725 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3730000 ps
+Time: 3730 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3735000 ps
+Time: 3735 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3740000 ps
+Time: 3740 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3745000 ps
+Time: 3745 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3750000 ps
+Time: 3750 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3755000 ps
+Time: 3755 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3760000 ps
+Time: 3760 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3765000 ps
+Time: 3765 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3770000 ps
+Time: 3770 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3775000 ps
+Time: 3775 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3780000 ps
+Time: 3780 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3785000 ps
+Time: 3785 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3790000 ps
+Time: 3790 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3795000 ps
+Time: 3795 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3800000 ps
+Time: 3800 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3805000 ps
+Time: 3805 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3810000 ps
+Time: 3810 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3815000 ps
+Time: 3815 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3820000 ps
+Time: 3820 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3825000 ps
+Time: 3825 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3830000 ps
+Time: 3830 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3835000 ps
+Time: 3835 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3840000 ps
+Time: 3840 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3845000 ps
+Time: 3845 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3850000 ps
+Time: 3850 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3855000 ps
+Time: 3855 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3860000 ps
+Time: 3860 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3865000 ps
+Time: 3865 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3870000 ps
+Time: 3870 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3875000 ps
+Time: 3875 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3880000 ps
+Time: 3880 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3885000 ps
+Time: 3885 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3890000 ps
+Time: 3890 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3895000 ps
+Time: 3895 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3900000 ps
+Time: 3900 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3905000 ps
+Time: 3905 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3910000 ps
+Time: 3910 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3915000 ps
+Time: 3915 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3920000 ps
+Time: 3920 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3925000 ps
+Time: 3925 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3930000 ps
+Time: 3930 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3935000 ps
+Time: 3935 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3940000 ps
+Time: 3940 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3945000 ps
+Time: 3945 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3950000 ps
+Time: 3950 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3955000 ps
+Time: 3955 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3960000 ps
+Time: 3960 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3965000 ps
+Time: 3965 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3970000 ps
+Time: 3970 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3975000 ps
+Time: 3975 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3980000 ps
+Time: 3980 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3985000 ps
+Time: 3985 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3990000 ps
+Time: 3990 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 3995000 ps
+Time: 3995 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4000000 ps
+Time: 4 us  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4005000 ps
+Time: 4005 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4010000 ps
+Time: 4010 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4015000 ps
+Time: 4015 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4020000 ps
+Time: 4020 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4025000 ps
+Time: 4025 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4030000 ps
+Time: 4030 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4035000 ps
+Time: 4035 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4040000 ps
+Time: 4040 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4045000 ps
+Time: 4045 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4050000 ps
+Time: 4050 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4055000 ps
+Time: 4055 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4060000 ps
+Time: 4060 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4065000 ps
+Time: 4065 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4070000 ps
+Time: 4070 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4075000 ps
+Time: 4075 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4080000 ps
+Time: 4080 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4085000 ps
+Time: 4085 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4090000 ps
+Time: 4090 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4095000 ps
+Time: 4095 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4100000 ps
+Time: 4100 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4105000 ps
+Time: 4105 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4110000 ps
+Time: 4110 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4115000 ps
+Time: 4115 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4120000 ps
+Time: 4120 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4125000 ps
+Time: 4125 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4130000 ps
+Time: 4130 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4135000 ps
+Time: 4135 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4140000 ps
+Time: 4140 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4145000 ps
+Time: 4145 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4150000 ps
+Time: 4150 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4155000 ps
+Time: 4155 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4160000 ps
+Time: 4160 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4165000 ps
+Time: 4165 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4170000 ps
+Time: 4170 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4175000 ps
+Time: 4175 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4180000 ps
+Time: 4180 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4185000 ps
+Time: 4185 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4190000 ps
+Time: 4190 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4195000 ps
+Time: 4195 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4200000 ps
+Time: 4200 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4205000 ps
+Time: 4205 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4210000 ps
+Time: 4210 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4215000 ps
+Time: 4215 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4220000 ps
+Time: 4220 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4225000 ps
+Time: 4225 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4230000 ps
+Time: 4230 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4235000 ps
+Time: 4235 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4240000 ps
+Time: 4240 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4245000 ps
+Time: 4245 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4250000 ps
+Time: 4250 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4255000 ps
+Time: 4255 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4260000 ps
+Time: 4260 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4265000 ps
+Time: 4265 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4270000 ps
+Time: 4270 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4275000 ps
+Time: 4275 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4280000 ps
+Time: 4280 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4285000 ps
+Time: 4285 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4290000 ps
+Time: 4290 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4295000 ps
+Time: 4295 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4300000 ps
+Time: 4300 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4305000 ps
+Time: 4305 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4310000 ps
+Time: 4310 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4315000 ps
+Time: 4315 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4320000 ps
+Time: 4320 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4325000 ps
+Time: 4325 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4330000 ps
+Time: 4330 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4335000 ps
+Time: 4335 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4340000 ps
+Time: 4340 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4345000 ps
+Time: 4345 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4350000 ps
+Time: 4350 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4355000 ps
+Time: 4355 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4360000 ps
+Time: 4360 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4365000 ps
+Time: 4365 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4370000 ps
+Time: 4370 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4375000 ps
+Time: 4375 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4380000 ps
+Time: 4380 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4385000 ps
+Time: 4385 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4390000 ps
+Time: 4390 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4395000 ps
+Time: 4395 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4400000 ps
+Time: 4400 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4405000 ps
+Time: 4405 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4410000 ps
+Time: 4410 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4415000 ps
+Time: 4415 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4420000 ps
+Time: 4420 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4425000 ps
+Time: 4425 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4430000 ps
+Time: 4430 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4435000 ps
+Time: 4435 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4440000 ps
+Time: 4440 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4445000 ps
+Time: 4445 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4450000 ps
+Time: 4450 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4455000 ps
+Time: 4455 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4460000 ps
+Time: 4460 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4465000 ps
+Time: 4465 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4470000 ps
+Time: 4470 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4475000 ps
+Time: 4475 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4480000 ps
+Time: 4480 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4485000 ps
+Time: 4485 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4490000 ps
+Time: 4490 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4495000 ps
+Time: 4495 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4500000 ps
+Time: 4500 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4505000 ps
+Time: 4505 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4510000 ps
+Time: 4510 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4515000 ps
+Time: 4515 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4520000 ps
+Time: 4520 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4525000 ps
+Time: 4525 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4530000 ps
+Time: 4530 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4535000 ps
+Time: 4535 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4540000 ps
+Time: 4540 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4545000 ps
+Time: 4545 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4550000 ps
+Time: 4550 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4555000 ps
+Time: 4555 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4560000 ps
+Time: 4560 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4565000 ps
+Time: 4565 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4570000 ps
+Time: 4570 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4575000 ps
+Time: 4575 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4580000 ps
+Time: 4580 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4585000 ps
+Time: 4585 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4590000 ps
+Time: 4590 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4595000 ps
+Time: 4595 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4600000 ps
+Time: 4600 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4605000 ps
+Time: 4605 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4610000 ps
+Time: 4610 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4615000 ps
+Time: 4615 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4620000 ps
+Time: 4620 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4625000 ps
+Time: 4625 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4630000 ps
+Time: 4630 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4635000 ps
+Time: 4635 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4640000 ps
+Time: 4640 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4645000 ps
+Time: 4645 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4650000 ps
+Time: 4650 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4655000 ps
+Time: 4655 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4660000 ps
+Time: 4660 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4665000 ps
+Time: 4665 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4670000 ps
+Time: 4670 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4675000 ps
+Time: 4675 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4680000 ps
+Time: 4680 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4685000 ps
+Time: 4685 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4690000 ps
+Time: 4690 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4695000 ps
+Time: 4695 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4700000 ps
+Time: 4700 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4705000 ps
+Time: 4705 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4710000 ps
+Time: 4710 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4715000 ps
+Time: 4715 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4720000 ps
+Time: 4720 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4725000 ps
+Time: 4725 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4730000 ps
+Time: 4730 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4735000 ps
+Time: 4735 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4740000 ps
+Time: 4740 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4745000 ps
+Time: 4745 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4750000 ps
+Time: 4750 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4755000 ps
+Time: 4755 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4760000 ps
+Time: 4760 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4765000 ps
+Time: 4765 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4770000 ps
+Time: 4770 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4775000 ps
+Time: 4775 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4780000 ps
+Time: 4780 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4785000 ps
+Time: 4785 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4790000 ps
+Time: 4790 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4795000 ps
+Time: 4795 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4800000 ps
+Time: 4800 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4805000 ps
+Time: 4805 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4810000 ps
+Time: 4810 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4815000 ps
+Time: 4815 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4820000 ps
+Time: 4820 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4825000 ps
+Time: 4825 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4830000 ps
+Time: 4830 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4835000 ps
+Time: 4835 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4840000 ps
+Time: 4840 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4845000 ps
+Time: 4845 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4850000 ps
+Time: 4850 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4855000 ps
+Time: 4855 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4860000 ps
+Time: 4860 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4865000 ps
+Time: 4865 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4870000 ps
+Time: 4870 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4875000 ps
+Time: 4875 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4880000 ps
+Time: 4880 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4885000 ps
+Time: 4885 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4890000 ps
+Time: 4890 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4895000 ps
+Time: 4895 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4900000 ps
+Time: 4900 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4905000 ps
+Time: 4905 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4910000 ps
+Time: 4910 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4915000 ps
+Time: 4915 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4920000 ps
+Time: 4920 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4925000 ps
+Time: 4925 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4930000 ps
+Time: 4930 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4935000 ps
+Time: 4935 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4940000 ps
+Time: 4940 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4945000 ps
+Time: 4945 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4950000 ps
+Time: 4950 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4955000 ps
+Time: 4955 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4960000 ps
+Time: 4960 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4965000 ps
+Time: 4965 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4970000 ps
+Time: 4970 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4975000 ps
+Time: 4975 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4980000 ps
+Time: 4980 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4985000 ps
+Time: 4985 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4990000 ps
+Time: 4990 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 4995000 ps
+Time: 4995 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5000000 ps
+Time: 5 us  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5005000 ps
+Time: 5005 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5010000 ps
+Time: 5010 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5015000 ps
+Time: 5015 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5020000 ps
+Time: 5020 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5025000 ps
+Time: 5025 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5030000 ps
+Time: 5030 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5035000 ps
+Time: 5035 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5040000 ps
+Time: 5040 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5045000 ps
+Time: 5045 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5050000 ps
+Time: 5050 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5055000 ps
+Time: 5055 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5060000 ps
+Time: 5060 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5065000 ps
+Time: 5065 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5070000 ps
+Time: 5070 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5075000 ps
+Time: 5075 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5080000 ps
+Time: 5080 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5085000 ps
+Time: 5085 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5090000 ps
+Time: 5090 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5095000 ps
+Time: 5095 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5100000 ps
+Time: 5100 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5105000 ps
+Time: 5105 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5110000 ps
+Time: 5110 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5115000 ps
+Time: 5115 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5120000 ps
+Time: 5120 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5125000 ps
+Time: 5125 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd
+Note: Control Unit Enabled at 5130000 ps
+Time: 5130 ns  Iteration: 1  Process: /Control_unit_tb/monitor  File: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd

@@ -24,7 +24,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -67,7 +67,7 @@ entity CU_top is
     scrambler_din_valid         : out std_logic;
     scrambler_din_last          : out std_logic  ; --end of frame data
     scrambler_control_enable    : out std_logic  ;  --input seed valid    
-    scrambler_last_frame        : out std_logic  ;    
+--    scrambler_last_frame        : out std_logic  ;    
     --Encoder ports 
     encoder_code_rate           : out std_logic_vector(1 downto 0) ; --coding scheme selected for encoder --> starting CR = 1/2 ;
     encoder_reset_fifos         : out std_logic ;
@@ -78,7 +78,7 @@ entity CU_top is
     interleaver_last_frame      : in std_logic := '0';   
     interleaver_din_ready       : out std_logic ;   
  -- Mapper ports 
-    mapper_dout_last            : in std_logic := '0'; -- This port signals if the mapper finished to processing the signal field block
+--    mapper_dout_last            : in std_logic := '0'; -- This port signals if the mapper finished to processing the signal field block
 --   mapper_last_frame           : in std_logic := '0'; 
     mapper_selected_mod         : out std_logic_vector(2 downto 0)  ; 
     mapper_din_data             : out std_logic_vector(5 downto 0)  ; --Preamble input data to mapper 
@@ -112,10 +112,10 @@ END COMPONENT;
 signal fifo_reset     : std_logic;
 signal s_axis_tvalid  : std_logic;
 signal s_axis_tready  : std_logic;
-signal s_axis_tdata   : std_logic_vector(7 downto 0);
+signal s_axis_tdata   : std_logic_vector(31 downto 0);
 signal fifo_out_valid : std_logic;
 signal m_axis_tready  : std_logic;
-signal m_axis_tdata   : std_logic_vector(7 downto 0);
+signal fifo_data_out  : std_logic_vector(31 downto 0);
 --signal almost_full    : std_logic;
 --Preambles definition , must be stored in a ROM memory, they are mapper using BPSK mod.scheme
 --Preamble A short training sequence ,The Sync field consists of a string of 0s or 1s, alerting the receiver that a potentially receivable signal is present
@@ -477,8 +477,11 @@ signal padding_value_I : std_logic_vector(11 downto 0)  := (others => '0' ) ;
 signal padding_value_Q : std_logic_vector(11 downto 0)  := (others => '0' ) ;
 signal padding_payload : std_logic := '0';
 
-type control_unit is (START_TX, IDLE ,PREAMBLE_A, PREAMBLE_B, PAYLOAD) ;
+type control_unit is (START_TX, IDLE ,PREAMBLE_A, PREAMBLE_B, PILOT_STATE, PAYLOAD_STREAM) ;
 signal state : control_unit := START_TX ;
+
+type data_stream is (INIT, SIGNAL_FIELD, PAYLOAD) ;
+signal data_state : data_stream := INIT ; 
 --Splitter signals 
 type splitter_control is (START, DATA_PROCESSING, FINISH, PADDING, PILOT);
 signal splitter_case : splitter_control := START ;
@@ -503,27 +506,92 @@ Input_data_fifo : tx_data_fifo
     s_axis_tdata    => tx_data,
     m_axis_tvalid   => fifo_out_valid,
     m_axis_tready   => m_axis_tready,
-    m_axis_tdata    => scrambler_din_data,
+    m_axis_tdata    => fifo_data_out,
     almost_full     => tx_almost_full
   );
-control_unit_process : process (clk , reset)
-variable i   : integer range 0 to 10  := 0;
-variable k   : integer range 0 to 127 := 0;
-variable n   : integer range 0 to 8   := 0;
-
+  
+payload_process : process (clk,reset) 
+variable n             : integer range 0 to 7   := 0;
+variable frame_counter : integer := 0 ;
 begin
-
 if reset = '1' then 
+    n := 0 ;
+    m_axis_tready <= '0';
+    scrambler_din_valid       <= '0';
     scrambler_din_data        <= (others => '0') ;  --Data stream coming from Scrambler 
     scrambler_din_valid       <= '0' ;
     scrambler_din_last        <= '0';
     scrambler_control_enable  <= '0' ;
-    n := 0 ;
+    scrambler_seed            <= ( others => '0') ;   
+    frame_counter             := 0 ;
+elsif rising_edge (clk) then 
+  --Default value
+  scrambler_din_last        <= '0';
+
+    case data_state is 
+        when INIT => 
+            --default state 
+              data_state                <= INIT ;           
+              scrambler_control_enable  <= '0' ;
+              scrambler_din_valid       <= '0';
+              m_axis_tready             <= '0';
+
+             if  tx_start = '1' then   
+                 data_state                <= SIGNAL_FIELD ;
+                 frame_counter             := ((to_integer(unsigned(tx_length)) / 4 ) - 1 ) ;  --This counter counts how many words of 4 bytes each have been fed to the transmitter for establishing when the data stream ends
+                 scrambler_seed            <= scrambler_init ;   
+                 scrambler_control_enable  <= tx_scrambler_ena  ;                 
+             else 
+                 scrambler_din_data      <= (others => '0') ;
+                 scrambler_seed          <= (others => '0') ;
+                 frame_counter           := 0 ;
+             end if ;
+        when SIGNAL_FIELD  => 
+              scrambler_din_valid       <= '1';  
+              scrambler_din_data        <= signal_field_bits(((n+1)*32)-1  downto n*32); --256-bits --> 32-bits vectors  x 8 
+              data_state                <= SIGNAL_FIELD ;
+              if n < 7 then             
+                    n:= n + 1 ;
+                    m_axis_tready <= '0';
+              else 
+                    n := 0 ;   
+                    m_axis_tready <= '1';
+                    data_state  <= PAYLOAD ;                         
+               end if ;    
+        when PAYLOAD  => 
+            scrambler_din_valid       <= fifo_out_valid    ;    
+            scrambler_din_data        <= fifo_data_out ;           
+            if frame_counter = 0 then 
+                scrambler_din_last    <= '1';
+                data_state            <= INIT ;
+            else 
+                frame_counter         := frame_counter - 1 ;                 
+            end if ;   
+       when others =>  
+            n := 0 ;
+            m_axis_tready <= '0';
+            scrambler_din_valid       <= '0';
+            scrambler_din_data        <= (others => '0') ;  --Data stream coming from Scrambler 
+            scrambler_din_valid       <= '0' ;
+            scrambler_din_last        <= '0';
+            scrambler_control_enable  <= '0' ;
+            scrambler_seed            <= ( others => '0') ;   
+            frame_counter             := 0 ;   
+       end case ;     
+             
+end if ;    
+end process ;  
+control_unit_process : process (clk , reset)
+variable i   : integer range 0 to 10  := 0;
+variable k   : integer range 0 to 127 := 0;
+
+begin
+
+if reset = '1' then 
     k := 0 ;
     i := 0 ;
     dpd_din_valid             <= '0';
-    scrambler_last_frame      <= '0'; 
-    state                     <= IDLE ;
+    state                     <= START_TX  ;
     dpd_din_valid             <= '0';
     dpd_din_data_Q            <= (others => '0') ;
     dpd_din_data_Q            <= (others => '0') ; 
@@ -531,21 +599,17 @@ if reset = '1' then
     encoder_code_rate         <= (others => '0') ;
     start_data_splitter       <= '0' ;
     fifo_reset                <= '0';
-    m_axis_tready             <= '0';
-    fifo_out_valid            <= '0';
 elsif rising_edge(clk)  then 
-    scrambler_din_last        <= '0';
-    scrambler_seed            <= scrambler_init ;   
-    scrambler_control_enable  <= tx_scrambler_ena  ;
+--    scrambler_din_last        <= '0';
+--    scrambler_seed            <= scrambler_init ;   
+--    scrambler_control_enable  <= tx_scrambler_ena  ;
 --    scrambler_last_frame      <= control_unit_end_of_frame ;
     encoder_reset_fifos       <= '0';
     encoder_code_rate         <=  tx_fec(1 downto 0) ;
     dpd_din_data_Q            <= (others => '0') ;
     dpd_din_data_Q            <= (others => '0') ; 
     dpd_din_valid             <= '0'; 
-    m_axis_tready             <= '1';
-    scrambler_last_frame      <= '0';
-    scrambler_din_valid       <=  fifo_out_valid    ;     
+  
   
  case state is 
  
@@ -563,22 +627,12 @@ elsif rising_edge(clk)  then
     when IDLE => 
        --Packets ready to be processed by transmitter  
      start_data_splitter  <= '0' ;
-     if  tx_start = '1' then  
-        if n < 7 then 
-            m_axis_tready <= '0';
-            n:= n + 1 ;
-            scrambler_din_data      <= signal_field_bits(((n+1)*32)-1  downto n*32); --256-bits --> 32-bits vectors  x 8 
-            scrambler_din_valid     <= '1';
-        else 
-            m_axis_tready <= '1';
-            n := 0 ;           
+      if  tx_start = '1' then  
             state <= PREAMBLE_A ;
-            control_unit_enable <= '1';
-         end if ;            
+            control_unit_enable <= '1';     
      else 
            state <= IDLE ; -- control unit is ready to receive packets
            control_unit_enable <= '0';
-           m_axis_tready <= '0';
      end if ;  
     when PREAMBLE_A =>    --Short_term_sequence      
          start_data_splitter  <= '0' ;
@@ -620,22 +674,17 @@ elsif rising_edge(clk)  then
                end if ;
            else 
 --           i := 0 ;
-              state <= PAYLOAD ; 
+              state <= PILOT_STATE ; 
               dpd_din_valid <= '0' ;   
           end if ;     
-    when PAYLOAD => 
+    when PILOT_STATE => 
   --This state check if the symbols that are sent from the data splitter process full fill an entire block N = 896 symbols, if so,start sending the pilot symbols
   --default values 
-    state               <= PAYLOAD ;   
---    start_data_splitter  <= '1' ;
-        if tx_data_valid = '1' then 
-            scrambler_last_frame  <= '0';
-        else 
-            scrambler_last_frame  <= '1';
-        end if ;     
-        if symbol_counter = 0 then 
+    state               <= PILOT_STATE ;   
+--    start_data_splitter  <= '1' ;  
+--        if symbol_counter = 0 then 
             if pilot_symbols < 128 then
-                         control_unit_enable <= '1';
+                        control_unit_enable <= '1';
                         dpd_din_valid       <= '1';                          
                         dpd_din_data_I      <= pilot_I(pilot_symbols) ;      
                         dpd_din_data_Q      <= pilot_Q  ;                    
@@ -649,15 +698,23 @@ elsif rising_edge(clk)  then
                       if interleaver_last_frame = '1' then
                         state <= START_TX  ;       
                       else  
-                        state <= PAYLOAD ;
+                        state <= PAYLOAD_STREAM ;
                       end if ;  
               end if ;        
+--         else 
+--                pilot_symbols <= 0;      
+--         end if ;
+     when PAYLOAD_STREAM => 
+        pilot_symbols <= 0;      
+         if splitter_case = PILOT then 
+            state <= PILOT_STATE ;
          else 
-                pilot_symbols <= 0;      
-         end if ; 
+            state <= PAYLOAD_STREAM ;
+         end if ;      
+
      when others => 
         dpd_din_valid       <= '0';
-        state               <= IDLE ;
+        state               <= START_TX  ;
         dpd_din_valid       <= '0';
         dpd_din_data_Q      <= (others => '0') ;
         dpd_din_data_Q      <= (others => '0') ; 
@@ -687,7 +744,7 @@ elsif rising_edge (clk) then
      mapper_selected_mod    <= tx_modulation (2 downto 0) ;
      mapper_din_data        <= (others => '0');
      mapper_din_valid       <= '0'; 
-     splitter_data_in       <= (others => '0');        
+--     splitter_data_in       <= (others => '0');        
 
 case splitter_case is 
 
@@ -708,46 +765,46 @@ case splitter_case is
         end if ;
      when DATA_PROCESSING => 
         if temp = '0' and interleaver_dout_valid = '1' then 
-          delay_counter := 0 ;
+          delay_counter         := 0 ;
           interleaver_din_ready <= '0'; 
            case tx_modulation (2 downto 0) is    
                 when "000" =>  --BPSK  
                     if index < (32 -1 ) then 
-                         mapper_din_data <=  "00000" &  splitter_data_in(index) ; --Correct way for adding zeros 
-                         temp <=  '0' ;
-                    elsif index=  (32 -1 )  then 
-                         temp <=  '1'  ;   
+                         mapper_din_data       <=  "00000" &  splitter_data_in(index) ; --Correct way for adding zeros 
+                         temp                  <=  '0' ;
+                    elsif index=(32 -1 )  then 
+                         temp                  <=  '1'  ;   
                          interleaver_din_ready <= '1';  
                     end if ;
                     index:= index+ 1 ;
                 when "001" => --QPSK 
                     if index< (32 /2) - 1   then
-                         mapper_din_data <=  "0000" & splitter_data_in((index+1)*2-1  downto index*2)  ;
-                         temp <=  '0' ;
+                         mapper_din_data       <=  "0000" & splitter_data_in((index+1)*2-1  downto index*2)  ;
+                         temp                  <=  '0' ;
                      elsif index= (32 /2) - 1   then
-                         mapper_din_data <=  "0000" & splitter_data_in((index+1)*2-1  downto index*2)  ;
-                         temp <=  '1'  ; 
+                         mapper_din_data       <=  "0000" & splitter_data_in((index+1)*2-1  downto index*2)  ;
+                         temp                  <=  '1'  ; 
                          interleaver_din_ready <= '1';      
                     end if  ;
                       index:= index+ 1 ;
                 
                 when "101"  => -- 16-APSK
                     if index<((32 /4) - 1) then
-                         mapper_din_data <=  "00" & splitter_data_in((index+1)*4-1  downto index*4)  ;
-                         temp <=  '0' ;
+                         mapper_din_data       <=  "00" & splitter_data_in((index+1)*4-1  downto index*4)  ;
+                         temp                  <=  '0' ;
                      elsif index= ((32 /4) - 1)  then 
-                         mapper_din_data <=  "00" & splitter_data_in((index+1)*4-1  downto index*4)  ;
-                         temp <=  '1'  ;   
+                         mapper_din_data       <=  "00" & splitter_data_in((index+1)*4-1  downto index*4)  ;
+                         temp                  <=  '1'  ;   
                          interleaver_din_ready <= '1'; 
                     end if ;
                       index:= index+ 1 ;
                 when "010" => -- 16-QAM 
                     if index<((32 /4) - 1) then
-                         mapper_din_data <=  "00" & splitter_data_in((index+1)*4-1  downto index*4)  ;
-                         temp <=  '0' ;
+                         mapper_din_data       <=  "00" & splitter_data_in((index+1)*4-1  downto index*4)  ;
+                         temp                  <=  '0' ;
                      elsif index= ((32 /4) - 1)  then 
-                         mapper_din_data <=  "00" & splitter_data_in((index+1)*4-1  downto index*4)  ;
-                         temp <=  '1'  ;    
+                         mapper_din_data       <=  "00" & splitter_data_in((index+1)*4-1  downto index*4)  ;
+                         temp                  <=  '1'  ;    
                          interleaver_din_ready <= '1';
                     end if ;
                       index:= index+ 1 ;
@@ -755,44 +812,44 @@ case splitter_case is
                 when "110"  => -- 32-APSK
     
                     if index<= 5 then 
-                         mapper_din_data <= "0" & splitter_data_in((index+1)*5-1  downto index*5) ;
-                         temp <=  '0' ;
+                         mapper_din_data       <= "0" & splitter_data_in((index+1)*5-1  downto index*5) ;
+                         temp                  <=  '0' ;
                     elsif index=6  then  
-                         mapper_din_data <=   "0000" & splitter_data_in(31 downto 30); 
-                         temp <=  '1'  ; 
+                         mapper_din_data       <=   "0000" & splitter_data_in(31 downto 30); 
+                         temp                  <=  '1'  ; 
                          interleaver_din_ready <= '1';                        
                     end if ;
                       index:= index+ 1 ;
                 when "011" => -- 32-QAM 
     
                     if index<= 5 then 
-                         mapper_din_data <= "0" & splitter_data_in((index+1)*5-1  downto index*5) ;
-                         temp <=  '0' ;
+                         mapper_din_data       <= "0" & splitter_data_in((index+1)*5-1  downto index*5) ;
+                         temp                  <=  '0' ;
                     elsif index=6  then  
-                         mapper_din_data <=   "0000" & splitter_data_in(31 downto 30); 
-                         temp <=  '1'  ; 
+                         mapper_din_data       <=   "0000" & splitter_data_in(31 downto 30); 
+                         temp                  <=  '1'  ; 
                          interleaver_din_ready <= '1';     
                     end if ;
                       index:= index+ 1 ; 
                 when "111"  => -- 64-APSK
                     
                     if index <= 4 then 
-                         mapper_din_data <= splitter_data_in((index+1)*6-1  downto index*6) ;
-                         temp <=  '0' ;
+                         mapper_din_data       <= splitter_data_in((index+1)*6-1  downto index*6) ;
+                         temp                  <=  '0' ;
                     elsif index=5 then 
-                         mapper_din_data <=   "0000" & splitter_data_in(31 downto 30);
-                         temp <=  '1'  ;
+                         mapper_din_data       <=   "0000" & splitter_data_in(31 downto 30);
+                         temp                  <=  '1'  ;
                          interleaver_din_ready <= '1';   
                     end if ;
                       index := index + 1 ;
                 when "100" => -- 64-QAM 
                     
                     if index <= 4 then 
-                         mapper_din_data <= splitter_data_in((index+1)*6-1  downto index*6) ;
-                         temp <=  '0' ;
+                         mapper_din_data       <= splitter_data_in((index+1)*6-1  downto index*6) ;
+                         temp                  <=  '0' ;
                     elsif index=5 then 
-                         mapper_din_data <=   "0000" & splitter_data_in(31 downto 30);
-                         temp <=  '1'  ;    
+                         mapper_din_data       <=   "0000" & splitter_data_in(31 downto 30);
+                         temp                  <=  '1'  ;    
                          interleaver_din_ready <= '1';                       
                     end if ;
                       index := index + 1 ;
@@ -807,7 +864,7 @@ case splitter_case is
                     else 
                         interleaver_din_ready <= '0' ;
                         symbol_counter        <= 0 ;
-                        splitter_case         <= PILOT ; 
+                        splitter_case         <= PILOT ;
                     end if ;
        elsif temp = '1' and interleaver_dout_valid = '1' then  
              interleaver_din_ready  <= '0';          
@@ -816,12 +873,12 @@ case splitter_case is
     
              if delay_counter = 1  then                                                          
                 splitter_data_in       <= interleaver_dout_data;
-                delay_counter := 0 ;
-                temp <= '0'; 
+                delay_counter          := 0 ;
+                temp                   <= '0'; 
 
              else 
                delay_counter := delay_counter + 1  ;
-               temp <= '1'; 
+               temp          <= '1'; 
              end if ;  
                 if interleaver_last_frame = '0' then 
                     splitter_case <= DATA_PROCESSING ;
@@ -831,7 +888,7 @@ case splitter_case is
        else 
              interleaver_din_ready  <= '0';
              mapper_din_valid       <= '0'; 
-             delay_counter := 0 ;
+             delay_counter          := 0 ;
              splitter_case          <= START ; 
              
        end if ;
@@ -850,7 +907,8 @@ case splitter_case is
         end if ;
     when PILOT =>      
        mapper_din_valid       <= '0';     
-       delay_counter := 0 ;                             
+       delay_counter          := 0 ;  
+       interleaver_din_ready  <= '0';                            
         if pilot_symbols < 128 then 
            splitter_case  <= PILOT ;     
         else  
@@ -859,11 +917,9 @@ case splitter_case is
               splitter_case         <= DATA_PROCESSING  ;     
            elsif  temp = '1' and interleaver_last_frame = '1' then
               splitter_case         <= START  ;   
-              mapper_din_last       <= '1';      
-       
+              mapper_din_last       <= '1';           
            else 
-              interleaver_din_ready <= '0'; 
-              splitter_case  <= DATA_PROCESSING  ;                         
+              splitter_case         <= DATA_PROCESSING  ;                         
            end if ;
          end if ;  
      when others => 
@@ -871,8 +927,8 @@ case splitter_case is
          interleaver_din_ready  <= '0' ;
          mapper_din_valid       <= '0'; 
          mapper_din_data        <= (others => '0');
-         delay_counter := 0 ;   
-         index := 0 ;
+         delay_counter          := 0 ;   
+         index                  := 0 ;
 end case ;
 end if ;
 end process ;

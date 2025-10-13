@@ -44,13 +44,13 @@ entity Scrambler_32bits is
             data_in         : in  std_logic_vector(32 downto 1);
             data_in_valid   : in  std_logic;
             data_in_last    : in  std_logic;
-            end_of_frame    : in  std_logic ;
+--            end_of_frame    : in  std_logic ;
             seed            : in  std_logic_vector(30 downto 0);
             control_enable  : in  std_logic;
             data_out        : out std_logic_vector(32 downto 1);
             data_out_valid  : out std_logic;
-            data_out_last   : out std_logic;
-            last_frame      : out std_logic 
+            data_out_last   : out std_logic
+--            last_frame      : out std_logic 
 --            data_out_ready  : out std_logic 
  
   );
@@ -82,7 +82,7 @@ begin
                tmp_seed <= tmp_seed  ;
             end if ;
              
-             last_frame <=  end_of_frame ;
+--             last_frame <=  end_of_frame ;
              data_out_last <= data_in_last ;
             if  data_in_valid = '1' then
 --                data_out_ready <= '1'; 

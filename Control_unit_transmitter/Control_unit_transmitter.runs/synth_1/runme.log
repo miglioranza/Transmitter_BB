@@ -24,29 +24,28 @@ WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis b
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 930365
+INFO: [Synth 8-7075] Helper process launched with PID 754926
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3465.191 ; gain = 228.688 ; free physical = 5440 ; free virtual = 129120
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3465.066 ; gain = 229.688 ; free physical = 21157 ; free virtual = 128221
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'CU_top' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:95]
-INFO: [Synth 8-3491] module 'tx_data_fifo' declared at '/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.runs/synth_1/.Xil/Vivado-929803-uxsrv026.ihp-ffo.de/realtime/tx_data_fifo_stub.vhdl:5' bound to instance 'Input_data_fifo' of component 'tx_data_fifo' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-INFO: [Synth 8-638] synthesizing module 'tx_data_fifo' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.runs/synth_1/.Xil/Vivado-929803-uxsrv026.ihp-ffo.de/realtime/tx_data_fifo_stub.vhdl:20]
-INFO: [Synth 8-226] default block is never used [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:712]
+INFO: [Synth 8-3491] module 'tx_data_fifo' declared at '/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.runs/synth_1/.Xil/Vivado-754267-uxsrv026.ihp-ffo.de/realtime/tx_data_fifo_stub.vhdl:5' bound to instance 'Input_data_fifo' of component 'tx_data_fifo' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:500]
+INFO: [Synth 8-638] synthesizing module 'tx_data_fifo' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.runs/synth_1/.Xil/Vivado-754267-uxsrv026.ihp-ffo.de/realtime/tx_data_fifo_stub.vhdl:20]
+INFO: [Synth 8-226] default block is never used [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:770]
 INFO: [Synth 8-256] done synthesizing module 'CU_top' (1#1) [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:95]
-WARNING: [Synth 8-7129] Port mapper_dout_last in module CU_top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3511.098 ; gain = 274.594 ; free physical = 4822 ; free virtual = 128503
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3510.973 ; gain = 275.594 ; free physical = 20192 ; free virtual = 127256
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3528.910 ; gain = 292.406 ; free physical = 4459 ; free virtual = 128140
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3528.785 ; gain = 293.406 ; free physical = 20187 ; free virtual = 127252
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3528.910 ; gain = 292.406 ; free physical = 4459 ; free virtual = 128140
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3528.785 ; gain = 293.406 ; free physical = 20187 ; free virtual = 127252
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3528.910 ; gain = 0.000 ; free physical = 4451 ; free virtual = 128132
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3528.785 ; gain = 0.000 ; free physical = 20179 ; free virtual = 127244
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -54,20 +53,20 @@ Initializing timing engine
 Parsing XDC File [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.gen/sources_1/ip/tx_data_fifo/tx_data_fifo/tx_data_fifo_in_context.xdc] for cell 'Input_data_fifo'
 Finished Parsing XDC File [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.gen/sources_1/ip/tx_data_fifo/tx_data_fifo/tx_data_fifo_in_context.xdc] for cell 'Input_data_fifo'
 Parsing XDC File [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/constrs_1/new/CU_constraint.xdc]
-create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3726.535 ; gain = 23.812 ; free physical = 5275 ; free virtual = 128956
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3724.441 ; gain = 23.812 ; free physical = 21014 ; free virtual = 128083
 Finished Parsing XDC File [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/constrs_1/new/CU_constraint.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3726.535 ; gain = 0.000 ; free physical = 5275 ; free virtual = 128956
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3724.441 ; gain = 0.000 ; free physical = 21014 ; free virtual = 128083
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3726.535 ; gain = 0.000 ; free physical = 5275 ; free virtual = 128956
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3724.441 ; gain = 0.000 ; free physical = 21014 ; free virtual = 128083
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'Input_data_fifo' at clock pin 's_axis_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
 WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 3726.535 ; gain = 490.031 ; free physical = 5359 ; free virtual = 129045
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 3724.441 ; gain = 489.062 ; free physical = 21109 ; free virtual = 128177
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -75,59 +74,73 @@ Start Loading Part and Timing Information
 Loading part: xczu28dr-ffvg1517-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 3726.535 ; gain = 490.031 ; free physical = 5359 ; free virtual = 129045
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 3724.441 ; gain = 489.062 ; free physical = 21109 ; free virtual = 128177
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for Input_data_fifo. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 3726.535 ; gain = 490.031 ; free physical = 5358 ; free virtual = 129045
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 3724.441 ; gain = 489.062 ; free physical = 21108 ; free virtual = 128177
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'CU_top'
+INFO: [Synth 8-802] inferred FSM for state register 'data_state_reg' in module 'CU_top'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    init |                              001 |                               00
+            signal_field |                              010 |                               01
+                 payload |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'data_state_reg' using encoding 'one-hot' in module 'CU_top'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 3726.535 ; gain = 490.031 ; free physical = 5351 ; free virtual = 129037
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 3724.441 ; gain = 489.062 ; free physical = 21100 ; free virtual = 128170
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   32 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input   19 Bit       Adders := 1     
 	   2 Input   10 Bit       Adders := 1     
 	   2 Input    7 Bit       Adders := 1     
 	   2 Input    6 Bit       Adders := 1     
-	   2 Input    4 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 3     
+	               32 Bit    Registers := 4     
 	               31 Bit    Registers := 1     
 	               12 Bit    Registers := 2     
 	               10 Bit    Registers := 1     
 	                7 Bit    Registers := 1     
 	                6 Bit    Registers := 6     
-	                4 Bit    Registers := 2     
-	                3 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 4     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 15    
+	                1 Bit    Registers := 14    
 +---Muxes : 
-	   5 Input   32 Bit        Muxes := 1     
-	   2 Input   32 Bit        Muxes := 4     
-	   6 Input   12 Bit        Muxes := 1     
+	   7 Input   32 Bit        Muxes := 1     
+	   3 Input   32 Bit        Muxes := 2     
+	   2 Input   31 Bit        Muxes := 1     
+	   3 Input   31 Bit        Muxes := 1     
+	   2 Input   20 Bit        Muxes := 1     
+	   7 Input   12 Bit        Muxes := 1     
 	   2 Input   10 Bit        Muxes := 1     
+	   7 Input    7 Bit        Muxes := 1     
 	   2 Input    7 Bit        Muxes := 2     
-	   6 Input    7 Bit        Muxes := 1     
 	   5 Input    6 Bit        Muxes := 2     
 	   2 Input    6 Bit        Muxes := 3     
 	   2 Input    5 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 3     
-	   6 Input    4 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 4     
-	   3 Input    3 Bit        Muxes := 1     
-	   6 Input    3 Bit        Muxes := 1     
+	   7 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 7     
+	   7 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 3     
 	   2 Input    2 Bit        Muxes := 7     
+	   7 Input    1 Bit        Muxes := 11    
+	   2 Input    1 Bit        Muxes := 17    
 	   5 Input    1 Bit        Muxes := 10    
-	   2 Input    1 Bit        Muxes := 19    
-	   6 Input    1 Bit        Muxes := 15    
+	   3 Input    1 Bit        Muxes := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -144,9 +157,8 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7129] Port mapper_dout_last in module CU_top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 3726.535 ; gain = 490.031 ; free physical = 5329 ; free virtual = 129019
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 3724.441 ; gain = 489.062 ; free physical = 21072 ; free virtual = 128150
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -156,9 +168,9 @@ ROM: Preliminary Mapping Report
 +------------+---------------------+---------------+----------------+
 |Module Name | RTL Object          | Depth x Width | Implemented As | 
 +------------+---------------------+---------------+----------------+
-|CU_top      | preamble_sts_ROM[0] | 64x3          | LUT            | 
-|CU_top      | preamble_lts_ROM[0] | 128x3         | LUT            | 
 |CU_top      | pilot_I[0]          | 128x3         | LUT            | 
+|CU_top      | preamble_lts_ROM[0] | 128x3         | LUT            | 
+|CU_top      | preamble_sts_ROM[0] | 64x3          | LUT            | 
 |CU_top      | pilot_I[0]          | 128x3         | LUT            | 
 |CU_top      | preamble_lts_ROM[0] | 128x3         | LUT            | 
 |CU_top      | preamble_sts_ROM[0] | 64x3          | LUT            | 
@@ -171,13 +183,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 3957.633 ; gain = 721.129 ; free physical = 4832 ; free virtual = 128526
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 3957.242 ; gain = 721.863 ; free physical = 20597 ; free virtual = 127679
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 4006.672 ; gain = 770.168 ; free physical = 4814 ; free virtual = 128508
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 4007.281 ; gain = 771.902 ; free physical = 20590 ; free virtual = 127673
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -187,7 +199,7 @@ WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default 
 WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
 WARNING: [Synth 8-6779] Delay data for wire-load model not found, using default value
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 4014.680 ; gain = 778.176 ; free physical = 4814 ; free virtual = 128508
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 4015.289 ; gain = 779.910 ; free physical = 20589 ; free virtual = 127671
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -205,110 +217,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 4014.680 ; gain = 778.176 ; free physical = 4813 ; free virtual = 128507
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 4015.289 ; gain = 779.910 ; free physical = 20589 ; free virtual = 127672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 4014.680 ; gain = 778.176 ; free physical = 4813 ; free virtual = 128507
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 4015.289 ; gain = 779.910 ; free physical = 20589 ; free virtual = 127672
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[31] with 1st driver pin 'Input_data_fifo/m_axis_tdata[31]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[31] with 2nd driver pin 'scrambler_din_data_reg[31]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[30] with 1st driver pin 'Input_data_fifo/m_axis_tdata[30]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[30] with 2nd driver pin 'scrambler_din_data_reg[30]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[29] with 1st driver pin 'Input_data_fifo/m_axis_tdata[29]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[29] with 2nd driver pin 'scrambler_din_data_reg[29]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[28] with 1st driver pin 'Input_data_fifo/m_axis_tdata[28]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[28] with 2nd driver pin 'scrambler_din_data_reg[28]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[27] with 1st driver pin 'Input_data_fifo/m_axis_tdata[27]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[27] with 2nd driver pin 'scrambler_din_data_reg[27]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[26] with 1st driver pin 'Input_data_fifo/m_axis_tdata[26]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[26] with 2nd driver pin 'scrambler_din_data_reg[26]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[25] with 1st driver pin 'Input_data_fifo/m_axis_tdata[25]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[25] with 2nd driver pin 'scrambler_din_data_reg[25]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[24] with 1st driver pin 'Input_data_fifo/m_axis_tdata[24]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[24] with 2nd driver pin 'scrambler_din_data_reg[24]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[23] with 1st driver pin 'Input_data_fifo/m_axis_tdata[23]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[23] with 2nd driver pin 'scrambler_din_data_reg[23]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[22] with 1st driver pin 'Input_data_fifo/m_axis_tdata[22]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[22] with 2nd driver pin 'scrambler_din_data_reg[22]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[21] with 1st driver pin 'Input_data_fifo/m_axis_tdata[21]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[21] with 2nd driver pin 'scrambler_din_data_reg[21]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[20] with 1st driver pin 'Input_data_fifo/m_axis_tdata[20]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[20] with 2nd driver pin 'scrambler_din_data_reg[20]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[19] with 1st driver pin 'Input_data_fifo/m_axis_tdata[19]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[19] with 2nd driver pin 'scrambler_din_data_reg[19]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[18] with 1st driver pin 'Input_data_fifo/m_axis_tdata[18]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[18] with 2nd driver pin 'scrambler_din_data_reg[18]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[17] with 1st driver pin 'Input_data_fifo/m_axis_tdata[17]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[17] with 2nd driver pin 'scrambler_din_data_reg[17]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[16] with 1st driver pin 'Input_data_fifo/m_axis_tdata[16]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[16] with 2nd driver pin 'scrambler_din_data_reg[16]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[15] with 1st driver pin 'Input_data_fifo/m_axis_tdata[15]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[15] with 2nd driver pin 'scrambler_din_data_reg[15]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[14] with 1st driver pin 'Input_data_fifo/m_axis_tdata[14]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[14] with 2nd driver pin 'scrambler_din_data_reg[14]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[13] with 1st driver pin 'Input_data_fifo/m_axis_tdata[13]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[13] with 2nd driver pin 'scrambler_din_data_reg[13]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[12] with 1st driver pin 'Input_data_fifo/m_axis_tdata[12]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[12] with 2nd driver pin 'scrambler_din_data_reg[12]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[11] with 1st driver pin 'Input_data_fifo/m_axis_tdata[11]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[11] with 2nd driver pin 'scrambler_din_data_reg[11]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[10] with 1st driver pin 'Input_data_fifo/m_axis_tdata[10]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[10] with 2nd driver pin 'scrambler_din_data_reg[10]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[9] with 1st driver pin 'Input_data_fifo/m_axis_tdata[9]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[9] with 2nd driver pin 'scrambler_din_data_reg[9]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[8] with 1st driver pin 'Input_data_fifo/m_axis_tdata[8]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[8] with 2nd driver pin 'scrambler_din_data_reg[8]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[7] with 1st driver pin 'Input_data_fifo/m_axis_tdata[7]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[7] with 2nd driver pin 'scrambler_din_data_reg[7]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[6] with 1st driver pin 'Input_data_fifo/m_axis_tdata[6]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[6] with 2nd driver pin 'scrambler_din_data_reg[6]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[5] with 1st driver pin 'Input_data_fifo/m_axis_tdata[5]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[5] with 2nd driver pin 'scrambler_din_data_reg[5]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[4] with 1st driver pin 'Input_data_fifo/m_axis_tdata[4]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[4] with 2nd driver pin 'scrambler_din_data_reg[4]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[3] with 1st driver pin 'Input_data_fifo/m_axis_tdata[3]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[3] with 2nd driver pin 'scrambler_din_data_reg[3]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[2] with 1st driver pin 'Input_data_fifo/m_axis_tdata[2]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[2] with 2nd driver pin 'scrambler_din_data_reg[2]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[1] with 1st driver pin 'Input_data_fifo/m_axis_tdata[1]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[1] with 2nd driver pin 'scrambler_din_data_reg[1]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[0] with 1st driver pin 'Input_data_fifo/m_axis_tdata[0]' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_data_OBUF[0] with 2nd driver pin 'scrambler_din_data_reg[0]/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:506]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_valid_OBUF with 1st driver pin 'Input_data_fifo/m_axis_tvalid' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:497]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin scrambler_din_valid_OBUF with 2nd driver pin 'scrambler_din_valid_reg/Q' [/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd:504]
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|       33|Failed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 4014.680 ; gain = 778.176 ; free physical = 4813 ; free virtual = 128507
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 4015.289 ; gain = 779.910 ; free physical = 20589 ; free virtual = 127672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 4014.680 ; gain = 778.176 ; free physical = 4813 ; free virtual = 128507
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 4015.289 ; gain = 779.910 ; free physical = 20589 ; free virtual = 127672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 4014.680 ; gain = 778.176 ; free physical = 4814 ; free virtual = 128508
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 4015.289 ; gain = 779.910 ; free physical = 20589 ; free virtual = 127672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 4014.680 ; gain = 778.176 ; free physical = 4814 ; free virtual = 128508
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 4015.289 ; gain = 779.910 ; free physical = 20589 ; free virtual = 127672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -327,44 +266,43 @@ Report Cell Usage:
 +------+------------------+------+
 |1     |tx_data_fifo_bbox |     1|
 |2     |BUFG              |     1|
-|3     |CARRY8            |     6|
-|4     |LUT1              |     3|
-|5     |LUT2              |    58|
-|6     |LUT3              |    15|
-|7     |LUT4              |    49|
-|8     |LUT5              |    57|
-|9     |LUT6              |   131|
+|3     |CARRY8            |    10|
+|4     |LUT1              |    35|
+|5     |LUT2              |    63|
+|6     |LUT3              |    37|
+|7     |LUT4              |    29|
+|8     |LUT5              |    61|
+|9     |LUT6              |   177|
 |10    |MUXF7             |     4|
-|11    |FDCE              |   116|
-|12    |FDPE              |     2|
-|13    |FDRE              |    73|
-|14    |IBUF              |   116|
-|15    |OBUF              |   109|
+|11    |FDCE              |   179|
+|12    |FDPE              |     1|
+|13    |FDRE              |    45|
+|14    |IBUF              |   141|
+|15    |OBUF              |   108|
 +------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 4014.680 ; gain = 778.176 ; free physical = 4814 ; free virtual = 128508
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 4015.289 ; gain = 779.910 ; free physical = 20589 ; free virtual = 127672
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 66 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 4014.680 ; gain = 580.551 ; free physical = 4849 ; free virtual = 128547
-Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 4014.688 ; gain = 778.176 ; free physical = 4849 ; free virtual = 128547
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 4015.289 ; gain = 584.254 ; free physical = 20629 ; free virtual = 127711
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 4015.297 ; gain = 779.910 ; free physical = 20629 ; free virtual = 127711
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4014.688 ; gain = 0.000 ; free physical = 4944 ; free virtual = 128642
-INFO: [Netlist 29-17] Analyzing 127 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4015.297 ; gain = 0.000 ; free physical = 20726 ; free virtual = 127808
+INFO: [Netlist 29-17] Analyzing 156 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4091.449 ; gain = 0.000 ; free physical = 4865 ; free virtual = 128563
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4094.059 ; gain = 0.000 ; free physical = 20648 ; free virtual = 127731
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 117 instances were transformed.
+  A total of 142 instances were transformed.
   BUFG => BUFGCE: 1 instance 
-  IBUF => IBUF (IBUFCTRL, INBUF): 116 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 141 instances
 
-Synth Design complete, checksum: de77afd7
+Synth Design complete, checksum: f77c4ea8
 INFO: [Common 17-83] Releasing license: Synthesis
-28 Infos, 10 Warnings, 66 Critical Warnings and 0 Errors encountered.
+29 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:01:14 . Memory (MB): peak = 4091.449 ; gain = 1018.746 ; free physical = 5011 ; free virtual = 128709
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:01:15 . Memory (MB): peak = 4094.059 ; gain = 1009.480 ; free physical = 20795 ; free virtual = 127878
 INFO: [Common 17-1381] The checkpoint '/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.runs/synth_1/CU_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file CU_top_utilization_synth.rpt -pb CU_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Oct  9 15:07:25 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 13 17:08:23 2025...

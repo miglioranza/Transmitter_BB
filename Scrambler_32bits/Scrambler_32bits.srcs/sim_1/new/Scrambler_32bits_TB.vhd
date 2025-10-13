@@ -60,13 +60,13 @@ architecture tb of Scrambler_32bits_TB is
             data_in_valid   : in  std_logic;
 --            data_in_ready   : in  std_logic;
             data_in_last    : in  std_logic;
-            end_of_frame    : in  std_logic ;
+--            end_of_frame    : in  std_logic ;
             seed            : in  std_logic_vector(30 downto 0);
             control_enable  : in  std_logic;
             data_out        : out std_logic_vector(32 downto 1);
             data_out_valid  : out std_logic;
-            data_out_last   : out std_logic;
-            last_frame      : out std_logic 
+            data_out_last   : out std_logic
+--            last_frame      : out std_logic 
 --            data_out_ready  : out std_logic 
  
         );
@@ -83,7 +83,7 @@ begin
             data_in_last        => data_in_last ,
 --            data_in_ready       => data_in_ready,
             seed                => seed,  
-            end_of_frame        => end_of_frame ,
+--            end_of_frame        => end_of_frame ,
             control_enable      => control_enable,                 
             data_out            => data_out,        
             data_out_valid      => data_out_valid

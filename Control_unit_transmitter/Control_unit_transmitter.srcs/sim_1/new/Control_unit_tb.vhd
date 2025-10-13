@@ -114,7 +114,7 @@ DUT : entity work.CU_top
             scrambler_din_valid     => scrambler_din_valid,
             scrambler_din_last      => scrambler_din_last,
             scrambler_control_enable=> scrambler_control_enable,
-            scrambler_last_frame    => scrambler_last_frame,
+--            scrambler_last_frame    => scrambler_last_frame,
 
             encoder_code_rate       => encoder_code_rate,
             encoder_reset_fifos     => encoder_reset_fifos,
@@ -124,7 +124,7 @@ DUT : entity work.CU_top
             interleaver_last_frame  => interleaver_last_frame,
             interleaver_din_ready   => interleaver_din_ready,
 
-            mapper_dout_last        => mapper_dout_last,
+--            mapper_dout_last        => mapper_dout_last,
             mapper_selected_mod     => mapper_selected_mod,
             mapper_din_data         => mapper_din_data,
             mapper_din_valid        => mapper_din_valid,
@@ -172,14 +172,25 @@ wait for 50 ns ;
 tx_init  <= '0';
 tx_start <= '1';
 tx_scrambler_ena <= '1';
-start_payload               <= '0' ;
+--start_payload               <= '1' ;
 --Start feeding the Signal Field
 tx_modulation               <= "0000";
-tx_length                   <= "000001000000000000" ; -- 2 KiB of data (2048 bytes) 
+tx_length                   <= "000000100000000000" ; -- 2 KiB of data (2048 bytes) 
 tx_dst_addr                 <= "10000000" ; --Random value
 scrambler_init              <= "1001001000101001000100101111101"; --Scrambler seed
 tx_fec                      <= "00000000";  --CR = 1/2 
-wait for clock_period ;
+wait for 10 ns ;  
+  report "Start of data stream" ;
+    for j in 0 to 511 loop
+      tx_data  <= std_logic_vector(to_unsigned(j, 32));
+      tx_data_valid  <= '1';
+      wait for clock_period ;
+    end loop;
+  tx_data_valid  <= '0';
+  tx_start <= '0';
+  report "End of data stream" ;
+  wait ;
+  end process;
 --control_unit_din_valid      <= '1';
 --wait for clock_period *8  ;
 --control_unit_din_valid      <= '0';
@@ -197,22 +208,17 @@ wait for clock_period ;
  ------------------------------------------------------------------------
     -- SIMULATE PAYLOAD PROCESSING
 -------------------------------------------------------------------------
-start_payload <= '1';
+--start_payload <= '1';
+--Feeding a total of 2048 bytes
 
-for j in 0 to 1000 loop
-  tx_data  <= std_logic_vector(to_unsigned(j, 32));
-  tx_data_valid  <= '1';
-  wait for clock_period ;
-end loop;
-  tx_data_valid  <= '0';
+  
 --control_unit_din_valid <= '0';
-wait for 50 ns;
+--wait for 50 ns;
 ------------------------------------------------------------------------
     -- COMPLETE SIMULATION
     ------------------------------------------------------------------------
-report "End  of Simulation";
-wait;
-end process;
+--report "End  of Simulation";
+--wait;
 --wait for 100 ns ;
 --report "Feeding Interleaver Data with 16QAM mod";
 --while j < 1000 loop
@@ -243,17 +249,16 @@ end process;
 ------------------------------------------------------------------------
 
 interleaver_stimuli : process 
-variable j   : integer range 0 to 1000 := 0 ;
+variable j   : integer range 0 to 511 := 0 ;
 
 begin 
 mapper_dout_last <= '0';
 interleaver_last_frame      <= '0';
-wait on start_payload ;
 interleaver_dout_valid <= '0';
 
+wait on tx_start  ;
 report "Feeding Interleaver Data with BPSK mod";
-
-while j < 1000 loop
+while j < 511 loop
 
 if interleaver_din_ready = '1' then
       interleaver_dout_data <= std_logic_vector(to_unsigned(j, 32));
@@ -265,7 +270,7 @@ else
        if mapper_din_last = '1' then 
           mapper_dout_last <= '1';
        else          
-           mapper_dout_last <= '0';   
+          mapper_dout_last <= '0';   
        end if ;   
     wait until rising_edge (clk) ;
     
