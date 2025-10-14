@@ -68,7 +68,7 @@ architecture Behavioral of Control_unit_tb is
     signal scrambler_last_frame      : std_logic;
 
     signal encoder_code_rate         : std_logic_vector(1 downto 0);
-    signal encoder_reset_fifos       : std_logic;
+--    signal encoder_reset_fifos       : std_logic;
 
     signal interleaver_dout_valid    : std_logic := '0';
     signal interleaver_dout_data     : std_logic_vector(31 downto 0) := (others => '0');
@@ -117,7 +117,7 @@ DUT : entity work.CU_top
 --            scrambler_last_frame    => scrambler_last_frame,
 
             encoder_code_rate       => encoder_code_rate,
-            encoder_reset_fifos     => encoder_reset_fifos,
+--            encoder_reset_fifos     => encoder_reset_fifos,
 
             interleaver_dout_valid  => interleaver_dout_valid,
             interleaver_dout_data   => interleaver_dout_data,
@@ -166,84 +166,33 @@ tx_dst_addr   <= (others => '0') ;
 tx_length     <= (others => '0') ;
 tx_modulation <= (others => '0') ;
 wait for 50 ns ;
-report  "Starting Transmission";
+report  "Initializing Transmission";
 tx_init  <= '1';
 wait for 50 ns ;
 tx_init  <= '0';
+report "Start Transmission" ;
 tx_start <= '1';
 tx_scrambler_ena <= '1';
---start_payload               <= '1' ;
 --Start feeding the Signal Field
-tx_modulation               <= "0000";
+tx_modulation               <= "0000"; --BPSK scheme
 tx_length                   <= "000000100000000000" ; -- 2 KiB of data (2048 bytes) 
 tx_dst_addr                 <= "10000000" ; --Random value
 scrambler_init              <= "1001001000101001000100101111101"; --Scrambler seed
 tx_fec                      <= "00000000";  --CR = 1/2 
 wait for 10 ns ;  
-  report "Start of data stream" ;
+ report "Start of data stream" ;
     for j in 0 to 511 loop
-      tx_data  <= std_logic_vector(to_unsigned(j, 32));
+      tx_data        <= std_logic_vector(to_unsigned(j, 32));
       tx_data_valid  <= '1';
       wait for clock_period ;
     end loop;
-  tx_data_valid  <= '0';
-  tx_start <= '0';
-  report "End of data stream" ;
-  wait ;
-  end process;
---control_unit_din_valid      <= '1';
---wait for clock_period *8  ;
---control_unit_din_valid      <= '0';
+tx_data_valid    <= '0';
+tx_start         <= '0';
+tx_scrambler_ena <= '0';
 
-------------------------------------------------------------------------
-    -- FEED CONTROL DATA (simulate signal field)
-------------------------------------------------------------------------
---for i in 0 to 7 loop
---  control_unit_din_data <= std_logic_vector(to_unsigned(i, 32));
---  control_unit_din_valid <= '1';
---  wait for clock_period ;
---end loop;
---control_unit_din_valid <= '0';
-
- ------------------------------------------------------------------------
-    -- SIMULATE PAYLOAD PROCESSING
--------------------------------------------------------------------------
---start_payload <= '1';
---Feeding a total of 2048 bytes
-
-  
---control_unit_din_valid <= '0';
---wait for 50 ns;
-------------------------------------------------------------------------
-    -- COMPLETE SIMULATION
-    ------------------------------------------------------------------------
---report "End  of Simulation";
---wait;
---wait for 100 ns ;
---report "Feeding Interleaver Data with 16QAM mod";
---while j < 1000 loop
-
---if interleaver_din_ready = '1' then
---      interleaver_dout_data <= std_logic_vector(to_unsigned(j, 32));
---      interleaver_dout_valid <= '1';
---      j := j + 1 ;
---      if  j = 896 then 
---        mapper_dout_last  <= '1' ;
---      else 
---        mapper_dout_last  <= '0' ; 
---      end if ;  
---      wait for clock_period  ;
---else 
---    interleaver_dout_valid <= '0';
---    wait until rising_edge (clk) ;
---end if ;      
-      
---end loop;
---j := 0 ;
---interleaver_last_frame      <= '1';
---interleaver_dout_valid <= '0';
---wait until mapper_din_last = '1';
-
+report "End of data stream" ;
+wait ;
+end process;
 ------------------------------------------------------------------------
 --SIMULATE INTERLEAVER OUTPUT  
 ------------------------------------------------------------------------

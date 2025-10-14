@@ -4,5 +4,5 @@ Oct 19 2021
 02:56:52
 /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.gen/sources_1/ip/tx_data_fifo/sim/tx_data_fifo.v,1760020974,verilog,,,,tx_data_fifo,,,../../../../Control_unit_transmitter.ip_user_files/ipstatic/hdl,,,,,
 /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.sim/sim_1/behav/xsim/glbl.v,1634335545,verilog,,,,glbl,,,,,,,,
-/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd,1760361410,vhdl,,,,control_unit_tb,,,,,,,,
-/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd,1760367852,vhdl,/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd,,,cu_top,,,,,,,,
+/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd,1760432431,vhdl,,,,control_unit_tb,,,,,,,,
+/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sources_1/new/CU_top.vhd,1760448075,vhdl,/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd,,,cu_top,,,,,,,,

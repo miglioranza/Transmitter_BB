@@ -32,6 +32,9 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity CU_top is
+ generic (
+    DATA_WIDTH                  : integer := 4      --Bytes per word 
+    );
  Port (  --General input port 
     clk                         : in std_logic := '0';
     reset                       : in std_logic := '0';
@@ -70,7 +73,7 @@ entity CU_top is
 --    scrambler_last_frame        : out std_logic  ;    
     --Encoder ports 
     encoder_code_rate           : out std_logic_vector(1 downto 0) ; --coding scheme selected for encoder --> starting CR = 1/2 ;
-    encoder_reset_fifos         : out std_logic ;
+--    encoder_reset_fifos         : out std_logic ;
 --    --Interleaver ports 
     interleaver_dout_valid      : in std_logic := '0';
     interleaver_dout_data       : in std_logic_vector(31 downto 0) := (others => '0'); 
@@ -470,12 +473,9 @@ signal data_process      : std_logic := '0';
 --!signal preambles_inserted : std_logic := '0' ; --Signal that checks if the 2 preambles have been added to the packet structure 
 signal start_data_splitter  : std_logic  := '0'; 
 
+signal last_pilot : std_logic := '0';
 --!signals Pilot insertion
 signal pilot_counter, pilot_symbols   : integer := 0 ;
-
-signal padding_value_I : std_logic_vector(11 downto 0)  := (others => '0' ) ;
-signal padding_value_Q : std_logic_vector(11 downto 0)  := (others => '0' ) ;
-signal padding_payload : std_logic := '0';
 
 type control_unit is (START_TX, IDLE ,PREAMBLE_A, PREAMBLE_B, PILOT_STATE, PAYLOAD_STREAM) ;
 signal state : control_unit := START_TX ;
@@ -513,6 +513,7 @@ Input_data_fifo : tx_data_fifo
 payload_process : process (clk,reset) 
 variable n             : integer range 0 to 7   := 0;
 variable frame_counter : integer := 0 ;
+variable delay_cnt     : integer range 0 to 10 := 0 ;     
 begin
 if reset = '1' then 
     n := 0 ;
@@ -524,6 +525,7 @@ if reset = '1' then
     scrambler_control_enable  <= '0' ;
     scrambler_seed            <= ( others => '0') ;   
     frame_counter             := 0 ;
+    delay_cnt                 := 0 ;
 elsif rising_edge (clk) then 
   --Default value
   scrambler_din_last        <= '0';
@@ -538,7 +540,7 @@ elsif rising_edge (clk) then
 
              if  tx_start = '1' then   
                  data_state                <= SIGNAL_FIELD ;
-                 frame_counter             := ((to_integer(unsigned(tx_length)) / 4 ) - 1 ) ;  --This counter counts how many words of 4 bytes each have been fed to the transmitter for establishing when the data stream ends
+                 frame_counter             := ((to_integer(unsigned(tx_length)) / DATA_WIDTH ) ) ;  --This counter counts how many 4-bytes words of have been fed to the transmitter for establishing when the data stream ends
                  scrambler_seed            <= scrambler_init ;   
                  scrambler_control_enable  <= tx_scrambler_ena  ;                 
              else 
@@ -550,26 +552,37 @@ elsif rising_edge (clk) then
               scrambler_din_valid       <= '1';  
               scrambler_din_data        <= signal_field_bits(((n+1)*32)-1  downto n*32); --256-bits --> 32-bits vectors  x 8 
               data_state                <= SIGNAL_FIELD ;
+              m_axis_tready <= '0';
+                
               if n < 7 then             
                     n:= n + 1 ;
-                    m_axis_tready <= '0';
               else 
                     n := 0 ;   
-                    m_axis_tready <= '1';
+--                    m_axis_tready <= '1';
+                    scrambler_din_last        <= '1';
                     data_state  <= PAYLOAD ;                         
                end if ;    
         when PAYLOAD  => 
-            scrambler_din_valid       <= fifo_out_valid    ;    
-            scrambler_din_data        <= fifo_data_out ;           
-            if frame_counter = 0 then 
-                scrambler_din_last    <= '1';
-                data_state            <= INIT ;
-            else 
-                frame_counter         := frame_counter - 1 ;                 
-            end if ;   
+        --Delay of 50 ns between Signal Field and Payload 
+          if delay_cnt < 10 then 
+            delay_cnt := delay_cnt + 1 ;
+            scrambler_din_valid       <= '0';  
+            scrambler_din_last        <= '1';
+          else 
+                m_axis_tready <= '1';
+                scrambler_din_valid       <= fifo_out_valid    ;    
+                scrambler_din_data        <= fifo_data_out ;           
+                if frame_counter = 0 then 
+                    scrambler_din_last    <= '1';
+                    data_state            <= INIT ;
+                else 
+                    frame_counter         := frame_counter - 1 ;                 
+                end if ;   
+           end if ;  
        when others =>  
-            n := 0 ;
-            m_axis_tready <= '0';
+            n                         := 0 ;
+            delay_cnt                 := 0 ;
+            m_axis_tready             <= '0';
             scrambler_din_valid       <= '0';
             scrambler_din_data        <= (others => '0') ;  --Data stream coming from Scrambler 
             scrambler_din_valid       <= '0' ;
@@ -582,41 +595,37 @@ elsif rising_edge (clk) then
 end if ;    
 end process ;  
 control_unit_process : process (clk , reset)
-variable i   : integer range 0 to 10  := 0;
-variable k   : integer range 0 to 127 := 0;
-
+variable i             : integer range 0 to 10  := 0;
+variable k             : integer range 0 to 127 := 0;
+variable delay_cnt     : integer range 0 to 10  := 0 ;     
 begin
 
 if reset = '1' then 
-    k := 0 ;
-    i := 0 ;
+    k                         := 0 ;
+    i                         := 0 ;
+    delay_cnt                 := 0 ;
     dpd_din_valid             <= '0';
     state                     <= START_TX  ;
     dpd_din_valid             <= '0';
     dpd_din_data_Q            <= (others => '0') ;
     dpd_din_data_Q            <= (others => '0') ; 
-    encoder_reset_fifos       <= '1';
+--    encoder_reset_fifos       <= '1';
     encoder_code_rate         <= (others => '0') ;
     start_data_splitter       <= '0' ;
     fifo_reset                <= '0';
 elsif rising_edge(clk)  then 
---    scrambler_din_last        <= '0';
---    scrambler_seed            <= scrambler_init ;   
---    scrambler_control_enable  <= tx_scrambler_ena  ;
---    scrambler_last_frame      <= control_unit_end_of_frame ;
-    encoder_reset_fifos       <= '0';
+--    encoder_reset_fifos       <= '0';
     encoder_code_rate         <=  tx_fec(1 downto 0) ;
     dpd_din_data_Q            <= (others => '0') ;
     dpd_din_data_Q            <= (others => '0') ; 
     dpd_din_valid             <= '0'; 
   
-  
  case state is 
  
     when START_TX =>      
-  
+       
         start_data_splitter  <= '0' ;
-    
+        delay_cnt            := 0 ;
          if tx_init = '1' then
              fifo_reset   <= '1';
              state <= IDLE ;
@@ -661,28 +670,35 @@ elsif rising_edge(clk)  then
     when PREAMBLE_B => 
   --short preamble insertion , 2 sequences of 128 symbols each
               start_data_splitter  <= '0' ;
-
+        if delay_cnt < 10 then 
+           delay_cnt := delay_cnt + 1 ;  --Time delay between 2 Preambles ,to be adjusted depending from the case 
+        else         
           if i < 2 then 
-            dpd_din_valid <= '1' ;
+            dpd_din_valid  <= '1' ;
             dpd_din_data_Q <= preamble_Q ;
                if k < 127 then 
                   dpd_din_data_I <= preamble_lts_ROM(k) ;
                   k := k + 1 ;
                else     
                   K := 0 ;
-                  i:= i + 1 ;
+                  i := i + 1 ;
                end if ;
            else 
 --           i := 0 ;
-              state <= PILOT_STATE ; 
+              state         <= PILOT_STATE ; 
+              delay_cnt     := 0 ;
               dpd_din_valid <= '0' ;   
-          end if ;     
+          end if ;    
+       end if ;    
     when PILOT_STATE => 
   --This state check if the symbols that are sent from the data splitter process full fill an entire block N = 896 symbols, if so,start sending the pilot symbols
   --default values 
     state               <= PILOT_STATE ;   
 --    start_data_splitter  <= '1' ;  
 --        if symbol_counter = 0 then 
+         if delay_cnt < 10 then 
+           delay_cnt := delay_cnt + 1 ;
+         else  
             if pilot_symbols < 128 then
                         control_unit_enable <= '1';
                         dpd_din_valid       <= '1';                          
@@ -701,9 +717,7 @@ elsif rising_edge(clk)  then
                         state <= PAYLOAD_STREAM ;
                       end if ;  
               end if ;        
---         else 
---                pilot_symbols <= 0;      
---         end if ;
+         end if ;
      when PAYLOAD_STREAM => 
         pilot_symbols <= 0;      
          if splitter_case = PILOT then 
@@ -764,7 +778,8 @@ case splitter_case is
            interleaver_din_ready  <= '0';                
         end if ;
      when DATA_PROCESSING => 
-        if temp = '0' and interleaver_dout_valid = '1' then 
+--        if temp = '0' and interleaver_dout_valid = '1' then 
+        if temp = '0' then 
           delay_counter         := 0 ;
           interleaver_din_ready <= '0'; 
            case tx_modulation (2 downto 0) is    
@@ -880,16 +895,18 @@ case splitter_case is
                delay_counter := delay_counter + 1  ;
                temp          <= '1'; 
              end if ;  
-                if interleaver_last_frame = '0' then 
-                    splitter_case <= DATA_PROCESSING ;
-                else 
-                    splitter_case <= PADDING ;
-                end if ;  
-       else 
-             interleaver_din_ready  <= '0';
-             mapper_din_valid       <= '0'; 
-             delay_counter          := 0 ;
-             splitter_case          <= START ; 
+               
+       elsif temp = '1' and interleaver_dout_valid = '0' then     
+            if interleaver_last_frame = '0' then 
+                splitter_case <= DATA_PROCESSING ;
+            else 
+                splitter_case <= PADDING ;
+            end if ;   
+--       else 
+--             interleaver_din_ready  <= '0';
+--             mapper_din_valid       <= '0'; 
+--             delay_counter          := 0 ;
+--             splitter_case          <= START ; 
              
        end if ;
    when PADDING => 
