@@ -1,0 +1,19 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.sim/sim_1/synth/func/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.sim/sim_1/synth/func/xsim/Control_unit_tb_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tx_data_fifo_xpm_cdc_sync_rst'
+INFO: [VRFC 10-3107] analyzing entity '\tx_data_fifo_xpm_counter_updn__parameterized1\'
+INFO: [VRFC 10-3107] analyzing entity '\tx_data_fifo_xpm_counter_updn__parameterized1_0\'
+INFO: [VRFC 10-3107] analyzing entity '\tx_data_fifo_xpm_counter_updn__parameterized2\'
+INFO: [VRFC 10-3107] analyzing entity '\tx_data_fifo_xpm_counter_updn__parameterized2_1\'
+INFO: [VRFC 10-3107] analyzing entity '\tx_data_fifo_xpm_counter_updn__parameterized3\'
+INFO: [VRFC 10-3107] analyzing entity 'tx_data_fifo_xpm_fifo_reg_bit'
+INFO: [VRFC 10-3107] analyzing entity 'tx_data_fifo_xpm_fifo_rst'
+INFO: [VRFC 10-3107] analyzing entity 'tx_data_fifo_xpm_memory_base'
+INFO: [VRFC 10-3107] analyzing entity 'tx_data_fifo_xpm_fifo_base'
+INFO: [VRFC 10-3107] analyzing entity 'tx_data_fifo_xpm_fifo_axis'
+INFO: [VRFC 10-3107] analyzing entity 'tx_data_fifo_axis_data_fifo_v2_0_7_top'
+INFO: [VRFC 10-3107] analyzing entity 'tx_data_fifo'
+INFO: [VRFC 10-3107] analyzing entity 'CU_top'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Control_unit_tb'

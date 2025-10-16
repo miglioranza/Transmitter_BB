@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Fri May 16 14:21:17 2025
-| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Date         : Thu Oct 16 14:48:16 2025
+| Host         : uxsrv026.ihp-ffo.de running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 | Command      : report_utilization -file block_interleaver_utilization_synth.rpt -pb block_interleaver_utilization_synth.pb
 | Design       : block_interleaver
 | Device       : xczu28dr-ffvg1517-2-e
@@ -32,13 +32,13 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*                  |  728 |     0 |          0 |    425280 |  0.17 |
-|   LUT as Logic             |  688 |     0 |          0 |    425280 |  0.16 |
+| CLB LUTs*                  |  725 |     0 |          0 |    425280 |  0.17 |
+|   LUT as Logic             |  685 |     0 |          0 |    425280 |  0.16 |
 |   LUT as Memory            |   40 |     0 |          0 |    213600 |  0.02 |
 |     LUT as Distributed RAM |   40 |     0 |            |           |       |
 |     LUT as Shift Register  |    0 |     0 |            |           |       |
-| CLB Registers              |  154 |     0 |          0 |    850560 |  0.02 |
-|   Register as Flip Flop    |  154 |     0 |          0 |    850560 |  0.02 |
+| CLB Registers              |  150 |     0 |          0 |    850560 |  0.02 |
+|   Register as Flip Flop    |  150 |     0 |          0 |    850560 |  0.02 |
 |   Register as Latch        |    0 |     0 |          0 |    850560 |  0.00 |
 | CARRY8                     |   72 |     0 |          0 |     53160 |  0.14 |
 | F7 Muxes                   |    0 |     0 |          0 |    212640 |  0.00 |
@@ -61,9 +61,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 1     |          Yes |           - |          Set |
-| 82    |          Yes |           - |        Reset |
+| 83    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 71    |          Yes |       Reset |            - |
+| 66    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -97,7 +97,7 @@ Table of Contents
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| Bonded IOB |   78 |     0 |          0 |       347 | 22.48 |
+| Bonded IOB |   73 |     0 |          0 |       347 | 21.04 |
 | HS_ADC     |    0 |     0 |          4 |         4 |  0.00 |
 | HS_DAC     |    0 |     0 |          4 |         4 |  0.00 |
 +------------+------+-------+------------+-----------+-------+
@@ -164,19 +164,19 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |  290 |                 CLB |
-| LUT3     |  136 |                 CLB |
-| LUT4     |  125 |                 CLB |
-| LUT5     |   92 |                 CLB |
-| FDCE     |   82 |            Register |
-| LUT2     |   81 |                 CLB |
+| LUT6     |  288 |                 CLB |
+| LUT3     |  133 |                 CLB |
+| LUT4     |  123 |                 CLB |
+| LUT5     |   94 |                 CLB |
+| FDCE     |   83 |            Register |
+| LUT2     |   82 |                 CLB |
 | CARRY8   |   72 |                 CLB |
-| FDRE     |   71 |            Register |
+| FDRE     |   66 |            Register |
 | LUT1     |   47 |                 CLB |
 | RAMD64E  |   40 |                 CLB |
-| INBUF    |   40 |                 I/O |
-| IBUFCTRL |   40 |              Others |
-| OBUF     |   38 |                 I/O |
+| INBUF    |   38 |                 I/O |
+| IBUFCTRL |   38 |              Others |
+| OBUF     |   35 |                 I/O |
 | FDPE     |    1 |            Register |
 | BUFGCE   |    1 |               Clock |
 +----------+------+---------------------+

@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"Control_unit_tb_func_synth.vhd" \
+"../../../../../Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd" \
+
+# Do not sort compile order
+nosort

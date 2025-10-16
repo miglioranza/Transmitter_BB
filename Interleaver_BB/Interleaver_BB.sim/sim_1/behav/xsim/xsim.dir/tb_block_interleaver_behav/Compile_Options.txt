@@ -1,1 +1,1 @@
---incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "tb_block_interleaver_behav" "xil_defaultlib.tb_block_interleaver" -log "elaborate.log" 
+--incr --debug "typical" --relax --mt "8" -cc_db "Interleaver_CC" -cc_libs -cc_type "sbc" -L "xil_defaultlib" -L "secureip" --snapshot "tb_block_interleaver_behav" "xil_defaultlib.tb_block_interleaver" -log "elaborate.log" 

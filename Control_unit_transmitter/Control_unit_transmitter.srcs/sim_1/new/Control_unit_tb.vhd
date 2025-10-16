@@ -174,7 +174,7 @@ report "Start Transmission" ;
 tx_start <= '1';
 tx_scrambler_ena <= '1';
 --Start feeding the Signal Field
-tx_modulation               <= "0000"; --BPSK scheme
+tx_modulation               <= "0001"; --BPSK scheme
 tx_length                   <= "000000100000000000" ; -- 2 KiB of data (2048 bytes) 
 tx_dst_addr                 <= "10000000" ; --Random value
 scrambler_init              <= "1001001000101001000100101111101"; --Scrambler seed
@@ -207,31 +207,30 @@ interleaver_dout_valid <= '0';
 
 wait on tx_start  ;
 report "Feeding Interleaver Data with BPSK mod";
-while j < 511 loop
-
+while j < 512 loop
+interleaver_dout_valid <= '1';
 if interleaver_din_ready = '1' then
-      interleaver_dout_data <= std_logic_vector(to_unsigned(j, 32));
-      interleaver_dout_valid <= '1';
+      interleaver_dout_data  <= std_logic_vector(to_unsigned(j, 32));
       j := j + 1 ;
-      wait for clock_period  ;
+      if j = 512 then 
+         interleaver_last_frame      <= '1';
+      else 
+        interleaver_last_frame      <= '0';
+      end if ;
+    wait for clock_period  ;
 else 
 --    interleaver_dout_valid <= '0';
-       if mapper_din_last = '1' then 
-          mapper_dout_last <= '1';
-       else          
-          mapper_dout_last <= '0';   
-       end if ;   
     wait until rising_edge (clk) ;
     
 end if ; 
-  
 end loop;
 report "End of interleaver simulation" ;      
 j := 0 ;
-interleaver_last_frame      <= '1';
-interleaver_dout_valid <= '0';
+--interleaver_dout_valid <= '0';
 --wait until mapper_din_last = '1';
-wait for 50 ns ;
+wait until mapper_din_last = '1' ;
+interleaver_dout_valid <= '0';
+
 end process ;  
 
 monitor: process(clk)

@@ -469,11 +469,9 @@ signal payload_counter   : integer :=  0 ;
 signal mapper_buf_I      : std_logic_vector(11 downto 0 ) := (others => '0') ;
 signal temp              : std_logic := '0';
 signal splitter_data_in  : std_logic_vector(31 downto 0)  := (others => '0') ;
-signal data_process      : std_logic := '0';
+signal last_word         : std_logic := '0';
 --!signal preambles_inserted : std_logic := '0' ; --Signal that checks if the 2 preambles have been added to the packet structure 
 signal start_data_splitter  : std_logic  := '0'; 
-
-signal last_pilot : std_logic := '0';
 --!signals Pilot insertion
 signal pilot_counter, pilot_symbols   : integer := 0 ;
 
@@ -483,8 +481,8 @@ signal state : control_unit := START_TX ;
 type data_stream is (INIT, SIGNAL_FIELD, PAYLOAD) ;
 signal data_state : data_stream := INIT ; 
 --Splitter signals 
-type splitter_control is (START, DATA_PROCESSING, FINISH, PADDING, PILOT);
-signal splitter_case : splitter_control := START ;
+type splitter_control is (INIT_TX, START, DATA_PROCESSING, FINISH, PADDING, PILOT);
+signal splitter_case : splitter_control := INIT_TX ;
 signal symbol_counter     : integer range 0 to 898 := 0 ;
 
 begin
@@ -738,7 +736,7 @@ end if ;
 end process ;
 
 
-data_splitter : process (clk, reset) 
+data_splitter : process (clk, reset ) 
 variable index          : integer range 0 to 32:= 0 ;
 variable delay_counter  : integer range 0 to 1 := 0 ;
 begin
@@ -761,13 +759,18 @@ elsif rising_edge (clk) then
 --     splitter_data_in       <= (others => '0');        
 
 case splitter_case is 
-
+    when INIT_TX => 
+        if tx_init = '1' then 
+            splitter_case <= START ;
+        else
+            splitter_case <= INIT_TX ;
+        end if ;        
     when START => 
     --default case
      delay_counter := 0 ;
      splitter_case <= START ; 
      temp          <= '0';  
-
+     last_word     <= '0';
         if start_data_splitter = '1' and interleaver_dout_valid = '1' then 
            splitter_case          <= DATA_PROCESSING ;
            splitter_data_in       <= interleaver_dout_data ;
@@ -778,7 +781,7 @@ case splitter_case is
            interleaver_din_ready  <= '0';                
         end if ;
      when DATA_PROCESSING => 
---        if temp = '0' and interleaver_dout_valid = '1' then 
+         
         if temp = '0' then 
           delay_counter         := 0 ;
           interleaver_din_ready <= '0'; 
@@ -875,7 +878,7 @@ case splitter_case is
                      mapper_din_valid <= '1';              
                   
                     if symbol_counter < 896 then
-                        symbol_counter <= symbol_counter + 1 ;
+                        symbol_counter <= symbol_counter + 1 ;            
                     else 
                         interleaver_din_ready <= '0' ;
                         symbol_counter        <= 0 ;
@@ -885,29 +888,28 @@ case splitter_case is
              interleaver_din_ready  <= '0';          
              mapper_din_valid       <= '0';
              index := 0 ;
-    
+     
              if delay_counter = 1  then                                                          
                 splitter_data_in       <= interleaver_dout_data;
                 delay_counter          := 0 ;
                 temp                   <= '0'; 
-
+                last_word              <= interleaver_last_frame ;
              else 
                delay_counter := delay_counter + 1  ;
-               temp          <= '1'; 
+               temp          <= '1';               
              end if ;  
-               
-       elsif temp = '1' and interleaver_dout_valid = '0' then     
-            if interleaver_last_frame = '0' then 
-                splitter_case <= DATA_PROCESSING ;
-            else 
-                splitter_case <= PADDING ;
-            end if ;   
---       else 
---             interleaver_din_ready  <= '0';
---             mapper_din_valid       <= '0'; 
---             delay_counter          := 0 ;
---             splitter_case          <= START ; 
-             
+                if  last_word = '1' then 
+                    splitter_case <= PADDING ;
+                else 
+                    splitter_case <= DATA_PROCESSING ;        
+                end if ;             
+     
+       else 
+             interleaver_din_ready  <= '0';
+             mapper_din_valid       <= '0'; 
+             delay_counter          := 0 ;
+             splitter_case          <= START ; 
+            
        end if ;
    when PADDING => 
         interleaver_din_ready <= '0';                     
@@ -933,7 +935,7 @@ case splitter_case is
               interleaver_din_ready <= '1'; 
               splitter_case         <= DATA_PROCESSING  ;     
            elsif  temp = '1' and interleaver_last_frame = '1' then
-              splitter_case         <= START  ;   
+              splitter_case         <= INIT_TX  ;   
               mapper_din_last       <= '1';           
            else 
               splitter_case         <= DATA_PROCESSING  ;                         
@@ -948,171 +950,5 @@ case splitter_case is
          index                  := 0 ;
 end case ;
 end if ;
-end process ;
---data_splitter: process(clk,reset) 
---variable index          : integer range 0 to 32:= 0 ;
-
---begin 
--- if reset = '1' then 
---      symbol_counter <= 0 ;
---      mapper_din_valid <= '0';   
---      index := 0 ;
---      temp  <= '0' ; 
---      mapper_din_last <= '0';
---      mapper_din_data  <= (others => '0') ;
--- elsif rising_edge (clk) then    
-----default values 
---mapper_selected_mod <= mod_cod_schemes(4 downto 2) ;
---symbol_counter      <= symbol_counter ;
---mapper_din_last     <= '0';      
---if start_data_splitter  = '1' then 
-    
---    if temp = '0' and data_process = '1' and  interleaver_dout_valid = '0'  then           
---         case mod_cod_schemes(4 downto 2) is    
---                when "000" =>  --BPSK  
---                    if index < (32 -1 ) then 
---                         mapper_din_data <=  "00000" &  splitter_data_in(index) ; --Correct way for adding zeros 
---                         temp <=  '0' ;
---                    elsif index=  (32 -1 )  then 
---                          temp <=  '1'  ;     
---                    end if ;
---                    index:= index+ 1 ;
---                when "001" => --QPSK 
---                    if index< (32 /2) - 1   then
---                         mapper_din_data <=  "0000" & splitter_data_in((index+1)*2-1  downto index*2)  ;
---                         temp <=  '0' ;
---                     elsif index= (32 /2) - 1   then
---                         mapper_din_data <=  "0000" & splitter_data_in((index+1)*2-1  downto index*2)  ;
---                         temp <=  '1'  ;     
---                    end if  ;
---                      index:= index+ 1 ;
-                
---                when "101"  => -- 16-APSK
---                    if index<((32 /4) - 1) then
---                        mapper_din_data <=  "00" & splitter_data_in((index+1)*4-1  downto index*4)  ;
---                        temp <=  '0' ;
---                     elsif index= ((32 /4) - 1)  then 
---                         mapper_din_data <=  "00" & splitter_data_in((index+1)*4-1  downto index*4)  ;
---                         temp <=  '1'  ;    
---                    end if ;
---                    index:= index+ 1 ;
---                when "010" => -- 16-QAM 
---                    if index<((32 /4) - 1) then
---                        mapper_din_data <=  "00" & splitter_data_in((index+1)*4-1  downto index*4)  ;
---                        temp <=  '0' ;
---                     elsif index= ((32 /4) - 1)  then 
---                         mapper_din_data <=  "00" & splitter_data_in((index+1)*4-1  downto index*4)  ;
---                         temp <=  '1'  ;    
---                    end if ;
---                  index:= index+ 1 ;
-                
---                when "110"  => -- 32-APSK
-    
---                    if index<= 5 then 
---                        mapper_din_data <= "0" & splitter_data_in((index+1)*5-1  downto index*5) ;
---                        temp <=  '0' ;
---                    elsif index=6  then  
---                        mapper_din_data <=   "0000" & splitter_data_in(31 downto 30); 
---                        temp <=  '1'  ;  
---                    end if ;
---                    index:= index+ 1 ;
---                when "011" => -- 32-QAM 
-    
---                    if index<= 5 then 
---                        mapper_din_data <= "0" & splitter_data_in((index+1)*5-1  downto index*5) ;
---                        temp <=  '0' ;
---                    elsif index=6  then  
---                        mapper_din_data <=   "0000" & splitter_data_in(31 downto 30); 
---                        temp <=  '1'  ;      
---                    end if ;
---                    index:= index+ 1 ; 
---                when "111"  => -- 64-APSK
-                    
---                    if index <= 4 then 
---                        mapper_din_data <= splitter_data_in((index+1)*6-1  downto index*6) ;
---                        temp <=  '0' ;
---    --                    mapper_din_last <= '0';
---                    elsif index=5 then 
---                        mapper_din_data <=   "0000" & splitter_data_in(31 downto 30);
---                        temp <=  '1'  ;
---    --                    mapper_din_last <= last_value ;
-    
---                    end if ;
---                    index := index + 1 ;
---                when "100" => -- 64-QAM 
-                    
---                    if index <= 4 then 
---                        mapper_din_data <= splitter_data_in((index+1)*6-1  downto index*6) ;
---                        temp <=  '0' ;
---                    elsif index=5 then 
---                        mapper_din_data <=   "0000" & splitter_data_in(31 downto 30);
---                        temp <=  '1'  ;    
---                    end if ;
---                    index := index + 1 ;
---                when others =>
---                    mapper_din_data <= (others => '0');
---                    temp <=  '0' ;
---                end case ;
---                     mapper_din_valid <= '1';      
-
---                         if  symbol_counter < 896  then 
---                               symbol_counter <= symbol_counter + 1 ;
---                         else 
---                               symbol_counter <= 0 ;                        
---                               mapper_din_last <= '1';
---                         end if ;       
-    
---    --               else 
---    --               --Control if all signal field words has been fed to the mapper, if so, start feeding the pilot symbols
---    --                   symbol_counter <= 0 ;                 
---    --               end if ;
---    elsif temp = '0' and   data_process = '0' and interleaver_dout_valid = '1' then 
---        splitter_data_in <= interleaver_dout_data ;
---        interleaver_din_ready <= '0';
---        index := 0 ;  
---        mapper_din_data <=  (others => '0') ; 
---        mapper_din_valid <= '0';   
---        data_process <= '1';
---    elsif temp = '1'  and   data_process = '1' and interleaver_dout_valid = '0' then 
---         mapper_din_data  <=  (others => '0') ; 
---         mapper_din_valid <= '0';   
---         temp <= '0';
---         data_process <= '0';  
---           --Check if an entire block is completed, if so, wait the Pilot insertion to be completed 
---             if symbol_counter < 896  and interleaver_last_frame = '0' then 
---                  interleaver_din_ready <= '1';
-                 
---            elsif  symbol_counter < 896  and interleaver_last_frame = '1' then 
---                    mapper_din_data <=  (others => '0') ;
---                    mapper_din_valid <= '1';   
---                    interleaver_din_ready <= '0';  
---                    symbol_counter <= symbol_counter + 1 ;
---                    temp <= '1';
---                    data_process <= '1';      
---             else   
-                   
---                   mapper_din_last <= '1';      
-                  
---                 if pilot_symbols < 128 then              
---                    interleaver_din_ready <= '0';
---                    temp <= '1';
---                    data_process <= '1';           
---                 else                          
---                    interleaver_din_ready <= '1';
---                    mapper_din_last <= '0';      
-
---                 end if ;    
---              end if ;    
-       
---    else
---                interleaver_din_ready <= '1';
---                mapper_din_valid <= '0'; 
---    end if ;
---else 
---        interleaver_din_ready <= '0';
---        mapper_din_data       <= (others => '0') ;   
---        mapper_din_valid      <= '0' ;
--- end if ;              
---end if ;   
---end process ;             
+end process ;             
 end Behavioral;

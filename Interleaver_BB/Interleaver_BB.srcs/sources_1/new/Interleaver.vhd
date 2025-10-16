@@ -53,13 +53,12 @@ entity block_interleaver is
         data_in_last        : in  std_logic ; --This port defines the last word of each block 
         end_of_frame        : in std_logic ;
         write_en            : in  std_logic;
---        signal_field        : in std_logic := '0' ; --Signal that notify if the imput data is the SF or the payload 
         code_rate           : in  std_logic_vector(1 downto 0) := (others => '0');
         -- Output interface
         data_out            : out std_logic_vector(DATA_WIDTH-1 downto 0);
         data_out_ready      : out std_logic;
-        data_out_last       : out std_logic := '0' ; --It signals that on entire block has been sent out 
-        last_frame_to_cu    : out std_logic := '0';
+--        data_out_last       : out std_logic := '0' ; --It signals that an entire block has been sent out 
+        last_frame          : out std_logic := '0';
 --        current_code_rate   : out  std_logic_vector(1 downto 0) := (others => '0');
         read_valid          : out std_logic
         
@@ -81,8 +80,6 @@ architecture Behavioral of block_interleaver is
     signal state : state_type := IDLE;
 
     -- Control signals
-    signal write_done           : std_logic := '0';
-    signal read_done            : std_logic := '0';
     signal row_cnt              : integer range 0 to 9 := 0;
     signal col_cnt              : integer range 0 to 9 := 0;
     signal sel_code             : integer range 0 to 3 := 0 ;
@@ -95,7 +92,7 @@ architecture Behavioral of block_interleaver is
     signal row_index            : integer := 0 ;
 begin 
   
-  process(clk, rst, code_rate) 
+  process(clk, rst) 
 
   begin 
  
@@ -114,136 +111,30 @@ begin
   end process ;
   
  
-    -- Main process: State machine and memory operations
---   interleaver_ : process(clk, rst)
---    begin
---        if rst = '1' then
---            -- Reset state
---            state <= IDLE;
---            write_addr <= (others => '0');
---            read_addr <= (others => '0');
---            write_done <= '0';
---            read_done <= '0';
---            row_cnt <= 0;
---            col_cnt <= 0;
---            read_valid <= '0';
---            data_out <= (others => '0');
---            data_out_ready <= '0' ;
---        elsif rising_edge(clk) then
---            case state is
---                when IDLE =>
---                data_out_ready <= '1';       
---                    read_valid <= '0';
-----                    if data_in_ready = '1'then 
-----                         data_out_ready <= '1';
-----                         state <= WRITE;
-----                    else 
---                    if write_en = '1' then
---                         current_code      <= sel_code ;
---                         current_code_rate <= code_rate ;
---                         state <= WRITE;
---                         memory(to_integer(write_addr)) <= data_in;
---                         write_addr <= write_addr + 1;
---                    end if;
-
---                when WRITE =>
---                    if write_en = '1' then
---                        -- Write row-wise
---                         read_valid <= '0';
---                        memory(to_integer(write_addr)) <= data_in;
---                        if write_addr = (NUM_ROWS * current_code) * NUM_COLS - current_code then
---                            write_addr <= (others => '0');
---                            write_done <= '1';
---                            state <= READ;
---                            data_out_ready <= '0';
---                        else
---                            write_addr <= write_addr + 1;
---                        end if;
-                     
---                    end if;
---                --To be fixed , add if-statement for data_in_ready control 
-
---                when READ =>
---                    -- Read column-wise
-----                    read_valid <= '1';
-
---                      if data_in_ready = '1' and busy = '0' then 
---                                   data_out <= memory(to_integer(read_addr));
---                                   read_valid <= '1';
---                                   busy <= '1';
-----                    data_out <= memory(to_integer(read_addr));
---                    -- Column-major addressing: addr = col + row * NUM_COLS
-----                     if col_cnt = NUM_COLS-current_code and row_cnt = ( NUM_ROWS * current_code )-1 then
---                     if col_cnt = NUM_COLS - current_code + 1 and row_cnt = ( NUM_ROWS * current_code )-2 then
---                        if col_cnt = NUM_COLS -1 or index_address = row_cnt + 1 then
---                        read_addr <= (others => '0');
---                        row_cnt <= 0;
---                        index_address <= 0;
---                        col_cnt <= 0;
---                        read_done <= '1';
---                        data_out_ready <= '1';                                           
---                        state <= IDLE  ; 
-----                     elsif col_cnt <  NUM_COLS -1 and index_address < row_cnt then
---                       else
---                          read_addr <= to_unsigned(col_cnt + 1 + (NUM_COLS * index_address),12) ; 
---                          index_address <= index_address + 1 ;  
---                      end if ;
---                    elsif row_cnt = (NUM_ROWS * current_code )-1 then
---                        row_cnt <= 0;
---                        col_cnt <= col_cnt + 1;
---                        read_addr <= to_unsigned(col_cnt + 1, 12); -- Next row, first column
---                    else
---                      -- Jump to next column
---                          row_cnt  <= row_cnt + 1 ;
---                          read_addr <= to_unsigned(col_cnt + ( NUM_COLS * (row_cnt + 1) ),12) ;
---                    end if;
---                       elsif data_in_ready = '1' and busy = '1' then        
---                           busy <= '0';   
---                           read_valid <= '0';
---                    else 
---                                          read_valid <= '0';
-
---                  end if ;                     
---                when others =>
---                    state <= IDLE;
---            end case;
---            -- Clear done flags when leaving states
---            if state /= WRITE then
---                write_done <= '0';
---            end if;
---            if state /= READ then
---                read_done <= '0';
---            end if;
---        end if ;   
---    end process;
-    
     --the SF has a length of 896 bits -> 29 codewords , rectangular block of 5 x 7  (R x C) 
     adaptive_interleaver : process(clk, rst)
         variable temp  : integer := 0 ;
 
     begin
         if rst = '1' then
-            -- Reset state
-            state <= IDLE;
---            write_addr <= (others => '0');
-            write_addr  <= 0 ;
-            read_addr  <=  0 ;
-            write_done <= '0';
-            read_done <= '0';
-            row_cnt <= 0;
-            col_cnt <= 0;
-            read_valid <= '0';
-            data_out <= (others => '0');
+            state          <= IDLE;
+            write_addr     <= 0 ;
+            read_addr      <=  0 ;
+            row_cnt        <= 0;
+            col_cnt        <= 0;
+            read_valid     <= '0';
+            data_out       <= (others => '0');
             data_out_ready <= '0' ;
+            last_frame     <= '0';
         elsif rising_edge(clk) then
        
             case state is
                 when IDLE =>
                 data_out_ready <= '1';       
-                    read_valid <= '0';
 
                     if write_en = '1' then   
-                         data_out_last <= '0'; 
+                         last_frame  <= '0'; 
+                         read_valid     <= '0';
 --                         current_code_rate <= code_rate ;                  
                          state <= WRITE;
                          memory(write_addr) <= data_in;
@@ -251,9 +142,11 @@ begin
                     end if;
 
                 when WRITE =>
+                   read_valid     <= '0';
+                   data_out_ready <= '1';       
                     if write_en = '1' then
                         -- Write row-wise
-                         read_valid <= '0';
+                        read_valid <= '0';
                         memory(write_addr) <= data_in;  
                         --NUM_ROWS = 4 
                         if data_in_last = '1' then 
@@ -261,7 +154,6 @@ begin
                             reminder <=  (write_addr + 1)   rem NUM_COLS ;
 --                            write_addr <= (others => '0');
                             write_addr <= 0 ;
-                            write_done <= '1';
                             state <= READ;
                             data_out_ready <= '0';
                         else
@@ -272,60 +164,56 @@ begin
 
                 when READ =>
                     -- Read column-wise
---                    read_valid <= '1';
+                      read_valid <= '1';
                       temp := NUM_COLS - reminder ; --How many values are missing for full filling the table e.g. 29/7 = 28 reminder 1 -> with 5 rows and 7 columns, the last 6 values are non valid 
-                      if data_in_ready = '1' and busy = '0' then 
-                                   data_out <= memory(read_addr);
-                                   read_valid <= '1';
-                                   busy <= '1';
+--                    if data_in_ready = '1' and busy = '0' then 
+                      data_out <= memory(read_addr);
+                    if data_in_ready = '1' then 
+--                                 read_valid <= '1';
+--                                   busy <= '1';
 --                    data_out <= memory(to_integer(read_addr));
                      --Last data 
-                     if col_cnt = NUM_COLS - 1  and row_cnt = ( row_size - row_index )then
-                        read_addr <= 0 ;
-                        row_cnt <= 0;
-                        col_cnt <= 0;
-                        read_done <= '1';
-                        data_out_ready <= '1';                                           
-                        state <= IDLE  ; 
-                        data_out_last  <= '1' ;                      
-                        row_index <= 0 ;
-                         if end_of_frame = '1' then 
-                           last_frame_to_cu <= '1' ;
-                        else 
-                           last_frame_to_cu <= '0' ;
-                        end if ;
-                    --Check if the current column is the one in which the last row has non valid value , so row_size is decreased by 1     
-                    elsif col_cnt = NUM_COLS - temp and row_cnt = 0 then 
-                        row_index <= row_index +1 ;
-                        row_cnt  <= row_cnt + 1 ;
-                        read_addr <= (col_cnt + NUM_COLS) ;
-                    --the current column has tha last row with a valid data
-                    elsif row_cnt = row_size - row_index  then 
-                        row_cnt <= 0;
-                        col_cnt <= col_cnt + 1;
-                        read_addr <= col_cnt + 1; -- Next row, first column
-                    else
-                      -- Jump to next column
-                          row_cnt  <= row_cnt + 1 ;
-                          read_addr <= col_cnt + ( NUM_COLS * (row_cnt + 1) ) ;
-                    end if;
-                       elsif data_in_ready = '1' and busy = '1' then        
-                           busy <= '0';   
-                           read_valid <= '0';
-                    else 
-                                          read_valid <= '0';
+                         if col_cnt = NUM_COLS - 1  and row_cnt = ( row_size - row_index )then
+                            read_addr       <= 0 ;
+                            row_cnt         <= 0;
+                            col_cnt         <= 0;
+                            data_out_ready  <= '1';                                           
+--                            state           <= IDLE  ; 
+--                            data_out_last   <= '1' ;                      
+                            row_index       <= 0 ;
+                            if end_of_frame = '1' then 
+                               state           <= IDLE  ; 
+                            else   
+                               state           <= WRITE  ; 
+                            end if ;
+                            last_frame      <= end_of_frame ;
+                           
+                        --Check if the current column is the one in which the last row has non valid value , so row_size is decreased by 1     
+                        elsif col_cnt = NUM_COLS - temp and row_cnt = 0 then 
+                            row_index <= row_index +1 ;
+                            row_cnt   <= row_cnt + 1 ;
+                            read_addr <= (col_cnt + NUM_COLS) ;
+                        --the current column has tha last row with a valid data
+                        elsif row_cnt = row_size - row_index  then 
+                            row_cnt   <= 0;
+                            col_cnt   <= col_cnt + 1;
+                            read_addr <= col_cnt + 1; -- Next row, first column
+                        else
+                          -- Jump to next column
+                              row_cnt  <= row_cnt + 1 ;
+                              read_addr<= col_cnt + ( NUM_COLS * (row_cnt + 1) ) ;
+                        end if;
+--                    elsif data_in_ready = '1' and busy = '1' then        
+--                           busy <= '0';   
+--                           read_valid <= '0';
+--                    else 
+--                                          read_valid <= '0';
 
                   end if ;                     
                 when others =>
                     state <= IDLE;
             end case;
-            -- Clear done flags when leaving states
-            if state /= WRITE then
-                write_done <= '0';
-            end if;
-            if state /= READ then
-                read_done <= '0';
-            end if;
+           
         end if ;   
     end process;
     

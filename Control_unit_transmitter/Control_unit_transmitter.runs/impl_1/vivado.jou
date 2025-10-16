@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Oct 16 16:34:07 2025
+# Process ID: 1542667
+# Current directory: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.runs/impl_1
+# Command line: vivado -log CU_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source CU_top.tcl -notrace
+# Log file: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.runs/impl_1/CU_top.vdi
+# Journal file: /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.runs/impl_1/vivado.jou
+# Running On: uxsrv026.ihp-ffo.de, OS: Linux, CPU Frequency: 3200.000 MHz, CPU Physical cores: 32, Host memory: 270349 MB
+#-----------------------------------------------------------
+source CU_top.tcl -notrace

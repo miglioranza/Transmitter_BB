@@ -1,0 +1,16 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date              : Thu Oct 16 16:39:05 2025
+| Host              : uxsrv026.ihp-ffo.de running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Command           : report_bus_skew -warn_on_violation -file CU_top_bus_skew_routed.rpt -pb CU_top_bus_skew_routed.pb -rpx CU_top_bus_skew_routed.rpx
+| Design            : CU_top
+| Device            : xczu28dr-ffvg1517
+| Speed File        : -2  PRODUCTION 1.29 12-02-2020
+| Temperature Grade : E
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

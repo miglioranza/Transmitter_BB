@@ -67,8 +67,8 @@ const int NumRelocateId= 7;
 void relocate(char *dp)
 {
 	iki_relocate(dp, "xsim.dir/tb_block_interleaver_behav/xsim.reloc",  (void **)funcTab, 7);
-	iki_vhdl_file_variable_register(dp + 12736);
-	iki_vhdl_file_variable_register(dp + 12792);
+	iki_vhdl_file_variable_register(dp + 12504);
+	iki_vhdl_file_variable_register(dp + 12560);
 
 
 	/*Populate the transaction function pointer field in the whole net structure */
@@ -106,7 +106,10 @@ int main(int argc, char **argv)
     iki_set_sv_type_file_path_name("xsim.dir/tb_block_interleaver_behav/xsim.svtype");
     iki_set_crvs_dump_file_path_name("xsim.dir/tb_block_interleaver_behav/xsim.crvsdump");
     void* design_handle = iki_create_design("xsim.dir/tb_block_interleaver_behav/xsim.mem", (void *)relocate, (void *)sensitize, (void *)simulate, (void*)0, 0, isimBridge_getWdbWriter(), 0, argc, argv);
-     iki_set_rc_trial_count(100);
+         iki_set_sv_code_coverage_dir("./xsim.codeCov/");
+    iki_set_sv_code_coverage_db("Interleaver_CC");
+    iki_set_sv_code_coverage_type("sbc");
+iki_set_rc_trial_count(100);
     (void) design_handle;
     return iki_simulate_design();
 }
