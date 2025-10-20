@@ -58,7 +58,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>91662f37</spirit:value>
+            <spirit:value>ac52f4f8</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -74,7 +74,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>5f800b13</spirit:value>
+            <spirit:value>89e19210</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -89,7 +89,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>205481f3</spirit:value>
+            <spirit:value>db5a3d8c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -742,7 +742,7 @@
       <spirit:file>
         <spirit:name>sources_1/new/Control_unit_top.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_5f800b13</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_89e19210</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -812,8 +812,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Control_unit_top_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>39</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-10-01T15:16:52Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>40</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-10-20T14:12:09Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.df@4bb899b_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@36be26c5_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
@@ -1252,12 +1252,18 @@
         <xilinx:tag xilinx:name="ui.data.coregen.df@380ea247_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@2baf94ea_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@361a2ced_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@293cbf94_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@74a9cfd_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@569174d2_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3b8c1561_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@44a9f0a7_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6b34e4f6_ARCHIVE_LOCATION">/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2021.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="50102c5c"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="96267568"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="b6a08eef"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="c281090a"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="697673c5"/>
     </xilinx:packagingInfo>

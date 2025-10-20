@@ -40,9 +40,6 @@ entity CU_top is
     reset                       : in std_logic := '0';
     tx_data                     : in std_logic_vector(31 downto 0 ) := (others => '0') ; 
     tx_data_valid               : in std_logic := '0';
---    control_unit_end_of_frame   : in std_logic := '0';
---    control_unit_dout_ready     : out std_logic := '0';
---    control_unit_last_frame     : out std_logic := '0';
     control_unit_enable         : out std_logic := '0';   
     tx_almost_full              : out std_logic  ;
    -- Interface to Packet generator  
@@ -53,18 +50,8 @@ entity CU_top is
     tx_length                   : in std_logic_vector(17 downto 0)   := (others => '0');
     tx_modulation               : in std_logic_vector(3 downto 0)    := (others => '0');
     tx_fec                      : in std_logic_vector(7 downto 0)    := (others => '0');
---    mod_cod_schemes             : in std_logic_vector(4 downto 0)   := (others => '0') ; --modulation and coding schemes --> Possible values :   BPSK and CR = 1/2  => 0001 ,QPSK and CR = 2/3 => 0010 ,16-QAM/16-APSK  and CR = 3/4 => 0100  ,64-QAM/64-APSK  and CR = 5/6 => 1000              
---    num_streams                 : in std_logic_vector(4 downto 0)   := (others => '0') ;
---    ref_distance                : in std_logic_vector(7 downto 0)   := (others => '0') ;
     scrambler_init              : in std_logic_vector(31 downto 1)  := (others => '0') ;
---    num_words                   : in std_logic_vector(15 downto 0)  := (others => '0') ; --Number of bytes per frame (payload) 
---    start_tx                    : in std_logic := '0';   
---    phy_src_address             : in std_logic_vector(4 downto 0 ) := (others => '0') ; 
---    phy_dest_address            : in std_logic_vector(4 downto 0 ) := (others => '0') ; 
-   
-  
  --Scrambler ports 
-
     scrambler_din_data          : out std_logic_vector(31 downto 0)  ;  --Data stream coming from Scrambler 
     scrambler_seed              : out std_logic_vector(31 downto 1)  ;
     scrambler_din_valid         : out std_logic;
@@ -81,7 +68,6 @@ entity CU_top is
     interleaver_last_frame      : in std_logic := '0';   
     interleaver_din_ready       : out std_logic ;   
  -- Mapper ports 
---    mapper_dout_last            : in std_logic := '0'; -- This port signals if the mapper finished to processing the signal field block
 --   mapper_last_frame           : in std_logic := '0'; 
     mapper_selected_mod         : out std_logic_vector(2 downto 0)  ; 
     mapper_din_data             : out std_logic_vector(5 downto 0)  ; --Preamble input data to mapper 
@@ -119,9 +105,7 @@ signal s_axis_tdata   : std_logic_vector(31 downto 0);
 signal fifo_out_valid : std_logic;
 signal m_axis_tready  : std_logic;
 signal fifo_data_out  : std_logic_vector(31 downto 0);
---signal almost_full    : std_logic;
---Preambles definition , must be stored in a ROM memory, they are mapper using BPSK mod.scheme
---Preamble A short training sequence ,The Sync field consists of a string of 0s or 1s, alerting the receiver that a potentially receivable signal is present
+--Preambles  mapped using BPSK mod.scheme
 
 type preamble_sts is array (0 to 63) of STD_LOGIC_VECTOR(11 downto 0); --In-phase symbols --> 96 Bytes 
     constant preamble_sts_ROM : preamble_sts := (
@@ -607,12 +591,10 @@ if reset = '1' then
     dpd_din_valid             <= '0';
     dpd_din_data_Q            <= (others => '0') ;
     dpd_din_data_Q            <= (others => '0') ; 
---    encoder_reset_fifos       <= '1';
     encoder_code_rate         <= (others => '0') ;
     start_data_splitter       <= '0' ;
     fifo_reset                <= '0';
 elsif rising_edge(clk)  then 
---    encoder_reset_fifos       <= '0';
     encoder_code_rate         <=  tx_fec(1 downto 0) ;
     dpd_din_data_Q            <= (others => '0') ;
     dpd_din_data_Q            <= (others => '0') ; 
@@ -658,7 +640,7 @@ elsif rising_edge(clk)  then
                    end if ;
                else 
                i := 0 ;
-               state <= PREAMBLE_B ; --when Preamble A finishe go to preamble B state 
+               state <= PREAMBLE_B ; --when Preamble A finishes go to preamble B state 
                dpd_din_valid <= '0' ;   
               end if ;     
 --            else  
@@ -771,12 +753,21 @@ case splitter_case is
      splitter_case <= START ; 
      temp          <= '0';  
      last_word     <= '0';
+--        if start_data_splitter = '1' and interleaver_dout_valid = '1' then 
+--           splitter_case          <= DATA_PROCESSING ;
+--           splitter_data_in       <= interleaver_dout_data ;
+--           interleaver_din_ready  <= '0';    
+--        elsif start_data_splitter = '1' and interleaver_dout_valid = '0' then
+--           interleaver_din_ready  <= '1'; 
+--        else   
+--           interleaver_din_ready  <= '0';                
+--        end if ;
         if start_data_splitter = '1' and interleaver_dout_valid = '1' then 
            splitter_case          <= DATA_PROCESSING ;
-           splitter_data_in       <= interleaver_dout_data ;
-           interleaver_din_ready  <= '0';    
-        elsif start_data_splitter = '1' and interleaver_dout_valid = '0' then
-           interleaver_din_ready  <= '1'; 
+--           splitter_data_in       <= interleaver_dout_data ;
+           interleaver_din_ready  <= '1';    
+           temp          <= '1';  
+    
         else   
            interleaver_din_ready  <= '0';                
         end if ;

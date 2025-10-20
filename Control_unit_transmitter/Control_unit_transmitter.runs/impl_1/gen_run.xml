@@ -1,80 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xczu28dr-ffvg1517-2-e" LaunchTime="1760625134">
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="BITSTR-SYSDEF" Name="CU_top.sysdef"/>
+  <File Type="RCFI_FILE" Name="CU_top.rcfi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="CU_top_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-RPX" Name="CU_top_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="CU_top_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="CU_top_methodology_drc_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="CU_top_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="CU_top_postroute_physopt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="CU_top_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="CU_top_postplace_pwropt.dcp"/>
+  <File Type="PWROPT-DCP" Name="CU_top_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="CU_top_placed.dcp"/>
+  <File Type="OPT-DCP" Name="CU_top_opt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW" Name="CU_top_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="CU_top_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="CU_top_timing_summary_routed.rpx"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="CU_top.ltx"/>
-  <File Type="BG-BGN" Name="CU_top.bgn"/>
-  <File Type="RNPI_FILE" Name="CU_top.rnpi"/>
-  <File Type="BG-DRC" Name="CU_top.drc"/>
-  <File Type="CFI_FILE" Name="CU_top.cfi"/>
-  <File Type="RCFI_FILE" Name="CU_top.rcfi"/>
+  <File Type="BITSTR-SYSDEF" Name="CU_top.sysdef"/>
   <File Type="BITSTR-MMI" Name="CU_top.mmi"/>
   <File Type="BITSTR-BMM" Name="CU_top_bd.bmm"/>
   <File Type="BITSTR-NKY" Name="CU_top.nky"/>
   <File Type="BITSTR-RBT" Name="CU_top.rbt"/>
-  <File Type="RBD_FILE" Name="CU_top.rbd"/>
-  <File Type="BITSTR-MSK" Name="CU_top.msk"/>
-  <File Type="NPI_FILE" Name="CU_top.npi"/>
-  <File Type="BG-BIN" Name="CU_top.bin"/>
-  <File Type="PDI-FILE" Name="CU_top.pdi"/>
-  <File Type="BG-BIT" Name="CU_top.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="CU_top_bus_skew_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="CU_top_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="CU_top_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="CU_top_timing_summary_postroute_physopted.rpx"/>
-  <File Type="RDI-RDI" Name="CU_top.vdi"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="CU_top_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="CU_top_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="CU_top_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="CU_top_postroute_physopt.dcp"/>
-  <File Type="ROUTE-BUS-SKEW" Name="CU_top_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="CU_top_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-SIMILARITY" Name="CU_top_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="CU_top_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMING-PB" Name="CU_top_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="CU_top_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="CU_top_route_status.pb"/>
-  <File Type="ROUTE-STATUS" Name="CU_top_route_status.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="CU_top_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="CU_top_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="CU_top_power_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="CU_top_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="CU_top_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="CU_top_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="CU_top_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="CU_top_drc_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="CU_top_drc_routed.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="CU_top_routed_bb.dcp"/>
-  <File Type="ROUTE-DCP" Name="CU_top_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="CU_top_routed_error.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="CU_top_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="CU_top_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="CU_top_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="CU_top_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="CU_top_postplace_pwropt.dcp"/>
-  <File Type="PLACE-TIMING" Name="CU_top_timing_summary_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="CU_top_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="CU_top_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-CTRL" Name="CU_top_control_sets_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="CU_top_utilization_placed.pb"/>
-  <File Type="PLACE-UTIL" Name="CU_top_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="CU_top_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="CU_top_io_placed.rpt"/>
-  <File Type="PLACE-DCP" Name="CU_top_placed.dcp"/>
-  <File Type="PWROPT-TIMING" Name="CU_top_timing_summary_pwropted.rpt"/>
-  <File Type="PWROPT-DRC" Name="CU_top_drc_pwropted.rpt"/>
-  <File Type="PWROPT-DCP" Name="CU_top_pwropt.dcp"/>
-  <File Type="OPT-TIMING" Name="CU_top_timing_summary_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="CU_top.hwdef"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="CU_top_methodology_drc_opted.rpt"/>
-  <File Type="OPT-DRC" Name="CU_top_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="CU_top_opt.dcp"/>
-  <File Type="INIT-TIMING" Name="CU_top_timing_summary_init.rpt"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="CU_top_bus_skew_routed.rpx"/>
   <File Type="REPORTS-TCL" Name="CU_top_reports.tcl"/>
+  <File Type="RBD_FILE" Name="CU_top.rbd"/>
+  <File Type="BITSTR-MSK" Name="CU_top.msk"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="CU_top_bus_skew_routed.pb"/>
   <File Type="PA-TCL" Name="CU_top.tcl"/>
+  <File Type="ROUTE-TIMING-PB" Name="CU_top_timing_summary_routed.pb"/>
+  <File Type="OPT-DRC" Name="CU_top_drc_opted.rpt"/>
+  <File Type="NPI_FILE" Name="CU_top.npi"/>
+  <File Type="BG-BIN" Name="CU_top.bin"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="CU_top_timing_summary_routed.rpt"/>
+  <File Type="RNPI_FILE" Name="CU_top.rnpi"/>
+  <File Type="BG-BGN" Name="CU_top.bgn"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="CU_top_routed_bb.dcp"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="RDI-RDI" Name="CU_top.vdi"/>
+  <File Type="CFI_FILE" Name="CU_top.cfi"/>
+  <File Type="BG-DRC" Name="CU_top.drc"/>
+  <File Type="ROUTE-ERROR-DCP" Name="CU_top_routed_error.dcp"/>
+  <File Type="PDI-FILE" Name="CU_top.pdi"/>
+  <File Type="BG-BIT" Name="CU_top.bit"/>
+  <File Type="ROUTE-STATUS-PB" Name="CU_top_route_status.pb"/>
+  <File Type="OPT-HWDEF" Name="CU_top.hwdef"/>
+  <File Type="PLACE-IO" Name="CU_top_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="CU_top_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="CU_top_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="CU_top_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="CU_top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-DRC" Name="CU_top_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="CU_top_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="CU_top_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="CU_top_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="CU_top_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="CU_top_route_status.rpt"/>
+  <File Type="ROUTE-DCP" Name="CU_top_routed.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/CU_top.vhd">
@@ -135,6 +117,7 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="tx_data_fifo"/>
 </GenRun>

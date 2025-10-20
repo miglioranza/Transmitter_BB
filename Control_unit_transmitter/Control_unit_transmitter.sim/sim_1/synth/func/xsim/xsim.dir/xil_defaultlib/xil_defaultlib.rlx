@@ -4,4 +4,4 @@ Oct 19 2021
 02:56:52
 /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.sim/sim_1/synth/func/xsim/Control_unit_tb_func_synth.vhd,1760624722,vhdl,/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd,,,\tx_data_fifo_xpm_counter_updn__parameterized1\;\tx_data_fifo_xpm_counter_updn__parameterized1_0\;\tx_data_fifo_xpm_counter_updn__parameterized2\;\tx_data_fifo_xpm_counter_updn__parameterized2_1\;\tx_data_fifo_xpm_counter_updn__parameterized3\;cu_top;tx_data_fifo;tx_data_fifo_axis_data_fifo_v2_0_7_top;tx_data_fifo_xpm_cdc_sync_rst;tx_data_fifo_xpm_fifo_axis;tx_data_fifo_xpm_fifo_base;tx_data_fifo_xpm_fifo_reg_bit;tx_data_fifo_xpm_fifo_rst;tx_data_fifo_xpm_memory_base,,,,,,,,
 /home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.sim/sim_1/synth/func/xsim/glbl.v,1634335545,verilog,,,,glbl,,,,,,,,
-/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd,1760623980,vhdl,,,,control_unit_tb,,,,,,,,
+/home/miglioranza/Control_unit_transmitter/Control_unit_transmitter.srcs/sim_1/new/Control_unit_tb.vhd,1760949858,vhdl,,,,control_unit_tb,,,,,,,,

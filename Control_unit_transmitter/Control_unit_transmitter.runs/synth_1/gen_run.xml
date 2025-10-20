@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xczu28dr-ffvg1517-2-e" LaunchTime="1760625133" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Control_unit_top.dcp">
-  <File Type="VDS-TIMING-PB" Name="CU_top_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="CU_top_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="CU_top.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="CU_top_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="CU_top_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="CU_top_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="CU_top.vds"/>
   <File Type="REPORTS-TCL" Name="CU_top_reports.tcl"/>
   <File Type="PA-TCL" Name="CU_top.tcl"/>
+  <File Type="RDS-DCP" Name="CU_top.dcp"/>
+  <File Type="RDS-RDS" Name="CU_top.vds"/>
+  <File Type="RDS-UTIL" Name="CU_top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="CU_top_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/CU_top.vhd">

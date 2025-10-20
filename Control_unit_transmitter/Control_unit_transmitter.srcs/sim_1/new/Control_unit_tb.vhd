@@ -22,7 +22,8 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use std.env.finish;
-
+use std.textio.all;
+use ieee.std_logic_textio.all;
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
@@ -39,7 +40,6 @@ end Control_unit_tb;
 
 architecture Behavioral of Control_unit_tb is
 
-
 -- Testbench signal declarations
   -- DUT Signals
   
@@ -54,10 +54,10 @@ architecture Behavioral of Control_unit_tb is
     signal tx_init                   : std_logic := '0';
     signal tx_start                  : std_logic := '0';
     signal tx_scrambler_ena          : std_logic := '0';
-    signal tx_dst_addr               : std_logic_vector(7 downto 0) := (others => '0');
+    signal tx_dst_addr               : std_logic_vector(7 downto 0)  := (others => '0');
     signal tx_length                 : std_logic_vector(17 downto 0) := (others => '0');
-    signal tx_modulation             : std_logic_vector(3 downto 0) := (others => '0');
-    signal tx_fec                    : std_logic_vector(7 downto 0) := (others => '0');
+    signal tx_modulation             : std_logic_vector(3 downto 0)  := (others => '0');
+    signal tx_fec                    : std_logic_vector(7 downto 0)  := (others => '0');
     signal scrambler_init            : std_logic_vector(31 downto 1) := (others => '0');
 
     signal scrambler_din_data        : std_logic_vector(31 downto 0);
@@ -68,7 +68,6 @@ architecture Behavioral of Control_unit_tb is
     signal scrambler_last_frame      : std_logic;
 
     signal encoder_code_rate         : std_logic_vector(1 downto 0);
---    signal encoder_reset_fifos       : std_logic;
 
     signal interleaver_dout_valid    : std_logic := '0';
     signal interleaver_dout_data     : std_logic_vector(31 downto 0) := (others => '0');
@@ -84,8 +83,7 @@ architecture Behavioral of Control_unit_tb is
     signal dpd_din_valid             : std_logic;
     signal dpd_din_data_I            : std_logic_vector(11 downto 0);
     signal dpd_din_data_Q            : std_logic_vector(11 downto 0);
-  constant clock_period            : time := 5 ns ;
-  signal start_payload             : std_logic := '0' ;
+    constant clock_period            : time := 5 ns ;
 
 begin
 --! DUT Instantiation
@@ -123,7 +121,6 @@ DUT : entity work.CU_top
             interleaver_dout_data   => interleaver_dout_data,
             interleaver_last_frame  => interleaver_last_frame,
             interleaver_din_ready   => interleaver_din_ready,
-
 --            mapper_dout_last        => mapper_dout_last,
             mapper_selected_mod     => mapper_selected_mod,
             mapper_din_data         => mapper_din_data,
@@ -174,10 +171,10 @@ report "Start Transmission" ;
 tx_start <= '1';
 tx_scrambler_ena <= '1';
 --Start feeding the Signal Field
-tx_modulation               <= "0001"; --BPSK scheme
+tx_modulation               <= "0100"; --64-QAM scheme
 tx_length                   <= "000000100000000000" ; -- 2 KiB of data (2048 bytes) 
 tx_dst_addr                 <= "10000000" ; --Random value
-scrambler_init              <= "1001001000101001000100101111101"; --Scrambler seed
+scrambler_init              <= "1001001000101001000100101111101"; --Scrambler seed, random value
 tx_fec                      <= "00000000";  --CR = 1/2 
 wait for 10 ns ;  
  report "Start of data stream" ;
@@ -201,9 +198,9 @@ interleaver_stimuli : process
 variable j   : integer range 0 to 511 := 0 ;
 
 begin 
-mapper_dout_last <= '0';
+mapper_dout_last            <= '0';
 interleaver_last_frame      <= '0';
-interleaver_dout_valid <= '0';
+interleaver_dout_valid      <= '0';
 
 wait on tx_start  ;
 report "Feeding Interleaver Data with BPSK mod";
@@ -219,8 +216,7 @@ if interleaver_din_ready = '1' then
       end if ;
     wait for clock_period  ;
 else 
---    interleaver_dout_valid <= '0';
-    wait until rising_edge (clk) ;
+    wait for clock_period ;
     
 end if ; 
 end loop;
@@ -230,17 +226,40 @@ j := 0 ;
 --wait until mapper_din_last = '1';
 wait until mapper_din_last = '1' ;
 interleaver_dout_valid <= '0';
+interleaver_last_frame <= '0';
 
 end process ;  
+------------------------------------------------------------------------
+--CHECK INTERLEAVER OUTPUT  
+------------------------------------------------------------------------
+output_checker : process
+--Adjust the path to the current folder
+file        output_file         : text open read_mode is "/home/miglioranza/splitted_values.txt";
+variable    output_values       : std_logic_vector(5 downto 0 ) ;
+variable    out_line            : line ;
+begin
 
-monitor: process(clk)
-  begin
-    if rising_edge(clk) then
-      if control_unit_enable = '1' then
-        report "Control Unit Enabled at " & time'image(now);
-      end if;
-   end if ;  
-  end process ;   
-  
-    
+while not endfile(output_file) loop
+    wait for clock_period ;
+    if mapper_din_valid = '1' then 
+       readline(output_file, out_line) ;
+        -- Skip empty or comment lines
+        if out_line.all'length = 0 then
+            next;
+        end if;        
+         -- Parse expected values
+        read(out_line, output_values);         
+         -- Compare DUT output vs expected
+        assert mapper_din_data = output_values 
+                report "Mismatch in mapper_output. Expected: " & to_string(to_bitvector(output_values)) &
+                           " Got: " & to_string(to_bitvector(mapper_din_data))
+                 severity error; 
+    end if ;
+end loop ;   
+wait until mapper_din_last = '1' ;
+wait for 500 ns ;
+report "End of simulation" ;
+finish ;              
+end process ;
+      
 end Behavioral;
