@@ -44,7 +44,7 @@ entity LDPC_encoder is
   ldpc_core_clk  : in  std_logic ;
   data_in        : in  std_logic_vector(DATA_WIDTH-1 downto 0) ;
   data_in_valid  : in  std_logic ;
-  data_in_last   : in  std_logic ;
+--  data_in_last   : in  std_logic ;
   data_in_ready  : in  std_logic ;
   sel_code_rate  : in  std_logic_vector(1 downto 0); 
   end_of_frame   : in  std_logic;
@@ -127,27 +127,27 @@ port (
 end component ;
 COMPONENT sd_fec_0
   PORT (
-    reset_n : IN STD_LOGIC;
-    core_clk : IN STD_LOGIC;
-    s_axi_aclk : IN STD_LOGIC;
-    s_axis_ctrl_aclk : IN STD_LOGIC;
-    s_axis_ctrl_tready : OUT STD_LOGIC;
-    s_axis_ctrl_tvalid : IN STD_LOGIC;
-    s_axis_ctrl_tdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    s_axis_din_aclk : IN STD_LOGIC;
-    s_axis_din_tready : OUT STD_LOGIC;
-    s_axis_din_tvalid : IN STD_LOGIC;
-    s_axis_din_tlast : IN STD_LOGIC;
-    s_axis_din_tdata : IN STD_LOGIC_VECTOR(127 DOWNTO 0);
-    m_axis_status_aclk : IN STD_LOGIC;
-    m_axis_status_tready : IN STD_LOGIC;
-    m_axis_status_tvalid : OUT STD_LOGIC;
-    m_axis_status_tdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    m_axis_dout_aclk : IN STD_LOGIC;
-    m_axis_dout_tready : IN STD_LOGIC;
-    m_axis_dout_tvalid : OUT STD_LOGIC;
-    m_axis_dout_tlast : OUT STD_LOGIC;
-    m_axis_dout_tdata : OUT STD_LOGIC_VECTOR(127 DOWNTO 0)
+reset_n                 : IN  STD_LOGIC;
+core_clk                : IN  STD_LOGIC;
+s_axi_aclk              : IN  STD_LOGIC;
+s_axis_ctrl_aclk        : IN  STD_LOGIC;
+s_axis_ctrl_tready      : OUT STD_LOGIC;
+s_axis_ctrl_tvalid      : IN  STD_LOGIC;
+s_axis_ctrl_tdata       : IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+s_axis_din_aclk         : IN  STD_LOGIC;
+s_axis_din_tready       : OUT STD_LOGIC;
+s_axis_din_tvalid       : IN  STD_LOGIC;
+s_axis_din_tlast        : IN  STD_LOGIC;
+s_axis_din_tdata        : IN  STD_LOGIC_VECTOR(127 DOWNTO 0);
+m_axis_status_aclk      : IN  STD_LOGIC;
+m_axis_status_tready    : IN  STD_LOGIC;
+m_axis_status_tvalid    : OUT STD_LOGIC;
+m_axis_status_tdata     : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+m_axis_dout_aclk        : IN  STD_LOGIC;
+m_axis_dout_tready      : IN  STD_LOGIC;
+m_axis_dout_tvalid      : OUT STD_LOGIC;
+m_axis_dout_tlast       : OUT STD_LOGIC;
+m_axis_dout_tdata       : OUT STD_LOGIC_VECTOR(127 DOWNTO 0)
   );
 END COMPONENT;
 --component Cores_controller
@@ -192,7 +192,7 @@ type data_out_fifo is array(N-1 downto 0) of std_logic_vector(DATA_WIDTH-1 downt
 signal fifo_data_out, fifo_data_count,fifo_data_in    : data_out_fifo := (others => (others => '0')) ;
 
 --signal fifo_data_in      : std_logic_vector(DATA_WIDTH-1 downto 0) ;
-signal fifo_data_in_last : std_logic  := '0'; 
+--signal fifo_data_in_last : std_logic  := '0'; 
 signal fifo_out_ready    : std_logic_vector(N-1 downto 0) ;
 signal fifo_valid_out    : std_logic_vector(N-1 downto 0) ;
 signal fifo_valid_in     : std_logic_vector(N-1 downto 0) ;
@@ -213,7 +213,7 @@ signal out_fifo_last_out : std_logic_vector(3 downto 0)  := (others => '0');
 --attribute dont_touch : string ;
 --attribute dont_touch of Data_controller : component is "yes" ;
 --sequential signals for pipelines
-signal input_data_register0, input_data_register1, input_data_register2, input_data_register3 : std_logic_vector(DATA_WIDTH -1 downto 0) := (others => '0') ;
+--signal input_data_register0, input_data_register1, input_data_register2, input_data_register3 : std_logic_vector(DATA_WIDTH -1 downto 0) := (others => '0') ;
 begin
 
 --Input_FIFO_inst : for k in 0 to N-1 generate  
@@ -259,102 +259,102 @@ reset_cores    => reset_cores_controller
 -- Instance 0
 LDPC_core0 : sd_fec_0
   PORT MAP (
-    reset_n => reset_cores_controller,
-    core_clk => ldpc_core_clk,
-    s_axi_aclk => clk,
-    s_axis_ctrl_aclk => clk,
-    s_axis_ctrl_tready => open,
-    s_axis_ctrl_tvalid => dout_valid_controller(0),
-    s_axis_ctrl_tdata => sel_cr(0),
-    s_axis_din_aclk => clk,
-    s_axis_din_tready => din_ready_controller(0),
-    s_axis_din_tvalid => dout_valid_controller(0),
-    s_axis_din_tlast => dout_last_controller(0),
-    s_axis_din_tdata => dout_data_controller0,
-    m_axis_status_aclk => clk,
-    m_axis_status_tready => out_fifo_ready_out(0),
-    m_axis_status_tvalid => open,
-    m_axis_status_tdata => open,
-    m_axis_dout_aclk => clk,
-    m_axis_dout_tready => out_fifo_ready_out(0),
-    m_axis_dout_tvalid => out_fifo_valid_in(0),
-    m_axis_dout_tlast => out_fifo_last_in(0),
-    m_axis_dout_tdata => out_fifo_input_data(0)
+reset_n                 => reset_cores_controller,
+core_clk                => ldpc_core_clk,
+s_axi_aclk              => clk,
+s_axis_ctrl_aclk        => clk,
+s_axis_ctrl_tready      => open,
+s_axis_ctrl_tvalid      => dout_valid_controller(0),
+s_axis_ctrl_tdata       => sel_cr(0),
+s_axis_din_aclk         => clk,
+s_axis_din_tready       => din_ready_controller(0),
+s_axis_din_tvalid       => dout_valid_controller(0),
+s_axis_din_tlast        => dout_last_controller(0),
+s_axis_din_tdata        => dout_data_controller0,
+m_axis_status_aclk      => clk,
+m_axis_status_tready    => out_fifo_ready_out(0),
+m_axis_status_tvalid    => open,
+m_axis_status_tdata     => open,
+m_axis_dout_aclk        => clk,
+m_axis_dout_tready      => out_fifo_ready_out(0),
+m_axis_dout_tvalid      => out_fifo_valid_in(0),
+m_axis_dout_tlast       => out_fifo_last_in(0),
+m_axis_dout_tdata       => out_fifo_input_data(0)
   );
   -- Instance 1
 LDPC_core1 : sd_fec_0
   PORT MAP (
-    reset_n => reset_cores_controller,
-    core_clk => ldpc_core_clk,
-    s_axi_aclk => clk,
-    s_axis_ctrl_aclk => clk,
-    s_axis_ctrl_tready => open,
-    s_axis_ctrl_tvalid => dout_valid_controller(1),
-    s_axis_ctrl_tdata => sel_cr(1),
-    s_axis_din_aclk => clk,
-    s_axis_din_tready => din_ready_controller(1),
-    s_axis_din_tvalid => dout_valid_controller(1),
-    s_axis_din_tlast => dout_last_controller(1),
-    s_axis_din_tdata => dout_data_controller1,
-    m_axis_status_aclk => clk,
-    m_axis_status_tready => out_fifo_ready_out(1),
-    m_axis_status_tvalid => open,
-    m_axis_status_tdata => open,
-    m_axis_dout_aclk => clk,
-    m_axis_dout_tready => out_fifo_ready_out(1),
-    m_axis_dout_tvalid => out_fifo_valid_in(1),
-    m_axis_dout_tlast => out_fifo_last_in(1),
-    m_axis_dout_tdata => out_fifo_input_data(1)
+reset_n                 => reset_cores_controller,
+core_clk                => ldpc_core_clk,
+s_axi_aclk              => clk,
+s_axis_ctrl_aclk        => clk,
+s_axis_ctrl_tready      => open,
+s_axis_ctrl_tvalid      => dout_valid_controller(1),
+s_axis_ctrl_tdata       => sel_cr(1),
+s_axis_din_aclk         => clk,
+s_axis_din_tready       => din_ready_controller(1),
+s_axis_din_tvalid       => dout_valid_controller(1),
+s_axis_din_tlast        => dout_last_controller(1),
+s_axis_din_tdata        => dout_data_controller1,
+m_axis_status_aclk      => clk,
+m_axis_status_tready    => out_fifo_ready_out(1),
+m_axis_status_tvalid    => open,
+m_axis_status_tdata     => open,
+m_axis_dout_aclk        => clk,
+m_axis_dout_tready      => out_fifo_ready_out(1),
+m_axis_dout_tvalid      => out_fifo_valid_in(1),
+m_axis_dout_tlast       => out_fifo_last_in(1),
+m_axis_dout_tdata       => out_fifo_input_data(1)
   );
 --  -- Instance 0
 LDPC_core2 : sd_fec_0
   PORT MAP (
-    reset_n => reset_cores_controller,
-    core_clk => ldpc_core_clk,
-    s_axi_aclk => clk,
-    s_axis_ctrl_aclk => clk,
-    s_axis_ctrl_tready => open,
-    s_axis_ctrl_tvalid => dout_valid_controller(2),
-    s_axis_ctrl_tdata => sel_cr(2),
-    s_axis_din_aclk => clk,
-    s_axis_din_tready => din_ready_controller(2),
-    s_axis_din_tvalid => dout_valid_controller(2),
-    s_axis_din_tlast => dout_last_controller(2),
-    s_axis_din_tdata => dout_data_controller2,
-    m_axis_status_aclk => clk,
-    m_axis_status_tready => out_fifo_ready_out(2),
-    m_axis_status_tvalid => open,
-    m_axis_status_tdata => open,
-    m_axis_dout_aclk => clk,
-    m_axis_dout_tready => out_fifo_ready_out(2),
-    m_axis_dout_tvalid => out_fifo_valid_in(2),
-    m_axis_dout_tlast => out_fifo_last_in(2),
-    m_axis_dout_tdata => out_fifo_input_data(2)
+reset_n                 => reset_cores_controller,
+core_clk                => ldpc_core_clk,
+s_axi_aclk              => clk,
+s_axis_ctrl_aclk        => clk,
+s_axis_ctrl_tready      => open,
+s_axis_ctrl_tvalid      => dout_valid_controller(2),
+s_axis_ctrl_tdata       => sel_cr(2),
+s_axis_din_aclk         => clk,
+s_axis_din_tready       => din_ready_controller(2),
+s_axis_din_tvalid       => dout_valid_controller(2),
+s_axis_din_tlast        => dout_last_controller(2),
+s_axis_din_tdata        => dout_data_controller2,
+m_axis_status_aclk      => clk,
+m_axis_status_tready    => out_fifo_ready_out(2),
+m_axis_status_tvalid    => open,
+m_axis_status_tdata     => open,
+m_axis_dout_aclk        => clk,
+m_axis_dout_tready      => out_fifo_ready_out(2),
+m_axis_dout_tvalid      => out_fifo_valid_in(2),
+m_axis_dout_tlast       => out_fifo_last_in(2),
+m_axis_dout_tdata       => out_fifo_input_data(2)
   );
 --  -- Instance 0
 LDPC_core3 : sd_fec_0
   PORT MAP (
-    reset_n => reset_cores_controller,
-    core_clk => ldpc_core_clk,
-    s_axi_aclk => clk,
-    s_axis_ctrl_aclk => clk,
-    s_axis_ctrl_tready => open,
-    s_axis_ctrl_tvalid => dout_valid_controller(3),
-    s_axis_ctrl_tdata => sel_cr(3),
-    s_axis_din_aclk => clk,
-    s_axis_din_tready => din_ready_controller(3),
-    s_axis_din_tvalid => dout_valid_controller(3),
-    s_axis_din_tlast => dout_last_controller(3),
-    s_axis_din_tdata => dout_data_controller3,
-    m_axis_status_aclk => clk,
-    m_axis_status_tready => out_fifo_ready_out(3),
-    m_axis_status_tvalid => open,
-    m_axis_status_tdata => open,
-    m_axis_dout_aclk => clk,
-    m_axis_dout_tready => out_fifo_ready_out(3),
-    m_axis_dout_tvalid => out_fifo_valid_in(3),
-    m_axis_dout_tlast => out_fifo_last_in(3),
-    m_axis_dout_tdata => out_fifo_input_data(3)
+reset_n                 => reset_cores_controller,
+core_clk                => ldpc_core_clk,
+s_axi_aclk              => clk,
+s_axis_ctrl_aclk        => clk,
+s_axis_ctrl_tready      => open,
+s_axis_ctrl_tvalid      => dout_valid_controller(3),
+s_axis_ctrl_tdata       => sel_cr(3),
+s_axis_din_aclk         => clk,
+s_axis_din_tready       => din_ready_controller(3),
+s_axis_din_tvalid       => dout_valid_controller(3),
+s_axis_din_tlast        => dout_last_controller(3),
+s_axis_din_tdata        => dout_data_controller3,
+m_axis_status_aclk      => clk,
+m_axis_status_tready    => out_fifo_ready_out(3),
+m_axis_status_tvalid    => open,
+m_axis_status_tdata     => open,
+m_axis_dout_aclk        => clk,
+m_axis_dout_tready      => out_fifo_ready_out(3),
+m_axis_dout_tvalid      => out_fifo_valid_in(3),
+m_axis_dout_tlast       => out_fifo_last_in(3),
+m_axis_dout_tdata       => out_fifo_input_data(3)
   );
   
 input_fifo_0 : axis_data_fifo_0
@@ -364,7 +364,7 @@ input_fifo_0 : axis_data_fifo_0
     s_axis_tvalid       => fifo_valid_in(0),
     s_axis_tready       => open,
     s_axis_tdata        => fifo_data_in(0),
-    s_axis_tlast        => data_in_last,
+    s_axis_tlast        => end_of_frame ,
     m_axis_tvalid       => fifo_valid_out(0),
     m_axis_tready       => fifo_in_ready(0),
     m_axis_tdata        => fifo_data_out(0),
@@ -381,7 +381,7 @@ input_fifo_1 : axis_data_fifo_0
     s_axis_tvalid       => fifo_valid_in(1),
     s_axis_tready       => open,
     s_axis_tdata        => fifo_data_in(1),
-    s_axis_tlast        => data_in_last,
+    s_axis_tlast        => end_of_frame,
     m_axis_tvalid       => fifo_valid_out(1),
     m_axis_tready       => fifo_in_ready(1),
     m_axis_tdata        => fifo_data_out(1),
@@ -398,7 +398,7 @@ input_fifo_2 : axis_data_fifo_0
     s_axis_tvalid       => fifo_valid_in(2),
     s_axis_tready       => open,
     s_axis_tdata        => fifo_data_in(2),
-    s_axis_tlast        => data_in_last,
+    s_axis_tlast        => end_of_frame,
     m_axis_tvalid       => fifo_valid_out(2),
     m_axis_tready       => fifo_in_ready(2),
     m_axis_tdata        => fifo_data_out(2),
@@ -415,7 +415,7 @@ input_fifo_3 : axis_data_fifo_0
     s_axis_tvalid       => fifo_valid_in(3),
     s_axis_tready       => open,
     s_axis_tdata        => fifo_data_in(3),
-    s_axis_tlast        => data_in_last,
+    s_axis_tlast        => end_of_frame,
     m_axis_tvalid       => fifo_valid_out(3),
     m_axis_tready       => fifo_in_ready(3),
     m_axis_tdata        => fifo_data_out(3),
@@ -472,7 +472,8 @@ current_cr <= sel_code_rate ;
 case sel_code_rate is
 
 when "00" => 
-data_out <= out_fifo_output_data(3) ;
+data_out        <= out_fifo_output_data(3) ;
+data_out_last   <= out_fifo_last_out(3) ;
 if out_fifo_output_data(3) /= x"5A5A5A5A" and out_fifo_valid_out(3) = '1' then
     data_out_valid  <= '1' ;  
     last_frame <= '0';   
@@ -486,7 +487,9 @@ else
 end if ;     
 
 when "01" => 
-data_out <= out_fifo_output_data(2) ;
+data_out        <= out_fifo_output_data(2) ;
+data_out_last   <= out_fifo_last_out(2) ;
+
 if out_fifo_output_data(2) /= x"5A5A5A5A" and out_fifo_valid_out(2) = '1' then
     data_out_valid  <= '1' ;   
      last_frame <= '0';   
@@ -503,6 +506,8 @@ end if ;
 
 when "10" => 
 data_out <= out_fifo_output_data(1) ;
+data_out_last   <= out_fifo_last_out(1) ;
+
 if out_fifo_output_data(1) /= x"5A5A5A5A" and out_fifo_valid_out(1) = '1' then
     data_out_valid  <= '1' ;
     last_frame <= '0';     
@@ -518,6 +523,8 @@ end if ;
 
  when "11" => 
 data_out <= out_fifo_output_data(0) ;
+data_out_last   <= out_fifo_last_out(0) ;
+
 if out_fifo_output_data(1) /= x"5A5A5A5A" and out_fifo_valid_out(0) = '1' then
     data_out_valid  <= '1' ; 
     last_frame <= '0';    

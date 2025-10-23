@@ -71,6 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_2" START { ROLLUP_AUTO }
 set_param simulator.xceliumInstallPath /ihp/ihpusr/cadence/xcelium/20.09/tools.lnx86/bin
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config  -id {BD 41-759}  -new_severity {INFO} 
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMODT' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 
 set_msg_config  -id {Synth 8-7071}  -string {{WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMPARITY' of module 'PS8' is unconnected for instance 'PS8_i' [c:/sd_fec_5g_compl.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_1/hdl/zynq_ultra_ps_e_v3_3_5.v:3882]}}  -suppress 
@@ -310,14 +311,14 @@ read_vhdl -library xil_defaultlib {
   /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd
   /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd
 }
+read_ip -quiet /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1.xci
+set_property used_in_implementation false [get_files -all /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1_ooc.xdc]
+
 read_ip -quiet /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0.xci
 set_property used_in_implementation false [get_files -all /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0_ooc.xdc]
 
 read_ip -quiet /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/ip/sd_fec_0/sd_fec_0.xci
 set_property used_in_implementation false [get_files -all /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0_ooc.xdc]
-
-read_ip -quiet /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1.xci
-set_property used_in_implementation false [get_files -all /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -331,8 +332,6 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/constrs_1/new/Encoder_constraints.xdc
 set_property used_in_implementation false [get_files /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/constrs_1/new/Encoder_constraints.xdc]
 
-read_xdc dont_touch.xdc
-set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/utils_1/imports/synth_2/LDPC_encoder.dcp

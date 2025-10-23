@@ -41,4 +41,6 @@ Time: 1 ps  Iteration: 0  Process: /LDPC_encoder_tb/uut/\Output_FIFO_inst(3)\/ou
 0010001000000111000111000100011 
 1001111110000001111000000111100 
 0011111111110000000000111110000 
-INFO: xsimkernel Simulation Memory Usage: 366564 KB (Peak: 366564 KB), Simulation CPU Usage: 30150 ms
+Note: End of simulation
+Time: 10372500 ps  Iteration: 1  Process: /LDPC_encoder_tb/stimuli_generation  File: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sim_1/new/LDPC_encoder_tb.vhd
+INFO: xsimkernel Simulation Memory Usage: 300856 KB (Peak: 366392 KB), Simulation CPU Usage: 14050 ms

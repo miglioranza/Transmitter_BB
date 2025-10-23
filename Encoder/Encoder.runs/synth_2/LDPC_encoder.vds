@@ -2,15 +2,16 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Tue Sep  9 13:59:57 2025
-# Process ID: 1244029
+# Start of session at: Thu Oct 23 15:19:55 2025
+# Process ID: 939808
 # Current directory: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2
 # Command line: vivado -log LDPC_encoder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source LDPC_encoder.tcl
 # Log file: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/LDPC_encoder.vds
 # Journal file: /ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/vivado.jou
-# Running On: uxsrv034.ihp-ffo.de, OS: Linux, CPU Frequency: 3200.000 MHz, CPU Physical cores: 32, Host memory: 270349 MB
+# Running On: uxsrv005, OS: Linux, CPU Frequency: 3457.889 MHz, CPU Physical cores: 8, Host memory: 101335 MB
 #-----------------------------------------------------------
 source LDPC_encoder.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3069.707 ; gain = 2.016 ; free physical = 18222 ; free virtual = 104803
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/ihpusr/xilinx/vivado2021.2/Vivado/2021.2/data/ip'.
@@ -19,9 +20,6 @@ INFO: [Vivado 12-5825] Read reference checkpoint from /ihp/departments/D-SYA/wor
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top LDPC_encoder -part xczu28dr-ffvg1517-2-e -directive AreaOptimized_medium -control_set_opt_threshold 1
 Starting synth_design
-INFO: [IP_Flow 19-2162] IP 'sd_fec_0' is locked:
-* IP 'sd_fec_0' requires one or more mandatory licenses but no valid licenses were found. However license checkpoints may prevent use of this IP in some tool flows.
-WARNING: [IP_Flow 19-5178] IP sd_fec_0 will not be generated with lower license level. If you would like to generate with the current available license levels, please reset and regenerate.
 Attempting to get a license for feature 'Synthesis' and/or device 'xczu28dr'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu28dr'
 INFO: [Device 21-403] Loading part xczu28dr-ffvg1517-2-e
@@ -29,25 +27,21 @@ WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis b
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1250724
+INFO: [Synth 8-7075] Helper process launched with PID 943962
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 3478.199 ; gain = 229.688 ; free physical = 172964 ; free virtual = 246601
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3477.199 ; gain = 229.688 ; free physical = 16995 ; free virtual = 103576
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'LDPC_encoder' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:67]
 INFO: [Synth 8-3491] module 'Input_controller' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:34' bound to instance 'Input_controller_inst' of component 'Input_controller' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:237]
 INFO: [Synth 8-638] synthesizing module 'Input_controller' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:63]
-INFO: [Synth 8-226] default block is never used [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:96]
-INFO: [Synth 8-226] default block is never used [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:268]
-INFO: [Synth 8-226] default block is never used [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:437]
-INFO: [Synth 8-226] default block is never used [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:588]
 WARNING: [Synth 8-6014] Unused sequential element buffer_data0_reg[3] was removed.  [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:101]
 WARNING: [Synth 8-6014] Unused sequential element buffer_data0_reg[2] was removed.  [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:101]
-WARNING: [Synth 8-6014] Unused sequential element buffer_data1_reg[3] was removed.  [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:272]
-WARNING: [Synth 8-6014] Unused sequential element buffer_data1_reg[2] was removed.  [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:272]
-WARNING: [Synth 8-6014] Unused sequential element buffer_data2_reg[3] was removed.  [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:441]
-WARNING: [Synth 8-6014] Unused sequential element buffer_data2_reg[2] was removed.  [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:441]
-WARNING: [Synth 8-6014] Unused sequential element buffer_data3_reg[3] was removed.  [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:592]
-WARNING: [Synth 8-6014] Unused sequential element buffer_data3_reg[2] was removed.  [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:592]
+WARNING: [Synth 8-6014] Unused sequential element buffer_data1_reg[3] was removed.  [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:287]
+WARNING: [Synth 8-6014] Unused sequential element buffer_data1_reg[2] was removed.  [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:287]
+WARNING: [Synth 8-6014] Unused sequential element buffer_data2_reg[3] was removed.  [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:471]
+WARNING: [Synth 8-6014] Unused sequential element buffer_data2_reg[2] was removed.  [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:471]
+WARNING: [Synth 8-6014] Unused sequential element buffer_data3_reg[3] was removed.  [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:637]
+WARNING: [Synth 8-6014] Unused sequential element buffer_data3_reg[2] was removed.  [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:637]
 WARNING: [Synth 8-6426] Mix of Sync and Async assignments to register 'dout_ready_reg' in module 'Input_controller' in the same process may cause logic issues. 
  Please split the sync and async parts into different processes [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:86]
 WARNING: [Synth 8-6426] Mix of Sync and Async assignments to register 'dout_valid_reg' in module 'Input_controller' in the same process may cause logic issues. 
@@ -55,63 +49,70 @@ WARNING: [Synth 8-6426] Mix of Sync and Async assignments to register 'dout_vali
 WARNING: [Synth 8-6426] Mix of Sync and Async assignments to register 'dout_last_reg' in module 'Input_controller' in the same process may cause logic issues. 
  Please split the sync and async parts into different processes [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:85]
 WARNING: [Synth 8-6426] Mix of Sync and Async assignments to register 'dout_ready_reg' in module 'Input_controller' in the same process may cause logic issues. 
- Please split the sync and async parts into different processes [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:259]
+ Please split the sync and async parts into different processes [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:274]
 WARNING: [Synth 8-6426] Mix of Sync and Async assignments to register 'dout_valid_reg' in module 'Input_controller' in the same process may cause logic issues. 
- Please split the sync and async parts into different processes [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:257]
+ Please split the sync and async parts into different processes [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:272]
 WARNING: [Synth 8-6426] Mix of Sync and Async assignments to register 'dout_last_reg' in module 'Input_controller' in the same process may cause logic issues. 
- Please split the sync and async parts into different processes [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:258]
+ Please split the sync and async parts into different processes [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:273]
 WARNING: [Synth 8-6426] Mix of Sync and Async assignments to register 'dout_ready_reg' in module 'Input_controller' in the same process may cause logic issues. 
- Please split the sync and async parts into different processes [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:428]
+ Please split the sync and async parts into different processes [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:458]
 WARNING: [Synth 8-6426] Mix of Sync and Async assignments to register 'dout_valid_reg' in module 'Input_controller' in the same process may cause logic issues. 
- Please split the sync and async parts into different processes [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:426]
+ Please split the sync and async parts into different processes [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:456]
 WARNING: [Synth 8-6426] Mix of Sync and Async assignments to register 'dout_last_reg' in module 'Input_controller' in the same process may cause logic issues. 
- Please split the sync and async parts into different processes [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:427]
+ Please split the sync and async parts into different processes [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:457]
 WARNING: [Synth 8-6426] Mix of Sync and Async assignments to register 'dout_ready_reg' in module 'Input_controller' in the same process may cause logic issues. 
- Please split the sync and async parts into different processes [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:578]
+ Please split the sync and async parts into different processes [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:623]
 WARNING: [Synth 8-6426] Mix of Sync and Async assignments to register 'dout_valid_reg' in module 'Input_controller' in the same process may cause logic issues. 
- Please split the sync and async parts into different processes [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:576]
+ Please split the sync and async parts into different processes [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:621]
 WARNING: [Synth 8-6426] Mix of Sync and Async assignments to register 'dout_last_reg' in module 'Input_controller' in the same process may cause logic issues. 
- Please split the sync and async parts into different processes [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:577]
+ Please split the sync and async parts into different processes [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:622]
 INFO: [Synth 8-256] done synthesizing module 'Input_controller' (1#1) [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:63]
-INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-1244029-uxsrv034.ihp-ffo.de/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'LDPC_core0' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:260]
-INFO: [Synth 8-638] synthesizing module 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-1244029-uxsrv034.ihp-ffo.de/realtime/sd_fec_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-1244029-uxsrv034.ihp-ffo.de/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'LDPC_core1' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:285]
-INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-1244029-uxsrv034.ihp-ffo.de/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'LDPC_core2' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:310]
-INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-1244029-uxsrv034.ihp-ffo.de/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'LDPC_core3' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:335]
-INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-1244029-uxsrv034.ihp-ffo.de/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo_0' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:360]
-INFO: [Synth 8-638] synthesizing module 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-1244029-uxsrv034.ihp-ffo.de/realtime/axis_data_fifo_0_stub.vhdl:23]
-INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-1244029-uxsrv034.ihp-ffo.de/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo_1' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:377]
-INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-1244029-uxsrv034.ihp-ffo.de/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo_2' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:394]
-INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-1244029-uxsrv034.ihp-ffo.de/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo_3' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:411]
-INFO: [Synth 8-3491] module 'axis_data_fifo_1' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-1244029-uxsrv034.ihp-ffo.de/realtime/axis_data_fifo_1_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:431]
-INFO: [Synth 8-638] synthesizing module 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-1244029-uxsrv034.ihp-ffo.de/realtime/axis_data_fifo_1_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'axis_data_fifo_1' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-1244029-uxsrv034.ihp-ffo.de/realtime/axis_data_fifo_1_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:431]
-INFO: [Synth 8-3491] module 'axis_data_fifo_1' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-1244029-uxsrv034.ihp-ffo.de/realtime/axis_data_fifo_1_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:431]
-INFO: [Synth 8-3491] module 'axis_data_fifo_1' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-1244029-uxsrv034.ihp-ffo.de/realtime/axis_data_fifo_1_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:431]
+INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-939808-uxsrv005/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'LDPC_core0' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:260]
+INFO: [Synth 8-638] synthesizing module 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-939808-uxsrv005/realtime/sd_fec_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-939808-uxsrv005/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'LDPC_core1' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:285]
+INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-939808-uxsrv005/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'LDPC_core2' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:310]
+INFO: [Synth 8-3491] module 'sd_fec_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-939808-uxsrv005/realtime/sd_fec_0_stub.vhdl:5' bound to instance 'LDPC_core3' of component 'sd_fec_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:335]
+INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-939808-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo_0' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:360]
+INFO: [Synth 8-638] synthesizing module 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-939808-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-939808-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo_1' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:377]
+INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-939808-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo_2' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:394]
+INFO: [Synth 8-3491] module 'axis_data_fifo_0' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-939808-uxsrv005/realtime/axis_data_fifo_0_stub.vhdl:5' bound to instance 'input_fifo_3' of component 'axis_data_fifo_0' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:411]
+INFO: [Synth 8-3491] module 'axis_data_fifo_1' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-939808-uxsrv005/realtime/axis_data_fifo_1_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:431]
+INFO: [Synth 8-638] synthesizing module 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-939808-uxsrv005/realtime/axis_data_fifo_1_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'axis_data_fifo_1' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-939808-uxsrv005/realtime/axis_data_fifo_1_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:431]
+INFO: [Synth 8-3491] module 'axis_data_fifo_1' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-939808-uxsrv005/realtime/axis_data_fifo_1_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:431]
+INFO: [Synth 8-3491] module 'axis_data_fifo_1' declared at '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/.Xil/Vivado-939808-uxsrv005/realtime/axis_data_fifo_1_stub.vhdl:5' bound to instance 'output_fifo' of component 'axis_data_fifo_1' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:431]
 INFO: [Synth 8-226] default block is never used [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:451]
 INFO: [Synth 8-226] default block is never used [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:472]
 WARNING: [Synth 8-614] signal 'sel_code_rate' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:469]
+WARNING: [Synth 8-614] signal 'out_fifo_last_out' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:469]
 WARNING: [Synth 8-614] signal 'end_of_frame' is read in the process but is not in the sensitivity list [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:469]
-WARNING: [Synth 8-3848] Net data_out_last in module/entity LDPC_encoder does not have driver. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:60]
 INFO: [Synth 8-256] done synthesizing module 'LDPC_encoder' (2#1) [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/LDPC_encoder.vhd:67]
-WARNING: [Synth 8-7129] Port data_out_last in module LDPC_encoder is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 3529.105 ; gain = 280.594 ; free physical = 173926 ; free virtual = 247570
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3530.137 ; gain = 282.625 ; free physical = 16031 ; free virtual = 102613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 3546.918 ; gain = 298.406 ; free physical = 173917 ; free virtual = 247562
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3547.949 ; gain = 300.438 ; free physical = 16973 ; free virtual = 103556
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 3546.918 ; gain = 298.406 ; free physical = 173917 ; free virtual = 247562
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3547.949 ; gain = 300.438 ; free physical = 16973 ; free virtual = 103556
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3546.918 ; gain = 0.000 ; free physical = 173908 ; free virtual = 247554
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3547.949 ; gain = 0.000 ; free physical = 16964 ; free virtual = 103547
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[0].output_fifo'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[0].output_fifo'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[1].output_fifo'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[1].output_fifo'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[2].output_fifo'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[2].output_fifo'
+Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[3].output_fifo'
+Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[3].output_fifo'
 Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'input_fifo_0'
 Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'input_fifo_0'
 Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_0/axis_data_fifo_0/axis_data_fifo_0_in_context.xdc] for cell 'input_fifo_1'
@@ -128,32 +129,16 @@ Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/so
 Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'LDPC_core2'
 Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'LDPC_core3'
 Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/sd_fec_0/sd_fec_0/sd_fec_0_in_context.xdc] for cell 'LDPC_core3'
-Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[0].output_fifo'
-Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[0].output_fifo'
-Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[1].output_fifo'
-Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[1].output_fifo'
-Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[2].output_fifo'
-Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[2].output_fifo'
-Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[3].output_fifo'
-Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.gen/sources_1/ip/axis_data_fifo_1/axis_data_fifo_1/axis_data_fifo_1_in_context.xdc] for cell 'Output_FIFO_inst[3].output_fifo'
 Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/constrs_1/new/Encoder_constraints.xdc]
-create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3742.574 ; gain = 23.812 ; free physical = 173755 ; free virtual = 247414
-WARNING: [Vivado 12-584] No ports matched 'data_out0[*]'. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/constrs_1/new/Encoder_constraints.xdc:3]
-WARNING: [Vivado 12-584] No ports matched 'data_out1[*]'. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/constrs_1/new/Encoder_constraints.xdc:4]
-WARNING: [Vivado 12-584] No ports matched 'data_out2[*]'. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/constrs_1/new/Encoder_constraints.xdc:5]
-WARNING: [Vivado 12-584] No ports matched 'data_out3[*]'. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/constrs_1/new/Encoder_constraints.xdc:6]
-WARNING: [Vivado 12-584] No ports matched 'data_out_valid[*]'. [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/constrs_1/new/Encoder_constraints.xdc:7]
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3744.605 ; gain = 23.812 ; free physical = 16852 ; free virtual = 103435
 Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/constrs_1/new/Encoder_constraints.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/constrs_1/new/Encoder_constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/LDPC_encoder_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/dont_touch.xdc]
-Finished Parsing XDC File [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3742.574 ; gain = 0.000 ; free physical = 173752 ; free virtual = 247412
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3744.605 ; gain = 0.000 ; free physical = 16852 ; free virtual = 103435
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3742.574 ; gain = 0.000 ; free physical = 173752 ; free virtual = 247412
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3744.605 ; gain = 0.000 ; free physical = 16852 ; free virtual = 103434
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'Output_FIFO_inst[0].output_fifo' at clock pin 's_axis_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'Output_FIFO_inst[1].output_fifo' at clock pin 's_axis_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'Output_FIFO_inst[2].output_fifo' at clock pin 's_axis_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
@@ -165,7 +150,7 @@ WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context s
 WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:27 . Memory (MB): peak = 3742.574 ; gain = 494.062 ; free physical = 173878 ; free virtual = 247539
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 3744.605 ; gain = 497.094 ; free physical = 16947 ; free virtual = 103530
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -173,11 +158,15 @@ Start Loading Part and Timing Information
 Loading part: xczu28dr-ffvg1517-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:27 . Memory (MB): peak = 3742.574 ; gain = 494.062 ; free physical = 173880 ; free virtual = 247540
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 3744.605 ; gain = 497.094 ; free physical = 16947 ; free virtual = 103530
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[0].output_fifo . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[1].output_fifo . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[2].output_fifo . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[3].output_fifo . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for input_fifo_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for input_fifo_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for input_fifo_2. (constraint file  auto generated constraint).
@@ -186,12 +175,8 @@ Applied set_property KEEP_HIERARCHY = SOFT for LDPC_core0. (constraint file  aut
 Applied set_property KEEP_HIERARCHY = SOFT for LDPC_core1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for LDPC_core2. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for LDPC_core3. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[0].output_fifo . (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[1].output_fifo . (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[2].output_fifo . (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for \Output_FIFO_inst[3].output_fifo . (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:27 . Memory (MB): peak = 3742.574 ; gain = 494.062 ; free physical = 173878 ; free virtual = 247539
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 3744.605 ; gain = 497.094 ; free physical = 16947 ; free virtual = 103529
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state0_reg' in module 'Input_controller'
 INFO: [Synth 8-802] inferred FSM for state register 'state1_reg' in module 'Input_controller'
@@ -200,41 +185,45 @@ INFO: [Synth 8-802] inferred FSM for state register 'state3_reg' in module 'Inpu
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                    idle |                               00 |                               00
-                encoding |                               01 |                               01
-                 padding |                               10 |                               11
-               buffering |                               11 |                               10
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state0_reg' using encoding 'sequential' in module 'Input_controller'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                    idle |                               00 |                               00
-                encoding |                               01 |                               01
-                 padding |                               10 |                               11
-               buffering |                               11 |                               10
+                    idle |                              000 |                              000
+   signal_field_encoding |                              001 |                              001
+                encoding |                              010 |                              010
+                 padding |                              011 |                              100
+               buffering |                              100 |                              011
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state1_reg' using encoding 'sequential' in module 'Input_controller'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                    idle |                               00 |                               00
-                encoding |                               01 |                               01
-                 padding |                               10 |                               11
-               buffering |                               11 |                               10
+                    idle |                              000 |                              000
+   signal_field_encoding |                              001 |                              001
+                encoding |                              010 |                              010
+                 padding |                              011 |                              100
+               buffering |                              100 |                              011
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state2_reg' using encoding 'sequential' in module 'Input_controller'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                    idle |                               00 |                               00
-                encoding |                               01 |                               01
-                 padding |                               10 |                               11
-               buffering |                               11 |                               10
+                    idle |                              000 |                              000
+   signal_field_encoding |                              001 |                              001
+                encoding |                              010 |                              010
+                 padding |                              011 |                              100
+               buffering |                              100 |                              011
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state3_reg' using encoding 'sequential' in module 'Input_controller'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+   signal_field_encoding |                              001 |                              001
+                encoding |                              010 |                              010
+                 padding |                              011 |                              100
+               buffering |                              100 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state0_reg' using encoding 'sequential' in module 'Input_controller'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:31 . Memory (MB): peak = 3742.574 ; gain = 494.062 ; free physical = 173860 ; free virtual = 247525
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 3744.605 ; gain = 497.094 ; free physical = 16935 ; free virtual = 103518
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -245,27 +234,29 @@ Detailed RTL Component Info :
 	   2 Input    5 Bit       Adders := 1     
 	   2 Input    2 Bit       Adders := 4     
 +---Registers : 
-	              128 Bit    Registers := 4     
+	              128 Bit    Registers := 3     
 	               32 Bit    Registers := 8     
 	                6 Bit    Registers := 3     
 	                5 Bit    Registers := 1     
 	                2 Bit    Registers := 4     
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 28    
+	   2 Input   32 Bit        Muxes := 36    
+	   5 Input   32 Bit        Muxes := 12    
 	   6 Input   32 Bit        Muxes := 1     
-	   4 Input   32 Bit        Muxes := 17    
-	   2 Input    6 Bit        Muxes := 18    
-	   4 Input    6 Bit        Muxes := 3     
-	   2 Input    5 Bit        Muxes := 4     
-	   4 Input    5 Bit        Muxes := 1     
+	   4 Input   32 Bit        Muxes := 5     
+	   2 Input    6 Bit        Muxes := 21    
+	   5 Input    6 Bit        Muxes := 3     
+	   2 Input    5 Bit        Muxes := 5     
+	   5 Input    5 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 9     
-	   4 Input    4 Bit        Muxes := 5     
+	   5 Input    4 Bit        Muxes := 8     
+	   4 Input    4 Bit        Muxes := 1     
+	  16 Input    3 Bit        Muxes := 4     
 	   2 Input    2 Bit        Muxes := 4     
-	   4 Input    2 Bit        Muxes := 4     
-	  14 Input    2 Bit        Muxes := 4     
-	   2 Input    1 Bit        Muxes := 43    
-	   5 Input    1 Bit        Muxes := 4     
-	   4 Input    1 Bit        Muxes := 22    
+	   5 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 51    
+	   5 Input    1 Bit        Muxes := 29    
+	   4 Input    1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -282,28 +273,224 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7129] Port data_out_last in module LDPC_encoder is either unconnected or has no load
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[127]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[126]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[125]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[124]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[123]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[122]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[121]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[120]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[119]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[118]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[117]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[116]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[115]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[114]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[113]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[112]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[111]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[110]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[109]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[108]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[107]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[106]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[105]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[104]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[103]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[102]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[101]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[100]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[99]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[98]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[97]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[96]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[95]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[94]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[93]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[92]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[91]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[90]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[89]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[88]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[87]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[86]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[85]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[84]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[83]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[82]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[81]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[80]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[79]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Input_controller_inst/dout_data0_reg[78]/Q' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:83]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:43 . Memory (MB): peak = 3742.574 ; gain = 494.062 ; free physical = 173836 ; free virtual = 247511
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 3744.605 ; gain = 497.094 ; free physical = 16906 ; free virtual = 103495
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:55 . Memory (MB): peak = 3972.344 ; gain = 723.832 ; free physical = 173327 ; free virtual = 247030
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:50 . Memory (MB): peak = 3973.438 ; gain = 725.926 ; free physical = 16447 ; free virtual = 103036
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:57 . Memory (MB): peak = 4027.383 ; gain = 778.871 ; free physical = 173305 ; free virtual = 247008
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:53 . Memory (MB): peak = 4027.477 ; gain = 779.965 ; free physical = 16418 ; free virtual = 103007
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4765] Removing register instance (\Input_controller_inst/reset_cores_reg ) from module (LDPC_encoder) as it is equivalent to (\Input_controller_inst/reset_cores_reg__0 ) and driving same net [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:574]
+INFO: [Synth 8-4765] Removing register instance (\Input_controller_inst/reset_cores_reg ) from module (LDPC_encoder) as it is equivalent to (\Input_controller_inst/reset_cores_reg__0 ) and driving same net [/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sources_1/new/Input_controller.vhd:619]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:57 . Memory (MB): peak = 4035.391 ; gain = 786.879 ; free physical = 173304 ; free virtual = 247006
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:53 . Memory (MB): peak = 4043.492 ; gain = 795.980 ; free physical = 16419 ; free virtual = 103008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -321,37 +508,44 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:59 . Memory (MB): peak = 4035.391 ; gain = 786.879 ; free physical = 173304 ; free virtual = 247006
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 4043.492 ; gain = 795.980 ; free physical = 16419 ; free virtual = 103008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:59 . Memory (MB): peak = 4035.391 ; gain = 786.879 ; free physical = 173304 ; free virtual = 247006
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 4043.492 ; gain = 795.980 ; free physical = 16419 ; free virtual = 103008
 ---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|       32|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:59 . Memory (MB): peak = 4035.391 ; gain = 786.879 ; free physical = 173304 ; free virtual = 247006
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 4043.492 ; gain = 795.980 ; free physical = 16416 ; free virtual = 103005
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:59 . Memory (MB): peak = 4035.391 ; gain = 786.879 ; free physical = 173304 ; free virtual = 247006
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 4043.492 ; gain = 795.980 ; free physical = 16416 ; free virtual = 103005
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:59 . Memory (MB): peak = 4035.391 ; gain = 786.879 ; free physical = 173304 ; free virtual = 247006
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 4043.492 ; gain = 795.980 ; free physical = 16414 ; free virtual = 103003
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:59 . Memory (MB): peak = 4035.391 ; gain = 786.879 ; free physical = 173304 ; free virtual = 247006
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 4043.492 ; gain = 795.980 ; free physical = 16415 ; free virtual = 103004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -374,41 +568,40 @@ Report Cell Usage:
 |5     |axis_data_fifo_1_bbox |     4|
 |9     |sd_fec_0_bbox         |     4|
 |13    |BUFG                  |     1|
-|14    |LUT1                  |     1|
-|15    |LUT2                  |    14|
-|16    |LUT3                  |   150|
-|17    |LUT4                  |    63|
-|18    |LUT5                  |   121|
-|19    |LUT6                  |   198|
-|20    |FDCE                  |   164|
-|21    |FDRE                  |   272|
-|22    |IBUF                  |    42|
-|23    |OBUF                  |    36|
-|24    |OBUFT                 |     1|
+|14    |LUT2                  |    20|
+|15    |LUT3                  |   155|
+|16    |LUT4                  |    86|
+|17    |LUT5                  |    91|
+|18    |LUT6                  |   237|
+|19    |FDCE                  |   164|
+|20    |FDRE                  |   304|
+|21    |IBUF                  |    41|
+|22    |OBUF                  |    37|
 +------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:59 . Memory (MB): peak = 4035.391 ; gain = 786.879 ; free physical = 173304 ; free virtual = 247006
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 4043.492 ; gain = 795.980 ; free physical = 16414 ; free virtual = 103003
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:49 . Memory (MB): peak = 4035.391 ; gain = 591.223 ; free physical = 173343 ; free virtual = 247045
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:59 . Memory (MB): peak = 4035.398 ; gain = 786.879 ; free physical = 173344 ; free virtual = 247047
+Synthesis finished with 0 errors, 352 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:48 . Memory (MB): peak = 4043.492 ; gain = 599.324 ; free physical = 16454 ; free virtual = 103043
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 4043.500 ; gain = 795.980 ; free physical = 16454 ; free virtual = 103043
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4043.391 ; gain = 0.000 ; free physical = 173439 ; free virtual = 247144
-INFO: [Netlist 29-17] Analyzing 43 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4043.500 ; gain = 0.000 ; free physical = 16553 ; free virtual = 103142
+INFO: [Netlist 29-17] Analyzing 42 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4113.254 ; gain = 0.000 ; free physical = 173360 ; free virtual = 247065
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4120.262 ; gain = 0.000 ; free physical = 16475 ; free virtual = 103064
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 43 instances were transformed.
+  A total of 42 instances were transformed.
   BUFG => BUFGCE: 1 instance 
-  IBUF => IBUF (IBUFCTRL, INBUF): 42 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 41 instances
 
-Synth Design complete, checksum: 2b65e2de
+Synth Design complete, checksum: 5e060ce0
 INFO: [Common 17-83] Releasing license: Synthesis
-58 Infos, 43 Warnings, 0 Critical Warnings and 0 Errors encountered.
+54 Infos, 34 Warnings, 196 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:01:45 . Memory (MB): peak = 4113.254 ; gain = 1013.340 ; free physical = 173512 ; free virtual = 247217
+synth_design: Time (s): cpu = 00:01:02 ; elapsed = 00:01:40 . Memory (MB): peak = 4120.262 ; gain = 1024.406 ; free physical = 16628 ; free virtual = 103217
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint '/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.runs/synth_2/LDPC_encoder.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file LDPC_encoder_utilization_synth.rpt -pb LDPC_encoder_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Sep  9 14:03:26 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 23 15:21:59 2025...

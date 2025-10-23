@@ -63,7 +63,7 @@ end Input_controller;
 architecture Behavioral of Input_controller is
 --LDPC cores signals 
 
-type fsm_input is (idle, encoding ,buffering ,padding) ;
+type fsm_input is (idle, signal_field_encoding, encoding ,buffering ,padding) ;
 signal state0,state1,state2,state3 : fsm_input := idle ;
 signal cw_counter0    : integer range  0 to 55 := 0 ;
 signal cw_counter1    : integer range  0 to 50 := 0 ;
@@ -100,10 +100,11 @@ case state0 is
         dout_last(0) <= '0';
         buffer_data0    <=(others =>  (others => '0')) ;
        if din_valid(0) = '1' and din_ready(0) = '1' then 
-          state0              <= encoding ;
-          dout_data0 <= x"000000000000000000000000" & din_data_core0  ;
-          dout_valid(0)  <= '1';
-          cw_counter0      <= cw_counter0 + 1 ;
+--          state0              <= encoding ;
+          state0              <= signal_field_encoding ;
+--          dout_data0 <= x"000000000000000000000000" & din_data_core0  ;
+--          dout_valid(0)  <= '1';
+--          cw_counter0      <= cw_counter0 + 1 ;
 
        else  
           state0 <= idle ;
@@ -111,7 +112,21 @@ case state0 is
           cw_counter0 <= 0 ;
           dout_data0 <= (others => '0')  ; 
        end if ;
- when  encoding => 
+    when signal_field_encoding => 
+        dout_valid(0) <= '1'; 
+         if cw_counter0 < 8 then 
+            dout_data0 <= x"000000000000000000000000" & din_data_core0  ;
+            cw_counter0 <= cw_counter0  + 1; 
+         elsif cw_counter0 >= 8 and cw_counter0 <= 51 then
+            dout_data0 <=  x"0000000000000000000000005A5A5A5A" ;
+            cw_counter0 <= cw_counter0  + 1;
+            dout_ready(0) <= '0';
+         else 
+            cw_counter0 <= 0 ;
+            dout_valid(0) <= '0'; 
+            state0 <= encoding;
+         end if ;
+    when  encoding => 
        counter := 0  ;
              if din_valid(0) = '1' and din_ready(0) = '1' and din_last(0)= '0' then 
                    state0 <= encoding  ;
@@ -271,10 +286,11 @@ case state1 is
         dout_last(1) <= '0';
         buffer_data1    <= (others => (others => '0')) ;
        if din_valid(1) = '1' and din_ready(1) = '1' then 
-          state1              <= encoding ;
-          dout_data1 <= x"000000000000000000000000" & din_data_core1  ;
-          dout_valid(1)  <= '1';
-          cw_counter1      <= cw_counter1 + 1 ;
+--          state1              <= encoding ;
+          state1              <= signal_field_encoding  ;
+--          dout_data1 <= x"000000000000000000000000" & din_data_core1  ;
+--          dout_valid(1)  <= '1';
+--          cw_counter1      <= cw_counter1 + 1 ;
             
        else  
           state1 <= idle ;
@@ -282,7 +298,21 @@ case state1 is
           cw_counter1 <= 0 ;
           dout_data1 <= (others => '0')  ; 
        end if ;
- when  encoding => 
+      when signal_field_encoding => 
+        dout_valid(1) <= '1'; 
+     if cw_counter1 < 8 then 
+        dout_data1 <= x"000000000000000000000000" & din_data_core1  ;
+        cw_counter1 <= cw_counter1  + 1; 
+     elsif cw_counter1 >= 8 and cw_counter1 <= 45 then
+        dout_data1 <=  x"0000000000000000000000005A5A5A5A" ;
+        cw_counter1 <= cw_counter1  + 1;
+        dout_ready(1) <= '0';
+     else 
+        cw_counter1 <= 0 ;
+        dout_valid(1) <= '0'; 
+        state1 <= encoding;
+     end if ;
+    when  encoding => 
  counter := 0 ;
  
              if din_valid(1) = '1' and din_ready(1) = '1' and din_last(1)= '0' then 
@@ -440,10 +470,11 @@ case state2 is
         dout_last(2) <= '0';
         buffer_data2    <= (others => (others => '0')) ;
        if din_valid(2) = '1' and din_ready(2) = '1' then 
-          state2              <= encoding ;
-          dout_data2 <= x"000000000000000000000000" & din_data_core2  ;
-          dout_valid(2)  <= '1';
-          cw_counter2      <= cw_counter2 + 1 ;
+--          state2              <= encoding ;
+          state2              <= signal_field_encoding ;
+--          dout_data2 <= x"000000000000000000000000" & din_data_core2  ;
+--          dout_valid(2)  <= '1';
+--          cw_counter2      <= cw_counter2 + 1 ;
             
        else  
           state2 <= idle ;
@@ -451,9 +482,23 @@ case state2 is
           cw_counter2 <= 0 ;
           dout_data2 <= (others => '0')  ; 
        end if ;
- when  encoding => 
- counter := 0 ;
- 
+      when signal_field_encoding => 
+    dout_valid(2) <= '1'; 
+     if cw_counter2 < 8 then 
+        dout_data2 <= x"000000000000000000000000" & din_data_core2  ;
+        cw_counter2 <= cw_counter2  + 1; 
+     elsif cw_counter2 >= 8 and cw_counter2 <= 26 then
+        dout_data2 <=  x"0000000000000000000000005A5A5A5A" ;
+        cw_counter2 <= cw_counter2  + 1;
+        dout_ready(2) <= '0';
+     else 
+        cw_counter2 <= 0 ;
+        dout_valid(2) <= '0'; 
+        state2 <= encoding;
+     end if ;
+     when  encoding => 
+     counter := 0 ;
+     
              if din_valid(2) = '1' and din_ready(2) = '1' and din_last(2)= '0' then 
                    state2 <= encoding  ;
                    dout_data2 <= x"000000000000000000000000" & din_data_core2  ;
@@ -591,10 +636,11 @@ case state3 is
         dout_last(3) <= '0';
         buffer_data3    <= (others => (others => '0')) ;
        if din_valid(3) = '1' and din_ready(3) = '1' then 
-          state3              <= encoding ;
-          dout_data3 <= x"000000000000000000000000" & din_data_core3  ;
-          dout_valid(3)  <= '1';
-          cw_counter3      <= cw_counter3 + 1 ;
+--          state3              <= encoding ;
+          state3              <= signal_field_encoding ;
+--          dout_data3 <= x"000000000000000000000000" & din_data_core3  ;
+--          dout_valid(3)  <= '1';
+--          cw_counter3      <= cw_counter3 + 1 ;
             
        else  
           state3 <= idle ;
@@ -602,8 +648,22 @@ case state3 is
           cw_counter3 <= 0 ;
           dout_data3 <= (others => '0')  ; 
        end if ;
- when  encoding => 
- counter := 0 ;
+        when signal_field_encoding => 
+        dout_valid(3) <= '1'; 
+         if cw_counter3 < 8 then 
+            dout_data0 <= x"000000000000000000000000" & din_data_core3  ;
+            cw_counter3 <= cw_counter3  + 1; 
+         elsif cw_counter3 >= 8 and cw_counter3 <= 20 then
+            dout_data3 <=  x"0000000000000000000000005A5A5A5A" ;
+            cw_counter3 <= cw_counter3  + 1;
+            dout_ready(3) <= '0';
+         else 
+            cw_counter3 <= 0 ;
+            dout_valid(3) <= '0'; 
+            state3 <= encoding;
+         end if ;
+     when  encoding => 
+     counter := 0 ;
  
              if din_valid(3) = '1' and din_ready(3) = '1' and din_last(3)= '0' then 
                    state3 <= encoding  ;
