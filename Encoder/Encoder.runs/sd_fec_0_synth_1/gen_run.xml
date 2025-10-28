@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="sd_fec_0_synth_1" LaunchPart="xczu28dr-ffvg1517-2-e" LaunchTime="1761211901">
-  <File Type="VDS-TIMING-PB" Name="sd_fec_0_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="sd_fec_0_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="sd_fec_0.dcp"/>
   <File Type="REPORTS-TCL" Name="sd_fec_0_reports.tcl"/>
   <File Type="PA-TCL" Name="sd_fec_0.tcl"/>
+  <File Type="RDS-DCP" Name="sd_fec_0.dcp"/>
   <File Type="RDS-RDS" Name="sd_fec_0.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="sd_fec_0_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="sd_fec_0_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="sd_fec_0_utilization_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/sd_fec_0">
     <File Path="$PSRCDIR/sources_1/ip/sd_fec_0/sd_fec_0.xci">
       <FileInfo>
@@ -50,9 +45,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

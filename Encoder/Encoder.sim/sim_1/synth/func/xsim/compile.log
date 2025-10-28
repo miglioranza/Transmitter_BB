@@ -64,3 +64,5 @@ INFO: [VRFC 10-3107] analyzing entity 'sd_fec_0_sd_fec_v1_1_8_non_5g'
 INFO: [VRFC 10-3107] analyzing entity 'sd_fec_0_sd_fec_v1_1_8'
 INFO: [VRFC 10-3107] analyzing entity 'sd_fec_0'
 INFO: [VRFC 10-3107] analyzing entity 'LDPC_encoder'
+INFO: [VRFC 10-163] Analyzing VHDL file "/ihp/departments/D-SYA/work/miglioranza/Encoder/Encoder.srcs/sim_1/new/LDPC_encoder_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'LDPC_encoder_tb'

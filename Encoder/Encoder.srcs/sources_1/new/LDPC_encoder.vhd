@@ -44,7 +44,6 @@ entity LDPC_encoder is
   ldpc_core_clk  : in  std_logic ;
   data_in        : in  std_logic_vector(DATA_WIDTH-1 downto 0) ;
   data_in_valid  : in  std_logic ;
---  data_in_last   : in  std_logic ;
   data_in_ready  : in  std_logic ;
   sel_code_rate  : in  std_logic_vector(1 downto 0); 
   end_of_frame   : in  std_logic;
@@ -52,7 +51,6 @@ entity LDPC_encoder is
 --  data_out_3_4      : out std_logic_vector(DATA_WIDTH-1 downto 0);
 --  data_out_2_3      : out std_logic_vector(DATA_WIDTH-1 downto 0);
   data_out      : out std_logic_vector(DATA_WIDTH-1 downto 0);
---  data_out_ready : out std_logic ;
   data_out_valid : out std_logic ;
 --  data_out_valid_2_3 : out std_logic ;
 --  data_out_valid_3_4 : out std_logic ;
@@ -121,7 +119,6 @@ port (
   dout_data3        : out std_logic_vector(CORE_DATA_WIDTH-1 downto 0); 
   dout_last         : out std_logic_vector(N-1 downto 0);  
   reset_cores       : out std_logic       
---  last_frame        : out std_logic 
         
 );
 end component ;
@@ -150,29 +147,6 @@ m_axis_dout_tlast       : OUT STD_LOGIC;
 m_axis_dout_tdata       : OUT STD_LOGIC_VECTOR(127 DOWNTO 0)
   );
 END COMPONENT;
---component Cores_controller
---  Port ( 
-  
---  clk               : in std_logic ;
---  reset             : in std_logic ;
---  ldpc_core_clk     : in std_logic ;
---  din_last          : in std_logic_vector(N-1 downto 0);
---  din_ready         : in std_logic_vector(N-1 downto 0);
---  din_valid         : in std_logic_vector(N-1 downto 0);
---  din_data_core0    : in std_logic_vector(DATA_WIDTH-1 downto 0);
---  din_data_core1    : in std_logic_vector(DATA_WIDTH-1 downto 0);
---  din_data_core2    : in std_logic_vector(DATA_WIDTH-1 downto 0);
---  din_data_core3    : in std_logic_vector(DATA_WIDTH-1 downto 0);
---  dout_valid        : out std_logic_vector(N-1 downto 0); 
---  dout_ready        : out std_logic_vector(N-1 downto 0); 
---  dout_data0        : out std_logic_vector(DATA_WIDTH-1 downto 0); 
---  dout_data1        : out std_logic_vector(DATA_WIDTH-1 downto 0); 
---  dout_data2        : out std_logic_vector(DATA_WIDTH-1 downto 0); 
---  dout_data3        : out std_logic_vector(DATA_WIDTH-1 downto 0); 
---  dout_last         : out std_logic_vector(N-1 downto 0);
---  last_frame        : out std_logic 
---  ); 
---  end component ;
 
 --Data_controller signals 
 signal reset_cores_controller : std_logic := '0';
@@ -190,14 +164,12 @@ signal sel_cr : code_rate := (
 --Input FIFO signals
 type data_out_fifo is array(N-1 downto 0) of std_logic_vector(DATA_WIDTH-1 downto 0) ;
 signal fifo_data_out, fifo_data_count,fifo_data_in    : data_out_fifo := (others => (others => '0')) ;
-
---signal fifo_data_in      : std_logic_vector(DATA_WIDTH-1 downto 0) ;
---signal fifo_data_in_last : std_logic  := '0'; 
 signal fifo_out_ready    : std_logic_vector(N-1 downto 0) ;
 signal fifo_valid_out    : std_logic_vector(N-1 downto 0) ;
 signal fifo_valid_in     : std_logic_vector(N-1 downto 0) ;
 signal fifo_in_ready     : std_logic_vector(N-1 downto 0) ;
 signal fifo_data_out_last: std_logic_vector(N-1 downto 0 );
+
 --Output FIFOs signals
 type out_fifo_data_in is array(N-1 downto 0) of std_logic_vector(DATA_WIDTH-1 downto 0) ;
 signal out_fifo_output_data : out_fifo_data_in := (others => (others => '0')) ;   
@@ -213,27 +185,7 @@ signal out_fifo_last_out : std_logic_vector(3 downto 0)  := (others => '0');
 --attribute dont_touch : string ;
 --attribute dont_touch of Data_controller : component is "yes" ;
 --sequential signals for pipelines
---signal input_data_register0, input_data_register1, input_data_register2, input_data_register3 : std_logic_vector(DATA_WIDTH -1 downto 0) := (others => '0') ;
 begin
-
---Input_FIFO_inst : for k in 0 to N-1 generate  
---input_fifo : axis_data_fifo_0
---  PORT MAP (
---    s_axis_aresetn      => reset_fifos,
---    s_axis_aclk         => clk,
---    s_axis_tvalid       => data_in_valid,
---    s_axis_tready       => open,
---    s_axis_tdata        => data_in ,
---    s_axis_tlast        => end_of_frame ,
---    m_axis_tvalid       => fifo_valid_out(k) ,
---    m_axis_tready       => fifo_in_ready(k) ,
---    m_axis_tdata        => fifo_data_out(k) ,
---    m_axis_tlast        => fifo_data_out_last(k),
---    axis_wr_data_count  => fifo_data_count(k),
---    almost_full         => open
-
---  ); 
--- end generate ;
 Input_controller_inst : Input_controller 
 port map (
 clk            => clk,
@@ -253,7 +205,6 @@ dout_data2     => dout_data_controller2,
 dout_data3     => dout_data_controller3,
 dout_last      => dout_last_controller,
 reset_cores    => reset_cores_controller
---last_frame     => open 
 
 );
 -- Instance 0
@@ -442,7 +393,7 @@ output_fifo : axis_data_fifo_1
     m_axis_tlast        => out_fifo_last_out(i)
   ); 
 end generate  Output_FIFO_inst;
-
+--Input control processm , it selects depending from the code rate which FIFO to use (single channel use), it can work in parallel removing the case-statem. and assigning the the input signals to the 4 FIFOs
 input_logic_core : process (data_in_valid, data_in, sel_code_rate) 
 begin
 --default values
@@ -466,77 +417,76 @@ case sel_code_rate is
         fifo_valid_in <= (others => '0') ;
 end case ;    
 end process ;
+--The output logic as the input logic can work both in single and parallel channeles, the padded values are filtered out keeping only the information and parity bits
 output_logic_core : process (out_fifo_output_data ,out_fifo_valid_out) 
 begin
 current_cr <= sel_code_rate ;
+
 case sel_code_rate is
 
 when "00" => 
-data_out        <= out_fifo_output_data(3) ;
-data_out_last   <= out_fifo_last_out(3) ;
-if out_fifo_output_data(3) /= x"5A5A5A5A" and out_fifo_valid_out(3) = '1' then
-    data_out_valid  <= '1' ;  
-    last_frame <= '0';   
-elsif out_fifo_output_data(3) = x"5A5A5A5A" and out_fifo_valid_out(3) = '1' then
-    data_out_valid <= '0' ;
-    last_frame <= end_of_frame ;
-
-else 
-    data_out_valid <= '0' ;
-    last_frame <= '0';
-end if ;     
+    data_out        <= out_fifo_output_data(3) ;
+    data_out_last   <= out_fifo_last_out(3) ;
+    if out_fifo_output_data(3) /= x"5A5A5A5A" and out_fifo_valid_out(3) = '1' then
+        data_out_valid  <= '1' ;  
+        last_frame <= '0';   
+    elsif out_fifo_output_data(3) = x"5A5A5A5A" and out_fifo_valid_out(3) = '1' then
+        data_out_valid <= '0' ;
+        last_frame <= end_of_frame ;
+    else 
+        data_out_valid <= '0' ;
+        last_frame <= '0';
+    end if ;     
 
 when "01" => 
-data_out        <= out_fifo_output_data(2) ;
-data_out_last   <= out_fifo_last_out(2) ;
-
-if out_fifo_output_data(2) /= x"5A5A5A5A" and out_fifo_valid_out(2) = '1' then
-    data_out_valid  <= '1' ;   
-     last_frame <= '0';   
-  
-elsif out_fifo_output_data(2) = x"5A5A5A5A" and out_fifo_valid_out(2) = '1' then
-    data_out_valid <= '0' ;
-    last_frame <= end_of_frame ;
-
-else 
-    data_out_valid <= '0' ;
-    last_frame <= '0';   
-
+    data_out        <= out_fifo_output_data(2) ;
+    data_out_last   <= out_fifo_last_out(2) ;
+    
+    if out_fifo_output_data(2) /= x"5A5A5A5A" and out_fifo_valid_out(2) = '1' then
+        data_out_valid  <= '1' ;   
+         last_frame <= '0';   
+      
+    elsif out_fifo_output_data(2) = x"5A5A5A5A" and out_fifo_valid_out(2) = '1' then
+        data_out_valid <= '0' ;
+        last_frame <= end_of_frame ;
+    
+    else 
+        data_out_valid <= '0' ;
+        last_frame <= '0';   
 end if ; 
 
-when "10" => 
-data_out <= out_fifo_output_data(1) ;
-data_out_last   <= out_fifo_last_out(1) ;
-
-if out_fifo_output_data(1) /= x"5A5A5A5A" and out_fifo_valid_out(1) = '1' then
-    data_out_valid  <= '1' ;
-    last_frame <= '0';     
-elsif out_fifo_output_data(1) = x"5A5A5A5A" and out_fifo_valid_out(1) = '1' then
-    data_out_valid <= '0' ;
-    last_frame <= end_of_frame ;
-
-else 
-    data_out_valid <= '0' ;
-    last_frame <= '0';   
-
-end if ; 
+ when "10" => 
+    data_out <= out_fifo_output_data(1) ;
+    data_out_last   <= out_fifo_last_out(1) ;
+    
+    if out_fifo_output_data(1) /= x"5A5A5A5A" and out_fifo_valid_out(1) = '1' then
+        data_out_valid  <= '1' ;
+        last_frame <= '0';     
+    elsif out_fifo_output_data(1) = x"5A5A5A5A" and out_fifo_valid_out(1) = '1' then
+        data_out_valid <= '0' ;
+        last_frame <= end_of_frame ;
+    
+    else 
+        data_out_valid <= '0' ;
+        last_frame <= '0';     
+    end if ; 
 
  when "11" => 
-data_out <= out_fifo_output_data(0) ;
-data_out_last   <= out_fifo_last_out(0) ;
-
-if out_fifo_output_data(1) /= x"5A5A5A5A" and out_fifo_valid_out(0) = '1' then
-    data_out_valid  <= '1' ; 
-    last_frame <= '0';    
-elsif out_fifo_output_data(0) = x"5A5A5A5A" and out_fifo_valid_out(0) = '1' then
-    data_out_valid <= '0' ;
-    last_frame <= end_of_frame ;
-
-else 
-    data_out_valid <= '0' ;
-    last_frame <= '0';
-end if ; 
-
+    data_out <= out_fifo_output_data(0) ;
+    data_out_last   <= out_fifo_last_out(0) ;
+    
+    if out_fifo_output_data(1) /= x"5A5A5A5A" and out_fifo_valid_out(0) = '1' then
+        data_out_valid  <= '1' ; 
+        last_frame <= '0';    
+    elsif out_fifo_output_data(0) = x"5A5A5A5A" and out_fifo_valid_out(0) = '1' then
+        data_out_valid <= '0' ;
+        last_frame <= end_of_frame ;
+    
+    else 
+        data_out_valid <= '0' ;
+        last_frame <= '0';
+    end if ; 
+    
  when others => 
     data_out <= (others => '0') ;
     data_out_valid <= '0' ;
@@ -544,5 +494,4 @@ end if ;
 end case ;
 end process ;
 
- 
 end Behavioral;

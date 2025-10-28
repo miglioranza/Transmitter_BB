@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Oct 23 15:21:59 2025
+| Date         : Tue Oct 28 12:20:00 2025
 | Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 | Command      : report_utilization -file LDPC_encoder_utilization_synth.rpt -pb LDPC_encoder_utilization_synth.pb
 | Design       : LDPC_encoder
@@ -32,8 +32,8 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               |  484 |     0 |          0 |    425280 |  0.11 |
-|   LUT as Logic          |  484 |     0 |          0 |    425280 |  0.11 |
+| CLB LUTs*               |  472 |     0 |          0 |    425280 |  0.11 |
+|   LUT as Logic          |  472 |     0 |          0 |    425280 |  0.11 |
 |   LUT as Memory         |    0 |     0 |          0 |    213600 |  0.00 |
 | CLB Registers           |  468 |     0 |          0 |    850560 |  0.06 |
 |   Register as Flip Flop |  468 |     0 |          0 |    850560 |  0.06 |
@@ -163,15 +163,15 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |  304 |            Register |
-| LUT6     |  237 |                 CLB |
+| LUT6     |  225 |                 CLB |
 | FDCE     |  164 |            Register |
 | LUT3     |  155 |                 CLB |
-| LUT5     |   91 |                 CLB |
-| LUT4     |   86 |                 CLB |
+| LUT5     |   95 |                 CLB |
+| LUT4     |   90 |                 CLB |
 | INBUF    |   41 |                 I/O |
 | IBUFCTRL |   41 |              Others |
 | OBUF     |   37 |                 I/O |
-| LUT2     |   20 |                 CLB |
+| LUT2     |   23 |                 CLB |
 | BUFGCE   |    1 |               Clock |
 +----------+------+---------------------+
 

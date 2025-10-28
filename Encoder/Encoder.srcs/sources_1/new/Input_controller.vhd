@@ -85,13 +85,12 @@ if reset = '1' then
         dout_last(0)    <= '0';
         dout_ready(0)   <= '0';
 elsif rising_edge(clk) then 
-reset_cores     <= '1';    
---default values         
-dout_data0  <= x"000000000000000000000000" & din_data_core0  ;
-dout_ready(0)     <= din_ready(0) ; --din_ready is the signal coming from the LDPC core0 ,assign this value to dout_ready signal for informing the FIFO0 that the data_controller is ready to receive the data
-dout_valid(0)     <= '0'; 
-dout_last(0)      <= '0';
-
+        --default values         
+        reset_cores     <= '1';    
+        dout_data0  <= x"000000000000000000000000" & din_data_core0  ;
+        dout_ready(0)     <= din_ready(0) ; --din_ready is the signal coming from the LDPC core0 ,assign this value to dout_ready signal for informing the FIFO0 that the data_controller is ready to receive the data
+        dout_valid(0)     <= '0'; 
+        dout_last(0)      <= '0';
 
 case state0 is
     
@@ -273,12 +272,12 @@ if reset = '1' then
         dout_last(1)    <= '0';
         dout_ready(1)   <= '0';
 elsif rising_edge(clk) then 
---default values         
-dout_data1  <= x"000000000000000000000000" & din_data_core1  ;
-dout_ready(1)     <= din_ready(1) ; --din_ready is the signal coming from the LDPC core1 ,assign this value to dout_ready signal for informing the FIFO1 that the data_controller is ready to receive the data
-dout_valid(1)     <= '0'; 
-dout_last(1)      <= '0';
-
+        --default values         
+        dout_data1  <= x"000000000000000000000000" & din_data_core1  ;
+        dout_ready(1)     <= din_ready(1) ; --din_ready is the signal coming from the LDPC core1 ,assign this value to dout_ready signal for informing the FIFO1 that the data_controller is ready to receive the data
+        dout_valid(1)     <= '0'; 
+        dout_last(1)      <= '0';
+        
 
 case state1 is
     when idle => 
@@ -457,12 +456,12 @@ if reset = '1' then
         dout_last(2)    <= '0';
         dout_ready(2)   <= '0';
 elsif rising_edge(clk) then 
---default values         
-dout_data2  <= x"000000000000000000000000" & din_data_core2  ;
-dout_ready(2)     <= din_ready(2) ; --din_ready is the signal coming from the LDPC core2 ,assign this value to dout_ready signal for informing the FIFO2 that the data_controller is ready to receive the data
-dout_valid(2)     <= '0'; 
-dout_last(2)      <= '0';
-
+        --default values         
+        dout_data2  <= x"000000000000000000000000" & din_data_core2  ;
+        dout_ready(2)     <= din_ready(2) ; --din_ready is the signal coming from the LDPC core2 ,assign this value to dout_ready signal for informing the FIFO2 that the data_controller is ready to receive the data
+        dout_valid(2)     <= '0'; 
+        dout_last(2)      <= '0';
+        
 
 case state2 is
     when idle => 
@@ -616,19 +615,17 @@ begin
 
 if reset = '1' then 
         cw_counter3     <= 0;
-        reset_cores     <= '0';    
         dout_data3      <= (others => '0') ;
         dout_valid(3)   <= '0';
         dout_last(3)    <= '0';
         dout_ready(3)   <= '0';
 elsif rising_edge(clk) then 
-        reset_cores     <= '1';    
---default values         
-dout_data3  <= x"000000000000000000000000" & din_data_core3  ;
-dout_ready(3)     <= din_ready(3) ; --din_ready is the signal coming from the LDPC core3 ,assign this value to dout_ready signal for informing the FIFO3 that the data_controller is ready to receive the data
-dout_valid(3)     <= '0'; 
-dout_last(3)      <= '0';
-
+       --default values         
+        dout_data3  <= x"000000000000000000000000" & din_data_core3  ;
+        dout_ready(3)     <= din_ready(3) ; --din_ready is the signal coming from the LDPC core3 ,assign this value to dout_ready signal for informing the FIFO3 that the data_controller is ready to receive the data
+        dout_valid(3)     <= '0'; 
+        dout_last(3)      <= '0';
+        
 
 case state3 is
     when idle => 
