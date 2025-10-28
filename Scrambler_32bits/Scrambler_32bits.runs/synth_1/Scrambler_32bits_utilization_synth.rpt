@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Mon Oct 13 11:53:30 2025
-| Host         : uxsrv026.ihp-ffo.de running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
+| Date         : Tue Oct 28 11:22:21 2025
+| Host         : uxsrv005 running 64-bit Red Hat Enterprise Linux release 8.10 (Ootpa)
 | Command      : report_utilization -file Scrambler_32bits_utilization_synth.rpt -pb Scrambler_32bits_utilization_synth.pb
 | Design       : Scrambler_32bits
 | Device       : xczu28dr-ffvg1517-2-e

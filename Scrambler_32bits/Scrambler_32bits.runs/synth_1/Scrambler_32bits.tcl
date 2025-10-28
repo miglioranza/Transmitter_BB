@@ -314,6 +314,9 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc /ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs/constrs_1/new/Scrambler_constraints.xdc
+set_property used_in_implementation false [get_files /ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs/constrs_1/new/Scrambler_constraints.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

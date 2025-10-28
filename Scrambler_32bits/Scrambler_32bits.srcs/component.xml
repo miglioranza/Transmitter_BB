@@ -120,7 +120,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4224d0e0</spirit:value>
+            <spirit:value>b7c27b03</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -136,7 +136,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4224d0e0</spirit:value>
+            <spirit:value>b3f11f0a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -151,7 +151,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>606eee19</spirit:value>
+            <spirit:value>de7dda64</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -253,19 +253,6 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>end_of_frame</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
         <spirit:name>seed</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
@@ -344,19 +331,6 @@
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
-      <spirit:port>
-        <spirit:name>last_frame</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
     </spirit:ports>
     <spirit:modelParameters>
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
@@ -380,9 +354,13 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
+        <spirit:name>constrs_1/new/Scrambler_constraints.xdc</spirit:name>
+        <spirit:userFileType>xdc</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>sources_1/new/Scrambler_32bits.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_4224d0e0</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_b3f11f0a</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -467,8 +445,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Scrambler</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>14</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-09-07T17:06:25Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>20</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-10-28T10:48:47Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.df@625ff18f_ARCHIVE_LOCATION">/home/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@7f7c237b_ARCHIVE_LOCATION">/home/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
@@ -636,13 +614,61 @@
         <xilinx:tag xilinx:name="ui.data.coregen.df@2039cc0d_ARCHIVE_LOCATION">/home/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@1c82e2ce_ARCHIVE_LOCATION">/home/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@7a7715dc_ARCHIVE_LOCATION">/home/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2fdddf7d_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5caa0bd9_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2afdd2df_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@bf3f75a_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5e066bc4_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@599c97da_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4d1fe3ec_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5c363593_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@71ea6e63_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@bcc3f51_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@29950fd9_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@22171400_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7347ce6f_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5399497_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5573b947_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@61128103_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@188efb5_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@677638b_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1957adbf_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@47035f61_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@182fd10a_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3f6ae897_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3b49d051_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1a66a750_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@76fd5e9f_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3c18e916_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@c44a821_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@33d692a4_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5df3150a_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@460c7558_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@47b7618c_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@78a3fc4f_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@65940d1c_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@31cdd2a1_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@49ec1ae5_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@ae55d0d_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@147f6e5_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@517c9429_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@27c88e46_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1ef57a08_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4143ec88_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5955a9c5_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@51bda006_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@576b2991_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@b4ef335_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@738a000f_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7782eb08_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@74b2e253_ARCHIVE_LOCATION">/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2021.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="532fd659"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="6e480cde"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="1a78af72"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="2d5eae8f"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="29b1a0da"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="47243c1a"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="702ccbaf"/>
     </xilinx:packagingInfo>

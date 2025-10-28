@@ -34,9 +34,9 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Scrambler_32bits is
   generic(
-  POLY_DEG : integer := 32 ; --Polynomial degree 
-  DATA_DIM : integer := 32 ; -- Bitwidth of input data 
-  poly     : std_logic_vector(31 downto 0)     :=  "10010000000000000000000000000001"  --PRBS31 = x31 + x28 + 1  primitive_polynomial_GF2
+      POLY_DEG : integer := 32 ; --Polynomial degree 
+      DATA_DIM : integer := 32 ; -- Bitwidth of input data 
+      poly     : std_logic_vector(31 downto 0)     :=  "10010000000000000000000000000001"  --PRBS31 = x31 + x28 + 1  primitive_polynomial_GF2
   );
   Port ( 
             clk             : in  std_logic;
@@ -44,14 +44,11 @@ entity Scrambler_32bits is
             data_in         : in  std_logic_vector(32 downto 1);
             data_in_valid   : in  std_logic;
             data_in_last    : in  std_logic;
---            end_of_frame    : in  std_logic ;
             seed            : in  std_logic_vector(30 downto 0);
             control_enable  : in  std_logic;
             data_out        : out std_logic_vector(32 downto 1);
             data_out_valid  : out std_logic;
             data_out_last   : out std_logic
---            last_frame      : out std_logic 
---            data_out_ready  : out std_logic 
  
   );
 end Scrambler_32bits;
@@ -66,37 +63,27 @@ begin
     process(clk,rst)
         variable tmp_xor      : std_logic := '0';
         variable k 	          : integer := 0;
---        variable feedback 	  : std_logic := '0';
     begin         
         if rst =  '1' then 
          data_out       <= (others => '0' ) ;
---         data_out_ready <= '0';  
          data_out_valid <= '0' ;
          tmp_seed       <= (others => '1' ) ; 
         elsif rising_edge(clk) then
-              
---            data_out_ready <= '0'; 
             if control_enable = '1'then 
                tmp_seed <= seed ;
             else 
                tmp_seed <= tmp_seed  ;
-            end if ;
-             
---             last_frame <=  end_of_frame ;
+            end if ;            
              data_out_last <= data_in_last ;
             if  data_in_valid = '1' then
---                data_out_ready <= '1'; 
-                feedback <= tmp_seed(30) xor tmp_seed(27) ;        
-                tmp_seed <=  tmp_seed(29 downto 0) &  feedback ;  
-                data_out <= data_in xor ("0" & tmp_seed);  -- XOR input data with LFSR output (32 bits)
-                data_out_valid <= '1' ;   
-                
-            else    
-              
-            data_out_valid <= '0' ;
-            data_out <= (others => '0') ;
-            end if ;
-        
+                feedback       <= tmp_seed(30) xor tmp_seed(27) ;        
+                tmp_seed       <=  tmp_seed(29 downto 0) &  feedback ;  
+                data_out       <= data_in xor ("0" & tmp_seed);  -- XOR input data with LFSR output (32 bits)
+                data_out_valid <= '1' ;                 
+            else                 
+                data_out_valid <= '0' ;
+                data_out <= (others => '0') ;
+            end if ;       
         end if ;   
     end process ;
 

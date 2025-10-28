@@ -35,11 +35,9 @@ architecture tb of Scrambler_32bits_TB is
     signal seed            : std_logic_vector(30 downto 0) := (others => '0');
     signal data_in_valid   : std_logic := '0' ;
     signal control_enable  : std_logic := '0';
---    signal data_in_ready   : std_logic := '0';
     signal data_in_last    : std_logic := '0';
     --Data output 
     signal data_out        : std_logic_vector(31 downto 0);
---    signal data_out_ready  : std_logic;
     signal data_out_valid   : std_logic := '0' ;
     signal data_out_last    : std_logic := '0';
     signal end_of_frame     : std_logic  := '0';
@@ -48,26 +46,22 @@ architecture tb of Scrambler_32bits_TB is
 
     -- UUT: Unit Under Test
     component Scrambler_32bits
-        generic (
-            POLY_DEG : integer := 32;
-            DATA_DIM : integer := 32;
-            poly     : std_logic_vector(31 downto 0) := "10010000000000000000000000000001"
-        );
+--        generic (
+--            POLY_DEG : integer := 32;
+--            DATA_DIM : integer := 32;
+--            poly     : std_logic_vector(31 downto 0) := "10010000000000000000000000000001"
+--        );
         port (
             clk             : in  std_logic;
             rst             : in  std_logic;
             data_in         : in  std_logic_vector(32 downto 1);
             data_in_valid   : in  std_logic;
---            data_in_ready   : in  std_logic;
             data_in_last    : in  std_logic;
---            end_of_frame    : in  std_logic ;
             seed            : in  std_logic_vector(30 downto 0);
             control_enable  : in  std_logic;
             data_out        : out std_logic_vector(32 downto 1);
             data_out_valid  : out std_logic;
             data_out_last   : out std_logic
---            last_frame      : out std_logic 
---            data_out_ready  : out std_logic 
  
         );
     end component;
@@ -81,14 +75,10 @@ begin
             data_in             => data_in,
             data_in_valid       => data_in_valid,
             data_in_last        => data_in_last ,
---            data_in_ready       => data_in_ready,
             seed                => seed,  
---            end_of_frame        => end_of_frame ,
             control_enable      => control_enable,                 
             data_out            => data_out,        
             data_out_valid      => data_out_valid
---            data_out_ready      => data_out_ready,
---            data_out_last       => data_out_last
 
         );
 
@@ -110,8 +100,10 @@ begin
         rst <= '0';
         wait for 20 ns;
         data_in_last <= '0' ;
---        data_in_ready <= '1';
-       
+        control_enable <= '0' ;
+        
+        wait for 100 ns ;
+     
         -- Apply test vectors
         seed <= "1001001000101001000100101111101";
         control_enable <= '1' ;
@@ -121,23 +113,12 @@ begin
         
         data_in <= x"12345678" ;      
         data_in_valid <= '1';    
---        wait until data_out_ready = '1';
---        data_in_valid <= '0';
-                
---        wait for clk_period ;
-       
---        seed <= "1100110010011100111001001001001";
---        control_enable <= '1' ;
---        wait for clk_period;
---        control_enable <= '0' ;
+
         wait for clk_period ;
---                wait for clk_period ;
         data_in <= x"922912F2";
---        data_in_valid <= '1';
-        wait for clk_period ;       
---        seed <= x"933912F2";
+        wait for clk_period ; 
+              
         data_in <= x"3208EC47";
---        data_in_valid <= '1';
         wait for clk_period ;
                
         data_in <= x"922912F0";

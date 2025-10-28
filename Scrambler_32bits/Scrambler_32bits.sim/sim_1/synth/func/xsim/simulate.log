@@ -1,0 +1,4 @@
+Time resolution is 1 ps
+Note: End of simulation
+Time: 245 ns  Iteration: 0  Process: /Scrambler_32bits_TB/stim_proc  File: /ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs/sim_1/new/Scrambler_32bits_TB.vhd
+$finish called at time : 245 ns : File "/ihp/departments/D-SYA/work/miglioranza/Scrambler_32bits/Scrambler_32bits.srcs/sim_1/new/Scrambler_32bits_TB.vhd" Line 190

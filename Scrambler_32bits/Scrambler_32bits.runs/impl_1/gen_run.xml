@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xczu28dr-ffvg1517-2-e" LaunchTime="1761648616">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BITSTR-SYSDEF" Name="Scrambler_32bits.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="Scrambler_32bits.ltx"/>
+  <File Type="BG-BGN" Name="Scrambler_32bits.bgn"/>
+  <File Type="RNPI_FILE" Name="Scrambler_32bits.rnpi"/>
+  <File Type="BG-DRC" Name="Scrambler_32bits.drc"/>
+  <File Type="CFI_FILE" Name="Scrambler_32bits.cfi"/>
+  <File Type="RCFI_FILE" Name="Scrambler_32bits.rcfi"/>
+  <File Type="BITSTR-MMI" Name="Scrambler_32bits.mmi"/>
+  <File Type="BITSTR-BMM" Name="Scrambler_32bits_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="Scrambler_32bits.nky"/>
+  <File Type="BITSTR-RBT" Name="Scrambler_32bits.rbt"/>
+  <File Type="RBD_FILE" Name="Scrambler_32bits.rbd"/>
+  <File Type="BITSTR-MSK" Name="Scrambler_32bits.msk"/>
+  <File Type="NPI_FILE" Name="Scrambler_32bits.npi"/>
+  <File Type="BG-BIN" Name="Scrambler_32bits.bin"/>
+  <File Type="PDI-FILE" Name="Scrambler_32bits.pdi"/>
+  <File Type="BG-BIT" Name="Scrambler_32bits.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Scrambler_32bits_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Scrambler_32bits_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Scrambler_32bits_bus_skew_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="Scrambler_32bits.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Scrambler_32bits_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Scrambler_32bits_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Scrambler_32bits_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Scrambler_32bits_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Scrambler_32bits_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="Scrambler_32bits_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="Scrambler_32bits_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Scrambler_32bits_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="Scrambler_32bits_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Scrambler_32bits_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Scrambler_32bits_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="Scrambler_32bits_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="Scrambler_32bits_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="Scrambler_32bits_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="Scrambler_32bits_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Scrambler_32bits_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Scrambler_32bits_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Scrambler_32bits_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="Scrambler_32bits_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="Scrambler_32bits_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="Scrambler_32bits_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Scrambler_32bits_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="Scrambler_32bits_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Scrambler_32bits_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="Scrambler_32bits_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="Scrambler_32bits_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="Scrambler_32bits_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Scrambler_32bits_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Scrambler_32bits_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="Scrambler_32bits_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Scrambler_32bits_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Scrambler_32bits_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="Scrambler_32bits_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Scrambler_32bits_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="Scrambler_32bits_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="Scrambler_32bits_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="Scrambler_32bits_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="Scrambler_32bits_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="Scrambler_32bits_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="Scrambler_32bits_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="Scrambler_32bits_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="Scrambler_32bits_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Scrambler_32bits.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Scrambler_32bits_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="Scrambler_32bits_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="Scrambler_32bits_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="Scrambler_32bits_timing_summary_init.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="Scrambler_32bits_bus_skew_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="Scrambler_32bits_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="Scrambler_32bits_bus_skew_routed.pb"/>
+  <File Type="PA-TCL" Name="Scrambler_32bits.tcl"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Scrambler_32bits_timing_summary_postroute_physopted.rpx"/>
+  <File Type="PA-DCP" Name="Scrambler_32bits.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/Scrambler_32bits.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/component.xml">
+      <FileInfo SFType="IPXACT"/>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Scrambler_32bits"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/Scrambler_constraints.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

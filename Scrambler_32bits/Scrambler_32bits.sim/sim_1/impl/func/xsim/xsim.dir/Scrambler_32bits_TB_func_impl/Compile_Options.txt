@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "unisims_ver" -L "secureip" --snapshot "Scrambler_32bits_TB_func_impl" "xil_defaultlib.Scrambler_32bits_TB" "xil_defaultlib.glbl" -log "elaborate.log" 
