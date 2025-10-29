@@ -1,7 +1,0 @@
-Running: xsim.dir/Bit_splitter_tb_behav/xsimk -simmode gui -wdb Bit_splitter_tb_behav.wdb -simrunnum 0 -socket 51485
-Design successfully loaded
-Design Loading Memory Usage: 43636 KB (Peak: 43756 KB)
-Design Loading CPU Usage: 50 ms
-Simulation completed
-Simulation Memory Usage: 127420 KB (Peak: 184952 KB)
-Simulation CPU Usage: 50 ms
