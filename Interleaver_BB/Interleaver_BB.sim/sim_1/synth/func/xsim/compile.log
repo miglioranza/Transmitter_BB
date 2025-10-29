@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Interleaver_BB/Interleaver_BB.sim/sim_1/synth/func/xsim/tb_block_interleaver_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'block_interleaver'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/miglioranza/Interleaver_BB/Interleaver_BB.srcs/sim_1/new/tb_block_interleaver.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_block_interleaver'

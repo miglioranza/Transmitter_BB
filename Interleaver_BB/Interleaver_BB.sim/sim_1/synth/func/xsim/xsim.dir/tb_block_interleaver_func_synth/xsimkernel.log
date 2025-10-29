@@ -1,7 +1,7 @@
-Running: xsim.dir/tb_block_interleaver_func_synth/xsimk -simmode gui -wdb tb_block_interleaver_func_synth.wdb -simrunnum 0 -socket 45547
+Running: xsim.dir/tb_block_interleaver_func_synth/xsimk -simmode gui -wdb tb_block_interleaver_func_synth.wdb -simrunnum 0 -socket 53763
 Design successfully loaded
-Design Loading Memory Usage: 45488 KB (Peak: 45496 KB)
-Design Loading CPU Usage: 80 ms
+Design Loading Memory Usage: 47280 KB (Peak: 47288 KB)
+Design Loading CPU Usage: 90 ms
 Simulation completed
-Simulation Memory Usage: 137472 KB (Peak: 186804 KB)
-Simulation CPU Usage: 130 ms
+Simulation Memory Usage: 139452 KB (Peak: 188596 KB)
+Simulation CPU Usage: 330 ms

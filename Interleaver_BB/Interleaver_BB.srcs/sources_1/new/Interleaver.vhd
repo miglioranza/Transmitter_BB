@@ -40,7 +40,6 @@ use ieee.std_logic_unsigned.all;
 entity block_interleaver is
     generic (
         DATA_WIDTH  : integer := 32;  -- Codeword size (fixed at 32 bits)
---        NUM_ROWS    : integer := 3;  -- Number of rows 
         NUM_COLS    : integer := 7   -- Number of columns (configurable)
   --Possible sizes of the block R x C ( 41 or 61)
     );
@@ -57,9 +56,7 @@ entity block_interleaver is
         -- Output interface
         data_out            : out std_logic_vector(DATA_WIDTH-1 downto 0);
         data_out_ready      : out std_logic;
---        data_out_last       : out std_logic := '0' ; --It signals that an entire block has been sent out 
         last_frame          : out std_logic := '0';
---        current_code_rate   : out  std_logic_vector(1 downto 0) := (others => '0');
         read_valid          : out std_logic
         
     );
@@ -70,8 +67,6 @@ architecture Behavioral of block_interleaver is
     signal memory : mem_array := (others => (others => '0'));
     signal busy : std_logic  := '0';
         -- Address counters
---    signal write_addr    : unsigned(11 downto 0) := (others => '0'); -- Up to 61*32 = 1952 locations
---    signal read_addr     : unsigned(11 downto 0) := (others => '0');
     signal read_addr     : integer    := 0 ;
     signal write_addr    : integer    := 0; -- Up to 61*32 = 1952 locations
 
@@ -84,8 +79,7 @@ architecture Behavioral of block_interleaver is
     signal col_cnt              : integer range 0 to 9 := 0;
     signal sel_code             : integer range 0 to 3 := 0 ;
     signal current_code         : integer range 0 to 3 := 0 ;
---    signal index_address        :integer := 0 ;
-    
+--    signal index_address        :integer := 0 ;  
     signal reminder             : integer := 0 ;
     signal words_counter        : integer := 0 ;
     signal row_size             : integer := 0 ;
@@ -99,8 +93,6 @@ begin
       case code_rate is  
         when "00" => 
           sel_code <= 2 ;
-        when "01" => 
-          sel_code <= 2 ;
         when "10" => 
           sel_code <= 3 ;
         when "11" => 
@@ -111,7 +103,6 @@ begin
   end process ;
   
  
-    --the SF has a length of 896 bits -> 29 codewords , rectangular block of 5 x 7  (R x C) 
     adaptive_interleaver : process(clk, rst)
         variable temp  : integer := 0 ;
 
@@ -144,15 +135,14 @@ begin
                 when WRITE =>
                    read_valid     <= '0';
                    data_out_ready <= '1';       
+                    
                     if write_en = '1' then
                         -- Write row-wise
                         read_valid <= '0';
                         memory(write_addr) <= data_in;  
-                        --NUM_ROWS = 4 
                         if data_in_last = '1' then 
                             row_size <=  (write_addr + 1) / NUM_COLS ;
                             reminder <=  (write_addr + 1)   rem NUM_COLS ;
---                            write_addr <= (others => '0');
                             write_addr <= 0 ;
                             state <= READ;
                             data_out_ready <= '0';
@@ -166,20 +156,14 @@ begin
                     -- Read column-wise
                       read_valid <= '1';
                       temp := NUM_COLS - reminder ; --How many values are missing for full filling the table e.g. 29/7 = 28 reminder 1 -> with 5 rows and 7 columns, the last 6 values are non valid 
---                    if data_in_ready = '1' and busy = '0' then 
                       data_out <= memory(read_addr);
                     if data_in_ready = '1' then 
---                                 read_valid <= '1';
---                                   busy <= '1';
---                    data_out <= memory(to_integer(read_addr));
                      --Last data 
                          if col_cnt = NUM_COLS - 1  and row_cnt = ( row_size - row_index )then
                             read_addr       <= 0 ;
                             row_cnt         <= 0;
                             col_cnt         <= 0;
                             data_out_ready  <= '1';                                           
---                            state           <= IDLE  ; 
---                            data_out_last   <= '1' ;                      
                             row_index       <= 0 ;
                             if end_of_frame = '1' then 
                                state           <= IDLE  ; 
@@ -203,12 +187,6 @@ begin
                               row_cnt  <= row_cnt + 1 ;
                               read_addr<= col_cnt + ( NUM_COLS * (row_cnt + 1) ) ;
                         end if;
---                    elsif data_in_ready = '1' and busy = '1' then        
---                           busy <= '0';   
---                           read_valid <= '0';
---                    else 
---                                          read_valid <= '0';
-
                   end if ;                     
                 when others =>
                     state <= IDLE;
